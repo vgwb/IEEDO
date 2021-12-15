@@ -13,7 +13,7 @@
       "dependencies": {}
     },
     "com.unity.addressables": {
-      "version": "1.19.9",
+      "version": "1.19.11",
       "depth": 1,
       "source": "registry",
       "dependencies": {
