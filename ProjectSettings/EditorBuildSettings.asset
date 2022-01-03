@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_test/localization test.unity
+    path: Assets/_test/LocalizationTest/localization test.unity
     guid: d3142d63af12625f2a1628360576aae0
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: c559a39ced25e4dcea1ab135796b61b9, type: 2}
