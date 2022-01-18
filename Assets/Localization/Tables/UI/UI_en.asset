@@ -18,16 +18,16 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 12435054592
+  - m_Id: 24995527358668800
+    m_Localized: your virtual assistant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24994957285646337
+    m_Localized: no
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24994957285646336
     m_Localized: yes
-    m_Metadata:
-      m_Items: []
-  - m_Id: 111764561920
-    m_Localized: THe Title of this game
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1274366910464
-    m_Localized: Help
     m_Metadata:
       m_Items: []
   references:

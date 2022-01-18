@@ -15,16 +15,16 @@ MonoBehaviour:
   m_TableCollectionName: UI
   m_TableCollectionNameGuidString: bf8d5c70485b84a24a821abb0ddb8f7e
   m_Entries:
-  - m_Id: 12435054592
-    m_Key: "yes\t"
+  - m_Id: 24995527358668800
+    m_Key: app.subtitle
     m_Metadata:
       m_Items: []
-  - m_Id: 111764561920
-    m_Key: title
+  - m_Id: 24994957285646336
+    m_Key: yes
     m_Metadata:
       m_Items: []
-  - m_Id: 1274366910464
-    m_Key: help
+  - m_Id: 24994957285646337
+    m_Key: no
     m_Metadata:
       m_Items: []
   m_Metadata:
