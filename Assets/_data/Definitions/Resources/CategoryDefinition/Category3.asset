@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7c39b6702b54a1183e0dc54711ca90d, type: 3}
-  m_Name: Category2
+  m_Name: Category3
   m_EditorClassIdentifier: Assembly-CSharp:Ieedo:CategoryDefinition
-  ID: 2
+  ID: 3
   Title:
     DefaultText: 
   Description:
     DefaultText: 
-  Color: {fileID: 11400000, guid: f577d573a5c52c341832836ae719824d, type: 2}
-  Icon: \uf556
+  Color: {fileID: 11400000, guid: e190f26b97b648648baf9a64db6d26a6, type: 2}
+  Icon: \uf6f0

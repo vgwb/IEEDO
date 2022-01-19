@@ -12,6 +12,11 @@ using Object = UnityEngine.Object;
 
 namespace Ieedo
 {
+    public interface IDefinition
+    {
+        int Id { get; }
+    }
+
     public class DataManager
     {
         public DataManager()
@@ -31,7 +36,13 @@ namespace Ieedo
             LoadAll<AssessmentQuestionDefinition>();
         }
 
-        public List<T> GetAll<T>() where T : Object
+        public T Get<T>(int id) where T : class, IDefinition
+        {
+            var all = GetAll<T>();
+            return all.FirstOrDefault(x => x.Id == id);
+        }
+
+        public List<T> GetAll<T>() where T : class
         {
             return db[typeof(T).Name].ConvertAll(x => x as T);
         }

@@ -10,12 +10,16 @@ namespace Ieedo
         C
     }
 
+
     [CreateAssetMenu]
-    public class CategoryDefinition : ScriptableObject
+    public class CategoryDefinition : ScriptableObject, IDefinition
     {
         public CategoryID ID;
         public LocalizedString Title;
         public LocalizedString Description;
         public PaletteColor Color;
+
+        public int Id => (int)ID;
+        public string Icon;
     }
 }

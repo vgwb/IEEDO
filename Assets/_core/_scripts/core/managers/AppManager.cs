@@ -13,11 +13,13 @@ namespace Ieedo
             // Init data
             {var _ = Statics.Data;}
             {var _ = Statics.Cards;}
-            {var _ = Statics.Flow;}
+            {var _ = Statics.Screens;}
+
+            Statics.Screens.LoadScreens();
 
             // Load the game
-            // yield return FlowManager.TransitionTo(SceneID.Intro);
-            yield break;
+            Statics.Screens.OpenImmediate(ScreenID.Top);
+            yield return Statics.Screens.TransitionToCO(ScreenID.Intro);
         }
     }
 }

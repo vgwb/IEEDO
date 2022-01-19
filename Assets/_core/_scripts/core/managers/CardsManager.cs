@@ -14,5 +14,18 @@
             });
             Statics.Data.SaveProfile();
         }
+
+        public CardDefinition GenerateCard(CardDefinition def)
+        {
+            Statics.Data.AddCardDefinition(def);
+            return def;
+        }
+
+        public CardDefinition GenerateEmptyCard()
+        {
+            var card = new CardDefinition();
+            Statics.Data.AddCardDefinition(card);
+            return card;
+        }
     }
 }

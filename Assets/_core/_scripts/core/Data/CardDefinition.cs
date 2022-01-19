@@ -23,10 +23,11 @@ namespace Ieedo
         public LocalizedString Description;
         public uint Difficulty;
         public CategoryID Category;
+        public string Icon => Statics.Data.Get<CategoryDefinition>((int)Category).Icon;
 
         public override string ToString()
         {
-            return Title.Text;
+            return Title.Text + " cat " + Category.ToString();
         }
     }
 }

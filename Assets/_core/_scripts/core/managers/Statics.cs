@@ -6,6 +6,6 @@ namespace Ieedo
     {
         private static DataManager data; public static DataManager Data => data ??= new DataManager();
         private static CardsManager cards; public static CardsManager Cards => cards ??= new CardsManager();
-        private static FlowManager flow; public static FlowManager Flow => flow ??= new FlowManager();
+        private static ScreensManager screens; public static ScreensManager Screens => screens ??= new ScreensManager();
     }
 }

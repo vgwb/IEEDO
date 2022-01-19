@@ -1,12 +1,16 @@
 ﻿namespace Ieedo
 {
-    public enum SceneID
+    public enum ScreenID
     {
         None = 0,
         Loader,
+        Top,
         Intro,
         Assessment,
         CurrentCards,
         ProfileCreation,
+        History,
+        GamesList,
+        CardEditor,
     }
 }
