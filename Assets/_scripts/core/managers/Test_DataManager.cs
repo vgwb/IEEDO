@@ -24,6 +24,7 @@ namespace Ieedo.Test
             Statics.Data.LoadDatabase();
             Statics.Data.PrintAll<CategoryDefinition>();
             Statics.Data.PrintAll<ActivityDefinition>();
+            Statics.Data.PrintAll<AssessmentQuestionDefinition>();
         }
 
         [Button("Test_CreateProfile")]
