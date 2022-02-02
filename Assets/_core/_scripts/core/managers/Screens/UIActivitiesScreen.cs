@@ -4,7 +4,15 @@
     {
         public override ScreenID ID => ScreenID.Activities;
 
+        public UIButton StartGameBtn;
+
         void Start()
+        {
+            // TODO: Stefano place your logic here
+            SetupButton(StartGameBtn, () => DoStuff());
+        }
+
+        private void DoStuff()
         {
         }
     }
