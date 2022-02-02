@@ -107,7 +107,7 @@ namespace Ieedo
 
             foreach (var def in GetAll<CategoryDefinition>())
             {
-                ProfileData.Categories.Add(new() { ID = def.ID, AssessmentValue = UnityEngine.Random.Range(1,20) });
+                ProfileData.Categories.Add(new() { ID = def.ID, AssessmentValue = UnityEngine.Random.Range(1, 20) });
             }
 
             SaveProfile();
@@ -156,9 +156,13 @@ namespace Ieedo
             }
         }
 
-        // TODO: Stefano: DebugSaveProfileInJSON won't work as the LOAD was not implemented
-        private bool LoadSerialized<T>(out T data, string folderPath, string key, string extension = "dat")
+        private bool LoadSerialized<T>(out T data, string folderPath, string key)
         {
+            string extension = "dat";
+            if (Statics.App.ApplicationConfig.DebugSaveProfileInJSON)
+            {
+                extension = "json";
+            }
             string path = $"{folderPath}/{key}.{extension}";
             if (!File.Exists(path))
             {
@@ -169,14 +173,22 @@ namespace Ieedo
 
             try
             {
-                var bf = new BinaryFormatter();
                 using (var stream = File.OpenRead(path))
                 {
+                    var bf = new BinaryFormatter();
                     var bytes = bf.Deserialize(stream) as byte[];
                     var jsonString = Encoding.UTF8.GetString(bytes, 0, bytes.Length);
                     var jobj = JObject.Parse(jsonString);
-                    var serializer = JsonSerializer.Create();
-                    data = jobj.ToObject<T>(serializer);
+
+                    if (Statics.App.ApplicationConfig.DebugSaveProfileInJSON)
+                    {
+                        data = jobj.ToObject<T>();
+                    } else
+                    {
+                        var serializer = JsonSerializer.Create();
+                        data = jobj.ToObject<T>(serializer);
+                    }
+
                     return true;
                 }
             } catch (Exception e)

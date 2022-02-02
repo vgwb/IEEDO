@@ -12,7 +12,7 @@ namespace Ieedo
 
         public static ApplicationConfig FindMainConfig()
         {
-            var configPath = $"Assets/_config/ApplicationConfig.asset";
+            var configPath = $"Assets/_data/ApplicationConfig.asset";
             var config = AssetDatabase.LoadAssetAtPath<ApplicationConfig>(configPath);
             if (config == null)
             {
