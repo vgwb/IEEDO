@@ -8,12 +8,14 @@ namespace Ieedo
 {
     public class AppManager : SingletonMonoBehaviour<AppManager>
     {
+        public ApplicationConfig ApplicationConfig;
+
         public IEnumerator Start()
         {
             // Init data
-            {var _ = Statics.Data;}
-            {var _ = Statics.Cards;}
-            {var _ = Statics.Screens;}
+            { var _ = Statics.Data; }
+            { var _ = Statics.Cards; }
+            { var _ = Statics.Screens; }
 
             Statics.Screens.LoadScreens();
 
