@@ -101,7 +101,7 @@ namespace Ieedo
 
             foreach (var def in GetAll<CategoryDefinition>())
             {
-                ProfileData.Categories.Add(new() { ID = def.ID, AssessmentValue = 0 });
+                ProfileData.Categories.Add(new() { ID = def.ID, AssessmentValue = UnityEngine.Random.Range(1,20) });
             }
 
             SaveProfile();
@@ -120,7 +120,7 @@ namespace Ieedo
         private bool SaveSerialized<T>(T data, string folderPath, string filename)
         {
             string extension = "dat";
-            if (AppManager.I.ApplicationConfig.DebugSaveProfileInJSON)
+            if (Statics.App.ApplicationConfig.DebugSaveProfileInJSON)
             {
                 extension = "json";
             }
@@ -133,7 +133,7 @@ namespace Ieedo
                 var bf = new BinaryFormatter();
                 using (FileStream stream = File.Create(path))
                 {
-                    if (AppManager.I.ApplicationConfig.DebugSaveProfileInJSON)
+                    if (Statics.App.ApplicationConfig.DebugSaveProfileInJSON)
                     {
                         stream.Write(bytes);
                     } else

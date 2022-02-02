@@ -7,5 +7,7 @@ namespace Ieedo
         private static DataManager data; public static DataManager Data => data ??= new DataManager();
         private static CardsManager cards; public static CardsManager Cards => cards ??= new CardsManager();
         private static ScreensManager screens; public static ScreensManager Screens => screens ??= new ScreensManager();
+        private static AppManager app; public static AppManager App => app ??= FindObjectOfType<AppManager>();
+
     }
 }

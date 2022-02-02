@@ -27,7 +27,7 @@ namespace Ieedo
         protected override IEnumerator OnClose()
         {
             // TODO: close the current card
-            yield return base.CloseCO();
+            yield return base.OnClose();
         }
 
         public UICard frontCard;

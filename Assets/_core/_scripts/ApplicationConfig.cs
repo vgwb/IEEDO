@@ -24,8 +24,6 @@ namespace Ieedo
 
 #endif
 
-        public static ApplicationConfig I => AppManager.I.ApplicationConfig;
-
         [Header("Debug")]
         /// <summary>
         /// Enabled the Advanced Debug Panel.

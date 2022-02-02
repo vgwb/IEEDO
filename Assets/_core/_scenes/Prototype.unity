@@ -2542,6 +2542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46380532036708b448520f4aa09bc787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ApplicationConfig: {fileID: 11400000, guid: 8a44eb028c571458480a4b233e9f76ee, type: 2}
 --- !u!224 &1500325554 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5019831085033500915, guid: c7e0c7748a8a1c94f8e4a3c86f0fcaa1, type: 3}
@@ -4924,29 +4925,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1912778785}
     m_Modifications:
-    - target: {fileID: 3814917473302193115, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9848078
-      objectReference: {fileID: 0}
-    - target: {fileID: 3814917473302193115, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3814917473302193115, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.17364825
-      objectReference: {fileID: 0}
-    - target: {fileID: 3814917473302193115, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3814917473302193115, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -20
-      objectReference: {fileID: 0}
     - target: {fileID: 6598811677016601520, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
       propertyPath: m_Name
       value: Screen_CurrentCards
+      objectReference: {fileID: 0}
+    - target: {fileID: 6924799601145981879, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 41.91394
       objectReference: {fileID: 0}
     - target: {fileID: 8610312868367887547, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
       propertyPath: m_Pivot.x
