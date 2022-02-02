@@ -60,3 +60,6 @@ sysinfo.txt
 crashlytics-build.properties
 
 .vscode
+Assets/_local
+Assets/_local.meta
+
