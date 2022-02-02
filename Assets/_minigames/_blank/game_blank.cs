@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Ieedo.games
 {
-    public class game_blank : MonoBehaviour
+    public class game_blank : Minigame
     {
         void Start()
         {
