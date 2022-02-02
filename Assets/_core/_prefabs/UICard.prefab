@@ -1051,7 +1051,7 @@ RectTransform:
   m_GameObject: {fileID: 5442373620485756744}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 709.9}
-  m_LocalScale: {x: 2.1756, y: 2.1756, z: 2.1756}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1300736925665831971}
@@ -1061,7 +1061,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -584, y: -234}
-  m_SizeDelta: {x: 245.65, y: 355.3756}
+  m_SizeDelta: {x: 244, y: 356}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5425682189966384343
 CanvasRenderer:
@@ -1089,7 +1089,6 @@ MonoBehaviour:
   Subcategory: {fileID: 688198345861798733}
   Icon: {fileID: 8122805968022469174}
   InteractionButton: {fileID: 6057331460964608352}
-  CompleteButton: {fileID: 0}
   ColorBase: {fileID: 2774840890536364734}
   BorderImages:
   - {fileID: 1731594057464778128}

@@ -26,7 +26,7 @@ namespace Ieedo
             //Debug.LogError("Load card " + def);
             this.def = def;
             Category.text = def.Category.ToString();
-            //uiCard.Subcategory.text = card.Subcategory.ToString();
+            Subcategory.text = def.SubCategory.ToString();
             Description.text = def.Description.Text;
             Icon.text = Regex.Unescape(def.Icon);
             Title.text = def.Title.Text;
@@ -40,7 +40,7 @@ namespace Ieedo
 
         public void OnInteraction(Action action)
         {
-            InteractionButton.onClick.AddListener(action.Invoke);
+            InteractionButton.onClick.AddListener(() => action?.Invoke());
         }
     }
 }

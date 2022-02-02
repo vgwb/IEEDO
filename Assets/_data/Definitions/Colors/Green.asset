@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc90efd9772d47c0875e83accd091544, type: 3}
-  m_Name: Blue
+  m_Name: Green
   m_EditorClassIdentifier: Assembly-CSharp:Ieedo:PaletteColor
-  Color: {r: 0.22043431, g: 0.3765338, b: 0.6792453, a: 1}
+  Color: {r: 0, g: 0.6039216, b: 0.05993552, a: 1}

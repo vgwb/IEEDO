@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Lean.Gui;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 
 namespace Ieedo
 {
@@ -28,7 +30,7 @@ namespace Ieedo
 
         protected override IEnumerator OnClose()
         {
-            // TODO: close the current card
+            CloseFrontView();
             yield return base.OnClose();
         }
 
@@ -43,7 +45,7 @@ namespace Ieedo
             //todoCards.Sort((c1, c2) => c1.Category - c2.Category);
 
             ToDoList.AssignList(todoCards);
-            ToDoList.OnCardClicked = OpenFrontView;
+            ToDoList.OnCardClicked = uiCard => OpenFrontView(uiCard, FrontViewMode.View);
 
             SetupButton(CompleteCardButton, () =>
             {
@@ -59,33 +61,69 @@ namespace Ieedo
             });
         }
 
-        private void OpenFrontView(UICard uiCard)
+        public enum FrontViewMode
         {
+            None,
+            View,
+            Creation
+        }
+
+        private FrontViewMode CurrentFrontViewMode;
+        private void OpenFrontView(UICard uiCard, FrontViewMode viewMode)
+        {
+            CurrentFrontViewMode = viewMode;
             var prevParent = uiCard.transform.parent;
-            uiCard.transform.SetParent(FrontViewPivot, false);
-            uiCard.GetComponent<RectTransform>().anchorMin = new Vector2(0.5f, 0.5f);
-            uiCard.GetComponent<RectTransform>().anchorMax = new Vector2(0.5f, 0.5f);
-            uiCard.GetComponent<RectTransform>().anchoredPosition = Vector3.zero;
+            var uiCardRt = uiCard.GetComponent<RectTransform>();
+            uiCardRt.SetParent(FrontViewPivot, false);
+            uiCardRt.anchorMin = new Vector2(0.5f, 0.5f);
+            uiCardRt.anchorMax = new Vector2(0.5f, 0.5f);
+            uiCardRt.anchoredPosition = Vector3.zero;
             FrontView.gameObject.SetActive(true);
             frontCard = uiCard;
 
-            uiCard.OnInteraction(() =>
+            switch (viewMode)
             {
-                // Return it the list
-                uiCard.transform.SetParent(prevParent, false);
-
-                CloseFrontView();
-            });
+                case FrontViewMode.Creation:
+                    DescriptionInputField.gameObject.SetActive(true);
+                    TitleInputField.gameObject.SetActive(true);
+                    CompleteCardButton.gameObject.SetActive(false);
+                    CompleteCreationButton.gameObject.SetActive(true);
+                    uiCard.OnInteraction(null);
+                    break;
+                case FrontViewMode.View:
+                    DescriptionInputField.gameObject.SetActive(false);
+                    TitleInputField.gameObject.SetActive(false);
+                    CompleteCardButton.gameObject.SetActive(true);
+                    CompleteCreationButton.gameObject.SetActive(false);
+                    uiCard.OnInteraction(() =>
+                    {
+                        // Return it the list
+                        uiCard.transform.SetParent(prevParent, false);
+                        CloseFrontView();
+                    });
+                    break;
+            }
         }
 
         private void CloseFrontView()
         {
             FrontView.gameObject.SetActive(false);
+
+            if (CurrentFrontViewMode == FrontViewMode.View && frontCard != null)
+            {
+                ToDoList.PutCard(frontCard);
+            }
             frontCard = null;
+            CurrentFrontViewMode = FrontViewMode.None;
         }
 
 
         #region Card Creation
+
+        [Header("Card Creation")]
+        public TMP_InputField DescriptionInputField;
+        public TMP_InputField TitleInputField;
+        public UIButton CompleteCreationButton;
 
         public IEnumerator CardCreationFlowCO()
         {
@@ -123,6 +161,7 @@ namespace Ieedo
             while (OptionsList.isActiveAndEnabled) yield return null;
             var selectedSybCategory = subCategories[OptionsList.LatestSelectedOption];
 
+            // Create and show the card
             var card = Statics.Cards.GenerateCard(
                 new CardDefinition {
                     Category = selectedCategory.ID,
@@ -131,8 +170,30 @@ namespace Ieedo
                     Difficulty = 2,
                     Title = new LocalizedString { DefaultText = ""}
                 });
-            var cardUi = ToDoList.AssignCard(card);
-            OpenFrontView(cardUi);
+            var cardUi = UICardManager.I.AddCardUI(card, FrontViewPivot);
+            OpenFrontView(cardUi, FrontViewMode.Creation);
+
+            // Allow card editing...
+            DescriptionInputField.textComponent = cardUi.Description;
+            DescriptionInputField.placeholder.enabled = true;
+
+            TitleInputField.textComponent = cardUi.Title;
+            TitleInputField.placeholder.enabled = true;
+
+            bool hasClosed = false;
+            SetupButton(CompleteCreationButton, () =>
+            {
+                ToDoList.AssignCard(card);
+                CloseFrontView();
+                hasClosed = true;
+            });
+
+            while (!hasClosed) yield return null; // Wait for completion
+
+            TitleInputField.textComponent = null;
+            TitleInputField.text = string.Empty;
+            DescriptionInputField.textComponent = null;
+            DescriptionInputField.text = string.Empty;
         }
 
         #endregion

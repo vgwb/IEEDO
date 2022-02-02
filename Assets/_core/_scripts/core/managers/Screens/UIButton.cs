@@ -8,7 +8,7 @@ namespace Ieedo
         {
             set
             {
-                var tm = GetComponentInChildren<UIText>();
+                var tm = GetComponentInChildren<UIText>(true);
                 tm.text = value;
             }
         }
