@@ -6892,9 +6892,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82672b3085034ab8a6e30df20b8c94d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CardPivot: {fileID: 1604480970}
-  UICards: []
-  btnAdd: {fileID: 744296137}
 --- !u!1001 &7673022448128134867
 PrefabInstance:
   m_ObjectHideFlags: 0

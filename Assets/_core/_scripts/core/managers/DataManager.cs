@@ -134,7 +134,8 @@ namespace Ieedo
 
             try
             {
-                var json = JsonConvert.SerializeObject(data);
+                var settings = new JsonSerializerSettings();
+                var json = JsonConvert.SerializeObject(data, settings);
                 var bytes = Encoding.UTF8.GetBytes(json);
                 var bf = new BinaryFormatter();
                 using (FileStream stream = File.Create(path))
