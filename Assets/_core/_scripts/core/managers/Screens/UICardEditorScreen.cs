@@ -43,12 +43,11 @@ namespace Ieedo
             SetupButton(btnAdd, () =>
             {
                 var card = Statics.Cards.GenerateCard(
-                    new CardDefinition
-                    {
-                        Category = (CategoryID)UnityEngine.Random.RandomRange(1,4),
-                        Description = new LocalizedString(){DefaultText = "TEST" + UnityEngine.Random.RandomRange(0,50)},
-                        Difficulty = (uint)UnityEngine.Random.RandomRange(1,5),
-                        Title = new LocalizedString(){DefaultText = "TEST" + UnityEngine.Random.RandomRange(0,50)},
+                    new CardDefinition {
+                        Category = (CategoryID)UnityEngine.Random.Range(1, 4),
+                        Description = new LocalizedString() { DefaultText = "TEST" + UnityEngine.Random.Range(0, 50) },
+                        Difficulty = (uint)UnityEngine.Random.Range(1, 5),
+                        Title = new LocalizedString() { DefaultText = "TEST" + UnityEngine.Random.Range(0, 50) },
                     });
                 AddCardUI(card);
             });
