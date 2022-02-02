@@ -107,7 +107,9 @@ namespace Ieedo
 
             foreach (var def in GetAll<CategoryDefinition>())
             {
-                ProfileData.Categories.Add(new() { ID = def.ID, AssessmentValue = UnityEngine.Random.Range(1, 20) });
+                ProfileData.Categories.Add(new() {
+                    ID = def.ID,
+                    AssessmentValue = UnityEngine.Random.Range(1, 20) });
             }
 
             SaveProfile();

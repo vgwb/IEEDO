@@ -8,6 +8,6 @@ namespace Ieedo
         public uint CardDefID;
         public Timestamp CreationDate;
         public Timestamp ExpirationDate;
-        public Timestamp completionDate;
+        public Timestamp CompletionDate;
     }
 }

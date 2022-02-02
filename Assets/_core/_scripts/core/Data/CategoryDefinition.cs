@@ -2,15 +2,6 @@ using UnityEngine;
 
 namespace Ieedo
 {
-    public enum CategoryID
-    {
-        None,
-        A,
-        B,
-        C
-    }
-
-
     [CreateAssetMenu]
     public class CategoryDefinition : ScriptableObject, IDefinition
     {
@@ -20,7 +11,9 @@ namespace Ieedo
         public PaletteColor PaletteColor;
         public Color Color => PaletteColor.Color;
 
+        public SubCategoryDefinition[] SubCategories;
+
         public int Id => (int)ID;
-        public string Icon;
     }
+
 }

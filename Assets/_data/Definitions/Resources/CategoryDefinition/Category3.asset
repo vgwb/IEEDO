@@ -14,8 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp:Ieedo:CategoryDefinition
   ID: 3
   Title:
-    DefaultText: 
+    DefaultText: Category C
   Description:
     DefaultText: 
   PaletteColor: {fileID: 11400000, guid: ba4acccf3fbca8b40869a6699a0086ac, type: 2}
-  Icon: \uf6f0
+  SubCategories:
+  - ID: 300
+    Title:
+      DefaultText: C 1
+    Icon: \uf7e5
+  - ID: 301
+    Title:
+      DefaultText: C 2
+    Icon: \ue05a
+  - ID: 302
+    Title:
+      DefaultText: C 3
+    Icon: \uf6f0

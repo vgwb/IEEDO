@@ -15,7 +15,6 @@ namespace Ieedo
         public UIText Icon;
 
         public Button InteractionButton;
-        public LeanButton CompleteButton;
 
         public Image ColorBase;
         public Image[] BorderImages;
@@ -31,11 +30,11 @@ namespace Ieedo
             Description.text = def.Description.Text;
             Icon.text = Regex.Unescape(def.Icon);
             Title.text = def.Title.Text;
-            ColorBase.color = def.CategoryDefinition.PaletteColor.Color;
+            ColorBase.color = def.CategoryDefinition.Color;
 
             foreach (var borderImage in BorderImages)
             {
-                borderImage.color = def.CategoryDefinition.PaletteColor.Color * 1.4f;
+                borderImage.color = def.CategoryDefinition.Color * 1.4f;
             }
         }
 

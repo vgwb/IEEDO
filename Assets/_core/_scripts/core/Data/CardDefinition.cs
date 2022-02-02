@@ -25,16 +25,19 @@ namespace Ieedo
         public LocalizedString Description;
         public uint Difficulty;
         public CategoryID Category;
+        public SubCategoryID SubCategory;
 
         [JsonIgnore]
-        public string Icon => CategoryDefinition.Icon;
+        public string Icon => SubCategoryDefinition.Icon;
 
         [JsonIgnore]
         public CategoryDefinition CategoryDefinition => Statics.Data.Get<CategoryDefinition>((int)Category);
 
+        [JsonIgnore] public SubCategoryDefinition SubCategoryDefinition => CategoryDefinition.SubCategories.FirstOrDefault(x => x.ID == SubCategory);
+
         public override string ToString()
         {
-            return Title.Text + " cat " + Category.ToString();
+            return $"{Title.Text} [{Category}-{SubCategory}]";
         }
     }
 }

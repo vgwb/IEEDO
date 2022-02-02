@@ -14,6 +14,8 @@ namespace Ieedo
         public LeanButton CompleteCardButton;
         public LeanButton CreateCardButton;
 
+        public UIOptionsList OptionsList;
+
         public override ScreenID ID => ScreenID.ToDoList;
 
         protected override IEnumerator OnOpen()
@@ -53,15 +55,7 @@ namespace Ieedo
 
             SetupButton(CreateCardButton, () =>
             {
-                var card = Statics.Cards.GenerateCard(
-                    new CardDefinition {
-                        Category = (CategoryID)UnityEngine.Random.Range(1, 4),
-                        Description = new LocalizedString() { DefaultText = "TEST" + UnityEngine.Random.Range(0, 50) },
-                        Difficulty = (uint)UnityEngine.Random.Range(1, 5),
-                        Title = new LocalizedString() { DefaultText = "TEST" + UnityEngine.Random.Range(0, 50) },
-                    });
-                var cardUi = ToDoList.AssignCard(card);
-                OpenFrontView(cardUi);
+                StartCoroutine(CardCreationFlowCO());
             });
         }
 
@@ -89,6 +83,59 @@ namespace Ieedo
             FrontView.gameObject.SetActive(false);
             frontCard = null;
         }
+
+
+        #region Card Creation
+
+        public IEnumerator CardCreationFlowCO()
+        {
+            // Choose category
+            var options = new List<OptionData>();
+            var categories = Statics.Data.GetAll<CategoryDefinition>();
+            foreach (var categoryDef in categories)
+            {
+                options.Add(
+                    new OptionData
+                    {
+                        Text = categoryDef.Title.Text,
+                        Color = categoryDef.Color
+                    }
+                );
+            }
+            OptionsList.ShowOptions(options);
+            while (OptionsList.isActiveAndEnabled) yield return null;
+            var selectedCategory = categories[OptionsList.LatestSelectedOption];
+
+            // Choose sub-category
+            options.Clear();
+            var subCategories = selectedCategory.SubCategories;
+            foreach (var subCategoryDef in subCategories)
+            {
+                options.Add(
+                    new OptionData
+                    {
+                        Text = subCategoryDef.Title.Text,
+                        Color = selectedCategory.Color
+                    }
+                );
+            }
+            OptionsList.ShowOptions(options);
+            while (OptionsList.isActiveAndEnabled) yield return null;
+            var selectedSybCategory = subCategories[OptionsList.LatestSelectedOption];
+
+            var card = Statics.Cards.GenerateCard(
+                new CardDefinition {
+                    Category = selectedCategory.ID,
+                    SubCategory = selectedSybCategory.ID,
+                    Description = new LocalizedString { DefaultText = "" },
+                    Difficulty = 2,
+                    Title = new LocalizedString { DefaultText = ""}
+                });
+            var cardUi = ToDoList.AssignCard(card);
+            OpenFrontView(cardUi);
+        }
+
+        #endregion
 
     }
 }

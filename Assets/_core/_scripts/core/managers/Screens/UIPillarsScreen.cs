@@ -28,7 +28,7 @@ namespace Ieedo
             {
                 var pillarData = new PillarData
                 {
-                    Color = Statics.Data.Definition(category.ID).PaletteColor.Color,
+                    Color = Statics.Data.Definition(category.ID).Color,
                     Height = category.AssessmentValue * 0.2f, // multiplier
                     NCards = 0,
                 };
