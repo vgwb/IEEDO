@@ -17,6 +17,9 @@ namespace Ieedo
             { var _ = Statics.Cards; }
             { var _ = Statics.Screens; }
 
+            // Load the current profile
+            Statics.Data.LoadProfile();
+
             Statics.Screens.LoadScreens();
 
             // Load the game

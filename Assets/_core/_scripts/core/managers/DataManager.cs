@@ -78,6 +78,12 @@ namespace Ieedo
             SaveSerialized(cards, Application.streamingAssetsPath, "cards");
         }
 
+        public void DeleteAllCards()
+        {
+            cards.Cards.Clear();
+            SaveSerialized(cards, Application.streamingAssetsPath, "cards");
+        }
+
         #endregion
 
         #endregion

@@ -18,19 +18,24 @@ namespace Ieedo
 
         protected override IEnumerator OnOpen()
         {
-            var data = new PillarsData()
+            var profileData = Statics.Data.Profile;
+
+            var pillarsData = new PillarsData
             {
                 Pillars = new List<PillarData>()
-                {
-                    new PillarData()
-                    {
-                        Color = Color.yellow,
-                        Height = 2f,
-                        NCards = 4,
-                    }
-                }
             };
-            PillarsManager.ShowData(data);
+            foreach (var category in profileData.Categories)
+            {
+                var pillarData = new PillarData
+                {
+                    Color = category.Definition.PaletteColor.Color,
+                    Height = category.AssessmentValue,
+                    NCards = 4,
+                };
+
+                pillarsData.Pillars.Add(pillarData);
+            }
+            PillarsManager.ShowData(pillarsData);
             Scene3D.SetActive(true);
             return base.OnOpen();
         }

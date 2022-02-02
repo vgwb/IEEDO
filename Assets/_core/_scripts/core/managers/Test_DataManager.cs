@@ -71,6 +71,17 @@ namespace Ieedo.Test
             Log.Err(Statics.Data.Cards.ToJoinedString());
         }
 
+
+        [Button("Test_DeleteAllCards")]
+        private void Test_DeleteAllCards()
+        {
+            Log.Info(MethodBase.GetCurrentMethod().Name);
+
+            Statics.Data.DeleteAllCards();
+
+            Log.Err(Statics.Data.Cards.ToJoinedString());
+        }
+
         [Button("Test_AssignCard")]
         private void Test_AssignCard()
         {
@@ -88,6 +99,7 @@ namespace Ieedo.Test
             Statics.Data.PrintAll<CategoryDefinition>();
             Statics.Data.PrintAll<ActivityDefinition>();
             Statics.Data.PrintAll<AssessmentQuestionDefinition>();
+            Log.Info("N cards found: " + Statics.Data.Cards.Count);
             Log.Info(Statics.Data.Cards.ToJoinedString());
         }
 

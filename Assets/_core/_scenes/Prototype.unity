@@ -4929,10 +4929,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Screen_CurrentCards
       objectReference: {fileID: 0}
-    - target: {fileID: 6924799601145981879, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 41.91394
-      objectReference: {fileID: 0}
     - target: {fileID: 8610312868367887547, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

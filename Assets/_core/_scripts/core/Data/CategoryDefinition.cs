@@ -17,7 +17,8 @@ namespace Ieedo
         public CategoryID ID;
         public LocalizedString Title;
         public LocalizedString Description;
-        public PaletteColor Color;
+        public PaletteColor PaletteColor;
+        public Color Color => PaletteColor.Color;
 
         public int Id => (int)ID;
         public string Icon;

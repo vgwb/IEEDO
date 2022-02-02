@@ -17,5 +17,5 @@ MonoBehaviour:
     DefaultText: 
   Description:
     DefaultText: 
-  Color: {fileID: 11400000, guid: e190f26b97b648648baf9a64db6d26a6, type: 2}
+  PaletteColor: {fileID: 11400000, guid: ba4acccf3fbca8b40869a6699a0086ac, type: 2}
   Icon: \uf6f0

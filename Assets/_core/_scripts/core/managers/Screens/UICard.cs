@@ -31,11 +31,11 @@ namespace Ieedo
             Description.text = def.Description.Text;
             Icon.text = Regex.Unescape(def.Icon);
             Title.text = def.Title.Text;
-            ColorBase.color = Statics.Data.Get<CategoryDefinition>((int)def.Category).Color.Color;
+            ColorBase.color = def.CategoryDefinition.PaletteColor.Color;
 
             foreach (var borderImage in BorderImages)
             {
-                borderImage.color = Statics.Data.Get<CategoryDefinition>((int)def.Category).Color.Color * 1.4f;
+                borderImage.color = def.CategoryDefinition.PaletteColor.Color * 1.4f;
             }
         }
 

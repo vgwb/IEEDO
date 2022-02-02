@@ -38,15 +38,17 @@ namespace Ieedo
 
             // TODO: add a timing handling, sort based on timing
             var todoCards = Statics.Data.Cards;
-            todoCards.Sort((c1, c2) => c1.Category - c2.Category);
+            //todoCards.Sort((c1, c2) => c1.Category - c2.Category);
 
             ToDoList.AssignList(todoCards);
-            ToDoList.OnCardClicked = ShowFrontCard;
+            ToDoList.OnCardClicked = OpenFrontView;
 
             SetupButton(CompleteCardButton, () =>
             {
                 Destroy(frontCard);
                 Statics.Cards.DeleteCard(frontCard.Definition);
+
+                CloseFrontView();
             });
 
             SetupButton(CreateCardButton, () =>
@@ -59,11 +61,11 @@ namespace Ieedo
                         Title = new LocalizedString() { DefaultText = "TEST" + UnityEngine.Random.Range(0, 50) },
                     });
                 var cardUi = ToDoList.AssignCard(card);
-                ShowFrontCard(cardUi);
+                OpenFrontView(cardUi);
             });
         }
 
-        private void ShowFrontCard(UICard uiCard)
+        private void OpenFrontView(UICard uiCard)
         {
             var prevParent = uiCard.transform.parent;
             uiCard.transform.SetParent(FrontViewPivot, false);
@@ -75,11 +77,17 @@ namespace Ieedo
 
             uiCard.OnInteraction(() =>
             {
-                // Return to the list
+                // Return it the list
                 uiCard.transform.SetParent(prevParent, false);
-                FrontView.gameObject.SetActive(false);
-                frontCard = null;
+
+                CloseFrontView();
             });
+        }
+
+        private void CloseFrontView()
+        {
+            FrontView.gameObject.SetActive(false);
+            frontCard = null;
         }
 
     }
