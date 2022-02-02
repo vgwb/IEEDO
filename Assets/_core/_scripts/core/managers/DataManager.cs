@@ -175,24 +175,30 @@ namespace Ieedo
 
             try
             {
-                using (var stream = File.OpenRead(path))
+                if (Statics.App.ApplicationConfig.DebugSaveProfileInJSON)
                 {
-                    var bf = new BinaryFormatter();
-                    var bytes = bf.Deserialize(stream) as byte[];
-                    var jsonString = Encoding.UTF8.GetString(bytes, 0, bytes.Length);
-                    var jobj = JObject.Parse(jsonString);
-
-                    if (Statics.App.ApplicationConfig.DebugSaveProfileInJSON)
+                    using (StreamReader r = new StreamReader(path))
                     {
-                        data = jobj.ToObject<T>();
-                    } else
-                    {
+                        var jsonString = r.ReadToEnd();
+                        var jobj = JObject.Parse(jsonString);
                         var serializer = JsonSerializer.Create();
                         data = jobj.ToObject<T>(serializer);
+                        return true;
                     }
-
-                    return true;
+                } else
+                {
+                    using (var stream = File.OpenRead(path))
+                    {
+                        var bf = new BinaryFormatter();
+                        var bytes = bf.Deserialize(stream) as byte[];
+                        var jsonString = Encoding.UTF8.GetString(bytes, 0, bytes.Length);
+                        var jobj = JObject.Parse(jsonString);
+                        var serializer = JsonSerializer.Create();
+                        data = jobj.ToObject<T>(serializer);
+                        return true;
+                    }
                 }
+
             } catch (Exception e)
             {
                 Debug.LogError($"Could not load data at path {path}\nException {e.Message}");
