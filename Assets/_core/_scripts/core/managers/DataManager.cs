@@ -91,8 +91,7 @@ namespace Ieedo
 
         public void CreateNewProfile(ProfileDescription description)
         {
-            ProfileData = new ProfileData
-            {
+            ProfileData = new ProfileData {
                 Description = description,
                 OnboardingState = new OnboardingState(),
                 Level = 0,
@@ -118,9 +117,14 @@ namespace Ieedo
             return LoadSerialized(out ProfileData, Application.persistentDataPath, $"profile_{profileName}");
         }
 
-        private bool SaveSerialized<T>(T data, string folderPath, string key, string extension = "dat")
+        private bool SaveSerialized<T>(T data, string folderPath, string filename)
         {
-            string path = $"{folderPath}/{key}.{extension}";
+            string extension = "dat";
+            if (AppManager.I.ApplicationConfig.DebugSaveProfileInJSON)
+            {
+                extension = "json";
+            }
+            string path = $"{folderPath}/{filename}.{extension}";
 
             try
             {
@@ -129,11 +133,16 @@ namespace Ieedo
                 var bf = new BinaryFormatter();
                 using (FileStream stream = File.Create(path))
                 {
-                    bf.Serialize(stream, bytes);
+                    if (AppManager.I.ApplicationConfig.DebugSaveProfileInJSON)
+                    {
+                        stream.Write(bytes);
+                    } else
+                    {
+                        bf.Serialize(stream, bytes);
+                    }
                     return true;
                 }
-            }
-            catch (Exception e)
+            } catch (Exception e)
             {
                 Debug.LogError($"Could not save data at path {path}\nException {e.Message}");
                 return false;
@@ -162,8 +171,7 @@ namespace Ieedo
                     data = jobj.ToObject<T>(serializer);
                     return true;
                 }
-            }
-            catch (Exception e)
+            } catch (Exception e)
             {
                 Debug.LogError($"Could not load data at path {path}\nException {e.Message}");
                 data = default;
