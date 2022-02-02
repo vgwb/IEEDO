@@ -6,11 +6,11 @@ namespace Ieedo
     public class CategoryData
     {
         public CategoryID ID;
-        public int Value;
+        public int AssessmentValue;
 
         public override string ToString()
         {
-            return $"{ID}: {Value}";
+            return $"{ID}: {AssessmentValue}";
         }
     }
 }

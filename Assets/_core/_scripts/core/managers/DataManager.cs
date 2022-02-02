@@ -50,7 +50,7 @@ namespace Ieedo
         {
             var s = new StringBuilder();
             s.Append($"{typeof(T).Name}:");
-            s.Append(GetAll<T>().ToJoinedString());
+            s.AppendLine(GetAll<T>().ToJoinedString());
             Log.Info(s.ToString());
         }
 
@@ -102,7 +102,7 @@ namespace Ieedo
 
             foreach (var def in GetAll<CategoryDefinition>())
             {
-                ProfileData.Categories.Add(new() { ID = def.ID, Value = 0 });
+                ProfileData.Categories.Add(new() { ID = def.ID, AssessmentValue = 0 });
             }
 
             SaveProfile();

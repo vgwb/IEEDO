@@ -22,37 +22,13 @@ namespace Ieedo
 
             foreach (var card in Statics.Data.Cards)
             {
-                AddCardUI(card);
+                UICardManager.I.AddCardUI(card, CardPivot);
             }
         }
 
-        private UICard AddCardUI(CardDefinition card)
-        {
-            var uiCard = UICardManager.I.AddCardUI(card, CardPivot);
-            /*
-
-            var cardGo = Instantiate(cardPrefab, CardPivot, true);
-            var uiCard = cardGo.GetComponent<UICard>();
-            uiCard.AssignDefinition(card);
-            UICards.Add(uiCard);
-
-            uiCard.transform.localEulerAngles = new Vector3(0, 0, -10f);*/
-            return uiCard;
-        }
 
         void Start()
         {
-            SetupButton(btnAdd, () =>
-            {
-                var card = Statics.Cards.GenerateCard(
-                    new CardDefinition {
-                        Category = (CategoryID)UnityEngine.Random.Range(1, 4),
-                        Description = new LocalizedString() { DefaultText = "TEST" + UnityEngine.Random.Range(0, 50) },
-                        Difficulty = (uint)UnityEngine.Random.Range(1, 5),
-                        Title = new LocalizedString() { DefaultText = "TEST" + UnityEngine.Random.Range(0, 50) },
-                    });
-                AddCardUI(card);
-            });
             //SetupButton(btnDelete, () => GoTo(ScreenID.Assessment));
         }
 

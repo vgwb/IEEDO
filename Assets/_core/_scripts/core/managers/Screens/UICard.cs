@@ -1,4 +1,6 @@
-﻿using System.Text.RegularExpressions;
+﻿using System;
+using System.Text.RegularExpressions;
+using Lean.Gui;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,13 +15,16 @@ namespace Ieedo
         public UIText Icon;
 
         public Button InteractionButton;
+        public LeanButton CompleteButton;
 
         public Image ColorBase;
+        public Image[] BorderImages;
         private CardDefinition def;
+        public CardDefinition Definition => def;
 
         public void AssignDefinition(CardDefinition def)
         {
-            Debug.LogError("Load card " + def);
+            //Debug.LogError("Load card " + def);
             this.def = def;
             Category.text = def.Category.ToString();
             //uiCard.Subcategory.text = card.Subcategory.ToString();
@@ -27,6 +32,16 @@ namespace Ieedo
             Icon.text = Regex.Unescape(def.Icon);
             Title.text = def.Title.Text;
             ColorBase.color = Statics.Data.Get<CategoryDefinition>((int)def.Category).Color.Color;
+
+            foreach (var borderImage in BorderImages)
+            {
+                borderImage.color = Statics.Data.Get<CategoryDefinition>((int)def.Category).Color.Color * 1.4f;
+            }
+        }
+
+        public void OnInteraction(Action action)
+        {
+            InteractionButton.onClick.AddListener(action.Invoke);
         }
     }
 }

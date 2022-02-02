@@ -15,6 +15,12 @@
             Statics.Data.SaveProfile();
         }
 
+        public void DeleteCard(CardDefinition cardDef)
+        {
+            Statics.Data.Cards.Remove(cardDef);
+        }
+
+        // TODO: use CardData instead here
         public CardDefinition GenerateCard(CardDefinition def)
         {
             Statics.Data.AddCardDefinition(def);

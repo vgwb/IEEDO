@@ -6,6 +6,7 @@ namespace Ieedo
 {
     public class UICardCollection : MonoBehaviour
     {
+        public RectTransform CardsPivot;
         public int CardScale = 3;
 
         public Action<UICard> OnCardClicked;
@@ -14,10 +15,16 @@ namespace Ieedo
         {
             foreach (var cardDef in cardsList)
             {
-                var uiCard = UICardManager.I.AddCardUI(cardDef, transform);
-                uiCard.transform.localScale = Vector3.one * CardScale;
-                uiCard.InteractionButton.onClick.AddListener(() => OnCardClicked(uiCard));
+                AssignCard(cardDef);
             }
+        }
+
+        public UICard AssignCard(CardDefinition cardDef)
+        {
+            var uiCard = UICardManager.I.AddCardUI(cardDef, CardsPivot);
+            uiCard.transform.localScale = Vector3.one * CardScale;
+            uiCard.OnInteraction(() => OnCardClicked(uiCard));
+            return uiCard;
         }
 
     }
