@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DebugPanelEnabledAtStartup: 0
   DebugLogEnabled: 1
-  VerboseBook: 0
-  VerboseAudio: 0
+  DebugSaveProfileInJSON: 0
