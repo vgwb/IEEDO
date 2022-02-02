@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Newtonsoft.Json;
 using UnityEngine;
 
 namespace Ieedo
@@ -24,7 +25,11 @@ namespace Ieedo
         public LocalizedString Description;
         public uint Difficulty;
         public CategoryID Category;
+
+        [JsonIgnore]
         public string Icon => CategoryDefinition.Icon;
+
+        [JsonIgnore]
         public CategoryDefinition CategoryDefinition => Statics.Data.Get<CategoryDefinition>((int)Category);
 
         public override string ToString()

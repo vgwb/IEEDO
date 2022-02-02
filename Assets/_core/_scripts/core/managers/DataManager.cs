@@ -155,6 +155,7 @@ namespace Ieedo
             }
         }
 
+        // TODO: Stefano: DebugSaveProfileInJSON won't work as the LOAD was not implemented
         private bool LoadSerialized<T>(out T data, string folderPath, string key, string extension = "dat")
         {
             string path = $"{folderPath}/{key}.{extension}";
@@ -188,5 +189,9 @@ namespace Ieedo
         #endregion
 
 
+        public CategoryDefinition Definition(CategoryID id)
+        {
+            return Get<CategoryDefinition>((int)id);
+        }
     }
 }

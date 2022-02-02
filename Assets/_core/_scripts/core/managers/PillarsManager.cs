@@ -29,10 +29,10 @@ namespace Ieedo
 
         public void Update()
         {
+            transform.localEulerAngles += Vector3.up * Time.deltaTime * RotationSpeed;
+
             if (!TEST) return;
             ShowData(TestData);
-
-            transform.localEulerAngles += Vector3.up * Time.deltaTime * RotationSpeed;
         }
 
         public List<PillarView> PillarViews = new List<PillarView>();

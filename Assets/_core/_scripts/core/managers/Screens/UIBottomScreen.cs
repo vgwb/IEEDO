@@ -14,7 +14,7 @@ namespace Ieedo
         {
             SetupButton(btnActivities, () => GoTo(ScreenID.Activities));
             SetupButton(btnPillars, () => GoTo(ScreenID.Pillars));
-            SetupButton(btnCards, () => GoTo(ScreenID.CurrentCards));
+            SetupButton(btnCards, () => GoTo(ScreenID.ToDoList));
         }
     }
 }

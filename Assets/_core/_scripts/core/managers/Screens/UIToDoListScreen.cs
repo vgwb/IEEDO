@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Ieedo
 {
-    public class UICurrentCardsScreen : UIScreen
+    public class UIToDoListScreen : UIScreen
     {
         public UICardCollection ToDoList;
         public GameObject FrontView;
@@ -14,7 +14,7 @@ namespace Ieedo
         public LeanButton CompleteCardButton;
         public LeanButton CreateCardButton;
 
-        public override ScreenID ID => ScreenID.CurrentCards;
+        public override ScreenID ID => ScreenID.ToDoList;
 
         protected override IEnumerator OnOpen()
         {
