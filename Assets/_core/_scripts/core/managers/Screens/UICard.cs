@@ -12,6 +12,8 @@ namespace Ieedo
         public UIText Subcategory;
         public UIText Icon;
 
+        public Button InteractionButton;
+
         public Image ColorBase;
         private CardDefinition def;
 

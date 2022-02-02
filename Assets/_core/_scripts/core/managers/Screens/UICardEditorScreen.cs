@@ -8,7 +8,6 @@ namespace Ieedo
 {
     public class UICardEditorScreen : UIScreen
     {
-        public GameObject cardPrefab;
         public Transform CardPivot;
         public List<UICard> UICards = new List<UICard>();
 
@@ -29,12 +28,15 @@ namespace Ieedo
 
         private UICard AddCardUI(CardDefinition card)
         {
+            var uiCard = UICardManager.I.AddCardUI(card, CardPivot);
+            /*
+
             var cardGo = Instantiate(cardPrefab, CardPivot, true);
             var uiCard = cardGo.GetComponent<UICard>();
             uiCard.AssignDefinition(card);
             UICards.Add(uiCard);
 
-            uiCard.transform.localEulerAngles = new Vector3(0, 0, -10f);
+            uiCard.transform.localEulerAngles = new Vector3(0, 0, -10f);*/
             return uiCard;
         }
 

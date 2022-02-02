@@ -6,11 +6,14 @@
         Loader,
         Top,
         Intro,
+        Bottom,
+
         Assessment,
         CurrentCards,
         ProfileCreation,
         History,
-        GamesList,
+        Activities,
         CardEditor,
+        Pillars,
     }
 }

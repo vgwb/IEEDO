@@ -2,7 +2,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace Ieedo.Test
+namespace Ieedo
 {
     public class PillarView : MonoBehaviour
     {

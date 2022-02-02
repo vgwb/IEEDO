@@ -19,7 +19,8 @@ namespace Ieedo
 
             // Load the game
             Statics.Screens.OpenImmediate(ScreenID.Top);
-            yield return Statics.Screens.TransitionToCO(ScreenID.Intro);
+            Statics.Screens.OpenImmediate(ScreenID.Bottom);
+            yield return Statics.Screens.TransitionToCO(ScreenID.Pillars);
         }
     }
 }

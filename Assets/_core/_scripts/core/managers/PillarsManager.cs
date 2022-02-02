@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace Ieedo.Test
+namespace Ieedo
 {
     [System.Serializable]
     public class PillarData

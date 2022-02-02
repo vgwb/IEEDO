@@ -887,7 +887,7 @@ MonoBehaviour:
   cardPrefab: {fileID: 3138537031308133061, guid: 1ae4975dbffaef94491ee4863e8bf9e5, type: 3}
   cards: []
   gfx: {fileID: 4046129817502053877}
-  mr: {fileID: 0}
+  mr: {fileID: 6183956033058566104}
   text: {fileID: 7374470443115008349}
 --- !u!1 &7921056259128663660
 GameObject:
