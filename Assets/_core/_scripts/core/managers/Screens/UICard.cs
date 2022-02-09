@@ -40,6 +40,7 @@ namespace Ieedo
 
         public void OnInteraction(Action action)
         {
+            InteractionButton.onClick.RemoveAllListeners();
             InteractionButton.onClick.AddListener(() => action?.Invoke());
         }
     }
