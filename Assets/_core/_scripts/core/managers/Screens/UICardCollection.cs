@@ -53,9 +53,8 @@ namespace Ieedo
             Destroy(HeldCards[index]);
             HeldCards.RemoveAt(index);
 
-            HeldSlots.RemoveAt(index);
             Destroy(HeldSlots[index]);
-            //Destroy(UICard);
+            HeldSlots.RemoveAt(index);
         }
 
         public void PutCard(UICard uiCard)
@@ -70,6 +69,8 @@ namespace Ieedo
             {
                 // Move to the correct slot (TODO: animate the sorting)
                 HeldCards[i].transform.SetParent(HeldSlots[i].transform);
+                HeldCards[i].transform.localScale = Vector3.one;
+                HeldCards[i].transform.localPosition = Vector3.zero;
             }
         }
     }

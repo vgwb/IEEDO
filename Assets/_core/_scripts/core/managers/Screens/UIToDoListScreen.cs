@@ -58,7 +58,7 @@ namespace Ieedo
 
         private int SortByExpirationDate(CardData c1, CardData c2)
         {
-            return c1.ExpirationTimestamp.Date.CompareTo(c2.ExpirationTimestamp.Date);
+            return -c1.ExpirationTimestamp.Date.CompareTo(c2.ExpirationTimestamp.Date);
         }
 
         public void LoadCurrentCards()
@@ -81,7 +81,7 @@ namespace Ieedo
 
             SetupButton(EditCardButton, () =>
             {
-                SwitchToViewMode(FrontViewMode.CreateAndEdit);
+                SwitchToViewMode(FrontViewMode.Edit);
             });
 
             SetupButton(CreateCardButton, () =>
@@ -95,7 +95,8 @@ namespace Ieedo
         {
             None,
             View,
-            CreateAndEdit
+            Create,
+            Edit
         }
 
         private FrontViewMode CurrentFrontViewMode;
@@ -128,10 +129,15 @@ namespace Ieedo
         {
             switch (viewMode)
             {
-                case FrontViewMode.CreateAndEdit:
+                case FrontViewMode.Edit:
                     EditMode.SetActive(true);
                     ViewMode.SetActive(false);
-                    StartEditing();
+                    StartEditing(false);
+                    break;
+                case FrontViewMode.Create:
+                    EditMode.SetActive(true);
+                    ViewMode.SetActive(false);
+                    StartEditing(true);
                     break;
                 case FrontViewMode.View:
                     EditMode.SetActive(false);
@@ -211,7 +217,7 @@ namespace Ieedo
             Statics.Cards.AssignCard(cardData);
             var cardUi = UICardManager.I.AddCardUI(cardData, FrontViewPivot);
 
-            OpenFrontView(cardUi, FrontViewMode.CreateAndEdit);
+            OpenFrontView(cardUi, FrontViewMode.Create);
 
         }
 
@@ -279,7 +285,7 @@ namespace Ieedo
             result.Value = possibleDays[OptionsList.LatestSelectedOption];
         }
 
-        public void StartEditing()
+        public void StartEditing(bool isNewCard)
         {
             var cardUI = frontCardUI;
             DescriptionInputField.textComponent = cardUI.Description;
@@ -298,7 +304,7 @@ namespace Ieedo
             {
                 StopEditing();
 
-                ToDoList.AddCard(cardUI.Data);
+                if (isNewCard) ToDoList.AddCard(cardUI.Data);
                 ToDoList.SortList(SortByExpirationDate);
 
                 CloseFrontView();
@@ -310,6 +316,7 @@ namespace Ieedo
                 StopEditing();
                 CloseFrontView();
 
+                if (!isNewCard) ToDoList.RemoveCard(frontCardUI);
                 Statics.Cards.DeleteCard(cardUI.Data);
                 Statics.Cards.DeleteCardDefinition(cardUI.Data.Definition);
             });
