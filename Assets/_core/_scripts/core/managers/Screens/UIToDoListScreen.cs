@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using Lean.Gui;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Assertions.Must;
 
 namespace Ieedo
 {
@@ -27,6 +25,9 @@ namespace Ieedo
         public GameObject EditMode;
         public TMP_InputField DescriptionInputField;
         public TMP_InputField TitleInputField;
+        public UIButton EditDifficultyButton;
+        public UIButton EditDateButton;
+
         public UIButton CompleteCreationButton;
         public UIButton DeleteCardButton;
 
@@ -46,7 +47,7 @@ namespace Ieedo
             yield return base.OnClose();
         }
 
-        public UICard frontCard;
+        public UICard frontCardUI;
 
         public void LoadCurrentCards()
         {
@@ -61,10 +62,15 @@ namespace Ieedo
 
             SetupButton(ValidateCardButton, () =>
             {
-                ToDoList.RemoveCard(frontCard);
-                Statics.Cards.DeleteCard(frontCard.Data);
+                ToDoList.RemoveCard(frontCardUI);
+                Statics.Cards.DeleteCard(frontCardUI.Data);
 
                 CloseFrontView();
+            });
+
+            SetupButton(EditCardButton, () =>
+            {
+                SwitchToViewMode(FrontViewMode.CreateAndEdit);
             });
 
             SetupButton(CreateCardButton, () =>
@@ -91,24 +97,32 @@ namespace Ieedo
             uiCardRt.anchorMax = new Vector2(0.5f, 0.5f);
             uiCardRt.anchoredPosition = Vector3.zero;
             FrontView.gameObject.SetActive(true);
-            frontCard = uiCard;
+            frontCardUI = uiCard;
 
+            uiCard.OnInteraction(() =>
+            {
+                // Return it the list on click
+                if (CurrentFrontViewMode == FrontViewMode.View)
+                {
+                    uiCard.transform.SetParent(prevParent, false);
+                    CloseFrontView();
+                }
+            });
+
+            SwitchToViewMode(viewMode);
+        }
+
+        private void SwitchToViewMode(FrontViewMode viewMode)
+        {
             switch (viewMode)
             {
                 case FrontViewMode.CreateAndEdit:
                     EditMode.SetActive(true);
                     ViewMode.SetActive(false);
-                    uiCard.OnInteraction(null);
                     break;
                 case FrontViewMode.View:
                     EditMode.SetActive(false);
                     ViewMode.SetActive(true);
-                    uiCard.OnInteraction(() =>
-                    {
-                        // Return it the list
-                        uiCard.transform.SetParent(prevParent, false);
-                        CloseFrontView();
-                    });
                     break;
             }
         }
@@ -117,11 +131,11 @@ namespace Ieedo
         {
             FrontView.gameObject.SetActive(false);
 
-            if (CurrentFrontViewMode == FrontViewMode.View && frontCard != null)
+            if (CurrentFrontViewMode == FrontViewMode.View && frontCardUI != null)
             {
-                ToDoList.PutCard(frontCard);
+                ToDoList.PutCard(frontCardUI);
             }
-            frontCard = null;
+            frontCardUI = null;
             CurrentFrontViewMode = FrontViewMode.None;
         }
 
@@ -166,43 +180,13 @@ namespace Ieedo
             var selectedSybCategory = subCategories[OptionsList.LatestSelectedOption];
 
             // Choose difficulty
-            options.Clear();
-            var possibleDifficulties = new int[] { 1, 2, 3 };
-            foreach (var possibleDifficulty in possibleDifficulties)
-            {
-                options.Add(
-                    new OptionData
-                    {
-                        Text = possibleDifficulty.ToString(),
-                        Color = Color.white,
-                    }
-                );
-            }
-            OptionsList.ShowOptions(options);
-            while (OptionsList.isActiveAndEnabled) yield return null;
-            var selectedDifficulty = possibleDifficulties[OptionsList.LatestSelectedOption];
+            var result = new Ref<int>();
+            yield return ChooseDifficultyCO(result);
+            var selectedDifficulty = result.Value;
 
             // Choose Date
-            options.Clear();
-            var possibleDays = new [] { 1, 2, 3, 4, 5, 6 };
-            foreach (var possibleDay in possibleDays)
-            {
-                var targetDate = DateTime.Now.AddDays(possibleDay);
-                var color = Color.white;
-                if (targetDate.DayOfWeek == DayOfWeek.Saturday) color = Color.red;
-                if (targetDate.DayOfWeek == DayOfWeek.Sunday) color = Color.red;
-
-                options.Add(
-                    new OptionData
-                    {
-                        Text = new Timestamp(targetDate).ToString(),
-                        Color = color
-                    }
-                );
-            }
-            OptionsList.ShowOptions(options);
-            while (OptionsList.isActiveAndEnabled) yield return null;
-            var selectedDays = possibleDays[OptionsList.LatestSelectedOption];
+            yield return ChooseDateCO(result);
+            var selectedDays = result.Value;
 
             // Create and show the card
             var cardDef = Statics.Cards.GenerateCardDefinition(
@@ -225,14 +209,9 @@ namespace Ieedo
             Statics.Cards.AssignCard(cardData);
 
             var cardUi = UICardManager.I.AddCardUI(cardData, FrontViewPivot);
+
             OpenFrontView(cardUi, FrontViewMode.CreateAndEdit);
-
-            // Allow card editing...
-            DescriptionInputField.textComponent = cardUi.Description;
-            DescriptionInputField.placeholder.enabled = true;
-
-            TitleInputField.textComponent = cardUi.Title;
-            TitleInputField.placeholder.enabled = true;
+            EnableEditing();
 
             bool hasClosed = false;
 
@@ -263,6 +242,79 @@ namespace Ieedo
             DescriptionInputField.text = string.Empty;
         }
 
+        private IEnumerator ChooseDifficultyCO(Ref<int> result)
+        {
+            var options = new List<OptionData>();
+            var possibleDifficulties = new[] { 1, 2, 3 };
+            foreach (var possibleDifficulty in possibleDifficulties)
+            {
+                options.Add(
+                    new OptionData
+                    {
+                        Text = possibleDifficulty.ToString(),
+                        Color = Color.white,
+                    }
+                );
+            }
+            OptionsList.ShowOptions(options);
+            while (OptionsList.isActiveAndEnabled) yield return null;
+            result.Value = possibleDifficulties[OptionsList.LatestSelectedOption];
+        }
+
+
+        private IEnumerator ChooseDateCO(Ref<int> result)
+        {
+            var options = new List<OptionData>();
+            var possibleDays = new [] { 1, 2, 3, 4, 5, 6 };
+            foreach (var possibleDay in possibleDays)
+            {
+                var targetDate = DateTime.Now.AddDays(possibleDay);
+                var color = Color.white;
+                if (targetDate.DayOfWeek == DayOfWeek.Saturday) color = Color.red;
+                if (targetDate.DayOfWeek == DayOfWeek.Sunday) color = Color.red;
+
+                options.Add(
+                    new OptionData
+                    {
+                        Text = new Timestamp(targetDate).ToString(),
+                        Color = color
+                    }
+                );
+            }
+            OptionsList.ShowOptions(options);
+            while (OptionsList.isActiveAndEnabled) yield return null;
+            result.Value = possibleDays[OptionsList.LatestSelectedOption];
+        }
+
+        public void EnableEditing()
+        {
+            DescriptionInputField.textComponent = frontCardUI.Description;
+            DescriptionInputField.placeholder.enabled = true;
+
+            TitleInputField.textComponent = frontCardUI.Title;
+            TitleInputField.placeholder.enabled = true;
+
+            SetupButton(EditDifficultyButton, () => StartCoroutine(EditDifficultyCO()));
+            SetupButton(EditDateButton, () => StartCoroutine(EditDateCO()));
+        }
+
+        private IEnumerator EditDifficultyCO()
+        {
+            var result = new Ref<int>();
+            yield return ChooseDifficultyCO(result);
+            var selection = result.Value;
+            frontCardUI.Data.Definition.Difficulty = selection;
+            frontCardUI.AssignCard(frontCardUI.Data); // Refresh
+        }
+
+        private IEnumerator EditDateCO()
+        {
+            var result = new Ref<int>();
+            yield return ChooseDateCO(result);
+            var selection = result.Value;
+            frontCardUI.Data.ExpirationDate = new Timestamp(DateTime.Now.AddDays(selection));
+            frontCardUI.AssignCard(frontCardUI.Data); // Refresh
+        }
         #endregion
 
     }
