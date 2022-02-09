@@ -1,23 +1,30 @@
-﻿namespace Ieedo
+﻿using System.Collections.Generic;
+
+namespace Ieedo
 {
     public class UIActivitiesScreen : UIScreen
     {
         public override ScreenID ID => ScreenID.Activities;
 
-        public UIButton StartGameBtn;
-        public UIButton StartGame2Btn;
+        public List<UIActivityBlock> ActivityBlocks;
 
         void Start()
         {
             var allActivities = Statics.Data.GetAll<ActivityDefinition>();
 
-            foreach (var activityDefinition in allActivities)
+            for (var i = 0; i < allActivities.Count; i++)
             {
-                // TODO: Create activity block
+                ActivityBlocks[i].gameObject.SetActive(true);
+                var activityDefinition = allActivities[i];
+                ActivityBlocks[i].Title.text = activityDefinition.ID.ToString();
+                SetupButton(ActivityBlocks[i].LaunchButton, () => LaunchActivity(activityDefinition.ID));
+                ActivityBlocks[i].Title.text = activityDefinition.ID.ToString();
             }
 
-            SetupButton(StartGameBtn, () => LaunchActivity(ActivityID.Blank));
-            SetupButton(StartGame2Btn, () => LaunchActivity(ActivityID.TicTac));
+            for (int i = allActivities.Count; i < ActivityBlocks.Count; i++)
+            {
+                ActivityBlocks[i].gameObject.SetActive(false);
+            }
         }
 
         private void LaunchActivity(ActivityID activity)
