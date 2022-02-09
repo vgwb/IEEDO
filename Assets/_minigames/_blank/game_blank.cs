@@ -26,6 +26,7 @@ namespace Ieedo.games
         public void OnBtnLose()
         {
             Debug.Log("Game Blank Lose");
+            CloseMinigame();
         }
     }
 }

@@ -29,9 +29,19 @@ namespace Ieedo
             yield return Statics.Screens.TransitionToCO(ScreenID.Pillars);
         }
 
-        public void LaunchMinigame()
+        public void LaunchMinigame(ActivityEnum activity)
         {
             SceneManager.LoadScene("game_blank", LoadSceneMode.Additive);
+        }
+
+        public void CloseMinigame()
+        {
+            SceneManager.UnloadSceneAsync("game_blank");
+        }
+
+        void getActivityScene(ActivityEnum activity)
+        {
+
         }
     }
 }

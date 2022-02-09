@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: 4ce476541214a7c4d84373fd28790afc
+labels:
+- Core
 DefaultImporter:
   externalObjects: {}
   userData: 

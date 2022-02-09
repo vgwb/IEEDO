@@ -5,4 +5,10 @@
         None = 0,
         Game,
     }
+
+    public enum ActivityEnum
+    {
+        Blank = 0,
+        TicTac = 1,
+    }
 }
