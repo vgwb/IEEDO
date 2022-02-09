@@ -313,10 +313,10 @@ namespace Ieedo
 
             SetupButton(DeleteCardButton, () =>
             {
+                if (!isNewCard) ToDoList.RemoveCard(frontCardUI);
                 StopEditing();
                 CloseFrontView();
 
-                if (!isNewCard) ToDoList.RemoveCard(frontCardUI);
                 Statics.Cards.DeleteCard(cardUI.Data);
                 Statics.Cards.DeleteCardDefinition(cardUI.Data.Definition);
             });
