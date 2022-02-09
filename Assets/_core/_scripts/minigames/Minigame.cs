@@ -18,7 +18,7 @@ namespace Ieedo.games
             Debug.Log("close this minigame");
             if (AppManager.I)
             {
-                AppManager.I.CloseMinigame();
+                AppManager.I.CloseActivity();
             }
         }
 
