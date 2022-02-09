@@ -150,9 +150,9 @@ namespace Ieedo
         {
             FrontView.gameObject.SetActive(false);
 
-            if (CurrentFrontViewMode == FrontViewMode.View && frontCardUI != null)
+            if (frontCardUI != null)
             {
-                ToDoList.PutCard(frontCardUI);
+                ToDoList.SetupInListInteraction(frontCardUI);
             }
             frontCardUI = null;
             CurrentFrontViewMode = FrontViewMode.None;

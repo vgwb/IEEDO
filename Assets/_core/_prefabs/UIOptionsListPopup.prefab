@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1485521131095143353}
   - component: {fileID: 1485521131095143358}
   m_Layer: 5
-  m_Name: UIOptionsList
+  m_Name: UIOptionsListPopup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -324,7 +324,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 754}
-  m_SizeDelta: {x: -205.8695, y: -1600.2382}
+  m_SizeDelta: {x: 539.505, y: 182.815}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1667347801025892622
 CanvasRenderer:

@@ -36,7 +36,7 @@ namespace Ieedo
 
             if (uiCard == null) uiCard = UICardManager.I.AddCardUI(cardData, newSlotRT);
             else uiCard.transform.SetParent(newSlotRT);
-            PutCard(uiCard);
+            SetupInListInteraction(uiCard);
             HeldSlots.Add(newSlotRT.gameObject);
             HeldCards.Add(uiCard);
             return uiCard;
@@ -57,7 +57,7 @@ namespace Ieedo
             HeldSlots.RemoveAt(index);
         }
 
-        public void PutCard(UICard uiCard)
+        public void SetupInListInteraction(UICard uiCard)
         {
             uiCard.OnInteraction(() => OnCardClicked(uiCard));
         }
