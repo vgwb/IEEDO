@@ -5,7 +5,7 @@ namespace Ieedo.games
 {
     public class Minigame : MonoBehaviour
     {
-
+        public ActivityDefinition Activity;
 
 
         void Start()
