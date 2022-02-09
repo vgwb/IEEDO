@@ -23,14 +23,12 @@ namespace Ieedo
         {
             yield return OnOpen();
             gameObject.SetActive(true);
-            yield break;
         }
 
         public IEnumerator CloseCO()
         {
             yield return OnClose();
             gameObject.SetActive(false);
-            yield break;
         }
 
         protected virtual IEnumerator OnOpen() { yield break; }
