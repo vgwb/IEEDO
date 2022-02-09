@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Ieedo.Utilities;
 
 namespace Ieedo
 {
@@ -50,11 +51,8 @@ namespace Ieedo
             yield return base.OnClose();
         }
 
-        public UICard frontCardUI;
-
-        public void RefreshCardOrder()
-        {
-        }
+        private UICard frontCardUI;
+        private Transform prevFrontCardParent;
 
         private int SortByExpirationDate(CardData c1, CardData c2)
         {
@@ -102,9 +100,10 @@ namespace Ieedo
         private FrontViewMode CurrentFrontViewMode;
         private void OpenFrontView(UICard uiCard, FrontViewMode viewMode)
         {
-            var prevParent = uiCard.transform.parent;
+            prevFrontCardParent = uiCard.transform.parent;
             var uiCardRt = uiCard.GetComponent<RectTransform>();
             uiCardRt.SetParent(FrontViewPivot, false);
+            uiCardRt.localEulerAngles = Vector3.zero;
             uiCardRt.anchorMin = new Vector2(0.5f, 0.5f);
             uiCardRt.anchorMax = new Vector2(0.5f, 0.5f);
             uiCardRt.anchoredPosition = Vector3.zero;
@@ -116,7 +115,6 @@ namespace Ieedo
                 // Return it the list on click
                 if (CurrentFrontViewMode == FrontViewMode.View)
                 {
-                    uiCard.transform.SetParent(prevParent, false);
                     CloseFrontView();
                 }
             });
@@ -152,9 +150,11 @@ namespace Ieedo
 
             if (frontCardUI != null)
             {
+                if (prevFrontCardParent != null) frontCardUI.transform.SetParent(prevFrontCardParent, false);
                 ToDoList.SetupInListInteraction(frontCardUI);
             }
             frontCardUI = null;
+            prevFrontCardParent = null;
             CurrentFrontViewMode = FrontViewMode.None;
         }
 
@@ -329,21 +329,20 @@ namespace Ieedo
             // Wait for closing...
             while (CurrentFrontViewMode != FrontViewMode.None)
             {
-                bool canComplete = frontCardUI.Description.text != "" && frontCardUI.Title.text != "";
+                bool canComplete = !frontCardUI.Description.text.IsNullOrEmpty() && !frontCardUI.Title.text.IsNullOrEmpty();
                 CompleteCreationButton.gameObject.SetActive(canComplete);   // TODO: instead use interactable
+
+                frontCardUI.Data.Definition.Title.DefaultText = TitleInputField.text;
+                frontCardUI.Data.Definition.Description.DefaultText = DescriptionInputField.text;
+
                 yield return null; // Wait for completion
             }
         }
 
         public void StopEditing()
         {
-            frontCardUI.Data.Definition.Title.DefaultText = TitleInputField.text;
-            frontCardUI.Data.Definition.Description.DefaultText = DescriptionInputField.text;
-
             TitleInputField.textComponent = null;
-            //TitleInputField.text = string.Empty;
             DescriptionInputField.textComponent = null;
-            //DescriptionInputField.text = string.Empty;
         }
 
         private IEnumerator EditDifficultyCO()
