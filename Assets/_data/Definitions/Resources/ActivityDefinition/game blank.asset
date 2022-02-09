@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp:Ieedo:ActivityDefinition
   ID: 1
   Title:
-    key: 
+    key: game_blank
     DefaultText: Blank
   Description:
     key: 

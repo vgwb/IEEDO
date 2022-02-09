@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 2
   Title:
-    key: 
+    key: game_tictac
     DefaultText: Tic Tac
   Description:
     key: 
