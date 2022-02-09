@@ -68,39 +68,35 @@ namespace Ieedo
         private CardsCollection cards = new();
         public void LoadCardDefinitions()
         {
-#if UNITY_EDITOR
-            LoadSerialized(out cards, Application.streamingAssetsPath, "cards");
-#else
             LoadSerialized(out cards, Application.persistentDataPath, "cards");
-#endif
         }
 
         public void InitialiseCardDefinitions()
         {
             LoadSerialized(out cards, Application.streamingAssetsPath, "cards");
             if (cards == null) cards = new();
-            SaveCardDefinitions();
+            SaveCardDefinitions(saveAsDefaultCards:false);
         }
 
-        public void AddCardDefinition(CardDefinition def)
+        public void AddCardDefinition(CardDefinition def, bool isDefaultCard = false)
         {
             cards.Add(def);
-            SaveCardDefinitions();
+            SaveCardDefinitions(isDefaultCard);
         }
 
         public void DeleteAllCardDefinitions()
         {
             cards.Cards.Clear();
-            SaveCardDefinitions();
+            SaveCardDefinitions(saveAsDefaultCards:false);
         }
 
-        private void SaveCardDefinitions()
+        private void SaveCardDefinitions(bool saveAsDefaultCards)
         {
-#if UNITY_EDITOR
+        if (saveAsDefaultCards)
             SaveSerialized(cards, Application.streamingAssetsPath, "cards");
-#else
+        else
             SaveSerialized(cards, Application.persistentDataPath, "cards");
-#endif
+
         }
 
         #endregion

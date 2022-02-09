@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -197,7 +198,9 @@ namespace Ieedo
                     Description = new LocalizedString { DefaultText = "" },
                     Difficulty = selectedDifficulty,
                     Title = new LocalizedString { DefaultText = ""},
-                });
+                },
+                isDefaultCard: AppManager.I.ApplicationConfig.DebugLogEnabled
+                );
 
             // Create a new Data for this profile for that card
             var cardData = new CardData
