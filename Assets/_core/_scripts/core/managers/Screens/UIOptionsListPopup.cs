@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
-using Lean.Gui;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Ieedo
 {
@@ -11,7 +9,7 @@ namespace Ieedo
         public Color Color;
     }
 
-    public class UIOptionsList : MonoBehaviour
+    public class UIOptionsListPopup : MonoBehaviour
     {
         public UIText Title;
 

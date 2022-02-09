@@ -31,7 +31,8 @@ namespace Ieedo
                 {
                     var cardGo = Instantiate(cardPrefab, transform);
                     cards.Add(cardGo);
-                    cardGo.transform.localPosition = Vector3.up * (data.Height + iCard * 0.025f);
+                    float pillarTop = data.Height * 2.5f;
+                    cardGo.transform.localPosition = Vector3.up * (pillarTop + iCard * 0.025f);
                     cardGo.transform.localPosition += new Vector3(Random.Range(-0.2f, 0.2f), 0, Random.Range(-0.2f, 0.2f));
                     cardGo.transform.localEulerAngles = Vector3.up * Random.Range(0, 360f);
                     cardGo.GetComponentInChildren<MeshRenderer>().material = new Material(cardGo.GetComponentInChildren<MeshRenderer>().material);

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Ieedo.Test;
 using UnityEngine;
 
@@ -26,11 +27,13 @@ namespace Ieedo
             };
             foreach (var category in profileData.Categories)
             {
+                var nCards = Statics.Data.Profile.Cards.Count(x => x.Status != CardValidationStatus.Todo && x.Definition.Category == category.ID);
+
                 var pillarData = new PillarData
                 {
                     Color = Statics.Data.Definition(category.ID).Color,
                     Height = category.AssessmentValue * 0.2f, // multiplier
-                    NCards = 0,
+                    NCards = nCards,
                 };
 
                 pillarsData.Pillars.Add(pillarData);

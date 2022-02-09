@@ -69,7 +69,7 @@ namespace Ieedo.Test
                 Title = new LocalizedString {DefaultText = "TITLE"},
             });
 
-            Log.Err(Statics.Data.Cards.ToJoinedString());
+            Log.Err(Statics.Data.CardDefinitions.ToJoinedString());
         }
 
 
@@ -80,7 +80,7 @@ namespace Ieedo.Test
 
             Statics.Data.DeleteAllCardDefinitions();
 
-            Log.Err(Statics.Data.Cards.ToJoinedString());
+            Log.Err(Statics.Data.CardDefinitions.ToJoinedString());
         }
 
         [Button("Test_AssignCard")]
@@ -100,8 +100,8 @@ namespace Ieedo.Test
             Statics.Data.PrintAll<CategoryDefinition>();
             Statics.Data.PrintAll<ActivityDefinition>();
             Statics.Data.PrintAll<AssessmentQuestionDefinition>();
-            Log.Info("N cards found: " + Statics.Data.Cards.Count);
-            Log.Info(Statics.Data.Cards.ToJoinedString());
+            Log.Info("N cards found: " + Statics.Data.CardDefinitions.Count);
+            Log.Info(Statics.Data.CardDefinitions.ToJoinedString());
         }
 
         [Button("PrintProfileState")]

@@ -63,7 +63,7 @@ namespace Ieedo
 
         #region Cards
 
-        public List<CardDefinition> Cards => cards.Cards.ToList();
+        public List<CardDefinition> CardDefinitions => cards.Cards.ToList();
 
         private CardsCollection cards = new();
         public void LoadCardDefinitions()

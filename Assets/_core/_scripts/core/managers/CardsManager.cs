@@ -48,13 +48,13 @@ namespace Ieedo
 
         public void DeleteCardDefinition(CardDefinition cardDef)
         {
-            Statics.Data.Cards.Remove(cardDef);
+            Statics.Data.CardDefinitions.Remove(cardDef);
         }
 
         public CardDefinition GenerateCardDefinition(CardDefinition def, bool isDefaultCard = false)
         {
-            if (Statics.Data.Cards.Count == 0) def.UID = 1;
-            else def.UID = Statics.Data.Cards.Max(x => x.UID) + 1;
+            if (Statics.Data.CardDefinitions.Count == 0) def.UID = 1;
+            else def.UID = Statics.Data.CardDefinitions.Max(x => x.UID) + 1;
             Statics.Data.AddCardDefinition(def, isDefaultCard);
             return def;
         }

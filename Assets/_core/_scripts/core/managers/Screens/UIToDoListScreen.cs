@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
@@ -17,7 +18,7 @@ namespace Ieedo
 
         public UIButton CreateCardButton;
 
-        public UIOptionsList OptionsList;
+        public UIOptionsListPopup optionsListPopup;
 
         [Header("Card View")]
         public GameObject ViewMode;
@@ -63,7 +64,8 @@ namespace Ieedo
         {
             Statics.Data.LoadCardDefinitions();
 
-            var todoCards = Statics.Data.Profile.Cards;
+            var todoCards =  new CardDataCollection();
+            todoCards.AddRange(Statics.Data.Profile.Cards.Where(x => x.Status == CardValidationStatus.Todo).ToList());
             ToDoList.AssignList(todoCards);
             ToDoList.SortList(SortByExpirationDate);
 
@@ -72,7 +74,10 @@ namespace Ieedo
             SetupButton(ValidateCardButton, () =>
             {
                 ToDoList.RemoveCard(frontCardUI);
-                Statics.Cards.DeleteCard(frontCardUI.Data);
+
+                frontCardUI.Data.CompletionTimestamp = Timestamp.Now;
+                frontCardUI.Data.Status = CardValidationStatus.Completed;
+                Statics.Data.SaveProfile();
 
                 CloseFrontView();
             });
@@ -171,14 +176,14 @@ namespace Ieedo
                 options.Add(
                     new OptionData
                     {
-                        Text = categoryDef.Title.Text,
+                        Text = categoryDef.ID.ToString(),// TODO: .Title.Text,
                         Color = categoryDef.Color
                     }
                 );
             }
-            OptionsList.ShowOptions("Choose Category", options);
-            while (OptionsList.isActiveAndEnabled) yield return null;
-            var selectedCategory = categories[OptionsList.LatestSelectedOption];
+            optionsListPopup.ShowOptions("Choose Category", options);
+            while (optionsListPopup.isActiveAndEnabled) yield return null;
+            var selectedCategory = categories[optionsListPopup.LatestSelectedOption];
 
             // Choose sub-category
             var subResult = new Ref<SubCategoryDefinition>();
@@ -235,9 +240,9 @@ namespace Ieedo
                     }
                 );
             }
-            OptionsList.ShowOptions("Choose Sub-category", options);
-            while (OptionsList.isActiveAndEnabled) yield return null;
-            result.Value = subCategories[OptionsList.LatestSelectedOption];
+            optionsListPopup.ShowOptions("Choose Sub-category", options);
+            while (optionsListPopup.isActiveAndEnabled) yield return null;
+            result.Value = subCategories[optionsListPopup.LatestSelectedOption];
 
         }
 
@@ -255,9 +260,9 @@ namespace Ieedo
                     }
                 );
             }
-            OptionsList.ShowOptions("Choose Difficulty", options);
-            while (OptionsList.isActiveAndEnabled) yield return null;
-            result.Value = possibleDifficulties[OptionsList.LatestSelectedOption];
+            optionsListPopup.ShowOptions("Choose Difficulty", options);
+            while (optionsListPopup.isActiveAndEnabled) yield return null;
+            result.Value = possibleDifficulties[optionsListPopup.LatestSelectedOption];
         }
 
 
@@ -280,9 +285,9 @@ namespace Ieedo
                     }
                 );
             }
-            OptionsList.ShowOptions("Choose Date", options);
-            while (OptionsList.isActiveAndEnabled) yield return null;
-            result.Value = possibleDays[OptionsList.LatestSelectedOption];
+            optionsListPopup.ShowOptions("Choose Date", options);
+            while (optionsListPopup.isActiveAndEnabled) yield return null;
+            result.Value = possibleDays[optionsListPopup.LatestSelectedOption];
         }
 
         public void StartEditing(bool isNewCard)

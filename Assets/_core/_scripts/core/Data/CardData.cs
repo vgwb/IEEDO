@@ -3,6 +3,13 @@ using Newtonsoft.Json;
 
 namespace Ieedo
 {
+    public enum CardValidationStatus
+    {
+        Todo,
+        Completed,
+        Validated
+    }
+
     [Serializable]
     public class CardData
     {
@@ -10,10 +17,12 @@ namespace Ieedo
         public uint DefID;
         public Timestamp CreationTimestamp;
         public Timestamp ExpirationTimestamp;
+        public Timestamp CompletionTimestamp;
         public Timestamp ValidationTimestamp;
+        public CardValidationStatus Status;
 
         [JsonIgnore]
-        public CardDefinition Definition => Statics.Data.Cards.Find(x => x.UID == DefID);
+        public CardDefinition Definition => Statics.Data.CardDefinitions.Find(x => x.UID == DefID);
 
         #region Timing
 
