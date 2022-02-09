@@ -1,7 +1,12 @@
-﻿namespace Ieedo
+﻿using System.Linq;
+
+namespace Ieedo
 {
     public class CardsManager
     {
+
+        #region Held Cards
+
         /// <summary>
         /// Assigns a card with the given ID to the current profile
         /// </summary>
@@ -9,20 +14,46 @@
         {
             Statics.Data.Profile.Cards.Add(new CardData
             {
-                CardDefID = cardID,
+                DefID = cardID,
                 CreationDate = Timestamp.Now
             });
             Statics.Data.SaveProfile();
         }
 
-        public void DeleteCard(CardDefinition cardDef)
+        public void AssignCard(CardData cardData)
+        {
+            Statics.Data.Profile.Cards.Add(cardData);
+            Statics.Data.SaveProfile();
+        }
+
+        /// <summary>
+        /// Deletes a card with the given ID from the current profile
+        /// </summary>
+        public void DeleteCard(uint cardID)
+        {
+            Statics.Data.Profile.Cards.RemoveAll(x => x.UID == cardID);
+            Statics.Data.SaveProfile();
+        }
+
+        public void DeleteCard(CardData cardData)
+        {
+            Statics.Data.Profile.Cards.Remove(cardData);
+            Statics.Data.SaveProfile();
+        }
+
+        #endregion
+
+
+        #region Card Definitions
+
+        public void DeleteCardDefinition(CardDefinition cardDef)
         {
             Statics.Data.Cards.Remove(cardDef);
         }
 
-        // TODO: use CardData instead here
-        public CardDefinition GenerateCard(CardDefinition def)
+        public CardDefinition GenerateCardDefinition(CardDefinition def)
         {
+            def.UID = Statics.Data.Cards.Max(x => x.UID) + 1;
             Statics.Data.AddCardDefinition(def);
             return def;
         }
@@ -33,5 +64,7 @@
             Statics.Data.AddCardDefinition(card);
             return card;
         }
+
+        #endregion
     }
 }

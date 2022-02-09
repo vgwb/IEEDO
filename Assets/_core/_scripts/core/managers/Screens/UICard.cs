@@ -13,24 +13,30 @@ namespace Ieedo
         public UIText Category;
         public UIText Subcategory;
         public UIText Icon;
+        public UIIconsBar Difficulty;
+        public UIText Date;
 
         public Button InteractionButton;
 
         public Image ColorBase;
         public Image[] BorderImages;
-        private CardDefinition def;
-        public CardDefinition Definition => def;
+        private CardData data;
+        public CardData Data => data;
 
-        public void AssignDefinition(CardDefinition def)
+        public void AssignCard(CardData data)
         {
             //Debug.LogError("Load card " + def);
-            this.def = def;
+            this.data = data;
+            var def = data.Definition;
             Category.text = def.Category.ToString();
             Subcategory.text = def.SubCategory.ToString();
             Description.text = def.Description.Text;
             Icon.text = Regex.Unescape(def.Icon);
             Title.text = def.Title.Text;
             ColorBase.color = def.CategoryDefinition.Color;
+            Difficulty.SetValue(def.Difficulty);
+
+            Date.text = data.ExpirationDate.ToString();
 
             foreach (var borderImage in BorderImages)
             {

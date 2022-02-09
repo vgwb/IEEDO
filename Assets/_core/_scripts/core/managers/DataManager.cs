@@ -22,7 +22,7 @@ namespace Ieedo
         public DataManager()
         {
             LoadDatabase();
-            LoadCards();
+            LoadCardDefinitions();
         }
 
         #region Database
@@ -66,7 +66,7 @@ namespace Ieedo
         public List<CardDefinition> Cards => cards.Cards.ToList();
 
         private CardsCollection cards = new();
-        public void LoadCards()
+        public void LoadCardDefinitions()
         {
             LoadSerialized(out cards, Application.streamingAssetsPath, "cards");
             if (cards == null) cards = new();
@@ -78,7 +78,7 @@ namespace Ieedo
             SaveSerialized(cards, Application.streamingAssetsPath, "cards");
         }
 
-        public void DeleteAllCards()
+        public void DeleteAllCardDefinitions()
         {
             cards.Cards.Clear();
             SaveSerialized(cards, Application.streamingAssetsPath, "cards");

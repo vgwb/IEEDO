@@ -14,7 +14,7 @@ namespace Ieedo
 
         private List<GameObject> HeldSlots = new List<GameObject>();
 
-        public void AssignList(List<CardDefinition> cardsList)
+        public void AssignList(List<CardData> cardsList)
         {
             HeldSlots.ForEach(x => Destroy(x.gameObject));
             HeldSlots.Clear();
@@ -25,18 +25,24 @@ namespace Ieedo
             }
         }
 
-        public UICard AssignCard(CardDefinition cardDef, UICard uiCard = null)
+        public UICard AssignCard(CardData cardData, UICard uiCard = null)
         {
             // Copy a slot
             var newSlotRT = Instantiate(SlotPrefab, SlotPrefab.parent);
             newSlotRT.gameObject.SetActive(true);
             newSlotRT.transform.localScale = Vector3.one * CardScale;
 
-            if (uiCard == null) uiCard = UICardManager.I.AddCardUI(cardDef, newSlotRT);
+            if (uiCard == null) uiCard = UICardManager.I.AddCardUI(cardData, newSlotRT);
             else uiCard.transform.SetParent(newSlotRT);
             PutCard(uiCard);
             HeldSlots.Add(newSlotRT.gameObject);
             return uiCard;
+        }
+
+        public void RemoveCard(UICard uiCard)
+        {
+
+            //Destroy(UICard);
         }
 
         public void PutCard(UICard uiCard)

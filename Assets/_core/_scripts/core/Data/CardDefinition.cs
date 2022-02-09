@@ -23,7 +23,7 @@ namespace Ieedo
         public uint UID;
         public LocalizedString Title;
         public LocalizedString Description;
-        public uint Difficulty;
+        public int Difficulty;
         public CategoryID Category;
         public SubCategoryID SubCategory;
 

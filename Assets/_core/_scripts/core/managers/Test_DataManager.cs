@@ -59,7 +59,7 @@ namespace Ieedo.Test
         {
             Log.Info(MethodBase.GetCurrentMethod().Name);
 
-            Statics.Data.LoadCards();
+            Statics.Data.LoadCardDefinitions();
             Statics.Data.AddCardDefinition(new CardDefinition
             {
                 Category = CategoryID.A,
@@ -78,7 +78,7 @@ namespace Ieedo.Test
         {
             Log.Info(MethodBase.GetCurrentMethod().Name);
 
-            Statics.Data.DeleteAllCards();
+            Statics.Data.DeleteAllCardDefinitions();
 
             Log.Err(Statics.Data.Cards.ToJoinedString());
         }

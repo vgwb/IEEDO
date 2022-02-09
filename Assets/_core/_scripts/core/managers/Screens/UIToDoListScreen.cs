@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Lean.Gui;
 using TMPro;
@@ -13,10 +14,21 @@ namespace Ieedo
         public GameObject FrontView;
         public RectTransform FrontViewPivot;
 
-        public LeanButton CompleteCardButton;
-        public LeanButton CreateCardButton;
+        public UIButton CreateCardButton;
 
         public UIOptionsList OptionsList;
+
+        [Header("Card View")]
+        public GameObject ViewMode;
+        public UIButton ValidateCardButton;
+        public UIButton EditCardButton;
+
+        [Header("Card Create & Edit")]
+        public GameObject EditMode;
+        public TMP_InputField DescriptionInputField;
+        public TMP_InputField TitleInputField;
+        public UIButton CompleteCreationButton;
+        public UIButton DeleteCardButton;
 
         public override ScreenID ID => ScreenID.ToDoList;
 
@@ -38,19 +50,19 @@ namespace Ieedo
 
         public void LoadCurrentCards()
         {
-            Statics.Data.LoadCards();
+            Statics.Data.LoadCardDefinitions();
 
             // TODO: add a timing handling, sort based on timing
-            var todoCards = Statics.Data.Cards;
+            var todoCards = Statics.Data.Profile.Cards;
             //todoCards.Sort((c1, c2) => c1.Category - c2.Category);
 
             ToDoList.AssignList(todoCards);
             ToDoList.OnCardClicked = uiCard => OpenFrontView(uiCard, FrontViewMode.View);
 
-            SetupButton(CompleteCardButton, () =>
+            SetupButton(ValidateCardButton, () =>
             {
-                Destroy(frontCard);
-                Statics.Cards.DeleteCard(frontCard.Definition);
+                ToDoList.RemoveCard(frontCard);
+                Statics.Cards.DeleteCard(frontCard.Data);
 
                 CloseFrontView();
             });
@@ -65,7 +77,7 @@ namespace Ieedo
         {
             None,
             View,
-            Creation
+            CreateAndEdit
         }
 
         private FrontViewMode CurrentFrontViewMode;
@@ -83,18 +95,14 @@ namespace Ieedo
 
             switch (viewMode)
             {
-                case FrontViewMode.Creation:
-                    DescriptionInputField.gameObject.SetActive(true);
-                    TitleInputField.gameObject.SetActive(true);
-                    CompleteCardButton.gameObject.SetActive(false);
-                    CompleteCreationButton.gameObject.SetActive(true);
+                case FrontViewMode.CreateAndEdit:
+                    EditMode.SetActive(true);
+                    ViewMode.SetActive(false);
                     uiCard.OnInteraction(null);
                     break;
                 case FrontViewMode.View:
-                    DescriptionInputField.gameObject.SetActive(false);
-                    TitleInputField.gameObject.SetActive(false);
-                    CompleteCardButton.gameObject.SetActive(true);
-                    CompleteCreationButton.gameObject.SetActive(false);
+                    EditMode.SetActive(false);
+                    ViewMode.SetActive(true);
                     uiCard.OnInteraction(() =>
                     {
                         // Return it the list
@@ -118,12 +126,8 @@ namespace Ieedo
         }
 
 
-        #region Card Creation
+        #region Card Creation & Editing
 
-        [Header("Card Creation")]
-        public TMP_InputField DescriptionInputField;
-        public TMP_InputField TitleInputField;
-        public UIButton CompleteCreationButton;
 
         public IEnumerator CardCreationFlowCO()
         {
@@ -161,17 +165,60 @@ namespace Ieedo
             while (OptionsList.isActiveAndEnabled) yield return null;
             var selectedSybCategory = subCategories[OptionsList.LatestSelectedOption];
 
+            // Choose difficulty
+            options.Clear();
+            var possibleDifficulties = new int[] { 1, 2, 3 };
+            foreach (var possibleDifficulty in possibleDifficulties)
+            {
+                options.Add(
+                    new OptionData
+                    {
+                        Text = possibleDifficulty.ToString(),
+                    }
+                );
+            }
+            OptionsList.ShowOptions(options);
+            while (OptionsList.isActiveAndEnabled) yield return null;
+            var selectedDifficulty = possibleDifficulties[OptionsList.LatestSelectedOption];
+
+            // Choose Date
+            options.Clear();
+            var possibleDays = new [] { 1, 2, 3, 4, 5, 6 };
+            foreach (var possibleDay in possibleDays)
+            {
+                options.Add(
+                    new OptionData
+                    {
+                        Text = possibleDay.ToString(),
+                    }
+                );
+            }
+            OptionsList.ShowOptions(options);
+            while (OptionsList.isActiveAndEnabled) yield return null;
+            var selectedDays = possibleDays[OptionsList.LatestSelectedOption];
+
             // Create and show the card
-            var card = Statics.Cards.GenerateCard(
+            var card = Statics.Cards.GenerateCardDefinition(
                 new CardDefinition {
+
                     Category = selectedCategory.ID,
                     SubCategory = selectedSybCategory.ID,
                     Description = new LocalizedString { DefaultText = "" },
-                    Difficulty = 2,
-                    Title = new LocalizedString { DefaultText = ""}
+                    Difficulty = selectedDifficulty,
+                    Title = new LocalizedString { DefaultText = ""},
                 });
-            var cardUi = UICardManager.I.AddCardUI(card, FrontViewPivot);
-            OpenFrontView(cardUi, FrontViewMode.Creation);
+
+            // Create a new Data for this profile for that card
+            var cardData = new CardData
+            {
+                DefID = card.UID,
+                CreationDate = new Timestamp { binaryTimestamp = DateTime.Now.ToBinary() },
+                ExpirationDate = new Timestamp { binaryTimestamp = (DateTime.Now + new TimeSpan(selectedDays)).ToBinary() },
+            };
+            Statics.Cards.AssignCard(cardData);
+
+            var cardUi = UICardManager.I.AddCardUI(cardData, FrontViewPivot);
+            OpenFrontView(cardUi, FrontViewMode.CreateAndEdit);
 
             // Allow card editing...
             DescriptionInputField.textComponent = cardUi.Description;
@@ -183,7 +230,7 @@ namespace Ieedo
             bool hasClosed = false;
             SetupButton(CompleteCreationButton, () =>
             {
-                ToDoList.AssignCard(card);
+                ToDoList.AssignCard(cardData);
                 CloseFrontView();
                 hasClosed = true;
             });

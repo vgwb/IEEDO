@@ -8,7 +8,6 @@
 
         void Start()
         {
-            // TODO: Stefano place your logic here
             SetupButton(StartGameBtn, () => DoStuff());
         }
 
