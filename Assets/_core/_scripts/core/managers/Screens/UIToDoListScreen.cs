@@ -102,7 +102,6 @@ namespace Ieedo
         private FrontViewMode CurrentFrontViewMode;
         private void OpenFrontView(UICard uiCard, FrontViewMode viewMode)
         {
-            CurrentFrontViewMode = viewMode;
             var prevParent = uiCard.transform.parent;
             var uiCardRt = uiCard.GetComponent<RectTransform>();
             uiCardRt.SetParent(FrontViewPivot, false);
@@ -127,6 +126,7 @@ namespace Ieedo
 
         private void SwitchToViewMode(FrontViewMode viewMode)
         {
+            CurrentFrontViewMode = viewMode;
             switch (viewMode)
             {
                 case FrontViewMode.Edit:
