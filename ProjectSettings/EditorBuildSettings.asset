@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_test/LocalizationTest/localization test.unity
     guid: d3142d63af12625f2a1628360576aae0
+  - enabled: 1
+    path: Assets/_core/_scenes/Prototype.unity
+    guid: 4ce476541214a7c4d84373fd28790afc
+  - enabled: 1
+    path: Assets/_minigames/_blank/game_blank.unity
+    guid: 31fa52a94b1d145f2add748e9bfa1b63
+  - enabled: 1
+    path: Assets/_minigames/tictac/game_tictac.unity
+    guid: 7e3e4fd162bb70248a65337e1fc92b04
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: c559a39ced25e4dcea1ab135796b61b9, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 15a3896ed851c4573bfef8067263c7b3, type: 2}
