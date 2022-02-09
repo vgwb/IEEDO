@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Ieedo.Utilities;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Ieedo
 {
@@ -26,6 +27,11 @@ namespace Ieedo
             Statics.Screens.OpenImmediate(ScreenID.Top);
             Statics.Screens.OpenImmediate(ScreenID.Bottom);
             yield return Statics.Screens.TransitionToCO(ScreenID.Pillars);
+        }
+
+        public void LaunchMinigame()
+        {
+            SceneManager.LoadScene("game_blank", LoadSceneMode.Additive);
         }
     }
 }

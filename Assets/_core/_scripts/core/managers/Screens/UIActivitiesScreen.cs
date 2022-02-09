@@ -14,6 +14,7 @@
 
         private void DoStuff()
         {
+            AppManager.I.LaunchMinigame();
         }
     }
 }
