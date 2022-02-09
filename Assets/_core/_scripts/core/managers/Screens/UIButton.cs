@@ -1,4 +1,8 @@
-﻿using Lean.Gui;
+﻿using System.Linq;
+using Lean.Gui;
+using Lean.Transition.Method;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace Ieedo
 {
@@ -11,6 +15,17 @@ namespace Ieedo
                 var tm = GetComponentInChildren<UIText>(true);
                 tm.text = value;
             }
+        }
+
+        public Image Cap;
+        public LeanGraphicColor NormalColor;
+        public LeanGraphicColor DownColor;
+
+        public void SetColor(Color c)
+        {
+            Cap.color = c;
+            NormalColor.Data.Value = c;
+            DownColor.Data.Value = new Color(c.r, c.g, c.b, 1f);
         }
     }
 }

@@ -174,6 +174,7 @@ namespace Ieedo
                     new OptionData
                     {
                         Text = possibleDifficulty.ToString(),
+                        Color = Color.white,
                     }
                 );
             }
@@ -187,7 +188,7 @@ namespace Ieedo
             foreach (var possibleDay in possibleDays)
             {
                 var targetDate = DateTime.Now.AddDays(possibleDay);
-                var color = Color.blue;
+                var color = Color.white;
                 if (targetDate.DayOfWeek == DayOfWeek.Saturday) color = Color.red;
                 if (targetDate.DayOfWeek == DayOfWeek.Sunday) color = Color.red;
 

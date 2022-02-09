@@ -22,12 +22,7 @@ namespace Ieedo
             {
                 var option = options[i];
                 Buttons[i].Text = option.Text;
-                Buttons[i].colors = new ColorBlock
-                {
-                    normalColor = option.Color,
-                    highlightedColor = option.Color,
-                    selectedColor = option.Color
-                };
+                Buttons[i].SetColor(option.Color);
                 Buttons[i].gameObject.SetActive(true);
 
                 var selectedOption = i;
