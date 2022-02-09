@@ -186,10 +186,16 @@ namespace Ieedo
             var possibleDays = new [] { 1, 2, 3, 4, 5, 6 };
             foreach (var possibleDay in possibleDays)
             {
+                var targetDate = DateTime.Now.AddDays(possibleDay);
+                var color = Color.blue;
+                if (targetDate.DayOfWeek == DayOfWeek.Saturday) color = Color.red;
+                if (targetDate.DayOfWeek == DayOfWeek.Sunday) color = Color.red;
+
                 options.Add(
                     new OptionData
                     {
-                        Text = possibleDay.ToString(),
+                        Text = new Timestamp(targetDate).ToString(),
+                        Color = color
                     }
                 );
             }
@@ -198,7 +204,7 @@ namespace Ieedo
             var selectedDays = possibleDays[OptionsList.LatestSelectedOption];
 
             // Create and show the card
-            var card = Statics.Cards.GenerateCardDefinition(
+            var cardDef = Statics.Cards.GenerateCardDefinition(
                 new CardDefinition {
 
                     Category = selectedCategory.ID,
@@ -211,9 +217,9 @@ namespace Ieedo
             // Create a new Data for this profile for that card
             var cardData = new CardData
             {
-                DefID = card.UID,
-                CreationDate = new Timestamp { binaryTimestamp = DateTime.Now.ToBinary() },
-                ExpirationDate = new Timestamp { binaryTimestamp = (DateTime.Now + new TimeSpan(selectedDays)).ToBinary() },
+                DefID = cardDef.UID,
+                CreationDate = new Timestamp(DateTime.Now),
+                ExpirationDate = new Timestamp(DateTime.Now.AddDays(selectedDays))
             };
             Statics.Cards.AssignCard(cardData);
 
@@ -228,6 +234,7 @@ namespace Ieedo
             TitleInputField.placeholder.enabled = true;
 
             bool hasClosed = false;
+
             SetupButton(CompleteCreationButton, () =>
             {
                 ToDoList.AssignCard(cardData);
@@ -235,7 +242,19 @@ namespace Ieedo
                 hasClosed = true;
             });
 
-            while (!hasClosed) yield return null; // Wait for completion
+            SetupButton(DeleteCardButton, () =>
+            {
+                Statics.Cards.DeleteCard(cardData);
+                Statics.Cards.DeleteCardDefinition(cardDef);
+                CloseFrontView();
+                hasClosed = true;
+            });
+
+            while (!hasClosed)
+            {
+                CompleteCreationButton.enabled =  cardUi.Description.text != "" && cardUi.Title.text != "";
+                yield return null; // Wait for completion
+            }
 
             TitleInputField.textComponent = null;
             TitleInputField.text = string.Empty;
