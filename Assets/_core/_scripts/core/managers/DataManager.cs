@@ -92,11 +92,10 @@ namespace Ieedo
 
         private void SaveCardDefinitions(bool saveAsDefaultCards)
         {
-        if (saveAsDefaultCards)
-            SaveSerialized(cards, Application.streamingAssetsPath, "cards");
-        else
-            SaveSerialized(cards, Application.persistentDataPath, "cards");
-
+            if (saveAsDefaultCards)
+                SaveSerialized(cards, Application.streamingAssetsPath, "cards");
+            else
+                SaveSerialized(cards, Application.persistentDataPath, "cards");
         }
 
         #endregion

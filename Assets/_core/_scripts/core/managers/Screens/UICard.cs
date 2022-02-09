@@ -27,7 +27,6 @@ namespace Ieedo
 
         public void AssignCard(CardData data)
         {
-            //Debug.LogError("Load card " + def);
             this.data = data;
             var def = data.Definition;
             Category.text = def.Category.ToString();

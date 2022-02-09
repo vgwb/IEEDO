@@ -199,7 +199,7 @@ namespace Ieedo
                     Difficulty = selectedDifficulty,
                     Title = new LocalizedString { DefaultText = ""},
                 },
-                isDefaultCard: AppManager.I.ApplicationConfig.DebugLogEnabled
+                isDefaultCard: AppManager.I.ApplicationConfig.SaveCardsAsDefault
                 );
 
             // Create a new Data for this profile for that card
