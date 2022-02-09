@@ -20,7 +20,18 @@ namespace Ieedo
             { var _ = Statics.Screens; }
 
             // Load the current profile
-            Statics.Data.LoadProfile();
+            bool canLoad = Statics.Data.LoadProfile();
+            if (!canLoad)
+            {
+                // For now, create a new one if none is found
+                Statics.Data.CreateNewProfile(new ProfileDescription()
+                {
+                    Name = "TEST",
+                    Country = "en",
+                    Language = Language.English,
+                });
+            }
+
 
             Statics.Screens.LoadScreens();
 
