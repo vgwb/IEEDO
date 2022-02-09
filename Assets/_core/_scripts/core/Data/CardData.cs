@@ -8,12 +8,20 @@ namespace Ieedo
     {
         public uint UID;
         public uint DefID;
-        public Timestamp CreationDate;
-        public Timestamp ExpirationDate;
-        public Timestamp CompletionDate;
+        public Timestamp CreationTimestamp;
+        public Timestamp ExpirationTimestamp;
+        public Timestamp ValidationTimestamp;
 
         [JsonIgnore]
         public CardDefinition Definition => Statics.Data.Cards.Find(x => x.UID == DefID);
 
+        #region Timing
+
+        public int DaysLeft => (ExpirationTimestamp.Date - DateTime.Now).Days;
+        public bool IsDueToday => DaysLeft == 0;
+        public bool IsDueTomorrow => DaysLeft == 1;
+        public bool IsExpired => DaysLeft < 0;
+
+        #endregion
     }
 }

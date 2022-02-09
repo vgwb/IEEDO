@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Text.RegularExpressions;
-using Lean.Gui;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +14,9 @@ namespace Ieedo
         public UIText Icon;
         public UIIconsBar Difficulty;
         public UIText Date;
+
+        public GameObject StampGO;
+        public UIText StampIcon;
 
         public Button InteractionButton;
 
@@ -36,11 +38,26 @@ namespace Ieedo
             ColorBase.color = def.CategoryDefinition.Color;
             Difficulty.SetValue(def.Difficulty);
 
-            Date.text = data.ExpirationDate.ToString();
+            Date.text = data.ExpirationTimestamp.ToString();
 
             foreach (var borderImage in BorderImages)
             {
                 borderImage.color = def.CategoryDefinition.Color * 1.4f;
+            }
+
+            if (data.IsExpired)
+            {
+                StampGO.SetActive(true);
+                StampIcon.text = Regex.Unescape("\uf54c");
+            }
+            else if(data.IsDueToday)
+            {
+                StampGO.SetActive(true);
+                StampIcon.text = Regex.Unescape("\uf06a");
+            }
+            else
+            {
+                StampGO.SetActive(false);
             }
         }
 

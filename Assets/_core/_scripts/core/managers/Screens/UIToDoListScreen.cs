@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Ieedo
 {
@@ -53,9 +54,9 @@ namespace Ieedo
         {
             Statics.Data.LoadCardDefinitions();
 
-            // TODO: add a timing handling, sort based on timing
+            // Sorted by expiration date
             var todoCards = Statics.Data.Profile.Cards;
-            //todoCards.Sort((c1, c2) => c1.Category - c2.Category);
+            todoCards.Sort((c1, c2) => c1.ExpirationTimestamp.Date.CompareTo(c2.ExpirationTimestamp.Date));
 
             ToDoList.AssignList(todoCards);
             ToDoList.OnCardClicked = uiCard => OpenFrontView(uiCard, FrontViewMode.View);
@@ -142,7 +143,6 @@ namespace Ieedo
 
         #region Card Creation & Editing
 
-
         public IEnumerator CardCreationFlowCO()
         {
             // Choose category
@@ -203,11 +203,10 @@ namespace Ieedo
             var cardData = new CardData
             {
                 DefID = cardDef.UID,
-                CreationDate = new Timestamp(DateTime.Now),
-                ExpirationDate = new Timestamp(DateTime.Now.AddDays(selectedDays))
+                CreationTimestamp = new Timestamp(DateTime.Now),
+                ExpirationTimestamp = new Timestamp(DateTime.Now.AddDays(selectedDays))
             };
             Statics.Cards.AssignCard(cardData);
-
             var cardUi = UICardManager.I.AddCardUI(cardData, FrontViewPivot);
 
             OpenFrontView(cardUi, FrontViewMode.CreateAndEdit);
@@ -232,14 +231,21 @@ namespace Ieedo
 
             while (!hasClosed)
             {
-                CompleteCreationButton.enabled =  cardUi.Description.text != "" && cardUi.Title.text != "";
+                bool canComplete = cardUi.Description.text != "" && cardUi.Title.text != "";
+                CompleteCreationButton.gameObject.SetActive(canComplete);   // TODO: instead use interactable
                 yield return null; // Wait for completion
             }
+
+            cardDef.Title.DefaultText = TitleInputField.text;
+            cardDef.Description.DefaultText = DescriptionInputField.text;
 
             TitleInputField.textComponent = null;
             TitleInputField.text = string.Empty;
             DescriptionInputField.textComponent = null;
             DescriptionInputField.text = string.Empty;
+
+            // Refresh data
+            cardUi.AssignCard(cardData);
         }
 
         private IEnumerator ChooseDifficultyCO(Ref<int> result)
@@ -312,7 +318,7 @@ namespace Ieedo
             var result = new Ref<int>();
             yield return ChooseDateCO(result);
             var selection = result.Value;
-            frontCardUI.Data.ExpirationDate = new Timestamp(DateTime.Now.AddDays(selection));
+            frontCardUI.Data.ExpirationTimestamp = new Timestamp(DateTime.Now.AddDays(selection));
             frontCardUI.AssignCard(frontCardUI.Data); // Refresh
         }
         #endregion
