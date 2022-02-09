@@ -62,7 +62,7 @@ namespace Ieedo.Test
             Statics.Data.LoadCardDefinitions();
             Statics.Data.AddCardDefinition(new CardDefinition
             {
-                Category = CategoryID.A,
+                Category = CategoryID.WellBeing,
                 SubCategory = SubCategoryID.A_1,
                 Description = new LocalizedString {DefaultText = "TEST " + Random.Range(0,9999)},
                 Difficulty = 2,

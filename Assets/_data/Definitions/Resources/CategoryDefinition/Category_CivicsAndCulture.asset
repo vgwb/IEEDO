@@ -10,20 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7c39b6702b54a1183e0dc54711ca90d, type: 3}
-  m_Name: Category1
+  m_Name: Category_CivicsAndCulture
   m_EditorClassIdentifier: Assembly-CSharp:Ieedo:CategoryDefinition
-  ID: 1
+  ID: 5
   Title:
-    DefaultText: Category A
+    key: 
+    DefaultText: Category B
   Description:
+    key: 
     DefaultText: 
   PaletteColor: {fileID: 11400000, guid: f577d573a5c52c341832836ae719824d, type: 2}
   SubCategories:
-  - ID: 100
+  - ID: 200
     Title:
-      DefaultText: A 1
-    Icon: \uf0fb
-  - ID: 101
+      key: 
+      DefaultText: B 1
+    Icon: \uf556
+  - ID: 201
     Title:
-      DefaultText: A 2
-    Icon: \uf557
+      key: 
+      DefaultText: B 2
+    Icon: \uf77d

@@ -3,8 +3,11 @@
     public enum CategoryID
     {
         None,
-        A,
-        B,
-        C
+        WellBeing,
+        OrientationAndDocumentation,
+        EducationAndTraining,
+        Employment,
+        CivicsAndCulture,
+        CommunityAndSocialLife
     }
 }

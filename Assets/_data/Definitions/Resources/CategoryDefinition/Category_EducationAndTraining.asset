@@ -10,20 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7c39b6702b54a1183e0dc54711ca90d, type: 3}
-  m_Name: Category2
+  m_Name: Category_EducationAndTraining
   m_EditorClassIdentifier: Assembly-CSharp:Ieedo:CategoryDefinition
-  ID: 2
+  ID: 3
   Title:
-    DefaultText: Category B
+    key: 
+    DefaultText: Category C
   Description:
+    key: 
     DefaultText: 
-  PaletteColor: {fileID: 11400000, guid: 1937ddda88d9cc045b1e2a0778a52541, type: 2}
+  PaletteColor: {fileID: 11400000, guid: 3ce36213df1bb6b46bbfa85e12948412, type: 2}
   SubCategories:
-  - ID: 200
+  - ID: 300
     Title:
-      DefaultText: B 1
-    Icon: \uf556
-  - ID: 201
+      key: 
+      DefaultText: C 1
+    Icon: \uf7e5
+  - ID: 301
     Title:
-      DefaultText: B 2
-    Icon: \uf77d
+      key: 
+      DefaultText: C 2
+    Icon: \ue05a
+  - ID: 302
+    Title:
+      key: 
+      DefaultText: C 3
+    Icon: \uf6f0
