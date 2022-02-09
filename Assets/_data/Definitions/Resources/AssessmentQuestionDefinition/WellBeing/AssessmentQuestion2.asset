@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: 0
   Question:
     key: 
-    DefaultText: Pippo
+    DefaultText: Do you 2?
   Category: 1
   Weight: 1
   Answers:
