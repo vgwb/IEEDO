@@ -13,19 +13,21 @@ namespace Ieedo
         public Action<UICard> OnCardClicked;
 
         private List<GameObject> HeldSlots = new List<GameObject>();
+        private List<UICard> HeldCards = new List<UICard>();
 
         public void AssignList(List<CardData> cardsList)
         {
             HeldSlots.ForEach(x => Destroy(x.gameObject));
             HeldSlots.Clear();
+            HeldCards.Clear();
 
             foreach (var cardDef in cardsList)
             {
-                AssignCard(cardDef);
+                AddCard(cardDef);
             }
         }
 
-        public UICard AssignCard(CardData cardData, UICard uiCard = null)
+        public UICard AddCard(CardData cardData, UICard uiCard = null)
         {
             // Copy a slot
             var newSlotRT = Instantiate(SlotPrefab, SlotPrefab.parent);
@@ -36,12 +38,23 @@ namespace Ieedo
             else uiCard.transform.SetParent(newSlotRT);
             PutCard(uiCard);
             HeldSlots.Add(newSlotRT.gameObject);
+            HeldCards.Add(uiCard);
             return uiCard;
+        }
+
+        public void SortList()
+        {
+
         }
 
         public void RemoveCard(UICard uiCard)
         {
+            var index = HeldCards.IndexOf(uiCard);
+            Destroy(HeldCards[index]);
+            HeldCards.RemoveAt(index);
 
+            HeldSlots.RemoveAt(index);
+            Destroy(HeldSlots[index]);
             //Destroy(UICard);
         }
 
@@ -50,5 +63,14 @@ namespace Ieedo
             uiCard.OnInteraction(() => OnCardClicked(uiCard));
         }
 
+        public void SortList(Func<CardData, CardData, int> sortFunc)
+        {
+            HeldCards.Sort((ui1, ui2) => sortFunc(ui1.Data, ui2.Data));
+            for (int i = 0; i < HeldCards.Count; i++)
+            {
+                // Move to the correct slot (TODO: animate the sorting)
+                HeldCards[i].transform.SetParent(HeldSlots[i].transform);
+            }
+        }
     }
 }

@@ -25,6 +25,11 @@ namespace Ieedo
         private CardData data;
         public CardData Data => data;
 
+        public void RefreshUI()
+        {
+            AssignCard(data);
+        }
+
         public void AssignCard(CardData data)
         {
             this.data = data;

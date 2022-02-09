@@ -9,6 +9,13 @@
 
         void Start()
         {
+            var allActivities = Statics.Data.GetAll<ActivityDefinition>();
+
+            foreach (var activityDefinition in allActivities)
+            {
+                // TODO: Create activity block
+            }
+
             SetupButton(StartGameBtn, () => LaunchActivity(ActivityID.Blank));
             SetupButton(StartGame2Btn, () => LaunchActivity(ActivityID.TicTac));
         }

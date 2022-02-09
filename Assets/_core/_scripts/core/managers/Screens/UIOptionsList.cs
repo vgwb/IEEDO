@@ -13,11 +13,14 @@ namespace Ieedo
 
     public class UIOptionsList : MonoBehaviour
     {
+        public UIText Title;
+
         public UIButton[] Buttons;
         public int LatestSelectedOption;
 
-        public void ShowOptions(List<OptionData> options)
+        public void ShowOptions(string title, List<OptionData> options)
         {
+            Title.text = title;
             for (var i = 0; i < options.Count; i++)
             {
                 var option = options[i];
