@@ -41,6 +41,7 @@ namespace Ieedo
 
         protected void SetupButton(LeanButton btn, Action action)
         {
+            btn.OnClick.RemoveAllListeners();
             btn.OnClick.AddListener(() => action());
         }
     }

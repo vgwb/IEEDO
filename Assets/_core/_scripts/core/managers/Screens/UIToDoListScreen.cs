@@ -121,6 +121,7 @@ namespace Ieedo
                 case FrontViewMode.CreateAndEdit:
                     EditMode.SetActive(true);
                     ViewMode.SetActive(false);
+                    StartEditing();
                     break;
                 case FrontViewMode.View:
                     EditMode.SetActive(false);
@@ -213,23 +214,28 @@ namespace Ieedo
             var cardUi = UICardManager.I.AddCardUI(cardData, FrontViewPivot);
 
             OpenFrontView(cardUi, FrontViewMode.CreateAndEdit);
-            EnableEditing();
 
             bool hasClosed = false;
 
             SetupButton(CompleteCreationButton, () =>
             {
                 ToDoList.AssignCard(cardData);
-                CloseFrontView();
                 hasClosed = true;
+
+                StopEditing();
+                CloseFrontView();
+                cardUi.AssignCard(cardData);
             });
 
             SetupButton(DeleteCardButton, () =>
             {
+                hasClosed = true;
+
+                StopEditing();
+                CloseFrontView();
+
                 Statics.Cards.DeleteCard(cardData);
                 Statics.Cards.DeleteCardDefinition(cardDef);
-                CloseFrontView();
-                hasClosed = true;
             });
 
             while (!hasClosed)
@@ -239,16 +245,6 @@ namespace Ieedo
                 yield return null; // Wait for completion
             }
 
-            cardDef.Title.DefaultText = TitleInputField.text;
-            cardDef.Description.DefaultText = DescriptionInputField.text;
-
-            TitleInputField.textComponent = null;
-            TitleInputField.text = string.Empty;
-            DescriptionInputField.textComponent = null;
-            DescriptionInputField.text = string.Empty;
-
-            // Refresh data
-            cardUi.AssignCard(cardData);
         }
 
         private IEnumerator ChooseDifficultyCO(Ref<int> result)
@@ -295,7 +291,7 @@ namespace Ieedo
             result.Value = possibleDays[OptionsList.LatestSelectedOption];
         }
 
-        public void EnableEditing()
+        public void StartEditing()
         {
             DescriptionInputField.textComponent = frontCardUI.Description;
             DescriptionInputField.placeholder.enabled = true;
@@ -305,6 +301,17 @@ namespace Ieedo
 
             SetupButton(EditDifficultyButton, () => StartCoroutine(EditDifficultyCO()));
             SetupButton(EditDateButton, () => StartCoroutine(EditDateCO()));
+        }
+
+        public void StopEditing()
+        {
+            frontCardUI.Data.Definition.Title.DefaultText = TitleInputField.text;
+            frontCardUI.Data.Definition.Description.DefaultText = DescriptionInputField.text;
+
+            TitleInputField.textComponent = null;
+            TitleInputField.text = string.Empty;
+            DescriptionInputField.textComponent = null;
+            DescriptionInputField.text = string.Empty;
         }
 
         private IEnumerator EditDifficultyCO()
