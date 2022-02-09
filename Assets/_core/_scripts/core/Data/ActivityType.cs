@@ -8,7 +8,7 @@
 
     public enum ActivityEnum
     {
-        Blank = 0,
-        TicTac = 1,
+        Blank = 1,
+        TicTac = 2,
     }
 }

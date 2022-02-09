@@ -11,6 +11,8 @@ namespace Ieedo
     {
         public ApplicationConfig ApplicationConfig;
 
+        public ActivityDefinition CurrentActivity;
+
         public IEnumerator Start()
         {
             // Init data
@@ -29,19 +31,19 @@ namespace Ieedo
             yield return Statics.Screens.TransitionToCO(ScreenID.Pillars);
         }
 
-        public void LaunchMinigame(ActivityEnum activity)
+        public void LaunchActivity(ActivityEnum activity)
         {
-            SceneManager.LoadScene("game_blank", LoadSceneMode.Additive);
+            CurrentActivity = Statics.Data.Get<ActivityDefinition>((int)activity);
+            SceneManager.LoadScene(CurrentActivity.sceneName, LoadSceneMode.Additive);
         }
 
-        public void CloseMinigame()
+        public void CloseActivity()
         {
-            SceneManager.UnloadSceneAsync("game_blank");
-        }
-
-        void getActivityScene(ActivityEnum activity)
-        {
-
+            if (CurrentActivity)
+            {
+                SceneManager.UnloadSceneAsync(CurrentActivity.sceneName);
+            }
+            CurrentActivity = null;
         }
     }
 }

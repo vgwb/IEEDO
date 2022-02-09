@@ -15,7 +15,7 @@
 
         private void LaunchActivity(ActivityEnum activity)
         {
-            AppManager.I.LaunchMinigame(activity);
+            AppManager.I.LaunchActivity(activity);
         }
     }
 }
