@@ -10,5 +10,6 @@ namespace Ieedo
         public LocalizedString Description;
         public PaletteColor Color;
         public ActivityType Type;
+        public string sceneName;
     }
 }
