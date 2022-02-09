@@ -15,7 +15,7 @@ namespace Ieedo
             Statics.Data.Profile.Cards.Add(new CardData
             {
                 DefID = cardID,
-                CreationDate = Timestamp.Now
+                CreationTimestamp = Timestamp.Now
             });
             Statics.Data.SaveProfile();
         }
@@ -53,8 +53,9 @@ namespace Ieedo
 
         public CardDefinition GenerateCardDefinition(CardDefinition def)
         {
-            def.UID = Statics.Data.Cards.Max(x => x.UID) + 1;
-            Statics.Data.AddCardDefinition(def);
+            if (Statics.Data.Cards.Count == 0) def.UID = 1;
+            else def.UID = Statics.Data.Cards.Max(x => x.UID) + 1;
+            Statics.Data.AddCardDefinition(def); 
             return def;
         }
 

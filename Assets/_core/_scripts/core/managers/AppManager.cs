@@ -23,6 +23,9 @@ namespace Ieedo
             bool canLoad = Statics.Data.LoadProfile();
             if (!canLoad)
             {
+                // First time...
+                Statics.Data.InitialiseCardDefinitions();
+
                 // For now, create a new one if none is found
                 Statics.Data.CreateNewProfile(new ProfileDescription()
                 {
