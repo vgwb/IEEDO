@@ -269,7 +269,7 @@ namespace Ieedo
         private IEnumerator ChooseDateCO(Ref<int> result)
         {
             var options = new List<OptionData>();
-            var possibleDays = new [] { 1, 2, 3, 4, 5, 6 };
+            var possibleDays = new [] { 0, 1, 2, 3, 4, 5, 6 };
             foreach (var possibleDay in possibleDays)
             {
                 var targetDate = DateTime.Now.AddDays(possibleDay);
