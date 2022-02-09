@@ -9,11 +9,11 @@
 
         void Start()
         {
-            SetupButton(StartGameBtn, () => LaunchActivity(ActivityEnum.Blank));
-            SetupButton(StartGame2Btn, () => LaunchActivity(ActivityEnum.TicTac));
+            SetupButton(StartGameBtn, () => LaunchActivity(ActivityID.Blank));
+            SetupButton(StartGame2Btn, () => LaunchActivity(ActivityID.TicTac));
         }
 
-        private void LaunchActivity(ActivityEnum activity)
+        private void LaunchActivity(ActivityID activity)
         {
             AppManager.I.LaunchActivity(activity);
         }

@@ -21,4 +21,4 @@ MonoBehaviour:
     DefaultText: a test scene
   Color: {fileID: 11400000, guid: 7b3dea04f8fb78c42a35eaba3b76dac8, type: 2}
   Type: 1
-  sceneName: game_blank
+  SceneName: game_blank

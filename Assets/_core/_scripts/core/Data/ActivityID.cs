@@ -1,0 +1,9 @@
+﻿namespace Ieedo
+{
+    public enum ActivityID
+    {
+        None = 0,
+        Blank = 1,
+        TicTac = 2,
+    }
+}
