@@ -7,8 +7,8 @@ namespace Ieedo
 {
     public class AssessmentFlowManager : MonoBehaviour
     {
-        public UIQuestionPopup QuestionPopup;
-        public UIAssessmentRecapPopup AssessmentRecapPopup;
+        public UIQuestionPopup QuestionPopup; // TODO: get from screens instead
+        public UIAssessmentRecapPopup AssessmentRecapPopup; // TODO: get from screens instead
 
         public void StartAssessment()
         {
@@ -44,7 +44,7 @@ namespace Ieedo
                 }
                 if (nQuestions == 0) nQuestions = 1; // To avoid NaN
                 assessmentPercentages[(int)category.ID] = totValue / nQuestions;
-                overallValue += totValue;
+                overallValue += assessmentPercentages[(int)category.ID];
             }
 
             overallValue /= categories.Count;

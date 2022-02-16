@@ -20,13 +20,13 @@ namespace Ieedo.games
         public void OnBtnWin()
         {
             Debug.Log("Game Blank Win");
-
+            CloseMinigame(new ActivityResult(valueContent: 1));
         }
 
         public void OnBtnLose()
         {
             Debug.Log("Game Blank Lose");
-            CloseMinigame();
+            CloseMinigame(new ActivityResult(valueContent: 0));
         }
     }
 }

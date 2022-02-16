@@ -17,7 +17,7 @@ namespace Ieedo
         {
             get
             {
-                if (!Key.IsEmpty) return Key.GetLocalizedString();
+                if (Key != null && !Key.IsEmpty) return Key.GetLocalizedString();
                 return DefaultText;
             }
         }

@@ -29,7 +29,7 @@ namespace Ieedo
 
         private void LaunchActivity(ActivityID activity)
         {
-            AppManager.I.LaunchActivity(activity);
+            StartCoroutine(Statics.ActivityFlow.LaunchActivity(activity));
         }
     }
 }

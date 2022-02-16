@@ -44,26 +44,5 @@ namespace Ieedo
             yield return Statics.Screens.TransitionToCO(ScreenID.Pillars);
         }
 
-
-        #region Activity Flow
-
-        public ActivityDefinition CurrentActivity;
-
-        public void LaunchActivity(ActivityID activity)
-        {
-            CurrentActivity = Statics.Data.Get<ActivityDefinition>((int)activity);
-            SceneManager.LoadScene(CurrentActivity.SceneName, LoadSceneMode.Additive);
-        }
-
-        public void CloseActivity()
-        {
-            if (CurrentActivity)
-            {
-                SceneManager.UnloadSceneAsync(CurrentActivity.SceneName);
-            }
-            CurrentActivity = null;
-        }
-
-        #endregion
     }
 }

@@ -47,6 +47,20 @@ namespace Ieedo
     }
 
     [Serializable]
+    public class ActivityResults : List<ActivityResult>
+    {
+        public override string ToString()
+        {
+            var s = new StringBuilder();
+            foreach (var data in this)
+            {
+                s.AppendLine(data.ToString());
+            }
+            return s.ToString();
+        }
+    }
+
+    [Serializable]
     public class ProfileData
     {
         public ProfileDescription Description;
@@ -56,6 +70,7 @@ namespace Ieedo
         public int Level;
         public CategoryDataCollection Categories;
         public CardDataCollection Cards;
+        public ActivityResults ActivityResults;
 
         public override string ToString()
         {
@@ -63,6 +78,7 @@ namespace Ieedo
             s.AppendLine($"{Description.Name}({Description.Country} - {Description.Language})");
             s.AppendLine(Categories.ToString());
             s.AppendLine(Cards.ToString());
+            s.AppendLine(ActivityResults.ToString());
             return s.ToString();
         }
     }
