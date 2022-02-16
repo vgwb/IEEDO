@@ -20,5 +20,7 @@
         AssessmentCategoryIntro,
         Question,
         AssessmentRecap,
+
+        Debug,
     }
 }

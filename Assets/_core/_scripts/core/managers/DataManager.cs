@@ -116,7 +116,8 @@ namespace Ieedo
                 OnboardingState = new OnboardingState(),
                 Level = 0,
                 Cards = new CardDataCollection(),
-                Categories = new CategoryDataCollection()
+                Categories = new CategoryDataCollection(),
+                ActivityResults = new ActivityResults(),
             };
 
             foreach (var def in GetAll<CategoryDefinition>())

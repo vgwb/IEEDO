@@ -13,11 +13,13 @@ namespace Ieedo
         public LeanButton BackButton;
         public LeanButton AssessmentButton;
         public LeanButton LanguageButton;
+        public LeanButton DebugButton;
 
         void Start()
         {
             SetupButton(AssessmentButton, () => Statics.AssessmentFlow.StartAssessment());
             SetupButton(LanguageButton, () => StartSelectionLanguage());
+            SetupButton(DebugButton, () => Statics.Screens.OpenImmediate(ScreenID.Debug));
         }
 
         public UIOptionsListPopup OptionsListPopup;
