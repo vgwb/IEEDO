@@ -1,4 +1,8 @@
-﻿using Lean.Gui;
+﻿using System.Collections;
+using System.Collections.Generic;
+using Lean.Gui;
+using UnityEngine;
+using UnityEngine.Localization.Settings;
 
 namespace Ieedo
 {
@@ -13,6 +17,34 @@ namespace Ieedo
         void Start()
         {
             SetupButton(AssessmentButton, () => Statics.AssessmentFlow.StartAssessment());
+            SetupButton(LanguageButton, () => StartSelectionLanguage());
+        }
+
+        public UIOptionsListPopup OptionsListPopup;
+
+        private void StartSelectionLanguage()
+        {
+            StartCoroutine(SelectionLanguageCO());
+        }
+
+        private IEnumerator SelectionLanguageCO()
+        {
+            var options = new List<OptionData>();
+            var locales = LocalizationSettings.AvailableLocales.Locales;
+            foreach (var locale in locales)
+            {
+                options.Add(
+                    new OptionData
+                    {
+                        Text = locale.LocaleName,
+                        Color = Color.white,
+                    }
+                );
+            }
+            OptionsListPopup.ShowOptions("Choose Language", options);
+            while (OptionsListPopup.isActiveAndEnabled) yield return null;
+            var selectedLocale = locales[OptionsListPopup.LatestSelectedOption];
+            LocalizationSettings.SelectedLocale = selectedLocale;
         }
     }
 }
