@@ -15,10 +15,10 @@ MonoBehaviour:
   ID: 6
   Title:
     key: 
-    DefaultText: Category B
+    DefaultText: Community
   Description:
     key: 
-    DefaultText: 
+    DefaultText: Community & Social Life
   PaletteColor: {fileID: 11400000, guid: ba4acccf3fbca8b40869a6699a0086ac, type: 2}
   SubCategories:
   - ID: 200

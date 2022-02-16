@@ -42,6 +42,15 @@ MonoBehaviour:
     m_Localized: Category 6
     m_Metadata:
       m_Items: []
+  - m_Id: 10201661340147712
+    m_Localized: Civics & Culture
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10201788641468416
+    m_Localized: Category description Category descriptionCategory descriptionCategory
+      descriptionCategory description
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

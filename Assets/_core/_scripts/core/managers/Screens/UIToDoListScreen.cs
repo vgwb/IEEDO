@@ -176,7 +176,7 @@ namespace Ieedo
                 options.Add(
                     new OptionData
                     {
-                        Text = categoryDef.ID.ToString(),// TODO: .Title.Text,
+                        Text = categoryDef.Title.Text,
                         Color = categoryDef.Color
                     }
                 );

@@ -15,5 +15,10 @@
         Activities,
         CardEditor,
         Pillars,
+
+        AssessmentIntro,
+        AssessmentCategoryIntro,
+        Question,
+        AssessmentRecap,
     }
 }

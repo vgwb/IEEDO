@@ -3,9 +3,11 @@ using UnityEngine;
 
 namespace Ieedo
 {
-    public class UIAssessmentRecapPopup : MonoBehaviour
+    public class UIAssessmentRecapPopup : UIScreen
     {
-        public UIText Title;
+        public override ScreenID ID => ScreenID.AssessmentRecap;
+
+        public UITextContent Title;
 
         public UIAssessmentResultLine[] Categories;
         public UIAssessmentResultLine Overall;
@@ -19,7 +21,7 @@ namespace Ieedo
             {
                 var category = categories[iCategory];
 
-                Categories[iCategory].Title.SetText(category.ID.ToString());
+                Categories[iCategory].Title.SetText(category.Title.Text);
                 Categories[iCategory].Value.SetValue(Mathf.RoundToInt(assessmentPercentages[category.Id]*100), 100);
                 Categories[iCategory].BG.color = category.Color;
                 Categories[iCategory].Value.FillImage.color = category.Color.SetValue(1f);
@@ -32,15 +34,9 @@ namespace Ieedo
             Overall.Value.FillImage.color = Color.black.SetValue(1f);
             Overall.Value.BGImage.color = Color.black.SetValue(0.3f);
 
-            gameObject.SetActive(true);
+            OpenImmediate();
 
-            ContinueButton.OnClick.RemoveAllListeners();
-            ContinueButton.OnClick.AddListener(() => Close());
-        }
-
-        private void Close()
-        {
-            gameObject.SetActive(false);
+            SetupButton(ContinueButton, CloseImmediate);
         }
     }
 }

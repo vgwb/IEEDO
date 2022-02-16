@@ -3,8 +3,10 @@ using UnityEngine.UI;
 
 namespace Ieedo
 {
-    public class UIQuestionPopup : MonoBehaviour
+    public class UIQuestionPopup : UIScreen
     {
+        public override ScreenID ID => ScreenID.Question;
+
         public UIText Title;
         public UIText Question;
 
@@ -29,14 +31,14 @@ namespace Ieedo
                 Buttons[i].gameObject.SetActive(true);
 
                 var selectedOption = i;
-                Buttons[i].OnClick.AddListener(() => SelectOption(selectedOption));
+                SetupButton(Buttons[i], () => SelectOption(selectedOption));
             }
 
             for (int i = question.Answers.Length; i < Buttons.Length; i++)
             {
                 Buttons[i].gameObject.SetActive(false);
             }
-            gameObject.SetActive(true);
+            OpenImmediate();
         }
 
         public System.Action<int> OnSelectOption;
@@ -44,7 +46,7 @@ namespace Ieedo
         {
             OnSelectOption?.Invoke(selectedOption);
             LatestSelectedOption = selectedOption;
-            gameObject.SetActive(false);
+            CloseImmediate();
         }
     }
 }

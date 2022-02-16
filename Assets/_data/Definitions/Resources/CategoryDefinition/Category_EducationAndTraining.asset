@@ -15,10 +15,11 @@ MonoBehaviour:
   ID: 3
   Title:
     key: 
-    DefaultText: Category C
+    DefaultText: Education & Training
   Description:
     key: 
-    DefaultText: 
+    DefaultText: ' Education & TrainingEducation & TrainingEducation & TrainingEducation
+      & Training'
   PaletteColor: {fileID: 11400000, guid: 3ce36213df1bb6b46bbfa85e12948412, type: 2}
   SubCategories:
   - ID: 300

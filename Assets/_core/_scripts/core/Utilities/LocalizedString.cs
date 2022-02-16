@@ -5,7 +5,7 @@ namespace Ieedo
     [Serializable]
     public struct LocalizedString
     {
-        public string key;
+        public UnityEngine.Localization.LocalizedString Key;
         public string DefaultText;
 
         public LocalizedString(string defaultText) : this()
@@ -13,6 +13,13 @@ namespace Ieedo
             DefaultText = defaultText;
         }
 
-        public string Text => DefaultText;  // TODO: this should come from localization, but may be defined here for ease
+        public string Text
+        {
+            get
+            {
+                if (!Key.IsEmpty) return Key.GetLocalizedString();
+                return DefaultText;
+            }
+        }
     }
 }

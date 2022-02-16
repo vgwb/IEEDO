@@ -14,20 +14,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp:Ieedo:CategoryDefinition
   ID: 5
   Title:
-    key: 
-    DefaultText: Category B
+    Key:
+      m_TableReference:
+        m_TableCollectionName: GUID:c72a3e86bc710427d83055e5adb307c5
+      m_TableEntryReference:
+        m_KeyId: 10201661340147712
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    DefaultText: Civics & Culture
   Description:
-    key: 
-    DefaultText: 
+    Key:
+      m_TableReference:
+        m_TableCollectionName: GUID:c72a3e86bc710427d83055e5adb307c5
+      m_TableEntryReference:
+        m_KeyId: 10201661340147712
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    DefaultText: Civics & CultureCivics & CultureCivics & CultureCivics & Culture
   PaletteColor: {fileID: 11400000, guid: f577d573a5c52c341832836ae719824d, type: 2}
   SubCategories:
   - ID: 200
     Title:
-      key: 
+      Key:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
       DefaultText: B 1
     Icon: \uf556
   - ID: 201
     Title:
-      key: 
+      Key:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
       DefaultText: B 2
     Icon: \uf77d
+  references:
+    version: 2
+    RefIds: []

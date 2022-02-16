@@ -15,10 +15,11 @@ MonoBehaviour:
   ID: 2
   Title:
     key: 
-    DefaultText: Category B
+    DefaultText: Orientation & Doc
   Description:
     key: 
-    DefaultText: 
+    DefaultText: Orientation & DocOrientation & DocOrientation & DocOrientation &
+      Doc
   PaletteColor: {fileID: 11400000, guid: df8306e668da03d43a6288f1b6fd81bd, type: 2}
   SubCategories:
   - ID: 200

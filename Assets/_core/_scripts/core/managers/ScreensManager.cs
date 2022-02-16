@@ -67,5 +67,10 @@ namespace Ieedo
             Statics.I.StartCoroutine(TransitionToCO(toId));
         }
 
+        public UIScreen Get(ScreenID id)
+        {
+            return Screens[id];
+        }
+
     }
 }

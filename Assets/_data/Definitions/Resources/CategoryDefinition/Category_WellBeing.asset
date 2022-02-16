@@ -15,10 +15,10 @@ MonoBehaviour:
   ID: 1
   Title:
     key: 
-    DefaultText: Category A
+    DefaultText: Wellbeing
   Description:
     key: 
-    DefaultText: 
+    DefaultText: WellbeingWellbeingWellbeingWellbeingWellbeing
   PaletteColor: {fileID: 11400000, guid: 1937ddda88d9cc045b1e2a0778a52541, type: 2}
   SubCategories:
   - ID: 100
