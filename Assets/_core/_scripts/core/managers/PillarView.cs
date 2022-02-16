@@ -21,7 +21,7 @@ namespace Ieedo
             mr.material = new Material(mr.material);
             mr.material.SetColor("_Color", data.Color);
             mr.material.SetColor("_EmissionColor", data.Color*0.5f);
-            text.text = $"{data.Height * 100}%";
+            text.text = $"{Mathf.RoundToInt(data.Height*100)}%";
 
             foreach (var card in cards)
                 card.SetActive(false);

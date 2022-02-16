@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Ieedo
 {
@@ -16,9 +17,28 @@ namespace Ieedo
             {
                 ActivityBlocks[i].gameObject.SetActive(true);
                 var activityDefinition = allActivities[i];
-                ActivityBlocks[i].Title.text = activityDefinition.ID.ToString();
+
                 SetupButton(ActivityBlocks[i].LaunchButton, () => LaunchActivity(activityDefinition.ID));
                 ActivityBlocks[i].Title.text = activityDefinition.ID.ToString();
+
+                var data = Statics.Data.Profile.ActivitiesData.FirstOrDefault(x => x.ID == activityDefinition.ID);
+                if (data == null)
+                {
+                    // Generate data in the profile if the activity is unknown
+                    data = new ActivityData
+                    {
+                        ID = activityDefinition.ID,
+                        Unlocked = false,
+                        Results = new ActivityResults()
+                    };
+                    Statics.Data.Profile.ActivitiesData.Add(data);
+                    Statics.Data.SaveProfile();
+                }
+
+                // Check unlock state
+                data.Unlocked = Statics.Data.Profile.CurrentScore >= activityDefinition.ScoreToUnlock;
+                ActivityBlocks[i].LockedGO.SetActive(!data.Unlocked);
+                ActivityBlocks[i].LockedText.text = $"{activityDefinition.ScoreToUnlock} points to unlock";
             }
 
             for (int i = allActivities.Count; i < ActivityBlocks.Count; i++)

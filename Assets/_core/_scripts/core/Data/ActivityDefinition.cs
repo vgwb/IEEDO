@@ -8,9 +8,10 @@ namespace Ieedo
         public ActivityID ID;
         public LocalizedString Title;
         public LocalizedString Description;
-        public PaletteColor Color;
         public ActivityType Type;
         public string SceneName;
+        public int ScoreToUnlock;
+
         public int Id => (int)ID;
     }
 }

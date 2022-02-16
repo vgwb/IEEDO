@@ -5,5 +5,7 @@
         None = 0,
         Blank = 1,
         TicTac = 2,
+        Locked,
+        Writing,
     }
 }

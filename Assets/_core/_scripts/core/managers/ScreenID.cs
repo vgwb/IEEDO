@@ -20,6 +20,7 @@
         AssessmentCategoryIntro,
         Question,
         AssessmentRecap,
+        ActivityResult,
 
         Debug,
     }

@@ -9,6 +9,7 @@ namespace Ieedo
     public class UIScreen : MonoBehaviour
     {
         public virtual ScreenID ID => ScreenID.None;
+        public virtual bool AutoAnimate => true;
 
         public bool IsOpen => gameObject.activeSelf;
 
@@ -30,18 +31,24 @@ namespace Ieedo
         public IEnumerator OpenCO()
         {
             gameObject.SetActive(true);
-            transform.localPosition = new Vector3(0, 2500, 0);
-            float period = 0.25f;
-            transform.localPositionTransition_y(0, period);
-            yield return new WaitForSeconds(period);
+            if (AutoAnimate)
+            {
+                transform.localPosition = new Vector3(0, 2500, 0);
+                float period = 0.25f;
+                transform.localPositionTransition_y(0, period);
+                yield return new WaitForSeconds(period);
+            }
             yield return OnOpen();
         }
 
         public IEnumerator CloseCO()
         {
-            float period = 0.25f;
-            transform.localPositionTransition_y(2500, period);
-            yield return new WaitForSeconds(period);
+            if (AutoAnimate)
+            {
+                float period = 0.25f;
+                transform.localPositionTransition_y(2500, period);
+                yield return new WaitForSeconds(period);
+            }
             yield return OnClose();
             gameObject.SetActive(false);
         }

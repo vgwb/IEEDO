@@ -15,6 +15,8 @@ namespace Ieedo
         public LeanButton LanguageButton;
         public LeanButton DebugButton;
 
+        public UITextContent ScoreTextContent;
+
         void Start()
         {
             SetupButton(AssessmentButton, () => Statics.AssessmentFlow.StartAssessment());

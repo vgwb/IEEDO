@@ -19,7 +19,6 @@ namespace Ieedo
     {
         public int Score;
         public ActivityResultState Result;
-
         public string CustomData;
         public Timestamp Timestamp;
 
@@ -61,17 +60,27 @@ namespace Ieedo
 
         private void CloseActivity(ActivityResult result)
         {
+            StartCoroutine(CloseActivityCO(result));
+        }
+
+        private IEnumerator CloseActivityCO(ActivityResult result)
+        {
             if (CurrentActivity != null)
             {
-                SceneManager.UnloadSceneAsync(CurrentActivity.SceneName);
+                var async = SceneManager.UnloadSceneAsync(CurrentActivity.SceneName);
+                while (!async.isDone) yield return null;
             }
+
             foreach (var o in ObjectsToHide) o.SetActive(true);
 
-            // Save the result of this activity
+            var resultScreen = Statics.Screens.Get(ScreenID.ActivityResult) as UIActivityResultScreen;
+            yield return resultScreen.ShowResult(result);
+
+            // Save the result of this activity and its score
             result.Timestamp = Timestamp.Now;
             var activityData = Statics.Data.Profile.ActivitiesData.First(x => x.ID == CurrentActivity.ID);
-            activityData.Unlocked = false;
             activityData.Results.Add(result);
+            Statics.Score.AddScore(result.Score);
             Statics.Data.SaveProfile();
 
             CurrentActivity = null;

@@ -10,15 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7631c653b8f4c97a4340609bfb6c8fa, type: 3}
-  m_Name: game TicTac
+  m_Name: 2_game TicTac
   m_EditorClassIdentifier: 
   ID: 2
   Title:
-    key: game_tictac
-    DefaultText: Tic Tac
+    Key:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    DefaultText: Tic Tac Toe
   Description:
-    key: 
+    Key:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     DefaultText: the famous solved game
   Color: {fileID: 11400000, guid: e190f26b97b648648baf9a64db6d26a6, type: 2}
   Type: 1
   SceneName: game_tictac
+  ScoreToUnlock: 0
+  references:
+    version: 2
+    RefIds: []

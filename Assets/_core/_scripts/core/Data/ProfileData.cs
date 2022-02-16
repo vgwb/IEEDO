@@ -83,8 +83,10 @@ namespace Ieedo
         public ProfileDescription Description;
 
         // State
-        public OnboardingState OnboardingState;
         public int Level;
+        public int CurrentScore;
+
+        public OnboardingState OnboardingState;
         public CategoryDataCollection Categories;
         public CardDataCollection Cards;
         public ActivitiesData ActivitiesData;

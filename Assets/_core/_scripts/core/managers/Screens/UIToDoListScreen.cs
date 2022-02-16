@@ -12,6 +12,8 @@ namespace Ieedo
 {
     public class UIToDoListScreen : UIScreen
     {
+        public override bool AutoAnimate => false;
+        
         public UICardCollection ToDoList;
         public GameObject FrontView;
         public RectTransform FrontViewPivot;

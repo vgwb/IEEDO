@@ -8,6 +8,8 @@ namespace Ieedo
 {
     public class UIPillarsScreen : UIScreen
     {
+        public override bool AutoAnimate => false;
+
         public GameObject Scene3D;
         public PillarsManager PillarsManager;
 
