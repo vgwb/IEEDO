@@ -18,24 +18,27 @@ namespace Ieedo
     public class ActivityResult
     {
         public int Score;
+        public ActivityResultState Result;
 
         public string CustomData;
-        public int ValueContent;
         public Timestamp Timestamp;
 
         public ActivityResult()
         {
         }
 
-        public ActivityResult(int valueContent)
+        public ActivityResult(ActivityResultState result, int score)
         {
-            ValueContent = valueContent;
+            Result = result;
+            Score = score;
         }
 
     }
 
     public class ActivityFlowManager : MonoBehaviour
     {
+        public GameObject[] ObjectsToHide;
+
         public ActivityDefinition CurrentActivity;
 
         public IEnumerator LaunchActivity(ActivityID activity)
@@ -44,6 +47,7 @@ namespace Ieedo
 
             var async = SceneManager.LoadSceneAsync(CurrentActivity.SceneName, LoadSceneMode.Additive);
             while (!async.isDone) yield return null;
+            foreach (var o in ObjectsToHide) o.SetActive(false);
 
             var activityManager = FindObjectOfType<ActivityLogic>();
             if (activityManager == null)
@@ -61,6 +65,7 @@ namespace Ieedo
             {
                 SceneManager.UnloadSceneAsync(CurrentActivity.SceneName);
             }
+            foreach (var o in ObjectsToHide) o.SetActive(true);
 
             // Save the result of this activity
             result.Timestamp = Timestamp.Now;
