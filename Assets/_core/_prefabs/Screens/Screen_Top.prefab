@@ -1376,6 +1376,7 @@ MonoBehaviour:
   AssessmentButton: {fileID: 5653074620019601890}
   LanguageButton: {fileID: 5653074619305376868}
   DebugButton: {fileID: 688192975619317733}
+  ScoreTextContent: {fileID: 0}
   OptionsListPopup: {fileID: 0}
 --- !u!1 &5653074619856865325
 GameObject:

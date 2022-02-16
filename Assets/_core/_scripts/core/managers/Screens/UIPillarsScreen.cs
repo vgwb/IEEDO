@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Ieedo.Test;
 using UnityEngine;
 
 namespace Ieedo
@@ -14,10 +13,6 @@ namespace Ieedo
         public PillarsManager PillarsManager;
 
         public override ScreenID ID => ScreenID.Pillars;
-
-        void Start()
-        {
-        }
 
         protected override IEnumerator OnOpen()
         {
@@ -42,12 +37,13 @@ namespace Ieedo
             }
             PillarsManager.ShowData(pillarsData);
             Scene3D.SetActive(true);
+
             return base.OnOpen();
         }
 
         protected override IEnumerator OnClose()
         {
-            Scene3D.SetActive(false);
+           // Scene3D.SetActive(false);
             return base.OnClose();
         }
     }
