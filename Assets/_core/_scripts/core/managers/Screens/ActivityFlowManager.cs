@@ -1,17 +1,27 @@
 using System.Collections;
+using System.Linq;
 using Ieedo.games;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Ieedo
 {
+    public enum ActivityResultState
+    {
+        NONE = 0,
+        Win,
+        Lose,
+        Quit,
+    }
+
     [System.Serializable]
     public class ActivityResult
     {
-        public string TextContent;
+        public int Score;
+
+        public string CustomData;
         public int ValueContent;
         public Timestamp Timestamp;
-        public ActivityID ActivityID;
 
         public ActivityResult()
         {
@@ -35,10 +45,10 @@ namespace Ieedo
             var async = SceneManager.LoadSceneAsync(CurrentActivity.SceneName, LoadSceneMode.Additive);
             while (!async.isDone) yield return null;
 
-            var activityManager = FindObjectOfType<Minigame>();
+            var activityManager = FindObjectOfType<ActivityLogic>();
             if (activityManager == null)
             {
-                Debug.LogError("No Minigame script could be found. Did you add it to the game scene?");
+                Debug.LogError("No ActivityLogic script could be found. Did you add it to the game scene?");
                 yield break;
             }
 
@@ -52,10 +62,11 @@ namespace Ieedo
                 SceneManager.UnloadSceneAsync(CurrentActivity.SceneName);
             }
 
-            // Save the result of this minigame
-            result.ActivityID = CurrentActivity.ID;
+            // Save the result of this activity
             result.Timestamp = Timestamp.Now;
-            Statics.Data.Profile.ActivityResults.Add(result);
+            var activityData = Statics.Data.Profile.ActivitiesData.First(x => x.ID == CurrentActivity.ID);
+            activityData.Unlocked = false;
+            activityData.Results.Add(result);
             Statics.Data.SaveProfile();
 
             CurrentActivity = null;

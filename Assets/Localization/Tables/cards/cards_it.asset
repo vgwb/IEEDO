@@ -51,6 +51,10 @@ MonoBehaviour:
       e CulturaCivica e CulturaCivica e CulturaCivica e Cultura'
     m_Metadata:
       m_Items: []
+  - m_Id: 10257870520868864
+    m_Localized: "Comunit\xE0 e vita sociale"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

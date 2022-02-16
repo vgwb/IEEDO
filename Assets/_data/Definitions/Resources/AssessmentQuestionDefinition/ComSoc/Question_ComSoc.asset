@@ -14,16 +14,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp:Ieedo:AssessmentQuestionDefinition
   ID: 0
   Question:
-    key: 
+    Key:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     DefaultText: Do you 1?
   Category: 6
   Weight: 1
   Answers:
   - Answer:
-      key: Yes
+      Key:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
       DefaultText: Yes
     Value: 0
   - Answer:
-      key: No
+      Key:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
       DefaultText: No
     Value: 1
+  references:
+    version: 2
+    RefIds: []

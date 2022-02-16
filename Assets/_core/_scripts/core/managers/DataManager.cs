@@ -117,7 +117,7 @@ namespace Ieedo
                 Level = 0,
                 Cards = new CardDataCollection(),
                 Categories = new CategoryDataCollection(),
-                ActivityResults = new ActivityResults(),
+                //ActivitiesData = new ActivityResults(),
             };
 
             foreach (var def in GetAll<CategoryDefinition>())

@@ -14,20 +14,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp:Ieedo:CategoryDefinition
   ID: 6
   Title:
-    key: 
+    Key:
+      m_TableReference:
+        m_TableCollectionName: GUID:c72a3e86bc710427d83055e5adb307c5
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     DefaultText: Community
   Description:
-    key: 
+    Key:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     DefaultText: Community & Social Life
   PaletteColor: {fileID: 11400000, guid: ba4acccf3fbca8b40869a6699a0086ac, type: 2}
   SubCategories:
   - ID: 200
     Title:
-      key: 
+      Key:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
       DefaultText: B 1
     Icon: \uf556
   - ID: 201
     Title:
-      key: 
+      Key:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
       DefaultText: B 2
     Icon: \uf77d
+  references:
+    version: 2
+    RefIds: []

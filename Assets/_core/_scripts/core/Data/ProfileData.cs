@@ -46,6 +46,21 @@ namespace Ieedo
         public Language Language;
     }
 
+    #region Activities
+
+    [Serializable]
+    public class ActivitiesData : List<ActivityData>
+    {
+    }
+
+    [Serializable]
+    public class ActivityData
+    {
+        public ActivityID ID;
+        public bool Unlocked;
+        public ActivityResults Results = new();
+    }
+
     [Serializable]
     public class ActivityResults : List<ActivityResult>
     {
@@ -60,6 +75,8 @@ namespace Ieedo
         }
     }
 
+    #endregion
+
     [Serializable]
     public class ProfileData
     {
@@ -70,7 +87,7 @@ namespace Ieedo
         public int Level;
         public CategoryDataCollection Categories;
         public CardDataCollection Cards;
-        public ActivityResults ActivityResults;
+        public ActivitiesData ActivitiesData;
 
         public override string ToString()
         {
@@ -78,7 +95,7 @@ namespace Ieedo
             s.AppendLine($"{Description.Name}({Description.Country} - {Description.Language})");
             s.AppendLine(Categories.ToString());
             s.AppendLine(Cards.ToString());
-            s.AppendLine(ActivityResults.ToString());
+            s.AppendLine(ActivitiesData.ToString());
             return s.ToString();
         }
     }

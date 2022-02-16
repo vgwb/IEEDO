@@ -3,12 +3,12 @@ using System.Collections;
 
 namespace Ieedo.games
 {
-    public class Minigame : MonoBehaviour
+    public class ActivityLogic : MonoBehaviour
     {
         public ActivityDefinition Activity;
         public System.Action<ActivityResult> OnActivityEnd;
 
-        public void CloseMinigame(ActivityResult result)
+        public void CloseActivity(ActivityResult result)
         {
             OnActivityEnd?.Invoke(result);
         }
