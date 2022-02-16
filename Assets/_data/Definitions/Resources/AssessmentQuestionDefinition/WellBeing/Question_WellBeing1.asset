@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 702b56c8a89c4bea800c256ce93718e9, type: 3}
-  m_Name: AssessmentQuestion1
+  m_Name: Question_WellBeing1
   m_EditorClassIdentifier: Assembly-CSharp:Ieedo:AssessmentQuestionDefinition
   ID: 0
   Question:
@@ -19,7 +19,11 @@ MonoBehaviour:
   Category: 1
   Weight: 1
   Answers:
-  - key: yes
-    DefaultText: Yes
-  - key: no
-    DefaultText: No
+  - Answer:
+      key: Yes
+      DefaultText: Yes
+    Value: 0
+  - Answer:
+      key: No
+      DefaultText: No
+    Value: 1

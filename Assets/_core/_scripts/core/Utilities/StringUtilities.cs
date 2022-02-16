@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace Ieedo.Utilities
+namespace Ieedo
 {
     public static class StringUtilities
     {

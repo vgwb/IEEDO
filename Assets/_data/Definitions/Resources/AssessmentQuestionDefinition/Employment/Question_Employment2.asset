@@ -19,7 +19,11 @@ MonoBehaviour:
   Category: 4
   Weight: 1
   Answers:
-  - key: yes
-    DefaultText: Yes
-  - key: no
-    DefaultText: No
+  - Answer:
+      key: 
+      DefaultText: Yes
+    Value: 0
+  - Answer:
+      key: 
+      DefaultText: No
+    Value: 1

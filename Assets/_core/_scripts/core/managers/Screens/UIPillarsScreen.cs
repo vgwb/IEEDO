@@ -32,7 +32,7 @@ namespace Ieedo
                 var pillarData = new PillarData
                 {
                     Color = Statics.Data.Definition(category.ID).Color,
-                    Height = category.AssessmentValue * 0.2f, // multiplier
+                    Height = category.AssessmentValue,
                     NCards = nCards,
                 };
 

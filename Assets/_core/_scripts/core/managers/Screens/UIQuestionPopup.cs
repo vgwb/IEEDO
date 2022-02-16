@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace Ieedo
 {
@@ -10,14 +11,20 @@ namespace Ieedo
         public UIButton[] Buttons;
         public int LatestSelectedOption;
 
+        public Image TitleBG;
+        public Image QuestionBG;
+
         public void ShowQuestion(AssessmentQuestionDefinition question)
         {
+            var category = Statics.Data.Get<CategoryDefinition>((int)question.Category);
+            TitleBG.color = category.Color;
+            QuestionBG.color = category.Color.SetValue(0.5f).SetSaturation(0.5f);
             Title.text = question.Category.ToString();
             Question.text = question.Question.Text;
             for (var i = 0; i < question.Answers.Length; i++)
             {
                 var answer = question.Answers[i];
-                Buttons[i].Text = answer.Text;
+                Buttons[i].Text = answer.Answer.Text;
                 Buttons[i].SetColor(Color.white);
                 Buttons[i].gameObject.SetActive(true);
 

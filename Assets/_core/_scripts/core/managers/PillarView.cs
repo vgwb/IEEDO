@@ -15,8 +15,9 @@ namespace Ieedo
 
         public void ShowData(PillarData data)
         {
+            var gfxHeight = Mathf.Max(data.Height, 0.05f);
             var baseScale = 0.1f;
-            gfx.localScale = new Vector3(1f, data.Height, 1f)*baseScale;
+            gfx.localScale = new Vector3(1f, gfxHeight, 1f)*baseScale;
             mr.material = new Material(mr.material);
             mr.material.SetColor("_Color", data.Color);
             mr.material.SetColor("_EmissionColor", data.Color*0.5f);
@@ -31,7 +32,7 @@ namespace Ieedo
                 {
                     var cardGo = Instantiate(cardPrefab, transform);
                     cards.Add(cardGo);
-                    float pillarTop = data.Height * 2.5f;
+                    float pillarTop = gfxHeight * 2.5f;
                     cardGo.transform.localPosition = Vector3.up * (pillarTop + iCard * 0.025f);
                     cardGo.transform.localPosition += new Vector3(Random.Range(-0.2f, 0.2f), 0, Random.Range(-0.2f, 0.2f));
                     cardGo.transform.localEulerAngles = Vector3.up * Random.Range(0, 360f);

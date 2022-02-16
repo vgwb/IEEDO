@@ -6,7 +6,7 @@ namespace Ieedo
     public class CategoryData
     {
         public CategoryID ID;
-        public int AssessmentValue;
+        public float AssessmentValue;
 
         public override string ToString()
         {
