@@ -58,6 +58,7 @@ namespace Ieedo
     {
         public ActivityID ID;
         public bool Unlocked;
+        public int CurrentLevel;
         public ActivityResults Results = new();
     }
 

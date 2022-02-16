@@ -11,5 +11,7 @@ namespace Ieedo
         public Image GameImage;
         public UIText Title;
         public UIButton LaunchButton;
+
+        public UIFillBar ProgressBar;
     }
 }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Ieedo
@@ -16,7 +17,7 @@ namespace Ieedo
         public Image TitleBG;
         public Image QuestionBG;
 
-        public void ShowQuestion(AssessmentQuestionDefinition question)
+        public IEnumerator ShowQuestion(AssessmentQuestionDefinition question)
         {
             var category = Statics.Data.Get<CategoryDefinition>((int)question.Category);
             TitleBG.color = category.Color;
@@ -38,7 +39,8 @@ namespace Ieedo
             {
                 Buttons[i].gameObject.SetActive(false);
             }
-            OpenImmediate();
+
+            yield return OpenCO();
         }
 
         public System.Action<int> OnSelectOption;
@@ -46,7 +48,7 @@ namespace Ieedo
         {
             OnSelectOption?.Invoke(selectedOption);
             LatestSelectedOption = selectedOption;
-            CloseImmediate();
+            Close();
         }
     }
 }

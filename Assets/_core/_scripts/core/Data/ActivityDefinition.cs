@@ -7,10 +7,10 @@ namespace Ieedo
     {
         public ActivityID ID;
         public LocalizedString Title;
-        public LocalizedString Description;
         public ActivityType Type;
         public string SceneName;
         public int ScoreToUnlock;
+        public int MaxLevel = 10;
 
         public int Id => (int)ID;
     }

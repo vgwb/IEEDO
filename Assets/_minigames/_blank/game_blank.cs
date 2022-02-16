@@ -7,14 +7,9 @@ namespace Ieedo.games
 {
     public class game_blank : ActivityLogic
     {
-        void Start()
+        protected override void SetupActivity(int currentLevel)
         {
-
-        }
-
-        void Update()
-        {
-
+            Debug.Log($"Starting game at level {currentLevel}");
         }
 
         public void OnBtnWin()

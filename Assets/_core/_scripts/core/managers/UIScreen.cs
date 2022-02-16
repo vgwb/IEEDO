@@ -33,9 +33,9 @@ namespace Ieedo
             gameObject.SetActive(true);
             if (AutoAnimate)
             {
-                transform.localPosition = new Vector3(0, 2500, 0);
+                transform.localPosition = new Vector3(-2500, 0, 0);
                 float period = 0.25f;
-                transform.localPositionTransition_y(0, period);
+                transform.localPositionTransition_x(0, period);
                 yield return new WaitForSeconds(period);
             }
             yield return OnOpen();
@@ -46,7 +46,7 @@ namespace Ieedo
             if (AutoAnimate)
             {
                 float period = 0.25f;
-                transform.localPositionTransition_y(2500, period);
+                transform.localPositionTransition_x(2500, period);
                 yield return new WaitForSeconds(period);
             }
             yield return OnClose();

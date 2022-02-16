@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Ieedo
@@ -9,7 +10,7 @@ namespace Ieedo
 
         public List<UIActivityBlock> ActivityBlocks;
 
-        void Start()
+        protected override IEnumerator OnOpen()
         {
             var allActivities = Statics.Data.GetAll<ActivityDefinition>();
 
@@ -19,7 +20,7 @@ namespace Ieedo
                 var activityDefinition = allActivities[i];
 
                 SetupButton(ActivityBlocks[i].LaunchButton, () => LaunchActivity(activityDefinition.ID));
-                ActivityBlocks[i].Title.text = activityDefinition.ID.ToString();
+                ActivityBlocks[i].Title.text = activityDefinition.Title.Text;
 
                 var data = Statics.Data.Profile.ActivitiesData.FirstOrDefault(x => x.ID == activityDefinition.ID);
                 if (data == null)
@@ -34,6 +35,7 @@ namespace Ieedo
                     Statics.Data.Profile.ActivitiesData.Add(data);
                     Statics.Data.SaveProfile();
                 }
+                ActivityBlocks[i].ProgressBar.SetValue(data.CurrentLevel, activityDefinition.MaxLevel);
 
                 // Check unlock state
                 data.Unlocked = Statics.Data.Profile.CurrentScore >= activityDefinition.ScoreToUnlock;
@@ -45,6 +47,7 @@ namespace Ieedo
             {
                 ActivityBlocks[i].gameObject.SetActive(false);
             }
+            yield break;
         }
 
         private void LaunchActivity(ActivityID activity)

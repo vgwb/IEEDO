@@ -37,7 +37,6 @@ namespace Ieedo
     public class ActivityFlowManager : MonoBehaviour
     {
         public GameObject[] ObjectsToHide;
-
         public ActivityDefinition CurrentActivity;
 
         public IEnumerator LaunchActivity(ActivityID activity)
@@ -55,6 +54,8 @@ namespace Ieedo
                 yield break;
             }
 
+            var activityData = Statics.Data.Profile.ActivitiesData.First(x => x.ID == CurrentActivity.ID);
+            activityManager.ExternSetupActivity(activityData.CurrentLevel);
             activityManager.OnActivityEnd = CloseActivity;
         }
 
@@ -80,6 +81,12 @@ namespace Ieedo
             result.Timestamp = Timestamp.Now;
             var activityData = Statics.Data.Profile.ActivitiesData.First(x => x.ID == CurrentActivity.ID);
             activityData.Results.Add(result);
+
+            if (result.Result == ActivityResultState.Win)
+            {
+                activityData.CurrentLevel += 1;
+            }
+
             Statics.Score.AddScore(result.Score);
             Statics.Data.SaveProfile();
 

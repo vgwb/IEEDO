@@ -37,7 +37,7 @@ namespace Ieedo
                 foreach (var question in questions)
                 {
                     QuestionPopup.ShowQuestion(question);
-                    while (QuestionPopup.isActiveAndEnabled) yield return null;
+                    while (QuestionPopup.IsOpen) yield return null;
                     var selectedAnswer = question.Answers[QuestionPopup.LatestSelectedOption];
                     totValue += selectedAnswer.Value;
                     nQuestions++;
@@ -49,7 +49,7 @@ namespace Ieedo
 
             overallValue /= categories.Count;
             AssessmentRecapPopup.ShowResults(assessmentPercentages, overallValue);
-            while (AssessmentRecapPopup.isActiveAndEnabled) yield return null;
+            while (AssessmentRecapPopup.IsOpen) yield return null;
 
             var profileData = Statics.Data.Profile;
             foreach (var categoryData in profileData.Categories)

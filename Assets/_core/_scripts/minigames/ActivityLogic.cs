@@ -13,5 +13,13 @@ namespace Ieedo.games
             OnActivityEnd?.Invoke(result);
         }
 
+        public void ExternSetupActivity(int currentLevel)
+        {
+            SetupActivity(currentLevel);
+        }
+
+        protected virtual void SetupActivity(int currentLevel)
+        {
+        }
     }
 }
