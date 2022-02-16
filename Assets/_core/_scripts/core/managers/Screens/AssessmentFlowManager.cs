@@ -36,7 +36,7 @@ namespace Ieedo
                 float totValue = 0f;
                 foreach (var question in questions)
                 {
-                    QuestionPopup.ShowQuestion(question);
+                    yield return QuestionPopup.ShowQuestion(question);
                     while (QuestionPopup.IsOpen) yield return null;
                     var selectedAnswer = question.Answers[QuestionPopup.LatestSelectedOption];
                     totValue += selectedAnswer.Value;
