@@ -18,8 +18,8 @@ namespace Ieedo
         public IEnumerator AssessmentCO()
         {
             var introScreen = Statics.Screens.Get(ScreenID.AssessmentIntro) as UIAssessmentIntroScreen;
-            introScreen.ShowIntro();
-            while (introScreen.isActiveAndEnabled) yield return null;
+            yield return introScreen.ShowIntro();
+            while (introScreen.IsOpen) yield return null;
 
             var overallValue = 0f;
             var assessmentPercentages = new Dictionary<int, float>();
@@ -27,7 +27,7 @@ namespace Ieedo
             foreach (var category in categories)
             {
                 var categoryIntroScreen = Statics.Screens.Get(ScreenID.AssessmentCategoryIntro) as UIAssessmentCategoryIntroScreen;
-                categoryIntroScreen.ShowCategory(category);
+                yield return categoryIntroScreen.ShowCategory(category);
                 while (categoryIntroScreen.isActiveAndEnabled) yield return null;
 
                 int nQuestions = 0;

@@ -1,3 +1,5 @@
+using System.Collections;
+
 namespace Ieedo
 {
     public class UIAssessmentCategoryIntroScreen : UIScreen
@@ -9,7 +11,7 @@ namespace Ieedo
 
         public UIButton ContinueButton;
 
-        public void ShowCategory(CategoryDefinition category)
+        public IEnumerator ShowCategory(CategoryDefinition category)
         {
             Title.Text.text = category.Title.Text;
             Title.BG.color = category.Color;
@@ -17,9 +19,8 @@ namespace Ieedo
             Content.Text.text = category.Description.Text;
             Content.BG.color = category.Color.SetSaturation(0.5f);
 
-            OpenImmediate();
-
-            SetupButton(ContinueButton, CloseImmediate);
+            SetupButton(ContinueButton, Close);
+            yield return OpenCO();
         }
     }
 }

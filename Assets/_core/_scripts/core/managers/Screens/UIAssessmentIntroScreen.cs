@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 namespace Ieedo
 {
@@ -13,7 +15,7 @@ namespace Ieedo
 
         public UIButton ContinueButton;
 
-        public void ShowIntro()
+        public IEnumerator ShowIntro()
         {
             Title.Text.text = "Intro to assessment";
 
@@ -27,9 +29,9 @@ namespace Ieedo
                 categoryTexts[iCategory].BG.color = category.Color;
             }
 
-            OpenImmediate();
-
-            SetupButton(ContinueButton, CloseImmediate);
+            SetupButton(ContinueButton, Close);
+            yield return OpenCO();
         }
+
     }
 }
