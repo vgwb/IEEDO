@@ -30,6 +30,30 @@ MonoBehaviour:
     m_Localized: yes
     m_Metadata:
       m_Items: []
+  - m_Id: 37308361241255936
+    m_Localized: ok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450240
+    m_Localized: back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450241
+    m_Localized: retry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450242
+    m_Localized: next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450243
+    m_Localized: exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450244
+    m_Localized: continue
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

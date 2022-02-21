@@ -27,8 +27,28 @@ MonoBehaviour:
     m_Key: no
     m_Metadata:
       m_Items: []
-  - m_Id: 35394490144153600
-    m_Key: Civi
+  - m_Id: 37308361241255936
+    m_Key: ok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450240
+    m_Key: back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450241
+    m_Key: retry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450242
+    m_Key: next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450243
+    m_Key: exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450244
+    m_Key: continue
     m_Metadata:
       m_Items: []
   m_Metadata:
