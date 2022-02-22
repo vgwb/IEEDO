@@ -7,5 +7,7 @@
         TicTac = 2,
         Locked,
         Writing,
+        Connect4,
+        Unblock,
     }
 }

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7631c653b8f4c97a4340609bfb6c8fa, type: 3}
-  m_Name: 3_activity Writing
+  m_Name: game_unblock
   m_EditorClassIdentifier: 
-  ID: 4
+  ID: 6
   Title:
     Key:
       m_TableReference:
@@ -23,10 +23,10 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    DefaultText: Writing
-  Type: 0
-  SceneName: game_tictac
-  ScoreToUnlock: 100
+    DefaultText: Unblock
+  Type: 1
+  SceneName: game_unblock
+  ScoreToUnlock: 0
   MaxLevel: 10
   references:
     version: 2

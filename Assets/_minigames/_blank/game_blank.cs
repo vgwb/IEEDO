@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace Ieedo.games
+namespace Ieedo.games.blank
 {
     public class game_blank : ActivityLogic
     {
