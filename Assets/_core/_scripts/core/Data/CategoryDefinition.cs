@@ -2,7 +2,8 @@ using UnityEngine;
 
 namespace Ieedo
 {
-    [CreateAssetMenu]
+    [CreateAssetMenu(fileName = "Category", menuName = "Ieedo/Category")]
+
     public class CategoryDefinition : ScriptableObject, IDefinition
     {
         public CategoryID ID;

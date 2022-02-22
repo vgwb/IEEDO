@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Ieedo
 {
-    [CreateAssetMenu]
+    [CreateAssetMenu(fileName = "Activity", menuName = "Ieedo/Activity")]
     public class ActivityDefinition : ScriptableObject, IDefinition
     {
         public ActivityID ID;

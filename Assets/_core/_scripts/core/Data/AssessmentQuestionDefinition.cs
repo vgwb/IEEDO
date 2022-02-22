@@ -7,7 +7,7 @@ namespace Ieedo
     public class AssessmentAnswer
     {
         public LocalizedString Answer;
-        [Range(0,1)]
+        [Range(0, 1)]
         public float Value = 1f;
 
         public AssessmentAnswer()
@@ -21,13 +21,13 @@ namespace Ieedo
         }
     }
 
-    [CreateAssetMenu]
+    [CreateAssetMenu(fileName = "AssessmentQuestion", menuName = "Ieedo/Assessment Question")]
     public class AssessmentQuestionDefinition : ScriptableObject
     {
         public int ID;
         public LocalizedString Question;
         public CategoryID Category;
-        [Range(0,2)]
+        [Range(0, 2)]
         public float Weight = 1f;
 
         public AssessmentAnswer[] Answers = {
