@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7631c653b8f4c97a4340609bfb6c8fa, type: 3}
-  m_Name: 3_activity Writing
+  m_Name: game_tictac
   m_EditorClassIdentifier: 
-  ID: 4
+  ID: 2
   Title:
     Key:
       m_TableReference:
@@ -23,11 +23,22 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    DefaultText: Writing
-  Type: 0
+    DefaultText: Tic Tac Toe
+  Description:
+    Key:
+      m_TableReference:
+        m_TableCollectionName: 
+      m_TableEntryReference:
+        m_KeyId: 0
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    DefaultText: the famous solved game
+  Color: {fileID: 11400000, guid: e190f26b97b648648baf9a64db6d26a6, type: 2}
+  Type: 1
   SceneName: game_tictac
-  ScoreToUnlock: 100
-  MaxLevel: 10
+  ScoreToUnlock: 0
   references:
     version: 2
     RefIds: []

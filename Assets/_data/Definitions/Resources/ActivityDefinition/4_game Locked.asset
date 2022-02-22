@@ -24,21 +24,10 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     DefaultText: Locked example
-  Description:
-    Key:
-      m_TableReference:
-        m_TableCollectionName: 
-      m_TableEntryReference:
-        m_KeyId: 0
-        m_Key: 
-      m_FallbackState: 0
-      m_WaitForCompletion: 0
-      m_LocalVariables: []
-    DefaultText: the famous solved game
-  Color: {fileID: 11400000, guid: e190f26b97b648648baf9a64db6d26a6, type: 2}
-  Type: 1
-  SceneName: game_tictac
+  Type: 0
+  SceneName: 
   ScoreToUnlock: 200
+  MaxLevel: 10
   references:
     version: 2
     RefIds: []
