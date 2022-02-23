@@ -9,15 +9,17 @@ namespace Ieedo
         public Color Color;
     }
 
-    public class UIOptionsListPopup : MonoBehaviour
+    public class UIOptionsListPopup : UIScreen
     {
         public UIText Title;
 
-        public UIButton[] Buttons;
+        public Transform ButtonsPivot;
+        private UIButton[] Buttons;
         public int LatestSelectedOption;
 
         public void ShowOptions(string title, List<OptionData> options)
         {
+            if (Buttons == null) Buttons = ButtonsPivot.GetComponentsInChildren<UIButton>(true);
             Title.text = title;
             for (var i = 0; i < options.Count; i++)
             {
@@ -34,7 +36,7 @@ namespace Ieedo
             {
                 Buttons[i].gameObject.SetActive(false);
             }
-            gameObject.SetActive(true);
+            OpenImmediate();
         }
 
         public System.Action<int> OnSelectOption;
@@ -42,7 +44,7 @@ namespace Ieedo
         {
             OnSelectOption?.Invoke(selectedOption);
             LatestSelectedOption = selectedOption;
-            gameObject.SetActive(false);
+            CloseImmediate();
         }
     }
 }

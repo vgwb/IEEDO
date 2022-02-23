@@ -40,7 +40,14 @@ namespace Ieedo
         [JsonIgnore]
         public CategoryDefinition CategoryDefinition => Statics.Data.Get<CategoryDefinition>((int)Category);
 
-        [JsonIgnore] public SubCategoryDefinition SubCategoryDefinition => CategoryDefinition.SubCategories.FirstOrDefault(x => x.ID == SubCategory);
+        [JsonIgnore] public SubCategoryDefinition SubCategoryDefinition
+        {
+            get
+            {
+                if (CategoryDefinition == null) return null;
+                return CategoryDefinition.SubCategories.FirstOrDefault(x => x.ID == SubCategory);
+            }
+        }
 
         public override string ToString()
         {

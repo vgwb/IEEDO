@@ -51,19 +51,17 @@ namespace Ieedo
             return uiCard;
         }
 
-        public void SortList()
-        {
-
-        }
-
         public void RemoveCard(UICard uiCard)
         {
             var index = HeldCards.IndexOf(uiCard);
-            Destroy(HeldCards[index]);
-            HeldCards.RemoveAt(index);
+            if (index >= 0)
+            {
+                Destroy(HeldCards[index].gameObject);
+                HeldCards.RemoveAt(index);
 
-            Destroy(HeldSlots[index]);
-            HeldSlots.RemoveAt(index);
+                Destroy(HeldSlots[index].gameObject);
+                HeldSlots.RemoveAt(index);
+            }
         }
 
         public void SetupInListInteraction(UICard uiCard)

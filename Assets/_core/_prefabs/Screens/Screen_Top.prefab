@@ -500,11 +500,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2371623362688251523, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_text
-      value: \uf599 \uf599
+      value: \uf599
       objectReference: {fileID: 0}
     - target: {fileID: 2371623362688251523, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_fontSize
-      value: 54.1
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 6579875410280131145, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_Name

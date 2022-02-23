@@ -5,6 +5,7 @@ using System.Linq;
 using Lean.Transition;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Ieedo
 {
@@ -34,9 +35,12 @@ namespace Ieedo
         public UIButton EditDifficultyButton;
         public UIButton EditDateButton;
         public UIButton EditSubCategoryButton;
+        public UIButton EditTitleButton;
+        public UIButton EditDescriptionButton;
 
-        public UIButton CompleteCreationButton;
+        public UIButton CompleteCreationButton; // DEPRECATED
         public UIButton DeleteCardButton;
+        public UIButton CloseFrontViewButton;
 
         public override ScreenID ID => ScreenID.CardList;
         public bool KeepPillars { get; set; }
@@ -51,7 +55,7 @@ namespace Ieedo
                 frontCardUI.Data.Status = CardValidationStatus.Validated;
                 Statics.Data.SaveProfile();
 
-                StartCoroutine(CompleteCardCO(frontCardUI));
+                StartCoroutine(ValidateCardCO(frontCardUI));
             });
 
             SetupButton(CompleteCardButton, () =>
@@ -78,20 +82,33 @@ namespace Ieedo
             CardsList.OnCardClicked = uiCard => OpenFrontView(uiCard, CurrentListViewMode == ListViewMode.ToDo ? FrontViewMode.Edit : FrontViewMode.Review);
         }
 
+        private IEnumerator ValidateCardCO(UICard uiCard)
+        {
+            uiCard.transform.localPositionTransition(new Vector3(-300,600,-150), 0.5f, LeanEase.Accelerate);
+            uiCard.transform.localEulerAnglesTransform(new Vector3(0,-20,-20), 0.5f, LeanEase.Accelerate);
+            yield return new WaitForSeconds(0.5f);
+            if (uiCard != null) Destroy(uiCard.gameObject);
+            CloseFrontView();
+            GoTo(ScreenID.Pillars);
+            Statics.Score.AddScore(50);
+        }
+
+
         private IEnumerator CompleteCardCO(UICard uiCard)
         {
             uiCard.transform.localPositionTransition(new Vector3(-300,600,-150), 0.5f, LeanEase.Accelerate);
             uiCard.transform.localEulerAnglesTransform(new Vector3(0,-20,-20), 0.5f, LeanEase.Accelerate);
             yield return new WaitForSeconds(0.5f);
-            Destroy(uiCard);
+            if (uiCard != null) Destroy(uiCard.gameObject);
             CloseFrontView();
             GoTo(ScreenID.Pillars);
+            Statics.Score.AddScore(20);
         }
 
         protected override IEnumerator OnOpen()
         {
             FrontView.gameObject.SetActive(false);
-            Statics.Data.LoadCardDefinitions();
+            //Statics.Data.LoadCardDefinitions();
 
             switch (CurrentListViewMode)
             {
@@ -165,15 +182,6 @@ namespace Ieedo
             FrontView.gameObject.SetActive(true);
             frontCardUI = uiCard;
 
-            uiCard.OnInteraction(() =>
-            {
-                // Return it to the list on click
-                if (CurrentFrontViewMode == FrontViewMode.View)
-                {
-                    CloseFrontView();
-                }
-            });
-
             SwitchToViewMode(viewMode);
         }
 
@@ -230,7 +238,65 @@ namespace Ieedo
 
         public IEnumerator CardCreationFlowCO()
         {
-            // Choose category
+            EditSubCategoryButton.gameObject.SetActive(false);
+            EditDifficultyButton.gameObject.SetActive(false);
+            EditDateButton.gameObject.SetActive(false);
+            EditTitleButton.gameObject.SetActive(false);
+            EditDescriptionButton.gameObject.SetActive(false);
+
+            // Create and show the card
+            var cardDef = Statics.Cards.GenerateCardDefinition(
+                new CardDefinition {
+                    Category = CategoryID.None,
+                    SubCategory = 0,
+                    Description = new LocalizedString { DefaultText = "" },
+                    Difficulty = 0,
+                    Title = new LocalizedString { DefaultText = ""},
+                },
+                isDefaultCard: AppManager.I.ApplicationConfig.SaveCardsAsDefault
+            );
+
+            // Create a new Data for this profile for that card
+            var cardData = new CardData
+            {
+                DefID = cardDef.UID,
+                CreationTimestamp = new Timestamp(DateTime.Now),
+                ExpirationTimestamp = Timestamp.None
+            };
+            Statics.Cards.AssignCard(cardData);
+            var cardUi = UICardManager.I.AddCardUI(cardData, FrontViewPivot);
+            cardUi.transform.localPosition = new Vector3(0, 1000, 0);
+            OpenFrontView(cardUi, FrontViewMode.Create);
+            cardUi.AnimateToParent();
+
+            var cardFlowIndex = 0;
+            while (cardFlowIndex <= 6)
+            {
+                switch (cardFlowIndex)
+                {
+                    case 0: yield return EditCategoryCO(); break;
+                    case 1: yield return EditSubCategoryCO(cardUi.Data.Definition.CategoryDefinition); break;
+                    case 2: yield return EditTitleCO(); break;
+                    case 3: yield return EditDifficultyCO(); break;
+                    case 4: yield return EditDateCO(); break;
+                    case 5: yield return EditDescriptionCO(); break;
+                }
+                cardFlowIndex++;
+            }
+
+            frontCardUI.AnimateToParent();
+
+            EditSubCategoryButton.gameObject.SetActive(true);
+            EditDifficultyButton.gameObject.SetActive(true);
+            EditDateButton.gameObject.SetActive(true);
+            EditDescriptionButton.gameObject.SetActive(true);
+            EditTitleButton.gameObject.SetActive(true);
+        }
+
+        private IEnumerator EditCategoryCO(bool autoReset = false)
+        {
+            var catResult = new Ref<CategoryDefinition>();
+            frontCardUI.transform.localPositionTransition(new Vector3(0, 100, 0), 0.25f);
             var options = new List<OptionData>();
             var categories = Statics.Data.GetAll<CategoryDefinition>();
             foreach (var categoryDef in categories)
@@ -245,76 +311,18 @@ namespace Ieedo
             }
             optionsListPopup.ShowOptions("Choose Category", options);
             while (optionsListPopup.isActiveAndEnabled) yield return null;
-            var selectedCategory = categories[optionsListPopup.LatestSelectedOption];
-
-            // Create and show the card
-            var cardDef = Statics.Cards.GenerateCardDefinition(
-                new CardDefinition {
-
-                    Category = selectedCategory.ID,
-                    SubCategory = 0,
-                    Description = new LocalizedString { DefaultText = "" },
-                    Difficulty = 0,
-                    Title = new LocalizedString { DefaultText = ""},
-                },
-                isDefaultCard: AppManager.I.ApplicationConfig.SaveCardsAsDefault
-            );
-
-            // Create a new Data for this profile for that card
-            var cardData = new CardData
-            {
-                DefID = cardDef.UID,
-                CreationTimestamp = new Timestamp(DateTime.Now),
-                //ExpirationTimestamp = new Timestamp(DateTime.Now.AddDays(selectedDays))
-            };
-            Statics.Cards.AssignCard(cardData);
-            var cardUi = UICardManager.I.AddCardUI(cardData, FrontViewPivot);
-            OpenFrontView(cardUi, FrontViewMode.Create);
-
-            // Choose sub-category
-            var subResult = new Ref<SubCategoryDefinition>();
-            yield return ChooseSubCategoryCO(subResult, selectedCategory);
-            var selectedSubCategory = subResult.Value;
-            cardData.Definition.SubCategory = selectedSubCategory.ID;
+            catResult.Value = categories[optionsListPopup.LatestSelectedOption];
+            var selectedCategory = catResult.Value;
+            frontCardUI.Data.Definition.Category = selectedCategory.ID;
+            Statics.Data.SaveProfile();
             frontCardUI.RefreshUI();
+            if (autoReset) frontCardUI.AnimateToParent();
+        }
 
-            // Choose difficulty
+        private IEnumerator EditDifficultyCO(bool autoReset = false)
+        {
             var result = new Ref<int>();
-            yield return ChooseDifficultyCO(result);
-            var selectedDifficulty = result.Value;
-            cardData.Definition.Difficulty = selectedDifficulty;
-            frontCardUI.RefreshUI();
-
-            // Choose Date
-            yield return ChooseDateCO(result);
-            var selectedDays = result.Value;
-            cardData.ExpirationTimestamp = new Timestamp(DateTime.Now.AddDays(selectedDays));
-            frontCardUI.RefreshUI();
-
-        }
-
-        private IEnumerator ChooseSubCategoryCO(Ref<SubCategoryDefinition> result, CategoryDefinition category)
-        {
-            var options = new List<OptionData>();
-            var subCategories = category.SubCategories;
-            foreach (var subCategoryDef in subCategories)
-            {
-                options.Add(
-                    new OptionData
-                    {
-                        Text = subCategoryDef.Title.Text,
-                        Color = category.Color
-                    }
-                );
-            }
-            optionsListPopup.ShowOptions("Choose Sub-category", options);
-            while (optionsListPopup.isActiveAndEnabled) yield return null;
-            result.Value = subCategories[optionsListPopup.LatestSelectedOption];
-
-        }
-
-        private IEnumerator ChooseDifficultyCO(Ref<int> result)
-        {
+            frontCardUI.transform.localPositionTransition(new Vector3(0, 150, 0), 0.25f);
             var options = new List<OptionData>();
             var possibleDifficulties = new[] { 1, 2, 3 };
             foreach (var possibleDifficulty in possibleDifficulties)
@@ -330,13 +338,20 @@ namespace Ieedo
             optionsListPopup.ShowOptions("Choose Difficulty", options);
             while (optionsListPopup.isActiveAndEnabled) yield return null;
             result.Value = possibleDifficulties[optionsListPopup.LatestSelectedOption];
+            var selection = result.Value;
+            frontCardUI.Data.Definition.Difficulty = selection;
+            Statics.Data.SaveProfile();
+            frontCardUI.RefreshUI();
+            if (autoReset) frontCardUI.AnimateToParent();
         }
 
-
-        private IEnumerator ChooseDateCO(Ref<int> result)
+        private IEnumerator EditDateCO(bool autoReset = false)
         {
+            var result = new Ref<int>();
+            frontCardUI.transform.localPositionTransition(new Vector3(0, 250, 0), 0.25f);
             var options = new List<OptionData>();
-            var possibleDays = new [] { 0, 1, 2, 3, 4, 5, 6 };
+            var possibleDays = new List<int>();
+            for (int i = 0; i < 3*7; i++) possibleDays.Add(i);
             foreach (var possibleDay in possibleDays)
             {
                 var targetDate = DateTime.Now.AddDays(possibleDay);
@@ -355,7 +370,75 @@ namespace Ieedo
             optionsListPopup.ShowOptions("Choose Date", options);
             while (optionsListPopup.isActiveAndEnabled) yield return null;
             result.Value = possibleDays[optionsListPopup.LatestSelectedOption];
+            var selection = result.Value;
+            frontCardUI.Data.ExpirationTimestamp = new Timestamp(DateTime.Now.AddDays(selection));
+            Statics.Data.SaveProfile();
+            frontCardUI.RefreshUI();
+            if (autoReset) frontCardUI.AnimateToParent();
         }
+
+        private IEnumerator EditSubCategoryCO(CategoryDefinition categoryDef, bool autoReset = false)
+        {
+            var result = new Ref<SubCategoryDefinition>();
+            frontCardUI.transform.localPositionTransition(new Vector3(0, -15, 0), 0.25f);
+            var options = new List<OptionData>();
+            var subCategories = categoryDef.SubCategories;
+            foreach (var subCategoryDef in subCategories)
+            {
+                options.Add(
+                    new OptionData
+                    {
+                        Text = subCategoryDef.Title.Text,
+                        Color = categoryDef.Color
+                    }
+                );
+            }
+            optionsListPopup.ShowOptions("Choose Sub-category", options);
+            while (optionsListPopup.isActiveAndEnabled) yield return null;
+            result.Value = subCategories[optionsListPopup.LatestSelectedOption];
+            var selection = result.Value;
+            frontCardUI.Data.Definition.SubCategory = selection.ID;
+            Statics.Data.SaveProfile();
+            frontCardUI.RefreshUI();
+            if (autoReset) frontCardUI.AnimateToParent();
+        }
+
+        public IEnumerator EditTitleCO(bool autoReset = false)
+        {
+            frontCardUI.transform.localPositionTransition(new Vector3(0, -100, 0), 0.25f);
+            frontCardUI.transform.localScaleTransition(Vector3.one*1.2f, 0.25f);
+            frontCardUI.transform.localEulerAnglesTransform(new Vector3(0,10,0), 0.25f);
+            optionsListPopup.ShowOptions("Enter Title", new List<OptionData>());
+            yield return WaitForInputField(TitleInputField, frontCardUI.Title);
+            optionsListPopup.CloseImmediate();
+            frontCardUI.Data.Definition.Title.DefaultText = TitleInputField.text;
+            Statics.Data.SaveProfile();
+            if (autoReset) frontCardUI.AnimateToParent();
+        }
+
+        public IEnumerator EditDescriptionCO(bool autoReset = false)
+        {
+            frontCardUI.transform.localPositionTransition(new Vector3(0, 200, 0), 0.25f);
+            frontCardUI.transform.localScaleTransition(Vector3.one*1.2f, 0.25f);
+            frontCardUI.transform.localEulerAnglesTransform(new Vector3(0,10,0), 0.25f);
+            optionsListPopup.ShowOptions("Enter Description", new List<OptionData>());
+            yield return WaitForInputField(DescriptionInputField, frontCardUI.Description);
+            optionsListPopup.CloseImmediate();
+            frontCardUI.Data.Definition.Description.DefaultText = DescriptionInputField.text;
+            Statics.Data.SaveProfile();
+            if (autoReset) frontCardUI.AnimateToParent();
+        }
+
+        private IEnumerator WaitForInputField(TMP_InputField inputField, UIText uiText)
+        {
+            inputField.textComponent = uiText;
+            inputField.text = uiText.text;
+            inputField.placeholder.enabled = inputField.text == "";
+            inputField.ActivateInputField();
+            yield return null; // Wait one frame
+            while (inputField.isFocused) yield return null;
+        }
+
 
         public void StartEditing(bool isNewCard)
         {
@@ -368,12 +451,28 @@ namespace Ieedo
             TitleInputField.text = cardUI.Title.text;
             TitleInputField.placeholder.enabled = TitleInputField.text == "";
 
-            SetupButton(EditDifficultyButton, () => StartCoroutine(EditDifficultyCO()));
-            SetupButton(EditDateButton, () => StartCoroutine(EditDateCO()));
-            SetupButton(EditSubCategoryButton, () => StartCoroutine(EditSubCategoryCO(cardUI.Data.Definition.CategoryDefinition)));
+            SetupButton(EditDifficultyButton, () => StartCoroutine(EditDifficultyCO(autoReset:true)));
+            SetupButton(EditDateButton, () => StartCoroutine(EditDateCO(autoReset:true)));
+            SetupButton(EditSubCategoryButton, () => StartCoroutine(EditSubCategoryCO(cardUI.Data.Definition.CategoryDefinition, autoReset:true)));
+            SetupButton(EditTitleButton, () => StartCoroutine(EditTitleCO(autoReset:true)));
+            SetupButton(EditDescriptionButton, () => StartCoroutine(EditDescriptionCO(autoReset:true)));
 
             SetupButton(CompleteCreationButton, () =>
             {
+                StopEditing();
+                CloseFrontView();
+
+                if (isNewCard) CardsList.AddCard(cardUI.Data, cardUI);
+                CardsList.SortList(SortByExpirationDate);
+
+                cardUI.RefreshUI();
+            });
+
+            SetupButton(CloseFrontViewButton, () =>
+            {
+                bool canComplete = !frontCardUI.Description.text.IsNullOrEmpty() && !frontCardUI.Title.text.IsNullOrEmpty();
+                if (!canComplete) return;
+
                 StopEditing();
                 CloseFrontView();
 
@@ -401,8 +500,8 @@ namespace Ieedo
             // Wait for closing...
             while (CurrentFrontViewMode != FrontViewMode.None)
             {
-                bool canComplete = !frontCardUI.Description.text.IsNullOrEmpty() && !frontCardUI.Title.text.IsNullOrEmpty();
-                CompleteCreationButton.gameObject.SetActive(canComplete);   // TODO: instead use interactable
+                //bool canComplete = !frontCardUI.Description.text.IsNullOrEmpty() && !frontCardUI.Title.text.IsNullOrEmpty();
+                //CompleteCreationButton.gameObject.SetActive(canComplete);   // TODO: instead use interactable
 
                 frontCardUI.Data.Definition.Title.DefaultText = TitleInputField.text;
                 frontCardUI.Data.Definition.Description.DefaultText = DescriptionInputField.text;
@@ -417,32 +516,6 @@ namespace Ieedo
             DescriptionInputField.textComponent = null;
         }
 
-        private IEnumerator EditDifficultyCO()
-        {
-            var result = new Ref<int>();
-            yield return ChooseDifficultyCO(result);
-            var selection = result.Value;
-            frontCardUI.Data.Definition.Difficulty = selection;
-            frontCardUI.RefreshUI();
-        }
-
-        private IEnumerator EditDateCO()
-        {
-            var result = new Ref<int>();
-            yield return ChooseDateCO(result);
-            var selection = result.Value;
-            frontCardUI.Data.ExpirationTimestamp = new Timestamp(DateTime.Now.AddDays(selection));
-            frontCardUI.RefreshUI();
-        }
-
-        private IEnumerator EditSubCategoryCO(CategoryDefinition categoryDefinition)
-        {
-            var result = new Ref<SubCategoryDefinition>();
-            yield return ChooseSubCategoryCO(result, categoryDefinition);
-            var selection = result.Value;
-            frontCardUI.Data.Definition.SubCategory = selection.ID;
-            frontCardUI.RefreshUI();
-        }
         #endregion
 
     }

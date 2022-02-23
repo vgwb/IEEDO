@@ -49,6 +49,22 @@ namespace Ieedo
                 {
                     AddNewCard(iCard);
                 }
+
+                var cardGo = cards[iCard].gameObject;
+
+                float pillarTop = gfxHeight * 2.5f;
+                cardGo.transform.localPosition = Vector3.up * 5;
+                cardGo.transform.localEulerAngles = Vector3.zero;
+
+                var finalPos = Vector3.up * (pillarTop + iCard * 0.025f);
+                finalPos += new Vector3(Random.Range(-0.2f, 0.2f), 0, Random.Range(-0.2f, 0.2f));
+
+                cardGo.transform.localPositionTransition(finalPos, 1f, LeanEase.Bounce);
+                cardGo.transform.localEulerAnglesTransform(Vector3.up * Random.Range(0, 360f), 1f);
+
+                var mr = cardGo.GetComponentInChildren<MeshRenderer>();
+                mr.material.color = data.Color;
+
                 cards[iCard].SetActive(true);
             }
         }
@@ -56,20 +72,8 @@ namespace Ieedo
         public void AddNewCard(int iCard)
         {
             var cardGo = Instantiate(cardPrefab, transform);
-            cards.Add(cardGo);
-            float pillarTop = gfxHeight * 2.5f;
-            cardGo.transform.localPosition = Vector3.up * 5;
-            cardGo.transform.localEulerAngles = Vector3.zero;
-
-            var finalPos = Vector3.up * (pillarTop + iCard * 0.025f);
-            finalPos += new Vector3(Random.Range(-0.2f, 0.2f), 0, Random.Range(-0.2f, 0.2f));
-
-            cardGo.transform.localPositionTransition(finalPos, 1f, LeanEase.Bounce);
-            cardGo.transform.localEulerAnglesTransform(Vector3.up * Random.Range(0, 360f), 1f);
-
-            cardGo.transform.localEulerAngles = Vector3.up * Random.Range(0, 360f);
             cardGo.GetComponentInChildren<MeshRenderer>().material = new Material(cardGo.GetComponentInChildren<MeshRenderer>().material);
-            cardGo.GetComponentInChildren<MeshRenderer>().material.color = data.Color;
+            cards.Add(cardGo);
         }
 
         public void Hide()

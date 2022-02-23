@@ -47,12 +47,12 @@ namespace Ieedo
             for (var iPillar = 0; iPillar < data.Pillars.Count; iPillar++)
             {
                 var pillarData = data.Pillars[iPillar];
-
                 var pillarView = PillarViews[iPillar];
 
                 var locPos = pillarView.transform.localPosition;
                 var delta = Vector3.forward * Radius;
-                var rot = Quaternion.AngleAxis(360f / n * iPillar, Vector3.up);
+                var deltaAngle = 360f / 6;
+                var rot = Quaternion.AngleAxis(deltaAngle * iPillar, Vector3.up);
                 locPos = rot * delta;
                 pillarView.transform.localPosition = locPos;
                 var locEul = rot.eulerAngles;

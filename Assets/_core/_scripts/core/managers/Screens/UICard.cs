@@ -40,22 +40,26 @@ namespace Ieedo
             Description.text = def.Description.Text;
             Icon.text = Regex.Unescape(def.Icon);
             Title.text = def.Title.Text;
-            ColorBase.color = def.CategoryDefinition.Color;
+            var color = def.CategoryDefinition ? def.CategoryDefinition.Color : Color.white;
+            ColorBase.color = color;
+            Difficulty.gameObject.SetActive(def.Difficulty > 0);
             Difficulty.SetValue(def.Difficulty);
 
+            bool hasExpirationDate = data.ExpirationTimestamp.binaryTimestamp != Timestamp.None.binaryTimestamp;
+            Date.gameObject.SetActive(hasExpirationDate);
             Date.text = data.ExpirationTimestamp.ToString();
 
             foreach (var borderImage in BorderImages)
             {
-                borderImage.color = def.CategoryDefinition.Color * 1.4f;
+                borderImage.color = color * 1.4f;
             }
 
-            if (data.IsExpired)
+            if (hasExpirationDate && data.IsExpired)
             {
                 StampGO.SetActive(true);
                 StampIcon.text = Regex.Unescape("\uf54c");
             }
-            else if(data.IsDueToday)
+            else if(hasExpirationDate && data.IsDueToday)
             {
                 StampGO.SetActive(true);
                 StampIcon.text = Regex.Unescape("\uf06a");
