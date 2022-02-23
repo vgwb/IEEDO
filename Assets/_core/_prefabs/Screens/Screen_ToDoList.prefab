@@ -480,7 +480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.3764706}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.78039217}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3557,6 +3557,7 @@ MonoBehaviour:
   EditSubCategoryButton: {fileID: 7437159661427880649}
   CompleteCreationButton: {fileID: 4824706371145732790}
   DeleteCardButton: {fileID: 7679693109551331412}
+  CurrentListViewMode: 0
 --- !u!224 &8610312868367887547 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 987983879606270525, guid: 1751933e3b760fe4ea83bdd166e6703e, type: 3}

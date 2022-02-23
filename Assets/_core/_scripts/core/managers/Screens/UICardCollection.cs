@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Lean.Transition;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -31,11 +32,19 @@ namespace Ieedo
         {
             // Copy a slot
             var newSlotRT = Instantiate(SlotPrefab, SlotPrefab.parent);
+            newSlotRT.name = "Slot" + HeldSlots.Count;
             newSlotRT.gameObject.SetActive(true);
             newSlotRT.transform.localScale = Vector3.one * CardScale;
 
             if (uiCard == null) uiCard = UICardManager.I.AddCardUI(cardData, newSlotRT);
-            else uiCard.transform.SetParent(newSlotRT);
+            else uiCard.transform.SetParent(newSlotRT, true);
+
+            var uiCardRt = uiCard.transform as RectTransform;
+            uiCardRt.localEulerAngles = Vector3.zero;
+            uiCardRt.anchoredPositionTransition(Vector3.zero, 0.25f);
+            uiCardRt.localScaleTransition(Vector3.one, 0.25f);
+
+
             SetupInListInteraction(uiCard);
             HeldSlots.Add(newSlotRT.gameObject);
             HeldCards.Add(uiCard);

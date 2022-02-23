@@ -62,6 +62,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f809ea302ef48a48cea900ecabfbfd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DefaultOutEnterPosition: {x: 0, y: 2500, z: 0}
+  DefaultOutExitPosition: {x: 0, y: -2500, z: 0}
   Title: {fileID: 6476809929137872256}
   CategoriesPivot: {fileID: 1485521131376456784}
   ContinueButton: {fileID: 8415520343080402508}

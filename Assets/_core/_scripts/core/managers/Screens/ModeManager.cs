@@ -2,14 +2,24 @@ using UnityEngine;
 
 namespace Ieedo
 {
+    public enum Mode
+    {
+        Solo,
+        Session
+    }
+
     public class ModeManager : MonoBehaviour
     {
+        public Mode CurrentMode;
+
         public UIText ModeText;
 
-        public void AddScore(int value)
+        public void ToggleMode()
         {
-            Statics.Data.Profile.CurrentScore += value;
-            CurrentScoreText.text = $"Score: {Statics.Data.Profile.CurrentScore.ToString(),5}";
+            if (CurrentMode == Mode.Solo) CurrentMode = Mode.Session;
+            else CurrentMode = Mode.Solo;
+
+            ModeText.text = CurrentMode.ToString();
         }
     }
 }

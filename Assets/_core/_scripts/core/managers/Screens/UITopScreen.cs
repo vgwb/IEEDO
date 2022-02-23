@@ -26,6 +26,8 @@ namespace Ieedo
 
         private void SwitchMode()
         {
+            Statics.Mode.ToggleMode();
+
             var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
             uiPillarsScreen.SwitchViewMode(uiPillarsScreen.ViewMode == PillarsViewMode.Categories ? PillarsViewMode.Review : PillarsViewMode.Categories);
         }

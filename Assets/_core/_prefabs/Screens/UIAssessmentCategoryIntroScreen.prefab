@@ -62,6 +62,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2242d110531645f0bb6241144c09d3d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DefaultOutEnterPosition: {x: 0, y: 2500, z: 0}
+  DefaultOutExitPosition: {x: 0, y: -2500, z: 0}
   Title: {fileID: 4098722566265800151}
   Content: {fileID: 6008456277945254607}
   ContinueButton: {fileID: 7926280473100558457}

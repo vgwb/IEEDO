@@ -11,6 +11,9 @@ namespace Ieedo
         public virtual ScreenID ID => ScreenID.None;
         public virtual bool AutoAnimate => true;
 
+        public Vector3 DefaultOutEnterPosition = new(-2500, 0, 0);
+        public Vector3 DefaultOutExitPosition = new(2500, 0, 0);
+
         public bool IsOpen => gameObject.activeSelf;
 
         public void OpenImmediate()
@@ -33,9 +36,9 @@ namespace Ieedo
             gameObject.SetActive(true);
             if (AutoAnimate)
             {
-                transform.localPosition = new Vector3(-2500, 0, 0);
+                transform.localPosition = DefaultOutEnterPosition;
                 float period = 0.25f;
-                transform.localPositionTransition_x(0, period);
+                transform.localPositionTransition(Vector3.zero, period);
                 yield return new WaitForSeconds(period);
             }
             yield return OnOpen();
@@ -46,7 +49,7 @@ namespace Ieedo
             if (AutoAnimate)
             {
                 float period = 0.25f;
-                transform.localPositionTransition_x(2500, period);
+                transform.localPositionTransition(DefaultOutExitPosition, period);
                 yield return new WaitForSeconds(period);
             }
             yield return OnClose();

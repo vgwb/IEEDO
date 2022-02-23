@@ -2,10 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Lean.Transition;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-using Ieedo.Utilities;
 
 namespace Ieedo
 {
@@ -42,6 +41,7 @@ namespace Ieedo
         public UIButton DeleteCardButton;
 
         public override ScreenID ID => ScreenID.CardList;
+        public bool KeepPillars { get; set; }
 
         void Awake()
         {
@@ -53,7 +53,7 @@ namespace Ieedo
                 frontCardUI.Data.Status = CardValidationStatus.Validated;
                 Statics.Data.SaveProfile();
 
-                CloseFrontView();
+                StartCoroutine(CompleteCardCO(frontCardUI));
             });
 
             SetupButton(CompleteCardButton, () =>
@@ -64,7 +64,7 @@ namespace Ieedo
                 frontCardUI.Data.Status = CardValidationStatus.Completed;
                 Statics.Data.SaveProfile();
 
-                CloseFrontView();
+                StartCoroutine(CompleteCardCO(frontCardUI));
             });
 
             SetupButton(EditCardButton, () =>
@@ -77,7 +77,17 @@ namespace Ieedo
                 StartCoroutine(CardCreationFlowCO());
             });
 
-            CardsList.OnCardClicked = uiCard => OpenFrontView(uiCard, CurrentFrontViewMode);
+            CardsList.OnCardClicked = uiCard => OpenFrontView(uiCard, CurrentListViewMode == ListViewMode.ToDo ? FrontViewMode.View : FrontViewMode.Review);
+        }
+
+        private IEnumerator CompleteCardCO(UICard uiCard)
+        {
+            uiCard.transform.localPositionTransition(new Vector3(-300,600,-150), 0.5f, LeanEase.Accelerate);
+            uiCard.transform.localEulerAnglesTransform(new Vector3(0,-20,-20), 0.5f, LeanEase.Accelerate);
+            yield return new WaitForSeconds(0.5f);
+            Destroy(uiCard);
+            CloseFrontView();
+            GoTo(ScreenID.Pillars);
         }
 
         protected override IEnumerator OnOpen()
@@ -85,7 +95,16 @@ namespace Ieedo
             FrontView.gameObject.SetActive(false);
             Statics.Data.LoadCardDefinitions();
 
-            //LoadToDoCards();
+            switch (CurrentListViewMode)
+            {
+                case ListViewMode.Review:
+                    CreateCardButton.gameObject.SetActive(false);
+                    break;
+                case ListViewMode.ToDo:
+                    CreateCardButton.gameObject.SetActive(true);
+                    break;
+            }
+
             yield return base.OnOpen();
         }
 
@@ -103,8 +122,9 @@ namespace Ieedo
             return -c1.ExpirationTimestamp.Date.CompareTo(c2.ExpirationTimestamp.Date);
         }
 
-        public void LoadCards(List<CardData> cards, Func<CardData,CardData,int> sort)
+        public void LoadCards(List<CardData> cards, Func<CardData,CardData,int> sort, ListViewMode mode)
         {
+            CurrentListViewMode = mode;
             var collection = new CardDataCollection();
             collection.AddRange(cards);
             CardsList.AssignList(collection);
@@ -114,7 +134,13 @@ namespace Ieedo
         public void LoadToDoCards()
         {
             var cards = Statics.Data.Profile.Cards.Where(x => x.Status == CardValidationStatus.Todo).ToList();
-            LoadCards(cards, SortByExpirationDate);
+            LoadCards(cards, SortByExpirationDate, ListViewMode.ToDo);
+        }
+
+        public enum ListViewMode
+        {
+            ToDo,
+            Review,
         }
 
         public enum FrontViewMode
@@ -126,22 +152,26 @@ namespace Ieedo
             Review
         }
 
+        public ListViewMode CurrentListViewMode;
         private FrontViewMode CurrentFrontViewMode;
+
         private void OpenFrontView(UICard uiCard, FrontViewMode viewMode)
         {
             prevFrontCardParent = uiCard.transform.parent;
             var uiCardRt = uiCard.GetComponent<RectTransform>();
-            uiCardRt.SetParent(FrontViewPivot, false);
+            uiCardRt.SetParent(FrontViewPivot, true);
             uiCardRt.localEulerAngles = Vector3.zero;
             uiCardRt.anchorMin = new Vector2(0.5f, 0.5f);
             uiCardRt.anchorMax = new Vector2(0.5f, 0.5f);
-            uiCardRt.anchoredPosition = Vector3.zero;
+            uiCardRt.anchoredPositionTransition(Vector3.zero, 0.25f);
+            uiCardRt.localScaleTransition(Vector3.one, 0.25f);
+
             FrontView.gameObject.SetActive(true);
             frontCardUI = uiCard;
 
             uiCard.OnInteraction(() =>
             {
-                // Return it the list on click
+                // Return it to the list on click
                 if (CurrentFrontViewMode == FrontViewMode.View)
                 {
                     CloseFrontView();
@@ -217,44 +247,49 @@ namespace Ieedo
             while (optionsListPopup.isActiveAndEnabled) yield return null;
             var selectedCategory = categories[optionsListPopup.LatestSelectedOption];
 
-            // Choose sub-category
-            var subResult = new Ref<SubCategoryDefinition>();
-            yield return ChooseSubCategoryCO(subResult, selectedCategory);
-            var selectedSubCategory = subResult.Value;
-
-            // Choose difficulty
-            var result = new Ref<int>();
-            yield return ChooseDifficultyCO(result);
-            var selectedDifficulty = result.Value;
-
-            // Choose Date
-            yield return ChooseDateCO(result);
-            var selectedDays = result.Value;
-
             // Create and show the card
             var cardDef = Statics.Cards.GenerateCardDefinition(
                 new CardDefinition {
 
                     Category = selectedCategory.ID,
-                    SubCategory = selectedSubCategory.ID,
+                    SubCategory = 0,
                     Description = new LocalizedString { DefaultText = "" },
-                    Difficulty = selectedDifficulty,
+                    Difficulty = 0,
                     Title = new LocalizedString { DefaultText = ""},
                 },
                 isDefaultCard: AppManager.I.ApplicationConfig.SaveCardsAsDefault
-                );
+            );
 
             // Create a new Data for this profile for that card
             var cardData = new CardData
             {
                 DefID = cardDef.UID,
                 CreationTimestamp = new Timestamp(DateTime.Now),
-                ExpirationTimestamp = new Timestamp(DateTime.Now.AddDays(selectedDays))
+                //ExpirationTimestamp = new Timestamp(DateTime.Now.AddDays(selectedDays))
             };
             Statics.Cards.AssignCard(cardData);
             var cardUi = UICardManager.I.AddCardUI(cardData, FrontViewPivot);
-
             OpenFrontView(cardUi, FrontViewMode.Create);
+
+            // Choose sub-category
+            var subResult = new Ref<SubCategoryDefinition>();
+            yield return ChooseSubCategoryCO(subResult, selectedCategory);
+            var selectedSubCategory = subResult.Value;
+            cardData.Definition.SubCategory = selectedSubCategory.ID;
+            frontCardUI.RefreshUI();
+
+            // Choose difficulty
+            var result = new Ref<int>();
+            yield return ChooseDifficultyCO(result);
+            var selectedDifficulty = result.Value;
+            cardData.Definition.Difficulty = selectedDifficulty;
+            frontCardUI.RefreshUI();
+
+            // Choose Date
+            yield return ChooseDateCO(result);
+            var selectedDays = result.Value;
+            cardData.ExpirationTimestamp = new Timestamp(DateTime.Now.AddDays(selectedDays));
+            frontCardUI.RefreshUI();
 
         }
 
@@ -340,11 +375,11 @@ namespace Ieedo
             SetupButton(CompleteCreationButton, () =>
             {
                 StopEditing();
+                CloseFrontView();
 
-                if (isNewCard) CardsList.AddCard(cardUI.Data);
+                if (isNewCard) CardsList.AddCard(cardUI.Data, cardUI);
                 CardsList.SortList(SortByExpirationDate);
 
-                CloseFrontView();
                 cardUI.RefreshUI();
             });
 

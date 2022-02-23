@@ -100,7 +100,8 @@ namespace Ieedo
             var data = pillarView.Data;
 
             var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
-            uiCardListScreen.LoadCards(data.Cards, UICardListScreen.SortByExpirationDate);
+            uiCardListScreen.LoadCards(data.Cards, UICardListScreen.SortByExpirationDate, UICardListScreen.ListViewMode.Review);
+            uiCardListScreen.KeepPillars = true;
             GoTo(ScreenID.CardList);
         }
 
@@ -116,7 +117,15 @@ namespace Ieedo
             switch (screenID)
             {
                 case ScreenID.CardList:
-                    Camera3D.transform.localRotationTransition(Quaternion.Euler(34f,10f,0f), 0.25f, LeanEase.Decelerate);
+                    var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
+                    if (uiCardListScreen.KeepPillars)
+                    {
+                        Camera3D.transform.localRotationTransition(Quaternion.Euler(34f,10f,0f), 0.25f, LeanEase.Decelerate);
+                    }
+                    else
+                    {
+                        Camera3D.transform.localRotationTransition(Quaternion.Euler(34f,50f,0f), 0.25f, LeanEase.Decelerate);
+                    }
                     break;
                 case ScreenID.Pillars:
                     Camera3D.transform.localRotationTransition(Quaternion.Euler(34f,0f,0f), 0.25f, LeanEase.Decelerate);

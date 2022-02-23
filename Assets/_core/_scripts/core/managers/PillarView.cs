@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Lean.Common;
 using Lean.Touch;
+using Lean.Transition;
 using TMPro;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -27,11 +28,11 @@ namespace Ieedo
 
         private PillarData data;
         public PillarData Data => data;
+        private float gfxHeight => Mathf.Max(data.Height, 0.05f);
 
         public void ShowData(PillarData data)
         {
             this.data = data;
-            var gfxHeight = Mathf.Max(data.Height, 0.05f);
             var baseScale = 0.1f;
             gfx.localScale = new Vector3(1f, gfxHeight, 1f)*baseScale;
             mr.material = new Material(mr.material);
@@ -46,17 +47,29 @@ namespace Ieedo
             {
                 if (iCard >= cards.Count)
                 {
-                    var cardGo = Instantiate(cardPrefab, transform);
-                    cards.Add(cardGo);
-                    float pillarTop = gfxHeight * 2.5f;
-                    cardGo.transform.localPosition = Vector3.up * (pillarTop + iCard * 0.025f);
-                    cardGo.transform.localPosition += new Vector3(Random.Range(-0.2f, 0.2f), 0, Random.Range(-0.2f, 0.2f));
-                    cardGo.transform.localEulerAngles = Vector3.up * Random.Range(0, 360f);
-                    cardGo.GetComponentInChildren<MeshRenderer>().material = new Material(cardGo.GetComponentInChildren<MeshRenderer>().material);
-                    cardGo.GetComponentInChildren<MeshRenderer>().material.color = data.Color;
+                    AddNewCard(iCard);
                 }
                 cards[iCard].SetActive(true);
             }
+        }
+
+        public void AddNewCard(int iCard)
+        {
+            var cardGo = Instantiate(cardPrefab, transform);
+            cards.Add(cardGo);
+            float pillarTop = gfxHeight * 2.5f;
+            cardGo.transform.localPosition = Vector3.up * 5;
+            cardGo.transform.localEulerAngles = Vector3.zero;
+
+            var finalPos = Vector3.up * (pillarTop + iCard * 0.025f);
+            finalPos += new Vector3(Random.Range(-0.2f, 0.2f), 0, Random.Range(-0.2f, 0.2f));
+
+            cardGo.transform.localPositionTransition(finalPos, 1f, LeanEase.Bounce);
+            cardGo.transform.localEulerAnglesTransform(Vector3.up * Random.Range(0, 360f), 1f);
+
+            cardGo.transform.localEulerAngles = Vector3.up * Random.Range(0, 360f);
+            cardGo.GetComponentInChildren<MeshRenderer>().material = new Material(cardGo.GetComponentInChildren<MeshRenderer>().material);
+            cardGo.GetComponentInChildren<MeshRenderer>().material.color = data.Color;
         }
 
         public void Hide()

@@ -197,6 +197,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 048ec15f0a1b41cab0097ef52f6118bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DefaultOutEnterPosition: {x: 0, y: 2500, z: 0}
+  DefaultOutExitPosition: {x: 0, y: -2500, z: 0}
   Title: {fileID: 3705194304325911392}
   Question: {fileID: 4742303973506506951}
   Buttons:

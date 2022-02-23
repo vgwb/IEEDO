@@ -18,6 +18,7 @@ namespace Ieedo
             {
                 var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
                 uiCardListScreen.LoadToDoCards();
+                uiCardListScreen.KeepPillars = false;
                 GoTo(ScreenID.CardList);
             });
         }

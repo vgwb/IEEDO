@@ -28,7 +28,14 @@ namespace Ieedo
         public SubCategoryID SubCategory;
 
         [JsonIgnore]
-        public string Icon => SubCategoryDefinition.Icon;
+        public string Icon
+        {
+            get
+            {
+                if (SubCategoryDefinition == null) return string.Empty;
+                return SubCategoryDefinition.Icon;
+            }
+        }
 
         [JsonIgnore]
         public CategoryDefinition CategoryDefinition => Statics.Data.Get<CategoryDefinition>((int)Category);
