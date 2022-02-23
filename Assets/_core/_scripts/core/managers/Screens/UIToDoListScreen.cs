@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,7 +12,7 @@ namespace Ieedo
     public class UIToDoListScreen : UIScreen
     {
         public override bool AutoAnimate => false;
-        
+
         public UICardCollection ToDoList;
         public GameObject FrontView;
         public RectTransform FrontViewPivot;
@@ -22,9 +21,13 @@ namespace Ieedo
 
         public UIOptionsListPopup optionsListPopup;
 
+        [Header("Card Review")]
+        public GameObject ReviewMode;
+        public UIButton ValidateCardButton;
+
         [Header("Card View")]
         public GameObject ViewMode;
-        public UIButton ValidateCardButton;
+        public UIButton CompleteCardButton;
         public UIButton EditCardButton;
 
         [Header("Card Create & Edit")]
@@ -77,6 +80,17 @@ namespace Ieedo
             {
                 ToDoList.RemoveCard(frontCardUI);
 
+                frontCardUI.Data.ValidationTimestamp = Timestamp.Now;
+                frontCardUI.Data.Status = CardValidationStatus.Validated;
+                Statics.Data.SaveProfile();
+
+                CloseFrontView();
+            });
+
+            SetupButton(CompleteCardButton, () =>
+            {
+                ToDoList.RemoveCard(frontCardUI);
+
                 frontCardUI.Data.CompletionTimestamp = Timestamp.Now;
                 frontCardUI.Data.Status = CardValidationStatus.Completed;
                 Statics.Data.SaveProfile();
@@ -101,7 +115,8 @@ namespace Ieedo
             None,
             View,
             Create,
-            Edit
+            Edit,
+            Review
         }
 
         private FrontViewMode CurrentFrontViewMode;
@@ -137,16 +152,24 @@ namespace Ieedo
                 case FrontViewMode.Edit:
                     EditMode.SetActive(true);
                     ViewMode.SetActive(false);
+                    ReviewMode.SetActive(false);
                     StartEditing(false);
                     break;
                 case FrontViewMode.Create:
                     EditMode.SetActive(true);
                     ViewMode.SetActive(false);
+                    ReviewMode.SetActive(false);
                     StartEditing(true);
                     break;
                 case FrontViewMode.View:
                     EditMode.SetActive(false);
                     ViewMode.SetActive(true);
+                    ReviewMode.SetActive(false);
+                    break;
+                case FrontViewMode.Review:
+                    EditMode.SetActive(true);
+                    ViewMode.SetActive(false);
+                    ReviewMode.SetActive(true);
                     break;
             }
         }

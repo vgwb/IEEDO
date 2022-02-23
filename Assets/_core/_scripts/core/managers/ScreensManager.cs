@@ -59,6 +59,7 @@ namespace Ieedo
         {
             if (CurrentFlowScreenID != ScreenID.None) yield return CloseCO(CurrentFlowScreenID);
             CurrentFlowScreenID = toId;
+            OnSwitchToScreen?.Invoke(toId);
             yield return OpenCO(CurrentFlowScreenID);
         }
 
@@ -72,5 +73,6 @@ namespace Ieedo
             return Screens[id];
         }
 
+        public event Action<ScreenID> OnSwitchToScreen;
     }
 }

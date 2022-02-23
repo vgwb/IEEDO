@@ -217,7 +217,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 0.75
-  m_Text: ASSESSMENT
+  m_Text: Switch Mode
 --- !u!1 &5653074618332961337
 GameObject:
   m_ObjectHideFlags: 0
@@ -1373,10 +1373,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BackButton: {fileID: 5653074619305376868}
-  AssessmentButton: {fileID: 5653074620019601890}
+  SwitchModeButton: {fileID: 5653074620019601890}
   LanguageButton: {fileID: 5653074619305376868}
   DebugButton: {fileID: 688192975619317733}
-  ScoreTextContent: {fileID: 0}
   OptionsListPopup: {fileID: 0}
 --- !u!1 &5653074619856865325
 GameObject:
@@ -1738,7 +1737,7 @@ GameObject:
   - component: {fileID: 5653074620019601891}
   - component: {fileID: 5653074620019601890}
   m_Layer: 5
-  m_Name: Button_Assessment
+  m_Name: Button_SwitchMode
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1766,8 +1765,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11, y: 47}
-  m_SizeDelta: {x: 321.473, y: 123.702}
+  m_AnchoredPosition: {x: 11, y: 48.936768}
+  m_SizeDelta: {x: 321.473, y: 117.4154}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5653074620019601890
 MonoBehaviour:
@@ -2115,7 +2114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2371623362688251523, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_fontSize
-      value: 50
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 2371623362688251523, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_fontSizeBase
@@ -2145,7 +2144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8746676026341688667, guid: bf941c163aa023840887bd2d59ca1453, type: 3}
       propertyPath: m_fontSize
-      value: 50
+      value: 62.6
       objectReference: {fileID: 0}
     - target: {fileID: 8746676026341688667, guid: bf941c163aa023840887bd2d59ca1453, type: 3}
       propertyPath: m_fontSizeBase

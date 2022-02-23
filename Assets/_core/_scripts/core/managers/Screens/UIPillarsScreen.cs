@@ -1,12 +1,22 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Lean.Transition;
 using UnityEngine;
 
 namespace Ieedo
 {
+    public enum PillarsViewMode
+    {
+        Categories,
+        Review
+    }
+
     public class UIPillarsScreen : UIScreen
     {
+        public UICardCollection SelectedCardList;
+
         public override bool AutoAnimate => false;
 
         public GameObject Scene3D;
@@ -14,37 +24,105 @@ namespace Ieedo
 
         public override ScreenID ID => ScreenID.Pillars;
 
+        public PillarsViewMode ViewMode = PillarsViewMode.Categories;
+
+        public void SwitchViewMode(PillarsViewMode newMode)
+        {
+            ViewMode = newMode;
+            StartCoroutine(OnOpen());
+        }
+
         protected override IEnumerator OnOpen()
         {
-            var profileData = Statics.Data.Profile;
+            Statics.Screens.OnSwitchToScreen -= this.OnSwitchToScreen;
+            Statics.Screens.OnSwitchToScreen += this.OnSwitchToScreen;
 
+            var profileData = Statics.Data.Profile;
             var pillarsData = new PillarsData
             {
                 Pillars = new List<PillarData>()
             };
-            foreach (var category in profileData.Categories)
+
+            switch (ViewMode)
             {
-                var nCards = Statics.Data.Profile.Cards.Count(x => x.Status != CardValidationStatus.Todo && x.Definition.Category == category.ID);
+                case PillarsViewMode.Categories:
+                    foreach (var category in profileData.Categories)
+                    {
+                        var cards = Statics.Data.Profile.Cards.Where(x => x.Status != CardValidationStatus.Todo && x.Definition.Category == category.ID);
 
-                var pillarData = new PillarData
-                {
-                    Color = Statics.Data.Definition(category.ID).Color,
-                    Height = category.AssessmentValue,
-                    NCards = nCards,
-                };
+                        var pillarData = new PillarData
+                        {
+                            Color = Statics.Data.Definition(category.ID).Color,
+                            Height = category.AssessmentValue,
+                            Cards = cards.ToList()
+                        };
 
-                pillarsData.Pillars.Add(pillarData);
+                        pillarsData.Pillars.Add(pillarData);
+                    }
+                    break;
+                case PillarsViewMode.Review:
+                    {
+                        var completedCards = Statics.Data.Profile.Cards.Where(x => x.Status == CardValidationStatus.Completed);
+                        var validatedCards = Statics.Data.Profile.Cards.Where(x => x.Status == CardValidationStatus.Validated);
+
+                        var pillarData = new PillarData
+                        {
+                            Color = Color.red,
+                            Height = 0.5f,
+                            Cards = completedCards.ToList(),
+                        };
+                        pillarsData.Pillars.Add(pillarData);
+
+                        pillarData = new PillarData
+                        {
+                            Color = Color.yellow,
+                            Height = 0.5f,
+                            Cards = validatedCards.ToList(),
+                        };
+                        pillarsData.Pillars.Add(pillarData);
+                    }
+                    break;
             }
+
             PillarsManager.ShowData(pillarsData);
             Scene3D.SetActive(true);
 
+            foreach (var pillarView in PillarsManager.PillarViews)
+            {
+                pillarView.OnSelected = () => HandleSelectedPillar(pillarView);
+            }
+
             return base.OnOpen();
+        }
+
+        private void HandleSelectedPillar(PillarView pillarView)
+        {
+            var data = pillarView.Data;
+            //GoTo(ScreenID.ToDoList);
+            SelectedCardList.AssignList(data.Cards);
         }
 
         protected override IEnumerator OnClose()
         {
            // Scene3D.SetActive(false);
             return base.OnClose();
+        }
+
+        public Camera Camera3D;
+        public void OnSwitchToScreen(ScreenID screenID)
+        {
+            switch (screenID)
+            {
+                case ScreenID.ToDoList:
+                    Camera3D.transform.localRotationTransition(Quaternion.Euler(34f,10f,0f), 0.25f, LeanEase.Decelerate);
+                    break;
+                case ScreenID.Pillars:
+                    Camera3D.transform.localRotationTransition(Quaternion.Euler(34f,0f,0f), 0.25f, LeanEase.Decelerate);
+                    break;
+                case ScreenID.Activities:
+                    Camera3D.transform.localRotationTransition(Quaternion.Euler(34f,-10f,0f), 0.25f, LeanEase.Decelerate);
+                    break;
+            }
         }
     }
 }

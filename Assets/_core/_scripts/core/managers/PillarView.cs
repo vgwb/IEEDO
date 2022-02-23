@@ -1,11 +1,17 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using Lean.Common;
+using Lean.Touch;
 using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Ieedo
 {
     public class PillarView : MonoBehaviour
     {
+        public Action OnSelected;
+
         public GameObject cardPrefab;
         public List<GameObject> cards = new List<GameObject>();
 
@@ -13,8 +19,18 @@ namespace Ieedo
         public MeshRenderer mr;
         public TextMeshPro text;
 
+        void Awake()
+        {
+            var selectable = GetComponentInChildren<LeanSelectableByFinger>();
+            selectable.OnSelected.AddListener(() => OnSelected?.Invoke());
+        }
+
+        private PillarData data;
+        public PillarData Data => data;
+
         public void ShowData(PillarData data)
         {
+            this.data = data;
             var gfxHeight = Mathf.Max(data.Height, 0.05f);
             var baseScale = 0.1f;
             gfx.localScale = new Vector3(1f, gfxHeight, 1f)*baseScale;

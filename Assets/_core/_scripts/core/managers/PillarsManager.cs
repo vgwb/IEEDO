@@ -10,7 +10,8 @@ namespace Ieedo
     {
         public float Height;
         public Color Color = Color.white;
-        public int NCards;
+        public int NCards => Cards.Count;
+        public List<CardData> Cards;
     }
 
     [System.Serializable]

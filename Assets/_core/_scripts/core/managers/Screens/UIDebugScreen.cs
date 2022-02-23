@@ -18,6 +18,8 @@ namespace Ieedo
                     Language = Language.English,
                 }));
 
+            AddButton("Assessment", () =>Statics.AssessmentFlow.StartAssessment());
+
             SetupButton(CloseButton, CloseImmediate);
         }
 
