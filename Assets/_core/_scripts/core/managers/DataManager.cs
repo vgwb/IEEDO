@@ -90,7 +90,7 @@ namespace Ieedo
             SaveCardDefinitions(saveAsDefaultCards:false);
         }
 
-        private void SaveCardDefinitions(bool saveAsDefaultCards)
+        public void SaveCardDefinitions(bool saveAsDefaultCards = false)
         {
             if (saveAsDefaultCards)
                 SaveSerialized(cards, Application.streamingAssetsPath, "cards");

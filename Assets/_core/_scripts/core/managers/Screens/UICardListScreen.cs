@@ -315,6 +315,7 @@ namespace Ieedo
             var selectedCategory = catResult.Value;
             frontCardUI.Data.Definition.Category = selectedCategory.ID;
             Statics.Data.SaveProfile();
+            Statics.Data.SaveCardDefinitions();
             frontCardUI.RefreshUI();
             if (autoReset) frontCardUI.AnimateToParent();
         }
@@ -341,6 +342,7 @@ namespace Ieedo
             var selection = result.Value;
             frontCardUI.Data.Definition.Difficulty = selection;
             Statics.Data.SaveProfile();
+            Statics.Data.SaveCardDefinitions();
             frontCardUI.RefreshUI();
             if (autoReset) frontCardUI.AnimateToParent();
         }
@@ -373,6 +375,7 @@ namespace Ieedo
             var selection = result.Value;
             frontCardUI.Data.ExpirationTimestamp = new Timestamp(DateTime.Now.AddDays(selection));
             Statics.Data.SaveProfile();
+            Statics.Data.SaveCardDefinitions();
             frontCardUI.RefreshUI();
             if (autoReset) frontCardUI.AnimateToParent();
         }
@@ -399,6 +402,7 @@ namespace Ieedo
             var selection = result.Value;
             frontCardUI.Data.Definition.SubCategory = selection.ID;
             Statics.Data.SaveProfile();
+            Statics.Data.SaveCardDefinitions();
             frontCardUI.RefreshUI();
             if (autoReset) frontCardUI.AnimateToParent();
         }
@@ -413,6 +417,7 @@ namespace Ieedo
             optionsListPopup.CloseImmediate();
             frontCardUI.Data.Definition.Title.DefaultText = TitleInputField.text;
             Statics.Data.SaveProfile();
+            Statics.Data.SaveCardDefinitions();
             if (autoReset) frontCardUI.AnimateToParent();
         }
 
@@ -426,6 +431,7 @@ namespace Ieedo
             optionsListPopup.CloseImmediate();
             frontCardUI.Data.Definition.Description.DefaultText = DescriptionInputField.text;
             Statics.Data.SaveProfile();
+            Statics.Data.SaveCardDefinitions();
             if (autoReset) frontCardUI.AnimateToParent();
         }
 

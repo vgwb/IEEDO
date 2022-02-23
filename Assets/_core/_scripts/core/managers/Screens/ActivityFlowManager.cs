@@ -91,7 +91,6 @@ namespace Ieedo
             }
 
             Statics.Score.AddScore(result.Score);
-            Statics.Data.SaveProfile();
 
             CurrentActivity = null;
 

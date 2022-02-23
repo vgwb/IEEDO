@@ -10,6 +10,7 @@ namespace Ieedo
         {
             Statics.Data.Profile.CurrentScore += value;
             CurrentScoreText.text = $"Score: {Statics.Data.Profile.CurrentScore.ToString(),5}";
+            Statics.Data.SaveProfile();
         }
     }
 }
