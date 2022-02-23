@@ -158,11 +158,9 @@ namespace Ieedo
             prevFrontCardParent = uiCard.transform.parent;
             var uiCardRt = uiCard.GetComponent<RectTransform>();
             uiCardRt.SetParent(FrontViewPivot, true);
-            uiCardRt.localEulerAngles = Vector3.zero;
             uiCardRt.anchorMin = new Vector2(0.5f, 0.5f);
             uiCardRt.anchorMax = new Vector2(0.5f, 0.5f);
-            uiCardRt.anchoredPositionTransition(Vector3.zero, 0.25f);
-            uiCardRt.localScaleTransition(Vector3.one, 0.25f);
+            uiCard.AnimateToParent();
 
             FrontView.gameObject.SetActive(true);
             frontCardUI = uiCard;
@@ -218,9 +216,7 @@ namespace Ieedo
                 if (prevFrontCardParent != null)
                 {
                     frontCardUI.transform.SetParent(prevFrontCardParent, true);
-                    frontCardUI.transform.localPositionTransition(Vector3.zero, 0.25f);
-                    frontCardUI.transform.localEulerAnglesTransform(Vector3.zero, 0.25f);
-                    frontCardUI.transform.localScaleTransition(Vector3.one, 0.25f);
+                    frontCardUI.AnimateToParent();
                 }
                 CardsList.SetupInListInteraction(frontCardUI);
             }

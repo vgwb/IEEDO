@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text.RegularExpressions;
+using Lean.Transition;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -69,6 +70,14 @@ namespace Ieedo
         {
             InteractionButton.onClick.RemoveAllListeners();
             InteractionButton.onClick.AddListener(() => action?.Invoke());
+        }
+
+        public void AnimateToParent()
+        {
+            var rt = transform as RectTransform;
+            rt.rotationTransition(Quaternion.identity, 0.25f);
+            rt.anchoredPositionTransition(Vector3.zero, 0.25f);
+            rt.localScaleTransition(Vector3.one, 0.25f);
         }
     }
 }
