@@ -3539,6 +3539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 847115229b974997b658aadc02c69dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BlockerBG: {fileID: 0}
   DefaultOutEnterPosition: {x: 0, y: 2500, z: 0}
   DefaultOutExitPosition: {x: 0, y: -2500, z: 0}
   CardsList: {fileID: 2389360068787207876}

@@ -10,7 +10,12 @@ namespace Ieedo
 
         void Start()
         {
-            AddButton("Reset", () =>
+
+            AddButton("Switch Mode", () => SwitchMode());
+
+            AddButton("DEBUG Assessment", () => Statics.AssessmentFlow.StartAssessment());
+
+            AddButton("DEBUG Reset Profile", () =>
                 Statics.Data.CreateNewProfile(new ProfileDescription
                 {
                     Name = "TEST",
@@ -18,9 +23,16 @@ namespace Ieedo
                     Language = Language.English,
                 }));
 
-            AddButton("Assessment", () =>Statics.AssessmentFlow.StartAssessment());
-
             SetupButton(CloseButton, CloseImmediate);
+
+            ButtonPrefab.gameObject.SetActive(false);
+        }
+
+        private void SwitchMode()
+        {
+            Statics.Mode.ToggleMode();
+            var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
+            uiPillarsScreen.SwitchViewMode(uiPillarsScreen.ViewMode == PillarsViewMode.Categories ? PillarsViewMode.Review : PillarsViewMode.Categories);
         }
 
         private void AddButton(string text, System.Action action)

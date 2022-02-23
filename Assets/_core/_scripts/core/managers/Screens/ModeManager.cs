@@ -19,7 +19,7 @@ namespace Ieedo
             if (CurrentMode == Mode.Solo) CurrentMode = Mode.Session;
             else CurrentMode = Mode.Solo;
 
-            ModeText.text = CurrentMode.ToString();
+            ModeText.text = CurrentMode == Mode.Solo ? "\uf599" : "\uf599 \uf599";
         }
     }
 }

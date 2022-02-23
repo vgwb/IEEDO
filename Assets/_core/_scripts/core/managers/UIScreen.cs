@@ -3,11 +3,14 @@ using System.Collections;
 using Lean.Gui;
 using Lean.Transition;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Ieedo
 {
     public class UIScreen : MonoBehaviour
     {
+        public Image BlockerBG;
+
         public virtual ScreenID ID => ScreenID.None;
         public virtual bool AutoAnimate => true;
 
@@ -33,6 +36,13 @@ namespace Ieedo
 
         public IEnumerator OpenCO()
         {
+            if (BlockerBG != null)
+            {
+                var col = BlockerBG.color;
+                col.a = 0.7f;
+                BlockerBG.colorTransition(col, 0.25f);
+            }
+
             gameObject.SetActive(true);
             if (AutoAnimate)
             {
@@ -46,6 +56,13 @@ namespace Ieedo
 
         public IEnumerator CloseCO()
         {
+            if (BlockerBG != null)
+            {
+                var col = BlockerBG.color;
+                col.a = 0.0f;
+                BlockerBG.colorTransition(col, 0.25f);
+            }
+
             if (AutoAnimate)
             {
                 float period = 0.25f;

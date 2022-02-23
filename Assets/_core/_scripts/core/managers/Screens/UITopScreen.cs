@@ -10,27 +10,17 @@ namespace Ieedo
     {
         public override ScreenID ID => ScreenID.Top;
 
-        public LeanButton BackButton;
         public LeanButton SwitchModeButton;
         public LeanButton LanguageButton;
         public LeanButton DebugButton;
 
         void Start()
         {
-            SetupButton(SwitchModeButton, SwitchMode);
             SetupButton(LanguageButton, StartSelectionLanguage);
             SetupButton(DebugButton, () => Statics.Screens.OpenImmediate(ScreenID.Debug));
         }
 
         public UIOptionsListPopup OptionsListPopup;
-
-        private void SwitchMode()
-        {
-            Statics.Mode.ToggleMode();
-
-            var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
-            uiPillarsScreen.SwitchViewMode(uiPillarsScreen.ViewMode == PillarsViewMode.Categories ? PillarsViewMode.Review : PillarsViewMode.Categories);
-        }
 
         private void StartSelectionLanguage()
         {

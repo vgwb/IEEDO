@@ -93,7 +93,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 64
   m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.03137255, g: 0.5803922, b: 0.96862745, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -408,7 +408,7 @@ MonoBehaviour:
   Data:
     Duration: 0.1
     Target: {fileID: 8746676027328271599}
-    Value: {r: 0.03137255, g: 0.5803922, b: 0.96862745, a: 1}
+    Value: {r: 0, g: 0, b: 0, a: 1}
     Ease: 250
 --- !u!114 &8746676027367802081
 MonoBehaviour:
@@ -478,7 +478,7 @@ MonoBehaviour:
   Data:
     Duration: 0.2
     Target: {fileID: 8746676027328271599}
-    Value: {r: 0.03373701, g: 0.46191987, b: 0.7647059, a: 1}
+    Value: {r: 0.254717, g: 0.254717, b: 0.254717, a: 1}
     Ease: 250
 --- !u!114 &8746676027603403987
 MonoBehaviour:

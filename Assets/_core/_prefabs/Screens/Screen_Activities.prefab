@@ -1326,8 +1326,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94d856151e904dbdb5c813fbc2c87745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BlockerBG: {fileID: 0}
   DefaultOutEnterPosition: {x: -2500, y: 0, z: 0}
-  DefaultOutExitPosition: {x: -2500, y: 0, z: 0}
+  DefaultOutExitPosition: {x: 2500, y: 0, z: 0}
   ActivityBlocks:
   - {fileID: 7197914319901067678}
   - {fileID: 3151935800304303286}
