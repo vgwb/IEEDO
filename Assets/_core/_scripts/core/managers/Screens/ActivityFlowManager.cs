@@ -54,6 +54,9 @@ namespace Ieedo
                 yield break;
             }
 
+            var uiPillarsScreen =  Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
+            uiPillarsScreen.Scene3D.SetActive(false);
+
             var activityData = Statics.Data.Profile.ActivitiesData.First(x => x.ID == CurrentActivity.ID);
             activityManager.ExternSetupActivity(activityData.CurrentLevel);
             activityManager.OnActivityEnd = CloseActivity;
@@ -91,6 +94,9 @@ namespace Ieedo
             Statics.Data.SaveProfile();
 
             CurrentActivity = null;
+
+            var uiPillarsScreen =  Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
+            uiPillarsScreen.Scene3D.SetActive(true);
         }
     }
 }

@@ -15,8 +15,6 @@ namespace Ieedo
 
     public class UIPillarsScreen : UIScreen
     {
-        public UICardCollection SelectedCardList;
-
         public override bool AutoAnimate => false;
 
         public GameObject Scene3D;
@@ -103,12 +101,6 @@ namespace Ieedo
             uiCardListScreen.LoadCards(data.Cards, UICardListScreen.SortByExpirationDate, UICardListScreen.ListViewMode.Review);
             uiCardListScreen.KeepPillars = true;
             GoTo(ScreenID.CardList);
-        }
-
-        protected override IEnumerator OnClose()
-        {
-           // Scene3D.SetActive(false);
-            return base.OnClose();
         }
 
         public Camera Camera3D;
