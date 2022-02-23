@@ -10,21 +10,26 @@ namespace Ieedo
     {
         public override ScreenID ID => ScreenID.Top;
 
-        public LeanButton SwitchModeButton;
-        public LeanButton LanguageButton;
+        public LeanButton InstantTranslationButton;
         public LeanButton DebugButton;
 
         void Start()
         {
-            SetupButton(LanguageButton, StartSelectionLanguage);
+            SetupButtonDown(InstantTranslationButton, StartInstantTranslate, StopInstantTranslate);
             SetupButton(DebugButton, () => Statics.Screens.OpenImmediate(ScreenID.Debug));
         }
 
         public UIOptionsListPopup OptionsListPopup;
 
-        private void StartSelectionLanguage()
+        private void StartInstantTranslate()
         {
-            StartCoroutine(SelectionLanguageCO());
+            var locales = LocalizationSettings.AvailableLocales.Locales;
+            LocalizationSettings.SelectedLocale = locales[1];
+        }
+        private void StopInstantTranslate()
+        {
+            var locales = LocalizationSettings.AvailableLocales.Locales;
+            LocalizationSettings.SelectedLocale = locales[0];
         }
 
         private IEnumerator SelectionLanguageCO()

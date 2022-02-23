@@ -75,7 +75,7 @@ namespace Ieedo
                 StartCoroutine(CardCreationFlowCO());
             });
 
-            CardsList.OnCardClicked = uiCard => OpenFrontView(uiCard, CurrentListViewMode == ListViewMode.ToDo ? FrontViewMode.View : FrontViewMode.Review);
+            CardsList.OnCardClicked = uiCard => OpenFrontView(uiCard, CurrentListViewMode == ListViewMode.ToDo ? FrontViewMode.Edit : FrontViewMode.Review);
         }
 
         private IEnumerator CompleteCardCO(UICard uiCard)
@@ -200,7 +200,7 @@ namespace Ieedo
                     ReviewMode.SetActive(false);
                     break;
                 case FrontViewMode.Review:
-                    EditMode.SetActive(true);
+                    EditMode.SetActive(false);
                     ViewMode.SetActive(false);
                     ReviewMode.SetActive(true);
                     break;

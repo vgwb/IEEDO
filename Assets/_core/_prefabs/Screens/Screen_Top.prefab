@@ -133,9 +133,7 @@ MonoBehaviour:
   BlockerBG: {fileID: 0}
   DefaultOutEnterPosition: {x: -2500, y: 0, z: 0}
   DefaultOutExitPosition: {x: 2500, y: 0, z: 0}
-  BackButton: {fileID: 0}
-  SwitchModeButton: {fileID: 0}
-  LanguageButton: {fileID: 5306248364941433071}
+  InstantTranslationButton: {fileID: 5306248364941433071}
   DebugButton: {fileID: 688192975619317733}
   OptionsListPopup: {fileID: 0}
 --- !u!1001 &3513365468643381594

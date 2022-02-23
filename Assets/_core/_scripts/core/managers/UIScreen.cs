@@ -86,5 +86,14 @@ namespace Ieedo
             btn.OnClick.RemoveAllListeners();
             btn.OnClick.AddListener(() => action());
         }
+
+        protected void SetupButtonDown(LeanButton btn, Action downAction, Action upAction)
+        {
+            btn.OnDown.RemoveAllListeners();
+            btn.OnDown.AddListener(() => downAction());
+
+            btn.OnClick.RemoveAllListeners();
+            btn.OnClick.AddListener(() => upAction());
+        }
     }
 }
