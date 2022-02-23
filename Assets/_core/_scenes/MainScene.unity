@@ -2290,7 +2290,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5653074619800673116, guid: bc631336ff2967148b17c56a7e4b62b9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -353.71304
+      value: -353.713
       objectReference: {fileID: 0}
     - target: {fileID: 5653074619800673116, guid: bc631336ff2967148b17c56a7e4b62b9, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2310,7 +2310,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5653074619800673117, guid: bc631336ff2967148b17c56a7e4b62b9, type: 3}
       propertyPath: m_Name
-      value: Screen_Debug
+      value: Screen_Hamburger
       objectReference: {fileID: 0}
     - target: {fileID: 5653074619800673117, guid: bc631336ff2967148b17c56a7e4b62b9, type: 3}
       propertyPath: m_IsActive
@@ -4413,26 +4413,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 869480781757641838, guid: ed198f5e9064b024e88b2d213a22f400, type: 3}
-      propertyPath: m_text
-      value: \uf03a
-      objectReference: {fileID: 0}
-    - target: {fileID: 869480781757641838, guid: ed198f5e9064b024e88b2d213a22f400, type: 3}
-      propertyPath: m_fontSize
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 869480781757641838, guid: ed198f5e9064b024e88b2d213a22f400, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: dd56c77bdd36f004eacd095a50cc892a, type: 2}
-    - target: {fileID: 869480781757641838, guid: ed198f5e9064b024e88b2d213a22f400, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 869480781757641838, guid: ed198f5e9064b024e88b2d213a22f400, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 5020757848213534418, guid: dd56c77bdd36f004eacd095a50cc892a, type: 2}
     - target: {fileID: 869480782618228865, guid: ed198f5e9064b024e88b2d213a22f400, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4465,46 +4445,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3703085677481797465, guid: ed198f5e9064b024e88b2d213a22f400, type: 3}
-      propertyPath: m_text
-      value: \uf11b
-      objectReference: {fileID: 0}
-    - target: {fileID: 3703085677481797465, guid: ed198f5e9064b024e88b2d213a22f400, type: 3}
-      propertyPath: m_fontSize
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3703085677481797465, guid: ed198f5e9064b024e88b2d213a22f400, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: dd56c77bdd36f004eacd095a50cc892a, type: 2}
-    - target: {fileID: 3703085677481797465, guid: ed198f5e9064b024e88b2d213a22f400, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3703085677481797465, guid: ed198f5e9064b024e88b2d213a22f400, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 5020757848213534418, guid: dd56c77bdd36f004eacd095a50cc892a, type: 2}
-    - target: {fileID: 6810868245884800061, guid: ed198f5e9064b024e88b2d213a22f400, type: 3}
-      propertyPath: m_text
-      value: \uf51e
-      objectReference: {fileID: 0}
-    - target: {fileID: 6810868245884800061, guid: ed198f5e9064b024e88b2d213a22f400, type: 3}
-      propertyPath: m_fontSize
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6810868245884800061, guid: ed198f5e9064b024e88b2d213a22f400, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: dd56c77bdd36f004eacd095a50cc892a, type: 2}
-    - target: {fileID: 6810868245884800061, guid: ed198f5e9064b024e88b2d213a22f400, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6810868245884800061, guid: ed198f5e9064b024e88b2d213a22f400, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 5020757848213534418, guid: dd56c77bdd36f004eacd095a50cc892a, type: 2}
     - target: {fileID: 6810868247005364434, guid: ed198f5e9064b024e88b2d213a22f400, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

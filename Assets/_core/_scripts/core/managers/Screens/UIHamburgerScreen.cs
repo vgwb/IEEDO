@@ -1,6 +1,6 @@
 namespace Ieedo
 {
-    public class UIDebugScreen : UIScreen
+    public class UIHamburgerScreen : UIScreen
     {
         public override ScreenID ID => ScreenID.Debug;
 
