@@ -98,8 +98,10 @@ namespace Ieedo
         private void HandleSelectedPillar(PillarView pillarView)
         {
             var data = pillarView.Data;
-            //GoTo(ScreenID.ToDoList);
-            SelectedCardList.AssignList(data.Cards);
+
+            var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
+            uiCardListScreen.LoadCards(data.Cards, UICardListScreen.SortByExpirationDate);
+            GoTo(ScreenID.CardList);
         }
 
         protected override IEnumerator OnClose()
@@ -113,7 +115,7 @@ namespace Ieedo
         {
             switch (screenID)
             {
-                case ScreenID.ToDoList:
+                case ScreenID.CardList:
                     Camera3D.transform.localRotationTransition(Quaternion.Euler(34f,10f,0f), 0.25f, LeanEase.Decelerate);
                     break;
                 case ScreenID.Pillars:

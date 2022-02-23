@@ -9,11 +9,11 @@ using Ieedo.Utilities;
 
 namespace Ieedo
 {
-    public class UIToDoListScreen : UIScreen
+    public class UICardListScreen : UIScreen
     {
         public override bool AutoAnimate => false;
 
-        public UICardCollection ToDoList;
+        public UICardCollection CardsList;
         public GameObject FrontView;
         public RectTransform FrontViewPivot;
 
@@ -41,44 +41,13 @@ namespace Ieedo
         public UIButton CompleteCreationButton;
         public UIButton DeleteCardButton;
 
-        public override ScreenID ID => ScreenID.ToDoList;
+        public override ScreenID ID => ScreenID.CardList;
 
-        protected override IEnumerator OnOpen()
+        void Awake()
         {
-            FrontView.gameObject.SetActive(false);
-
-            LoadCurrentCards();
-            yield return base.OnOpen();
-        }
-
-        protected override IEnumerator OnClose()
-        {
-            CloseFrontView();
-            yield return base.OnClose();
-        }
-
-        private UICard frontCardUI;
-        private Transform prevFrontCardParent;
-
-        private int SortByExpirationDate(CardData c1, CardData c2)
-        {
-            return -c1.ExpirationTimestamp.Date.CompareTo(c2.ExpirationTimestamp.Date);
-        }
-
-        public void LoadCurrentCards()
-        {
-            Statics.Data.LoadCardDefinitions();
-
-            var todoCards =  new CardDataCollection();
-            todoCards.AddRange(Statics.Data.Profile.Cards.Where(x => x.Status == CardValidationStatus.Todo).ToList());
-            ToDoList.AssignList(todoCards);
-            ToDoList.SortList(SortByExpirationDate);
-
-            ToDoList.OnCardClicked = uiCard => OpenFrontView(uiCard, FrontViewMode.View);
-
             SetupButton(ValidateCardButton, () =>
             {
-                ToDoList.RemoveCard(frontCardUI);
+                CardsList.RemoveCard(frontCardUI);
 
                 frontCardUI.Data.ValidationTimestamp = Timestamp.Now;
                 frontCardUI.Data.Status = CardValidationStatus.Validated;
@@ -89,7 +58,7 @@ namespace Ieedo
 
             SetupButton(CompleteCardButton, () =>
             {
-                ToDoList.RemoveCard(frontCardUI);
+                CardsList.RemoveCard(frontCardUI);
 
                 frontCardUI.Data.CompletionTimestamp = Timestamp.Now;
                 frontCardUI.Data.Status = CardValidationStatus.Completed;
@@ -107,8 +76,46 @@ namespace Ieedo
             {
                 StartCoroutine(CardCreationFlowCO());
             });
+
+            CardsList.OnCardClicked = uiCard => OpenFrontView(uiCard, CurrentFrontViewMode);
         }
 
+        protected override IEnumerator OnOpen()
+        {
+            FrontView.gameObject.SetActive(false);
+            Statics.Data.LoadCardDefinitions();
+
+            //LoadToDoCards();
+            yield return base.OnOpen();
+        }
+
+        protected override IEnumerator OnClose()
+        {
+            CloseFrontView();
+            yield return base.OnClose();
+        }
+
+        private UICard frontCardUI;
+        private Transform prevFrontCardParent;
+
+        public static int SortByExpirationDate(CardData c1, CardData c2)
+        {
+            return -c1.ExpirationTimestamp.Date.CompareTo(c2.ExpirationTimestamp.Date);
+        }
+
+        public void LoadCards(List<CardData> cards, Func<CardData,CardData,int> sort)
+        {
+            var collection = new CardDataCollection();
+            collection.AddRange(cards);
+            CardsList.AssignList(collection);
+            CardsList.SortList(sort);
+        }
+
+        public void LoadToDoCards()
+        {
+            var cards = Statics.Data.Profile.Cards.Where(x => x.Status == CardValidationStatus.Todo).ToList();
+            LoadCards(cards, SortByExpirationDate);
+        }
 
         public enum FrontViewMode
         {
@@ -181,7 +188,7 @@ namespace Ieedo
             if (frontCardUI != null)
             {
                 if (prevFrontCardParent != null) frontCardUI.transform.SetParent(prevFrontCardParent, false);
-                ToDoList.SetupInListInteraction(frontCardUI);
+                CardsList.SetupInListInteraction(frontCardUI);
             }
             frontCardUI = null;
             prevFrontCardParent = null;
@@ -334,8 +341,8 @@ namespace Ieedo
             {
                 StopEditing();
 
-                if (isNewCard) ToDoList.AddCard(cardUI.Data);
-                ToDoList.SortList(SortByExpirationDate);
+                if (isNewCard) CardsList.AddCard(cardUI.Data);
+                CardsList.SortList(SortByExpirationDate);
 
                 CloseFrontView();
                 cardUI.RefreshUI();
@@ -343,7 +350,7 @@ namespace Ieedo
 
             SetupButton(DeleteCardButton, () =>
             {
-                if (!isNewCard) ToDoList.RemoveCard(frontCardUI);
+                if (!isNewCard) CardsList.RemoveCard(frontCardUI);
                 StopEditing();
                 CloseFrontView();
 

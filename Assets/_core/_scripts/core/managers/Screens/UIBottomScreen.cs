@@ -14,7 +14,12 @@ namespace Ieedo
         {
             SetupButton(btnActivities, () => GoTo(ScreenID.Activities));
             SetupButton(btnPillars, () => GoTo(ScreenID.Pillars));
-            SetupButton(btnCards, () => GoTo(ScreenID.ToDoList));
+            SetupButton(btnCards, () =>
+            {
+                var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
+                uiCardListScreen.LoadToDoCards();
+                GoTo(ScreenID.CardList);
+            });
         }
     }
 }

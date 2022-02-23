@@ -9,7 +9,7 @@
         Bottom,
 
         Assessment,
-        ToDoList,
+        CardList,
         ProfileCreation,
         History,
         Activities,
