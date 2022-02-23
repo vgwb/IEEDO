@@ -5319,7 +5319,7 @@ PrefabInstance:
       objectReference: {fileID: 422757422}
     - target: {fileID: 6598811677016601520, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
       propertyPath: m_Name
-      value: Screen_ToDoList
+      value: Screen_CardsList
       objectReference: {fileID: 0}
     - target: {fileID: 6598811677016601520, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
       propertyPath: m_IsActive

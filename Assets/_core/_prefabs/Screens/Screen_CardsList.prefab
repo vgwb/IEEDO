@@ -3518,7 +3518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2402758051618792758, guid: 1751933e3b760fe4ea83bdd166e6703e, type: 3}
       propertyPath: m_Name
-      value: Screen_ToDoList
+      value: Screen_CardsList
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1751933e3b760fe4ea83bdd166e6703e, type: 3}
@@ -3539,6 +3539,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 847115229b974997b658aadc02c69dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DefaultOutEnterPosition: {x: 0, y: 2500, z: 0}
+  DefaultOutExitPosition: {x: 0, y: -2500, z: 0}
   CardsList: {fileID: 2389360068787207876}
   FrontView: {fileID: 8492992023890930437}
   FrontViewPivot: {fileID: 3143054335332561721}

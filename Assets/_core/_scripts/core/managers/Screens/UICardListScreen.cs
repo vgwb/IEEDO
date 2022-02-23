@@ -10,8 +10,6 @@ namespace Ieedo
 {
     public class UICardListScreen : UIScreen
     {
-        public override bool AutoAnimate => false;
-
         public UICardCollection CardsList;
         public GameObject FrontView;
         public RectTransform FrontViewPivot;
@@ -217,7 +215,13 @@ namespace Ieedo
 
             if (frontCardUI != null)
             {
-                if (prevFrontCardParent != null) frontCardUI.transform.SetParent(prevFrontCardParent, false);
+                if (prevFrontCardParent != null)
+                {
+                    frontCardUI.transform.SetParent(prevFrontCardParent, true);
+                    frontCardUI.transform.localPositionTransition(Vector3.zero, 0.25f);
+                    frontCardUI.transform.localEulerAnglesTransform(Vector3.zero, 0.25f);
+                    frontCardUI.transform.localScaleTransition(Vector3.one, 0.25f);
+                }
                 CardsList.SetupInListInteraction(frontCardUI);
             }
             frontCardUI = null;
