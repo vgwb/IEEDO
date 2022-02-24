@@ -1353,7 +1353,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1211287182}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Ieedo.games.game_blank, Assembly-CSharp
         m_MethodName: OnBtnWin
         m_Mode: 1
@@ -1579,10 +1579,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1211287180}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 931d48202dc3a40f28f5f150810dc8cd, type: 3}
+  m_Script: {fileID: 11500000, guid: cc4e5aec604b8456282a19967ac0565d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Activity: {fileID: 11400000, guid: 4129a6f41a0178648817136f1246b2b3, type: 2}
+  Activity: {fileID: 11400000, guid: 5f79963fdd7eb08479492c2c71e55842, type: 2}
 --- !u!1 &1491915288
 GameObject:
   m_ObjectHideFlags: 0
@@ -1667,7 +1667,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1211287182}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Ieedo.games.game_blank, Assembly-CSharp
         m_MethodName: OnBtnLose
         m_Mode: 1

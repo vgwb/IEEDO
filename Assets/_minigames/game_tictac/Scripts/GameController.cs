@@ -13,7 +13,7 @@ namespace Ieedo.games.tictac
         public GameObject menuScreen, gameScreen, gameOverScreen;
         public RectTransform protectFromInputPanel;
         public FieldScript field;
-        public TMPro.TextMeshProUGUI winText;
+        public TextMeshProUGUI winText;
         public string winTextStr, tieTextStr;
 
         public Color xColor, oColor;
@@ -61,8 +61,10 @@ namespace Ieedo.games.tictac
             cellList = field.GetCells();
             cellMatrix = new Cell[3, 3];
 
-            for (int i = 0; i < 3; i++) {
-                for (int j = 0; j < 3; j++) {
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
                     cellMatrix[i, j] = cellList[i * 3 + j];
                 }
             }
@@ -76,21 +78,26 @@ namespace Ieedo.games.tictac
 
             lastClickedCell = lastCell;
 
-            if (turnsCount >= 5) CheckForWin();
+            if (turnsCount >= 5)
+                CheckForWin();
 
-            if (CurGameState != GameState.GAME_OVER) {
+            if (CurGameState != GameState.GAME_OVER)
+            {
                 SwitchCurPlayer();
             }
         }
 
         private void SwitchCurPlayer()
         {
-            if (curPlayerSymbol == PlayerSymbol.X) curPlayerSymbol = PlayerSymbol.O;
-            else curPlayerSymbol = PlayerSymbol.X;
+            if (curPlayerSymbol == PlayerSymbol.X)
+                curPlayerSymbol = PlayerSymbol.O;
+            else
+                curPlayerSymbol = PlayerSymbol.X;
 
             if (gameMode == GameMode.SINGLEPLAYER && curPlayerSymbol == ai.symbol)
                 AIturn();
-            else ProtectFromInput(false);
+            else
+                ProtectFromInput(false);
 
             turnStateImage.UpdateImage();
         }
@@ -103,31 +110,44 @@ namespace Ieedo.games.tictac
             int xRowScore = 0, oRowScore = 0, xColScore = 0, oColScore = 0;
             int xMainDiagScore = 0, oMainDiagScore = 0, xSecDiagScore = 0, oSecDiagScore = 0;
 
-            for (int i = 0; i < 3; i++) {
-                for (int j = 0; j < 3; j++) {
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
                     //rows
-                    if (cellMatrix[i, j].CurCellState == Cell.CellState.X) xRowScore++;
-                    else if (cellMatrix[i, j].CurCellState == Cell.CellState.O) oRowScore++;
+                    if (cellMatrix[i, j].CurCellState == Cell.CellState.X)
+                        xRowScore++;
+                    else if (cellMatrix[i, j].CurCellState == Cell.CellState.O)
+                        oRowScore++;
 
                     //columns
-                    if (cellMatrix[j, i].CurCellState == Cell.CellState.X) xColScore++;
-                    else if (cellMatrix[j, i].CurCellState == Cell.CellState.O) oColScore++;
+                    if (cellMatrix[j, i].CurCellState == Cell.CellState.X)
+                        xColScore++;
+                    else if (cellMatrix[j, i].CurCellState == Cell.CellState.O)
+                        oColScore++;
 
                     //main diag
-                    if (i == j) {
-                        if (cellMatrix[i, j].CurCellState == Cell.CellState.X) xMainDiagScore++;
-                        else if (cellMatrix[i, j].CurCellState == Cell.CellState.O) oMainDiagScore++;
+                    if (i == j)
+                    {
+                        if (cellMatrix[i, j].CurCellState == Cell.CellState.X)
+                            xMainDiagScore++;
+                        else if (cellMatrix[i, j].CurCellState == Cell.CellState.O)
+                            oMainDiagScore++;
                     }
 
                     //secondary diag
-                    if (i + j == 2) {
-                        if (cellMatrix[i, j].CurCellState == Cell.CellState.X) xSecDiagScore++;
-                        else if (cellMatrix[i, j].CurCellState == Cell.CellState.O) oSecDiagScore++;
+                    if (i + j == 2)
+                    {
+                        if (cellMatrix[i, j].CurCellState == Cell.CellState.X)
+                            xSecDiagScore++;
+                        else if (cellMatrix[i, j].CurCellState == Cell.CellState.O)
+                            oSecDiagScore++;
                     }
 
                 }//end of the inner loop
 
-                if (xRowScore == 3 || xColScore == 3 || xMainDiagScore == 3 || xSecDiagScore == 3) {
+                if (xRowScore == 3 || xColScore == 3 || xMainDiagScore == 3 || xSecDiagScore == 3)
+                {
                     SetGameOnGameOver();
 
                     winText.text = winTextStr;
@@ -136,7 +156,9 @@ namespace Ieedo.games.tictac
                     Debug.Log("X wins");
 
                     break;
-                } else if (oRowScore == 3 || oColScore == 3 || oMainDiagScore == 3 || oSecDiagScore == 3) {
+                }
+                else if (oRowScore == 3 || oColScore == 3 || oMainDiagScore == 3 || oSecDiagScore == 3)
+                {
                     SetGameOnGameOver();
 
                     winText.text = winTextStr;
@@ -163,8 +185,9 @@ namespace Ieedo.games.tictac
                     lineType = CheckWinLineType(oRowScore, oColScore, oMainDiagScore, oSecDiagScore);
 
                 GenerateWinLine(lineType);
-            } else if (turnsCount == 9) //If game isn't over and field is full - tie.
-              {
+            }
+            else if (turnsCount == 9) //If game isn't over and field is full - tie.
+            {
                 SetGameOnGameOver();
                 winLine.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0f); //to hide win line when tie
 
@@ -186,10 +209,14 @@ namespace Ieedo.games.tictac
         /// <returns></returns>
         private LineType CheckWinLineType(int row, int col, int d_m, int d_s)
         {
-            if (row == 3) return LineType.HORIZONTAL;
-            else if (col == 3) return LineType.VERTICAL;
-            else if (d_m == 3) return LineType.DIAGONAL_M;
-            else return LineType.DIAGONAL_S;
+            if (row == 3)
+                return LineType.HORIZONTAL;
+            else if (col == 3)
+                return LineType.VERTICAL;
+            else if (d_m == 3)
+                return LineType.DIAGONAL_M;
+            else
+                return LineType.DIAGONAL_S;
         }
 
         /// <summary>
@@ -202,7 +229,8 @@ namespace Ieedo.games.tictac
 
             Int2D lastCellIndex = GetCellMatrixIndex(lastClickedCell);
 
-            switch (type) {
+            switch (type)
+            {
                 case LineType.HORIZONTAL:
                     lineOrigin = cellMatrix[lastCellIndex.x, 0];
                     winLine.transform.eulerAngles = Vector3.zero;
@@ -228,8 +256,10 @@ namespace Ieedo.games.tictac
                     break;
             }
 
-            if (curPlayerSymbol == PlayerSymbol.X) winLine.GetComponent<Image>().color = xColor;
-            else winLine.GetComponent<Image>().color = oColor;
+            if (curPlayerSymbol == PlayerSymbol.X)
+                winLine.GetComponent<Image>().color = xColor;
+            else
+                winLine.GetComponent<Image>().color = oColor;
 
             winLine.transform.position = lineOrigin.transform.position;
         }
@@ -254,8 +284,10 @@ namespace Ieedo.games.tictac
             CurGameState = GameState.RESUME;
 
             ai.gameObject.SetActive(gameMode == GameMode.SINGLEPLAYER);
-            if (ai.gameObject.activeInHierarchy && ai.symbol == curPlayerSymbol) AIturn();
-            else ProtectFromInput(false);
+            if (ai.gameObject.activeInHierarchy && ai.symbol == curPlayerSymbol)
+                AIturn();
+            else
+                ProtectFromInput(false);
 
             field.AppearAnim();
         }
@@ -294,7 +326,8 @@ namespace Ieedo.games.tictac
         /// </summary>
         public void ResetController()
         {
-            foreach (Cell c in cellList) c.ResetCell();
+            foreach (Cell c in cellList)
+                c.ResetCell();
             curPlayerSymbol = PlayerSymbol.X;
             turnsCount = 0;
 
@@ -328,11 +361,14 @@ namespace Ieedo.games.tictac
         /// <returns></returns>
         public Int2D GetCellMatrixIndex(Cell c)
         {
-            Int2D index = new Int2D();
+            var index = new Int2D();
 
-            for (int i = 0; i < 3; i++) {
-                for (int j = 0; j < 3; j++) {
-                    if (c == cellMatrix[i, j]) {
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    if (c == cellMatrix[i, j])
+                    {
                         index.x = i;
                         index.y = j;
                     }

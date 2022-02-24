@@ -25,7 +25,5 @@ namespace Ieedo.games.connect4
         {
             return selectedPlayer1;
         }
-
-
     }
 }

@@ -1998,6 +1998,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a1add8a1bd8c07d4f9313e0a4afb42a1, type: 2}
+    - target: {fileID: -1792663807438781241, guid: 6bfba9a59daf3944a9d7f3b6085f7a8f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 380625121065528306, guid: 6bfba9a59daf3944a9d7f3b6085f7a8f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2041,7 +2045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2840e2b39e2c964184ff3b18feacd8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameController: {fileID: 1908723970}
+  GameController: {fileID: 0}
   PawnContainer: {fileID: 1988449556}
   selectedPlayer1: 1
   difficulty: 0
@@ -2371,7 +2375,7 @@ GameObject:
   - component: {fileID: 1908723969}
   - component: {fileID: 1908723970}
   m_Layer: 0
-  m_Name: game_manager
+  m_Name: ActivityManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2401,7 +2405,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1908723967}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7b072cd5c2ee54dbd96b444004651679, type: 3}
+  m_Script: {fileID: 11500000, guid: b5073fb32f64b406fabd50052283db94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Activity: {fileID: 11400000, guid: 538fb03617bb648f8a3d2a6bcbcef91a, type: 2}

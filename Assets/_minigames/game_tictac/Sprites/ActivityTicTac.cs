@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ieedo;
 
-namespace Ieedo.games.connect4
+namespace Ieedo.games.tictac
 {
-    public class game_connect4 : ActivityLogic
+    public class ActivityTicTac : ActivityLogic
     {
         protected override void SetupActivity(int currentLevel)
         {
@@ -17,7 +17,8 @@ namespace Ieedo.games.connect4
             if (playerWin)
             {
                 OnBtnWin();
-            } else
+            }
+            else
             {
                 OnBtnLose();
             }

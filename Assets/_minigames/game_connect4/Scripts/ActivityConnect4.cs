@@ -1,15 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Ieedo;
 
-
-namespace Ieedo.games.blank
+namespace Ieedo.games.connect4
 {
-    public class game_blank : ActivityLogic
+    public class ActivityConnect4 : ActivityLogic
     {
         protected override void SetupActivity(int currentLevel)
         {
             Debug.Log($"Starting game at level {currentLevel}");
+        }
+
+        public void FinishGame(bool playerWin)
+        {
+            if (playerWin)
+            {
+                OnBtnWin();
+            }
+            else
+            {
+                OnBtnLose();
+            }
         }
 
         public void OnBtnWin()

@@ -7,7 +7,7 @@ namespace Ieedo.games.connect4
 {
     public class GameManager : MonoBehaviour
     {
-        public game_connect4 GameController;
+        public ActivityConnect4 GameController;
         public GameObject PawnContainer;
         public bool selectedPlayer1 = true;
         public int difficulty = 0; // 0 - easy, 1- medium,  2 - hard
@@ -320,7 +320,7 @@ namespace Ieedo.games.connect4
                 if (board[i, 3] == player)
                     score++;
             score *= 3;
-            List<int> subBoard = new List<int>();
+            var subBoard = new List<int>();
 
             //horiznotala
             for (int r = 0; r < row_count; r++)

@@ -7121,27 +7121,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1446900620}
-  - component: {fileID: 1446900619}
+  - component: {fileID: 1446900621}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: ActivityManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1446900619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1446900618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 931d48202dc3a40f28f5f150810dc8cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Activity: {fileID: 11400000, guid: f6d44496e64144b67bac8e264707f23f, type: 2}
 --- !u!4 &1446900620
 Transform:
   m_ObjectHideFlags: 0
@@ -7157,6 +7144,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1446900621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446900618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91bc2c42abdc34f62b214f2f3366d749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Activity: {fileID: 11400000, guid: f6d44496e64144b67bac8e264707f23f, type: 2}
 --- !u!1 &1530338608
 GameObject:
   m_ObjectHideFlags: 0
@@ -7832,7 +7832,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1446900619}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Ieedo.games.game_blank, Assembly-CSharp
         m_MethodName: OnBtnLose
         m_Mode: 1
