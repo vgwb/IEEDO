@@ -24,7 +24,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     DefaultText: Connect4
-  Type: 1
+  Type: 2
   SceneName: game_connect4
   ScoreToUnlock: 0
   MaxLevel: 10

@@ -24,8 +24,8 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     DefaultText: Writing
-  Type: 0
-  SceneName: game_tictac
+  Type: 1
+  SceneName: act_diary
   ScoreToUnlock: 100
   MaxLevel: 10
   references:

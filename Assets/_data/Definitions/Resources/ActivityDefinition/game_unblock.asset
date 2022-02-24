@@ -24,7 +24,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     DefaultText: Unblock
-  Type: 1
+  Type: 2
   SceneName: game_unblock
   ScoreToUnlock: 0
   MaxLevel: 10

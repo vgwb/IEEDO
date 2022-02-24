@@ -6,7 +6,7 @@
         Blank = 1,
         TicTac = 2,
         Locked,
-        Writing,
+        Diary,
         Connect4,
         Unblock,
     }
