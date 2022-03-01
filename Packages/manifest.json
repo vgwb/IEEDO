@@ -9,7 +9,7 @@
     "com.unity.ide.vscode": "1.2.5",
     "com.unity.localization": "1.0.5",
     "com.unity.mobile.android-logcat": "1.2.3",
-    "com.unity.mobile.notifications": "1.4.2",
+    "com.unity.mobile.notifications": "2.0.0",
     "com.unity.nuget.newtonsoft-json": "2.0.2",
     "com.unity.probuilder": "5.0.4",
     "com.unity.test-framework": "1.1.31",
