@@ -13,10 +13,10 @@ namespace Ieedo
 
         public IEnumerator ShowCategory(CategoryDefinition category)
         {
-            Title.Text.text = category.Title.Text;
+            Title.Text.Key = category.Title.Key;
             Title.BG.color = category.Color;
 
-            Content.Text.text = category.Description.Text;
+            Content.Text.Key = category.Description.Key;
             Content.BG.color = category.Color.SetSaturation(0.5f);
 
             SetupButton(ContinueButton, Close);

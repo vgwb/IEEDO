@@ -6,6 +6,7 @@ using Lean.Transition;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Localization;
 
 namespace Ieedo
 {
@@ -259,9 +260,9 @@ namespace Ieedo
                 new CardDefinition {
                     Category = CategoryID.None,
                     SubCategory = 0,
-                    Description = new LocalizedString { DefaultText = "" },
+                    Description = new LocString { DefaultText = "" },
                     Difficulty = 0,
-                    Title = new LocalizedString { DefaultText = ""},
+                    Title = new LocString { DefaultText = ""},
                 },
                 isDefaultCard: AppManager.I.ApplicationConfig.SaveCardsAsDefault
             );
@@ -321,7 +322,7 @@ namespace Ieedo
                     }
                 );
             }
-            optionsListPopup.ShowOptions("Choose Category", options);
+            optionsListPopup.ShowOptions(new LocalizedString("UI","creation_choose_category"), options);
             while (optionsListPopup.isActiveAndEnabled) yield return null;
             catResult.Value = categories[optionsListPopup.LatestSelectedOption];
             var selectedCategory = catResult.Value;
@@ -350,7 +351,7 @@ namespace Ieedo
                     }
                 );
             }
-            optionsListPopup.ShowOptions("Choose Difficulty", options);
+            optionsListPopup.ShowOptions(new LocalizedString("UI","creation_choose_difficulty"), options);
             while (optionsListPopup.isActiveAndEnabled) yield return null;
             result.Value = possibleDifficulties[optionsListPopup.LatestSelectedOption];
             var selection = result.Value;
@@ -385,7 +386,7 @@ namespace Ieedo
                     }
                 );
             }
-            optionsListPopup.ShowOptions("Choose Date", options);
+            optionsListPopup.ShowOptions(new LocalizedString("UI","creation_choose_date"), options);
             while (optionsListPopup.isActiveAndEnabled) yield return null;
             result.Value = possibleDays[optionsListPopup.LatestSelectedOption];
             var selection = result.Value;
@@ -414,7 +415,7 @@ namespace Ieedo
                     }
                 );
             }
-            optionsListPopup.ShowOptions("Choose Sub-category", options);
+            optionsListPopup.ShowOptions(new LocalizedString("UI","creation_choose_subcategory"), options);
             while (optionsListPopup.isActiveAndEnabled) yield return null;
             result.Value = subCategories[optionsListPopup.LatestSelectedOption];
             var selection = result.Value;
@@ -432,7 +433,7 @@ namespace Ieedo
             frontCardUI.transform.localPositionTransition(new Vector3(0, -100, 0), 0.25f);
             frontCardUI.transform.localScaleTransition(Vector3.one*1.2f, 0.25f);
             frontCardUI.transform.localEulerAnglesTransform(new Vector3(0,10,0), 0.25f);
-            optionsListPopup.ShowOptions("Enter Title", new List<OptionData>());
+            optionsListPopup.ShowOptions(new LocalizedString("UI","creation_enter_title"), new List<OptionData>());
             yield return WaitForInputField(TitleInputField, frontCardUI.Title);
             optionsListPopup.CloseImmediate();
             frontCardUI.Data.Definition.Title.DefaultText = TitleInputField.text;
@@ -448,7 +449,7 @@ namespace Ieedo
             frontCardUI.transform.localPositionTransition(new Vector3(0, 200, 0), 0.25f);
             frontCardUI.transform.localScaleTransition(Vector3.one*1.2f, 0.25f);
             frontCardUI.transform.localEulerAnglesTransform(new Vector3(0,10,0), 0.25f);
-            optionsListPopup.ShowOptions("Enter Description", new List<OptionData>());
+            optionsListPopup.ShowOptions(new LocalizedString("UI","creation_enter_description"), new List<OptionData>());
             yield return WaitForInputField(DescriptionInputField, frontCardUI.Description);
             optionsListPopup.CloseImmediate();
             frontCardUI.Data.Definition.Description.DefaultText = DescriptionInputField.text;

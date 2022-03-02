@@ -64,9 +64,9 @@ namespace Ieedo.Test
             {
                 Category = CategoryID.WellBeing,
                 SubCategory = SubCategoryID.A_1,
-                Description = new LocalizedString {DefaultText = "TEST " + Random.Range(0,9999)},
+                Description = new LocString {DefaultText = "TEST " + Random.Range(0,9999)},
                 Difficulty = 2,
-                Title = new LocalizedString {DefaultText = "TITLE"},
+                Title = new LocString {DefaultText = "TITLE"},
             });
 
             Log.Err(Statics.Data.CardDefinitions.ToJoinedString());

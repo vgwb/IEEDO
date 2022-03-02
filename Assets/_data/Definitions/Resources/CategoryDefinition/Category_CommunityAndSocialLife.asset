@@ -18,23 +18,23 @@ MonoBehaviour:
       m_TableReference:
         m_TableCollectionName: GUID:c72a3e86bc710427d83055e5adb307c5
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 10257870520868864
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    DefaultText: Community
+    DefaultText: 
   Description:
     Key:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:c72a3e86bc710427d83055e5adb307c5
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 10258501075755008
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    DefaultText: Community & Social Life
+    DefaultText: 
   PaletteColor: {fileID: 11400000, guid: ba4acccf3fbca8b40869a6699a0086ac, type: 2}
   SubCategories:
   - ID: 200

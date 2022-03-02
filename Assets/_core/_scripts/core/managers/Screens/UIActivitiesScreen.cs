@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
+using UnityEngine.Localization;
 
 namespace Ieedo
 {
@@ -20,7 +22,7 @@ namespace Ieedo
                 var activityDefinition = allActivities[i];
 
                 SetupButton(ActivityBlocks[i].LaunchButton, () => LaunchActivity(activityDefinition.ID));
-                ActivityBlocks[i].Title.text = activityDefinition.Title.Text;
+                ActivityBlocks[i].Title.Key = activityDefinition.Title.Key;
 
                 var data = Statics.Data.Profile.ActivitiesData.FirstOrDefault(x => x.ID == activityDefinition.ID);
                 if (data == null)
@@ -40,7 +42,10 @@ namespace Ieedo
                 // Check unlock state
                 data.Unlocked = Statics.Data.Profile.CurrentScore >= activityDefinition.ScoreToUnlock;
                 ActivityBlocks[i].LockedGO.SetActive(!data.Unlocked);
-                ActivityBlocks[i].LockedText.text = $"{activityDefinition.ScoreToUnlock} points to unlock";
+
+                var scoreToUnlockLoc = new LocalizedString("UI", "activity_score_to_unlock");
+                scoreToUnlockLoc.Arguments = new List<object>{activityDefinition};
+                ActivityBlocks[i].LockedText.text = scoreToUnlockLoc.GetLocalizedString();
             }
 
             for (int i = allActivities.Count; i < ActivityBlocks.Count; i++)

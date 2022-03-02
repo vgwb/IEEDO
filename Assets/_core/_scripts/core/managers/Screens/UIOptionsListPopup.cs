@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization;
 
 namespace Ieedo
 {
@@ -17,10 +18,10 @@ namespace Ieedo
         private UIButton[] Buttons;
         public int LatestSelectedOption;
 
-        public void ShowOptions(string title, List<OptionData> options)
+        public void ShowOptions(LocalizedString titleKey, List<OptionData> options)
         {
             if (Buttons == null) Buttons = ButtonsPivot.GetComponentsInChildren<UIButton>(true);
-            Title.text = title;
+            Title.text = titleKey.GetLocalizedString();
             for (var i = 0; i < options.Count; i++)
             {
                 var option = options[i];

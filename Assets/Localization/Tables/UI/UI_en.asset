@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: bf8d5c70485b84a24a821abb0ddb8f7e, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 3992833648747610127
   m_TableData:
   - m_Id: 24995527358668800
     m_Localized: your virtual assistant
@@ -54,6 +55,99 @@ MonoBehaviour:
     m_Localized: continue
     m_Metadata:
       m_Items: []
+  - m_Id: 40474458029056000
+    m_Localized: 'Score: {CurrentScore}'
+    m_Metadata:
+      m_Items:
+      - rid: 3992833648747610127
+  - m_Id: 40525580437577728
+    m_Localized: Abort
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40525707831173120
+    m_Localized: Switch Mode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40525760616488960
+    m_Localized: Assessment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40526294958235648
+    m_Localized: Reset profile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40534266346233856
+    m_Localized: Results
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535113130074112
+    m_Localized: Choose category
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535270735241216
+    m_Localized: Choose difficulty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535419633033216
+    m_Localized: Choose date
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535579280826368
+    m_Localized: Choose subcategory
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535952167034880
+    m_Localized: Enter title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40537204766564352
+    m_Localized: Enter description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40544906540507136
+    m_Localized: Activity result
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40543073474469888
+    m_Localized: Score +{Score}
+    m_Metadata:
+      m_Items:
+      - rid: 3992833648747610127
+  - m_Id: 40544570652254208
+    m_Localized: You win
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40544588826173440
+    m_Localized: You lose
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40544604743557120
+    m_Localized: Quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40546818237161472
+    m_Localized: '{ScoreToUnlock} points to unlock
+
+'
+    m_Metadata:
+      m_Items:
+      - rid: 3992833648747610127
+  - m_Id: 40549731508445184
+    m_Localized: Assesment intro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40550106646994944
+    m_Localized: Overall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40557809452736512
+    m_Localized: play
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 3992833648747610127
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00604c1d4ecb8f000060ccc91d0d900000608ce4b5099000

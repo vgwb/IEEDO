@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization;
 
 namespace Ieedo.games.blank
 {
@@ -19,7 +20,12 @@ namespace Ieedo.games.blank
         private IEnumerator AskQuestionCO()
         {
             var answer = new Ref<int>();
-            yield return ShowQuestion("TEST POPUP", "Are you sure?", new []{"Yes", "No"}, answer);
+            yield return ShowQuestion(new LocalizedString("UI","continue"),
+                new LocalizedString("UI","continue"), new []
+                {
+                    new LocalizedString("UI","yes"),
+                    new LocalizedString("UI","no")
+                }, answer);
             switch (answer.Value)
             {
                 case 0:

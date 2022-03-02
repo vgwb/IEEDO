@@ -12,47 +12,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
   m_Name: cards Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: cards
+  m_TableCollectionName: Categories
   m_TableCollectionNameGuidString: c72a3e86bc710427d83055e5adb307c5
   m_Entries:
-  - m_Id: 1420735537152
-    m_Key: cat.1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1420743925760
-    m_Key: cat.2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1420743925761
-    m_Key: cat.3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1420743925762
-    m_Key: cat.4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1420748120064
-    m_Key: cat.5
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1420748120065
-    m_Key: cat.6
-    m_Metadata:
-      m_Items: []
   - m_Id: 10201661340147712
-    m_Key: category_title_civicsandculture
+    m_Key: category_title_CivCul
     m_Metadata:
       m_Items: []
   - m_Id: 10201788641468416
-    m_Key: category_desc_civicsandculture
+    m_Key: category_desc_CivCul
     m_Metadata:
       m_Items: []
   - m_Id: 10257870520868864
-    m_Key: category_title_community
+    m_Key: category_title_ComSoc
     m_Metadata:
       m_Items: []
   - m_Id: 10258501075755008
-    m_Key: category_title_
+    m_Key: category_desc_ComSoc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15338261569101824
+    m_Key: category_title_EduTra
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15338277742338048
+    m_Key: 'category_desc_EduTra
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15338341822914560
+    m_Key: category_title_Empl
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15338345862029312
+    m_Key: category_desc_Empl
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15338384780976128
+    m_Key: category_title_OrDoc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15338385938604032
+    m_Key: category_desc_OrDoc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15338416317947904
+    m_Key: category_title_WellBe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15338417286832128
+    m_Key: category_desc_WellBe
     m_Metadata:
       m_Items: []
   m_Metadata:

@@ -480,6 +480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 920e9ca0202ad43f68207e9568e01213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StaticsPrefab: {fileID: 4668475636701288261, guid: e37b05479bb4d8a469cda915f629ea78, type: 3}
 --- !u!1001 &6016258724340065754
 PrefabInstance:
   m_ObjectHideFlags: 0

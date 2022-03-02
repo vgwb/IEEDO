@@ -14,11 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp:Ieedo:ActivityDefinition
   ID: 1
   Title:
-    key: game_blank
+    Key:
+      m_TableReference:
+        m_TableCollectionName: GUID:e48f391c1e96c7040b7091b267464dc8
+      m_TableEntryReference:
+        m_KeyId: 8414584832
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     DefaultText: Blank
-  Description:
-    key: 
-    DefaultText: a test scene
-  Color: {fileID: 11400000, guid: 7b3dea04f8fb78c42a35eaba3b76dac8, type: 2}
   Type: 1
   SceneName: game_blank
+  ScoreToUnlock: 0
+  MaxLevel: 10
+  references:
+    version: 2
+    RefIds: []

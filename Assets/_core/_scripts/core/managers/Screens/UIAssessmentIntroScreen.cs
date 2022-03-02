@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.Localization;
 
 namespace Ieedo
 {
@@ -17,7 +18,7 @@ namespace Ieedo
 
         public IEnumerator ShowIntro()
         {
-            Title.Text.text = "Intro to assessment";
+            Title.Text.Key = new LocalizedString("UI", "assessment_intro_title");
 
             var categoryTexts = CategoriesPivot.GetComponentsInChildren<UITextContent>(true);
 
@@ -25,7 +26,7 @@ namespace Ieedo
             for (var iCategory = 0; iCategory < categories.Count; iCategory++)
             {
                 var category = categories[iCategory];
-                categoryTexts[iCategory].Text.text = category.Title.Text;
+                categoryTexts[iCategory].Text.Key = category.Title.Key;
                 categoryTexts[iCategory].BG.color = category.Color;
             }
 

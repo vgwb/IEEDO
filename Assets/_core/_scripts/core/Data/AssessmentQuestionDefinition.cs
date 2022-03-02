@@ -6,7 +6,7 @@ namespace Ieedo
     [Serializable]
     public class AssessmentAnswer
     {
-        public LocalizedString Answer;
+        public LocString Answer;
         [Range(0, 1)]
         public float Value = 1f;
 
@@ -14,7 +14,7 @@ namespace Ieedo
         {
         }
 
-        public AssessmentAnswer(LocalizedString answer, float value)
+        public AssessmentAnswer(LocString answer, float value)
         {
             Answer = answer;
             Value = value;
@@ -25,14 +25,14 @@ namespace Ieedo
     public class AssessmentQuestionDefinition : ScriptableObject
     {
         public int ID;
-        public LocalizedString Question;
+        public LocString Question;
         public CategoryID Category;
         [Range(0, 2)]
         public float Weight = 1f;
 
         public AssessmentAnswer[] Answers = {
-            new(new("Yes"), 1f),
-            new(new("No"), 1f),
+            new(new("UI","yes"), 1f),
+            new(new("UI","no"), 1f),
         };
     }
 }

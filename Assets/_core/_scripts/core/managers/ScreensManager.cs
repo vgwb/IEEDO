@@ -31,24 +31,28 @@ namespace Ieedo
 
         public IEnumerator OpenCO(ScreenID id)
         {
+            if (!Screens.ContainsKey(id)) yield break;
             OpenScreens.Add(id);
             yield return Screens[id].OpenCO();
         }
 
         public IEnumerator CloseCO(ScreenID id)
         {
+            if (!Screens.ContainsKey(id)) yield break;
             OpenScreens.Remove(id);
             yield return Screens[id].CloseCO();
         }
 
         public void OpenImmediate(ScreenID id)
         {
+            if (!Screens.ContainsKey(id)) return;
             OpenScreens.Add(id);
             Screens[id].OpenImmediate();
         }
 
         public void CloseImmediate(ScreenID id)
         {
+            if (!Screens.ContainsKey(id)) return;
             OpenScreens.Remove(id);
             Screens[id].CloseImmediate();
         }

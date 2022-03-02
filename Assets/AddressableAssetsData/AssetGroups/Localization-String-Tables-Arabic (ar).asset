@@ -24,7 +24,19 @@ MonoBehaviour:
     - Locale-ar
     - Preload
   - m_GUID: 7d7c3cfa1b3974a788ce1a20fb0559d7
-    m_Address: cards_ar
+    m_Address: Categories_ar
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ar
+    - Preload
+  - m_GUID: 36bd3cb8b4368384c947552f3ba24207
+    m_Address: Activity_ar
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ar
+    - Preload
+  - m_GUID: a41557bc6df17af47a48d80edfdfc464
+    m_Address: Assessment_ar
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ar

@@ -23,7 +23,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    DefaultText: Civics & Culture
+    DefaultText: 
   Description:
     Key:
       m_TableReference:
@@ -34,7 +34,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    DefaultText: Civics & CultureCivics & CultureCivics & CultureCivics & Culture
+    DefaultText: 
   PaletteColor: {fileID: 11400000, guid: f577d573a5c52c341832836ae719824d, type: 2}
   SubCategories:
   - ID: 200

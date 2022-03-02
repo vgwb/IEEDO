@@ -7,8 +7,8 @@ namespace Ieedo
     public class CategoryDefinition : ScriptableObject, IDefinition
     {
         public CategoryID ID;
-        public LocalizedString Title;
-        public LocalizedString Description;
+        public LocString Title;
+        public LocString Description;
         public PaletteColor PaletteColor;
         public Color Color => PaletteColor.Color;
 

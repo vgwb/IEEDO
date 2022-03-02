@@ -7,9 +7,6 @@ namespace Ieedo
 {
     public class AssessmentFlowManager : MonoBehaviour
     {
-        public UIQuestionPopup QuestionPopup; // TODO: get from screens instead
-        public UIAssessmentRecapPopup AssessmentRecapPopup; // TODO: get from screens instead
-
         public void StartAssessment()
         {
             StartCoroutine(AssessmentCO());
@@ -17,6 +14,8 @@ namespace Ieedo
 
         public IEnumerator AssessmentCO()
         {
+            var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
+            var assessmentRecapScreen = Statics.Screens.Get(ScreenID.AssessmentRecap) as UIAssessmentRecapPopup;
             var introScreen = Statics.Screens.Get(ScreenID.AssessmentIntro) as UIAssessmentIntroScreen;
             yield return introScreen.ShowIntro();
             while (introScreen.IsOpen) yield return null;
@@ -36,9 +35,9 @@ namespace Ieedo
                 float totValue = 0f;
                 foreach (var question in questions)
                 {
-                    yield return QuestionPopup.ShowQuestion(question);
-                    while (QuestionPopup.IsOpen) yield return null;
-                    var selectedAnswer = question.Answers[QuestionPopup.LatestSelectedOption];
+                    yield return questionScreen.ShowQuestion(question);
+                    while (questionScreen.IsOpen) yield return null;
+                    var selectedAnswer = question.Answers[questionScreen.LatestSelectedOption];
                     totValue += selectedAnswer.Value;
                     nQuestions++;
                 }
@@ -48,8 +47,8 @@ namespace Ieedo
             }
 
             overallValue /= categories.Count;
-            AssessmentRecapPopup.ShowResults(assessmentPercentages, overallValue);
-            while (AssessmentRecapPopup.IsOpen) yield return null;
+            assessmentRecapScreen.ShowResults(assessmentPercentages, overallValue);
+            while (assessmentRecapScreen.IsOpen) yield return null;
 
             var profileData = Statics.Data.Profile;
             foreach (var categoryData in profileData.Categories)

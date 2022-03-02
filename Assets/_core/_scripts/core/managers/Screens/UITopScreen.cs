@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Lean.Gui;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
@@ -24,20 +25,21 @@ namespace Ieedo
 
         void Start()
         {
-            SetupButtonDown(InstantTranslationButton, StartInstantTranslate, StopInstantTranslate);
+            //SetTargetLocale();
+            SetupButtonDown(InstantTranslationButton, SetTargetLocale, SetSourceLocale);
             SetupButton(HamburgerButton, () => Statics.Screens.OpenImmediate(ScreenID.Debug));
             SwitchMode(TopBarMode.MainApp);
         }
 
-        private void StartInstantTranslate()
+        private void SetTargetLocale()
         {
-            var locales = LocalizationSettings.AvailableLocales.Locales;
-            LocalizationSettings.SelectedLocale = locales[1];
+            var targetLocale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.App.ApplicationConfig.TargetLocale);
+            if (targetLocale != null) LocalizationSettings.SelectedLocale = targetLocale;
         }
-        private void StopInstantTranslate()
+        private void SetSourceLocale()
         {
-            var locales = LocalizationSettings.AvailableLocales.Locales;
-            LocalizationSettings.SelectedLocale = locales[0];
+            var targetLocale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.App.ApplicationConfig.SourceLocale);
+            if (targetLocale != null) LocalizationSettings.SelectedLocale = targetLocale;
         }
 
         public TopBarMode Mode;

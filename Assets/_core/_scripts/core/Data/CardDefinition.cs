@@ -21,8 +21,8 @@ namespace Ieedo
     public class CardDefinition
     {
         public uint UID;
-        public LocalizedString Title;
-        public LocalizedString Description;
+        public LocString Title;
+        public LocString Description;
         public int Difficulty;
         public CategoryID Category;
         public SubCategoryID SubCategory;

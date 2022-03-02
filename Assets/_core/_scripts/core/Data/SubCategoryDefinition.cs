@@ -6,7 +6,7 @@ namespace Ieedo
     public class SubCategoryDefinition
     {
         public SubCategoryID ID;
-        public LocalizedString Title;
+        public LocString Title;
         public string Icon;
 
         public int Id => (int)ID;

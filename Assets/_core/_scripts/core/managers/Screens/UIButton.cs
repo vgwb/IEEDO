@@ -2,6 +2,7 @@
 using Lean.Gui;
 using Lean.Transition.Method;
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.UI;
 
 namespace Ieedo
@@ -16,6 +17,16 @@ namespace Ieedo
                 tm.text = value;
             }
         }
+
+        public LocalizedString Key
+        {
+            set
+            {
+                var tm = GetComponentInChildren<UIText>(true);
+                tm.Key = value;
+            }
+        }
+
 
         public Image Cap;
         public LeanGraphicColor NormalColor;

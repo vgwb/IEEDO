@@ -1,15 +1,17 @@
 ﻿using System;
+using UnityEngine.Localization;
 
 namespace Ieedo
 {
     [Serializable]
-    public struct LocalizedString
+    public struct LocString
     {
         public UnityEngine.Localization.LocalizedString Key;
         public string DefaultText;
 
-        public LocalizedString(string defaultText) : this()
+        public LocString(string table, string locKey, string defaultText = "") : this()
         {
+            Key = new LocalizedString( table,locKey);
             DefaultText = defaultText;
         }
 

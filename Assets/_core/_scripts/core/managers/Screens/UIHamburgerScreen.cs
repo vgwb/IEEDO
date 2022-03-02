@@ -1,3 +1,6 @@
+using UnityEngine.Localization;
+using UnityEngine.Localization.Tables;
+
 namespace Ieedo
 {
     public class UIHamburgerScreen : UIScreen
@@ -10,17 +13,17 @@ namespace Ieedo
 
         void Start()
         {
-            AddButton("Abort Activity", () => AbortActivity());
+            AddButton("action_abort_activity", () => AbortActivity());
 
-            AddButton("Switch Mode", () => SwitchMode());
+            AddButton("action_switch_session_mode", () => SwitchMode());
 
-            AddButton("DEBUG Assessment", () =>
+            AddButton("action_start_assessment", () =>
             {
                 Statics.AssessmentFlow.StartAssessment();
                 CloseImmediate();
             });
 
-            AddButton("DEBUG Reset Profile", () =>
+            AddButton("action_reset_profile", () =>
                 Statics.Data.CreateNewProfile(new ProfileDescription
                 {
                     Name = "TEST",
@@ -46,11 +49,11 @@ namespace Ieedo
             CloseImmediate();
         }
 
-        private void AddButton(string text, System.Action action)
+        private void AddButton(string locKey, System.Action action)
         {
             var btn = Instantiate(ButtonPrefab, ButtonPrefab.transform.parent);
             SetupButton(btn, action);
-            btn.Text = text;
+            btn.Text = new LocalizedString("UI",locKey).GetLocalizedString();
             btn.gameObject.SetActive(true);
         }
     }

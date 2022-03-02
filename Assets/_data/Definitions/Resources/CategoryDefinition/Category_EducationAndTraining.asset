@@ -14,26 +14,68 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp:Ieedo:CategoryDefinition
   ID: 3
   Title:
-    key: 
-    DefaultText: Education & Training
+    Key:
+      m_TableReference:
+        m_TableCollectionName: GUID:c72a3e86bc710427d83055e5adb307c5
+      m_TableEntryReference:
+        m_KeyId: 15338261569101824
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    DefaultText: 
   Description:
-    key: 
-    DefaultText: ' Education & TrainingEducation & TrainingEducation & TrainingEducation
-      & Training'
+    Key:
+      m_TableReference:
+        m_TableCollectionName: GUID:c72a3e86bc710427d83055e5adb307c5
+      m_TableEntryReference:
+        m_KeyId: 15338277742338048
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    DefaultText: 
   PaletteColor: {fileID: 11400000, guid: 3ce36213df1bb6b46bbfa85e12948412, type: 2}
   SubCategories:
   - ID: 300
     Title:
-      key: 
+      Key:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
       DefaultText: C 1
     Icon: \uf7e5
   - ID: 301
     Title:
-      key: 
+      Key:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
       DefaultText: C 2
     Icon: \ue05a
   - ID: 302
     Title:
-      key: 
+      Key:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
       DefaultText: C 3
     Icon: \uf6f0
+  references:
+    version: 2
+    RefIds: []

@@ -15,3 +15,6 @@ MonoBehaviour:
   DebugPanelEnabledAtStartup: 0
   DebugLogEnabled: 1
   DebugSaveProfileInJSON: 1
+  SaveCardsAsDefault: 0
+  SourceLocale: it
+  TargetLocale: en

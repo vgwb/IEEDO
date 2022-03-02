@@ -16,25 +16,25 @@ MonoBehaviour:
   Title:
     Key:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:c72a3e86bc710427d83055e5adb307c5
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 15338341822914560
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    DefaultText: Employment
+    DefaultText: 
   Description:
     Key:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:c72a3e86bc710427d83055e5adb307c5
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 15338345862029312
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    DefaultText: EmploymentEmploymentEmploymentEmployment
+    DefaultText: 
   PaletteColor: {fileID: 11400000, guid: e190f26b97b648648baf9a64db6d26a6, type: 2}
   SubCategories:
   - ID: 200

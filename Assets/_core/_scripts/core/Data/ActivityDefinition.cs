@@ -6,7 +6,7 @@ namespace Ieedo
     public class ActivityDefinition : ScriptableObject, IDefinition
     {
         public ActivityID ID;
-        public LocalizedString Title;
+        public LocString Title;
         public ActivityType Type;
         public string SceneName;
         public int ScoreToUnlock;

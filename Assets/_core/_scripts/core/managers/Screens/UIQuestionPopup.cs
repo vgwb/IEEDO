@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.UI;
 
 namespace Ieedo
@@ -23,17 +24,17 @@ namespace Ieedo
             var category = Statics.Data.Get<CategoryDefinition>((int)question.Category);
             TitleBG.color = category.Color;
             QuestionBG.color = category.Color.SetValue(0.5f).SetSaturation(0.5f);
-            var answers = question.Answers.Select(x => x.Answer.Text).ToArray();
-            yield return ShowQuestion(question.Category.ToString(), question.Question.Text, answers);
+            var answers = question.Answers.Select(x => x.Answer.Key).ToArray();
+            yield return ShowQuestion(category.Title.Key, question.Question.Key, answers);
         }
 
-        public IEnumerator ShowQuestion(string title, string question, string[] answers)
+        public IEnumerator ShowQuestion(LocalizedString title, LocalizedString question, LocalizedString[] answers)
         {
-            Title.text = title;
-            Question.text = question;
+            Title.Key = title;
+            Question.Key = question;
             for (var i = 0; i < answers.Length; i++)
             {
-                Buttons[i].Text = answers[i];
+                Buttons[i].Key = answers[i];
                 Buttons[i].gameObject.SetActive(true);
 
                 var selectedOption = i;

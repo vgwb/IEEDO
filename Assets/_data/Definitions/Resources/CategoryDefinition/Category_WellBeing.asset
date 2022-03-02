@@ -14,20 +14,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp:Ieedo:CategoryDefinition
   ID: 1
   Title:
-    key: 
-    DefaultText: Wellbeing
+    Key:
+      m_TableReference:
+        m_TableCollectionName: GUID:c72a3e86bc710427d83055e5adb307c5
+      m_TableEntryReference:
+        m_KeyId: 15338416317947904
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    DefaultText: 
   Description:
-    key: 
-    DefaultText: WellbeingWellbeingWellbeingWellbeingWellbeing
+    Key:
+      m_TableReference:
+        m_TableCollectionName: GUID:c72a3e86bc710427d83055e5adb307c5
+      m_TableEntryReference:
+        m_KeyId: 15338417286832128
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    DefaultText: 
   PaletteColor: {fileID: 11400000, guid: 1937ddda88d9cc045b1e2a0778a52541, type: 2}
   SubCategories:
   - ID: 100
     Title:
-      key: 
+      Key:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
       DefaultText: A 1
     Icon: \uf0fb
   - ID: 101
     Title:
-      key: 
+      Key:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
       DefaultText: A 2
     Icon: \uf557
+  references:
+    version: 2
+    RefIds: []

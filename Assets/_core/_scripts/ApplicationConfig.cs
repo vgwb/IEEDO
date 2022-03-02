@@ -41,9 +41,13 @@ namespace Ieedo
 
 
 
+        [Header("App")]
         /// <summary>
         /// If on, cards generated in the editor will be saved to the default cards instead of the profile cards
         /// </summary>
         public bool SaveCardsAsDefault = false;
+
+        public string SourceLocale;
+        public string TargetLocale;
     }
 }

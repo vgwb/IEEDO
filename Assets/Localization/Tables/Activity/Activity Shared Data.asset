@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Activity Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Activity
+  m_TableCollectionNameGuidString: e48f391c1e96c7040b7091b267464dc8
+  m_Entries:
+  - m_Id: 8414584832
+    m_Key: activity_title_blank
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82758623232
+    m_Key: activity_title_diary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143655723008
+    m_Key: activity_title_connect4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15270056583168
+    m_Key: activity_title_tictac
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15319184465920
+    m_Key: activity_title_unblock
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 3992833648747610142
+  references:
+    version: 2
+    RefIds:
+    - rid: 3992833648747610142
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1646235775763

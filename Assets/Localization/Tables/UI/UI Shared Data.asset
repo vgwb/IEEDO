@@ -51,6 +51,90 @@ MonoBehaviour:
     m_Key: continue
     m_Metadata:
       m_Items: []
+  - m_Id: 40474458029056000
+    m_Key: top_score
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40525580437577728
+    m_Key: action_abort_activity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40525707831173120
+    m_Key: action_switch_session_mode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40525760616488960
+    m_Key: action_start_assessment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40526294958235648
+    m_Key: action_reset_profile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40534266346233856
+    m_Key: assessment_recap_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535113130074112
+    m_Key: creation_choose_category
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535270735241216
+    m_Key: creation_choose_difficulty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535419633033216
+    m_Key: creation_choose_date
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535579280826368
+    m_Key: creation_choose_subcategory
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535952167034880
+    m_Key: creation_enter_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40537204766564352
+    m_Key: creation_enter_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40543073474469888
+    m_Key: activity_result_score
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40544570652254208
+    m_Key: activity_result_win
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40544588826173440
+    m_Key: activity_result_lose
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40544604743557120
+    m_Key: activity_result_quit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40544906540507136
+    m_Key: activity_result_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40546818237161472
+    m_Key: activity_score_to_unlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40549731508445184
+    m_Key: assessment_intro_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40550106646994944
+    m_Key: assessment_recap_overall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40557809452736512
+    m_Key: play
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

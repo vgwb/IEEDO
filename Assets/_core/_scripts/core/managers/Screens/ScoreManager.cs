@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Ieedo
@@ -5,18 +6,23 @@ namespace Ieedo
     public class ScoreManager : MonoBehaviour
     {
         public UIText CurrentScoreText;
-        public LocalizedString ScoreLoc;
+
+        // @note: used by Localization
+        public string CurrentScore => $"{Statics.Data.Profile.CurrentScore.ToString(),5}";
 
         void Awake()
         {
-            //ScoreLoc.Key.Arguments.Add(Statics.Data.Profile.CurrentScore);
-            ScoreLoc.Key.StringChanged += v => CurrentScoreText.text = v;// $"Score: {Statics.Data.Profile.CurrentScore.ToString(),5}";
+            if (CurrentScoreText != null)
+            {
+                CurrentScoreText.Key.Arguments = new List<object>{this};
+                CurrentScoreText.Key.StringChanged += v => CurrentScoreText.text = v;
+            }
         }
 
         public void AddScore(int value)
         {
             Statics.Data.Profile.CurrentScore += value;
-            CurrentScoreText.text = $"Score: {Statics.Data.Profile.CurrentScore.ToString(),5}";
+            CurrentScoreText.Key.RefreshString();
             Statics.Data.SaveProfile();
         }
     }
