@@ -38,6 +38,7 @@ namespace Ieedo
     {
         public GameObject[] ObjectsToHide;
         public ActivityDefinition CurrentActivity;
+        public ActivityManager CurrentActivityManager;
 
         public IEnumerator LaunchActivity(ActivityID activity)
         {
@@ -54,9 +55,13 @@ namespace Ieedo
                 yield break;
             }
 
+            CurrentActivityManager = activityManager;
             var activityData = Statics.Data.Profile.ActivitiesData.First(x => x.ID == CurrentActivity.ID);
             activityManager.ExternSetupActivity(activityData.CurrentLevel);
             activityManager.OnActivityEnd = CloseActivity;
+
+            var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
+            uiTopScreen.SwitchMode(TopBarMode.Activity);
         }
 
         private void CloseActivity(ActivityResult result)
@@ -90,6 +95,10 @@ namespace Ieedo
             Statics.Score.AddScore(result.Score);
 
             CurrentActivity = null;
+            CurrentActivityManager = null;
+
+            var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
+            uiTopScreen.SwitchMode(TopBarMode.MainApp);
         }
     }
 }

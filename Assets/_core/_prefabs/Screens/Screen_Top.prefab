@@ -134,8 +134,9 @@ MonoBehaviour:
   DefaultOutEnterPosition: {x: -2500, y: 0, z: 0}
   DefaultOutExitPosition: {x: 2500, y: 0, z: 0}
   InstantTranslationButton: {fileID: 5306248364941433071}
-  DebugButton: {fileID: 688192975619317733}
-  OptionsListPopup: {fileID: 0}
+  HamburgerButton: {fileID: 688192975619317733}
+  SessionModeContent: {fileID: 1205073937563120494}
+  Mode: 0
 --- !u!1001 &3513365468643381594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -512,6 +513,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
+--- !u!114 &1205073937563120494 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3126441530761408564, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
+  m_PrefabInstance: {fileID: 4312779785891218266}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cc64b31d9db45ac88e7bf4f20636e34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &4304707972933754519 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 29123062583139789, guid: fceadb55b0157a845a18d51b613747ef, type: 3}

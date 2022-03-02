@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Lean.Gui;
 using UnityEngine;
@@ -6,20 +7,27 @@ using UnityEngine.Localization.Settings;
 
 namespace Ieedo
 {
+    public enum TopBarMode
+    {
+        MainApp,
+        Activity,
+    }
+
     public class UITopScreen : UIScreen
     {
         public override ScreenID ID => ScreenID.Top;
 
         public LeanButton InstantTranslationButton;
-        public LeanButton DebugButton;
+        public LeanButton HamburgerButton;
+
+        public UITextContent SessionModeContent;
 
         void Start()
         {
             SetupButtonDown(InstantTranslationButton, StartInstantTranslate, StopInstantTranslate);
-            SetupButton(DebugButton, () => Statics.Screens.OpenImmediate(ScreenID.Debug));
+            SetupButton(HamburgerButton, () => Statics.Screens.OpenImmediate(ScreenID.Debug));
+            SwitchMode(TopBarMode.MainApp);
         }
-
-        public UIOptionsListPopup OptionsListPopup;
 
         private void StartInstantTranslate()
         {
@@ -32,24 +40,21 @@ namespace Ieedo
             LocalizationSettings.SelectedLocale = locales[0];
         }
 
-        private IEnumerator SelectionLanguageCO()
+        public TopBarMode Mode;
+        public void SwitchMode(TopBarMode mode)
         {
-            var options = new List<OptionData>();
-            var locales = LocalizationSettings.AvailableLocales.Locales;
-            foreach (var locale in locales)
+            Mode = mode;
+            switch (mode)
             {
-                options.Add(
-                    new OptionData
-                    {
-                        Text = locale.LocaleName,
-                        Color = Color.white,
-                    }
-                );
+                case TopBarMode.MainApp:
+                    SessionModeContent.gameObject.SetActive(true);
+                    break;
+                case TopBarMode.Activity:
+                    SessionModeContent.gameObject.SetActive(false);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(mode), mode, null);
             }
-            OptionsListPopup.ShowOptions("Choose Language", options);
-            while (OptionsListPopup.isActiveAndEnabled) yield return null;
-            var selectedLocale = locales[OptionsListPopup.LatestSelectedOption];
-            LocalizationSettings.SelectedLocale = selectedLocale;
         }
     }
 }

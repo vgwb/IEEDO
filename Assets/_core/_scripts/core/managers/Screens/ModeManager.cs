@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Ieedo
 {
-    public enum Mode
+    public enum SessionMode
     {
         Solo,
         Session
@@ -10,16 +10,16 @@ namespace Ieedo
 
     public class ModeManager : MonoBehaviour
     {
-        public Mode CurrentMode;
+        public SessionMode SessionMode;
 
         public UIText ModeText;
 
-        public void ToggleMode()
+        public void ToggleSessionMode()
         {
-            if (CurrentMode == Mode.Solo) CurrentMode = Mode.Session;
-            else CurrentMode = Mode.Solo;
+            if (SessionMode == SessionMode.Solo) SessionMode = SessionMode.Session;
+            else SessionMode = SessionMode.Solo;
 
-            ModeText.text = CurrentMode == Mode.Solo ? "\uf599" : "\uf599 \uf599";
+            ModeText.text = SessionMode == SessionMode.Solo ? "\uf599" : "\uf599 \uf599";
         }
     }
 }

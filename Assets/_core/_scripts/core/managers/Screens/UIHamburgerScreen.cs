@@ -10,10 +10,15 @@ namespace Ieedo
 
         void Start()
         {
+            AddButton("Abort Activity", () => AbortActivity());
 
             AddButton("Switch Mode", () => SwitchMode());
 
-            AddButton("DEBUG Assessment", () => Statics.AssessmentFlow.StartAssessment());
+            AddButton("DEBUG Assessment", () =>
+            {
+                Statics.AssessmentFlow.StartAssessment();
+                CloseImmediate();
+            });
 
             AddButton("DEBUG Reset Profile", () =>
                 Statics.Data.CreateNewProfile(new ProfileDescription
@@ -30,9 +35,15 @@ namespace Ieedo
 
         private void SwitchMode()
         {
-            Statics.Mode.ToggleMode();
+            Statics.Mode.ToggleSessionMode();
             var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
             uiPillarsScreen.SwitchViewMode(uiPillarsScreen.ViewMode == PillarsViewMode.Categories ? PillarsViewMode.Review : PillarsViewMode.Categories);
+        }
+
+        private void AbortActivity()
+        {
+            Statics.ActivityFlow.CurrentActivityManager.CloseActivity(new ActivityResult(ActivityResultState.Quit, 0));
+            CloseImmediate();
         }
 
         private void AddButton(string text, System.Action action)
