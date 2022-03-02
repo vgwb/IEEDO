@@ -38,15 +38,17 @@ namespace Ieedo
         public UIButton EditTitleButton;
         public UIButton EditDescriptionButton;
 
-        public UIButton CompleteCreationButton; // DEPRECATED
         public UIButton DeleteCardButton;
         public UIButton CloseFrontViewButton;
+        public UIButton CreationBackButton;
 
         public override ScreenID ID => ScreenID.CardList;
         public bool KeepPillars { get; set; }
 
         void Awake()
         {
+            CreationBackButton.gameObject.SetActive(false);
+
             SetupButton(ValidateCardButton, () =>
             {
                 CardsList.RemoveCard(frontCardUI);
@@ -238,6 +240,7 @@ namespace Ieedo
 
         public IEnumerator CardCreationFlowCO()
         {
+            CreationBackButton.gameObject.SetActive(true);
             EditSubCategoryButton.gameObject.SetActive(false);
             EditDifficultyButton.gameObject.SetActive(false);
             EditDateButton.gameObject.SetActive(false);
@@ -286,6 +289,7 @@ namespace Ieedo
 
             frontCardUI.AnimateToParent();
 
+            CreationBackButton.gameObject.SetActive(false);
             EditSubCategoryButton.gameObject.SetActive(true);
             EditDifficultyButton.gameObject.SetActive(true);
             EditDateButton.gameObject.SetActive(true);
@@ -466,17 +470,6 @@ namespace Ieedo
             SetupButton(EditTitleButton, () => StartCoroutine(EditTitleCO(autoReset:true)));
             SetupButton(EditDescriptionButton, () => StartCoroutine(EditDescriptionCO(autoReset:true)));
 
-            SetupButton(CompleteCreationButton, () =>
-            {
-                StopEditing();
-                CloseFrontView();
-
-                if (isNewCard) CardsList.AddCard(cardUI.Data, cardUI);
-                CardsList.SortList(SortByExpirationDate);
-
-                cardUI.RefreshUI();
-            });
-
             SetupButton(CloseFrontViewButton, () =>
             {
                 bool canComplete = !frontCardUI.Description.text.IsNullOrEmpty() && !frontCardUI.Title.text.IsNullOrEmpty();
@@ -509,9 +502,6 @@ namespace Ieedo
             // Wait for closing...
             while (CurrentFrontViewMode != FrontViewMode.None)
             {
-                //bool canComplete = !frontCardUI.Description.text.IsNullOrEmpty() && !frontCardUI.Title.text.IsNullOrEmpty();
-                //CompleteCreationButton.gameObject.SetActive(canComplete);   // TODO: instead use interactable
-
                 frontCardUI.Data.Definition.Title.DefaultText = TitleInputField.text;
                 frontCardUI.Data.Definition.Description.DefaultText = DescriptionInputField.text;
 
