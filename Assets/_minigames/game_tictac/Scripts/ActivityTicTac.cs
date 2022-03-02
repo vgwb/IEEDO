@@ -5,7 +5,7 @@ using Ieedo;
 
 namespace Ieedo.games.tictac
 {
-    public class ActivityTicTac : ActivityLogic
+    public class ActivityTicTac : ActivityManager
     {
         protected override void SetupActivity(int currentLevel)
         {

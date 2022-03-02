@@ -5,7 +5,7 @@ using Ieedo;
 
 namespace Ieedo.games.connect4
 {
-    public class ActivityConnect4 : ActivityLogic
+    public class ActivityConnect4 : ActivityManager
     {
         protected override void SetupActivity(int currentLevel)
         {

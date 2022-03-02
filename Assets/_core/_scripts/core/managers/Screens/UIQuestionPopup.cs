@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,20 +23,24 @@ namespace Ieedo
             var category = Statics.Data.Get<CategoryDefinition>((int)question.Category);
             TitleBG.color = category.Color;
             QuestionBG.color = category.Color.SetValue(0.5f).SetSaturation(0.5f);
-            Title.text = question.Category.ToString();
-            Question.text = question.Question.Text;
-            for (var i = 0; i < question.Answers.Length; i++)
+            var answers = question.Answers.Select(x => x.Answer.Text).ToArray();
+            yield return ShowQuestion(question.Category.ToString(), question.Question.Text, answers);
+        }
+
+        public IEnumerator ShowQuestion(string title, string question, string[] answers)
+        {
+            Title.text = title;
+            Question.text = question;
+            for (var i = 0; i < answers.Length; i++)
             {
-                var answer = question.Answers[i];
-                Buttons[i].Text = answer.Answer.Text;
-                Buttons[i].SetColor(Color.white);
+                Buttons[i].Text = answers[i];
                 Buttons[i].gameObject.SetActive(true);
 
                 var selectedOption = i;
                 SetupButton(Buttons[i], () => SelectOption(selectedOption));
             }
 
-            for (int i = question.Answers.Length; i < Buttons.Length; i++)
+            for (int i = answers.Length; i < Buttons.Length; i++)
             {
                 Buttons[i].gameObject.SetActive(false);
             }

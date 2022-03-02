@@ -6,7 +6,7 @@ using Ieedo.games;
 
 namespace minigame.unblock
 {
-    public class ActivityUnblock : ActivityLogic
+    public class ActivityUnblock : ActivityManager
     {
         public static ActivityUnblock I;
 

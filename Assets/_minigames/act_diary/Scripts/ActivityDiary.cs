@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Ieedo.games.diary
 {
-    public class ActivityDiary : ActivityLogic
+    public class ActivityDiary : ActivityManager
     {
         protected override void SetupActivity(int currentLevel)
         {

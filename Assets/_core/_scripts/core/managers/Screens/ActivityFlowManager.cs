@@ -47,15 +47,12 @@ namespace Ieedo
             while (!async.isDone) yield return null;
             foreach (var o in ObjectsToHide) o.SetActive(false);
 
-            var activityManager = FindObjectOfType<ActivityLogic>();
+            var activityManager = FindObjectOfType<ActivityManager>();
             if (activityManager == null)
             {
                 Debug.LogError("No ActivityLogic script could be found. Did you add it to the game scene?");
                 yield break;
             }
-
-            var uiPillarsScreen =  Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
-            uiPillarsScreen.Scene3D.SetActive(false);
 
             var activityData = Statics.Data.Profile.ActivitiesData.First(x => x.ID == CurrentActivity.ID);
             activityManager.ExternSetupActivity(activityData.CurrentLevel);
@@ -93,9 +90,6 @@ namespace Ieedo
             Statics.Score.AddScore(result.Score);
 
             CurrentActivity = null;
-
-            var uiPillarsScreen =  Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
-            uiPillarsScreen.Scene3D.SetActive(true);
         }
     }
 }
