@@ -9,7 +9,7 @@ namespace minigame.unblock
     public class ActivityUnblock : ActivityManager
     {
         public static ActivityUnblock I;
-
+        private int currentLevel;
         void Awake()
         {
             I = this;
@@ -17,27 +17,31 @@ namespace minigame.unblock
 
         void Start()
         {
-            GameManager.getInstance().init();
+            currentLevel = 1;
+            StartGame();
+        }
+
+        protected override void SetupActivity(int _currentLevel)
+        {
+            currentLevel = _currentLevel;
             StartGame();
         }
 
         void StartGame()
         {
+            GameManager.getInstance().init();
+            Debug.Log($"Starting game at level {currentLevel}");
+
             GameData.getInstance().isLock = false;
 
             Unblock tg = GameObject.Find("unblock").GetComponent<Unblock>();
             tg.clear();
 
             GameData.difficulty = 0;
-            GameData.instance.cLevel = Random.Range(0, GameData.totalLevel[GameData.difficulty]);
+            GameData.instance.cLevel = currentLevel; //Random.Range(0, GameData.totalLevel[GameData.difficulty]);
 
             tg.init();
 
-        }
-
-        protected override void SetupActivity(int currentLevel)
-        {
-            Debug.Log($"Starting game at level {currentLevel}");
         }
 
         public void FinishGame(bool playerWin)
