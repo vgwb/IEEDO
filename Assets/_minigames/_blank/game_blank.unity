@@ -411,7 +411,7 @@ GameObject:
   - component: {fileID: 534284671}
   - component: {fileID: 534284672}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Padding
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -439,7 +439,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -40, y: -40}
+  m_SizeDelta: {x: -80, y: -80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &534284672
 CanvasRenderer:
@@ -1570,54 +1570,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 40003938104812814, guid: b21cec470abfeb34192c6303df26ccd0, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 40003938104812814, guid: b21cec470abfeb34192c6303df26ccd0, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 40003938104812814, guid: b21cec470abfeb34192c6303df26ccd0, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 933.34985
-      objectReference: {fileID: 0}
-    - target: {fileID: 40003938104812814, guid: b21cec470abfeb34192c6303df26ccd0, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1437898778193185725, guid: b21cec470abfeb34192c6303df26ccd0, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1437898778193185725, guid: b21cec470abfeb34192c6303df26ccd0, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1437898778193185725, guid: b21cec470abfeb34192c6303df26ccd0, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 933.34985
-      objectReference: {fileID: 0}
-    - target: {fileID: 1437898778193185725, guid: b21cec470abfeb34192c6303df26ccd0, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -1253.5039
-      objectReference: {fileID: 0}
-    - target: {fileID: 5986491483096686815, guid: b21cec470abfeb34192c6303df26ccd0, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5986491483096686815, guid: b21cec470abfeb34192c6303df26ccd0, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5986491483096686815, guid: b21cec470abfeb34192c6303df26ccd0, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 933.34985
-      objectReference: {fileID: 0}
-    - target: {fileID: 5986491483096686815, guid: b21cec470abfeb34192c6303df26ccd0, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -1085.742
-      objectReference: {fileID: 0}
     - target: {fileID: 6016258725080366578, guid: b21cec470abfeb34192c6303df26ccd0, type: 3}
       propertyPath: m_Name
       value: ActivityCommons
@@ -1664,30 +1616,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6016258725080366579, guid: b21cec470abfeb34192c6303df26ccd0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6236332684460396150, guid: b21cec470abfeb34192c6303df26ccd0, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6236332684460396150, guid: b21cec470abfeb34192c6303df26ccd0, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6236332684460396150, guid: b21cec470abfeb34192c6303df26ccd0, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 933.34985
-      objectReference: {fileID: 0}
-    - target: {fileID: 6236332684460396150, guid: b21cec470abfeb34192c6303df26ccd0, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -917.9799
-      objectReference: {fileID: 0}
-    - target: {fileID: 6759231145218984203, guid: b21cec470abfeb34192c6303df26ccd0, type: 3}
-      propertyPath: BlockerBG
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8785521079937382090, guid: b21cec470abfeb34192c6303df26ccd0, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

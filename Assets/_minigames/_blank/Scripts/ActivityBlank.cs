@@ -14,14 +14,15 @@ namespace Ieedo.games.blank
 
         public void OnBtnWin()
         {
+            SoundManager.I.PlaySfx(SfxEnum.win);
             StartCoroutine(AskQuestionCO());
         }
 
         private IEnumerator AskQuestionCO()
         {
             var answer = new Ref<int>();
-            yield return ShowQuestion(new LocalizedString("UI","continue"),
-                new LocalizedString("UI","continue"), new []
+            yield return ShowQuestion(new LocalizedString("UI", "continue"),
+                new LocalizedString("UI", "continue"), new[]
                 {
                     new LocalizedString("UI","yes"),
                     new LocalizedString("UI","no")
@@ -41,6 +42,7 @@ namespace Ieedo.games.blank
 
         public void OnBtnLose()
         {
+            SoundManager.I.PlaySfx(SfxEnum.lose);
             Debug.Log("Game Blank Lose");
             CloseActivity(new ActivityResult(ActivityResultState.Lose, 2));
         }
