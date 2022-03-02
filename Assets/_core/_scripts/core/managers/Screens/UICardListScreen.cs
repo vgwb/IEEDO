@@ -174,6 +174,8 @@ namespace Ieedo
 
         private void OpenFrontView(UICard uiCard, FrontViewMode viewMode)
         {
+            if (CurrentFrontViewMode != FrontViewMode.None) return;
+
             prevFrontCardParent = uiCard.transform.parent;
             var uiCardRt = uiCard.GetComponent<RectTransform>();
             uiCardRt.SetParent(FrontViewPivot, true);
@@ -238,14 +240,19 @@ namespace Ieedo
 
         #region Card Creation & Editing
 
+        public void SetSubEditMode(bool choice)
+        {
+            CloseFrontViewButton.gameObject.SetActive(!choice);
+            EditSubCategoryButton.gameObject.SetActive(!choice);
+            EditDifficultyButton.gameObject.SetActive(!choice);
+            EditDateButton.gameObject.SetActive(!choice);
+            EditTitleButton.gameObject.SetActive(!choice);
+            EditDescriptionButton.gameObject.SetActive(!choice);
+        }
+
         public IEnumerator CardCreationFlowCO()
         {
             CreationBackButton.gameObject.SetActive(true);
-            EditSubCategoryButton.gameObject.SetActive(false);
-            EditDifficultyButton.gameObject.SetActive(false);
-            EditDateButton.gameObject.SetActive(false);
-            EditTitleButton.gameObject.SetActive(false);
-            EditDescriptionButton.gameObject.SetActive(false);
 
             // Create and show the card
             var cardDef = Statics.Cards.GenerateCardDefinition(
@@ -299,6 +306,7 @@ namespace Ieedo
 
         private IEnumerator EditCategoryCO(bool autoReset = false)
         {
+            SetSubEditMode(true);
             var catResult = new Ref<CategoryDefinition>();
             frontCardUI.transform.localPositionTransition(new Vector3(0, 100, 0), 0.25f);
             var options = new List<OptionData>();
@@ -322,10 +330,12 @@ namespace Ieedo
             Statics.Data.SaveCardDefinitions();
             frontCardUI.RefreshUI();
             if (autoReset) frontCardUI.AnimateToParent();
+            SetSubEditMode(false);
         }
 
         private IEnumerator EditDifficultyCO(bool autoReset = false)
         {
+            SetSubEditMode(true);
             var result = new Ref<int>();
             frontCardUI.transform.localPositionTransition(new Vector3(0, 150, 0), 0.25f);
             var options = new List<OptionData>();
@@ -349,10 +359,12 @@ namespace Ieedo
             Statics.Data.SaveCardDefinitions();
             frontCardUI.RefreshUI();
             if (autoReset) frontCardUI.AnimateToParent();
+            SetSubEditMode(false);
         }
 
         private IEnumerator EditDateCO(bool autoReset = false)
         {
+            SetSubEditMode(true);
             var result = new Ref<int>();
             frontCardUI.transform.localPositionTransition(new Vector3(0, 250, 0), 0.25f);
             var options = new List<OptionData>();
@@ -382,10 +394,12 @@ namespace Ieedo
             Statics.Data.SaveCardDefinitions();
             frontCardUI.RefreshUI();
             if (autoReset) frontCardUI.AnimateToParent();
+            SetSubEditMode(false);
         }
 
         private IEnumerator EditSubCategoryCO(CategoryDefinition categoryDef, bool autoReset = false)
         {
+            SetSubEditMode(true);
             var result = new Ref<SubCategoryDefinition>();
             frontCardUI.transform.localPositionTransition(new Vector3(0, -15, 0), 0.25f);
             var options = new List<OptionData>();
@@ -409,10 +423,12 @@ namespace Ieedo
             Statics.Data.SaveCardDefinitions();
             frontCardUI.RefreshUI();
             if (autoReset) frontCardUI.AnimateToParent();
+            SetSubEditMode(false);
         }
 
         public IEnumerator EditTitleCO(bool autoReset = false)
         {
+            SetSubEditMode(true);
             frontCardUI.transform.localPositionTransition(new Vector3(0, -100, 0), 0.25f);
             frontCardUI.transform.localScaleTransition(Vector3.one*1.2f, 0.25f);
             frontCardUI.transform.localEulerAnglesTransform(new Vector3(0,10,0), 0.25f);
@@ -423,10 +439,12 @@ namespace Ieedo
             Statics.Data.SaveProfile();
             Statics.Data.SaveCardDefinitions();
             if (autoReset) frontCardUI.AnimateToParent();
+            SetSubEditMode(false);
         }
 
         public IEnumerator EditDescriptionCO(bool autoReset = false)
         {
+            SetSubEditMode(true);
             frontCardUI.transform.localPositionTransition(new Vector3(0, 200, 0), 0.25f);
             frontCardUI.transform.localScaleTransition(Vector3.one*1.2f, 0.25f);
             frontCardUI.transform.localEulerAnglesTransform(new Vector3(0,10,0), 0.25f);
@@ -437,6 +455,7 @@ namespace Ieedo
             Statics.Data.SaveProfile();
             Statics.Data.SaveCardDefinitions();
             if (autoReset) frontCardUI.AnimateToParent();
+            SetSubEditMode(false);
         }
 
         private IEnumerator WaitForInputField(TMP_InputField inputField, UIText uiText)
