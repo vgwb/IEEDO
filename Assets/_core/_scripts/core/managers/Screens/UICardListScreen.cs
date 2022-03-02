@@ -439,10 +439,13 @@ namespace Ieedo
         {
             inputField.textComponent = uiText;
             inputField.text = uiText.text;
-            inputField.placeholder.enabled = inputField.text == "";
-            inputField.ActivateInputField();
-            yield return null; // Wait one frame
-            while (inputField.isFocused) yield return null;
+            inputField.placeholder.enabled = inputField.text.IsNullOrEmpty();
+            do
+            {
+                inputField.ActivateInputField();
+                yield return null; // Must wait one frame
+                while (inputField.isFocused) yield return null;
+            } while (inputField.text.IsNullOrEmpty());
         }
 
 
