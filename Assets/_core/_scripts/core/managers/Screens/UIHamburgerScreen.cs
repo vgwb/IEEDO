@@ -53,7 +53,7 @@ namespace Ieedo
         {
             var btn = Instantiate(ButtonPrefab, ButtonPrefab.transform.parent);
             SetupButton(btn, action);
-            btn.Text = new LocalizedString("UI",locKey).GetLocalizedString();
+            btn.Key = new LocalizedString("UI",locKey);
             btn.gameObject.SetActive(true);
         }
     }

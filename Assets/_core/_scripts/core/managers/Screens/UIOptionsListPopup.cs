@@ -21,7 +21,7 @@ namespace Ieedo
         public void ShowOptions(LocalizedString titleKey, List<OptionData> options)
         {
             if (Buttons == null) Buttons = ButtonsPivot.GetComponentsInChildren<UIButton>(true);
-            Title.text = titleKey.GetLocalizedString();
+            Title.Key = titleKey;
             for (var i = 0; i < options.Count; i++)
             {
                 var option = options[i];
