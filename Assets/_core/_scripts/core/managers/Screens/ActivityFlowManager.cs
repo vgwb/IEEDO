@@ -42,11 +42,14 @@ namespace Ieedo
 
         public IEnumerator LaunchActivity(ActivityID activity)
         {
+            Debug.Log("LaunchActivity " + activity);
             CurrentActivity = Statics.Data.Get<ActivityDefinition>((int)activity);
 
             var async = SceneManager.LoadSceneAsync(CurrentActivity.SceneName, LoadSceneMode.Additive);
-            while (!async.isDone) yield return null;
-            foreach (var o in ObjectsToHide) o.SetActive(false);
+            while (!async.isDone)
+                yield return null;
+            foreach (var o in ObjectsToHide)
+                o.SetActive(false);
 
             var activityManager = FindObjectOfType<ActivityManager>();
             if (activityManager == null)
@@ -74,10 +77,12 @@ namespace Ieedo
             if (CurrentActivity != null)
             {
                 var async = SceneManager.UnloadSceneAsync(CurrentActivity.SceneName);
-                while (!async.isDone) yield return null;
+                while (!async.isDone)
+                    yield return null;
             }
 
-            foreach (var o in ObjectsToHide) o.SetActive(true);
+            foreach (var o in ObjectsToHide)
+                o.SetActive(true);
 
             var resultScreen = Statics.Screens.Get(ScreenID.ActivityResult) as UIActivityResultScreen;
             yield return resultScreen.ShowResult(result);

@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-
 using Ieedo.utilities;
 
 namespace minigame.unblock
@@ -27,10 +26,12 @@ namespace minigame.unblock
             }
             StartCoroutine("initGame");
         }
+
         GameObject gridContainer;
         GameObject blockframe;
         IEnumerator initGame()
         {
+            Debug.Log("initGame Unblock");
             yield return new WaitForEndOfFrame();
             string[] tData = ScriptableObject.CreateInstance<Datas>().getData("unblock");
 
@@ -38,7 +39,7 @@ namespace minigame.unblock
             gridContainer = Instantiate(gridContainerOri, gridContainerOri.transform.parent);
             gridContainer.name = "gridContainer";
 
-            blockframe = GameObject.Find("chessboard");
+            blockframe = GameObject.Find("board");
             var corner4 = new Vector3[4];
             float tw, th;
 

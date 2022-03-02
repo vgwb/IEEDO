@@ -1,6 +1,7 @@
 using UnityEngine;
-using System.Collections;
 using UnityEngine.Localization;
+using System.Collections;
+using NaughtyAttributes;
 
 namespace Ieedo.games
 {
@@ -8,6 +9,13 @@ namespace Ieedo.games
     {
         public ActivityDefinition Activity;
         public System.Action<ActivityResult> OnActivityEnd;
+
+        [BoxGroup("Local Debug")]
+        public bool DebugAutoplay;
+        [BoxGroup("Local Debug")]
+        public int DebugStartLevel;
+
+        protected bool Inited = false;
 
         public void CloseActivity(ActivityResult result)
         {
@@ -27,7 +35,8 @@ namespace Ieedo.games
         {
             var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
             yield return questionScreen.ShowQuestion(title, question, answers);
-            while (questionScreen.IsOpen) yield return null;
+            while (questionScreen.IsOpen)
+                yield return null;
             selectedAnswerIndex.Value = questionScreen.LatestSelectedOption;
         }
     }
