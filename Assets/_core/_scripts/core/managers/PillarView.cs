@@ -121,7 +121,7 @@ namespace Ieedo
             for (int iCard = 0; iCard < data.NCards; iCard++)
             {
                 var cardGo = cards[iCard].gameObject;
-                cardGo.transform.localPositionTransition(Vector3.up*10, 1f, LeanEase.Accelerate);
+                cardGo.transform.localPositionTransition(Vector3.up*10, 0.25f, LeanEase.Smooth);
                 cardGo.transform.localEulerAnglesTransform(Vector3.up * Random.Range(0, 360f), 1f);
             }
         }
