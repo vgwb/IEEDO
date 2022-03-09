@@ -56,6 +56,7 @@ namespace Ieedo
                 borderImage.color = color * 1.4f;
             }
 
+            StampIcon.color = color;
             if (data.Status == CardValidationStatus.Validated)
             {
                 StampGO.SetActive(true);
@@ -69,11 +70,13 @@ namespace Ieedo
             else if (hasExpirationDate && data.IsExpired)
             {
                 StampGO.SetActive(true);
+                StampGO.GetComponent<Animation>().Play("pulsing");
                 StampIcon.text = Regex.Unescape("\uf54c");
             }
             else if(hasExpirationDate && data.IsDueToday)
             {
                 StampGO.SetActive(true);
+                StampGO.GetComponent<Animation>().Play("pulsing");
                 StampIcon.text = Regex.Unescape("\uf06a");
             }
             else

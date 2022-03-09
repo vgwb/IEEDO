@@ -17,6 +17,7 @@ namespace Ieedo
 
         public void ApplyVerticalSafeArea()
         {
+            if (Screen.safeArea.x == 0 && Screen.safeArea.y == 0) return;
             var bottomPixels = Screen.safeArea.y;
             var topPixel = Screen.currentResolution.height - (Screen.safeArea.y + Screen.safeArea.height);
 

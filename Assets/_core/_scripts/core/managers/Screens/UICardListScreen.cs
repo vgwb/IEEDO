@@ -5,7 +5,6 @@ using System.Linq;
 using Lean.Transition;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.Localization;
 
 namespace Ieedo
@@ -20,14 +19,19 @@ namespace Ieedo
 
         public UIOptionsListPopup optionsListPopup;
 
-        [Header("Card Review")]
-        public GameObject ReviewMode;
-        public UIButton ValidateCardButton;
-
         [Header("Card View")]
         public GameObject ViewMode;
         public UIButton CompleteCardButton;
         public UIButton EditCardButton;
+
+        [Header("Card Review")]
+        public GameObject ReviewMode;
+        public UIButton ValidateCardButton;
+        public UIButton UnCompleteCardButton;
+
+        [Header("Card Validated")]
+        public GameObject ValidatedMode;
+        public UIButton UnValidateCardButton;
 
         [Header("Card Create & Edit")]
         public GameObject EditMode;
@@ -50,44 +54,16 @@ namespace Ieedo
         {
             CreationBackButton.gameObject.SetActive(false);
 
-            SetupButton(ValidateCardButton, () =>
-            {
-                CardsList.RemoveCard(frontCardUI);
+            SetupButton(ValidateCardButton, () => StartCoroutine(ValidateCardCO(frontCardUI)));
+            SetupButton(CompleteCardButton, () => StartCoroutine(CompleteCardCO(frontCardUI)));
+            SetupButton(UnValidateCardButton, () => StartCoroutine(UnValidateCardCO(frontCardUI)));
+            SetupButton(UnCompleteCardButton, () => StartCoroutine(UnCompleteCardCO(frontCardUI)));
 
-                frontCardUI.Data.ValidationTimestamp = Timestamp.Now;
-                frontCardUI.Data.Status = CardValidationStatus.Validated;
-                Statics.Data.SaveProfile();
+            SetupButton(EditCardButton, () => SwitchToViewMode(FrontViewMode.Edit));
 
-                StartCoroutine(ValidateCardCO(frontCardUI));
-            });
-
-            SetupButton(CompleteCardButton, () =>
-            {
-                StartCoroutine(CompleteCardCO(frontCardUI));
-            });
-
-            SetupButton(EditCardButton, () =>
-            {
-                SwitchToViewMode(FrontViewMode.Edit);
-            });
-
-            SetupButton(CreateCardButton, () =>
-            {
-                StartCoroutine(CardCreationFlowCO());
-            });
+            SetupButton(CreateCardButton, () => StartCoroutine(CardCreationFlowCO()));
 
             CardsList.OnCardClicked = uiCard => OpenFrontView(uiCard, CurrentListViewMode == ListViewMode.ToDo ? FrontViewMode.Edit : FrontViewMode.Review);
-        }
-
-        private IEnumerator ValidateCardCO(UICard uiCard)
-        {
-            uiCard.transform.localPositionTransition(new Vector3(300,600,-150), 0.5f, LeanEase.Accelerate);
-            uiCard.transform.localEulerAnglesTransform(new Vector3(0,20,20), 0.5f, LeanEase.Accelerate);
-            yield return new WaitForSeconds(0.5f);
-            if (uiCard != null) Destroy(uiCard.gameObject);
-            CloseFrontView();
-            GoTo(ScreenID.Pillars);
-            Statics.Score.AddScore(50);
         }
 
         private IEnumerator DeleteCardCO(bool isNewCard, UICard card)
@@ -140,6 +116,77 @@ namespace Ieedo
             CloseFrontView();
             GoTo(ScreenID.Pillars);
             Statics.Score.AddScore(20);
+        }
+
+        private IEnumerator UnCompleteCardCO(UICard uiCard)
+        {
+            var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
+            Ref<int> selection = new Ref<int>();
+            yield return questionScreen.ShowQuestionFlow(new LocalizedString("UI","uncomplete_card_confirmation_title"),
+                new LocalizedString("UI","uncomplete_card_confirmation_description")
+                , new [] {
+                    new LocalizedString("UI","yes"),
+                    new LocalizedString("UI","no")
+                }, selection);
+            if (selection.Value == 1)
+                yield break;
+
+            CardsList.RemoveCard(frontCardUI);
+
+            frontCardUI.Data.CompletionTimestamp = Timestamp.None;
+            frontCardUI.Data.Status = CardValidationStatus.Todo;
+            Statics.Data.SaveProfile();
+
+            uiCard.transform.localPositionTransition(new Vector3(-300,600,-150), 0.5f, LeanEase.Accelerate);
+            uiCard.transform.localEulerAnglesTransform(new Vector3(0,-20,-20), 0.5f, LeanEase.Accelerate);
+            yield return new WaitForSeconds(0.5f);
+            if (uiCard != null) Destroy(uiCard.gameObject);
+            CloseFrontView();
+            Statics.Score.AddScore(-20);
+        }
+
+        private IEnumerator ValidateCardCO(UICard uiCard)
+        {
+            CardsList.RemoveCard(frontCardUI);
+
+            frontCardUI.Data.ValidationTimestamp = Timestamp.Now;
+            frontCardUI.Data.Status = CardValidationStatus.Validated;
+            Statics.Data.SaveProfile();
+
+            uiCard.transform.localPositionTransition(new Vector3(300,600,-150), 0.5f, LeanEase.Accelerate);
+            uiCard.transform.localEulerAnglesTransform(new Vector3(0,20,20), 0.5f, LeanEase.Accelerate);
+            yield return new WaitForSeconds(0.5f);
+            if (uiCard != null) Destroy(uiCard.gameObject);
+            CloseFrontView();
+            GoTo(ScreenID.Pillars);
+            Statics.Score.AddScore(50);
+        }
+
+        private IEnumerator UnValidateCardCO(UICard uiCard)
+        {
+            var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
+            Ref<int> selection = new Ref<int>();
+            yield return questionScreen.ShowQuestionFlow(new LocalizedString("UI","unvalidate_card_confirmation_title"),
+                new LocalizedString("UI","unvalidate_card_confirmation_description")
+                , new [] {
+                    new LocalizedString("UI","yes"),
+                    new LocalizedString("UI","no")
+                }, selection);
+            if (selection.Value == 1)
+                yield break;
+
+            CardsList.RemoveCard(frontCardUI);
+
+            frontCardUI.Data.ValidationTimestamp = Timestamp.None;
+            frontCardUI.Data.Status = CardValidationStatus.Completed;
+            Statics.Data.SaveProfile();
+
+            uiCard.transform.localPositionTransition(new Vector3(-300,600,-150), 0.5f, LeanEase.Accelerate);
+            uiCard.transform.localEulerAnglesTransform(new Vector3(0,-20,-20), 0.5f, LeanEase.Accelerate);
+            yield return new WaitForSeconds(0.5f);
+            if (uiCard != null) Destroy(uiCard.gameObject);
+            CloseFrontView();
+            Statics.Score.AddScore(-50);
         }
 
         protected override IEnumerator OnOpen()
@@ -201,7 +248,8 @@ namespace Ieedo
             View,
             Create,
             Edit,
-            Review
+            Review,
+            Validated
         }
 
         public ListViewMode CurrentListViewMode;
@@ -233,23 +281,33 @@ namespace Ieedo
                     EditMode.SetActive(true);
                     ViewMode.SetActive(false);
                     ReviewMode.SetActive(false);
+                    ValidatedMode.SetActive(false);
                     StartEditing(false);
                     break;
                 case FrontViewMode.Create:
                     EditMode.SetActive(true);
                     ViewMode.SetActive(false);
                     ReviewMode.SetActive(false);
+                    ValidatedMode.SetActive(false);
                     StartEditing(true);
                     break;
                 case FrontViewMode.View:
                     EditMode.SetActive(false);
                     ViewMode.SetActive(true);
                     ReviewMode.SetActive(false);
+                    ValidatedMode.SetActive(false);
                     break;
                 case FrontViewMode.Review:
                     EditMode.SetActive(false);
                     ViewMode.SetActive(false);
                     ReviewMode.SetActive(true);
+                    ValidatedMode.SetActive(false);
+                    break;
+                case FrontViewMode.Validated:
+                    EditMode.SetActive(false);
+                    ViewMode.SetActive(false);
+                    ReviewMode.SetActive(false);
+                    ValidatedMode.SetActive(true);
                     break;
             }
         }

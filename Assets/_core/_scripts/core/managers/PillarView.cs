@@ -89,7 +89,7 @@ namespace Ieedo
                 cardGo.transform.localEulerAngles = Vector3.zero;
 
                 var mr = cardGo.GetComponentInChildren<MeshRenderer>();
-                mr.material.color = data.Color;
+                mr.material.color = data.Cards[iCard].Definition.CategoryDefinition.Color * (1.4f + Random.Range(-0.2f, 0.2f));
 
                 cards[iCard].SetActive(true);
             }
@@ -110,6 +110,9 @@ namespace Ieedo
             for (int iCard = 0; iCard < data.NCards; iCard++)
             {
                 var cardGo = cards[iCard].gameObject;
+                cardGo.transform.localPosition = Vector3.up * (8 + Random.Range(0, 5));
+                cardGo.transform.localEulerAngles = Vector3.zero;
+
                 var finalPos = ComputeFinalPos(iCard);
                 cardGo.transform.localPositionTransition(finalPos, 1f, LeanEase.Bounce);
                 cardGo.transform.localEulerAnglesTransform(Vector3.up * Random.Range(0, 360f), 1f);
@@ -121,8 +124,8 @@ namespace Ieedo
             for (int iCard = 0; iCard < data.NCards; iCard++)
             {
                 var cardGo = cards[iCard].gameObject;
-                cardGo.transform.localPositionTransition(Vector3.up*10, 0.25f, LeanEase.Smooth);
-                cardGo.transform.localEulerAnglesTransform(Vector3.up * Random.Range(0, 360f), 1f);
+                cardGo.transform.positionTransition(Vector3.up*10 - Vector3.forward*5f, 0.25f, LeanEase.Smooth);
+                cardGo.transform.rotationTransition(Quaternion.Euler(Random.Range(0, 360f),  Random.Range(0, 360f),  Random.Range(0, 360f)), 0.25f);
             }
         }
 

@@ -19,7 +19,7 @@ namespace Ieedo
             if (SessionMode == SessionMode.Solo) SessionMode = SessionMode.Session;
             else SessionMode = SessionMode.Solo;
 
-            ModeText.text = SessionMode == SessionMode.Solo ? "\uf599" : "\uf599 \uf599";
+            ModeText.text = SessionMode == SessionMode.Solo ? "\uf007" : "\uf500";
         }
     }
 }
