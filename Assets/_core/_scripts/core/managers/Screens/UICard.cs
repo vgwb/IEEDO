@@ -40,7 +40,9 @@ namespace Ieedo
             Description.text = def.Description.Text;
             Icon.text = Regex.Unescape(def.Icon);
             Title.text = def.Title.Text;
-            var color = def.CategoryDefinition ? def.CategoryDefinition.Color : Color.white;
+            Category.gameObject.SetActive(def.CategoryDefinition != null);
+            Subcategory.gameObject.SetActive(def.CategoryDefinition != null);
+            var color = def.CategoryDefinition ? def.CategoryDefinition.Color : new Color(0.8f, 0.8f, 0.8f, 1f);
             ColorBase.color = color;
             Difficulty.gameObject.SetActive(def.Difficulty > 0);
             Difficulty.SetValue(def.Difficulty);
