@@ -343,13 +343,15 @@ namespace Ieedo
             var possibleDifficulties = new[] { 1, 2, 3 };
             foreach (var possibleDifficulty in possibleDifficulties)
             {
-                options.Add(
-                    new OptionData
-                    {
+                var optionData = new OptionData {
                         Text = possibleDifficulty.ToString(),
                         Color = Color.white,
-                    }
-                );
+                    };
+                optionData.Text = "\uf005";
+                for (int i = 0; i < possibleDifficulty-1; i++) {
+                    optionData.Text += "\uf005";
+                }
+                options.Add(optionData);
             }
             optionsListPopup.ShowOptions(new LocalizedString("UI","creation_choose_difficulty"), options);
             while (optionsListPopup.isActiveAndEnabled) yield return null;
@@ -411,7 +413,8 @@ namespace Ieedo
                     new OptionData
                     {
                         Text = subCategoryDef.Title.Text,
-                        Color = categoryDef.Color
+                        Color = categoryDef.Color,
+                        IconText = subCategoryDef.Icon
                     }
                 );
             }
