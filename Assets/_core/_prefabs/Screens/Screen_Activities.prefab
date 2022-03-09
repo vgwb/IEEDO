@@ -378,7 +378,7 @@ MonoBehaviour:
   m_Spacing: 20
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
-  m_ChildControlWidth: 0
+  m_ChildControlWidth: 1
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
@@ -517,6 +517,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3048583077096706675}
     m_Modifications:
+    - target: {fileID: 4339482727833193317, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -45.038086
+      objectReference: {fileID: 0}
     - target: {fileID: 5798968039306991859, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
       propertyPath: m_Name
       value: UIActivityBlock (1)
@@ -551,7 +555,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6525810561750470176, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 796.041
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6525810561750470176, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
       propertyPath: m_SizeDelta.y
@@ -634,6 +638,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3048583077096706675}
     m_Modifications:
+    - target: {fileID: 4339482727833193317, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -45.038086
+      objectReference: {fileID: 0}
     - target: {fileID: 5798968039306991859, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
       propertyPath: m_Name
       value: UIActivityBlock (6)
@@ -668,7 +676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6525810561750470176, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 796.041
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6525810561750470176, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
       propertyPath: m_SizeDelta.y
@@ -751,6 +759,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3048583077096706675}
     m_Modifications:
+    - target: {fileID: 4339482727833193317, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -45.038086
+      objectReference: {fileID: 0}
     - target: {fileID: 5798968039306991859, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
       propertyPath: m_Name
       value: UIActivityBlock (4)
@@ -785,7 +797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6525810561750470176, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 796.041
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6525810561750470176, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
       propertyPath: m_SizeDelta.y
@@ -868,6 +880,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3048583077096706675}
     m_Modifications:
+    - target: {fileID: 4339482727833193317, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -45.038086
+      objectReference: {fileID: 0}
     - target: {fileID: 5798968039306991859, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
       propertyPath: m_Name
       value: UIActivityBlock (3)
@@ -902,7 +918,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6525810561750470176, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 796.041
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6525810561750470176, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
       propertyPath: m_SizeDelta.y
@@ -985,6 +1001,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3048583077096706675}
     m_Modifications:
+    - target: {fileID: 4339482727833193317, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -45.038086
+      objectReference: {fileID: 0}
     - target: {fileID: 5798968039306991859, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
       propertyPath: m_Name
       value: UIActivityBlock
@@ -1019,7 +1039,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6525810561750470176, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 796.041
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6525810561750470176, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1102,6 +1122,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3048583077096706675}
     m_Modifications:
+    - target: {fileID: 4339482727833193317, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -45.038086
+      objectReference: {fileID: 0}
     - target: {fileID: 5798968039306991859, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
       propertyPath: m_Name
       value: UIActivityBlock (2)
@@ -1136,7 +1160,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6525810561750470176, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 796.041
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6525810561750470176, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1349,6 +1373,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3048583077096706675}
     m_Modifications:
+    - target: {fileID: 4339482727833193317, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -45.038086
+      objectReference: {fileID: 0}
     - target: {fileID: 5798968039306991859, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
       propertyPath: m_Name
       value: UIActivityBlock (5)
@@ -1383,7 +1411,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6525810561750470176, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 796.041
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6525810561750470176, guid: 5c3efa6cdb8b22c45bde90720cf17813, type: 3}
       propertyPath: m_SizeDelta.y
