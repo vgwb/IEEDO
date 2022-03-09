@@ -72,6 +72,8 @@ namespace Ieedo
         private PillarView currentFocusedPillar;
         public void SetFocus(bool _autoRotating, PillarView focusOnPillar = null)
         {
+            if (focusOnPillar != null && focusOnPillar == currentFocusedPillar) return;
+
             var targetRot = Quaternion.identity;
             if (focusOnPillar != null)
             {
