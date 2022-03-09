@@ -81,8 +81,8 @@ namespace Ieedo
 
         private IEnumerator ValidateCardCO(UICard uiCard)
         {
-            uiCard.transform.localPositionTransition(new Vector3(-300,600,-150), 0.5f, LeanEase.Accelerate);
-            uiCard.transform.localEulerAnglesTransform(new Vector3(0,-20,-20), 0.5f, LeanEase.Accelerate);
+            uiCard.transform.localPositionTransition(new Vector3(300,600,-150), 0.5f, LeanEase.Accelerate);
+            uiCard.transform.localEulerAnglesTransform(new Vector3(0,20,20), 0.5f, LeanEase.Accelerate);
             yield return new WaitForSeconds(0.5f);
             if (uiCard != null) Destroy(uiCard.gameObject);
             CloseFrontView();
