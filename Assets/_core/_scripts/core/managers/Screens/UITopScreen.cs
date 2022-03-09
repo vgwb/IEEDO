@@ -27,7 +27,15 @@ namespace Ieedo
         {
             //SetTargetLocale();
             SetupButtonDown(InstantTranslationButton, SetTargetLocale, SetSourceLocale);
-            SetupButton(HamburgerButton, () => Statics.Screens.OpenImmediate(ScreenID.Debug));
+            SetupButton(HamburgerButton, () =>
+            {
+                if (Statics.Screens.Get(ScreenID.Debug).gameObject.activeSelf)
+                {
+                    Statics.Screens.CloseImmediate(ScreenID.Debug);
+                } else {
+                    Statics.Screens.OpenImmediate(ScreenID.Debug);
+                }
+            });
             SwitchMode(TopBarMode.MainApp);
         }
 

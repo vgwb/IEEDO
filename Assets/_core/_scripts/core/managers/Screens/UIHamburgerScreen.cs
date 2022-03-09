@@ -9,8 +9,6 @@ namespace Ieedo
 
         public UIButton ButtonPrefab;
 
-        public UIButton CloseButton;
-
         void Start()
         {
             AddButton("action_abort_activity", () => AbortActivity());
@@ -30,8 +28,6 @@ namespace Ieedo
                     Country = "en",
                     Language = Language.English,
                 }));
-
-            SetupButton(CloseButton, CloseImmediate);
 
             ButtonPrefab.gameObject.SetActive(false);
         }
