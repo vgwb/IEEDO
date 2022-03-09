@@ -68,6 +68,16 @@ namespace Ieedo
 
                         var pillarData = new PillarData
                         {
+                            Color = Color.yellow,
+                            Height = 0.5f,
+                            Cards = validatedCards.ToList(),
+                            LocalizedKey = new LocalizedString("UI","pillar_validated"),
+                            IconString = "\uf560"
+                        };
+                        pillarsData.Pillars.Add(pillarData);
+
+                        pillarData = new PillarData
+                        {
                             Color = Color.red,
                             Height = 0.5f,
                             Cards = completedCards.ToList(),
@@ -76,15 +86,6 @@ namespace Ieedo
                         };
                         pillarsData.Pillars.Add(pillarData);
 
-                        pillarData = new PillarData
-                        {
-                            Color = Color.yellow,
-                            Height = 0.5f,
-                            Cards = validatedCards.ToList(),
-                            LocalizedKey = new LocalizedString("UI","pillar_validated"),
-                            IconString = "\uf560"
-                        };
-                        pillarsData.Pillars.Add(pillarData);
                     }
                     PillarsManager.SetFocus(false, PillarsManager.PillarViews[0]);
                     break;
