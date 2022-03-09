@@ -68,7 +68,7 @@ namespace Ieedo
 
                         var pillarData = new PillarData
                         {
-                            Color = Color.yellow,
+                            Color = Color.gray,
                             Height = 0.5f,
                             Cards = validatedCards.ToList(),
                             LocalizedKey = new LocalizedString("UI","pillar_validated"),
@@ -78,7 +78,7 @@ namespace Ieedo
 
                         pillarData = new PillarData
                         {
-                            Color = Color.red,
+                            Color = new Color(0.3f,0.3f,0.3f,1f),
                             Height = 0.5f,
                             Cards = completedCards.ToList(),
                             LocalizedKey = new LocalizedString("UI","pillar_completed"),
