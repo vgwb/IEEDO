@@ -10,12 +10,12 @@ namespace Ieedo
     [System.Serializable]
     public class PillarData
     {
+        public string IconString;
         public float Height;
         public Color Color = Color.white;
         public int NCards => Cards.Count;
         public List<CardData> Cards;
         public LocalizedString LocalizedKey;
-        public bool PrioritizeLabel;
     }
 
     [System.Serializable]
@@ -74,12 +74,18 @@ namespace Ieedo
             var targetRot = Quaternion.identity;
             if (focusOnPillar != null)
             {
+                foreach (var otherPillarView in PillarViews)
+                {
+                    otherPillarView.ShowLabel(false);
+                }
+
                 var dir = focusOnPillar.transform.localPosition;
                 dir = Quaternion.Euler(0, 180, 0) * dir;
                 targetRot = Quaternion.LookRotation(dir);
                 var targetEuls = targetRot.eulerAngles;
                 targetEuls.y *= -1;
                 targetRot = Quaternion.Euler(targetEuls);
+                focusOnPillar.ShowLabel(true);
             }
             autoRotating = _autoRotating;
             if (!_autoRotating) transform.localRotationTransition(targetRot, 0.5f);

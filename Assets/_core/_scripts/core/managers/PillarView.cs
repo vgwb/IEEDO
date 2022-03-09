@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using Lean.Common;
 using Lean.Touch;
 using Lean.Transition;
@@ -19,7 +20,8 @@ namespace Ieedo
 
         public Transform gfx;
         public MeshRenderer mr;
-        public TextMeshPro text;
+        public TextMeshPro valueText;
+        public TextMeshPro labelText;
 
         void Awake()
         {
@@ -31,14 +33,33 @@ namespace Ieedo
         public PillarData Data => data;
         private float gfxHeight => Mathf.Max(data.Height, 0.05f);
 
-        public void ShowHeight()
+        public void ShowValue(bool choice)
         {
-            text.text = $"{Mathf.RoundToInt(data.Height*100)}%";
+            if (choice)
+            {
+                valueText.gameObject.SetActive(true);
+                if (!data.IconString.IsNullOrEmpty())
+                    valueText.text = Regex.Unescape(data.IconString);
+                else
+                    valueText.text = $"{Mathf.RoundToInt(data.Height*100)}%";
+            }
+            else valueText.gameObject.SetActive(false);
         }
 
-        public void ShowLabel()
+        public void ShowLabel(bool choice)
         {
-            text.GetComponent<LocalizeStringEvent>().StringReference = data.LocalizedKey;
+            if (choice)
+            {
+                labelText.gameObject.SetActive(true);
+                labelText.GetComponent<LocalizeStringEvent>().StringReference = data.LocalizedKey;
+                var targetColor = labelText.color;
+                labelText.color = new Color(targetColor.r, targetColor.g, targetColor.b, 0f);
+                labelText.colorTransition(targetColor, 0.5f);
+            }
+            else
+            {
+                labelText.gameObject.SetActive(false);
+            }
         }
 
         public void ShowData(PillarData data)
@@ -49,8 +70,8 @@ namespace Ieedo
             mr.material = new Material(mr.material);
             mr.material.SetColor("_Color", data.Color);
             mr.material.SetColor("_EmissionColor", data.Color*0.5f);
-            if (data.PrioritizeLabel) ShowLabel();
-            else ShowHeight();
+            ShowLabel(false);
+            ShowValue(true);
 
             foreach (var card in cards)
                 card.SetActive(false);
