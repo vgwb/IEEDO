@@ -85,20 +85,44 @@ namespace Ieedo
 
                 var cardGo = cards[iCard].gameObject;
 
-                float pillarTop = gfxHeight * 2.5f;
                 cardGo.transform.localPosition = Vector3.up * 25;
                 cardGo.transform.localEulerAngles = Vector3.zero;
-
-                var finalPos = Vector3.up * (pillarTop + iCard * 0.025f);
-                finalPos += new Vector3(Random.Range(-0.2f, 0.2f), 0, Random.Range(-0.2f, 0.2f));
-
-                cardGo.transform.localPositionTransition(finalPos, 1f, LeanEase.Bounce);
-                cardGo.transform.localEulerAnglesTransform(Vector3.up * Random.Range(0, 360f), 1f);
 
                 var mr = cardGo.GetComponentInChildren<MeshRenderer>();
                 mr.material.color = data.Color;
 
                 cards[iCard].SetActive(true);
+            }
+
+            CardsIn();
+        }
+
+        private Vector3 ComputeFinalPos(int iCard)
+        {
+            float pillarTop = gfxHeight * 2.5f;
+            var finalPos = Vector3.up * (pillarTop + iCard * 0.025f);
+            finalPos += new Vector3(Random.Range(-0.2f, 0.2f), 0, Random.Range(-0.2f, 0.2f));
+            return finalPos;
+        }
+
+        public void CardsIn()
+        {
+            for (int iCard = 0; iCard < data.NCards; iCard++)
+            {
+                var cardGo = cards[iCard].gameObject;
+                var finalPos = ComputeFinalPos(iCard);
+                cardGo.transform.localPositionTransition(finalPos, 1f, LeanEase.Bounce);
+                cardGo.transform.localEulerAnglesTransform(Vector3.up * Random.Range(0, 360f), 1f);
+            }
+        }
+
+        public void CardsOut()
+        {
+            for (int iCard = 0; iCard < data.NCards; iCard++)
+            {
+                var cardGo = cards[iCard].gameObject;
+                cardGo.transform.localPositionTransition(Vector3.up*10, 1f, LeanEase.Accelerate);
+                cardGo.transform.localEulerAnglesTransform(Vector3.up * Random.Range(0, 360f), 1f);
             }
         }
 
