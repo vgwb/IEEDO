@@ -8,8 +8,8 @@ namespace Ieedo
 
         public void SetValue(int v)
         {
-            for (int i = 0; i < v; i++) Icons[i].color = Color.yellow;
-            for (int i = v; i < Icons.Length; i++) Icons[i].color = Color.gray;
+            for (int i = 0; i < v; i++) Icons[i].color = Color.white;
+            for (int i = v; i < Icons.Length; i++) Icons[i].color = new Color(1f, 1f, 1f, 0.3f);
         }
     }
 }

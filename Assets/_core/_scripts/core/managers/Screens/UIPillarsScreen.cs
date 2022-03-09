@@ -72,7 +72,7 @@ namespace Ieedo
                             Height = 0.5f,
                             Cards = completedCards.ToList(),
                             LocalizedKey = new LocalizedString("UI","pillar_completed"),
-                            PrioritizeLabel = true,
+                            IconString = "\uf00c"
                         };
                         pillarsData.Pillars.Add(pillarData);
 
@@ -82,7 +82,7 @@ namespace Ieedo
                             Height = 0.5f,
                             Cards = validatedCards.ToList(),
                             LocalizedKey = new LocalizedString("UI","pillar_validated"),
-                            PrioritizeLabel = true,
+                            IconString = "\uf560"
                         };
                         pillarsData.Pillars.Add(pillarData);
                     }
@@ -110,7 +110,7 @@ namespace Ieedo
             var data = pillarView.Data;
 
             PillarsManager.SetFocus(false, pillarView);
-            pillarView.ShowLabel();
+
 
             Camera3D.transform.localPositionTransition(new Vector3(0, 10.5f, -13), 0.5f);
             Camera3D.transform.localRotationTransition(new Quaternion(0.255145639f,0.0823278204f,-0.0286051836f,0.962966561f), 0.5f);
