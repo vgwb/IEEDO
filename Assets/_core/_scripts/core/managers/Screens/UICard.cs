@@ -56,7 +56,17 @@ namespace Ieedo
                 borderImage.color = color * 1.4f;
             }
 
-            if (hasExpirationDate && data.IsExpired)
+            if (data.Status == CardValidationStatus.Validated)
+            {
+                StampGO.SetActive(true);
+                StampIcon.text = Regex.Unescape("\uf560");
+            }
+            else if (data.Status == CardValidationStatus.Completed)
+            {
+                StampGO.SetActive(true);
+                StampIcon.text = Regex.Unescape("\uf00c");
+            }
+            else if (hasExpirationDate && data.IsExpired)
             {
                 StampGO.SetActive(true);
                 StampIcon.text = Regex.Unescape("\uf54c");
