@@ -34,10 +34,7 @@ namespace Ieedo.games
         public IEnumerator ShowQuestion(LocalizedString title, LocalizedString question, LocalizedString[] answers, Ref<int> selectedAnswerIndex)
         {
             var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
-            yield return questionScreen.ShowQuestion(title, question, answers);
-            while (questionScreen.IsOpen)
-                yield return null;
-            selectedAnswerIndex.Value = questionScreen.LatestSelectedOption;
+            yield return questionScreen.ShowQuestionFlow(title, question, answers, selectedAnswerIndex);
         }
     }
 }

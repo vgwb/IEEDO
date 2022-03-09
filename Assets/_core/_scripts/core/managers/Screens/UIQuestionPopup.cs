@@ -28,6 +28,13 @@ namespace Ieedo
             yield return ShowQuestion(category.Title.Key, question.Question.Key, answers);
         }
 
+        public IEnumerator ShowQuestionFlow(LocalizedString title, LocalizedString question, LocalizedString[] answers, Ref<int> selectedAnswer)
+        {
+            yield return ShowQuestion(title, question, answers);
+            while (IsOpen) yield return null;
+            selectedAnswer.Value = LatestSelectedOption;
+        }
+
         public IEnumerator ShowQuestion(LocalizedString title, LocalizedString question, LocalizedString[] answers)
         {
             Title.Key = title;
@@ -56,5 +63,6 @@ namespace Ieedo
             LatestSelectedOption = selectedOption;
             Close();
         }
+
     }
 }

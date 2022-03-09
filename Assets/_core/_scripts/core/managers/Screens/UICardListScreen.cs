@@ -63,12 +63,6 @@ namespace Ieedo
 
             SetupButton(CompleteCardButton, () =>
             {
-                CardsList.RemoveCard(frontCardUI);
-
-                frontCardUI.Data.CompletionTimestamp = Timestamp.Now;
-                frontCardUI.Data.Status = CardValidationStatus.Completed;
-                Statics.Data.SaveProfile();
-
                 StartCoroutine(CompleteCardCO(frontCardUI));
             });
 
@@ -96,11 +90,50 @@ namespace Ieedo
             Statics.Score.AddScore(50);
         }
 
+        private IEnumerator DeleteCardCO(bool isNewCard, UICard card)
+        {
+            var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
+            Ref<int> selection = new Ref<int>();
+            yield return questionScreen.ShowQuestionFlow(new LocalizedString("UI","delete_card_confirmation_title"),
+                new LocalizedString("UI","complete_card_confirmation_description")
+                , new [] {
+                    new LocalizedString("UI","yes"),
+                    new LocalizedString("UI","no")
+                }, selection);
+
+            if (selection.Value == 1)
+                yield break;
+
+            if (!isNewCard) CardsList.RemoveCard(card);
+            StopEditing();
+            CloseFrontView();
+
+            Statics.Cards.DeleteCard(card.Data);
+            Statics.Cards.DeleteCardDefinition(card.Data.Definition);
+        }
 
         private IEnumerator CompleteCardCO(UICard uiCard)
         {
-            uiCard.transform.localPositionTransition(new Vector3(-300,600,-150), 0.5f, LeanEase.Accelerate);
-            uiCard.transform.localEulerAnglesTransform(new Vector3(0,-20,-20), 0.5f, LeanEase.Accelerate);
+            var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
+            Ref<int> selection = new Ref<int>();
+            yield return questionScreen.ShowQuestionFlow(new LocalizedString("UI","complete_card_confirmation_title"),
+                new LocalizedString("UI","complete_card_confirmation_description")
+                , new [] {
+                    new LocalizedString("UI","yes"),
+                    new LocalizedString("UI","no")
+                }, selection);
+
+            if (selection.Value == 1)
+                yield break;
+
+            CardsList.RemoveCard(frontCardUI);
+
+            frontCardUI.Data.CompletionTimestamp = Timestamp.Now;
+            frontCardUI.Data.Status = CardValidationStatus.Completed;
+            Statics.Data.SaveProfile();
+
+            uiCard.transform.localPositionTransition(new Vector3(300,600,-150), 0.5f, LeanEase.Accelerate);
+            uiCard.transform.localEulerAnglesTransform(new Vector3(0,20,20), 0.5f, LeanEase.Accelerate);
             yield return new WaitForSeconds(0.5f);
             if (uiCard != null) Destroy(uiCard.gameObject);
             CloseFrontView();
@@ -509,12 +542,8 @@ namespace Ieedo
 
             SetupButton(DeleteCardButton, () =>
             {
-                if (!isNewCard) CardsList.RemoveCard(frontCardUI);
-                StopEditing();
-                CloseFrontView();
+                StartCoroutine(DeleteCardCO(isNewCard, frontCardUI));
 
-                Statics.Cards.DeleteCard(cardUI.Data);
-                Statics.Cards.DeleteCardDefinition(cardUI.Data.Definition);
             });
 
             StartCoroutine(EditModeCO());
