@@ -114,6 +114,7 @@ namespace Ieedo
 
         private IEnumerator CompleteCardCO(UICard uiCard)
         {
+            /*
             var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
             Ref<int> selection = new Ref<int>();
             yield return questionScreen.ShowQuestionFlow(new LocalizedString("UI","complete_card_confirmation_title"),
@@ -122,9 +123,9 @@ namespace Ieedo
                     new LocalizedString("UI","yes"),
                     new LocalizedString("UI","no")
                 }, selection);
-
             if (selection.Value == 1)
                 yield break;
+                */
 
             CardsList.RemoveCard(frontCardUI);
 
