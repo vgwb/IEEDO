@@ -12,15 +12,31 @@ namespace Ieedo
 
         void Start()
         {
-            SetupButton(btnActivities, () => GoTo(ScreenID.Activities));
-            SetupButton(btnPillars, () => GoTo(ScreenID.Pillars));
+            SetupButton(btnActivities, () =>
+            {
+                ToggleSelection(btnActivities);
+                GoTo(ScreenID.Activities);
+            });
+            SetupButton(btnPillars, () =>
+            {
+                ToggleSelection(btnPillars);
+                GoTo(ScreenID.Pillars);
+            });
             SetupButton(btnCards, () =>
             {
+                ToggleSelection(btnCards);
                 var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
                 uiCardListScreen.LoadToDoCards();
                 uiCardListScreen.KeepPillars = false;
                 GoTo(ScreenID.CardList);
             });
+        }
+
+        private void ToggleSelection(LeanButton selectedBtn)
+        {
+            btnActivities.interactable = btnActivities != selectedBtn;
+            btnCards.interactable = btnCards != selectedBtn;
+            btnPillars.interactable = btnPillars != selectedBtn;
         }
     }
 }
