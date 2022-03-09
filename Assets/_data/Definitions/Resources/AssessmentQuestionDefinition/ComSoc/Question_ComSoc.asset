@@ -26,7 +26,7 @@ MonoBehaviour:
     DefaultText: 
   Category: 6
   Weight: 1
-  AAnswers:
+  Answers:
   - Answer:
       Key:
         m_TableReference:
@@ -38,7 +38,7 @@ MonoBehaviour:
         m_WaitForCompletion: 0
         m_LocalVariables: []
       DefaultText: 
-    Value: 1
+    Value: 0
   - Answer:
       Key:
         m_TableReference:
