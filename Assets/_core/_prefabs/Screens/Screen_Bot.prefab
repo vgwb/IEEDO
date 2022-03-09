@@ -206,9 +206,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5365527957603926557}
     m_Modifications:
+    - target: {fileID: 8746676026341688666, guid: bf941c163aa023840887bd2d59ca1453, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -132.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 8746676026341688666, guid: bf941c163aa023840887bd2d59ca1453, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.000045776
+      objectReference: {fileID: 0}
+    - target: {fileID: 8746676026341688666, guid: bf941c163aa023840887bd2d59ca1453, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8746676026341688666, guid: bf941c163aa023840887bd2d59ca1453, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8746676026341688666, guid: bf941c163aa023840887bd2d59ca1453, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8746676026341688666, guid: bf941c163aa023840887bd2d59ca1453, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8746676026341688666, guid: bf941c163aa023840887bd2d59ca1453, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8746676026341688666, guid: bf941c163aa023840887bd2d59ca1453, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 8746676026341688667, guid: bf941c163aa023840887bd2d59ca1453, type: 3}
       propertyPath: m_text
-      value: \uf51e
+      value: \uf036
       objectReference: {fileID: 0}
     - target: {fileID: 8746676026341688667, guid: bf941c163aa023840887bd2d59ca1453, type: 3}
       propertyPath: m_fontSize
@@ -349,7 +381,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8746676026341688667, guid: bf941c163aa023840887bd2d59ca1453, type: 3}
       propertyPath: m_text
-      value: \uf11b
+      value: \uf248
       objectReference: {fileID: 0}
     - target: {fileID: 8746676026341688667, guid: bf941c163aa023840887bd2d59ca1453, type: 3}
       propertyPath: m_fontSize
@@ -486,7 +518,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8746676026341688667, guid: bf941c163aa023840887bd2d59ca1453, type: 3}
       propertyPath: m_text
-      value: \uf03a
+      value: \uf24d
       objectReference: {fileID: 0}
     - target: {fileID: 8746676026341688667, guid: bf941c163aa023840887bd2d59ca1453, type: 3}
       propertyPath: m_fontSize

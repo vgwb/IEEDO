@@ -32,7 +32,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40474458029056000
-    m_Localized: "{CurrentScore} \u0646\u0639\u0645"
+    m_Localized: '{CurrentScore}'
     m_Metadata:
       m_Items:
       - rid: 3992833648747610128
