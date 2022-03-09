@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Localization;
 
@@ -6,36 +7,42 @@ namespace Ieedo
 {
     public struct OptionData
     {
+        public string IconText;
         public string Text;
         public Color Color;
     }
 
     public class UIOptionsListPopup : UIScreen
     {
-        public UIText Title;
+        public UITooltip Tooltip;
 
         public Transform ButtonsPivot;
-        private UIButton[] Buttons;
+        private UIOptionLine[] Options;
         public int LatestSelectedOption;
 
         public void ShowOptions(LocalizedString titleKey, List<OptionData> options)
         {
-            if (Buttons == null) Buttons = ButtonsPivot.GetComponentsInChildren<UIButton>(true);
-            Title.Key = titleKey;
+            if (Options == null) Options = ButtonsPivot.GetComponentsInChildren<UIOptionLine>(true);
+            Tooltip.Text.Key = titleKey;
             for (var i = 0; i < options.Count; i++)
             {
                 var option = options[i];
-                Buttons[i].Text = option.Text;
-                Buttons[i].SetColor(option.Color);
-                Buttons[i].gameObject.SetActive(true);
+                if (!option.IconText.IsNullOrEmpty()) {
+                    Options[i].Icon.Text.SetText(Regex.Unescape(option.IconText));
+                } else {
+                    Options[i].Icon.Text.text = string.Empty;
+                }
+                Options[i].Button.Text = option.Text;
+                Options[i].Icon.BG.color = option.Color;
+                Options[i].gameObject.SetActive(true);
 
                 var selectedOption = i;
-                Buttons[i].OnClick.AddListener(() => SelectOption(selectedOption));
+                Options[i].Button.OnClick.AddListener(() => SelectOption(selectedOption));
             }
 
-            for (int i = options.Count; i < Buttons.Length; i++)
+            for (int i = options.Count; i < Options.Length; i++)
             {
-                Buttons[i].gameObject.SetActive(false);
+                Options[i].gameObject.SetActive(false);
             }
             OpenImmediate();
         }
