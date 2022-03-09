@@ -377,12 +377,14 @@ namespace Ieedo
             foreach (var possibleDifficulty in possibleDifficulties)
             {
                 var optionData = new OptionData {
-                        Text = possibleDifficulty.ToString(),
+                        Text = "",
                         Color = Color.white,
                     };
-                optionData.Text = "\uf005";
-                for (int i = 0; i < possibleDifficulty-1; i++) {
-                    optionData.Text += "\uf005";
+                for (int i = 1; i <= 3; i++) {
+                    if (i <= possibleDifficulty)
+                        optionData.Text += "\uf005";
+                    else
+                        optionData.Text += "<color=#0003>\uf005</color>";
                 }
                 options.Add(optionData);
             }
