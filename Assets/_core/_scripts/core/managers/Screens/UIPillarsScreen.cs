@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Lean.Transition;
 using UnityEngine;
+using UnityEngine.Localization;
 
 namespace Ieedo
 {
@@ -52,11 +53,13 @@ namespace Ieedo
                         {
                             Color = Statics.Data.Definition(category.ID).Color,
                             Height = category.AssessmentValue,
-                            Cards = cards.ToList()
+                            Cards = cards.ToList(),
+                            LocalizedKey = Statics.Data.Definition(category.ID).Title.Key
                         };
 
                         pillarsData.Pillars.Add(pillarData);
                     }
+                    PillarsManager.SetFocus(true);
                     break;
                 case PillarsViewMode.Review:
                     {
@@ -68,6 +71,8 @@ namespace Ieedo
                             Color = Color.red,
                             Height = 0.5f,
                             Cards = completedCards.ToList(),
+                            LocalizedKey = new LocalizedString("UI","pillar_completed"),
+                            PrioritizeLabel = true,
                         };
                         pillarsData.Pillars.Add(pillarData);
 
@@ -76,11 +81,18 @@ namespace Ieedo
                             Color = Color.yellow,
                             Height = 0.5f,
                             Cards = validatedCards.ToList(),
+                            LocalizedKey = new LocalizedString("UI","pillar_validated"),
+                            PrioritizeLabel = true,
                         };
                         pillarsData.Pillars.Add(pillarData);
                     }
+                    PillarsManager.SetFocus(false, PillarsManager.PillarViews[0]);
                     break;
             }
+
+            Camera3D.transform.localPositionTransition(new Vector3(0,15.1000004f,-13.3999996f), 0.5f);
+            Camera3D.transform.localRotationTransition(new Quaternion(0.29237175f,0,0,0.956304789f), 0.5f);
+
 
             PillarsManager.ShowData(pillarsData);
             Scene3D.SetActive(true);
@@ -96,6 +108,12 @@ namespace Ieedo
         private void HandleSelectedPillar(PillarView pillarView)
         {
             var data = pillarView.Data;
+
+            PillarsManager.SetFocus(false, pillarView);
+            pillarView.ShowLabel();
+
+            Camera3D.transform.localPositionTransition(new Vector3(0, 10.5f, -13), 0.5f);
+            Camera3D.transform.localRotationTransition(new Quaternion(0.255145639f,0.0823278204f,-0.0286051836f,0.962966561f), 0.5f);
 
             var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
             uiCardListScreen.LoadCards(data.Cards, UICardListScreen.SortByExpirationDate, UICardListScreen.ListViewMode.Review);
@@ -116,14 +134,14 @@ namespace Ieedo
                     }
                     else
                     {
-                        Camera3D.transform.localRotationTransition(Quaternion.Euler(34f,50f,0f), 0.25f, LeanEase.Decelerate);
+                        Camera3D.transform.localRotationTransition(Quaternion.Euler(34f,-50f,0f), 0.25f, LeanEase.Decelerate);
                     }
                     break;
                 case ScreenID.Pillars:
                     Camera3D.transform.localRotationTransition(Quaternion.Euler(34f,0f,0f), 0.25f, LeanEase.Decelerate);
                     break;
                 case ScreenID.Activities:
-                    Camera3D.transform.localRotationTransition(Quaternion.Euler(34f,-10f,0f), 0.25f, LeanEase.Decelerate);
+                    Camera3D.transform.localRotationTransition(Quaternion.Euler(34f,10f,0f), 0.25f, LeanEase.Decelerate);
                     break;
             }
         }

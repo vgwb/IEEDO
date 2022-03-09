@@ -144,6 +144,14 @@ MonoBehaviour:
     m_Localized: play
     m_Metadata:
       m_Items: []
+  - m_Id: 43003187146022912
+    m_Localized: \uf00c
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43003190425968640
+    m_Localized: \uf560
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
