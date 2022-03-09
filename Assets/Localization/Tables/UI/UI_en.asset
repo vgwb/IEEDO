@@ -145,11 +145,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 43003187146022912
-    m_Localized: \uf00c
+    m_Localized: Completed cards
     m_Metadata:
       m_Items: []
   - m_Id: 43003190425968640
-    m_Localized: \uf560
+    m_Localized: Validated cards
     m_Metadata:
       m_Items: []
   references:
