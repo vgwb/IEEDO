@@ -10,23 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7631c653b8f4c97a4340609bfb6c8fa, type: 3}
-  m_Name: activity_diary
+  m_Name: 4_game_tictac
   m_EditorClassIdentifier: 
-  ID: 4
+  Enabled: 1
+  ID: 2
   Title:
     Key:
       m_TableReference:
         m_TableCollectionName: GUID:e48f391c1e96c7040b7091b267464dc8
       m_TableEntryReference:
-        m_KeyId: 82758623232
+        m_KeyId: 15270056583168
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    DefaultText: Writing
-  Type: 1
-  SceneName: act_diary
-  ScoreToUnlock: 100
+    DefaultText: Tic Tac Toe
+  Type: 2
+  SceneName: game_tictac
+  ScoreToUnlock: 0
   MaxLevel: 10
   references:
     version: 2

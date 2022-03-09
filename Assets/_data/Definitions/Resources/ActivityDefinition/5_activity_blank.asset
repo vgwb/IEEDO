@@ -10,22 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7631c653b8f4c97a4340609bfb6c8fa, type: 3}
-  m_Name: game_connect4
-  m_EditorClassIdentifier: 
-  ID: 5
+  m_Name: 5_activity_blank
+  m_EditorClassIdentifier: Assembly-CSharp:Ieedo:ActivityDefinition
+  Enabled: 0
+  ID: 1
   Title:
     Key:
       m_TableReference:
         m_TableCollectionName: GUID:e48f391c1e96c7040b7091b267464dc8
       m_TableEntryReference:
-        m_KeyId: 143655723008
+        m_KeyId: 8414584832
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    DefaultText: Connect4
-  Type: 2
-  SceneName: game_connect4
+    DefaultText: Blank
+  Type: 1
+  SceneName: game_blank
   ScoreToUnlock: 0
   MaxLevel: 10
   references:

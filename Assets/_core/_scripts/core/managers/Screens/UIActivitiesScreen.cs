@@ -15,6 +15,7 @@ namespace Ieedo
         protected override IEnumerator OnOpen()
         {
             var allActivities = Statics.Data.GetAll<ActivityDefinition>();
+            allActivities = allActivities.Where(x => x.Enabled).ToList();
 
             for (var i = 0; i < allActivities.Count; i++)
             {

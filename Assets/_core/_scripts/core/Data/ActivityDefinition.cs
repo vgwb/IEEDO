@@ -5,6 +5,7 @@ namespace Ieedo
     [CreateAssetMenu(fileName = "Activity", menuName = "Ieedo/Activity")]
     public class ActivityDefinition : ScriptableObject, IDefinition
     {
+        public bool Enabled;
         public ActivityID ID;
         public LocString Title;
         public ActivityType Type;
