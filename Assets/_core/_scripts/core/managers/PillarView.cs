@@ -5,6 +5,7 @@ using Lean.Touch;
 using Lean.Transition;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization.Components;
 using Random = UnityEngine.Random;
 
 namespace Ieedo
@@ -30,6 +31,16 @@ namespace Ieedo
         public PillarData Data => data;
         private float gfxHeight => Mathf.Max(data.Height, 0.05f);
 
+        public void ShowHeight()
+        {
+            text.text = $"{Mathf.RoundToInt(data.Height*100)}%";
+        }
+
+        public void ShowLabel()
+        {
+            text.GetComponent<LocalizeStringEvent>().StringReference = data.LocalizedKey;
+        }
+
         public void ShowData(PillarData data)
         {
             this.data = data;
@@ -38,7 +49,8 @@ namespace Ieedo
             mr.material = new Material(mr.material);
             mr.material.SetColor("_Color", data.Color);
             mr.material.SetColor("_EmissionColor", data.Color*0.5f);
-            text.text = $"{Mathf.RoundToInt(data.Height*100)}%";
+            if (data.PrioritizeLabel) ShowLabel();
+            else ShowHeight();
 
             foreach (var card in cards)
                 card.SetActive(false);
@@ -53,7 +65,7 @@ namespace Ieedo
                 var cardGo = cards[iCard].gameObject;
 
                 float pillarTop = gfxHeight * 2.5f;
-                cardGo.transform.localPosition = Vector3.up * 5;
+                cardGo.transform.localPosition = Vector3.up * 25;
                 cardGo.transform.localEulerAngles = Vector3.zero;
 
                 var finalPos = Vector3.up * (pillarTop + iCard * 0.025f);

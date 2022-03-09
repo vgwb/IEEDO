@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Lean.Transition;
 using UnityEngine;
+using UnityEngine.Localization;
 
 
 namespace Ieedo
@@ -12,6 +14,8 @@ namespace Ieedo
         public Color Color = Color.white;
         public int NCards => Cards.Count;
         public List<CardData> Cards;
+        public LocalizedString LocalizedKey;
+        public bool PrioritizeLabel;
     }
 
     [System.Serializable]
@@ -30,7 +34,7 @@ namespace Ieedo
 
         public void Update()
         {
-            transform.localEulerAngles += Vector3.up * Time.deltaTime * RotationSpeed;
+            if (autoRotating) transform.localEulerAngles += Vector3.up * Time.deltaTime * RotationSpeed;
 
             if (!TEST) return;
             ShowData(TestData);
@@ -63,5 +67,23 @@ namespace Ieedo
                 pillarView.Show();
             }
         }
+
+        private bool autoRotating;
+        public void SetFocus(bool _autoRotating, PillarView focusOnPillar = null)
+        {
+            var targetRot = Quaternion.identity;
+            if (focusOnPillar != null)
+            {
+                var dir = focusOnPillar.transform.localPosition;
+                dir = Quaternion.Euler(0, 180, 0) * dir;
+                targetRot = Quaternion.LookRotation(dir);
+                var targetEuls = targetRot.eulerAngles;
+                targetEuls.y *= -1;
+                targetRot = Quaternion.Euler(targetEuls);
+            }
+            autoRotating = _autoRotating;
+            if (!_autoRotating) transform.localRotationTransition(targetRot, 0.5f);
+        }
+
     }
 }
