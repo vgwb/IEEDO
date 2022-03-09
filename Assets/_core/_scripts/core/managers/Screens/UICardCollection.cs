@@ -32,7 +32,7 @@ namespace Ieedo
         {
             // Copy a slot
             var newSlotRT = Instantiate(SlotPrefab, SlotPrefab.parent);
-            newSlotRT.name = "Slot" + HeldSlots.Count;
+            newSlotRT.name = $"Slot{HeldSlots.Count}";
             newSlotRT.gameObject.SetActive(true);
             newSlotRT.transform.localScale = Vector3.one * CardScale;
 
@@ -56,7 +56,7 @@ namespace Ieedo
             var index = HeldCards.IndexOf(uiCard);
             if (index >= 0)
             {
-                Destroy(HeldCards[index].gameObject);
+                //Destroy(HeldCards[index].gameObject);
                 HeldCards.RemoveAt(index);
 
                 Destroy(HeldSlots[index].gameObject);

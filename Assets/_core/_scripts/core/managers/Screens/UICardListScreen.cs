@@ -59,7 +59,7 @@ namespace Ieedo
             SetupButton(UnValidateCardButton, () => StartCoroutine(UnValidateCardCO(frontCardUI)));
             SetupButton(UnCompleteCardButton, () => StartCoroutine(UnCompleteCardCO(frontCardUI)));
 
-            SetupButton(EditCardButton, () => SwitchToViewMode(FrontViewMode.Edit));
+            SetupButton(EditCardButton, () => SwitchToFrontViewMode(FrontViewMode.Edit));
 
             SetupButton(CreateCardButton, () => StartCoroutine(CardCreationFlowCO()));
 
@@ -109,13 +109,19 @@ namespace Ieedo
             frontCardUI.Data.Status = CardValidationStatus.Completed;
             Statics.Data.SaveProfile();
 
-            uiCard.transform.localPositionTransition(new Vector3(300,600,-150), 0.5f, LeanEase.Accelerate);
-            uiCard.transform.localEulerAnglesTransform(new Vector3(0,20,20), 0.5f, LeanEase.Accelerate);
-            yield return new WaitForSeconds(0.5f);
+            yield return AnimateCardOut(uiCard, +1);
             if (uiCard != null) Destroy(uiCard.gameObject);
             CloseFrontView();
             GoTo(ScreenID.Pillars);
             Statics.Score.AddScore(20);
+        }
+
+        private IEnumerator AnimateCardOut(UICard uiCard, int direction)
+        {
+            var period = 0.5f;
+            uiCard.transform.localPositionTransition(new Vector3(direction*300,600,-150), period, LeanEase.Accelerate);
+            uiCard.transform.localEulerAnglesTransform(new Vector3(0,direction*20,direction*20), period, LeanEase.Accelerate);
+            yield return new WaitForSeconds(period);
         }
 
         private IEnumerator UnCompleteCardCO(UICard uiCard)
@@ -192,15 +198,14 @@ namespace Ieedo
         protected override IEnumerator OnOpen()
         {
             FrontView.gameObject.SetActive(false);
-            //Statics.Data.LoadCardDefinitions();
 
             switch (CurrentListViewMode)
             {
-                case ListViewMode.Review:
-                    CreateCardButton.gameObject.SetActive(false);
-                    break;
                 case ListViewMode.ToDo:
                     CreateCardButton.gameObject.SetActive(true);
+                    break;
+                default:
+                    CreateCardButton.gameObject.SetActive(false);
                     break;
             }
 
@@ -269,10 +274,10 @@ namespace Ieedo
             FrontView.gameObject.SetActive(true);
             frontCardUI = uiCard;
 
-            SwitchToViewMode(viewMode);
+            SwitchToFrontViewMode(viewMode);
         }
 
-        private void SwitchToViewMode(FrontViewMode viewMode)
+        private void SwitchToFrontViewMode(FrontViewMode viewMode)
         {
             CurrentFrontViewMode = viewMode;
             switch (viewMode)
@@ -302,6 +307,7 @@ namespace Ieedo
                     ViewMode.SetActive(false);
                     ReviewMode.SetActive(true);
                     ValidatedMode.SetActive(false);
+                    ValidateCardButton.gameObject.SetActive(frontCardUI.Data.Status != CardValidationStatus.Validated);
                     break;
                 case FrontViewMode.Validated:
                     EditMode.SetActive(false);
