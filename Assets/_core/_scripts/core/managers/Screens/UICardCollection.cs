@@ -43,9 +43,7 @@ namespace Ieedo
 
             var uiCardRt = uiCard.transform as RectTransform;
             uiCardRt.localEulerAngles = Vector3.zero;
-            uiCardRt.anchoredPositionTransition(Vector3.zero, 0.25f);
-            uiCardRt.localScaleTransition(Vector3.one, 0.25f);
-
+            uiCardRt.anchoredPosition = Vector3.zero;
 
             SetupInListInteraction(uiCard);
             HeldSlots.Add(newSlotRT.gameObject);
@@ -80,6 +78,32 @@ namespace Ieedo
                 HeldCards[i].transform.SetParent(HeldSlots[i].transform);
                 HeldCards[i].transform.localScale = Vector3.one;
                 HeldCards[i].transform.localPosition = Vector3.zero;
+            }
+        }
+
+        public void AnimateEntrance(UICardListScreen.ListViewMode currentListViewMode)
+        {
+            for (var iCard = 0; iCard < HeldCards.Count; iCard++)
+            {
+                UICard heldCard = HeldCards[iCard];
+
+                switch (currentListViewMode)
+                {
+                    case UICardListScreen.ListViewMode.ToDo:
+                        heldCard.transform.localPosition = Vector3.left * 400;
+                        break;
+                    case UICardListScreen.ListViewMode.Pillars:
+                        heldCard.transform.localPosition = Vector3.up * 1500;
+                        break;
+                }
+
+                heldCard.transform.localEulerAnglesTransform(new Vector3(0, 0f, 0f), 0f); // fake transition to trigger the delay correctly
+                heldCard.transform.JoinDelayTransition((HeldCards.Count - 1 - iCard) * 0.1f).localPositionTransition(Vector3.zero, 0.5f);
+
+                if (currentListViewMode == UICardListScreen.ListViewMode.ToDo)
+                {
+                    heldCard.transform.localEulerAnglesTransform(new Vector3(0, 0f, -5f), 0.5f);
+                }
             }
         }
     }

@@ -254,10 +254,30 @@ namespace Ieedo
         public void LoadCards(List<CardData> cards, Func<CardData,CardData,int> sort, ListViewMode mode)
         {
             CurrentListViewMode = mode;
+
+            // Setup for this view
+            switch (CurrentListViewMode)
+            {
+                case ListViewMode.ToDo:
+                    CardsList.transform.localPosition = new Vector3(-347,0,0);
+                    DefaultOutEnterPosition = new Vector3(-2500, 0, 0);
+                    DefaultOutExitPosition = new Vector3(-2500, 0, 0);
+                    break;
+                case ListViewMode.Pillars:
+                    CardsList.transform.localPosition = new Vector3(153.734985f, 0, 0);
+                    DefaultOutEnterPosition = new Vector3(0, 2500, 0);
+                    DefaultOutExitPosition = new Vector3(0, 2500, 0);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+
             var collection = new CardDataCollection();
             collection.AddRange(cards);
             CardsList.AssignList(collection);
             CardsList.SortList(sort);
+
+            CardsList.AnimateEntrance(CurrentListViewMode);
         }
 
         public void LoadToDoCards()
