@@ -137,6 +137,9 @@ namespace Ieedo
         {
             AnimateToUnfocused();
             PillarsManager.SetFocus(true);
+
+            var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
+            uiCardListScreen.Close();
         }
 
         #endregion
