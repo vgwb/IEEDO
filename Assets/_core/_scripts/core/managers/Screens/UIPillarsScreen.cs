@@ -11,6 +11,7 @@ namespace Ieedo
 {
     public enum PillarsViewMode
     {
+        NONE,
         Categories,
         Review
     }
@@ -39,6 +40,7 @@ namespace Ieedo
             StartCoroutine(OnOpen());
         }
 
+        private PillarsViewMode prevViewMode = PillarsViewMode.NONE;
         protected override IEnumerator OnOpen()
         {
             Statics.Screens.OnSwitchToScreen -= this.OnSwitchToScreen;
@@ -49,6 +51,7 @@ namespace Ieedo
             {
                 Pillars = new List<PillarData>()
             };
+
 
             switch (ViewMode)
             {
@@ -101,7 +104,9 @@ namespace Ieedo
 
             AnimateToUnfocused();
 
-            PillarsManager.ShowData(pillarsData);
+            bool added = ViewMode == prevViewMode;
+            prevViewMode = ViewMode;
+            PillarsManager.ShowData(pillarsData, added);
             Scene3D.SetActive(true);
 
             foreach (var pillarView in PillarsManager.PillarViews)
@@ -141,7 +146,11 @@ namespace Ieedo
         {
             switch (screenID)
             {
+                case ScreenID.Pillars:
+                    AnimateToUnfocused();
+                    break;
                 case ScreenID.CardList:
+                    isFocused = false;
                     var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
                     if (uiCardListScreen.KeepPillars)
                     {
@@ -152,10 +161,8 @@ namespace Ieedo
                         Camera3D.transform.localRotationTransition(Quaternion.Euler(34f,-50f,0f), 0.25f, LeanEase.Decelerate);
                     }
                     break;
-                case ScreenID.Pillars:
-                    AnimateToUnfocused();
-                    break;
                 case ScreenID.Activities:
+                    isFocused = false;
                     Camera3D.transform.localRotationTransition(Quaternion.Euler(34f,10f,0f), 0.25f, LeanEase.Decelerate);
                     break;
             }
@@ -173,7 +180,6 @@ namespace Ieedo
 
         private void AnimateToUnfocused()
         {
-            if (!isFocused) return;
             isFocused = false;
             Camera3D.transform.localPositionTransition(new Vector3(0,15.1000004f,-13.3999996f), 0.5f);
             Camera3D.transform.localRotationTransition(new Quaternion(0.29237175f,0,0,0.956304789f), 0.5f);

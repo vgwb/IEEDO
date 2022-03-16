@@ -37,12 +37,12 @@ namespace Ieedo
             if (autoRotating) transform.localEulerAngles += Vector3.up * Time.deltaTime * RotationSpeed;
 
             if (!TEST) return;
-            ShowData(TestData);
+            ShowData(TestData, true);
         }
 
         public List<PillarView> PillarViews = new List<PillarView>();
 
-        public void ShowData(PillarsData data)
+        public void ShowData(PillarsData data, bool added)
         {
             foreach (var pillarView in PillarViews)
                 pillarView.Hide();
@@ -63,7 +63,7 @@ namespace Ieedo
                 locEul.y += 180;
                 pillarView.transform.localEulerAngles = locEul;
 
-                pillarView.ShowData(pillarData);
+                pillarView.ShowData(pillarData, added);
                 pillarView.Show();
             }
         }

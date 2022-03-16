@@ -16,7 +16,7 @@ namespace Ieedo
         public Action OnSelected;
 
         public GameObject cardPrefab;
-        public List<GameObject> cards = new List<GameObject>();
+        public List<GameObject> cardGos = new List<GameObject>();
 
         public Transform gfx;
         public MeshRenderer mr;
@@ -62,8 +62,11 @@ namespace Ieedo
             }
         }
 
-        public void ShowData(PillarData data)
+        private int nCurrentCards;
+        public void ShowData(PillarData data, bool added)
         {
+            if (!added) nCurrentCards = 0;
+
             this.data = data;
             var baseScale = 0.1f;
             gfx.localScale = new Vector3(1f, gfxHeight, 1f)*baseScale;
@@ -73,28 +76,30 @@ namespace Ieedo
             ShowLabel(false);
             ShowValue(true);
 
-            foreach (var card in cards)
-                card.SetActive(false);
-
+            int nPreviousCards = nCurrentCards;
             for (int iCard = 0; iCard < data.NCards; iCard++)
             {
-                if (iCard >= cards.Count)
+                if (iCard >= cardGos.Count)
                 {
                     AddNewCard(iCard);
                 }
 
-                var cardGo = cards[iCard].gameObject;
-
-                cardGo.transform.localPosition = Vector3.up * 25;
-                cardGo.transform.localEulerAngles = Vector3.zero;
-
+                var cardGo = cardGos[iCard].gameObject;
                 var mr = cardGo.GetComponentInChildren<MeshRenderer>();
                 mr.material.color = data.Cards[iCard].Definition.CategoryDefinition.Color * (1.4f + Random.Range(-0.2f, 0.2f));
 
-                cards[iCard].SetActive(true);
+                cardGos[iCard].SetActive(true);
+                nCurrentCards++;
+            }
+            for (int iCard = data.NCards; iCard < cardGos.Count; iCard++)
+            {
+                cardGos[iCard].SetActive(false);
             }
 
-            CardsIn();
+            Debug.LogError("Showing pillar " + data.LocalizedKey.GetLocalizedString() + " with " + nCurrentCards + " (previous " + nPreviousCards + ")");
+
+            int startNewIndex = nPreviousCards;
+            CardsIn(startNewIndex);
         }
 
         private Vector3 ComputeFinalPos(int iCard)
@@ -105,17 +110,18 @@ namespace Ieedo
             return finalPos;
         }
 
-        public void CardsIn()
+        public void CardsIn(int fromCardIndex = 0)
         {
-            for (int iCard = 0; iCard < data.NCards; iCard++)
+            for (int iCard = fromCardIndex; iCard < data.NCards; iCard++)
             {
-                var cardGo = cards[iCard].gameObject;
+                var cardGo = cardGos[iCard].gameObject;
                 cardGo.transform.localPosition = Vector3.up * (8 + Random.Range(0, 5));
                 cardGo.transform.localEulerAngles = Vector3.zero;
 
                 var finalPos = ComputeFinalPos(iCard);
-                cardGo.transform.localPositionTransition(finalPos, 1f, LeanEase.Bounce);
-                cardGo.transform.localEulerAnglesTransform(Vector3.up * Random.Range(0, 360f), 1f);
+                var period = 1f;
+                cardGo.transform.localPositionTransition(finalPos, period, LeanEase.Bounce);
+                cardGo.transform.localEulerAnglesTransform(Vector3.up * Random.Range(0, 360f), period);
             }
         }
 
@@ -123,7 +129,7 @@ namespace Ieedo
         {
             for (int iCard = 0; iCard < data.NCards; iCard++)
             {
-                var cardGo = cards[iCard].gameObject;
+                var cardGo = cardGos[iCard].gameObject;
                 cardGo.transform.positionTransition(Vector3.up*10 - Vector3.forward*5f, 0.25f, LeanEase.Smooth);
                 cardGo.transform.rotationTransition(Quaternion.Euler(Random.Range(0, 360f),  Random.Range(0, 360f),  Random.Range(0, 360f)), 0.25f);
             }
@@ -133,7 +139,7 @@ namespace Ieedo
         {
             var cardGo = Instantiate(cardPrefab, transform);
             cardGo.GetComponentInChildren<MeshRenderer>().material = new Material(cardGo.GetComponentInChildren<MeshRenderer>().material);
-            cards.Add(cardGo);
+            cardGos.Add(cardGo);
         }
 
         public void Hide()
