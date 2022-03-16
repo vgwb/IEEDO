@@ -139,8 +139,10 @@ namespace Ieedo
             for (int iCard = 0; iCard < data.NCards; iCard++)
             {
                 var cardGo = cardGos[iCard].gameObject;
-                cardGo.transform.positionTransition(Vector3.up*10 - Vector3.forward*5f, 0.25f, LeanEase.Smooth);
-                cardGo.transform.rotationTransition(Quaternion.Euler(Random.Range(0, 360f),  Random.Range(0, 360f),  Random.Range(0, 360f)), 0.25f);
+                float period = 0.25f;
+                cardGo.transform.localPositionTransition_y(15, period, LeanEase.Smooth);
+                cardGo.transform.positionTransition_x(2f, period, LeanEase.Smooth);
+                cardGo.transform.localRotationTransition(Quaternion.Euler(Random.Range(0, 360f),  Random.Range(0, 360f),  Random.Range(0, 360f)), period);
             }
         }
 
