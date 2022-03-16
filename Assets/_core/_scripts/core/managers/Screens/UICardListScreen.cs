@@ -372,7 +372,6 @@ namespace Ieedo
                 CreationTimestamp = new Timestamp(DateTime.Now),
                 ExpirationTimestamp = Timestamp.None
             };
-            Statics.Cards.AssignCard(cardData);
             var cardUi = UICardManager.I.AddCardUI(cardData, FrontViewPivot);
             cardUi.transform.localPosition = new Vector3(0, 1000, 0);
             OpenFrontView(cardUi, FrontViewMode.Create);
@@ -401,6 +400,8 @@ namespace Ieedo
             EditDateButton.gameObject.SetActive(true);
             EditDescriptionButton.gameObject.SetActive(true);
             EditTitleButton.gameObject.SetActive(true);
+
+            Statics.Cards.AddCard(cardData);
         }
 
         private IEnumerator EditCategoryCO(bool autoReset = false)

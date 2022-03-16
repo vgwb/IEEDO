@@ -69,7 +69,16 @@ namespace Ieedo
 
             this.data = data;
             var baseScale = 0.1f;
-            gfx.localScale = new Vector3(1f, gfxHeight, 1f)*baseScale;
+
+            if (!added)
+            {
+                gfx.localScale = new Vector3(1f, 0f, 1f)*baseScale;
+                gfx.localScaleTransition_y(gfxHeight * baseScale, 0.25f);
+            }
+            else
+            {
+                gfx.localScale = new Vector3(1f, gfxHeight, 1f)*baseScale;
+            }
             mr.material = new Material(mr.material);
             mr.material.SetColor("_Color", data.Color);
             mr.material.SetColor("_EmissionColor", data.Color*0.5f);
@@ -105,7 +114,7 @@ namespace Ieedo
         private Vector3 ComputeFinalPos(int iCard)
         {
             float pillarTop = gfxHeight * 2.5f;
-            var finalPos = Vector3.up * (pillarTop + iCard * 0.025f);
+            var finalPos = Vector3.up * (pillarTop + (0.5f+iCard) * 0.05f);
             finalPos += new Vector3(Random.Range(-0.2f, 0.2f), 0, Random.Range(-0.2f, 0.2f));
             return finalPos;
         }
@@ -115,13 +124,13 @@ namespace Ieedo
             for (int iCard = fromCardIndex; iCard < data.NCards; iCard++)
             {
                 var cardGo = cardGos[iCard].gameObject;
-                cardGo.transform.localPosition = Vector3.up * (8 + Random.Range(0, 5));
+                cardGo.transform.localPosition = Vector3.up * 15;
                 cardGo.transform.localEulerAngles = Vector3.zero;
 
                 var finalPos = ComputeFinalPos(iCard);
                 var period = 1f;
-                cardGo.transform.localPositionTransition(finalPos, period, LeanEase.Bounce);
-                cardGo.transform.localEulerAnglesTransform(Vector3.up * Random.Range(0, 360f), period);
+                cardGo.transform.JoinDelayTransition(iCard * 0.1f).localPositionTransition(finalPos, period, LeanEase.Bounce)
+                    .localEulerAnglesTransform(Vector3.up * Random.Range(0, 360f), period);
             }
         }
 

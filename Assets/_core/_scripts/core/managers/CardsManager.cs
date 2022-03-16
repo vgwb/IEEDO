@@ -20,7 +20,7 @@ namespace Ieedo
             Statics.Data.SaveProfile();
         }
 
-        public void AssignCard(CardData cardData)
+        public void AddCard(CardData cardData)
         {
             Statics.Data.Profile.Cards.Add(cardData);
             Statics.Data.SaveProfile();
