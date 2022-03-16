@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -12,7 +13,12 @@ namespace Ieedo
 
         public List<UIActivityBlock> ActivityBlocks;
 
-        protected override IEnumerator OnOpen()
+        public void OnEnable()
+        {
+            RefreshData();
+        }
+
+        void RefreshData()
         {
             var allActivities = Statics.Data.GetAll<ActivityDefinition>();
             allActivities = allActivities.Where(x => x.Enabled).ToList();
@@ -53,7 +59,6 @@ namespace Ieedo
             {
                 ActivityBlocks[i].gameObject.SetActive(false);
             }
-            yield break;
         }
 
         private void LaunchActivity(ActivityID activity)
