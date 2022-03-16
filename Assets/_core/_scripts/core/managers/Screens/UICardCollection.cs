@@ -30,6 +30,8 @@ namespace Ieedo
 
         public UICard AddCard(CardData cardData, UICard uiCard = null)
         {
+            if (HeldCards.Contains(uiCard)) return uiCard;
+
             // Copy a slot
             var newSlotRT = Instantiate(SlotPrefab, SlotPrefab.parent);
             newSlotRT.name = $"Slot{HeldSlots.Count}";

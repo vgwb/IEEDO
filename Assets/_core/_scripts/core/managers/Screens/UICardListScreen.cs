@@ -64,6 +64,28 @@ namespace Ieedo
             SetupButton(CreateCardButton, () => StartCoroutine(CardCreationFlowCO()));
 
             CardsList.OnCardClicked = uiCard => OpenFrontView(uiCard, CurrentListViewMode == ListViewMode.ToDo ? FrontViewMode.Edit : FrontViewMode.Review);
+
+            SetupButton(CloseFrontViewButton, () =>
+            {
+                bool canCloseFront = !frontCardUI.Description.text.IsNullOrEmpty() && !frontCardUI.Title.text.IsNullOrEmpty();
+                if (!canCloseFront)
+                {
+                    Debug.LogWarning("Cannot close front. Card is incomplete.");
+                    return;
+                }
+                var cardUI = frontCardUI;
+
+                StopEditing();
+                CloseFrontView();
+
+                // TODO: if (isNewCard)
+                    CardsList.AddCard(cardUI.Data, cardUI);
+                // TODO: Re-Sort only if it was edited?
+                //CardsList.SortList(SortByExpirationDate);
+                cardUI.RefreshUI();
+            });
+
+
         }
 
         private IEnumerator DeleteCardCO(bool isNewCard, UICard card)
@@ -589,20 +611,6 @@ namespace Ieedo
             SetupButton(EditSubCategoryButton, () => StartCoroutine(EditSubCategoryCO(cardUI.Data.Definition.CategoryDefinition, autoReset:true)));
             SetupButton(EditTitleButton, () => StartCoroutine(EditTitleCO(autoReset:true)));
             SetupButton(EditDescriptionButton, () => StartCoroutine(EditDescriptionCO(autoReset:true)));
-
-            SetupButton(CloseFrontViewButton, () =>
-            {
-                bool canComplete = !frontCardUI.Description.text.IsNullOrEmpty() && !frontCardUI.Title.text.IsNullOrEmpty();
-                if (!canComplete) return;
-
-                StopEditing();
-                CloseFrontView();
-
-                if (isNewCard) CardsList.AddCard(cardUI.Data, cardUI);
-                CardsList.SortList(SortByExpirationDate);
-
-                cardUI.RefreshUI();
-            });
 
             SetupButton(DeleteCardButton, () =>
             {
