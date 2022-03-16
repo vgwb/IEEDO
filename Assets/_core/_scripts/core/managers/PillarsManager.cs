@@ -41,16 +41,16 @@ namespace Ieedo
         }
 
         public List<PillarView> PillarViews = new List<PillarView>();
+        private PillarsData currentData;
 
         public void ShowData(PillarsData data, bool added)
         {
+            this.currentData = data;
             foreach (var pillarView in PillarViews)
                 pillarView.Hide();
 
-            var n = data.Pillars.Count;
             for (var iPillar = 0; iPillar < data.Pillars.Count; iPillar++)
             {
-                var pillarData = data.Pillars[iPillar];
                 var pillarView = PillarViews[iPillar];
 
                 var locPos = pillarView.transform.localPosition;
@@ -63,9 +63,16 @@ namespace Ieedo
                 locEul.y += 180;
                 pillarView.transform.localEulerAngles = locEul;
 
-                pillarView.ShowData(pillarData, added);
+                RefreshPillarView(iPillar, added);
                 pillarView.Show();
             }
+        }
+
+        public void RefreshPillarView(int iPillar, bool added)
+        {
+            var pillarData = currentData.Pillars[iPillar];
+            var pillarView = PillarViews[iPillar];
+            pillarView.ShowData(pillarData, added);
         }
 
         private bool autoRotating;

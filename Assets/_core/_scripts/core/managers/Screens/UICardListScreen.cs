@@ -190,8 +190,11 @@ namespace Ieedo
             if (uiCard != null) Destroy(uiCard.gameObject);
             CloseFrontView();
 
-            // TODO: instead just add the new card (regenerate data in the pillars?)
-            //GoTo(ScreenID.Pillars);
+            // Just add the new card
+            var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
+            int validatedCardsPillarIndex = 1;
+            uiPillarsScreen.PillarsManager.RefreshPillarView(validatedCardsPillarIndex, true);
+
             Statics.Score.AddScore(50);
         }
 
@@ -289,7 +292,7 @@ namespace Ieedo
         public enum ListViewMode
         {
             ToDo,
-            Review,
+            Pillars,
         }
 
         public enum FrontViewMode

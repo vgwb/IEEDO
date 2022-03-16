@@ -40,18 +40,13 @@ namespace Ieedo
             StartCoroutine(OnOpen());
         }
 
-        private PillarsViewMode prevViewMode = PillarsViewMode.NONE;
-        protected override IEnumerator OnOpen()
+        public void RefreshData(int pillarIndex = -1)
         {
-            Statics.Screens.OnSwitchToScreen -= this.OnSwitchToScreen;
-            Statics.Screens.OnSwitchToScreen += this.OnSwitchToScreen;
-
             var profileData = Statics.Data.Profile;
             var pillarsData = new PillarsData
             {
                 Pillars = new List<PillarData>()
             };
-
 
             switch (ViewMode)
             {
@@ -114,6 +109,16 @@ namespace Ieedo
                 pillarView.OnSelected = () => HandleSelectPillar(pillarView);
             }
 
+        }
+
+        private PillarsViewMode prevViewMode = PillarsViewMode.NONE;
+        protected override IEnumerator OnOpen()
+        {
+            Statics.Screens.OnSwitchToScreen -= this.OnSwitchToScreen;
+            Statics.Screens.OnSwitchToScreen += this.OnSwitchToScreen;
+
+            RefreshData();
+
             return base.OnOpen();
         }
 
@@ -128,7 +133,7 @@ namespace Ieedo
             PillarsManager.SetFocus(false, pillarView);
 
             var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
-            uiCardListScreen.LoadCards(pillarView.Data.Cards, UICardListScreen.SortByExpirationDate, UICardListScreen.ListViewMode.Review);
+            uiCardListScreen.LoadCards(pillarView.Data.Cards, UICardListScreen.SortByExpirationDate, UICardListScreen.ListViewMode.Pillars);
             uiCardListScreen.KeepPillars = true;
             GoTo(ScreenID.CardList);
         }
