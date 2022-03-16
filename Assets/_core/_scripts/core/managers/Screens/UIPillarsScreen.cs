@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Lean.Touch;
 using Lean.Transition;
 using UnityEngine;
 using UnityEngine.Localization;
@@ -19,11 +20,18 @@ namespace Ieedo
         public override bool AutoAnimate => false;
 
         public GameObject Scene3D;
+        public GameObject Plane;
         public PillarsManager PillarsManager;
 
         public override ScreenID ID => ScreenID.Pillars;
 
         public PillarsViewMode ViewMode = PillarsViewMode.Categories;
+
+        void Awake()
+        {
+            var selectable = Plane.GetComponentInChildren<LeanSelectableByFinger>();
+            selectable.OnSelected.AddListener(HandleSelectPlane);
+        }
 
         public void SwitchViewMode(PillarsViewMode newMode)
         {
@@ -91,36 +99,42 @@ namespace Ieedo
                     break;
             }
 
-            Camera3D.transform.localPositionTransition(new Vector3(0,15.1000004f,-13.3999996f), 0.5f);
-            Camera3D.transform.localRotationTransition(new Quaternion(0.29237175f,0,0,0.956304789f), 0.5f);
-
+            AnimateToUnfocused();
 
             PillarsManager.ShowData(pillarsData);
             Scene3D.SetActive(true);
 
             foreach (var pillarView in PillarsManager.PillarViews)
             {
-                pillarView.OnSelected = () => HandleSelectedPillar(pillarView);
+                pillarView.OnSelected = () => HandleSelectPillar(pillarView);
             }
 
             return base.OnOpen();
         }
 
-        private void HandleSelectedPillar(PillarView pillarView)
+        #region Interaction
+
+        private bool isFocused;
+        private void HandleSelectPillar(PillarView pillarView)
         {
-            var data = pillarView.Data;
+            if (PillarsManager.CurrentFocusedPillar != null) return;
+            AnimateToFocused();
 
             PillarsManager.SetFocus(false, pillarView);
 
-
-            Camera3D.transform.localPositionTransition(new Vector3(0, 10.5f, -13), 0.5f);
-            Camera3D.transform.localRotationTransition(new Quaternion(0.255145639f,0.0823278204f,-0.0286051836f,0.962966561f), 0.5f);
-
             var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
-            uiCardListScreen.LoadCards(data.Cards, UICardListScreen.SortByExpirationDate, UICardListScreen.ListViewMode.Review);
+            uiCardListScreen.LoadCards(pillarView.Data.Cards, UICardListScreen.SortByExpirationDate, UICardListScreen.ListViewMode.Review);
             uiCardListScreen.KeepPillars = true;
             GoTo(ScreenID.CardList);
         }
+
+        private void HandleSelectPlane()
+        {
+            AnimateToUnfocused();
+            PillarsManager.SetFocus(true);
+        }
+
+        #endregion
 
         public Camera Camera3D;
         public void OnSwitchToScreen(ScreenID screenID)
@@ -139,12 +153,34 @@ namespace Ieedo
                     }
                     break;
                 case ScreenID.Pillars:
-                    Camera3D.transform.localRotationTransition(Quaternion.Euler(34f,0f,0f), 0.25f, LeanEase.Decelerate);
+                    AnimateToUnfocused();
                     break;
                 case ScreenID.Activities:
                     Camera3D.transform.localRotationTransition(Quaternion.Euler(34f,10f,0f), 0.25f, LeanEase.Decelerate);
                     break;
             }
         }
+
+        #region Animations
+
+        private void AnimateToFocused()
+        {
+            if (isFocused) return;
+            isFocused = true;
+            Camera3D.transform.localPositionTransition(new Vector3(0, 10.5f, -13), 0.5f);
+            Camera3D.transform.localRotationTransition(new Quaternion(0.255145639f,0.0823278204f,-0.0286051836f,0.962966561f), 0.5f);
+        }
+
+        private void AnimateToUnfocused()
+        {
+            if (!isFocused) return;
+            isFocused = false;
+            Camera3D.transform.localPositionTransition(new Vector3(0,15.1000004f,-13.3999996f), 0.5f);
+            Camera3D.transform.localRotationTransition(new Quaternion(0.29237175f,0,0,0.956304789f), 0.5f);
+            //Camera3D.transform.localRotationTransition(Quaternion.Euler(34f,0f,0f), 0.25f, LeanEase.Decelerate);
+        }
+
+        #endregion
+
     }
 }

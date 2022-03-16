@@ -924,6 +924,7 @@ GameObject:
   - component: {fileID: 405513864}
   - component: {fileID: 405513863}
   - component: {fileID: 405513862}
+  - component: {fileID: 405513865}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -1010,6 +1011,32 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 405513860}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &405513865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405513860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83dcd8dace8b7fe449d796b980cb121d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selfSelected: 0
+  onSelected:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeselected:
+    m_PersistentCalls:
+      m_Calls: []
+  use: 0
+  onSelectedFinger:
+    m_PersistentCalls:
+      m_Calls: []
+  onSelectedFingerUp:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &422757420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2830,6 +2857,7 @@ MonoBehaviour:
   - {fileID: 1816870413}
   - {fileID: 1954006442}
   - {fileID: 337475839}
+  CurrentFocusedPillar: {fileID: 0}
   references:
     version: 2
     RefIds: []
@@ -3299,7 +3327,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-178830
+  m_Name: pb_Mesh-5600
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5066,6 +5094,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1912778785}
     m_Modifications:
+    - target: {fileID: 677682894144447476, guid: c7e0c7748a8a1c94f8e4a3c86f0fcaa1, type: 3}
+      propertyPath: Plane
+      value: 
+      objectReference: {fileID: 405513860}
     - target: {fileID: 677682894144447476, guid: c7e0c7748a8a1c94f8e4a3c86f0fcaa1, type: 3}
       propertyPath: Scene3D
       value: 

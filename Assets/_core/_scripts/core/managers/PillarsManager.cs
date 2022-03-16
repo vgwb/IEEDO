@@ -70,19 +70,21 @@ namespace Ieedo
 
         private bool autoRotating;
         private PillarView currentFocusedPillar;
+        public PillarView CurrentFocusedPillar;
         public void SetFocus(bool _autoRotating, PillarView focusOnPillar = null)
         {
             if (focusOnPillar != null && focusOnPillar == currentFocusedPillar) return;
 
+            if (currentFocusedPillar != null)
+            {
+                currentFocusedPillar.ShowLabel(false);
+                currentFocusedPillar.CardsIn();
+                currentFocusedPillar = null;
+            }
+
             var targetRot = Quaternion.identity;
             if (focusOnPillar != null)
             {
-                if (currentFocusedPillar != null)
-                {
-                    currentFocusedPillar.ShowLabel(false);
-                    currentFocusedPillar.CardsIn();
-                }
-
                 var dir = focusOnPillar.transform.localPosition;
                 dir = Quaternion.Euler(0, 180, 0) * dir;
                 targetRot = Quaternion.LookRotation(dir);
@@ -93,6 +95,7 @@ namespace Ieedo
                 focusOnPillar.CardsOut();
                 currentFocusedPillar = focusOnPillar;
             }
+            
             autoRotating = _autoRotating;
             if (!_autoRotating) transform.localRotationTransition(targetRot, 0.5f);
         }
