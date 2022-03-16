@@ -159,9 +159,7 @@ namespace Ieedo
             frontCardUI.Data.Status = CardValidationStatus.Validated;
             Statics.Data.SaveProfile();
 
-            uiCard.transform.localPositionTransition(new Vector3(300,600,-150), 0.5f, LeanEase.Accelerate);
-            uiCard.transform.localEulerAnglesTransform(new Vector3(0,20,20), 0.5f, LeanEase.Accelerate);
-            yield return new WaitForSeconds(0.5f);
+            yield return AnimateCardOut(uiCard, 1);
             if (uiCard != null) Destroy(uiCard.gameObject);
             CloseFrontView();
             GoTo(ScreenID.Pillars);
@@ -187,9 +185,7 @@ namespace Ieedo
             frontCardUI.Data.Status = CardValidationStatus.Completed;
             Statics.Data.SaveProfile();
 
-            uiCard.transform.localPositionTransition(new Vector3(-300,600,-150), 0.5f, LeanEase.Accelerate);
-            uiCard.transform.localEulerAnglesTransform(new Vector3(0,-20,-20), 0.5f, LeanEase.Accelerate);
-            yield return new WaitForSeconds(0.5f);
+            yield return AnimateCardOut(uiCard, -1);
             if (uiCard != null) Destroy(uiCard.gameObject);
             CloseFrontView();
             Statics.Score.AddScore(-50);
