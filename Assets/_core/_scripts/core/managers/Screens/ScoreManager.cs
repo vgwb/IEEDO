@@ -1,5 +1,8 @@
 using System.Collections.Generic;
+using System.Numerics;
+using Lean.Transition;
 using UnityEngine;
+using Vector3 = UnityEngine.Vector3;
 
 namespace Ieedo
 {
@@ -22,6 +25,7 @@ namespace Ieedo
         public void AddScore(int value)
         {
             Statics.Data.Profile.CurrentScore += value;
+            CurrentScoreText.transform.localScaleTransition(Vector3.one * 1.5f, 0.25f).JoinDelayTransition(0.25f).localScaleTransition(Vector3.one, 0.25f);
             CurrentScoreText.Key.RefreshString();
             Statics.Data.SaveProfile();
         }
