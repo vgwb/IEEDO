@@ -1323,7 +1323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 441232148207873271}
   m_Layer: 5
-  m_Name: ReviewModeUI
+  m_Name: CompletedModeUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4181,7 +4181,7 @@ MonoBehaviour:
   ViewMode: {fileID: 1420955183562223757}
   CompleteCardButton: {fileID: 8031344969780643853}
   EditCardButton: {fileID: 2731346059030428201}
-  ReviewMode: {fileID: 9096951740242132167}
+  CompletedMode: {fileID: 9096951740242132167}
   ValidateCardButton: {fileID: 2470878789970722267}
   UnCompleteCardButton: {fileID: 2470878790412512747}
   ValidatedMode: {fileID: 5696230166415926446}

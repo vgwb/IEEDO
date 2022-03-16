@@ -25,7 +25,7 @@ namespace Ieedo
         public UIButton EditCardButton;
 
         [Header("Card Review")]
-        public GameObject ReviewMode;
+        public GameObject CompletedMode;
         public UIButton ValidateCardButton;
         public UIButton UnCompleteCardButton;
 
@@ -63,7 +63,10 @@ namespace Ieedo
 
             SetupButton(CreateCardButton, () => StartCoroutine(CardCreationFlowCO()));
 
-            CardsList.OnCardClicked = uiCard => OpenFrontView(uiCard, CurrentListViewMode == ListViewMode.ToDo ? FrontViewMode.Edit : FrontViewMode.Review);
+            CardsList.OnCardClicked = uiCard =>
+            {
+                OpenFrontView(uiCard, desiredFrontViewMode);
+            };
 
             SetupButton(CloseFrontViewButton, () =>
             {
@@ -220,6 +223,12 @@ namespace Ieedo
             yield return AnimateCardOut(uiCard, -1);
             if (uiCard != null) Destroy(uiCard.gameObject);
             CloseFrontView();
+
+            // Just add the new card
+            var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
+            int validatedCardsPillarIndex = 0;
+            uiPillarsScreen.PillarsManager.RefreshPillarView(validatedCardsPillarIndex, true);
+
             Statics.Score.AddScore(-50);
         }
 
@@ -254,9 +263,11 @@ namespace Ieedo
             return -c1.ExpirationTimestamp.Date.CompareTo(c2.ExpirationTimestamp.Date);
         }
 
-        public void LoadCards(List<CardData> cards, Func<CardData,CardData,int> sort, ListViewMode mode)
+        private FrontViewMode desiredFrontViewMode;
+        public void LoadCards(List<CardData> cards, Func<CardData,CardData,int> sort, ListViewMode listViewMode, FrontViewMode frontViewMode)
         {
-            CurrentListViewMode = mode;
+            CurrentListViewMode = listViewMode;
+            desiredFrontViewMode = frontViewMode;
 
             // Setup for this view
             switch (CurrentListViewMode)
@@ -286,7 +297,7 @@ namespace Ieedo
         public void LoadToDoCards()
         {
             var cards = Statics.Data.Profile.Cards.Where(x => x.Status == CardValidationStatus.Todo).ToList();
-            LoadCards(cards, SortByExpirationDate, ListViewMode.ToDo);
+            LoadCards(cards, SortByExpirationDate, ListViewMode.ToDo, FrontViewMode.Edit);
         }
 
         public enum ListViewMode
@@ -301,7 +312,7 @@ namespace Ieedo
             View,
             Create,
             Edit,
-            Review,
+            Completed,
             Validated
         }
 
@@ -333,34 +344,33 @@ namespace Ieedo
                 case FrontViewMode.Edit:
                     EditMode.SetActive(true);
                     ViewMode.SetActive(false);
-                    ReviewMode.SetActive(false);
+                    CompletedMode.SetActive(false);
                     ValidatedMode.SetActive(false);
                     StartEditing(false);
                     break;
                 case FrontViewMode.Create:
                     EditMode.SetActive(true);
                     ViewMode.SetActive(false);
-                    ReviewMode.SetActive(false);
+                    CompletedMode.SetActive(false);
                     ValidatedMode.SetActive(false);
                     StartEditing(true);
                     break;
                 case FrontViewMode.View:
                     EditMode.SetActive(false);
                     ViewMode.SetActive(true);
-                    ReviewMode.SetActive(false);
+                    CompletedMode.SetActive(false);
                     ValidatedMode.SetActive(false);
                     break;
-                case FrontViewMode.Review:
+                case FrontViewMode.Completed:
                     EditMode.SetActive(false);
                     ViewMode.SetActive(false);
-                    ReviewMode.SetActive(true);
+                    CompletedMode.SetActive(true);
                     ValidatedMode.SetActive(false);
-                    ValidateCardButton.gameObject.SetActive(frontCardUI.Data.Status != CardValidationStatus.Validated);
                     break;
                 case FrontViewMode.Validated:
                     EditMode.SetActive(false);
                     ViewMode.SetActive(false);
-                    ReviewMode.SetActive(false);
+                    CompletedMode.SetActive(false);
                     ValidatedMode.SetActive(true);
                     break;
             }
@@ -598,7 +608,7 @@ namespace Ieedo
         public IEnumerator EditDescriptionCO(bool autoReset = false)
         {
             SetSubEditMode(true);
-            frontCardUI.transform.localPositionTransition(new Vector3(0, 200, 0), 0.25f);
+            frontCardUI.transform.localPositionTransition(new Vector3(0, 120, 0), 0.25f);
             frontCardUI.transform.localScaleTransition(Vector3.one*1.2f, 0.25f);
             frontCardUI.transform.localEulerAnglesTransform(new Vector3(0,10,0), 0.25f);
             optionsListPopup.ShowOptions(new LocalizedString("UI","creation_enter_description"), new List<OptionData>());

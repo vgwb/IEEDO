@@ -105,7 +105,7 @@ namespace Ieedo
                 cardGos[iCard].SetActive(false);
             }
 
-            Debug.LogError("Showing pillar " + data.LocalizedKey.GetLocalizedString() + " with " + nCurrentCards + " (previous " + nPreviousCards + ")");
+            //Debug.Log("Showing pillar " + data.LocalizedKey.GetLocalizedString() + " with " + nCurrentCards + " (previous " + nPreviousCards + ")");
 
             int startNewIndex = nPreviousCards;
             CardsIn(startNewIndex);
@@ -129,7 +129,8 @@ namespace Ieedo
 
                 var finalPos = ComputeFinalPos(iCard);
                 var period = 1f;
-                cardGo.transform.JoinDelayTransition(iCard * 0.1f).localPositionTransition(finalPos, period, LeanEase.Bounce)
+                cardGo.transform.localPositionTransition(cardGo.transform.localPosition, 0.0f); // Fake transition to make the delay work correctly
+                cardGo.transform.JoinDelayTransition((iCard-fromCardIndex) * 0.1f).localPositionTransition(finalPos, period, LeanEase.Bounce)
                     .localEulerAnglesTransform(Vector3.up * Random.Range(0, 360f), period);
             }
         }

@@ -104,11 +104,12 @@ namespace Ieedo
             PillarsManager.ShowData(pillarsData, added);
             Scene3D.SetActive(true);
 
-            foreach (var pillarView in PillarsManager.PillarViews)
+            for (var iPillar = 0; iPillar < PillarsManager.PillarViews.Count; iPillar++)
             {
-                pillarView.OnSelected = () => HandleSelectPillar(pillarView);
+                var pillarView = PillarsManager.PillarViews[iPillar];
+                int _iPillar = iPillar;
+                pillarView.OnSelected = () => HandleSelectPillar(pillarView, _iPillar);
             }
-
         }
 
         private PillarsViewMode prevViewMode = PillarsViewMode.NONE;
@@ -125,7 +126,7 @@ namespace Ieedo
         #region Interaction
 
         private bool isFocused;
-        private void HandleSelectPillar(PillarView pillarView)
+        private void HandleSelectPillar(PillarView pillarView, int iPillar)
         {
             if (PillarsManager.CurrentFocusedPillar == pillarView) return;
             AnimateToFocused();
@@ -133,7 +134,20 @@ namespace Ieedo
             PillarsManager.SetFocus(false, pillarView);
 
             var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
-            uiCardListScreen.LoadCards(pillarView.Data.Cards, UICardListScreen.SortByExpirationDate, UICardListScreen.ListViewMode.Pillars);
+
+            UICardListScreen.FrontViewMode desiredFrontViewMode = UICardListScreen.FrontViewMode.None;
+            switch (Statics.Mode.SessionMode)
+            {
+                case SessionMode.Session:
+                    desiredFrontViewMode = iPillar == 0 ? UICardListScreen.FrontViewMode.Validated : UICardListScreen.FrontViewMode.Completed;
+                    break;
+
+                case SessionMode.Solo:
+                    desiredFrontViewMode = UICardListScreen.FrontViewMode.View;
+                    break;
+            }
+
+            uiCardListScreen.LoadCards(pillarView.Data.Cards, UICardListScreen.SortByExpirationDate, UICardListScreen.ListViewMode.Pillars, desiredFrontViewMode);
             uiCardListScreen.KeepPillars = true;
             GoTo(ScreenID.CardList);
         }
