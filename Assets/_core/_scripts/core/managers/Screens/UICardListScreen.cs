@@ -195,8 +195,9 @@ namespace Ieedo
 
             // Just add the new card
             var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
-            int validatedCardsPillarIndex = 1;
-            uiPillarsScreen.PillarsManager.RefreshPillarView(validatedCardsPillarIndex, true);
+            int pillarIndex = 0;
+            uiPillarsScreen.RefreshData(pillarIndex);
+            // TODO: this can be done only with DATA Tho uiPillarsScreen.PillarsManager.RefreshPillarView(validatedCardsPillarIndex, true);
 
             Statics.Score.AddScore(50);
         }
@@ -226,8 +227,9 @@ namespace Ieedo
 
             // Just add the new card
             var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
-            int validatedCardsPillarIndex = 0;
-            uiPillarsScreen.PillarsManager.RefreshPillarView(validatedCardsPillarIndex, true);
+            int pillarIndex = 0;
+            uiPillarsScreen.RefreshData(pillarIndex);
+            // TODO: this can be done only with DATA Tho uiPillarsScreen.PillarsManager.RefreshPillarView(validatedCardsPillarIndex, true);
 
             Statics.Score.AddScore(-50);
         }

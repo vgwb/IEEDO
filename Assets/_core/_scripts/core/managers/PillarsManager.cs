@@ -43,7 +43,7 @@ namespace Ieedo
         public List<PillarView> PillarViews = new List<PillarView>();
         private PillarsData currentData;
 
-        public void ShowData(PillarsData data, bool added)
+        public void ShowData(PillarsData data, bool added, int onlyPillarIndex = -1)
         {
             this.currentData = data;
             foreach (var pillarView in PillarViews)
@@ -63,7 +63,10 @@ namespace Ieedo
                 locEul.y += 180;
                 pillarView.transform.localEulerAngles = locEul;
 
-                RefreshPillarView(iPillar, added);
+                if (onlyPillarIndex < 0 || onlyPillarIndex == iPillar)
+                {
+                    RefreshPillarView(iPillar, added);
+                }
                 pillarView.Show();
             }
         }

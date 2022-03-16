@@ -101,7 +101,7 @@ namespace Ieedo
 
             bool added = ViewMode == prevViewMode;
             prevViewMode = ViewMode;
-            PillarsManager.ShowData(pillarsData, added);
+            PillarsManager.ShowData(pillarsData, added, pillarIndex);
             Scene3D.SetActive(true);
 
             for (var iPillar = 0; iPillar < PillarsManager.PillarViews.Count; iPillar++)
