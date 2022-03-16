@@ -3278,6 +3278,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BtnEdit
       objectReference: {fileID: 0}
+    - target: {fileID: 8746676027335903671, guid: bf941c163aa023840887bd2d59ca1453, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8746676028111329283, guid: bf941c163aa023840887bd2d59ca1453, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -10.000019
