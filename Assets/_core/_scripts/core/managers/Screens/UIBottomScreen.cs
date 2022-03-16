@@ -1,5 +1,4 @@
 ﻿using Lean.Gui;
-using UnityEngine.UI;
 
 namespace Ieedo
 {
@@ -31,6 +30,8 @@ namespace Ieedo
                 uiCardListScreen.KeepPillars = false;
                 GoTo(ScreenID.CardList);
             });
+
+            ToggleSelection(btnPillars);
         }
 
         public void ToggleSelection(LeanButton selectedBtn)
