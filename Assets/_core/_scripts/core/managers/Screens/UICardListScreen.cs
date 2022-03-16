@@ -135,6 +135,11 @@ namespace Ieedo
             if (uiCard != null) Destroy(uiCard.gameObject);
             CloseFrontView();
             GoTo(ScreenID.Pillars);
+
+            // Select pillars view
+            var uiBottomScreen = Statics.Screens.Get(ScreenID.Bottom) as UIBottomScreen;
+            uiBottomScreen.ToggleSelection(uiBottomScreen.btnPillars);
+
             Statics.Score.AddScore(20);
         }
 

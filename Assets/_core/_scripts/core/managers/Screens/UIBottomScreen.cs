@@ -33,7 +33,7 @@ namespace Ieedo
             });
         }
 
-        private void ToggleSelection(LeanButton selectedBtn)
+        public void ToggleSelection(LeanButton selectedBtn)
         {
             btnActivities.interactable = btnActivities != selectedBtn;
             btnCards.interactable = btnCards != selectedBtn;
