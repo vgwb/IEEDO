@@ -28,9 +28,10 @@ namespace Ieedo
             {
                 var option = options[i];
                 if (!option.IconText.IsNullOrEmpty()) {
+                    Options[i].Icon.gameObject.SetActive(true);
                     Options[i].Icon.Text.SetText(Regex.Unescape(option.IconText));
                 } else {
-                    Options[i].Icon.Text.text = string.Empty;
+                    Options[i].Icon.gameObject.SetActive(false);
                 }
                 Options[i].Button.Text = option.Text;
                 Options[i].Icon.BG.color = option.Color;
