@@ -184,7 +184,9 @@ namespace Ieedo
             yield return AnimateCardOut(uiCard, 1);
             if (uiCard != null) Destroy(uiCard.gameObject);
             CloseFrontView();
-            GoTo(ScreenID.Pillars);
+
+            // TODO: instead just add the new card (regenerate data in the pillars?)
+            //GoTo(ScreenID.Pillars);
             Statics.Score.AddScore(50);
         }
 
