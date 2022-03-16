@@ -4168,7 +4168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BlockerBG: {fileID: 0}
   DefaultOutEnterPosition: {x: 0, y: 2500, z: 0}
-  DefaultOutExitPosition: {x: 0, y: -2500, z: 0}
+  DefaultOutExitPosition: {x: 0, y: 2500, z: 0}
   CardsList: {fileID: 2389360068787207876}
   FrontView: {fileID: 8492992023890930437}
   FrontViewPivot: {fileID: 3143054335332561721}
