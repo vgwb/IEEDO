@@ -117,7 +117,7 @@ namespace Ieedo
         private bool isFocused;
         private void HandleSelectPillar(PillarView pillarView)
         {
-            if (PillarsManager.CurrentFocusedPillar != null) return;
+            if (PillarsManager.CurrentFocusedPillar == pillarView) return;
             AnimateToFocused();
 
             PillarsManager.SetFocus(false, pillarView);
@@ -177,7 +177,6 @@ namespace Ieedo
             isFocused = false;
             Camera3D.transform.localPositionTransition(new Vector3(0,15.1000004f,-13.3999996f), 0.5f);
             Camera3D.transform.localRotationTransition(new Quaternion(0.29237175f,0,0,0.956304789f), 0.5f);
-            //Camera3D.transform.localRotationTransition(Quaternion.Euler(34f,0f,0f), 0.25f, LeanEase.Decelerate);
         }
 
         #endregion

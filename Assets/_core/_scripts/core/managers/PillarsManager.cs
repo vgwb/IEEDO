@@ -70,7 +70,7 @@ namespace Ieedo
 
         private bool autoRotating;
         private PillarView currentFocusedPillar;
-        public PillarView CurrentFocusedPillar;
+        public PillarView CurrentFocusedPillar => currentFocusedPillar;
         public void SetFocus(bool _autoRotating, PillarView focusOnPillar = null)
         {
             if (focusOnPillar != null && focusOnPillar == currentFocusedPillar) return;
@@ -95,7 +95,7 @@ namespace Ieedo
                 focusOnPillar.CardsOut();
                 currentFocusedPillar = focusOnPillar;
             }
-            
+
             autoRotating = _autoRotating;
             if (!_autoRotating) transform.localRotationTransition(targetRot, 0.5f);
         }
