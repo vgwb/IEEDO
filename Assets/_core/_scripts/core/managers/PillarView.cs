@@ -89,7 +89,7 @@ namespace Ieedo
                 mr.material.color = data.Cards[iCard].Definition.CategoryDefinition.Color * (1.4f + Random.Range(-0.2f, 0.2f));
 
                 cardGos[iCard].SetActive(true);
-                nCurrentCards++;
+                if (nCurrentCards <= iCard) nCurrentCards++;
             }
             for (int iCard = data.NCards; iCard < cardGos.Count; iCard++)
             {
