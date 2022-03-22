@@ -126,9 +126,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40546818237161472
-    m_Localized: '{ScoreToUnlock} points to unlock
-
-'
+    m_Localized: '{ScoreToUnlock} points to unlock'
     m_Metadata:
       m_Items:
       - rid: 3992833648747610127

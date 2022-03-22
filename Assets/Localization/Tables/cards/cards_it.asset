@@ -23,8 +23,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10201788641468416
-    m_Localized: ' Civica e CulturaCivica e CulturaCivica e CulturaCivica e CulturaCivica
-      e CulturaCivica e CulturaCivica e CulturaCivica e Cultura'
+    m_Localized: Civica e Cultura
     m_Metadata:
       m_Items: []
   - m_Id: 10257870520868864
@@ -36,15 +35,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15338261569101824
-    m_Localized: EduTra
-    m_Metadata:
-      m_Items: []
-  - m_Id: 15338277742338048
-    m_Localized: EduTra Desc
+    m_Localized: Formazione
     m_Metadata:
       m_Items: []
   - m_Id: 15338341822914560
-    m_Localized: Empl
+    m_Localized: Impiego
     m_Metadata:
       m_Items: []
   - m_Id: 15338345862029312
@@ -60,11 +55,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15338416317947904
-    m_Localized: WellBe
+    m_Localized: Benessere
     m_Metadata:
       m_Items: []
   - m_Id: 15338417286832128
     m_Localized: WellBe Desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22534781286735872
+    m_Localized: EduTra Desc
     m_Metadata:
       m_Items: []
   references:

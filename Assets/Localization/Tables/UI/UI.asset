@@ -19,10 +19,53 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a56dafe8fc43444e88553898ea44228d, type: 2}
   m_Extensions:
   - rid: 8776290138509541378
+  - rid: 1775886609108172828
   m_Group: String Table
   references:
     version: 2
     RefIds:
+    - rid: 1775886609108172828
+      type: {class: CsvExtension, ns: UnityEditor.Localization.Plugins.CSV, asm: Unity.Localization.Editor}
+      data:
+        m_Collection: {fileID: 11400000}
+        m_ColumnsList:
+        - rid: 1775886609108172829
+        - rid: 1775886609108172830
+        - rid: 1775886609108172831
+        - rid: 1775886609108172832
+        m_ConnectedFile: 
+    - rid: 1775886609108172829
+      type: {class: KeyIdColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
+      data:
+        m_IncludeId: 1
+        m_IncludeSharedComments: 0
+        m_KeyFieldName: Key
+        m_IdFieldName: Id
+        m_CommentFieldName: Shared Comments
+    - rid: 1775886609108172830
+      type: {class: LocaleColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
+      data:
+        m_LocaleIdentifier:
+          m_Code: en
+        m_FieldName: English(en)
+        m_CommentFieldName: English(en) Comments
+        m_IncludeComments: 0
+    - rid: 1775886609108172831
+      type: {class: LocaleColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
+      data:
+        m_LocaleIdentifier:
+          m_Code: ar
+        m_FieldName: Arabic(ar)
+        m_CommentFieldName: Arabic(ar) Comments
+        m_IncludeComments: 0
+    - rid: 1775886609108172832
+      type: {class: LocaleColumns, ns: UnityEditor.Localization.Plugins.CSV.Columns, asm: Unity.Localization.Editor}
+      data:
+        m_LocaleIdentifier:
+          m_Code: it
+        m_FieldName: Italian(it)
+        m_CommentFieldName: Italian(it) Comments
+        m_IncludeComments: 0
     - rid: 8776290138509541378
       type: {class: GoogleSheetsExtension, ns: UnityEditor.Localization.Plugins.Google, asm: Unity.Localization.Editor}
       data:

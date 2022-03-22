@@ -35,15 +35,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15338261569101824
-    m_Localized: EduTra
-    m_Metadata:
-      m_Items: []
-  - m_Id: 15338277742338048
-    m_Localized: EduTra Desc
+    m_Localized: Education & Training
     m_Metadata:
       m_Items: []
   - m_Id: 15338341822914560
-    m_Localized: Empl
+    m_Localized: Employment
     m_Metadata:
       m_Items: []
   - m_Id: 15338345862029312
@@ -59,11 +55,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15338416317947904
-    m_Localized: WellBe
+    m_Localized: Well Being
     m_Metadata:
       m_Items: []
   - m_Id: 15338417286832128
     m_Localized: WellBe Desc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22534781286735872
+    m_Localized: EduTra Desc
     m_Metadata:
       m_Items: []
   references:
