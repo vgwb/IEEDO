@@ -19,23 +19,24 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 10201661340147712
-    m_Localized: Civics & Culture
+    m_Localized: Civic and Cultural
     m_Metadata:
       m_Items: []
   - m_Id: 10201788641468416
-    m_Localized: CivCul description
+    m_Localized: Everything related to civic life and local culture in your host
+      country
     m_Metadata:
       m_Items: []
   - m_Id: 10257870520868864
-    m_Localized: Community & Social Life
+    m_Localized: Community Engagement
     m_Metadata:
       m_Items: []
   - m_Id: 10258501075755008
-    m_Localized: ComSoc description
+    m_Localized: All about your social file and your engagement in the local community
     m_Metadata:
       m_Items: []
   - m_Id: 15338261569101824
-    m_Localized: Education & Training
+    m_Localized: Education and Training
     m_Metadata:
       m_Items: []
   - m_Id: 15338341822914560
@@ -43,27 +44,31 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15338345862029312
-    m_Localized: Empl Desc
+    m_Localized: Everything related to work, from finding a job to progressing in
+      your professional carreer
     m_Metadata:
       m_Items: []
   - m_Id: 15338384780976128
-    m_Localized: OrDoc
+    m_Localized: Orientation and Documents
     m_Metadata:
       m_Items: []
   - m_Id: 15338385938604032
-    m_Localized: OrDoc Desc
+    m_Localized: All about finding and accessing basic services in the local community,
+      including all required paperwork
     m_Metadata:
       m_Items: []
   - m_Id: 15338416317947904
-    m_Localized: Well Being
+    m_Localized: Wellbeing
     m_Metadata:
       m_Items: []
   - m_Id: 15338417286832128
-    m_Localized: WellBe Desc
+    m_Localized: Everything related to physical and emotional health, including nutrition
+      and habits for a healthy lifestyle.
     m_Metadata:
       m_Items: []
   - m_Id: 22534781286735872
-    m_Localized: EduTra Desc
+    m_Localized: All sorts of activities for learning, in either formal and informal
+      settings
     m_Metadata:
       m_Items: []
   references:

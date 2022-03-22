@@ -19,51 +19,65 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 10201661340147712
-    m_Localized: Civics & Culture
+    m_Localized: "\u0627\u0644\u0645\u062F\u0646\u064A\u0629 \u0648\u0627\u0644\u062B\u0642\u0627\u0641\u064A\u0629"
     m_Metadata:
       m_Items: []
   - m_Id: 10257870520868864
-    m_Localized: Community & Social Life
+    m_Localized: "\u0627\u0644\u0645\u0634\u0627\u0631\u0643\u0629 \u0627\u0644\u0645\u062C\u062A\u0645\u0639\u064A\u0629"
     m_Metadata:
       m_Items: []
   - m_Id: 10258501075755008
-    m_Localized: ComSoc description
+    m_Localized: "\u0643\u0644 \u0634\u064A\u0621 \u0639\u0646 \u0645\u0644\u0641\u0643
+      \u0627\u0644\u0627\u062C\u062A\u0645\u0627\u0639\u064A \u0648\u0645\u0634\u0627\u0631\u0643\u062A\u0643
+      \u0641\u064A \u0627\u0644\u0645\u062C\u062A\u0645\u0639 \u0627\u0644\u0645\u062D\u0644\u064A"
     m_Metadata:
       m_Items: []
   - m_Id: 10201788641468416
-    m_Localized: CivCul description
+    m_Localized: "\u0643\u0644 \u0645\u0627 \u064A\u062A\u0639\u0644\u0642 \u0628\u0627\u0644\u062D\u064A\u0627\u0629
+      \u0627\u0644\u0645\u062F\u0646\u064A\u0629 \u0648\u0627\u0644\u062B\u0642\u0627\u0641\u0629
+      \u0627\u0644\u0645\u062D\u0644\u064A\u0629 \u0641\u064A \u0628\u0644\u062F\u0643
+      \u0627\u0644\u0645\u0636\u064A\u0641"
     m_Metadata:
       m_Items: []
   - m_Id: 15338261569101824
-    m_Localized: EduTra
+    m_Localized: "\u0627\u0644\u062A\u0639\u0644\u064A\u0645 \u0648\u0627\u0644\u062A\u062F\u0631\u064A\u0628"
     m_Metadata:
       m_Items: []
   - m_Id: 15338341822914560
-    m_Localized: Empl
+    m_Localized: "\u062A\u0648\u0638\u064A\u0641"
     m_Metadata:
       m_Items: []
   - m_Id: 15338345862029312
-    m_Localized: Empl Desc
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 15338384780976128
-    m_Localized: OrDoc
+    m_Localized: "\u0627\u0644\u0627\u062A\u062C\u0627\u0647 \u0648\u0627\u0644\u0645\u0633\u062A\u0646\u062F\u0627\u062A"
     m_Metadata:
       m_Items: []
   - m_Id: 15338385938604032
-    m_Localized: OrDoc Desc
+    m_Localized: "\u0643\u0644 \u0634\u064A\u0621 \u0639\u0646 \u0627\u0644\u0639\u062B\u0648\u0631
+      \u0639\u0644\u0649 \u0627\u0644\u062E\u062F\u0645\u0627\u062A \u0627\u0644\u0623\u0633\u0627\u0633\u064A\u0629
+      \u0648\u0627\u0644\u0648\u0635\u0648\u0644 \u0625\u0644\u064A\u0647\u0627 \u0641\u064A
+      \u0627\u0644\u0645\u062C\u062A\u0645\u0639 \u0627\u0644\u0645\u062D\u0644\u064A\u060C
+      \u0628\u0645\u0627 \u0641\u064A \u0630\u0644\u0643 \u062C\u0645\u064A\u0639
+      \u0627\u0644\u0623\u0648\u0631\u0627\u0642 \u0627\u0644\u0645\u0637\u0644\u0648\u0628\u0629"
     m_Metadata:
       m_Items: []
   - m_Id: 15338416317947904
-    m_Localized: WellBe
+    m_Localized: "\u0627\u0644\u0631\u0641\u0627\u0647"
     m_Metadata:
       m_Items: []
   - m_Id: 15338417286832128
-    m_Localized: WellBe Desc
+    m_Localized: "\u0643\u0644 \u0645\u0627 \u064A\u062A\u0639\u0644\u0642 \u0628\u0627\u0644\u0635\u062D\u0629
+      \u0627\u0644\u0628\u062F\u0646\u064A\u0629 \u0648\u0627\u0644\u0639\u0627\u0637\u0641\u064A\u0629\u060C
+      \u0628\u0645\u0627 \u0641\u064A \u0630\u0644\u0643 \u0627\u0644\u062A\u063A\u0630\u064A\u0629
+      \u0648\u0627\u0644\u0639\u0627\u062F\u0627\u062A \u0644\u0646\u0645\u0637 \u062D\u064A\u0627\u0629
+      \u0635\u062D\u064A."
     m_Metadata:
       m_Items: []
   - m_Id: 22534781286735872
-    m_Localized: EduTra Desc
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   references:

@@ -19,11 +19,15 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 12759883776
-    m_Localized: Do you X?
+    m_Localized: "\u0647\u0644 \u0623\u0646\u062A \u0633\u061F"
     m_Metadata:
       m_Items: []
   - m_Id: 7179342181294080
-    m_Localized: Do you Y?
+    m_Localized: "\u0647\u0644 \u0630\u061F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7224149904662528
+    m_Localized: "\u064A\u0631\u0643\u0632 ieedo \u0639\u0644\u0649 6 \u0641\u0626\u0627\u062A:"
     m_Metadata:
       m_Items: []
   references:
