@@ -12,17 +12,17 @@ EditorBuildSettings:
     path: Assets/_minigames/act_diary/act_diary.unity
     guid: da5d7a4ab11504fdbbc9cb7213f89176
   - enabled: 1
+    path: Assets/_minigames/_blank/game_blank.unity
+    guid: 31fa52a94b1d145f2add748e9bfa1b63
+  - enabled: 1
+    path: Assets/_minigames/game_unblock/game_unblock.unity
+    guid: 91f0178d139d54df282b1c52b1567bb3
+  - enabled: 1
     path: Assets/_minigames/game_tictac/game_tictac.unity
     guid: 7e3e4fd162bb70248a65337e1fc92b04
   - enabled: 1
     path: Assets/_minigames/game_connect4/game_connect4.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/_minigames/game_unblock/game_unblock.unity
-    guid: 91f0178d139d54df282b1c52b1567bb3
-  - enabled: 1
-    path: Assets/_minigames/_blank/game_blank.unity
-    guid: 31fa52a94b1d145f2add748e9bfa1b63
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: c559a39ced25e4dcea1ab135796b61b9, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 15a3896ed851c4573bfef8067263c7b3, type: 2}

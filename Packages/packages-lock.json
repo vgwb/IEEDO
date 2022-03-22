@@ -66,11 +66,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.localization": {
-      "version": "1.0.5",
+      "version": "1.2.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.addressables": "1.19.9",
+        "com.unity.addressables": "1.19.17",
         "com.unity.nuget.newtonsoft-json": "2.0.0"
       },
       "url": "https://packages.unity.com"
