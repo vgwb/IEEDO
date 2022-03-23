@@ -150,6 +150,14 @@ MonoBehaviour:
     m_Localized: Validated cards
     m_Metadata:
       m_Items: []
+  - m_Id: 48089044619304960
+    m_Localized: Set as Not Completed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48089044644470784
+    m_Localized: Are you sure you want to set the card as Not Completed?
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

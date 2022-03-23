@@ -143,6 +143,14 @@ MonoBehaviour:
     m_Key: pillar_validated
     m_Metadata:
       m_Items: []
+  - m_Id: 48089044619304960
+    m_Key: uncomplete_card_confirmation_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48089044644470784
+    m_Key: uncomplete_card_confirmation_description
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
