@@ -151,6 +151,14 @@ MonoBehaviour:
     m_Key: uncomplete_card_confirmation_description
     m_Metadata:
       m_Items: []
+  - m_Id: 48119887559598080
+    m_Key: unvalidate_card_confirmation_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48119887563792384
+    m_Key: unvalidate_card_confirmation_description
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
