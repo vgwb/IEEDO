@@ -21,6 +21,11 @@ namespace Ieedo
                 CloseImmediate();
             });
 
+            AddButton("action_generate_test_cards", () =>
+            {
+                Statics.Cards.GenerateTestCards(5);
+            });
+
             AddButton("action_reset_profile", () =>
                 Statics.Data.CreateNewProfile(new ProfileDescription
                 {

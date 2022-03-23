@@ -61,31 +61,7 @@ namespace Ieedo.Test
         {
             Log.Info(MethodBase.GetCurrentMethod().Name);
 
-            Statics.Data.LoadCardDefinitions();
-            int rnd = Random.Range(0,9999);
-            var cardDef = Statics.Cards.GenerateCardDefinition(
-                new CardDefinition {
-                    Category = (CategoryID)Random.Range(1,Enum.GetValues(typeof(CategoryID)).Length+1),
-                    SubCategory = (SubCategoryID)Random.Range(1,Enum.GetValues(typeof(SubCategoryID)).Length+1),
-                    Description = new LocString { DefaultText ="TEST " + rnd},
-                    Difficulty = 2,
-                    Title = new LocString { DefaultText = "TITLE " + rnd},
-                },
-                isDefaultCard: AppManager.I.ApplicationConfig.SaveCardsAsDefault
-            );
-            Statics.Data.AddCardDefinition(cardDef);
-
-            // Create a new Data for this profile for that card
-            var cardData = new CardData
-            {
-                DefID = cardDef.UID,
-                CreationTimestamp = new Timestamp(DateTime.Now),
-                ExpirationTimestamp = Timestamp.None,
-                Status = CardValidationStatus.Todo,
-            };
-            Statics.Data.Profile.Cards.Add(cardData);
-
-            Log.Err(Statics.Data.CardDefinitions.ToJoinedString());
+            Statics.Cards.GenerateTestCards(1);
         }
 
 

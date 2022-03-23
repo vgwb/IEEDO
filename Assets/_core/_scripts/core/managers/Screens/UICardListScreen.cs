@@ -276,7 +276,7 @@ namespace Ieedo
             switch (CurrentListViewMode)
             {
                 case ListViewMode.ToDo:
-                    CardsList.transform.localPosition = new Vector3(-347,0,0);
+                    CardsList.transform.localPosition = new Vector3(-220,0,0);
                     DefaultOutEnterPosition = new Vector3(-2500, 0, 0);
                     DefaultOutExitPosition = new Vector3(-2500, 0, 0);
                     break;
