@@ -1,4 +1,5 @@
 # Minigames
+ideas
 
 ## Unblock
 - Planning
@@ -13,7 +14,7 @@ sequential predefined levels
 
 random generative levels
 
-![[digits.webp]]
+![](_img/digits.webp)
 ## Simon
 tap the objects as in the shown sequence
 
@@ -25,7 +26,7 @@ tap the objects as in the shown sequence
 
 random generative levels
 
-![[simon.webp]]
+![](_img/simon.webp)
 
 ## Clear the level
 move the penguin to clear all level
@@ -35,7 +36,7 @@ move the penguin to clear all level
 
 sequential predefined levels
 
-![[pengui-clean.webp]]
+![](_img/pengui-clean.webp)
 
 ## Sudoku
 - Inhibition
@@ -45,7 +46,7 @@ sequential predefined levels
 
 random generative levels
 
-![[sudoku.webp]]
+![](_img/sudoku.webp)
 
 ## Whack a Mole
 
@@ -55,4 +56,4 @@ random generative levels
 
 random generative levels
   
-![[whackAMole.webp]]
+![](_img/whackAMole.webp)
