@@ -28,7 +28,7 @@ MonoBehaviour:
   Type: 1
   Image: {fileID: 21300000, guid: bcc0a043d80dfae4399064cd5c25a6a2, type: 3}
   SceneName: act_diary
-  ScoreToUnlock: 100
+  ScoreToUnlock: 0
   MaxLevel: 10
   references:
     version: 2
