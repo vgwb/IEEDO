@@ -159,6 +159,10 @@ MonoBehaviour:
     m_Localized: Nutrition
     m_Metadata:
       m_Items: []
+  - m_Id: 22763239081189376
+    m_Localized: Career
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
