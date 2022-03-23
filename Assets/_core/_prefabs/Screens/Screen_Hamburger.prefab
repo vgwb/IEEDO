@@ -171,8 +171,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlockerBG: {fileID: 0}
-  DefaultOutEnterPosition: {x: 0, y: -2500, z: 0}
-  DefaultOutExitPosition: {x: 0, y: 2500, z: 0}
+  DefaultOutEnterPosition: {x: -500, y: 2500, z: 0}
+  DefaultOutExitPosition: {x: -500, y: 2500, z: 0}
   ButtonPrefab: {fileID: 1388576337894741236}
 --- !u!1001 &3464811839136910273
 PrefabInstance:
