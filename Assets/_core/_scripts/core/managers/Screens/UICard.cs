@@ -108,9 +108,10 @@ namespace Ieedo
         public void AnimateToParent()
         {
             var rt = transform as RectTransform;
-            rt.rotationTransition(Quaternion.identity, 0.25f);
-            rt.anchoredPositionTransition(Vector3.zero, 0.25f);
-            rt.localScaleTransition(Vector3.one, 0.25f);
+            var period = 0.1f;
+            rt.rotationTransition(Quaternion.identity, period);
+            rt.anchoredPositionTransition(Vector3.zero, period);
+            rt.localScaleTransition(Vector3.one, period);
         }
     }
 }

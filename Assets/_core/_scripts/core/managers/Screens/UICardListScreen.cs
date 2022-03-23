@@ -491,7 +491,8 @@ namespace Ieedo
                     new OptionData
                     {
                         Text = categoryDef.Title.Text,
-                        Color = categoryDef.Color
+                        Color = categoryDef.Color,
+                        ShowIconSquare = true
                     }
                 );
             }
@@ -519,6 +520,7 @@ namespace Ieedo
                 var optionData = new OptionData {
                         Text = "",
                         Color = Color.white,
+                        ShowIconSquare = false
                     };
                 for (int i = 1; i <= 3; i++) {
                     if (i <= possibleDifficulty)
@@ -559,7 +561,8 @@ namespace Ieedo
                     new OptionData
                     {
                         Text = new Timestamp(targetDate).ToString(),
-                        Color = color
+                        Color = color,
+                        ShowIconSquare = true
                     }
                 );
             }
@@ -589,7 +592,8 @@ namespace Ieedo
                     {
                         Text = subCategoryDef.Title.Text,
                         Color = categoryDef.Color,
-                        IconText = subCategoryDef.Icon
+                        IconText = subCategoryDef.Icon,
+                        ShowIconSquare = true
                     }
                 );
             }

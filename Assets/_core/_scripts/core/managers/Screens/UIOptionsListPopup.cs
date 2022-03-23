@@ -7,6 +7,7 @@ namespace Ieedo
 {
     public struct OptionData
     {
+        public bool ShowIconSquare;
         public string IconText;
         public string Text;
         public Color Color;
@@ -31,12 +32,17 @@ namespace Ieedo
             for (var i = 0; i < options.Count; i++)
             {
                 var option = options[i];
-                if (!option.IconText.IsNullOrEmpty()) {
-                    Options[i].Icon.gameObject.SetActive(true);
+                Options[i].Icon.gameObject.SetActive(option.ShowIconSquare);
+                if (!option.IconText.IsNullOrEmpty())
+                {
                     Options[i].Icon.Text.SetText(Regex.Unescape(option.IconText));
-                } else {
-                    Options[i].Icon.gameObject.SetActive(false);
                 }
+                else
+                {
+                    // Color only
+                    Options[i].Icon.Text.SetText(string.Empty);
+                }
+
                 Options[i].Button.Text = option.Text;
                 Options[i].Icon.BG.color = option.Color;
                 Options[i].gameObject.SetActive(true);
