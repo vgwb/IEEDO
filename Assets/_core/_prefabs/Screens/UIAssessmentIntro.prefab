@@ -138,7 +138,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 20
+  m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -259,7 +259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7189363565287035420, guid: 62b0585baa2de2147b49b9e04133163a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1020.5513
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 7189363565287035420, guid: 62b0585baa2de2147b49b9e04133163a, type: 3}
       propertyPath: m_SizeDelta.y
@@ -316,6 +316,14 @@ PrefabInstance:
     - target: {fileID: 7189363565287035423, guid: 62b0585baa2de2147b49b9e04133163a, type: 3}
       propertyPath: m_Name
       value: Btn_Continue
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319224862052492672, guid: 62b0585baa2de2147b49b9e04133163a, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 37308361245450244
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319224862052492672, guid: 62b0585baa2de2147b49b9e04133163a, type: 3}
+      propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
+      value: GUID:bf8d5c70485b84a24a821abb0ddb8f7e
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 62b0585baa2de2147b49b9e04133163a, type: 3}

@@ -39,7 +39,7 @@ namespace Ieedo
             if (BlockerBG != null)
             {
                 var col = BlockerBG.color;
-                col.a = 0.7f;
+                col.a = 1f;
                 BlockerBG.colorTransition(col, 0.25f);
             }
 
