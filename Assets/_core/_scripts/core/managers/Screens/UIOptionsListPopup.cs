@@ -15,13 +15,17 @@ namespace Ieedo
     public class UIOptionsListPopup : UIScreen
     {
         public UITooltip Tooltip;
+        public UnityEngine.UI.Image EditorBG;
 
         public Transform ButtonsPivot;
         private UIOptionLine[] Options;
         public int LatestSelectedOption;
 
-        public void ShowOptions(LocalizedString titleKey, List<OptionData> options)
+        public void ShowOptions(LocalizedString titleKey, List<OptionData> options, bool isTextEntry = false)
         {
+            if (isTextEntry && !Application.isEditor) EditorBG.enabled = false;
+            else EditorBG.enabled = true;
+
             if (Options == null) Options = ButtonsPivot.GetComponentsInChildren<UIOptionLine>(true);
             Tooltip.Text.Key = titleKey;
             for (var i = 0; i < options.Count; i++)
