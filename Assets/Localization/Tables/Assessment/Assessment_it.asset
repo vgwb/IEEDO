@@ -19,11 +19,16 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 12759883776
-    m_Localized: Vuoi X?
+    m_Localized: Fai x?
     m_Metadata:
       m_Items: []
   - m_Id: 7179342181294080
-    m_Localized: Vuoi Y?
+    m_Localized: Fai?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7224149904662528
+    m_Localized: IEDO si concentra su 6 categorie, controlliamo loro uno per uno
+      ...
     m_Metadata:
       m_Items: []
   references:

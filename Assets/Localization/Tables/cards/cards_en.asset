@@ -71,6 +71,94 @@ MonoBehaviour:
       settings
     m_Metadata:
       m_Items: []
+  - m_Id: 22742599439687680
+    m_Localized: (custom)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602240
+    m_Localized: Visit a landmark
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602241
+    m_Localized: Cultural event
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602242
+    m_Localized: Media (news, TV, books...)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602243
+    m_Localized: Social gathering
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602244
+    m_Localized: Help others
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602245
+    m_Localized: "Group activity (sport, chorus\u2026)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602246
+    m_Localized: Self-learning
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602247
+    m_Localized: Subscribe to a course
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602248
+    m_Localized: Follow a course
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602249
+    m_Localized: Take an exam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602250
+    m_Localized: Personal project
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602251
+    m_Localized: Internship
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602252
+    m_Localized: Application process
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602253
+    m_Localized: Job Interviews
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602254
+    m_Localized: Local services
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602255
+    m_Localized: Transports
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602256
+    m_Localized: Paperwork
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602257
+    m_Localized: Physical activity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602258
+    m_Localized: Medical treatment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602259
+    m_Localized: Psychological therapy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602260
+    m_Localized: Nutrition
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

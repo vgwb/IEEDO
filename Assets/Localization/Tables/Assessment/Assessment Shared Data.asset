@@ -15,16 +15,16 @@ MonoBehaviour:
   m_TableCollectionName: Assessment
   m_TableCollectionNameGuidString: f57bdb4aff2f4cc469d2fc2820a81e92
   m_Entries:
+  - m_Id: 7224149904662528
+    m_Key: assessment_intro
+    m_Metadata:
+      m_Items: []
   - m_Id: 12759883776
     m_Key: question_CivCul_1
     m_Metadata:
       m_Items: []
   - m_Id: 7179342181294080
     m_Key: question_CivCul_2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 7224149904662528
-    m_Key: assessment_intro
     m_Metadata:
       m_Items: []
   m_Metadata:

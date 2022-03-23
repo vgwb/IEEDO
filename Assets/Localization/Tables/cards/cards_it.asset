@@ -19,35 +19,37 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 10201661340147712
-    m_Localized: Loading...
+    m_Localized: Civico e culturale
     m_Metadata:
       m_Items: []
   - m_Id: 10201788641468416
-    m_Localized: Loading...
+    m_Localized: Tutto correlato alla vita civica e alla cultura locale nel tuo paese
+      ospitante
     m_Metadata:
       m_Items: []
   - m_Id: 10257870520868864
-    m_Localized: Loading...
+    m_Localized: "L'impegno della comunit\xE0"
     m_Metadata:
       m_Items: []
   - m_Id: 10258501075755008
-    m_Localized: Loading...
+    m_Localized: "Tutto sul tuo file sociale e il tuo impegno nella comunit\xE0 locale"
     m_Metadata:
       m_Items: []
   - m_Id: 15338261569101824
-    m_Localized: Loading...
+    m_Localized: Istruzione e formazione
     m_Metadata:
       m_Items: []
   - m_Id: 15338341822914560
-    m_Localized: Loading...
+    m_Localized: Occupazione
     m_Metadata:
       m_Items: []
   - m_Id: 15338345862029312
-    m_Localized: Loading...
+    m_Localized: "Tutto ci\xF2 che riguarda il lavoro, dal trovare un lavoro per
+      progredire nella tua carreria professionale"
     m_Metadata:
       m_Items: []
   - m_Id: 15338384780976128
-    m_Localized: Loading...
+    m_Localized: Orientamento e documenti
     m_Metadata:
       m_Items: []
   - m_Id: 15338385938604032
@@ -56,15 +58,105 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15338416317947904
-    m_Localized: Loading...
+    m_Localized: Benessere
     m_Metadata:
       m_Items: []
   - m_Id: 15338417286832128
-    m_Localized: Loading...
+    m_Localized: Tutto correlato alla salute fisica ed emotiva, compresa la nutrizione
+      e le abitudini per uno stile di vita sano.
     m_Metadata:
       m_Items: []
   - m_Id: 22534781286735872
-    m_Localized: Loading...
+    m_Localized: "Tutti i tipi di attivit\xE0 per l'apprendimento, in contesti formali
+      e informali"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599439687680
+    m_Localized: (costume)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602240
+    m_Localized: Visita un punto di riferimento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602241
+    m_Localized: Evento culturale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602242
+    m_Localized: Media (notizie, TV, libri ...)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602243
+    m_Localized: Ritrovo sociale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602244
+    m_Localized: Aiutare gli altri
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602245
+    m_Localized: "Attivit\xE0 di gruppo (Sport, Chorus ...)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602246
+    m_Localized: Autoapprendimento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602247
+    m_Localized: Iscriviti a un corso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602248
+    m_Localized: Segui un corso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602249
+    m_Localized: Sostenere un esame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602250
+    m_Localized: Progetto personale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602251
+    m_Localized: tirocinio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602252
+    m_Localized: Processo di applicazione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602253
+    m_Localized: Colloquio di lavoro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602254
+    m_Localized: Servizi locali
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602255
+    m_Localized: Trasporti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602256
+    m_Localized: Lavoro di ufficio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602257
+    m_Localized: "Attivit\xE0 fisica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602258
+    m_Localized: Trattamento medico
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602259
+    m_Localized: Terapia psicologica
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602260
+    m_Localized: Nutrizione
     m_Metadata:
       m_Items: []
   references:
