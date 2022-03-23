@@ -109,8 +109,9 @@ namespace Ieedo
         {
             var rt = transform as RectTransform;
             var period = 0.1f;
-            rt.rotationTransition(Quaternion.identity, period);
+            rt.localRotationTransition(Quaternion.identity, period);
             rt.anchoredPositionTransition(Vector3.zero, period);
+            rt.localPositionTransition_z(0, period);
             rt.localScaleTransition(Vector3.one, period);
         }
     }

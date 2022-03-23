@@ -102,7 +102,7 @@ namespace Ieedo
 
                 if (currentListViewMode == UICardListScreen.ListViewMode.ToDo)
                 {
-                    heldCard.transform.localEulerAnglesTransform(new Vector3(0, 0f, -5f), 0.5f);
+                    HeldSlots[iCard].transform.localEulerAnglesTransform(new Vector3(0, 0f, -5f), 0.5f);
                 }
             }
         }
