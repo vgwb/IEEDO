@@ -37,7 +37,7 @@ MonoBehaviour:
     DefaultText: 
   PaletteColor: {fileID: 11400000, guid: f577d573a5c52c341832836ae719824d, type: 2}
   SubCategories:
-  - ID: 200
+  - ID: 100
     Title:
       Key:
         m_TableReference:
@@ -50,7 +50,59 @@ MonoBehaviour:
         m_LocalVariables: []
       DefaultText: B 1
     Icon: \uf556
-  - ID: 201
+  - ID: 101
+    Title:
+      Key:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      DefaultText: B 2
+    Icon: \uf77d
+  - ID: 102
+    Title:
+      Key:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      DefaultText: B 2
+    Icon: \uf77d
+  - ID: 103
+    Title:
+      Key:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      DefaultText: B 2
+    Icon: \uf77d
+  - ID: 104
+    Title:
+      Key:
+        m_TableReference:
+          m_TableCollectionName: 
+        m_TableEntryReference:
+          m_KeyId: 0
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      DefaultText: B 2
+    Icon: \uf77d
+  - ID: 1000
     Title:
       Key:
         m_TableReference:
