@@ -19,6 +19,8 @@ namespace Ieedo
 
         public UIOptionsListPopup optionsListPopup;
 
+        public UnityEngine.UI.Image FrontObscurer;
+
         [Header("Card View")]
         public GameObject ViewMode;
         public UIButton CompleteCardButton;
@@ -323,7 +325,7 @@ namespace Ieedo
         private void OpenFrontView(UICard uiCard, FrontViewMode viewMode)
         {
             if (CurrentFrontViewMode != FrontViewMode.None) return;
-
+            FrontObscurer.colorTransition(new Color(FrontObscurer.color.r, FrontObscurer.color.g, FrontObscurer.color.b, 0.5f), 0.25f);
             prevFrontCardParent = uiCard.transform.parent;
             var uiCardRt = uiCard.GetComponent<RectTransform>();
             uiCardRt.SetParent(FrontViewPivot, true);
@@ -351,6 +353,9 @@ namespace Ieedo
                     ValidatedMode.SetActive(false);
                     StartEditing(false);
 
+                    CreateCardButton.transform.localScale = Vector3.one;
+                    CreateCardButton.transform.localScaleTransition(Vector3.zero, 0.25f);
+
                     DeleteCardButton.transform.localScale = Vector3.zero;
                     DeleteCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
                     CompleteCardButton.transform.localScale = Vector3.zero;
@@ -370,6 +375,9 @@ namespace Ieedo
                     ViewMode.SetActive(true);
                     CompletedMode.SetActive(false);
                     ValidatedMode.SetActive(false);
+
+                    UnCompleteCardButton.transform.localScale = Vector3.zero;
+                    UnCompleteCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
                     break;
                 case FrontViewMode.Completed:
                     EditModeCardInteraction.SetActive(false);
@@ -377,6 +385,11 @@ namespace Ieedo
                     ViewMode.SetActive(false);
                     CompletedMode.SetActive(true);
                     ValidatedMode.SetActive(false);
+
+                    ValidateCardButton.transform.localScale = Vector3.zero;
+                    ValidateCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
+                    UnCompleteCardButton.transform.localScale = Vector3.zero;
+                    UnCompleteCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
                     break;
                 case FrontViewMode.Validated:
                     EditModeCardInteraction.SetActive(false);
@@ -384,12 +397,16 @@ namespace Ieedo
                     ViewMode.SetActive(false);
                     CompletedMode.SetActive(false);
                     ValidatedMode.SetActive(true);
+
+                    UnValidateCardButton.transform.localScale = Vector3.zero;
+                    UnValidateCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
                     break;
             }
         }
 
         private void CloseFrontView()
         {
+            FrontObscurer.colorTransition(new Color(FrontObscurer.color.r, FrontObscurer.color.g, FrontObscurer.color.b, 0f), 0.25f);
             FrontView.gameObject.SetActive(false);
 
             if (frontCardUI != null)
@@ -404,6 +421,12 @@ namespace Ieedo
             frontCardUI = null;
             prevFrontCardParent = null;
             CurrentFrontViewMode = FrontViewMode.None;
+
+            if (CurrentListViewMode == ListViewMode.ToDo)
+            {
+                CreateCardButton.transform.localScale = Vector3.zero;
+                CreateCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
+            }
         }
 
 
