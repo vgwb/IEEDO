@@ -4,16 +4,42 @@
     {
         None,
 
-        A_1 = 100,
-        A_2,
-        A_3,
+        CivCul1 = 100,
+        CivCul2,
+        CivCul3,
+        CivCul4,
+        CivCul5,
 
-        B_1 = 200,
-        B_2,
-        B_3,
+        ComSoc1 = 200,
+        ComSoc2,
+        ComSoc3,
+        ComSoc4,
+        ComSoc5,
 
-        C_1 = 300,
-        C_2,
-        C_3,
+        EduTra1 = 300,
+        EduTra2,
+        EduTra3,
+        EduTra4,
+        EduTra5,
+
+        Empl1 = 400,
+        Empl2,
+        Empl3,
+        Empl4,
+        Empl5,
+
+        OrDoc1 = 500,
+        OrDoc2,
+        OrDoc3,
+        OrDoc4,
+        OrDoc5,
+
+        WellBe1 = 600,
+        WellBe2,
+        WellBe3,
+        WellBe4,
+        WellBe5,
+
+        Custom1 = 1000,
     }
 }
