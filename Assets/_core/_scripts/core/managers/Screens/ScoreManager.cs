@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using Lean.Transition;
 using UnityEngine;
+using UnityEngine.Localization;
 using Vector3 = UnityEngine.Vector3;
 
 namespace Ieedo
@@ -17,6 +18,7 @@ namespace Ieedo
         {
             if (CurrentScoreText != null)
             {
+                CurrentScoreText.Key = new LocalizedString("UI", "top_score");
                 CurrentScoreText.Key.Arguments = new List<object>{this};
                 CurrentScoreText.Key.StringChanged += v => CurrentScoreText.text = v;
             }
