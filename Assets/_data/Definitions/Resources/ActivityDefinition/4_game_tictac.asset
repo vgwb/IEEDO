@@ -26,6 +26,7 @@ MonoBehaviour:
       m_LocalVariables: []
     DefaultText: Tic Tac Toe
   Type: 2
+  Image: {fileID: 21300000, guid: 6e1730608c4bcb146ad7ccc85d727d5e, type: 3}
   SceneName: game_tictac
   ScoreToUnlock: 0
   MaxLevel: 10

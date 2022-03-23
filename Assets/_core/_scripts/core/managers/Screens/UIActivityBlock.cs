@@ -8,7 +8,7 @@ namespace Ieedo
         public GameObject LockedGO;
         public UIText LockedText;
 
-        public Image GameImage;
+        public Image Image;
         public UIText Title;
         public UIButton LaunchButton;
 

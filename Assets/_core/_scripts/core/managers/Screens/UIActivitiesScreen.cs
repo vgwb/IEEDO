@@ -30,6 +30,7 @@ namespace Ieedo
 
                 SetupButton(ActivityBlocks[i].LaunchButton, () => LaunchActivity(activityDefinition.ID));
                 ActivityBlocks[i].Title.Key = activityDefinition.Title.Key;
+                ActivityBlocks[i].Image.sprite = activityDefinition.Image;
 
                 var data = Statics.Data.Profile.ActivitiesData.FirstOrDefault(x => x.ID == activityDefinition.ID);
                 if (data == null)
