@@ -35,7 +35,7 @@ namespace minigame.unblock
         {
             GameManager.getInstance().init();
             Debug.Log($"Starting game at level {currentLevel}");
-            levelText.text = "Level " + (currentLevel + 1);
+            levelText.text = "Level " + (currentLevel);
 
             GameData.getInstance().isLock = false;
 
@@ -43,7 +43,7 @@ namespace minigame.unblock
             tg.clear();
 
             GameData.difficulty = 0;
-            GameData.instance.cLevel = currentLevel; //Random.Range(0, GameData.totalLevel[GameData.difficulty]);
+            GameData.instance.cLevel = currentLevel - 1; //Random.Range(0, GameData.totalLevel[GameData.difficulty]);
 
             tg.init();
 
