@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Lean.Transition;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Ieedo
 {
     public class AssessmentFlowManager : MonoBehaviour
     {
+        public Image BlockerBG;
+
         public void StartAssessment()
         {
             StartCoroutine(AssessmentCO());
@@ -17,6 +21,13 @@ namespace Ieedo
             var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
             var assessmentRecapScreen = Statics.Screens.Get(ScreenID.AssessmentRecap) as UIAssessmentRecapPopup;
             var introScreen = Statics.Screens.Get(ScreenID.AssessmentIntro) as UIAssessmentIntroScreen;
+
+            if (BlockerBG != null)
+            {
+                var col = BlockerBG.color; col.a = 1f;
+                BlockerBG.colorTransition(col, 0.25f);
+            }
+
             yield return introScreen.ShowIntro();
             while (introScreen.IsOpen) yield return null;
 
@@ -56,6 +67,12 @@ namespace Ieedo
                 categoryData.AssessmentValue = assessmentPercentages[(int)categoryData.ID];
             }
             Statics.Data.SaveProfile();
+
+            if (BlockerBG != null)
+            {
+                var col = BlockerBG.color; col.a = 0f;
+                BlockerBG.colorTransition(col, 0.25f);
+            }
 
             // Refresh pillars
             Statics.Screens.GoTo(ScreenID.Pillars);

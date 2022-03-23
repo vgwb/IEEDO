@@ -9,6 +9,7 @@ namespace Ieedo
         public ActivityID ID;
         public LocString Title;
         public ActivityType Type;
+        public Sprite Image;
         public string SceneName;
         public int ScoreToUnlock;
         public int MaxLevel = 10;

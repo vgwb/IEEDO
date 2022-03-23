@@ -26,6 +26,7 @@ MonoBehaviour:
       m_LocalVariables: []
     DefaultText: Unblock
   Type: 2
+  Image: {fileID: 21300000, guid: 4946cf56c45908941bcdd8828e0d81aa, type: 3}
   SceneName: game_unblock
   ScoreToUnlock: 0
   MaxLevel: 10
