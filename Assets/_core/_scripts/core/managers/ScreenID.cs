@@ -23,6 +23,6 @@
         ActivityResult,
         ActivityContinue,
 
-        Debug,
+        Hamburger,
     }
 }

@@ -69,12 +69,12 @@ namespace Ieedo
             uiTopScreen.SwitchMode(TopBarMode.Activity);
         }
 
-        private void CloseActivity(ActivityResult result)
+        private void CloseActivity()
         {
-            StartCoroutine(CloseActivityCO(result));
+            StartCoroutine(CloseActivityCO());
         }
 
-        private IEnumerator CloseActivityCO(ActivityResult result)
+        private IEnumerator CloseActivityCO()
         {
             if (CurrentActivity != null)
             {
@@ -89,6 +89,15 @@ namespace Ieedo
             //var resultScreen = Statics.Screens.Get(ScreenID.ActivityResult) as UIActivityResultScreen;
             //yield return resultScreen.ShowResult(result);
 
+            CurrentActivity = null;
+            CurrentActivityManager = null;
+
+            var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
+            uiTopScreen.SwitchMode(TopBarMode.MainApp);
+        }
+
+        public void RegisterResult(ActivityResult result)
+        {
             // Save the result of this activity and its score
             result.Timestamp = Timestamp.Now;
             var activityData = Statics.Data.Profile.ActivitiesData.First(x => x.ID == CurrentActivity.ID);
@@ -100,12 +109,15 @@ namespace Ieedo
             }
 
             Statics.Score.AddScore(result.Score);
+        }
 
-            CurrentActivity = null;
-            CurrentActivityManager = null;
-
-            var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
-            uiTopScreen.SwitchMode(TopBarMode.MainApp);
+        public int CurrentLevel
+        {
+            get
+            {
+                var activityData = Statics.Data.Profile.ActivitiesData.First(x => x.ID == CurrentActivity.ID);
+                return activityData.CurrentLevel;
+            }
         }
     }
 }

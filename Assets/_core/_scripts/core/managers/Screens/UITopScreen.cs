@@ -28,13 +28,13 @@ namespace Ieedo
             SetupButtonDown(InstantTranslationButton, SetTargetLocale, SetSourceLocale);
             SetupButton(HamburgerButton, () =>
             {
-                if (Statics.Screens.Get(ScreenID.Debug).IsOpen)
+                if (Statics.Screens.Get(ScreenID.Hamburger).IsOpen)
                 {
-                    Statics.Screens.Close(ScreenID.Debug);
+                    Statics.Screens.Close(ScreenID.Hamburger);
                 }
                 else
                 {
-                    Statics.Screens.Open(ScreenID.Debug);
+                    Statics.Screens.Open(ScreenID.Hamburger);
                 }
             });
             SwitchMode(TopBarMode.MainApp);

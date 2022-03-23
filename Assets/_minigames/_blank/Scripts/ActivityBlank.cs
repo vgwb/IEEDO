@@ -15,9 +15,10 @@ namespace Ieedo.games.blank
         public void OnBtnWin()
         {
             SoundManager.I.PlaySfx(SfxEnum.win);
-            StartCoroutine(AskQuestionCO());
+            StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win, 10)));
         }
 
+        /*
         private IEnumerator AskQuestionCO()
         {
             var answer = new Ref<int>();
@@ -38,13 +39,13 @@ namespace Ieedo.games.blank
                     CloseActivity(new ActivityResult(ActivityResultState.Lose, 2));
                     break;
             }
-        }
+        }*/
 
         public void OnBtnLose()
         {
             SoundManager.I.PlaySfx(SfxEnum.lose);
             Debug.Log("Game Blank Lose");
-            CloseActivity(new ActivityResult(ActivityResultState.Lose, 2));
+            StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Lose, 2)));
         }
     }
 }

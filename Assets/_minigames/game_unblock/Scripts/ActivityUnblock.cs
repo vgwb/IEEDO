@@ -49,66 +49,19 @@ namespace minigame.unblock
 
         }
 
-        public void FinishGame(bool playerWin)
-        {
-            if (playerWin) {
-                OnBtnWin();
-            } else {
-                OnBtnLose();
-            }
-        }
-
-        public void OnBtnWin()
-        {
-            Debug.Log("Game Blank Win");
-            CloseActivity(new ActivityResult(ActivityResultState.Win, 10));
-        }
-
-        public void OnBtnLose()
-        {
-            Debug.Log("Game Blank Lose");
-            CloseActivity(new ActivityResult(ActivityResultState.Lose, 2));
-        }
-
-        public void LevelCompletesd()
-        {
-            //     if (GameData.getInstance().cLevel < GameData.totalLevel[GameData.difficulty] - 1)
-            // {
-            //     GameData.getInstance().cLevel++;
-            // }
-            // else
-            // {
-            //     GameData.getInstance().cLevel = 0;
-            // }
-        }
-
         public void win()
         {
             Debug.Log("WIN");
             GameData.instance.isWin = true;
             SoundManager.I.PlaySfx(SfxEnum.win);
-            StartCoroutine(AskQuestionCO());
+            StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win,10)));
         }
 
-        private IEnumerator AskQuestionCO()
+        public override IEnumerator PlayNextLevel(int _currentLevel)
         {
-            var answer = new Ref<int>();
-            yield return ShowQuestion(new LocalizedString("UI", "continue"),
-                new LocalizedString("UI", "continue"), new[]
-                {
-                    new LocalizedString("UI","yes"),
-                    new LocalizedString("UI","no")
-                }, answer);
-            switch (answer.Value) {
-                case 0:
-                    currentLevel++;
-                    StartGame();
-                    break;
-                case 1:
-                    Debug.Log("Game Blank Exit");
-                    CloseActivity(new ActivityResult(ActivityResultState.Win, 10));
-                    break;
-            }
+            currentLevel = _currentLevel;
+            StartGame();
+            yield break;
         }
     }
 }

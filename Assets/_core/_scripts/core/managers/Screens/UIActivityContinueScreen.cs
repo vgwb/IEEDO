@@ -14,7 +14,6 @@ namespace Ieedo
 
         public UIButton ContinueButton;
         public UIButton QuitButton;
-        public UIButton RetryButton;
 
         public IEnumerator ShowResult(ActivityResult result)
         {
@@ -24,9 +23,21 @@ namespace Ieedo
             locString.Arguments = new List<object>{result};
             Score.Text.Key = locString;
 
-            SetupButton(ContinueButton, Close);
-            //SetupButton(QuitButton, Abort);
+            SetupButton(ContinueButton, Continue);
+            SetupButton(QuitButton, Quit);
             yield return OpenCO();
+        }
+
+        private void Quit()
+        {
+            Close();
+            Statics.ActivityFlow.CurrentActivityManager.CloseActivity();
+        }
+
+        private void Continue()
+        {
+            Close();
+            StartCoroutine(Statics.ActivityFlow.CurrentActivityManager.PlayNextLevel(Statics.ActivityFlow.CurrentLevel));
         }
     }
 }

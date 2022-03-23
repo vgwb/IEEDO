@@ -8,7 +8,7 @@ namespace Ieedo.games
     public class ActivityManager : MonoBehaviour
     {
         public ActivityDefinition Activity;
-        public System.Action<ActivityResult> OnActivityEnd;
+        public System.Action OnActivityEnd;
 
         [BoxGroup("Local Debug")]
         public bool DebugAutoplay;
@@ -17,9 +17,9 @@ namespace Ieedo.games
 
         protected bool Inited = false;
 
-        public void CloseActivity(ActivityResult result)
+        public void CloseActivity(ActivityResult result = null)    // TODO: remove this result, not needed anymore
         {
-            OnActivityEnd?.Invoke(result);
+            OnActivityEnd?.Invoke();
         }
 
         public void ExternSetupActivity(int currentLevel)
@@ -31,10 +31,16 @@ namespace Ieedo.games
         {
         }
 
-        public IEnumerator CompleteLevel(ActivityResult result)
+        public IEnumerator CompleteActivity(ActivityResult result)
         {
+            Statics.ActivityFlow.RegisterResult(result);
             var continueScreen = Statics.Screens.Get(ScreenID.ActivityContinue) as UIActivityContinueScreen;
             yield return continueScreen.ShowResult(result);
+        }
+
+        public virtual IEnumerator PlayNextLevel(int _currentLevel)
+        {
+            yield break;
         }
 
         public IEnumerator ShowQuestion(LocalizedString title, LocalizedString question, LocalizedString[] answers, Ref<int> selectedAnswerIndex)

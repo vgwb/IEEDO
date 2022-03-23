@@ -6,7 +6,7 @@ namespace Ieedo
 {
     public class UIHamburgerScreen : UIScreen
     {
-        public override ScreenID ID => ScreenID.Debug;
+        public override ScreenID ID => ScreenID.Hamburger;
 
         public UIButton ButtonPrefab;
 
