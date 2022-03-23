@@ -179,6 +179,14 @@ MonoBehaviour:
     m_Localized: Sei sicuro di voler cancellare la carta?
     m_Metadata:
       m_Items: []
+  - m_Id: 48151452267077632
+    m_Localized: Generare pilastri casuali.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48154400376250368
+    m_Localized: TEST AUMENTO Punteggio
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

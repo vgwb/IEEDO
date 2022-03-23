@@ -21,6 +21,7 @@
         Question,
         AssessmentRecap,
         ActivityResult,
+        ActivityContinue,
 
         Debug,
     }

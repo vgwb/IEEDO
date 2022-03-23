@@ -29,6 +29,10 @@ namespace Ieedo
         public List<ScreenID> ScreensStack = new();
         public List<ScreenID> OpenScreens = new();
 
+        public void Open(ScreenID id)
+        {
+            AppManager.I.StartCoroutine(OpenCO(id));
+        }
         public IEnumerator OpenCO(ScreenID id)
         {
             if (!Screens.ContainsKey(id)) yield break;
@@ -36,6 +40,10 @@ namespace Ieedo
             yield return Screens[id].OpenCO();
         }
 
+        public void Close(ScreenID id)
+        {
+            AppManager.I.StartCoroutine(CloseCO(id));
+        }
         public IEnumerator CloseCO(ScreenID id)
         {
             if (!Screens.ContainsKey(id)) yield break;

@@ -178,6 +178,14 @@ MonoBehaviour:
     m_Localized: Are you sure you want to delete the card?
     m_Metadata:
       m_Items: []
+  - m_Id: 48151452267077632
+    m_Localized: Generate Random Pillars
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48154400376250368
+    m_Localized: Test increase score
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
