@@ -40,6 +40,7 @@ namespace Ieedo
                     {
                         ID = activityDefinition.ID,
                         Unlocked = false,
+                        CurrentLevel = 1,
                         Results = new ActivityResults()
                     };
                     Statics.Data.Profile.ActivitiesData.Add(data);
