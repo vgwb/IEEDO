@@ -158,6 +158,14 @@ MonoBehaviour:
     m_Localized: Sei sicuro di voler impostare la carta come non completata?
     m_Metadata:
       m_Items: []
+  - m_Id: 48119887559598080
+    m_Localized: Impostare come non convalidato
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48119887563792384
+    m_Localized: Sei sicuro di voler impostare la carta come non convalidata?
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
