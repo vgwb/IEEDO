@@ -19,16 +19,135 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 12759883776
-    m_Localized: Fai x?
+    m_Localized: Accedi ai servizi locali? (palestra, parco, biblioteca, luogo di
+      culto)
     m_Metadata:
       m_Items: []
   - m_Id: 7179342181294080
-    m_Localized: Fai?
+    m_Localized: Riesci a capire le descrizioni degli eventi, scritti in inglese?
     m_Metadata:
       m_Items: []
-  - m_Id: 7224149904662528
-    m_Localized: IEDO si concentra su 6 categorie, controlliamo loro uno per uno
-      ...
+  - m_Id: 7618539303149568
+    m_Localized: Hai visitato le principali attrazioni turistiche locali (monumenti,
+      parchi, ecc ...)?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539328315392
+    m_Localized: Partecipi a eventi culturali (festival, concerto, ecc ...)?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509696
+    m_Localized: Segui le notizie locali?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509697
+    m_Localized: Fai amicizia e / o vicini si rivolgono a te per il supporto?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509698
+    m_Localized: Ti senti sicuro di incontrare nuove persone e fare amicizia?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509699
+    m_Localized: "Prendi parte ad attivit\xE0 sociali e gruppi? (volontariato, club,
+      gruppi comunitari)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509700
+    m_Localized: "Hai amici da una miscela di sfondi e nazionalit\xE0?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509701
+    m_Localized: Preferisci trascorrere del tempo da solo?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509702
+    m_Localized: Riesci a capire i principali punti di comunicazione parlata al lavoro,
+      scuola, ecc.?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509703
+    m_Localized: Puoi scrivere una lettera di accompagnamento o una lettera di reclamo?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509704
+    m_Localized: "Ti piace lavorare come parte di una squadra? (Occupazione, comunit\xE0,
+      sport)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509705
+    m_Localized: Puoi utilizzare i pacchetti di Microsoft Office di base? per esempio.
+      Parola ed Excel.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509706
+    m_Localized: Puoi inviare una email in inglese?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509707
+    m_Localized: Puoi creare un account di posta elettronica personale?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509708
+    m_Localized: Puoi gestire e-mail, messaggi e pop-up sospetti?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509709
+    m_Localized: Puoi effettuare semplici calcoli? (aggiungi, moltiplicare, dividere,
+      percentuali)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509710
+    m_Localized: Puoi cercare il supporto online utilizzando forum community / webchats
+      / blog?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509711
+    m_Localized: Puoi trovare siti Web e informazioni sul Web utilizzando motori
+      di ricerca ben noti? (Google, Yahoo, Bing ecc.)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509712
+    m_Localized: Viaggi fuori dalla tua zona locale?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509713
+    m_Localized: Puoi pagare le bollette online?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509714
+    m_Localized: Riesci a capire i tuoi rendiconti finanziari? per esempio. Dichiarazione
+      bancaria, bollette ecc.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509715
+    m_Localized: Puoi leggere e capire la corrispondenza e i documenti ufficiali
+      in inglese?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509716
+    m_Localized: Hai bisogno di aiuto per completare moduli dettagliati in inglese?
+      per esempio. Applicazioni di lavoro, trasferimenti di denaro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509717
+    m_Localized: I tuoi problemi di salute influenzano la tua vita quotidiana?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509718
+    m_Localized: Ti senti spesso ansioso?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509719
+    m_Localized: Hai uno stile di vita generalmente sano?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509720
+    m_Localized: Ti senti positivo del tuo futuro?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509721
+    m_Localized: Ti alleni regolarmente?
     m_Metadata:
       m_Items: []
   references:

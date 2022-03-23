@@ -19,15 +19,130 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 12759883776
-    m_Localized: Do you X?
+    m_Localized: Do you access local services? (gym, park, library, place of worship)
     m_Metadata:
       m_Items: []
   - m_Id: 7179342181294080
-    m_Localized: Do you Y?
+    m_Localized: Can you understand descriptions of events, written in English?
     m_Metadata:
       m_Items: []
-  - m_Id: 7224149904662528
-    m_Localized: IEEDO focuses on 6 categories, let's check them one by one...
+  - m_Id: 7618539303149568
+    m_Localized: Have you visited the main local touristic attractions (monuments,
+      parks, etc...)?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539328315392
+    m_Localized: Do you attend cultural events (festival, concert, etc...)?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509696
+    m_Localized: Do you follow the local news?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509697
+    m_Localized: Do friends and/or neighbours turn to you for support?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509698
+    m_Localized: Do you feel confident meeting new people and making friends?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509699
+    m_Localized: Do you take part in social activities and groups? (volunteering,
+      clubs, community groups)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509700
+    m_Localized: Do you have friends from a mixture of backgrounds and nationalities?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509701
+    m_Localized: Do you prefer to spend time alone?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509702
+    m_Localized: Can you understand the main points of spoken communication at work,
+      school, etc?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509703
+    m_Localized: Can you write a cover letter or letter of complaint?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509704
+    m_Localized: Do you enjoy working as part of a team?(employment, community, sports)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509705
+    m_Localized: Can you use basic Microsoft Office packages? e.g. Word and Excel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509706
+    m_Localized: Can you send an email in English?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509707
+    m_Localized: Can you create a personal email account?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509708
+    m_Localized: Can you manage suspicious emails, messages and pop-ups?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509709
+    m_Localized: Can you carry out simple calculations? (add, multiply, divide, percentages)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509710
+    m_Localized: Can you search for support online using community forums/webchats/blogs?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509711
+    m_Localized: Can you find websites and information on the web using well known
+      search engines? (Google, Yahoo, Bing etc)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509712
+    m_Localized: Do you travel outside your local area?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509713
+    m_Localized: Can you pay your bills online?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509714
+    m_Localized: Can you understand your financial statements? e.g. bank statement,
+      bills etc.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509715
+    m_Localized: Can you read and understand correspondence and official documents
+      in English?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509716
+    m_Localized: Do you need help completing detailed forms in English? e.g. job
+      applications, money transfers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509717
+    m_Localized: Do your health problems affect your day to day life?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509718
+    m_Localized: Do you often feel anxious?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509719
+    m_Localized: Do you have a generally healthy lifestyle?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509720
+    m_Localized: Do you feel positive about your future?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509721
+    m_Localized: Do you exercise regularly?
     m_Metadata:
       m_Items: []
   references:
