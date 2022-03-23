@@ -97,7 +97,7 @@ namespace Ieedo
             var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
             Ref<int> selection = new Ref<int>();
             yield return questionScreen.ShowQuestionFlow(new LocalizedString("UI","delete_card_confirmation_title"),
-                new LocalizedString("UI","complete_card_confirmation_description")
+                new LocalizedString("UI","delete_card_confirmation_description")
                 , new [] {
                     new LocalizedString("UI","yes"),
                     new LocalizedString("UI","no")
