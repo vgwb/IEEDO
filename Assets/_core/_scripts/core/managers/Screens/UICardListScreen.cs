@@ -292,7 +292,6 @@ namespace Ieedo
             collection.AddRange(cards);
             CardsList.AssignList(collection);
             CardsList.SortList(sort);
-
             CardsList.AnimateEntrance(CurrentListViewMode);
         }
 
@@ -351,6 +350,11 @@ namespace Ieedo
                     CompletedMode.SetActive(false);
                     ValidatedMode.SetActive(false);
                     StartEditing(false);
+
+                    DeleteCardButton.transform.localScale = Vector3.zero;
+                    DeleteCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
+                    CompleteCardButton.transform.localScale = Vector3.zero;
+                    CompleteCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
                     break;
                 case FrontViewMode.Create:
                     EditModeCardInteraction.SetActive(true);
