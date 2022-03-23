@@ -71,6 +71,10 @@ MonoBehaviour:
     m_Key: action_reset_profile
     m_Metadata:
       m_Items: []
+  - m_Id: 48122720442851328
+    m_Key: action_generate_cards
+    m_Metadata:
+      m_Items: []
   - m_Id: 40534266346233856
     m_Key: assessment_recap_title
     m_Metadata:
