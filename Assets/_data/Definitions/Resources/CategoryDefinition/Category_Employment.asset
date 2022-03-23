@@ -75,7 +75,7 @@ MonoBehaviour:
         m_WaitForCompletion: 0
         m_LocalVariables: []
       DefaultText: B 2
-    Icon: \ue068
+    Icon: \uf500
   - ID: 403
     Title:
       Key:

@@ -28,7 +28,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24994957285646336
-    m_Localized: si
+    m_Localized: "s\xEC"
     m_Metadata:
       m_Items: []
   - m_Id: 37308361241255936
@@ -36,11 +36,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450240
-    m_Localized: indietro
+    m_Localized: Indietro
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450241
-    m_Localized: riprova
+    m_Localized: ricercare
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450242
@@ -48,32 +48,32 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450243
-    m_Localized: esci
+    m_Localized: Uscita
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450244
-    m_Localized: continua
+    m_Localized: Continua
     m_Metadata:
       m_Items: []
   - m_Id: 40474458029056000
-    m_Localized: '{CurrentScore}'
+    m_Localized: '{Currentscore}'
     m_Metadata:
       m_Items:
       - rid: 3992833648747610129
   - m_Id: 40525707831173120
-    m_Localized: "Modalit\xE0"
+    m_Localized: "Cambia modalit\xE0"
     m_Metadata:
       m_Items: []
   - m_Id: 40525580437577728
-    m_Localized: Esci
+    m_Localized: Interrogare
     m_Metadata:
       m_Items: []
   - m_Id: 40525760616488960
-    m_Localized: Assessment
+    m_Localized: Valutazione
     m_Metadata:
       m_Items: []
   - m_Id: 40526294958235648
-    m_Localized: Reset profilo
+    m_Localized: Ripristinare il profilo
     m_Metadata:
       m_Items: []
   - m_Id: 40534266346233856
@@ -81,7 +81,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40535113130074112
-    m_Localized: Scegli categoria
+    m_Localized: Scegli la categoria
     m_Metadata:
       m_Items: []
   - m_Id: 40535270735241216
@@ -89,57 +89,57 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40535419633033216
-    m_Localized: Scegli data
+    m_Localized: Scegli la data
     m_Metadata:
       m_Items: []
   - m_Id: 40535579280826368
-    m_Localized: Scegli sottocategoria
+    m_Localized: Scegli la sottocategoria.
     m_Metadata:
       m_Items: []
   - m_Id: 40535952167034880
-    m_Localized: Scegli titolo
+    m_Localized: Inserisci il titolo
     m_Metadata:
       m_Items: []
   - m_Id: 40537204766564352
-    m_Localized: Scegli descrizione
+    m_Localized: Inserire la descrizione
     m_Metadata:
       m_Items: []
   - m_Id: 40544906540507136
-    m_Localized: Activity result
+    m_Localized: "Risultato dell'attivit\xE0"
     m_Metadata:
       m_Items: []
   - m_Id: 40543073474469888
-    m_Localized: Score +{Score}
+    m_Localized: Punteggio + {Punteggio}
     m_Metadata:
       m_Items:
       - rid: 3992833648747610129
   - m_Id: 40544570652254208
-    m_Localized: Vittoria
+    m_Localized: Hai vinto
     m_Metadata:
       m_Items: []
   - m_Id: 40544588826173440
-    m_Localized: Sconfitta
+    m_Localized: Hai perso
     m_Metadata:
       m_Items: []
   - m_Id: 40544604743557120
-    m_Localized: Quit
+    m_Localized: Uscire
     m_Metadata:
       m_Items: []
   - m_Id: 40546818237161472
-    m_Localized: '{ScoreToUnlock} points to unlock'
+    m_Localized: '{ScoreTounlock} Punti da sbloccare'
     m_Metadata:
       m_Items:
       - rid: 3992833648747610129
   - m_Id: 40549731508445184
-    m_Localized: Introduzione
+    m_Localized: Assistimento Intro.
     m_Metadata:
       m_Items: []
   - m_Id: 40550106646994944
-    m_Localized: Totale
+    m_Localized: Globale
     m_Metadata:
       m_Items: []
   - m_Id: 40557809452736512
-    m_Localized: gioca
+    m_Localized: giocare a
     m_Metadata:
       m_Items: []
   - m_Id: 43003187146022912
@@ -147,7 +147,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 43003190425968640
-    m_Localized: Carte validate
+    m_Localized: Carte convalidate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48089044619304960
+    m_Localized: Impostare come non completato
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48089044644470784
+    m_Localized: Sei sicuro di voler impostare la carta come non completata?
     m_Metadata:
       m_Items: []
   references:
