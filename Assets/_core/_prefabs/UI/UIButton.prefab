@@ -163,7 +163,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 63.7
   m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -549,8 +549,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8746676027603403989}
   - component: {fileID: 8746676027603403984}
-  - component: {fileID: 8746676027603403987}
-  - component: {fileID: 8746676027603403986}
   m_Layer: 0
   m_Name: '[Down Transitions]'
   m_TagString: Untagged
@@ -591,41 +589,6 @@ MonoBehaviour:
     Target: {fileID: 8746676027328271599}
     Value: {r: 0.254717, g: 0.254717, b: 0.254717, a: 1}
     Ease: 250
---- !u!114 &8746676027603403987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8746676027603403988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c2fbc22786e7c54c8d600aa92b118d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Alias: 
-  Data:
-    Duration: 0.2
-    Target: {fileID: 8746676027328271597}
-    Value: -10
-    Ease: 250
---- !u!114 &8746676027603403986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8746676027603403988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85492e6e5abb6364ab68b8b794f4fd97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Alias: 
-  Data:
-    Duration: 0
-    Target: {fileID: 8300000, guid: 55a786dc722c94b948fce9fa9c5e04f5, type: 3}
-    Volume: 1
 --- !u!1 &8746676027735892602
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,7 +640,7 @@ MonoBehaviour:
   Data:
     Duration: 0
     Target: {fileID: 8300000, guid: 287fd776fa65e47b9887685add0beb7a, type: 3}
-    Volume: 1
+    Volume: 0.55
 --- !u!114 &8746676027735892598
 MonoBehaviour:
   m_ObjectHideFlags: 0
