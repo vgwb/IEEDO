@@ -131,7 +131,8 @@ MonoBehaviour:
       m_Items:
       - rid: 3992833648747610129
   - m_Id: 40549731508445184
-    m_Localized: Assistimento Intro.
+    m_Localized: IEDO si concentra su 6 categorie, controlliamo loro uno per uno
+      ...
     m_Metadata:
       m_Items: []
   - m_Id: 40550106646994944
@@ -168,6 +169,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 48125278888599552
     m_Localized: Genera carte di prova
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48133898325925888
+    m_Localized: Elimina carta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48133898325925889
+    m_Localized: Sei sicuro di voler cancellare la carta?
     m_Metadata:
       m_Items: []
   references:

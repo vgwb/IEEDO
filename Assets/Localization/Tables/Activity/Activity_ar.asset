@@ -23,19 +23,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 82758623232
-    m_Localized: Diary
+    m_Localized: "\u0645\u0630\u0643\u0631\u0627\u062A"
     m_Metadata:
       m_Items: []
   - m_Id: 143655723008
-    m_Localized: Connect 4
+    m_Localized: "\u0627\u0644\u0627\u062A\u0635\u0627\u0644 4."
     m_Metadata:
       m_Items: []
   - m_Id: 15270056583168
-    m_Localized: Tic tac toe
+    m_Localized: "\u062A\u064A\u0643 \u062A\u0627\u0643 \u062A\u0648"
     m_Metadata:
       m_Items: []
   - m_Id: 15319184465920
-    m_Localized: Unblock
+    m_Localized: "\u0631\u0641\u0639 \u0627\u0644\u062D\u0638\u0631"
     m_Metadata:
       m_Items: []
   references:

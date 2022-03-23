@@ -131,7 +131,7 @@ MonoBehaviour:
       m_Items:
       - rid: 3992833648747610127
   - m_Id: 40549731508445184
-    m_Localized: Assesment intro
+    m_Localized: IEEDO focuses on 6 categories, let's check them one by one...
     m_Metadata:
       m_Items: []
   - m_Id: 40550106646994944
@@ -168,6 +168,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 48125278888599552
     m_Localized: Generate Test Cards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48133898325925888
+    m_Localized: Delete card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48133898325925889
+    m_Localized: Are you sure you want to delete the card?
     m_Metadata:
       m_Items: []
   references:
