@@ -154,6 +154,7 @@ namespace Ieedo
 
         private void HandleSelectPlane()
         {
+            if (!isFocused) return;
             AnimateToUnfocused();
             PillarsManager.SetFocus(true);
 
@@ -172,7 +173,6 @@ namespace Ieedo
                     AnimateToUnfocused();
                     break;
                 case ScreenID.CardList:
-                    isFocused = false;
                     var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
                     if (uiCardListScreen.KeepPillars)
                     {
@@ -180,12 +180,13 @@ namespace Ieedo
                     }
                     else
                     {
+                        isFocused = false;
                         Camera3D.transform.localRotationTransition(Quaternion.Euler(38f,-50f,0f), 0.25f, LeanEase.Decelerate);
                     }
                     break;
                 case ScreenID.Activities:
                     isFocused = false;
-                    Camera3D.transform.localRotationTransition(Quaternion.Euler(38f,10f,0f), 0.25f, LeanEase.Decelerate);
+                    Camera3D.transform.localRotationTransition(Quaternion.Euler(38f,50f,0f), 0.25f, LeanEase.Decelerate);
                     break;
             }
         }
