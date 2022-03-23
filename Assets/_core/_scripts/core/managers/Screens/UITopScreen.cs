@@ -25,7 +25,6 @@ namespace Ieedo
 
         void Start()
         {
-            //SetTargetLocale();
             SetupButtonDown(InstantTranslationButton, SetTargetLocale, SetSourceLocale);
             SetupButton(HamburgerButton, () =>
             {

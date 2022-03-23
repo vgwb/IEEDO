@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Ieedo.Utilities;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
 
 namespace Ieedo
@@ -14,6 +16,13 @@ namespace Ieedo
 
         public IEnumerator Start()
         {
+            // Init localization
+            //Debug.LogError("Wait for localization...");
+            yield return LocalizationSettings.InitializationOperation;
+            var locale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.App.ApplicationConfig.SourceLocale);
+            if (locale != null) LocalizationSettings.SelectedLocale = locale;
+            //Debug.LogError(LocalizationSettings.SelectedLocale.LocaleName);
+
             // Init data
             { var _ = Statics.Data; }
             { var _ = Statics.Cards; }

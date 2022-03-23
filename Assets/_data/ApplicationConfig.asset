@@ -16,5 +16,5 @@ MonoBehaviour:
   DebugLogEnabled: 1
   DebugSaveProfileInJSON: 1
   SaveCardsAsDefault: 0
-  SourceLocale: it
-  TargetLocale: en
+  SourceLocale: en
+  TargetLocale: ar
