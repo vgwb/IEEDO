@@ -273,17 +273,24 @@ namespace Ieedo
             desiredFrontViewMode = frontViewMode;
 
             // Setup for this view
+            var rt = CardsList.GetComponent<RectTransform>();
             switch (CurrentListViewMode)
             {
                 case ListViewMode.ToDo:
-                    CardsList.transform.localPosition = new Vector3(-220,0,0);
                     DefaultOutEnterPosition = new Vector3(-2500, 0, 0);
                     DefaultOutExitPosition = new Vector3(-2500, 0, 0);
+                    rt.anchorMin = new Vector2(0, 0);
+                    rt.anchorMax = new Vector2(0, 1);
+                    rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 400);
+                    rt.localPosition = new Vector3(-220,0,0);
                     break;
                 case ListViewMode.Pillars:
-                    CardsList.transform.localPosition = new Vector3(153.734985f, 0, 0);
                     DefaultOutEnterPosition = new Vector3(0, 2500, 0);
                     DefaultOutExitPosition = new Vector3(0, 2500, 0);
+                    rt.anchorMin = new Vector2(0, 0);
+                    rt.anchorMax = new Vector2(1, 1);
+                    rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 400);
+                    CardsList.transform.localPosition = new Vector3(153.734985f, 0, 0);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -331,6 +338,7 @@ namespace Ieedo
             uiCardRt.SetParent(FrontViewPivot, true);
             uiCardRt.anchorMin = new Vector2(0.5f, 0.5f);
             uiCardRt.anchorMax = new Vector2(0.5f, 0.5f);
+            uiCardRt.SetAsFirstSibling();
             uiCard.AnimateToParent();
 
             FrontView.gameObject.SetActive(true);
@@ -536,7 +544,7 @@ namespace Ieedo
         {
             SetSubEditMode(true);
             var result = new Ref<int>();
-            frontCardUI.transform.localPositionTransition(new Vector3(0, 250, 0), 0.25f);
+            frontCardUI.transform.localPositionTransition(new Vector3(0, 200, 0), 0.25f);
             var options = new List<OptionData>();
             var possibleDays = new List<int>();
             for (int i = 0; i < 3*7; i++) possibleDays.Add(i);
@@ -600,10 +608,10 @@ namespace Ieedo
         public IEnumerator EditTitleCO(bool autoReset = false)
         {
             SetSubEditMode(true);
-            frontCardUI.transform.localPositionTransition(new Vector3(0, -100, 0), 0.25f);
+            frontCardUI.transform.localPositionTransition(new Vector3(0, -150, 0), 0.25f);
             frontCardUI.transform.localScaleTransition(Vector3.one*1.2f, 0.25f);
             frontCardUI.transform.localEulerAnglesTransform(new Vector3(0,10,0), 0.25f);
-            optionsListPopup.ShowOptions(new LocalizedString("UI","creation_enter_title"), new List<OptionData>());
+            optionsListPopup.ShowOptions(new LocalizedString("UI","creation_enter_title"), new List<OptionData>(), isTextEntry:true);
             yield return WaitForInputField(TitleInputField, frontCardUI.Title);
             optionsListPopup.CloseImmediate();
             frontCardUI.Data.Definition.Title.DefaultText = TitleInputField.text;
@@ -619,7 +627,7 @@ namespace Ieedo
             frontCardUI.transform.localPositionTransition(new Vector3(0, 120, 0), 0.25f);
             frontCardUI.transform.localScaleTransition(Vector3.one*1.2f, 0.25f);
             frontCardUI.transform.localEulerAnglesTransform(new Vector3(0,10,0), 0.25f);
-            optionsListPopup.ShowOptions(new LocalizedString("UI","creation_enter_description"), new List<OptionData>());
+            optionsListPopup.ShowOptions(new LocalizedString("UI","creation_enter_description"), new List<OptionData>(), isTextEntry:true);
             yield return WaitForInputField(DescriptionInputField, frontCardUI.Description);
             optionsListPopup.CloseImmediate();
             frontCardUI.Data.Definition.Description.DefaultText = DescriptionInputField.text;
