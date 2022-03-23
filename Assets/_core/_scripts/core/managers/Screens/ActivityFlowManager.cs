@@ -40,6 +40,8 @@ namespace Ieedo
         public ActivityDefinition CurrentActivity;
         public ActivityManager CurrentActivityManager;
 
+        public bool IsInsideActivity => CurrentActivity != null;
+
         public IEnumerator LaunchActivity(ActivityID activity)
         {
             Debug.Log("LaunchActivity " + activity);
