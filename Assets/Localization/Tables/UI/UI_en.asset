@@ -24,35 +24,35 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24994957285646337
-    m_Localized: no
+    m_Localized: No
     m_Metadata:
       m_Items: []
   - m_Id: 24994957285646336
-    m_Localized: yes
+    m_Localized: Yes
     m_Metadata:
       m_Items: []
   - m_Id: 37308361241255936
-    m_Localized: ok
+    m_Localized: OK
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450240
-    m_Localized: back
+    m_Localized: Back
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450241
-    m_Localized: retry
+    m_Localized: Retry
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450242
-    m_Localized: next
+    m_Localized: Next
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450243
-    m_Localized: exit
+    m_Localized: Exit
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450244
-    m_Localized: continue
+    m_Localized: Continue
     m_Metadata:
       m_Items: []
   - m_Id: 40474458029056000
@@ -61,7 +61,7 @@ MonoBehaviour:
       m_Items:
       - rid: 3992833648747610127
   - m_Id: 40525580437577728
-    m_Localized: Abort
+    m_Localized: Exit
     m_Metadata:
       m_Items: []
   - m_Id: 40525707831173120
@@ -81,19 +81,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40535113130074112
-    m_Localized: Choose category
+    m_Localized: Select a category
     m_Metadata:
       m_Items: []
   - m_Id: 40535270735241216
-    m_Localized: Choose difficulty
+    m_Localized: Set a difficulty level
     m_Metadata:
       m_Items: []
   - m_Id: 40535419633033216
-    m_Localized: Choose date
+    m_Localized: Set a target date
     m_Metadata:
       m_Items: []
   - m_Id: 40535579280826368
-    m_Localized: Choose subcategory
+    m_Localized: Select the type of task
     m_Metadata:
       m_Items: []
   - m_Id: 40535952167034880
@@ -105,7 +105,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40544906540507136
-    m_Localized: Activity result
+    m_Localized: Level Completed
     m_Metadata:
       m_Items: []
   - m_Id: 40543073474469888
@@ -114,7 +114,7 @@ MonoBehaviour:
       m_Items:
       - rid: 3992833648747610127
   - m_Id: 40544570652254208
-    m_Localized: You win
+    m_Localized: Well done!
     m_Metadata:
       m_Items: []
   - m_Id: 40544588826173440
@@ -122,7 +122,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40544604743557120
-    m_Localized: Quit
+    m_Localized: Exit
     m_Metadata:
       m_Items: []
   - m_Id: 40546818237161472
@@ -139,7 +139,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40557809452736512
-    m_Localized: play
+    m_Localized: Play
     m_Metadata:
       m_Items: []
   - m_Id: 43003187146022912
@@ -183,7 +183,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48154400376250368
-    m_Localized: Test increase score
+    m_Localized: Increase score +100
     m_Metadata:
       m_Items: []
   references:

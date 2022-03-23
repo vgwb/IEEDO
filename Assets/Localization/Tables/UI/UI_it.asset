@@ -24,7 +24,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24994957285646337
-    m_Localized: no
+    m_Localized: No
     m_Metadata:
       m_Items: []
   - m_Id: 24994957285646336
@@ -36,15 +36,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450240
-    m_Localized: Indietro
+    m_Localized: Di ritorno
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450241
-    m_Localized: ricercare
+    m_Localized: Ricercare
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450242
-    m_Localized: prossimo
+    m_Localized: Prossimo
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450243
@@ -65,7 +65,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40525580437577728
-    m_Localized: Interrogare
+    m_Localized: Uscita
     m_Metadata:
       m_Items: []
   - m_Id: 40525760616488960
@@ -81,19 +81,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40535113130074112
-    m_Localized: Scegli la categoria
+    m_Localized: Seleziona una categoria
     m_Metadata:
       m_Items: []
   - m_Id: 40535270735241216
-    m_Localized: "Scegli difficolt\xE0"
+    m_Localized: "Imposta un livello di difficolt\xE0"
     m_Metadata:
       m_Items: []
   - m_Id: 40535419633033216
-    m_Localized: Scegli la data
+    m_Localized: Imposta una data di destinazione
     m_Metadata:
       m_Items: []
   - m_Id: 40535579280826368
-    m_Localized: Scegli la sottocategoria.
+    m_Localized: "Seleziona il tipo di attivit\xE0"
     m_Metadata:
       m_Items: []
   - m_Id: 40535952167034880
@@ -105,7 +105,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40544906540507136
-    m_Localized: "Risultato dell'attivit\xE0"
+    m_Localized: Livello completato
     m_Metadata:
       m_Items: []
   - m_Id: 40543073474469888
@@ -114,7 +114,7 @@ MonoBehaviour:
       m_Items:
       - rid: 3992833648747610129
   - m_Id: 40544570652254208
-    m_Localized: Hai vinto
+    m_Localized: Molto bene!
     m_Metadata:
       m_Items: []
   - m_Id: 40544588826173440
@@ -122,7 +122,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40544604743557120
-    m_Localized: Uscire
+    m_Localized: Uscita
     m_Metadata:
       m_Items: []
   - m_Id: 40546818237161472
@@ -140,7 +140,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40557809452736512
-    m_Localized: giocare a
+    m_Localized: Giocare
     m_Metadata:
       m_Items: []
   - m_Id: 43003187146022912
@@ -184,7 +184,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48154400376250368
-    m_Localized: TEST AUMENTO Punteggio
+    m_Localized: Aumentare il punteggio +100.
     m_Metadata:
       m_Items: []
   references:
