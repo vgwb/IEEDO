@@ -84,8 +84,8 @@ namespace Ieedo
             foreach (var o in ObjectsToHide)
                 o.SetActive(true);
 
-            var resultScreen = Statics.Screens.Get(ScreenID.ActivityResult) as UIActivityResultScreen;
-            yield return resultScreen.ShowResult(result);
+            //var resultScreen = Statics.Screens.Get(ScreenID.ActivityResult) as UIActivityResultScreen;
+            //yield return resultScreen.ShowResult(result);
 
             // Save the result of this activity and its score
             result.Timestamp = Timestamp.Now;
