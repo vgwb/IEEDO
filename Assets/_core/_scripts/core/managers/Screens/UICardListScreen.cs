@@ -237,18 +237,6 @@ namespace Ieedo
 
         protected override IEnumerator OnOpen()
         {
-            FrontView.gameObject.SetActive(false);
-
-            switch (CurrentListViewMode)
-            {
-                case ListViewMode.ToDo:
-                    CreateCardButton.gameObject.SetActive(true);
-                    break;
-                default:
-                    CreateCardButton.gameObject.SetActive(false);
-                    break;
-            }
-
             yield return base.OnOpen();
         }
 
@@ -269,6 +257,8 @@ namespace Ieedo
         private FrontViewMode desiredFrontViewMode;
         public void LoadCards(List<CardData> cards, Func<CardData,CardData,int> sort, ListViewMode listViewMode, FrontViewMode frontViewMode)
         {
+            FrontView.gameObject.SetActive(false);
+
             CurrentListViewMode = listViewMode;
             desiredFrontViewMode = frontViewMode;
 
@@ -277,6 +267,7 @@ namespace Ieedo
             switch (CurrentListViewMode)
             {
                 case ListViewMode.ToDo:
+                    CreateCardButton.gameObject.SetActive(true);
                     DefaultOutEnterPosition = new Vector3(-2500, 0, 0);
                     DefaultOutExitPosition = new Vector3(-2500, 0, 0);
                     rt.anchorMin = new Vector2(0, 0);
@@ -285,6 +276,7 @@ namespace Ieedo
                     rt.localPosition = new Vector3(-220,0,0);
                     break;
                 case ListViewMode.Pillars:
+                    CreateCardButton.gameObject.SetActive(false);
                     DefaultOutEnterPosition = new Vector3(0, 2500, 0);
                     DefaultOutExitPosition = new Vector3(0, 2500, 0);
                     rt.anchorMin = new Vector2(0, 0);
