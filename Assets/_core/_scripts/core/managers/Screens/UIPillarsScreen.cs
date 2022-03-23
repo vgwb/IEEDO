@@ -158,7 +158,7 @@ namespace Ieedo
             PillarsManager.SetFocus(true);
 
             var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
-            uiCardListScreen.Close();
+            if (uiCardListScreen.IsOpen) uiCardListScreen.Close();
         }
 
         #endregion

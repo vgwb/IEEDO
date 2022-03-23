@@ -3730,9 +3730,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: UICardCollection
       objectReference: {fileID: 0}
-    - target: {fileID: 5515793274578586197, guid: 78d131fd5b059f54abd8bde481da773f, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
+    - target: {fileID: 4351312593752694894, guid: 78d131fd5b059f54abd8bde481da773f, type: 3}
+      propertyPath: m_ChildAlignment
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7102778298511453035, guid: 78d131fd5b059f54abd8bde481da773f, type: 3}
       propertyPath: m_Pivot.x

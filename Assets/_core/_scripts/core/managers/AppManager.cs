@@ -3,9 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Ieedo.Utilities;
+using Lean.Transition;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 namespace Ieedo
 {
@@ -13,15 +16,21 @@ namespace Ieedo
     {
         public ApplicationConfig ApplicationConfig;
 
+        public Image LoadingObscurer;
+
+        protected override void Init()
+        {
+            if (LoadingObscurer != null) LoadingObscurer.color = new Color(LoadingObscurer.color.r, LoadingObscurer.color.g, LoadingObscurer.color.b, 1f);
+        }
 
         public IEnumerator Start()
         {
+            Application.runInBackground = true;
+
             // Init localization
-            //Debug.LogError("Wait for localization...");
             yield return LocalizationSettings.InitializationOperation;
             var locale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.App.ApplicationConfig.SourceLocale);
             if (locale != null) LocalizationSettings.SelectedLocale = locale;
-            //Debug.LogError(LocalizationSettings.SelectedLocale.LocaleName);
 
             // Init data
             { var _ = Statics.Data; }
@@ -51,6 +60,7 @@ namespace Ieedo
             Statics.Screens.OpenImmediate(ScreenID.Top);
             Statics.Screens.OpenImmediate(ScreenID.Bottom);
             yield return Statics.Screens.TransitionToCO(ScreenID.Pillars);
+            if (LoadingObscurer != null) LoadingObscurer.colorTransition(new Color(LoadingObscurer.color.r, LoadingObscurer.color.g, LoadingObscurer.color.b, 0f), 1f);
         }
 
     }
