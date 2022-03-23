@@ -41,80 +41,67 @@ MonoBehaviour:
     Title:
       Key:
         m_TableReference:
-          m_TableCollectionName: 
+          m_TableCollectionName: GUID:c72a3e86bc710427d83055e5adb307c5
         m_TableEntryReference:
-          m_KeyId: 0
+          m_KeyId: 22742599502602251
           m_Key: 
         m_FallbackState: 0
         m_WaitForCompletion: 0
         m_LocalVariables: []
       DefaultText: B 1
-    Icon: \uf556
+    Icon: \uf2b5
   - ID: 401
     Title:
       Key:
         m_TableReference:
-          m_TableCollectionName: 
+          m_TableCollectionName: GUID:c72a3e86bc710427d83055e5adb307c5
         m_TableEntryReference:
-          m_KeyId: 0
+          m_KeyId: 22742599502602252
           m_Key: 
         m_FallbackState: 0
         m_WaitForCompletion: 0
         m_LocalVariables: []
       DefaultText: B 2
-    Icon: \uf77d
+    Icon: \uf674
   - ID: 402
     Title:
       Key:
         m_TableReference:
-          m_TableCollectionName: 
+          m_TableCollectionName: GUID:c72a3e86bc710427d83055e5adb307c5
         m_TableEntryReference:
-          m_KeyId: 0
+          m_KeyId: 22742599502602253
           m_Key: 
         m_FallbackState: 0
         m_WaitForCompletion: 0
         m_LocalVariables: []
       DefaultText: B 2
-    Icon: \uf77d
+    Icon: \ue068
   - ID: 403
     Title:
       Key:
         m_TableReference:
-          m_TableCollectionName: 
+          m_TableCollectionName: GUID:c72a3e86bc710427d83055e5adb307c5
         m_TableEntryReference:
-          m_KeyId: 0
+          m_KeyId: 22763239081189376
           m_Key: 
         m_FallbackState: 0
         m_WaitForCompletion: 0
         m_LocalVariables: []
       DefaultText: B 2
-    Icon: \uf77d
-  - ID: 404
-    Title:
-      Key:
-        m_TableReference:
-          m_TableCollectionName: 
-        m_TableEntryReference:
-          m_KeyId: 0
-          m_Key: 
-        m_FallbackState: 0
-        m_WaitForCompletion: 0
-        m_LocalVariables: []
-      DefaultText: B 2
-    Icon: \uf77d
+    Icon: \uf508
   - ID: 1000
     Title:
       Key:
         m_TableReference:
-          m_TableCollectionName: 
+          m_TableCollectionName: GUID:c72a3e86bc710427d83055e5adb307c5
         m_TableEntryReference:
-          m_KeyId: 0
+          m_KeyId: 22742599439687680
           m_Key: 
         m_FallbackState: 0
         m_WaitForCompletion: 0
         m_LocalVariables: []
       DefaultText: B 2
-    Icon: \uf77d
+    Icon: \uf059
   references:
     version: 2
     RefIds: []

@@ -639,9 +639,9 @@ RectTransform:
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.90000004}
-  m_AnchoredPosition: {x: 0, y: -0.00390625}
-  m_SizeDelta: {x: 0, y: -0.009994507}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -80}
+  m_SizeDelta: {x: 0, y: -160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &330032321
 GameObject:
@@ -1685,7 +1685,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7585251228869628, guid: f699215d185a3324faa905171ac45b65, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -509.99496
+      value: -509.99493
       objectReference: {fileID: 0}
     - target: {fileID: 1433757879258802222, guid: f699215d185a3324faa905171ac45b65, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1873,7 +1873,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7671137213113483780, guid: f699215d185a3324faa905171ac45b65, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -955.7051
+      value: -955.705
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f699215d185a3324faa905171ac45b65, type: 3}
@@ -1914,11 +1914,11 @@ RectTransform:
   m_Father: {fileID: 1932382890}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.90000004}
+  m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 0, y: 160}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!43 &524418185
 Mesh:
   m_ObjectHideFlags: 0
@@ -3370,10 +3370,10 @@ RectTransform:
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.1}
+  m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_SizeDelta: {x: 0, y: 180}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!43 &935277126
 Mesh:
   m_ObjectHideFlags: 0
@@ -4726,10 +4726,10 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.90000004}
-  m_AnchoredPosition: {x: 0, y: -0.0087890625}
-  m_SizeDelta: {x: 0, y: -0.000014305115}
-  m_Pivot: {x: 0.4999998, y: 0.5000003}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 9.999878}
+  m_SizeDelta: {x: 0, y: -340}
+  m_Pivot: {x: 0.5, y: 0.5000003}
 --- !u!1 &1932382889
 GameObject:
   m_ObjectHideFlags: 0
