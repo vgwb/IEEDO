@@ -31,6 +31,12 @@ namespace Ieedo.games
         {
         }
 
+        public IEnumerator CompleteLevel(ActivityResult result)
+        {
+            var continueScreen = Statics.Screens.Get(ScreenID.ActivityContinue) as UIActivityContinueScreen;
+            yield return continueScreen.ShowResult(result);
+        }
+
         public IEnumerator ShowQuestion(LocalizedString title, LocalizedString question, LocalizedString[] answers, Ref<int> selectedAnswerIndex)
         {
             var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
