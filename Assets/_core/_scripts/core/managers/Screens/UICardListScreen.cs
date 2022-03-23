@@ -35,6 +35,7 @@ namespace Ieedo
 
         [Header("Card Create & Edit")]
         public GameObject EditMode;
+        public GameObject EditModeCardInteraction;
         public TMP_InputField DescriptionInputField;
         public TMP_InputField TitleInputField;
         public UIButton EditDifficultyButton;
@@ -344,6 +345,7 @@ namespace Ieedo
             switch (viewMode)
             {
                 case FrontViewMode.Edit:
+                    EditModeCardInteraction.SetActive(true);
                     EditMode.SetActive(true);
                     ViewMode.SetActive(false);
                     CompletedMode.SetActive(false);
@@ -351,6 +353,7 @@ namespace Ieedo
                     StartEditing(false);
                     break;
                 case FrontViewMode.Create:
+                    EditModeCardInteraction.SetActive(true);
                     EditMode.SetActive(true);
                     ViewMode.SetActive(false);
                     CompletedMode.SetActive(false);
@@ -358,18 +361,21 @@ namespace Ieedo
                     StartEditing(true);
                     break;
                 case FrontViewMode.View:
+                    EditModeCardInteraction.SetActive(false);
                     EditMode.SetActive(false);
                     ViewMode.SetActive(true);
                     CompletedMode.SetActive(false);
                     ValidatedMode.SetActive(false);
                     break;
                 case FrontViewMode.Completed:
+                    EditModeCardInteraction.SetActive(false);
                     EditMode.SetActive(false);
                     ViewMode.SetActive(false);
                     CompletedMode.SetActive(true);
                     ValidatedMode.SetActive(false);
                     break;
                 case FrontViewMode.Validated:
+                    EditModeCardInteraction.SetActive(false);
                     EditMode.SetActive(false);
                     ViewMode.SetActive(false);
                     CompletedMode.SetActive(false);
@@ -411,7 +417,7 @@ namespace Ieedo
 
         public IEnumerator CardCreationFlowCO()
         {
-            CreationBackButton.gameObject.SetActive(true);
+            //CreationBackButton.gameObject.SetActive(true);
 
             // Create and show the card
             var cardDef = Statics.Cards.GenerateCardDefinition(

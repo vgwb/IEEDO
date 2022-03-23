@@ -942,7 +942,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -360}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.153}
+  m_AnchoredPosition: {x: 0.76, y: 0.153}
   m_SizeDelta: {x: 37.2359, y: 4.5916}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &2167916469745599136
@@ -1041,7 +1041,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1167,7 +1167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 3138537031308133061, guid: 1ae4975dbffaef94491ee4863e8bf9e5, type: 3}
-  cards: []
+  cardGos: []
   gfx: {fileID: 4046129817502053877}
   mr: {fileID: 6183956033058566104}
   valueText: {fileID: 7374470443115008349}

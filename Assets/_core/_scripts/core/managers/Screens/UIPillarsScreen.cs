@@ -40,7 +40,7 @@ namespace Ieedo
             StartCoroutine(OnOpen());
         }
 
-        public void RefreshData(int pillarIndex = -1)
+        public void RefreshData(int onlyPillarIndex = -1)
         {
             var profileData = Statics.Data.Profile;
             var pillarsData = new PillarsData
@@ -101,7 +101,7 @@ namespace Ieedo
 
             bool added = ViewMode == prevViewMode;
             prevViewMode = ViewMode;
-            PillarsManager.ShowData(pillarsData, added, pillarIndex);
+            PillarsManager.ShowData(pillarsData, added, onlyPillarIndex);
             Scene3D.SetActive(true);
 
             for (var iPillar = 0; iPillar < PillarsManager.PillarViews.Count; iPillar++)
@@ -176,16 +176,16 @@ namespace Ieedo
                     var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
                     if (uiCardListScreen.KeepPillars)
                     {
-                        Camera3D.transform.localRotationTransition(Quaternion.Euler(34f,10f,0f), 0.25f, LeanEase.Decelerate);
+                        Camera3D.transform.localRotationTransition(Quaternion.Euler(38f,10f,0f), 0.25f, LeanEase.Decelerate);
                     }
                     else
                     {
-                        Camera3D.transform.localRotationTransition(Quaternion.Euler(34f,-50f,0f), 0.25f, LeanEase.Decelerate);
+                        Camera3D.transform.localRotationTransition(Quaternion.Euler(38f,-50f,0f), 0.25f, LeanEase.Decelerate);
                     }
                     break;
                 case ScreenID.Activities:
                     isFocused = false;
-                    Camera3D.transform.localRotationTransition(Quaternion.Euler(34f,10f,0f), 0.25f, LeanEase.Decelerate);
+                    Camera3D.transform.localRotationTransition(Quaternion.Euler(38f,10f,0f), 0.25f, LeanEase.Decelerate);
                     break;
             }
         }
@@ -204,7 +204,7 @@ namespace Ieedo
         {
             isFocused = false;
             Camera3D.transform.localPositionTransition(new Vector3(0,15.1000004f,-13.3999996f), 0.5f);
-            Camera3D.transform.localRotationTransition(new Quaternion(0.29237175f,0,0,0.956304789f), 0.5f);
+            Camera3D.transform.localRotationTransition(new Quaternion(0.32556805f,0,0,0.945518613f), 0.5f);
         }
 
         #endregion
