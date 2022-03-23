@@ -35,8 +35,8 @@ namespace Ieedo
         {
             this.data = data;
             var def = data.Definition;
-            Category.text = def.Category.ToString();
-            Subcategory.text = def.SubCategory.ToString();
+            Category.Key = def.CategoryDefinition.Title.Key;
+            Subcategory.Key = def.SubCategoryDefinition.Title.Key;
             Description.text = def.Description.Text;
             Icon.text = Regex.Unescape(def.Icon);
             Title.text = def.Title.Text;

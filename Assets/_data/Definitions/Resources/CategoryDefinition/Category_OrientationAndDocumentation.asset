@@ -37,7 +37,7 @@ MonoBehaviour:
     DefaultText: 
   PaletteColor: {fileID: 11400000, guid: df8306e668da03d43a6288f1b6fd81bd, type: 2}
   SubCategories:
-  - ID: 500
+  - ID: 200
     Title:
       Key:
         m_TableReference:
@@ -50,7 +50,7 @@ MonoBehaviour:
         m_LocalVariables: []
       DefaultText: B 1
     Icon: \uf5a0
-  - ID: 501
+  - ID: 201
     Title:
       Key:
         m_TableReference:
@@ -63,7 +63,7 @@ MonoBehaviour:
         m_LocalVariables: []
       DefaultText: B 2
     Icon: \uf207
-  - ID: 502
+  - ID: 202
     Title:
       Key:
         m_TableReference:
