@@ -56,135 +56,138 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40474458029056000
-    m_Localized: '{Currentscore}'
+    m_Localized: Loading...
     m_Metadata:
       m_Items:
       - rid: 3992833648747610129
   - m_Id: 40525707831173120
-    m_Localized: "Cambia modalit\xE0"
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 40525580437577728
-    m_Localized: Uscita
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 40525760616488960
-    m_Localized: Valutazione
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 40526294958235648
-    m_Localized: Ripristinare il profilo
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 40534266346233856
-    m_Localized: Risultati
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 40535113130074112
-    m_Localized: Seleziona una categoria
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 40535270735241216
-    m_Localized: "Imposta un livello di difficolt\xE0"
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 40535419633033216
-    m_Localized: Imposta una data di destinazione
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 40535579280826368
-    m_Localized: "Seleziona il tipo di attivit\xE0"
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 40535952167034880
-    m_Localized: Inserisci il titolo
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 40537204766564352
-    m_Localized: Inserire la descrizione
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 40544906540507136
-    m_Localized: Livello completato
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 40543073474469888
-    m_Localized: Punteggio + {Punteggio}
+    m_Localized: Loading...
     m_Metadata:
       m_Items:
       - rid: 3992833648747610129
   - m_Id: 40544570652254208
-    m_Localized: Molto bene!
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 40544588826173440
-    m_Localized: Hai perso
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 40544604743557120
-    m_Localized: Uscita
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 40546818237161472
-    m_Localized: '{ScoreTounlock} Punti da sbloccare'
+    m_Localized: Loading...
     m_Metadata:
       m_Items:
       - rid: 3992833648747610129
   - m_Id: 40549731508445184
-    m_Localized: IEDO si concentra su 6 categorie, controlliamo loro uno per uno
-      ...
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 40550106646994944
-    m_Localized: Globale
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 40557809452736512
-    m_Localized: Giocare
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 43003187146022912
-    m_Localized: Carte completate
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 43003190425968640
-    m_Localized: Carte convalidate
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 48089044619304960
-    m_Localized: Impostare come non completato
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 48089044644470784
-    m_Localized: Sei sicuro di voler impostare la carta come non completata?
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 48119887559598080
-    m_Localized: Impostare come non convalidato
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 48119887563792384
-    m_Localized: Sei sicuro di voler impostare la carta come non convalidata?
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 48125278888599552
-    m_Localized: Genera carte di prova
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925888
-    m_Localized: Elimina carta
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925889
-    m_Localized: Sei sicuro di voler cancellare la carta?
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 48151452267077632
-    m_Localized: Generare pilastri casuali.
+    m_Localized: Loading...
     m_Metadata:
       m_Items: []
   - m_Id: 48154400376250368
-    m_Localized: Aumentare il punteggio +100.
+    m_Localized: Loading...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48447397204844544
+    m_Localized: Fatto
     m_Metadata:
       m_Items: []
   references:

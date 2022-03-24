@@ -186,6 +186,10 @@ MonoBehaviour:
     m_Localized: Increase score +100
     m_Metadata:
       m_Items: []
+  - m_Id: 48447397204844544
+    m_Localized: Done
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

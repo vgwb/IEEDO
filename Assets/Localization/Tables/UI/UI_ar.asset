@@ -203,6 +203,10 @@ MonoBehaviour:
       +100."
     m_Metadata:
       m_Items: []
+  - m_Id: 48447397204844544
+    m_Localized: "\u0645\u0646\u062C\u0632"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

@@ -35,6 +35,10 @@ MonoBehaviour:
     m_Key: activity_title_unblock
     m_Metadata:
       m_Items: []
+  - m_Id: 7901862056419328
+    m_Key: diary_OpenDiary
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
