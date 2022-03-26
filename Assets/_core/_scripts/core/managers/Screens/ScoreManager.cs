@@ -14,13 +14,18 @@ namespace Ieedo
         // @note: used by Localization
         public string CurrentScore => $"{Statics.Data.Profile.CurrentScore.ToString(),5}";
 
-        void Awake()
+        void Start()
         {
             if (CurrentScoreText != null)
             {
                 CurrentScoreText.Key = new LocalizedString("UI", "top_score");
                 CurrentScoreText.Key.Arguments = new List<object>{this};
-                CurrentScoreText.Key.StringChanged += v => CurrentScoreText.text = v;
+                CurrentScoreText.Key.StringChanged += v =>
+                {
+                    Debug.LogError("CURRENT SCORE SET: " + v);
+                    CurrentScoreText.text = v;
+                };
+                CurrentScoreText.Key.RefreshString();
             }
         }
 
