@@ -24,8 +24,8 @@ namespace Ieedo
 
         public void ShowOptions(LocalizedString titleKey, List<OptionData> options, bool isTextEntry = false)
         {
-            if (isTextEntry && !Application.isEditor) EditorBG.enabled = false;
-            else EditorBG.enabled = true;
+            if (isTextEntry && !Application.isEditor) EditorBG.gameObject.SetActive(false);
+            else EditorBG.gameObject.SetActive(true);
 
             if (Options == null) Options = ButtonsPivot.GetComponentsInChildren<UIOptionLine>(true);
             Tooltip.Text.Key = titleKey;
