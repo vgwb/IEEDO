@@ -20,8 +20,7 @@ namespace Ieedo
 
         public LeanButton InstantTranslationButton;
         public LeanButton HamburgerButton;
-
-        public UITextContent SessionModeContent;
+        public LeanButton SessionModeButton;
 
         void Start()
         {
@@ -36,6 +35,10 @@ namespace Ieedo
                 {
                     Statics.Screens.Open(ScreenID.Hamburger);
                 }
+            });
+            SetupButton(SessionModeButton, () =>
+            {
+                Statics.Mode.ToggleSessionMode();
             });
             SwitchMode(TopBarMode.MainApp);
         }
@@ -58,10 +61,10 @@ namespace Ieedo
             switch (mode)
             {
                 case TopBarMode.MainApp:
-                    SessionModeContent.gameObject.SetActive(true);
+                    SessionModeButton.gameObject.SetActive(true);
                     break;
                 case TopBarMode.Activity:
-                    SessionModeContent.gameObject.SetActive(false);
+                    SessionModeButton.gameObject.SetActive(false);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(mode), mode, null);

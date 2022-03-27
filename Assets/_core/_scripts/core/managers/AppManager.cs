@@ -52,6 +52,9 @@ namespace Ieedo
 
             Statics.Screens.LoadScreens();
 
+            // Initialise some loc data
+            Statics.Score.RefreshString();
+
             // Load the game
             Statics.Screens.OpenImmediate(ScreenID.Top);
             Statics.Screens.OpenImmediate(ScreenID.Bottom);

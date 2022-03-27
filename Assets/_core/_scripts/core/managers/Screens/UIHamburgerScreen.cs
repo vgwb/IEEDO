@@ -29,7 +29,7 @@ namespace Ieedo
                 CloseImmediate();
             });
 
-            btnSwitchSessionMode = AddButton("action_switch_session_mode", () => SwitchMode());
+            //btnSwitchSessionMode = AddButton("action_switch_session_mode", () => SwitchMode());
 
             btnStartAssessment = AddButton("action_start_assessment", () =>
             {
@@ -75,7 +75,7 @@ namespace Ieedo
         {
             Init();
             btnAbort.gameObject.SetActive(Statics.ActivityFlow.IsInsideActivity);
-            btnSwitchSessionMode.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
+            //btnSwitchSessionMode.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
             btnGenerateTestCards.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
             btnGenerateTestPillars.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
             btnTestIncreaseScore.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
@@ -87,8 +87,6 @@ namespace Ieedo
         private void SwitchMode()
         {
             Statics.Mode.ToggleSessionMode();
-            var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
-            uiPillarsScreen.SwitchViewMode(uiPillarsScreen.ViewMode == PillarsViewMode.Categories ? PillarsViewMode.Review : PillarsViewMode.Categories);
         }
 
         private void AbortActivity()

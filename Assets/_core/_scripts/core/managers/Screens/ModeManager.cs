@@ -20,6 +20,9 @@ namespace Ieedo
             else SessionMode = SessionMode.Solo;
 
             ModeText.text = SessionMode == SessionMode.Solo ? "\uf007" : "\uf500";
+
+            var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
+            uiPillarsScreen.SwitchViewMode(uiPillarsScreen.ViewMode == PillarsViewMode.Categories ? PillarsViewMode.Review : PillarsViewMode.Categories);
         }
     }
 }
