@@ -19,7 +19,8 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 10201661340147712
-    m_Localized: "\u0627\u0644\u0645\u062F\u0646\u064A\u0629 \u0648\u0627\u0644\u062B\u0642\u0627\u0641\u064A\u0629"
+    m_Localized: "\u0627\u0644\u062A\u0631\u0628\u064A\u0629 \u0627\u0644\u0645\u062F\u0646\u064A\u0629
+      \u0648\u0627\u0644\u062B\u0642\u0627\u0641\u0629"
     m_Metadata:
       m_Items: []
   - m_Id: 10257870520868864
@@ -113,7 +114,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 22742599502602245
     m_Localized: "\u0646\u0634\u0627\u0637 \u0627\u0644\u0645\u062C\u0645\u0648\u0639\u0629
-      (\u0631\u064A\u0627\u0636\u0629\u060C \u062C\u0648\u0642\u0629 ...)"
+      (Chorus ...)"
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602246

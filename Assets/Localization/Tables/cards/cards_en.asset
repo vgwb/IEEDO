@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 10201661340147712
-    m_Localized: Civic and Cultural
+    m_Localized: Civics and Culture
     m_Metadata:
       m_Items: []
   - m_Id: 10201788641468416
@@ -96,7 +96,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602245
-    m_Localized: "Group activity (sport, chorus\u2026)"
+    m_Localized: "Group activity (chorus\u2026)"
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602246
