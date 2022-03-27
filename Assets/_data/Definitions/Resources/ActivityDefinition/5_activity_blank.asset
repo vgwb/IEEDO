@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7631c653b8f4c97a4340609bfb6c8fa, type: 3}
   m_Name: 5_activity_blank
   m_EditorClassIdentifier: Assembly-CSharp:Ieedo:ActivityDefinition
-  Enabled: 0
+  Enabled: 1
   ID: 1
   Title:
     Key:
@@ -26,8 +26,9 @@ MonoBehaviour:
       m_LocalVariables: []
     DefaultText: Blank
   Type: 1
+  Image: {fileID: 0}
   SceneName: game_blank
-  ScoreToUnlock: 0
+  ScoreToUnlock: 1000
   MaxLevel: 10
   references:
     version: 2
