@@ -25,7 +25,6 @@ namespace Ieedo
                     Debug.LogError("CURRENT SCORE SET: " + v);
                     CurrentScoreText.text = v;
                 };
-                CurrentScoreText.Key.RefreshString();
             }
         }
 
@@ -35,6 +34,11 @@ namespace Ieedo
             CurrentScoreText.transform.localScaleTransition(Vector3.one * 1.5f, 0.25f).JoinDelayTransition(0.25f).localScaleTransition(Vector3.one, 0.25f);
             CurrentScoreText.Key.RefreshString();
             Statics.Data.SaveProfile();
+        }
+
+        public void RefreshString()
+        {
+            CurrentScoreText.Key.RefreshString();
         }
     }
 }
