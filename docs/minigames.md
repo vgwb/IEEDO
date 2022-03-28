@@ -19,14 +19,16 @@ write a letter to a friend
 ## Unblock
 ![](_img/unblock.webp)
 
-slide the blocks to let the red block exit
+slide the blocks to let the red block exit.
 
 **Skills**
 - Planning
 - Spatial Perception
 
 **Notes**  
-sequential predefined levels
+- sequential predefined levels
+- 200 levels are ready, in progressive order (number of moves to solve)
+- we have a level editor to create new levels
 
 ## Digits
 ![](_img/digits.webp)
@@ -39,8 +41,11 @@ tap the numers in ascending (or descending) order.
 - Working Memory
 
 **Notes**  
-random generative levels
-
+- random generative levels
+- progressive size of the matrix
+- progressive amount of numbers
+- timer (you have 60s to solve the level)
+- errors advance the timer
 
 ## Simon
 ![](_img/simon.webp)
@@ -55,10 +60,14 @@ tap the objects as in the shown sequence
 - Working Memory
 
 **Notes**  
-random generative levels
+- random generative levels
+- progressive numer of objects
+- progressive randomness in the sequences
+- later we introduce repetitions
 
 ## Clear the level
 ![](_img/pengui-clean.webp)
+
 move the penguin to clear all level
 
 **Skills**
@@ -66,7 +75,9 @@ move the penguin to clear all level
 - Spatial Perception
 
 **Notes**  
-sequential predefined levels
+- sequential predefined levels
+- need an internal level editor
+- in mid difficulties player can get in blocking situations.
 
 ## Sudoku
 ![](_img/sudoku.webp)
@@ -78,7 +89,9 @@ sequential predefined levels
 - Spatial Perception
 
 **Notes**  
-random generative levels
+- random generative levels
+- progressive board size (stars 4*4 -> 10*10)
+- could use letters or symbols
 
 ## Whack a Mole
 ![](_img/whackAMole.webp)
@@ -89,7 +102,10 @@ random generative levels
 - Shifting
 
 **Notes**  
-random generative levels
+- random generative levels
+- we can change the Mole with anything else
+- progressive difficulties.
+- moles with hat need double/triple hits
 
 # Cognitive skills Glossary 
 
