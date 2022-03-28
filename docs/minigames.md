@@ -1,65 +1,97 @@
-# Minigames
-ideas
+# Activities and Minigames
+these are candidates activities and games
 
+# Activities
+
+## Writing Activities
+![](_img/write.webp)
+
+### Diary
+every day or week, write a diary note
+
+### Letter to myself
+write a letter to your future self
+
+### Dear friend
+write a letter to a friend
+
+# Minigames
 ## Unblock
+![](_img/unblock.webp)
+
+slide the blocks to let the red block exit
+
+**Skills**
 - Planning
 - Spatial Perception
 
+**Notes**  
 sequential predefined levels
 
 ## Digits
+![](_img/digits.webp)
+
+tap the numers in ascending (or descending) order.
+
+**Skills**
 - Processing Speed
 - Visual Scanning
 - Working Memory
 
+**Notes**  
 random generative levels
 
-![](_img/digits.webp)
+
 ## Simon
+![](_img/simon.webp)
+
 tap the objects as in the shown sequence
 
+**Skills**
 - Non-verbal Memory
 - Planning
 - Short-Term Memory
 - Visual Short-Term Memory
 - Working Memory
 
+**Notes**  
 random generative levels
 
-![](_img/simon.webp)
-
 ## Clear the level
+![](_img/pengui-clean.webp)
 move the penguin to clear all level
 
+**Skills**
 - Planning
 - Spatial Perception
 
+**Notes**  
 sequential predefined levels
 
-![](_img/pengui-clean.webp)
-
 ## Sudoku
+![](_img/sudoku.webp)
+
+**Skills**
 - Inhibition
 - Phonological Short-term Memory
 - Planning 
 - Spatial Perception
 
+**Notes**  
 random generative levels
 
-![](_img/sudoku.webp)
-
 ## Whack a Mole
+![](_img/whackAMole.webp)
 
+**Skills**
 - Inhibition
 - Response Time
 - Shifting
 
+**Notes**  
 random generative levels
-  
-![](_img/whackAMole.webp)
 
-
-## Cognitive skills Glossary 
+# Cognitive skills Glossary 
 
 ## Attention
 ### Focused Attention
