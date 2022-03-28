@@ -6,6 +6,11 @@ these are candidates activities and games for the IEEDO app.
 ## Writing Activities
 ![](_img/write.webp)
 
+**Skills**
+- Language & Literacy
+- Emotional
+- Social
+
 ### Diary
 every day or week, write a diary note
 
