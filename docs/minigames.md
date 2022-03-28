@@ -1,7 +1,7 @@
 # Activities and Minigames
-these are candidates activities and games
+these are candidates activities and games for the IEEDO app.
 
-# Activities
+# Activities
 
 ## Writing Activities
 ![](_img/write.webp)
