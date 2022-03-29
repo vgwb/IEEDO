@@ -2,6 +2,8 @@ title: "IEEDO"
 remote_theme: just-the-docs/just-the-docs
 color_scheme: "light"
 search_enabled: true
+baseurl: "/IEEDO"
+url: "http://vgwb.github.io"
 
 aux_links:
   "Go to GitHub Project >":
