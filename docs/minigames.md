@@ -11,7 +11,7 @@ these are candidates activities and games for the IEEDO app.
 # Activities
 
 ## Writing Activities
-![](_img/write.webp)
+![](./_img/write.webp)
 
 **Skills**
 - Language & Literacy
