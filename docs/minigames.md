@@ -1,3 +1,10 @@
+---
+layout: default
+title: Activities and Minigames
+nav_order: 10
+has_children: false
+---
+
 # Activities and Minigames
 these are candidates activities and games for the IEEDO app.
 
@@ -170,3 +177,12 @@ The level of sensitivity with which the hand and eye are synchronized.
 ### Response Time
 The ability to perceive and process a simple stimulus and respond to it.
 
+
+
+
+**Spatial Perception** evaluate how things are arranged in space, and investigate their relations in the environment.  
+**Planning** ability to "think ahead", to mentally anticipate the correct way to execute a task.  
+**Auditory Perception** is the ability to perceive and understand the difference between sounds.  
+**Working Memory** Refers to the temporary storage and manipulation of the information necessary for complex cognitive tasks.  
+**Inhibition** ability to ignore irrelevant stimuli or suppress irrelevant reactions while performing a task.  
+**Shifting** Ability to adapt behavior and thoughts to new, changing, or unexpected circumstances  
