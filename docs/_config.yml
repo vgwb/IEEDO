@@ -4,6 +4,7 @@ color_scheme: "light"
 search_enabled: true
 baseurl: "/IEEDO"
 url: "http://vgwb.github.io"
+logo: "/assets/img/IEEDO_icon.webp"
 
 aux_links:
   "Go to GitHub Project >":

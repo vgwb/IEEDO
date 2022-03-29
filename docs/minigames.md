@@ -11,7 +11,7 @@ these are candidates activities and games for the IEEDO app.
 # Activities
 
 ## Writing Activities
-![](./_img/write.webp)
+![](assets/img/write.webp)
 
 **Skills**
 - Language & Literacy
@@ -29,7 +29,7 @@ write a letter to a friend
 
 # Minigames
 ## Unblock
-![](_img/unblock.webp)
+![](assets/img/unblock.webp)
 
 slide the blocks to let the red block exit.
 
@@ -43,7 +43,7 @@ slide the blocks to let the red block exit.
 - we have a level editor to create new levels
 
 ## Digits
-![](_img/digits.webp)
+![](assets/img/digits.webp)
 
 tap the numers in ascending (or descending) order.
 
@@ -60,7 +60,7 @@ tap the numers in ascending (or descending) order.
 - errors advance the timer
 
 ## Simon
-![](_img/simon.webp)
+![](assets/img/simon.webp)
 
 tap the objects as in the shown sequence
 
@@ -78,7 +78,7 @@ tap the objects as in the shown sequence
 - later we introduce repetitions
 
 ## Clear the level
-![](_img/pengui-clean.webp)
+![](assets/img/pengui-clean.webp)
 
 move the penguin to clear all level
 
@@ -92,7 +92,7 @@ move the penguin to clear all level
 - in mid difficulties player can get in blocking situations.
 
 ## Sudoku
-![](_img/sudoku.webp)
+![](assets/img/sudoku.webp)
 
 **Skills**
 - Inhibition
@@ -106,7 +106,7 @@ move the penguin to clear all level
 - could use letters or symbols
 
 ## Whack a Mole
-![](_img/whackAMole.webp)
+![](assets/img/whackAMole.webp)
 
 **Skills**
 - Inhibition

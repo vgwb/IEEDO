@@ -1,5 +1,5 @@
 # IEEDO app
 
-![](docs/_img/IEEDO_icon.webp)
+![](docs/assets/img/IEEDO_icon.webp)
 
 **IEEDO Docs:** [vgwb.github.io/IEEDO](http://vgwb.github.io/IEEDO)
