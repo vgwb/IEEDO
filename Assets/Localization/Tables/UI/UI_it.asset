@@ -56,7 +56,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40474458029056000
-    m_Localized: Loading...
+    m_Localized: '{CurrentScore}'
     m_Metadata:
       m_Items:
       - rid: 3992833648747610129
@@ -109,7 +109,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40543073474469888
-    m_Localized: Loading...
+    m_Localized: '{CurrentScore}'
     m_Metadata:
       m_Items:
       - rid: 3992833648747610129
@@ -126,7 +126,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40546818237161472
-    m_Localized: Loading...
+    m_Localized: '{CurrentScore}'
     m_Metadata:
       m_Items:
       - rid: 3992833648747610129
@@ -183,7 +183,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48154400376250368
-    m_Localized: Loading...
+    m_Localized: '{CurrentScore}'
     m_Metadata:
       m_Items: []
   - m_Id: 48447397204844544

@@ -51,23 +51,20 @@ namespace Ieedo
 
         public UIButton DeleteCardButton;
         public UIButton CloseFrontViewButton;
-        public UIButton CreationBackButton;
+        public UIButton CreationAbortButton;
 
         public override ScreenID ID => ScreenID.CardList;
         public bool KeepPillars { get; set; }
 
         void Awake()
         {
-            CreationBackButton.gameObject.SetActive(false);
-
             SetupButton(ValidateCardButton, () => StartCoroutine(ValidateCardCO(frontCardUI)));
             SetupButton(CompleteCardButton, () => StartCoroutine(CompleteCardCO(frontCardUI)));
             SetupButton(UnValidateCardButton, () => StartCoroutine(UnValidateCardCO(frontCardUI)));
             SetupButton(UnCompleteCardButton, () => StartCoroutine(UnCompleteCardCO(frontCardUI)));
-
             SetupButton(EditCardButton, () => SwitchToFrontViewMode(FrontViewMode.Edit));
-
             SetupButton(CreateCardButton, () => StartCoroutine(CardCreationFlowCO()));
+            SetupButton(CreationAbortButton, () => StartCoroutine(CreationAbortCO()));
 
             CardsList.OnCardClicked = uiCard =>
             {
@@ -359,6 +356,7 @@ namespace Ieedo
 
                     DeleteCardButton.transform.localScale = Vector3.zero;
                     DeleteCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
+                    CompleteCardButton.gameObject.SetActive(true);
                     CompleteCardButton.transform.localScale = Vector3.zero;
                     CompleteCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
                     break;
@@ -369,6 +367,9 @@ namespace Ieedo
                     CompletedMode.SetActive(false);
                     ValidatedMode.SetActive(false);
                     StartEditing(true);
+
+                    CreateCardButton.transform.localScale = Vector3.zero;
+                    CompleteCardButton.gameObject.SetActive(false);
                     break;
                 case FrontViewMode.View:
                     EditModeCardInteraction.SetActive(false);
@@ -443,9 +444,20 @@ namespace Ieedo
             EditDescriptionButton.gameObject.SetActive(!choice);
         }
 
+        public IEnumerator CreationAbortCO()
+        {
+            var answer = new Ref<int>();
+            yield return Statics.Screens.ShowQuestionFlow("UI/abort_creation_title", "UI/abort_creation_question", new[] { "UI/yes", "UI/no" }, answer);
+            if (answer.Value == 0)
+            {
+                StopCoroutine(CardCreationFlowCO());
+                yield return DeleteCardCO(false, frontCardUI);
+            }
+        }
+
         public IEnumerator CardCreationFlowCO()
         {
-            //CreationBackButton.gameObject.SetActive(true);
+            CreationAbortButton.gameObject.SetActive(true);
 
             // Create and show the card
             var cardDef = Statics.Cards.GenerateCardDefinition(
@@ -488,7 +500,7 @@ namespace Ieedo
 
             frontCardUI.AnimateToParent();
 
-            CreationBackButton.gameObject.SetActive(false);
+            CreationAbortButton.gameObject.SetActive(false);
             EditSubCategoryButton.gameObject.SetActive(true);
             EditDifficultyButton.gameObject.SetActive(true);
             EditDateButton.gameObject.SetActive(true);
@@ -695,7 +707,6 @@ namespace Ieedo
             SetupButton(DeleteCardButton, () =>
             {
                 StartCoroutine(DeleteCardCO(isNewCard, frontCardUI));
-
             });
 
             StartCoroutine(EditModeCO());
