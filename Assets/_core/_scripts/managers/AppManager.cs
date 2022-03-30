@@ -68,7 +68,8 @@ namespace Ieedo
 
             if (Statics.Data.Profile.Description.IsNewProfile)
             {
-                yield return Statics.Screens.ShowDialog("UI/intro_content", "UI/ok");
+                yield return Statics.Screens.ShowDialog("UI/intro_content_1", "UI/ok");
+                yield return Statics.Screens.ShowDialog("UI/intro_content_2", "UI/ok");
                 Statics.Data.Profile.Description.IsNewProfile = false;
                 Statics.Data.SaveProfile();
             }
