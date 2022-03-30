@@ -98,8 +98,13 @@ namespace Ieedo
 
         public void RegisterResult(ActivityResult result)
         {
+            RegisterResult(result, Timestamp.Now);
+        }
+        
+        public void RegisterResult(ActivityResult result, Timestamp timestamp)
+        {
             // Save the result of this activity and its score
-            result.Timestamp = Timestamp.Now;
+            result.Timestamp = timestamp;
             var activityData = Statics.Data.Profile.ActivitiesData.First(x => x.ID == CurrentActivity.ID);
             activityData.Results.Add(result);
 
