@@ -11,6 +11,9 @@ namespace Ieedo
 {
     public class UICardListScreen : UIScreen
     {
+        public static int VALIDATED_CARDS_PILLAR_INDEX = 0;
+        public static int COMPLETED_CARDS_PILLAR_INDEX = 1;
+
         public UICardCollection CardsList;
         public GameObject FrontView;
         public RectTransform FrontViewPivot;
@@ -198,8 +201,7 @@ namespace Ieedo
 
             // Just add the new card
             var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
-            int pillarIndex = 0;
-            uiPillarsScreen.RefreshData(pillarIndex);
+            uiPillarsScreen.RefreshData(VALIDATED_CARDS_PILLAR_INDEX);
             // TODO: this can be done only with DATA Tho uiPillarsScreen.PillarsManager.RefreshPillarView(validatedCardsPillarIndex, true);
 
             Statics.Score.AddScore(50);
@@ -230,8 +232,7 @@ namespace Ieedo
 
             // Just add the new card
             var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
-            int pillarIndex = 0;
-            uiPillarsScreen.RefreshData(pillarIndex);
+            uiPillarsScreen.RefreshData(VALIDATED_CARDS_PILLAR_INDEX);
             // TODO: this can be done only with DATA Tho uiPillarsScreen.PillarsManager.RefreshPillarView(validatedCardsPillarIndex, true);
 
             Statics.Score.AddScore(-50);
