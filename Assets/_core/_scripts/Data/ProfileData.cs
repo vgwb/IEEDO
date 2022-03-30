@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Ieedo
@@ -22,6 +23,17 @@ namespace Ieedo
             }
             return s.ToString();
         }
+
+        public bool HasCardsWithStatus(CardValidationStatus status)
+        {
+            return this.Count(x => x.Status == status) > 0;
+        }
+
+        public int NCardsWithStatus(CardValidationStatus status)
+        {
+            return this.Count(x => x.Status == status);
+        }
+
     }
 
     [Serializable]
