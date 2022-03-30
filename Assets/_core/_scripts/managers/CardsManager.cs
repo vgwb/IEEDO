@@ -25,7 +25,6 @@ namespace Ieedo
         {
             Statics.Data.Profile.Cards.Add(cardData);
             Statics.Data.SaveProfile();
-            Statics.Analytics.Card(cardData.Status.ToString());
         }
 
         /// <summary>

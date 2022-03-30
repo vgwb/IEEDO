@@ -148,6 +148,7 @@ namespace Ieedo
             uiBottomScreen.ToggleSelection(uiBottomScreen.btnPillars);
 
             Statics.Score.AddScore(20);
+            Statics.Analytics.Card("complete");
         }
 
         private IEnumerator AnimateCardOut(UICard uiCard, int direction)
@@ -183,6 +184,7 @@ namespace Ieedo
             if (uiCard != null) Destroy(uiCard.gameObject);
             CloseFrontView();
             Statics.Score.AddScore(-20);
+            Statics.Analytics.Card("uncomplete");
         }
 
         private IEnumerator ValidateCardCO(UICard uiCard)
@@ -203,6 +205,7 @@ namespace Ieedo
             // TODO: this can be done only with DATA Tho uiPillarsScreen.PillarsManager.RefreshPillarView(validatedCardsPillarIndex, true);
 
             Statics.Score.AddScore(50);
+            Statics.Analytics.Card("validate");
         }
 
         private IEnumerator UnValidateCardCO(UICard uiCard)
@@ -234,6 +237,7 @@ namespace Ieedo
             // TODO: this can be done only with DATA Tho uiPillarsScreen.PillarsManager.RefreshPillarView(validatedCardsPillarIndex, true);
 
             Statics.Score.AddScore(-50);
+            Statics.Analytics.Card("unvalidate");
         }
 
         protected override IEnumerator OnOpen()
@@ -512,6 +516,7 @@ namespace Ieedo
             EditTitleButton.gameObject.SetActive(true);
 
             Statics.Cards.AddCard(cardData);
+            Statics.Analytics.Card("create");
         }
 
         private IEnumerator EditCategoryCO(bool autoReset = false)
