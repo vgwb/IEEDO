@@ -3,6 +3,7 @@ using System.Linq;
 using Ieedo.Utilities;
 using Lean.Transition;
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
@@ -41,14 +42,14 @@ namespace Ieedo
                 Statics.Data.InitialiseCardDefinitions();
 
                 // For now, create a new one if none is found
-                Statics.Data.CreateNewProfile(new ProfileDescription()
+                Statics.Data.CreateNewProfile(new ProfileDescription
                 {
                     Name = "TEST",
                     Country = "en",
                     Language = Language.English,
+                    IsNewProfile = true,
                 });
             }
-
 
             Statics.Screens.LoadScreens();
 
@@ -60,6 +61,13 @@ namespace Ieedo
             Statics.Screens.OpenImmediate(ScreenID.Bottom);
             yield return Statics.Screens.TransitionToCO(ScreenID.Pillars);
             if (LoadingObscurer != null) LoadingObscurer.colorTransition(new Color(LoadingObscurer.color.r, LoadingObscurer.color.g, LoadingObscurer.color.b, 0f), 1f);
+
+            if (Statics.Data.Profile.Description.IsNewProfile)
+            {
+                yield return Statics.Screens.ShowDialog("UI/intro_content", "UI/ok");
+                Statics.Data.Profile.Description.IsNewProfile = false;
+                Statics.Data.SaveProfile();
+            }
         }
 
     }

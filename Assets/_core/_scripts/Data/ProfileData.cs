@@ -44,6 +44,7 @@ namespace Ieedo
         public string Name;
         public string Country;
         public Language Language;
+        public bool IsNewProfile;
     }
 
     #region Activities
