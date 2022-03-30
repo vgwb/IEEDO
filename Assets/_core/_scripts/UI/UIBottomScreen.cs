@@ -25,10 +25,7 @@ namespace Ieedo
             SetupButton(btnCards, () =>
             {
                 ToggleSelection(btnCards);
-                var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
-                uiCardListScreen.LoadToDoCards();
-                uiCardListScreen.KeepPillars = false;
-                GoTo(ScreenID.CardList);
+                Statics.Screens.GoToTodoList();
             });
 
             ToggleSelection(btnPillars);
