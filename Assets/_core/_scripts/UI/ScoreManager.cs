@@ -22,7 +22,6 @@ namespace Ieedo
                 CurrentScoreText.Key.Arguments = new List<object>{this};
                 CurrentScoreText.Key.StringChanged += v =>
                 {
-                    Debug.LogError("CURRENT SCORE SET: " + v);
                     CurrentScoreText.text = v;
                 };
             }
