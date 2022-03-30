@@ -75,7 +75,8 @@ namespace Ieedo
 
                         pillarsData.Pillars.Add(pillarData);
                     }
-                    PillarsManager.SetFocus(true);
+                    pillarsData.ReviewMode = false;
+                    PillarsManager.SetFocus();
                     break;
                 case PillarsViewMode.Review:
                     {
@@ -101,9 +102,9 @@ namespace Ieedo
                             IconString = "\uf00c"
                         };
                         pillarsData.Pillars.Add(pillarData);
-
                     }
-                    PillarsManager.SetFocus(false);
+                    pillarsData.ReviewMode = true;
+                    PillarsManager.SetFocus();
                     break;
             }
 
@@ -141,7 +142,7 @@ namespace Ieedo
             if (PillarsManager.CurrentFocusedPillar == pillarView) return;
             AnimateToFocused();
 
-            PillarsManager.SetFocus(false, pillarView);
+            PillarsManager.SetFocus(pillarView);
 
             var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
 
@@ -159,14 +160,14 @@ namespace Ieedo
 
             uiCardListScreen.LoadCards(pillarView.Data.Cards, UICardListScreen.SortByExpirationDate, UICardListScreen.ListViewMode.Pillars, desiredFrontViewMode);
             uiCardListScreen.KeepPillars = true;
-            GoTo(ScreenID.CardList);
+            uiCardListScreen.Open();
         }
 
         private void HandleSelectPlane()
         {
             if (!isFocused) return;
             AnimateToUnfocused();
-            PillarsManager.SetFocus(true);
+            PillarsManager.SetFocus();
 
             var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
             if (uiCardListScreen.IsOpen) uiCardListScreen.Close();
@@ -208,7 +209,7 @@ namespace Ieedo
             if (isFocused) return;
             isFocused = true;
             Camera3D.transform.localPositionTransition(new Vector3(0, 10.5f, -13), 0.5f);
-            Camera3D.transform.localRotationTransition(new Quaternion(0.255145639f,0.0823278204f,-0.0286051836f,0.962966561f), 0.5f);
+            Camera3D.transform.localRotationTransition(new Quaternion(0.276550651f,0.0829450935f,-0.0267626494f,0.957038999f), 0.5f);
         }
 
         private void AnimateToUnfocused()

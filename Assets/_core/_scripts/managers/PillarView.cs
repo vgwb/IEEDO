@@ -63,7 +63,7 @@ namespace Ieedo
         }
 
         private int nCurrentCards;
-        public void ShowData(PillarData data, bool added)
+        public void ShowData(PillarData data, bool added, bool reviewMode)
         {
             if (!added) nCurrentCards = 0;
 

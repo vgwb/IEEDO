@@ -21,6 +21,7 @@ namespace Ieedo
     [System.Serializable]
     public class PillarsData
     {
+        public bool ReviewMode;
         public List<PillarData> Pillars = new List<PillarData>();
     }
 
@@ -34,7 +35,7 @@ namespace Ieedo
 
         public void Update()
         {
-            if (autoRotating) transform.localEulerAngles += Vector3.up * Time.deltaTime * RotationSpeed;
+            if (autoRotating && currentFocusedPillar == null) transform.localEulerAngles += Vector3.up * Time.deltaTime * RotationSpeed;
 
             if (!TEST) return;
             ShowData(TestData, true);
@@ -56,12 +57,23 @@ namespace Ieedo
                 var locPos = pillarView.transform.localPosition;
                 var delta = Vector3.forward * Radius;
                 var deltaAngle = 360f / 6;
-                var rot = Quaternion.AngleAxis(deltaAngle * iPillar, Vector3.up);
+                if (data.ReviewMode) deltaAngle = 360f / 2;
+
+                var startRot = 0;
+                if (data.ReviewMode) startRot = 90;
+                var rot = Quaternion.AngleAxis(startRot + deltaAngle * iPillar, Vector3.up);
+
                 locPos = rot * delta;
                 pillarView.transform.localPosition = locPos;
                 var locEul = rot.eulerAngles;
                 locEul.y += 180;
                 pillarView.transform.localEulerAngles = locEul;
+                if (data.ReviewMode)
+                {
+                    var finalRot = locEul;
+                    finalRot.y += iPillar == 0 ? 90 : -90;
+                    pillarView.transform.localRotationTransition(Quaternion.Euler(finalRot), 0.25f);
+                }
 
                 if (onlyPillarIndex < 0 || onlyPillarIndex == iPillar)
                 {
@@ -69,19 +81,22 @@ namespace Ieedo
                 }
                 pillarView.Show();
             }
+
+            autoRotating = !data.ReviewMode;
+            if (!autoRotating) transform.localRotationTransition(Quaternion.identity, 0.5f);
         }
 
         public void RefreshPillarView(int iPillar, bool added)
         {
             var pillarData = currentData.Pillars[iPillar];
             var pillarView = PillarViews[iPillar];
-            pillarView.ShowData(pillarData, added);
+            pillarView.ShowData(pillarData, added, currentData.ReviewMode);
         }
 
         private bool autoRotating;
         private PillarView currentFocusedPillar;
         public PillarView CurrentFocusedPillar => currentFocusedPillar;
-        public void SetFocus(bool _autoRotating, PillarView focusOnPillar = null)
+        public void SetFocus(PillarView focusOnPillar = null)
         {
             if (focusOnPillar != null && focusOnPillar == currentFocusedPillar) return;
 
@@ -92,22 +107,25 @@ namespace Ieedo
                 currentFocusedPillar = null;
             }
 
-            var targetRot = Quaternion.identity;
             if (focusOnPillar != null)
             {
                 var dir = focusOnPillar.transform.localPosition;
                 dir = Quaternion.Euler(0, 180, 0) * dir;
-                targetRot = Quaternion.LookRotation(dir);
+                var targetRot = Quaternion.LookRotation(dir);
                 var targetEuls = targetRot.eulerAngles;
                 targetEuls.y *= -1;
                 targetRot = Quaternion.Euler(targetEuls);
                 focusOnPillar.ShowLabel(true);
                 focusOnPillar.CardsOut();
                 currentFocusedPillar = focusOnPillar;
-            }
+                transform.localRotationTransition(targetRot, 0.5f);
 
-            autoRotating = _autoRotating;
-            if (!_autoRotating) transform.localRotationTransition(targetRot, 0.5f);
+                focusOnPillar.transform.localRotationTransition(Quaternion.LookRotation(dir), 0.25f);
+            }
+            else
+            {
+                if (!autoRotating) transform.localRotationTransition(Quaternion.identity, 0.5f);
+            }
         }
 
     }
