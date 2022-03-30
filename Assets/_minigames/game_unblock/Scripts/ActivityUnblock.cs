@@ -19,7 +19,8 @@ namespace minigame.unblock
 
         void Start()
         {
-            if (DebugAutoplay) {
+            if (DebugAutoplay)
+            {
                 SetupActivity(DebugStartLevel);
             }
         }
@@ -33,28 +34,22 @@ namespace minigame.unblock
 
         void StartGame()
         {
-            GameManager.getInstance().init();
+            GameManager.I().init();
             Debug.Log($"Starting game at level {currentLevel}");
             levelText.text = "Level " + (currentLevel);
-
-            GameData.getInstance().isLock = false;
-
+            GameData.I().isLock = false;
             Unblock tg = GameObject.Find("unblock").GetComponent<Unblock>();
             tg.clear();
-
-            GameData.difficulty = 0;
-            GameData.instance.cLevel = currentLevel - 1; //Random.Range(0, GameData.totalLevel[GameData.difficulty]);
-
+            GameData.instance.cLevel = currentLevel - 1;
             tg.init();
-
         }
 
         public void win()
         {
-            Debug.Log("WIN");
+            Debug.Log("Win");
             GameData.instance.isWin = true;
             SoundManager.I.PlaySfx(SfxEnum.win);
-            StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win,10)));
+            StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win, 10)));
         }
 
         public override IEnumerator PlayNextLevel(int _currentLevel)

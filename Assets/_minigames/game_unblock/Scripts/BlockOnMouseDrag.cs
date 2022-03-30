@@ -33,15 +33,15 @@ namespace minigame.unblock
             if (!canMove)
                 return;
 
-            if (GameData.getInstance().isLock)
+            if (GameData.I().isLock)
                 return;
 
             Vector3 worldPos = camera1.ScreenToWorldPoint(Input.mousePosition);
             worldPos.z = transform.position.z;
             offset = worldPos - transform.position;
 
-            int tx = Mathf.RoundToInt((transform.position.x - GameData.getInstance().startPos.x) / GameData.instance.tileWidth);
-            int ty = Mathf.RoundToInt((transform.position.y - GameData.getInstance().startPos.y) / GameData.instance.tileWidth);
+            int tx = Mathf.RoundToInt((transform.position.x - GameData.I().startPos.x) / GameData.instance.tileWidth);
+            int ty = Mathf.RoundToInt((transform.position.y - GameData.I().startPos.y) / GameData.instance.tileWidth);
 
             //clear origin data occupy first
             UnblockData.Instance.setBlockState(type, tx, ty, 0);
@@ -55,7 +55,7 @@ namespace minigame.unblock
         {
             if (!canMove)
                 return;
-            if (GameData.getInstance().isLock)
+            if (GameData.I().isLock)
                 return;
             offset = Vector3.zero;
 
@@ -71,8 +71,8 @@ namespace minigame.unblock
             }
 
             //set the settled block state
-            int tx = Mathf.RoundToInt((transform.position.x - GameData.getInstance().startPos.x) / GameData.instance.tileWidth);
-            int ty = Mathf.RoundToInt((transform.position.y - GameData.getInstance().startPos.y) / GameData.instance.tileWidth);
+            int tx = Mathf.RoundToInt((transform.position.x - GameData.I().startPos.x) / GameData.instance.tileWidth);
+            int ty = Mathf.RoundToInt((transform.position.y - GameData.I().startPos.y) / GameData.instance.tileWidth);
 
             UnblockData.Instance.setBlockState(type, tx, ty, 1);
 
@@ -104,7 +104,7 @@ namespace minigame.unblock
         {
             if (!canMove)
                 return;
-            if (GameData.getInstance().isLock)
+            if (GameData.I().isLock)
                 return;
             Vector3 point = camera1.ScreenToWorldPoint(Input.mousePosition);
 
@@ -113,7 +113,7 @@ namespace minigame.unblock
 
                 point.y = startY;
 
-                float tminx = min * GameData.instance.tileWidth + GameData.getInstance().startPos.x;
+                float tminx = min * GameData.instance.tileWidth + GameData.I().startPos.x;
                 float tmaxx = tminx + (max - min) * GameData.instance.tileWidth;//(BlockOutData.Instance.frameW / 6);
 
 
@@ -129,7 +129,7 @@ namespace minigame.unblock
                 float tmin = Mathf.Min(min, max);
                 float tmax = Mathf.Max(min, max);
 
-                float tminy = GameData.getInstance().startPos.y + tmin * GameData.instance.tileWidth;
+                float tminy = GameData.I().startPos.y + tmin * GameData.instance.tileWidth;
                 float tmaxy = tminy + (tmax - tmin) * GameData.instance.tileWidth;
 
                 float miny2 = Mathf.Min(tminy, tmaxy);
@@ -140,6 +140,5 @@ namespace minigame.unblock
 
             transform.position = point;
         }
-
     }
 }

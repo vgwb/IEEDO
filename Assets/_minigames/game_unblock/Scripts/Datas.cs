@@ -10,7 +10,7 @@ namespace minigame.unblock
 
         public string[] getData(string dataName)
         {
-            datas = Resources.Load<TextAsset>(dataName + "/levels_" + GameData.difficulty);
+            datas = Resources.Load<TextAsset>(dataName + "/levels");
             string[] lines = new string[0];
             lines = datas.text.Split('\n');
 
