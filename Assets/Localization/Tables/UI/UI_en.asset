@@ -190,6 +190,64 @@ MonoBehaviour:
     m_Localized: Done
     m_Metadata:
       m_Items: []
+  - m_Id: 50660762365927424
+    m_Localized: "Welcome to the IEEDO App! \nIf you don't understand something on
+      screen, hold the Translation button to read it in Arabic"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093248
+    m_Localized: You should be with your Coach, let's switch to Session Mode.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093249
+    m_Localized: Start Session
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093250
+    m_Localized: Your situation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093251
+    m_Localized: Remember, our goal is to help you to be successful in this country.
+      Do you want to answer a few questions about your current situation?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093252
+    m_Localized: Let's review together all the card you completed...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093253
+    m_Localized: You have no card to review
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093254
+    m_Localized: Let's create cards about the things you will do in the coming days...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093255
+    m_Localized: Start Session Mode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093256
+    m_Localized: Are you sure you want to start a Session?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093257
+    m_Localized: 'Leave Session Mode '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093258
+    m_Localized: Are you sure you want to quit the Session?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093259
+    m_Localized: Quit Card Creation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093260
+    m_Localized: Are you sure you want to quit the creation of this card?
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

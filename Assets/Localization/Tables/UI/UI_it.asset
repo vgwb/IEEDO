@@ -56,138 +56,200 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40474458029056000
-    m_Localized: '{CurrentScore}'
+    m_Localized: '{Currentscore}'
     m_Metadata:
       m_Items:
       - rid: 3992833648747610129
   - m_Id: 40525707831173120
-    m_Localized: Loading...
+    m_Localized: "Cambia modalit\xE0"
     m_Metadata:
       m_Items: []
   - m_Id: 40525580437577728
-    m_Localized: Loading...
+    m_Localized: Uscita
     m_Metadata:
       m_Items: []
   - m_Id: 40525760616488960
-    m_Localized: Loading...
+    m_Localized: Valutazione
     m_Metadata:
       m_Items: []
   - m_Id: 40526294958235648
-    m_Localized: Loading...
+    m_Localized: Ripristinare il profilo
     m_Metadata:
       m_Items: []
   - m_Id: 40534266346233856
-    m_Localized: Loading...
+    m_Localized: Risultati
     m_Metadata:
       m_Items: []
   - m_Id: 40535113130074112
-    m_Localized: Loading...
+    m_Localized: Seleziona una categoria
     m_Metadata:
       m_Items: []
   - m_Id: 40535270735241216
-    m_Localized: Loading...
+    m_Localized: "Imposta un livello di difficolt\xE0"
     m_Metadata:
       m_Items: []
   - m_Id: 40535419633033216
-    m_Localized: Loading...
+    m_Localized: Imposta una data di destinazione
     m_Metadata:
       m_Items: []
   - m_Id: 40535579280826368
-    m_Localized: Loading...
+    m_Localized: "Seleziona il tipo di attivit\xE0"
     m_Metadata:
       m_Items: []
   - m_Id: 40535952167034880
-    m_Localized: Loading...
+    m_Localized: Inserisci il titolo
     m_Metadata:
       m_Items: []
   - m_Id: 40537204766564352
-    m_Localized: Loading...
+    m_Localized: Inserire la descrizione
     m_Metadata:
       m_Items: []
   - m_Id: 40544906540507136
-    m_Localized: Loading...
+    m_Localized: Livello completato
     m_Metadata:
       m_Items: []
   - m_Id: 40543073474469888
-    m_Localized: '{CurrentScore}'
+    m_Localized: Punteggio + {Punteggio}
     m_Metadata:
       m_Items:
       - rid: 3992833648747610129
   - m_Id: 40544570652254208
-    m_Localized: Loading...
+    m_Localized: Molto bene!
     m_Metadata:
       m_Items: []
   - m_Id: 40544588826173440
-    m_Localized: Loading...
+    m_Localized: Hai perso
     m_Metadata:
       m_Items: []
   - m_Id: 40544604743557120
-    m_Localized: Loading...
+    m_Localized: Uscita
     m_Metadata:
       m_Items: []
   - m_Id: 40546818237161472
-    m_Localized: '{CurrentScore}'
+    m_Localized: '{ScoreTounlock} Punti da sbloccare'
     m_Metadata:
       m_Items:
       - rid: 3992833648747610129
   - m_Id: 40549731508445184
-    m_Localized: Loading...
+    m_Localized: IEDO si concentra su 6 categorie, controlliamo loro uno per uno
+      ...
     m_Metadata:
       m_Items: []
   - m_Id: 40550106646994944
-    m_Localized: Loading...
+    m_Localized: Globale
     m_Metadata:
       m_Items: []
   - m_Id: 40557809452736512
-    m_Localized: Loading...
+    m_Localized: Giocare
     m_Metadata:
       m_Items: []
   - m_Id: 43003187146022912
-    m_Localized: Loading...
+    m_Localized: Carte completate
     m_Metadata:
       m_Items: []
   - m_Id: 43003190425968640
-    m_Localized: Loading...
+    m_Localized: Carte convalidate
     m_Metadata:
       m_Items: []
   - m_Id: 48089044619304960
-    m_Localized: Loading...
+    m_Localized: Impostare come non completato
     m_Metadata:
       m_Items: []
   - m_Id: 48089044644470784
-    m_Localized: Loading...
+    m_Localized: Sei sicuro di voler impostare la carta come non completata?
     m_Metadata:
       m_Items: []
   - m_Id: 48119887559598080
-    m_Localized: Loading...
+    m_Localized: Impostare come non convalidato
     m_Metadata:
       m_Items: []
   - m_Id: 48119887563792384
-    m_Localized: Loading...
+    m_Localized: Sei sicuro di voler impostare la carta come non convalidata?
     m_Metadata:
       m_Items: []
   - m_Id: 48125278888599552
-    m_Localized: Loading...
+    m_Localized: Genera carte di prova
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925888
-    m_Localized: Loading...
+    m_Localized: Elimina carta
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925889
-    m_Localized: Loading...
+    m_Localized: Sei sicuro di voler cancellare la carta?
     m_Metadata:
       m_Items: []
   - m_Id: 48151452267077632
-    m_Localized: Loading...
+    m_Localized: Generare pilastri casuali.
     m_Metadata:
       m_Items: []
   - m_Id: 48154400376250368
-    m_Localized: '{CurrentScore}'
+    m_Localized: Aumentare il punteggio +100.
     m_Metadata:
       m_Items: []
   - m_Id: 48447397204844544
     m_Localized: Fatto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762365927424
+    m_Localized: 'Benvenuti nell''app IEEDO!
+
+      Se non capisci qualcosa sullo
+      schermo, tenere il pulsante di traduzione per leggerlo in arabo'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093248
+    m_Localized: "Dovresti essere con il tuo allenatore, passiamo alla modalit\xE0
+      di sessione."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093249
+    m_Localized: Start Session.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093250
+    m_Localized: La tua situazione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093251
+    m_Localized: "Ricorda, il nostro obiettivo \xE8 aiutarti ad avere successo in
+      questo paese. Vuoi rispondere ad alcune domande sulla tua situazione attuale?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093252
+    m_Localized: Rivediamo insieme tutta la carta che hai completato ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093253
+    m_Localized: Non hai carta da revisione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093254
+    m_Localized: Creiamo carte sulle cose che farai nei prossimi giorni ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093255
+    m_Localized: "Inizia la modalit\xE0 di sessione"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093256
+    m_Localized: Sei sicuro di voler iniziare una sessione?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093257
+    m_Localized: "Lasciare la modalit\xE0 di sessione"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093258
+    m_Localized: Sei sicuro di voler lasciare la sessione?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093259
+    m_Localized: Quit Card Creation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093260
+    m_Localized: Sei sicuro di voler lasciare la creazione di questa carta?
     m_Metadata:
       m_Items: []
   references:

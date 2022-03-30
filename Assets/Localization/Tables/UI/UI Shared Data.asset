@@ -183,6 +183,62 @@ MonoBehaviour:
     m_Key: delete_card_confirmation_description
     m_Metadata:
       m_Items: []
+  - m_Id: 50660762365927424
+    m_Key: intro_content_1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093248
+    m_Key: intro_content_2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093249
+    m_Key: start_session
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093250
+    m_Key: session_question_assessment_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093251
+    m_Key: session_question_assessment_content
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093252
+    m_Key: session_hint_review
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093253
+    m_Key: session_hint_review_empty
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093254
+    m_Key: session_hint_create_card
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093255
+    m_Key: session_start_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093256
+    m_Key: session_start_question
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093257
+    m_Key: session_abort_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093258
+    m_Key: session_abort_question
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093259
+    m_Key: abort_creation_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093260
+    m_Key: abort_creation_question
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
