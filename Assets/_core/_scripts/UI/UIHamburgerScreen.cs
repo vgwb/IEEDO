@@ -75,7 +75,6 @@ namespace Ieedo
         {
             Init();
             btnAbort.gameObject.SetActive(Statics.ActivityFlow.IsInsideActivity);
-            //btnSwitchSessionMode.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
             btnGenerateTestCards.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
             btnGenerateTestPillars.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
             btnTestIncreaseScore.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
@@ -84,10 +83,6 @@ namespace Ieedo
             yield break;
         }
 
-        private void SwitchMode()
-        {
-            Statics.Mode.ToggleSessionMode();
-        }
 
         private void AbortActivity()
         {
