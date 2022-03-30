@@ -20,7 +20,7 @@ namespace Ieedo
         public int Score;
         public ActivityResultState Result;
         public string CustomData;
-        public Timestamp Timestamp;
+        public Timestamp Timestamp = Timestamp.None;
 
         public ActivityResult()
         {
@@ -98,15 +98,15 @@ namespace Ieedo
 
         public void RegisterResult(ActivityResult result)
         {
-            RegisterResult(result, Timestamp.Now);
-        }
-        
-        public void RegisterResult(ActivityResult result, Timestamp timestamp)
-        {
+            if (Equals(result.Timestamp, Timestamp.None)) result.Timestamp = Timestamp.Now;
+
             // Save the result of this activity and its score
-            result.Timestamp = timestamp;
-            var activityData = Statics.Data.Profile.ActivitiesData.First(x => x.ID == CurrentActivity.ID);
-            activityData.Results.Add(result);
+            var activityData = Statics.Data.Profile.ActivitiesData.GetActivityData(CurrentActivity.ID);
+
+            if (!activityData.Results.Any(x => x.Timestamp.Equals(result.Timestamp)))
+            {
+                activityData.Results.Add(result);
+            }
 
             if (result.Result == ActivityResultState.Win)
             {

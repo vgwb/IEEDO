@@ -404,7 +404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7189363565287035421, guid: 62b0585baa2de2147b49b9e04133163a, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7189363565287035421, guid: 62b0585baa2de2147b49b9e04133163a, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -416,11 +416,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7189363565287035421, guid: 62b0585baa2de2147b49b9e04133163a, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnBtnWin
+      value: OnComplete
       objectReference: {fileID: 0}
     - target: {fileID: 7189363565287035421, guid: 62b0585baa2de2147b49b9e04133163a, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Ieedo.games.diary.ActivityDiary, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7189363565287035421, guid: 62b0585baa2de2147b49b9e04133163a, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: TEST DAILY TEXT
       objectReference: {fileID: 0}
     - target: {fileID: 7189363565287035421, guid: 62b0585baa2de2147b49b9e04133163a, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName

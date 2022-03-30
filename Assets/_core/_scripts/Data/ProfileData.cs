@@ -64,7 +64,7 @@ namespace Ieedo
     [Serializable]
     public class ActivitiesData : List<ActivityData>
     {
-        public ActivityData GetActivity(ActivityID id)
+        public ActivityData GetActivityData(ActivityID id)
         {
             return this.FirstOrDefault(x => x.ID == id);
         }

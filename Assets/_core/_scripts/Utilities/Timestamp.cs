@@ -26,6 +26,9 @@ namespace Ieedo
         public static Timestamp None => new() {binaryTimestamp = 0};
 
         [JsonIgnore]
+        public static Timestamp Today => new() {binaryTimestamp = DateTime.Today.ToBinary()};
+
+        [JsonIgnore]
         public DateTime Date => DateTime.FromBinary(binaryTimestamp);
     }
 }
