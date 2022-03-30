@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace Ieedo
@@ -16,13 +17,37 @@ namespace Ieedo
 
         public void ToggleSessionMode()
         {
-            if (SessionMode == SessionMode.Solo) SessionMode = SessionMode.Session;
-            else SessionMode = SessionMode.Solo;
+            StartCoroutine(ToggleSessionModeCO());
+       }
 
+        private IEnumerator ToggleSessionModeCO()
+        {
+            if (SessionMode == SessionMode.Solo)
+            {
+                var answer = new Ref<int>();
+                yield return Statics.Screens.ShowQuestionFlow("UI/session_start_title", "UI/session_start_question", new[] { "UI/yes", "UI/no" }, answer);
+                if (answer.Value == 0)
+                {
+                    SetSessionMode(SessionMode.Session);
+                    yield return Statics.SessionFlow.SessionFlowCO();
+                }
+            }
+            else
+            {
+                var answer = new Ref<int>();
+                yield return Statics.Screens.ShowQuestionFlow("UI/session_abort_title", "UI/session_abort_question", new[] { "UI/yes", "UI/no" }, answer);
+                if (answer.Value == 0)
+                {
+                    SetSessionMode(SessionMode.Solo);
+                    // TODO: abort the flow (stop the coroutine)
+                }
+            }
+        }
+
+        private void SetSessionMode(SessionMode mode)
+        {
+            SessionMode = mode;
             ModeText.text = SessionMode == SessionMode.Solo ? "\uf007" : "\uf500";
-
-            var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
-            uiPillarsScreen.SwitchViewMode(uiPillarsScreen.ViewMode == PillarsViewMode.Categories ? PillarsViewMode.Review : PillarsViewMode.Categories);
         }
     }
 }
