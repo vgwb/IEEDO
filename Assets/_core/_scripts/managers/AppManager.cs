@@ -72,6 +72,7 @@ namespace Ieedo
                 yield return Statics.Screens.ShowDialog("UI/intro_content_2", "UI/start_session");
                 Statics.Data.Profile.Description.IsNewProfile = false;
                 Statics.Data.SaveProfile();
+                Statics.Mode.ToggleSessionMode();
             }
         }
 
