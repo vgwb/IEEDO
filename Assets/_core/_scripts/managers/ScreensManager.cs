@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization;
 
 namespace Ieedo
 {
@@ -86,5 +87,32 @@ namespace Ieedo
         }
 
         public event Action<ScreenID> OnSwitchToScreen;
+
+
+        #region Custom Flows
+
+        public IEnumerator ShowQuestionFlow(string titleKey, string contentKey, string[] answers, Ref<int> answer)
+        {
+            var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
+            yield return questionScreen.ShowQuestionFlow(titleKey, contentKey, answers, answer);
+        }
+
+        public IEnumerator ShowDialog(string contentKey, string answerKey)
+        {
+            var dialogScreen = Statics.Screens.Get(ScreenID.Dialog) as UIDialogPopup;
+            yield return dialogScreen.ShowDialog(LocString.FromStr(contentKey), LocString.FromStr(answerKey));
+            while (dialogScreen.IsOpen) yield return null;
+        }
+
+        public void GoToTodoList()
+        {
+            var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
+            uiCardListScreen.LoadToDoCards();
+            uiCardListScreen.KeepPillars = false;
+            GoTo(ScreenID.CardList);
+        }
+
+        #endregion
+
     }
 }
