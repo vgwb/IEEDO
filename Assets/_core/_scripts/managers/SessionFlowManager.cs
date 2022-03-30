@@ -10,6 +10,7 @@ namespace Ieedo
     public class SessionFlowManager : MonoBehaviour
     {
         public Image BlockerBG;
+        public bool IsInsideAssessment;
 
         public IEnumerator SessionFlowCO()
         {
@@ -25,7 +26,9 @@ namespace Ieedo
             yield return Statics.Screens.ShowQuestionFlow("UI/session_question_assessment_title", "UI/session_question_assessment_content", new[] { "UI/yes", "UI/no" }, answer);
             if (answer.Value == 0)
             {
-                yield return AssessmentFlowCO();
+                IsInsideAssessment = true;
+                StartCoroutine(AssessmentFlowCO()); // @note: needs to be a StartCoroutine so we can stop it
+                while (IsInsideAssessment) yield return null;
             }
 
             // Review flow
@@ -71,6 +74,7 @@ namespace Ieedo
             var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
             var assessmentRecapScreen = Statics.Screens.Get(ScreenID.AssessmentRecap) as UIAssessmentRecapPopup;
             var introScreen = Statics.Screens.Get(ScreenID.AssessmentIntro) as UIAssessmentIntroScreen;
+            var categoryIntroScreen = Statics.Screens.Get(ScreenID.AssessmentCategoryIntro) as UIAssessmentCategoryIntroScreen;
 
             if (BlockerBG != null)
             {
@@ -86,7 +90,6 @@ namespace Ieedo
             var categories = Statics.Data.GetAll<CategoryDefinition>();
             foreach (var category in categories)
             {
-                var categoryIntroScreen = Statics.Screens.Get(ScreenID.AssessmentCategoryIntro) as UIAssessmentCategoryIntroScreen;
                 yield return categoryIntroScreen.ShowCategory(category);
                 while (categoryIntroScreen.isActiveAndEnabled) yield return null;
 
@@ -126,6 +129,35 @@ namespace Ieedo
 
             // Refresh pillars
             Statics.Screens.GoTo(ScreenID.Pillars);
+            IsInsideAssessment = false;
+        }
+
+        public void SkipAssessment()
+        {
+            StopCoroutine(AssessmentFlowCO());
+            StartCoroutine(SkipAssessmentCO());
+        }
+
+        private IEnumerator SkipAssessmentCO()
+        {
+            var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
+            var assessmentRecapScreen = Statics.Screens.Get(ScreenID.AssessmentRecap) as UIAssessmentRecapPopup;
+            var introScreen = Statics.Screens.Get(ScreenID.AssessmentIntro) as UIAssessmentIntroScreen;
+            var categoryIntroScreen = Statics.Screens.Get(ScreenID.AssessmentIntro) as UIAssessmentIntroScreen;
+
+            while (introScreen.IsOpen) yield return introScreen.CloseCO();
+            while (questionScreen.IsOpen) yield return questionScreen.CloseCO();
+            while (assessmentRecapScreen.IsOpen) yield return assessmentRecapScreen.CloseCO();
+            while (categoryIntroScreen.IsOpen) yield return categoryIntroScreen.CloseCO();
+
+            if (BlockerBG != null)
+            {
+                var col = BlockerBG.color; col.a = 0f;
+                BlockerBG.colorTransition(col, 0.25f);
+            }
+
+            Statics.Screens.GoTo(ScreenID.Pillars);
+            IsInsideAssessment = false;
         }
     }
 }

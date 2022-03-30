@@ -10,7 +10,8 @@ namespace Ieedo
 
         public UIButton ButtonPrefab;
 
-        private UIButton btnAbort;
+        private UIButton btnAbortActivity;
+        private UIButton btnSkipAssessment;
         private UIButton btnSwitchSessionMode;
         private UIButton btnGenerateTestPillars;
         private UIButton btnGenerateTestCards;
@@ -22,9 +23,15 @@ namespace Ieedo
         {
             if (initialised) return;
             initialised = true;
-            btnAbort = AddButton("action_abort_activity", () =>
+            btnAbortActivity = AddButton("action_abort_activity", () =>
             {
                 AbortActivity();
+                CloseImmediate();
+            });
+
+            btnSkipAssessment = AddButton("action_skip_assessment", () =>
+            {
+                Statics.SessionFlow.SkipAssessment();
                 CloseImmediate();
             });
 
@@ -66,7 +73,8 @@ namespace Ieedo
         protected override IEnumerator OnPreOpen()
         {
             Init();
-            btnAbort.gameObject.SetActive(Statics.ActivityFlow.IsInsideActivity);
+            btnAbortActivity.gameObject.SetActive(Statics.ActivityFlow.IsInsideActivity);
+            btnSkipAssessment.gameObject.SetActive(Statics.SessionFlow.IsInsideAssessment);
             btnGenerateTestCards.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
             btnGenerateTestPillars.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
             btnTestIncreaseScore.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
