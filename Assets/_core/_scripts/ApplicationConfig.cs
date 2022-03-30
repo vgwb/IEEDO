@@ -8,8 +8,8 @@ namespace Ieedo
 {
     public class ApplicationConfig : ScriptableObject
     {
-#if UNITY_EDITOR
 
+#if UNITY_EDITOR
         public static ApplicationConfig FindMainConfig()
         {
             var configPath = $"Assets/_data/ApplicationConfig.asset";
@@ -21,16 +21,9 @@ namespace Ieedo
             }
             return config;
         }
-
 #endif
 
         [Header("Debug")]
-        /// <summary>
-        /// Enabled the Advanced Debug Panel.
-        /// Set to FALSE for production.
-        /// </summary>
-        public bool DebugPanelEnabledAtStartup = false;
-
         /// <summary>
         /// Switches on all Debug.Log calls for performance.
         /// Set to FALSE for production.
@@ -38,8 +31,6 @@ namespace Ieedo
         public bool DebugLogEnabled = true;
 
         public bool DebugSaveProfileInJSON = true;
-
-
 
         [Header("App")]
         /// <summary>

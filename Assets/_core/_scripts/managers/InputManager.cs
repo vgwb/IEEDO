@@ -10,6 +10,7 @@ namespace Ieedo
 
         private List<Action> onUpActions = new List<Action>();
         public void RegisterUpAction(Action a) => onUpActions.Add(a);
+
         public void Update()
         {
             if (Input.GetMouseButtonUp(0))

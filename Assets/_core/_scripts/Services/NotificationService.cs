@@ -7,5 +7,11 @@ namespace Ieedo
     public class NotificationService : MonoBehaviour
     {
 
+        public void PrepareNotification()
+        {
+
+        }
+
+
     }
 }
