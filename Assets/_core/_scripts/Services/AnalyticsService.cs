@@ -17,12 +17,11 @@ namespace Ieedo
                 return;
 
             var options = new InitializationOptions();
-
             if (Statics.App.ApplicationConfig.AnalyticsDevEnvironment)
             {
                 options.SetEnvironmentName("dev");
             }
-            await UnityServices.InitializeAsync();
+            await UnityServices.InitializeAsync(options);
             // Debug.Log("Analytics Enabled");
         }
 
@@ -52,9 +51,9 @@ namespace Ieedo
             };
 
             Events.CustomData("myActivity", parameters);
-            if (Statics.App.ApplicationConfig.AnalyticsDevEnvironment)
-                Events.Flush();
-
+#if UNITY_EDITOR
+            Events.Flush();
+#endif
             // Debug.Log("Analytics myActivity");
         }
 
@@ -69,8 +68,9 @@ namespace Ieedo
             };
 
             Events.CustomData("myCard", parameters);
-            if (Statics.App.ApplicationConfig.AnalyticsDevEnvironment)
-                Events.Flush();
+#if UNITY_EDITOR
+            Events.Flush();
+#endif
         }
     }
 }
