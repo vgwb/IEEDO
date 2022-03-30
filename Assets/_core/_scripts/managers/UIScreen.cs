@@ -102,6 +102,7 @@ namespace Ieedo
 
             btn.OnClick.RemoveAllListeners();
             btn.OnClick.AddListener(() => upAction());
+            Statics.Input.RegisterUpAction(upAction);
         }
     }
 }

@@ -88,7 +88,6 @@ namespace Ieedo
 
         public event Action<ScreenID> OnSwitchToScreen;
 
-
         #region Custom Flows
 
         public IEnumerator ShowQuestionFlow(string titleKey, string contentKey, string[] answers, Ref<int> answer)
