@@ -23,5 +23,11 @@ namespace Ieedo
                 return DefaultText;
             }
         }
+
+        public static LocalizedString FromStr(string completeKey)
+        {
+            var splits = completeKey.Split("/");
+            return new LocalizedString(splits[0], splits[1]);
+        }
     }
 }
