@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using Lean.Touch;
 using Lean.Transition;
@@ -24,6 +25,8 @@ namespace Ieedo
         public GameObject Plane;
         public PillarsManager PillarsManager;
 
+        public UIButton SwitchViewButton;
+
         public override ScreenID ID => ScreenID.Pillars;
 
         public PillarsViewMode ViewMode = PillarsViewMode.Categories;
@@ -32,6 +35,13 @@ namespace Ieedo
         {
             var selectable = Plane.GetComponentInChildren<LeanSelectableByFinger>();
             selectable.OnSelected.AddListener(HandleSelectPlane);
+
+            SetupButton(SwitchViewButton, ToggleViewMode);
+        }
+
+        public void ToggleViewMode()
+        {
+            SwitchViewMode(ViewMode == PillarsViewMode.Categories ? PillarsViewMode.Review : PillarsViewMode.Categories);
         }
 
         public void SwitchViewMode(PillarsViewMode newMode)
