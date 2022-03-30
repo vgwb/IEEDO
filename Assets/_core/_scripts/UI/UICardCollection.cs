@@ -13,7 +13,7 @@ namespace Ieedo
 
         public Action<UICard> OnCardClicked;
 
-        private List<GameObject> HeldSlots = new List<GameObject>();
+        public List<GameObject> HeldSlots = new List<GameObject>();
         public List<UICard> HeldCards = new List<UICard>();
 
         public void AssignList(List<CardData> cardsList)

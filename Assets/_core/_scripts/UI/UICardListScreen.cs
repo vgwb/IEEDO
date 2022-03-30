@@ -86,7 +86,13 @@ namespace Ieedo
                 CloseFrontView();
 
                 CardsList.AddCard(cardUI.Data, cardUI);
-                //CardsList.AnimateEntrance(CurrentListViewMode);
+
+                if (CurrentListViewMode == ListViewMode.ToDo)
+                {
+                    var cardIndex = CardsList.HeldCards.IndexOf(cardUI);
+                    var slot = CardsList.HeldSlots[cardIndex];
+                    slot.transform.localEulerAngles = new Vector3(0, 0f, -5f);
+                }
                 // TODO: Re-Sort only if it was edited, and then animate to the new sort order
                 //CardsList.SortList(SortByExpirationDate);
                 cardUI.RefreshUI();

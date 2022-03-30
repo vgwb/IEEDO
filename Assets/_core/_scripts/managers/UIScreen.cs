@@ -29,6 +29,12 @@ namespace Ieedo
             gameObject.SetActive(false);
         }
 
+        public void Open()
+        {
+            gameObject.SetActive(true);
+            StartCoroutine(OpenCO());
+        }
+
         public void Close()
         {
             StartCoroutine(CloseCO());
