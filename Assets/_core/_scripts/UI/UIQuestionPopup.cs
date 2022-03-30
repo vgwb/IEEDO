@@ -22,10 +22,8 @@ namespace Ieedo
         public IEnumerator ShowQuestion(AssessmentQuestionDefinition question)
         {
             var category = Statics.Data.Get<CategoryDefinition>((int)question.Category);
-            TitleBG.color = category.Color;
-            QuestionBG.color = category.Color.SetValue(0.5f).SetSaturation(0.5f);
             var answers = question.Answers.Select(x => x.Answer.Key).ToArray();
-            yield return ShowQuestion(category.Title.Key, question.Question.Key, answers);
+            yield return ShowQuestion(category.Title.Key, question.Question.Key, answers, category.Color);
         }
 
         public IEnumerator ShowQuestionFlow(string title, string question, string[] answers, Ref<int> selectedAnswer)
@@ -49,8 +47,20 @@ namespace Ieedo
             yield return ShowQuestion(LocString.FromStr(title), LocString.FromStr(question), answerKeys);
         }
 
-        public IEnumerator ShowQuestion(LocalizedString title, LocalizedString question, LocalizedString[] answers)
+        public IEnumerator ShowQuestion(LocalizedString title, LocalizedString question, LocalizedString[] answers, Color col = default)
         {
+            if (col == default)
+            {
+                TitleBG.color = Color.gray;;
+                QuestionBG.color = new Color(0.35f, 0.35f, 0.35f, 1f);
+            }
+            else
+            {
+                TitleBG.color = col;
+                QuestionBG.color = col.SetSaturation(0.5f).SetValue(0.5f);
+            }
+
+
             Title.Key = title;
             Question.Key = question;
             for (var i = 0; i < answers.Length; i++)
