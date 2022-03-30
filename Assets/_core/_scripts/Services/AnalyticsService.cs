@@ -40,13 +40,14 @@ namespace Ieedo
             Debug.Log("Analytics TestEvent");
         }
 
-        public void Activity(string result)
+        public void Activity(string activityCode, string result)
         {
             if (!AnalyticsEnabled)
                 return;
 
             var parameters = new Dictionary<string, object>()
             {
+                { "myActivity", activityCode },
                 { "myActivityResult", result },
             };
 
