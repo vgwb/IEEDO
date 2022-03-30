@@ -29,11 +29,13 @@ namespace Ieedo
         public GameObject ViewMode;
         public UIButton CompleteCardButton;
         public UIButton EditCardButton;
+        public Action OnCompletedCard;
 
         [Header("Card Review")]
         public GameObject CompletedMode;
         public UIButton ValidateCardButton;
         public UIButton UnCompleteCardButton;
+        public Action OnValidateCard;
 
         [Header("Card Validated")]
         public GameObject ValidatedMode;
@@ -155,6 +157,7 @@ namespace Ieedo
 
             Statics.Score.AddScore(20);
             Statics.Analytics.Card("complete");
+            OnCompletedCard?.Invoke();
         }
 
         private IEnumerator AnimateCardOut(UICard uiCard, int direction)
@@ -212,6 +215,7 @@ namespace Ieedo
 
             Statics.Score.AddScore(50);
             Statics.Analytics.Card("validate");
+            OnValidateCard?.Invoke();
         }
 
         private IEnumerator UnValidateCardCO(UICard uiCard)
