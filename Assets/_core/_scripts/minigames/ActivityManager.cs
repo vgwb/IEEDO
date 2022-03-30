@@ -17,7 +17,8 @@ namespace Ieedo.games
 
         protected bool Inited = false;
 
-        public void CloseActivity(ActivityResult result = null)    // TODO: remove this result, not needed anymore
+        // TODO: remove this result, not needed anymore
+        public void CloseActivity(ActivityResult result = null)
         {
             OnActivityEnd?.Invoke();
         }

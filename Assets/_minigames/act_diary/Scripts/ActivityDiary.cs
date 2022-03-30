@@ -8,7 +8,8 @@ namespace Ieedo.games.diary
     {
         protected override void SetupActivity(int currentLevel)
         {
-            Debug.Log($"Starting game at level {currentLevel}");
+            Debug.Log($"Starting ActivityDiary");
+
         }
 
         public void OnBtnWin()
