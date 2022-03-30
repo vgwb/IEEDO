@@ -103,7 +103,7 @@ namespace Ieedo
                         pillarsData.Pillars.Add(pillarData);
 
                     }
-                    PillarsManager.SetFocus(false, PillarsManager.PillarViews[0]);
+                    PillarsManager.SetFocus(false);
                     break;
             }
 

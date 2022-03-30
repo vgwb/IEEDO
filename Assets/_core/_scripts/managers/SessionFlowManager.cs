@@ -37,16 +37,17 @@ namespace Ieedo
             {
                 yield return Statics.Screens.ShowDialog("UI/session_hint_review","UI/ok");
 
-                uiPillarsScreen.HandleSelectPillar(uiPillarsScreen.PillarsManager.PillarViews[UICardListScreen.VALIDATED_CARDS_PILLAR_INDEX], UICardListScreen.VALIDATED_CARDS_PILLAR_INDEX);
+                uiPillarsScreen.HandleSelectPillar(uiPillarsScreen.PillarsManager.PillarViews[UICardListScreen.COMPLETED_CARDS_PILLAR_INDEX], UICardListScreen.COMPLETED_CARDS_PILLAR_INDEX);
                 yield return new WaitForSeconds(0.5f);
 
                 do
                 {
                     uiCardListScreen.OpenFrontView(uiCardListScreen.CardsList.HeldCards[0], UICardListScreen.FrontViewMode.Completed);
-                    while (uiCardListScreen.CurrentFrontViewMode != UICardListScreen.FrontViewMode.None);
+                    while (uiCardListScreen.CurrentFrontViewMode != UICardListScreen.FrontViewMode.None)
                     {
                         yield return null;
                     }
+                    yield return null;
                 }
                 while (Statics.Data.Profile.Cards.HasCardsWithStatus(CardValidationStatus.Completed));
             }
@@ -54,6 +55,7 @@ namespace Ieedo
 
             // Creation flow
             Statics.Screens.GoToTodoList();
+            yield return new WaitForSeconds(0.5f);
             yield return Statics.Screens.ShowDialog("UI/session_hint_create_card","UI/ok");
 
             IsInSessionFlow = false;
