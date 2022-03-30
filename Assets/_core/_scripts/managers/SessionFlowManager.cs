@@ -7,16 +7,64 @@ using UnityEngine.UI;
 
 namespace Ieedo
 {
-    public class AssessmentFlowManager : MonoBehaviour
+    public class SessionFlowManager : MonoBehaviour
     {
         public Image BlockerBG;
 
-        public void StartAssessment()
+        public bool IsInSessionFlow = false;
+
+        public IEnumerator SessionFlowCO()
         {
-            StartCoroutine(AssessmentCO());
+            var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
+            var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
+
+            IsInSessionFlow = true;
+            Statics.Screens.GoTo(ScreenID.Pillars);
+
+            // Assessment flow
+            var answer = new Ref<int>();
+            yield return Statics.Screens.ShowQuestionFlow("UI/session_question_assessment_title", "UI/session_question_assessment_content", new[] { "UI/yes", "UI/no" }, answer);
+            if (answer.Value == 0)
+            {
+                yield return AssessmentFlowCO();
+            }
+
+            // Review flow
+            uiPillarsScreen.SwitchViewMode(PillarsViewMode.Review);
+            yield return new WaitForSeconds(0.5f);
+            bool hasCardsToValidate = Statics.Data.Profile.Cards.HasCardsWithStatus(CardValidationStatus.Completed);
+            if (hasCardsToValidate)
+            {
+                yield return Statics.Screens.ShowDialog("UI/session_hint_review","UI/ok");
+
+                uiPillarsScreen.HandleSelectPillar(uiPillarsScreen.PillarsManager.PillarViews[UICardListScreen.VALIDATED_CARDS_PILLAR_INDEX], UICardListScreen.VALIDATED_CARDS_PILLAR_INDEX);
+                yield return new WaitForSeconds(0.5f);
+
+                do
+                {
+                    uiCardListScreen.OpenFrontView(uiCardListScreen.CardsList.HeldCards[0], UICardListScreen.FrontViewMode.Completed);
+                    while (uiCardListScreen.CurrentFrontViewMode != UICardListScreen.FrontViewMode.None);
+                    {
+                        yield return null;
+                    }
+                }
+                while (Statics.Data.Profile.Cards.HasCardsWithStatus(CardValidationStatus.Completed));
+            }
+            yield return Statics.Screens.ShowDialog("UI/session_hint_review_empty","UI/ok");
+
+            // Creation flow
+            Statics.Screens.GoToTodoList();
+            yield return Statics.Screens.ShowDialog("UI/session_hint_create_card","UI/ok");
+
+            IsInSessionFlow = false;
         }
 
-        public IEnumerator AssessmentCO()
+        public void StartAssessment()
+        {
+            StartCoroutine(AssessmentFlowCO());
+        }
+
+        public IEnumerator AssessmentFlowCO()
         {
             var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
             var assessmentRecapScreen = Statics.Screens.Get(ScreenID.AssessmentRecap) as UIAssessmentRecapPopup;
