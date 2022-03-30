@@ -196,7 +196,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093248
-    m_Localized: You should be with your Coach, let's switch to Session Mode.
+    m_Localized: You should be with your Coach, let's switch to Session Mode
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093249
@@ -213,7 +213,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093252
-    m_Localized: Let's review together all the card you completed...
+    m_Localized: Let's review together all the card you completed
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093253
@@ -221,7 +221,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093254
-    m_Localized: Let's create cards about the things you will do in the coming days...
+    m_Localized: Let's create cards about the things you will do in the coming days
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093255
@@ -246,6 +246,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 50660762391093260
     m_Localized: Are you sure you want to quit the creation of this card?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50788328801296384
+    m_Localized: Previous
     m_Metadata:
       m_Items: []
   references:

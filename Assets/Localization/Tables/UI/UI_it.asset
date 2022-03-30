@@ -56,7 +56,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40474458029056000
-    m_Localized: '{Currentscore}'
+    m_Localized: '{CurrentScore}'
     m_Metadata:
       m_Items:
       - rid: 3992833648747610129
@@ -200,7 +200,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 50660762391093248
     m_Localized: "Dovresti essere con il tuo allenatore, passiamo alla modalit\xE0
-      di sessione."
+      di sessione"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093249
@@ -217,7 +217,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093252
-    m_Localized: Rivediamo insieme tutta la carta che hai completato ...
+    m_Localized: Rivediamo insieme tutta la carta che hai completato
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093253
@@ -225,7 +225,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093254
-    m_Localized: Creiamo carte sulle cose che farai nei prossimi giorni ...
+    m_Localized: Creiamo carte sulle cose che farai nei prossimi giorni
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093255
@@ -250,6 +250,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 50660762391093260
     m_Localized: Sei sicuro di voler lasciare la creazione di questa carta?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50788328801296384
+    m_Localized: Precedente
     m_Metadata:
       m_Items: []
   references:
