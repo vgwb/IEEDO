@@ -4,6 +4,7 @@ using UnityEngine.Localization;
 
 namespace Ieedo
 {
+    // @deprecated: this is now DEPRECATED as we use an in-game score panel
     public class UIActivityResultScreen : UIScreen
     {
         public override ScreenID ID => ScreenID.ActivityResult;
