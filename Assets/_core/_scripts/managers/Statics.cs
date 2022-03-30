@@ -12,6 +12,6 @@ namespace Ieedo
         private static ModeManager mode; public static ModeManager Mode => mode ??= FindObjectOfType<ModeManager>();
         private static AssessmentFlowManager assessmentFlow; public static AssessmentFlowManager AssessmentFlow => assessmentFlow ??= FindObjectOfType<AssessmentFlowManager>();
         private static ActivityFlowManager activityFlow; public static ActivityFlowManager ActivityFlow => activityFlow ??= FindObjectOfType<ActivityFlowManager>();
-
+        private static AnalyticsService analytics; public static AnalyticsService Analytics => analytics ??= FindObjectOfType<AnalyticsService>();
     }
 }
