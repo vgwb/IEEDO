@@ -25,6 +25,7 @@ namespace Ieedo
         {
             Statics.Data.Profile.Cards.Add(cardData);
             Statics.Data.SaveProfile();
+            Statics.Analytics.Card(cardData.Status.ToString());
         }
 
         /// <summary>
@@ -54,8 +55,10 @@ namespace Ieedo
 
         public CardDefinition GenerateCardDefinition(CardDefinition def, bool isDefaultCard = false)
         {
-            if (Statics.Data.CardDefinitions.Count == 0) def.UID = 1;
-            else def.UID = Statics.Data.CardDefinitions.Max(x => x.UID) + 1;
+            if (Statics.Data.CardDefinitions.Count == 0)
+                def.UID = 1;
+            else
+                def.UID = Statics.Data.CardDefinitions.Max(x => x.UID) + 1;
             Statics.Data.AddCardDefinition(def, isDefaultCard);
             return def;
         }
@@ -79,12 +82,13 @@ namespace Ieedo
                 var category = (CategoryID)UnityEngine.Random.Range(1, Enum.GetValues(typeof(CategoryID)).Length);
                 var subcategory = (SubCategoryID)((int)category * 100 + UnityEngine.Random.Range(0, 3));
                 var cardDef = Statics.Cards.GenerateCardDefinition(
-                    new CardDefinition {
+                    new CardDefinition
+                    {
                         Category = category,
                         SubCategory = subcategory,
-                        Description = new LocString { DefaultText = "Card Description"},
-                        Difficulty = UnityEngine.Random.Range(1,4),
-                        Title = new LocString { DefaultText = "Card Title"},
+                        Description = new LocString { DefaultText = "Card Description" },
+                        Difficulty = UnityEngine.Random.Range(1, 4),
+                        Title = new LocString { DefaultText = "Card Title" },
                     },
                     isDefaultCard: AppManager.I.ApplicationConfig.SaveCardsAsDefault
                 );
@@ -94,7 +98,7 @@ namespace Ieedo
                 {
                     DefID = cardDef.UID,
                     CreationTimestamp = new Timestamp(DateTime.Now),
-                    ExpirationTimestamp = new Timestamp(DateTime.Now + TimeSpan.FromDays(UnityEngine.Random.Range(0,12))),
+                    ExpirationTimestamp = new Timestamp(DateTime.Now + TimeSpan.FromDays(UnityEngine.Random.Range(0, 12))),
                     Status = CardValidationStatus.Todo,
                 };
                 Statics.Data.Profile.Cards.Add(cardData);

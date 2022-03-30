@@ -18,3 +18,5 @@ MonoBehaviour:
   SaveCardsAsDefault: 0
   SourceLocale: en
   TargetLocale: ar
+  AnalyticsEnabled: 1
+  AnalyticsDevEnvironment: 1

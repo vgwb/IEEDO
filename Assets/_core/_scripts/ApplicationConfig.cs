@@ -49,5 +49,8 @@ namespace Ieedo
 
         public string SourceLocale;
         public string TargetLocale;
+
+        public bool AnalyticsEnabled;
+        public bool AnalyticsDevEnvironment;
     }
 }

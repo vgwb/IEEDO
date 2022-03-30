@@ -109,6 +109,7 @@ namespace Ieedo
             }
 
             Statics.Score.AddScore(result.Score);
+            Statics.Analytics.Activity(result.Result.ToString());
         }
 
         public int CurrentLevel
