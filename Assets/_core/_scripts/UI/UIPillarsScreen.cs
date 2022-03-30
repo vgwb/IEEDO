@@ -46,6 +46,9 @@ namespace Ieedo
 
         public void SwitchViewMode(PillarsViewMode newMode)
         {
+            var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
+            if (uiCardListScreen.IsOpen) uiCardListScreen.Close();
+
             ViewMode = newMode;
             StartCoroutine(OnOpen());
         }
@@ -126,8 +129,8 @@ namespace Ieedo
         private PillarsViewMode prevViewMode = PillarsViewMode.NONE;
         protected override IEnumerator OnOpen()
         {
-            Statics.Screens.OnSwitchToScreen -= this.OnSwitchToScreen;
-            Statics.Screens.OnSwitchToScreen += this.OnSwitchToScreen;
+            Statics.Screens.OnSwitchToScreen -= OnSwitchToScreen;
+            Statics.Screens.OnSwitchToScreen += OnSwitchToScreen;
 
             RefreshData();
 
