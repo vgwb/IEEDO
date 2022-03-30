@@ -9,7 +9,7 @@ namespace Ieedo
 {
     public class AnalyticsService : MonoBehaviour
     {
-        private bool AnalyticsEnabled => Statics.App.ApplicationConfig.AnalyticsDevEnvironment;
+        private bool AnalyticsEnabled => Statics.App.ApplicationConfig.AnalyticsEnabled;
 
         async void Awake()
         {
@@ -23,6 +23,7 @@ namespace Ieedo
                 options.SetEnvironmentName("dev");
             }
             await UnityServices.InitializeAsync();
+            // Debug.Log("Analytics Enabled");
         }
 
         public void TestEvent()
@@ -53,6 +54,8 @@ namespace Ieedo
             Events.CustomData("myActivity", parameters);
             if (Statics.App.ApplicationConfig.AnalyticsDevEnvironment)
                 Events.Flush();
+
+            // Debug.Log("Analytics myActivity");
         }
 
         public void Card(string action)
