@@ -29,11 +29,9 @@ namespace Ieedo
                 CloseImmediate();
             });
 
-            //btnSwitchSessionMode = AddButton("action_switch_session_mode", () => SwitchMode());
-
             btnStartAssessment = AddButton("action_start_assessment", () =>
             {
-                Statics.AssessmentFlow.StartAssessment();
+                Statics.SessionFlow.StartAssessment();
                 CloseImmediate();
             });
 

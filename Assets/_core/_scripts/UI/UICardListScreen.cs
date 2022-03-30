@@ -321,9 +321,9 @@ namespace Ieedo
         }
 
         public ListViewMode CurrentListViewMode;
-        private FrontViewMode CurrentFrontViewMode;
+        public FrontViewMode CurrentFrontViewMode;
 
-        private void OpenFrontView(UICard uiCard, FrontViewMode viewMode)
+        public void OpenFrontView(UICard uiCard, FrontViewMode viewMode)
         {
             if (CurrentFrontViewMode != FrontViewMode.None) return;
             FrontObscurer.colorTransition(new Color(FrontObscurer.color.r, FrontObscurer.color.g, FrontObscurer.color.b, 0.5f), 0.25f);

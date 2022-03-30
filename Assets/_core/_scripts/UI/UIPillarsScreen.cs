@@ -126,7 +126,7 @@ namespace Ieedo
         #region Interaction
 
         private bool isFocused;
-        private void HandleSelectPillar(PillarView pillarView, int iPillar)
+        public void HandleSelectPillar(PillarView pillarView, int iPillar)
         {
             if (PillarsManager.CurrentFocusedPillar == pillarView) return;
             AnimateToFocused();
