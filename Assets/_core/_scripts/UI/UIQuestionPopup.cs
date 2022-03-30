@@ -28,11 +28,25 @@ namespace Ieedo
             yield return ShowQuestion(category.Title.Key, question.Question.Key, answers);
         }
 
+        public IEnumerator ShowQuestionFlow(string title, string question, string[] answers, Ref<int> selectedAnswer)
+        {
+            yield return ShowQuestion(title, question, answers);
+            while (IsOpen) yield return null;
+            selectedAnswer.Value = LatestSelectedOption;
+        }
+
         public IEnumerator ShowQuestionFlow(LocalizedString title, LocalizedString question, LocalizedString[] answers, Ref<int> selectedAnswer)
         {
             yield return ShowQuestion(title, question, answers);
             while (IsOpen) yield return null;
             selectedAnswer.Value = LatestSelectedOption;
+        }
+
+        public IEnumerator ShowQuestion(string title, string question, string[] answers)
+        {
+            var answerKeys = new LocalizedString[answers.Length];
+            for (int i = 0; i < answers.Length; i++) answerKeys[i] = LocString.FromStr(answers[i]);
+            yield return ShowQuestion(LocString.FromStr(title), LocString.FromStr(question), answerKeys);
         }
 
         public IEnumerator ShowQuestion(LocalizedString title, LocalizedString question, LocalizedString[] answers)
