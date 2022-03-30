@@ -12,7 +12,6 @@ namespace Ieedo
 
         private UIButton btnAbort;
         private UIButton btnSwitchSessionMode;
-        private UIButton btnStartAssessment;
         private UIButton btnGenerateTestPillars;
         private UIButton btnGenerateTestCards;
         private UIButton btnTestIncreaseScore;
@@ -26,12 +25,6 @@ namespace Ieedo
             btnAbort = AddButton("action_abort_activity", () =>
             {
                 AbortActivity();
-                CloseImmediate();
-            });
-
-            btnStartAssessment = AddButton("action_start_assessment", () =>
-            {
-                Statics.SessionFlow.StartAssessment();
                 CloseImmediate();
             });
 
@@ -77,7 +70,6 @@ namespace Ieedo
             btnGenerateTestCards.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
             btnGenerateTestPillars.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
             btnTestIncreaseScore.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
-            btnStartAssessment.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
             btnResetProfile.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
             yield break;
         }
