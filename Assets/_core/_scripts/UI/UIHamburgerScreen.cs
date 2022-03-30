@@ -64,6 +64,7 @@ namespace Ieedo
                     Name = "TEST",
                     Country = "en",
                     Language = Language.English,
+                    IsNewProfile = true
                 });
                 CloseImmediate();
             });
