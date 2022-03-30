@@ -7,7 +7,7 @@ namespace Ieedo
     {
         public GameObject cardPrefab;
 
-        public UICard AddCardUI(CardData cardData, Transform parentTr)
+        public UICard CreateCardUI(CardData cardData, Transform parentTr)
         {
             var cardGo = GameObject.Instantiate(cardPrefab, parentTr, false);
             cardGo.transform.localScale = Vector3.one;

@@ -36,14 +36,11 @@ namespace Ieedo
             var newSlotRT = Instantiate(SlotPrefab, SlotPrefab.parent);
             newSlotRT.name = $"Slot{HeldSlots.Count}";
             newSlotRT.gameObject.SetActive(true);
-            newSlotRT.transform.localScale = Vector3.one * CardScale;
-
-            if (uiCard == null) uiCard = UICardManager.I.AddCardUI(cardData, newSlotRT);
+            newSlotRT.localScale = Vector3.one * CardScale;
+            if (uiCard == null) uiCard = UICardManager.I.CreateCardUI(cardData, newSlotRT);
             else uiCard.transform.SetParent(newSlotRT, true);
 
-            var uiCardRt = uiCard.transform as RectTransform;
-            uiCardRt.localEulerAngles = Vector3.zero;
-            uiCardRt.anchoredPosition = Vector3.zero;
+            uiCard.AnimateToParent();
 
             SetupInListInteraction(uiCard);
             HeldSlots.Add(newSlotRT.gameObject);

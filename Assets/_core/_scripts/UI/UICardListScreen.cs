@@ -6,6 +6,7 @@ using Lean.Transition;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Localization;
+using UnityEngine.UI;
 
 namespace Ieedo
 {
@@ -63,7 +64,7 @@ namespace Ieedo
             SetupButton(UnValidateCardButton, () => StartCoroutine(UnValidateCardCO(frontCardUI)));
             SetupButton(UnCompleteCardButton, () => StartCoroutine(UnCompleteCardCO(frontCardUI)));
             SetupButton(EditCardButton, () => SwitchToFrontViewMode(FrontViewMode.Edit));
-            SetupButton(CreateCardButton, () => StartCoroutine(CardCreationFlowCO()));
+            SetupButton(CreateCardButton, () => StartCoroutine(CreateCardFlowCO()));
             SetupButton(CreationAbortButton, () => StartCoroutine(CreationAbortCO()));
 
             CardsList.OnCardClicked = uiCard =>
@@ -84,9 +85,9 @@ namespace Ieedo
                 StopEditing();
                 CloseFrontView();
 
-                // TODO: if (isNewCard)
-                    CardsList.AddCard(cardUI.Data, cardUI);
-                // TODO: Re-Sort only if it was edited?
+                CardsList.AddCard(cardUI.Data, cardUI);
+                //CardsList.AnimateEntrance(CurrentListViewMode);
+                // TODO: Re-Sort only if it was edited, and then animate to the new sort order
                 //CardsList.SortList(SortByExpirationDate);
                 cardUI.RefreshUI();
             });
@@ -264,6 +265,7 @@ namespace Ieedo
 
             // Setup for this view
             var rt = CardsList.GetComponent<RectTransform>();
+            var layout = CardsList.GetComponentInChildren<VerticalLayoutGroup>(true);
             switch (CurrentListViewMode)
             {
                 case ListViewMode.ToDo:
@@ -274,6 +276,7 @@ namespace Ieedo
                     rt.anchorMax = new Vector2(0, 1);
                     rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 400);
                     rt.localPosition = new Vector3(-220,0,0);
+                    layout.padding.bottom = 300;
                     break;
                 case ListViewMode.Pillars:
                     CreateCardButton.gameObject.SetActive(false);
@@ -283,6 +286,7 @@ namespace Ieedo
                     rt.anchorMax = new Vector2(1, 1);
                     rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 400);
                     CardsList.transform.localPosition = new Vector3(153.734985f, 0, 0);
+                    layout.padding.bottom = 600;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -450,12 +454,12 @@ namespace Ieedo
             yield return Statics.Screens.ShowQuestionFlow("UI/abort_creation_title", "UI/abort_creation_question", new[] { "UI/yes", "UI/no" }, answer);
             if (answer.Value == 0)
             {
-                StopCoroutine(CardCreationFlowCO());
+                StopCoroutine(CreateCardFlowCO());
                 yield return DeleteCardCO(false, frontCardUI);
             }
         }
 
-        public IEnumerator CardCreationFlowCO()
+        public IEnumerator CreateCardFlowCO()
         {
             CreationAbortButton.gameObject.SetActive(true);
 
@@ -478,7 +482,7 @@ namespace Ieedo
                 CreationTimestamp = new Timestamp(DateTime.Now),
                 ExpirationTimestamp = Timestamp.None
             };
-            var cardUi = UICardManager.I.AddCardUI(cardData, FrontViewPivot);
+            var cardUi = UICardManager.I.CreateCardUI(cardData, FrontViewPivot);
             cardUi.transform.localPosition = new Vector3(0, 1000, 0);
             OpenFrontView(cardUi, FrontViewMode.Create);
             cardUi.AnimateToParent();
