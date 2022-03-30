@@ -10,24 +10,17 @@ namespace minigame.unblock
         public int nLink = 0; //check in game.When nlink = 0.All the lines linked,so win.
         public int levelPassed = 0;//how much level you passed
         public int cLevel = 0;//currect level
-        public int bestScore = 0;//bestscore for level
-        public static bool isTrial;//not used
-        public static string lastWindow = "";//not used
-
         public int currentScene = 0;
-
-        public static int[] totalLevel = { 50, 50, 50, 50, 50 };//total levels,currently,we make things easier,only use 50 levels the same for each difficulty
-        public List<List<int>> levelStates;
-        public static int difficulty = 0;//easy,medium,avanced,hard,expert
+        public static int totalLevel = 252;
+        public List<int> levelStates;
         public int mode = 0;
 
-        public bool isTesting = false;
         public JSONNode testData;//for testGame level data;
 
         public List<int> levelPass;
 
         public static GameData instance;
-        public static GameData getInstance()
+        public static GameData I()
         {
             if (instance == null)
             {
@@ -43,26 +36,19 @@ namespace minigame.unblock
         public List<int> lvStar = new List<int>();//level stars you got for each level
         public bool isfail = false;//whether the game failed
 
-        /// <summary>
-        /// Always uses for initial or reset to start a new level.
-        /// </summary>
         public void resetData()
         {
             isLock = false;
             isWin = false;
             isfail = false;
             isOver = false;
-            //		levelPassed = PlayerPrefs.GetInt ("levelPass", 0);
-            //		Debug.Log ("levelpassed=" + levelPassed);
 
             tickStartTime = PlayerPrefs.GetString("tipStart", "0");
 
-            //cLevel = 14;//test,set a level number if you want to test directly
-            string tData = ScriptableObject.CreateInstance<Datas>().getData("unblock")[cLevel];
+            string tData = CreateInstance<Datas>().getData("unblock")[cLevel];
 
             levelData = JSONArray.Parse(tData);
             levelInfo = levelData["s"];
-
 
             //get gridSize first;
             gridSizeX = levelData["w"];

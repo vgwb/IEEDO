@@ -22,7 +22,7 @@ namespace minigame.unblock
         }
 
         public static GameManager instance;
-        public static GameManager getInstance()
+        public static GameManager I()
         {
             if (instance == null)
             {
@@ -31,42 +31,12 @@ namespace minigame.unblock
             return instance;
         }
 
-
         public void init()
         {
             if (inited)
                 return;
 
-            int allScore = 0;
-
-            GameData.getInstance().levelStates = new List<List<int>>();
-            for (int i = 0; i < GameData.totalLevel.Length; i++)
-            {
-                GameData.instance.levelStates.Add(new List<int>());
-                for (int j = 0; j < GameData.totalLevel[i]; j++)
-                {
-
-                    int tState = PlayerPrefs.GetInt("blockout_" + i + "_" + j, 0);
-                    GameData.instance.levelStates[i].Add(tState);
-                    GameData.getInstance().levelStates[i][j] = tState;
-
-                    if (tState == 1)
-                    {
-                        allScore++;
-                    }
-                }
-            }
-
-            GameData.instance.levelPass = new List<int>();
-            for (int i = 0; i < GameData.totalLevel.Length; i++)
-            {
-                int tDiffLevelPassed = PlayerPrefs.GetInt("levelPassed" + i);
-                GameData.instance.levelPass.Add(tDiffLevelPassed);
-            }
-            GameData.instance.bestScore = allScore;
-            GameData.getInstance().bestScore = allScore;
             inited = true;
         }
-
     }
 }

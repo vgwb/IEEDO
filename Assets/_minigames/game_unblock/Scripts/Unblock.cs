@@ -12,7 +12,7 @@ namespace minigame.unblock
 
         void Start()
         {
-            GameManager.getInstance().init();
+            GameManager.I().init();
         }
 
         public void init()
@@ -31,14 +31,12 @@ namespace minigame.unblock
         GameObject blockframe;
         IEnumerator initGame()
         {
-            Debug.Log("initGame Unblock");
+            //Debug.Log("initGame Unblock");
             yield return new WaitForEndOfFrame();
             string[] tData = ScriptableObject.CreateInstance<Datas>().getData("unblock");
-
             var gridContainerOri = GameObject.Find("gridContainerori");
             gridContainer = Instantiate(gridContainerOri, gridContainerOri.transform.parent);
             gridContainer.name = "gridContainer";
-
             blockframe = GameObject.Find("board");
             var corner4 = new Vector3[4];
             float tw, th;
@@ -47,7 +45,6 @@ namespace minigame.unblock
 
             if (blockframe != null)
             {
-
                 blockframe.GetComponent<Image>().rectTransform.GetLocalCorners(corner4);
                 tw = (corner4[2] - corner4[0]).x;
                 th = (corner4[2] - corner4[0]).y;
@@ -59,14 +56,14 @@ namespace minigame.unblock
                 th = blockframe.GetComponent<SpriteRenderer>().sprite.bounds.size.y;
             }
 
-            UnblockData.getInstance().frameW = tw;
-            UnblockData.getInstance().frameH = th;
+            UnblockData.I().frameW = tw;
+            UnblockData.I().frameH = th;
             int tlevel = GameData.instance.cLevel;//20;// UnityEngine.Random.Range(0, 500);
 
             levelData = JSONArray.Parse(tData[tlevel]);
 
             LevelEntity le = getPuzzle(tlevel);//get level no;0 =level1 1=level2..
-            UnblockData.getInstance().resetBlocks();
+            UnblockData.I().resetBlocks();
 
             float zoomscale = 1;
             for (int i = 0; i < le.pieces.Count; i++)
@@ -105,46 +102,32 @@ namespace minigame.unblock
                 UnblockData.Instance.setBlockState(type, tpx, tpy, 1);
 
                 var tblock = Resources.Load("unblock/sprite/blocks" + type) as GameObject;
-                tblock = Instantiate(tblock, gridContainer.transform) as GameObject;
-
+                tblock = Instantiate(tblock, gridContainer.transform);
                 tblock.name = type.ToString();
                 tblock.AddComponent<BlockOnMouseDrag>();
 
                 float tblockOriWidth = tblock.GetComponent<SpriteRenderer>().sprite.bounds.size.x;
-
                 int _myGridWidth = myGridWidth[type - 1];
-                float tscale = (tblockOriWidth / (UnblockData.Instance.frameW * blockframe.transform.localScale.x / GameData.getInstance().blockSizex * _myGridWidth));
+                float tscale = tblockOriWidth / (UnblockData.Instance.frameW * blockframe.transform.localScale.x / GameData.I().blockSizex * _myGridWidth);
                 tblock.transform.localScale /= tscale;
                 zoomscale = tscale;
                 float tcblockWidth = tblock.GetComponent<SpriteRenderer>().bounds.size.x / _myGridWidth;
                 GameData.instance.tileWidth = tcblockWidth;
-
-                GameData.instance.startPos = -new Vector3(GameData.instance.tileWidth * GameData.getInstance().blockSizex / 2, GameData.instance.tileWidth * GameData.getInstance().blockSizey / 2, 0) + GameData.instance.cameraOffset;
-
-
-                tblock.transform.position = new Vector3(tpx, tpy, 0) * tcblockWidth + GameData.instance.startPos;// - new Vector3(GameData.instance.tileWidth* GameData.getInstance().blockSizex / 2 , GameData.instance.tileWidth * GameData.getInstance().blockSizey/ 2,0);
-                //tblock.transform.localPosition = new Vector3(tblock.transform.localPosition.x, tblock.transform.localPosition.y, 0);
+                GameData.instance.startPos = -new Vector3(GameData.instance.tileWidth * GameData.I().blockSizex / 2, GameData.instance.tileWidth * GameData.I().blockSizey / 2, 0) + GameData.instance.cameraOffset;
+                tblock.transform.position = new Vector3(tpx, tpy, 0) * tcblockWidth + GameData.instance.startPos;
             }
 
-            GameObject texit = Resources.Load("unblock/sprite/exitarea") as GameObject;
-            texit = Instantiate(texit, gridContainer.transform) as GameObject;
+            var texit = Resources.Load("unblock/sprite/exitarea") as GameObject;
+            texit = Instantiate(texit, gridContainer.transform);
             texit.transform.localScale /= zoomscale;
-            texit.transform.position = GameData.instance.exitPos * GameData.instance.tileWidth + GameData.instance.startPos;// - new Vector3(GameData.instance.tileWidth * GameData.getInstance().blockSizex / 2, GameData.instance.tileWidth * GameData.getInstance().blockSizey / 2,0);
+            texit.transform.position = GameData.instance.exitPos * GameData.instance.tileWidth + GameData.instance.startPos;
         }
 
         public LevelEntity getPuzzle(int levelNo)
         {
-            LevelEntity levelEntity = new LevelEntity();
-
-            if (GameData.instance.isTesting)
-            {
-                levelData = GameData.instance.testData;//this is used for somewhere else not in the game.
-
-            }
-
-            GameData.getInstance().blockSizex = levelData["w"];
-            GameData.getInstance().blockSizey = levelData["h"];
-
+            var levelEntity = new LevelEntity();
+            GameData.I().blockSizex = levelData["w"];
+            GameData.I().blockSizey = levelData["h"];
             JSONNode tarr = levelData["b"];
             GameData.instance.exitPos = new Vector2(levelData["e"]["x"], levelData["e"]["y"]);
 
@@ -162,7 +145,6 @@ namespace minigame.unblock
 
         public void clear(bool restart = false)
         {
-            //            Debug.Log("Clear");
             DestroyImmediate(gridContainer);
             if (restart)
             {

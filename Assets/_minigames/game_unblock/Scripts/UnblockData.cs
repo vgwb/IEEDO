@@ -9,23 +9,21 @@ namespace minigame.unblock
         [HideInInspector]
         public float frameW, frameH;
         [HideInInspector]
-        public int[,] blockState;// = { { 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0 } };
+        public int[,] blockState;
 
         public static UnblockData Instance;
-        public static UnblockData getInstance()
+        public static UnblockData I()
         {
             if (Instance == null)
             {
-                Instance = ScriptableObject.CreateInstance<UnblockData>();
-
+                Instance = CreateInstance<UnblockData>();
             }
             return Instance;
         }
 
         public void resetBlocks()
         {
-            //blockState = new int[,] { { 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0, 0 } };
-            blockState = new int[GameData.getInstance().blockSizex, GameData.getInstance().blockSizey];
+            blockState = new int[GameData.I().blockSizex, GameData.I().blockSizey];
         }
 
         /// <summary>
@@ -76,9 +74,7 @@ namespace minigame.unblock
                         if (i > 0)
                         {
                             if (blockState[i - 1, ty] == 1)
-                            {
                                 break;
-                            }
                         }
                         else
                         {
@@ -94,9 +90,7 @@ namespace minigame.unblock
                         if (i > 0)
                         {
                             if (blockState[i - 1, ty] == 1)
-                            {
                                 break;
-                            }
                         }
                         else
                         {
@@ -111,9 +105,7 @@ namespace minigame.unblock
                         if (i > 0)
                         {
                             if (blockState[tx, i - 1] == 1)
-                            {
                                 break;
-                            }
                         }
                         else
                         {
@@ -122,41 +114,30 @@ namespace minigame.unblock
                     }
                     break;
                 case 4:
-
                     for (int i = tx; i >= 0; i--)
                     {
                         place = i;
                         if (i > 0)
                         {
                             if (blockState[i - 1, ty] == 1)
-                            {
-
                                 break;
-                            }
                         }
                     }
-
                     break;
                 case 5:
-
                     for (int i = ty; i >= 0; i--)
                     {
                         place = i;
                         if (i > 0)
                         {
                             if (blockState[tx, i - 1] == 1)
-                            {
-
                                 break;
-                            }
                         }
                     }
-
                     break;
             }
             return place;
         }
-
 
         public int getright(int type, int tx, int ty)
         {
@@ -164,28 +145,21 @@ namespace minigame.unblock
             switch (type)
             {
                 case 1:
-
-
                     for (int i = tx; i <= GameData.instance.blockSizex - 2; i++)
                     {
                         place = i;
                         if (i < GameData.instance.blockSizex - 2)
                         {
                             if (blockState[i + 2, ty] == 1)
-                            {
-
                                 break;
-                            }
                         }
                         else
                         {
                             break;
                         }
                     }
-
                     break;
                 case 2:
-
                     for (int i = tx; i <= GameData.instance.blockSizex - 2; i++)
                     {
                         place = i;
@@ -193,20 +167,15 @@ namespace minigame.unblock
                         if (i < GameData.instance.blockSizex - 2)
                         {
                             if (blockState[i + 2, ty] == 1)
-                            {
-
                                 break;
-                            }
                         }
                         else
                         {
                             break;
                         }
                     }
-
                     break;
                 case 3:
-
                     for (int i = ty; i <= GameData.instance.blockSizey - 2; i++)
                     {
                         place = i;
@@ -214,20 +183,15 @@ namespace minigame.unblock
                         if (i < GameData.instance.blockSizey - 2)
                         {
                             if (blockState[tx, i + 2] == 1)
-                            {
                                 break;
-                            }
                         }
                         else
                         {
                             break;
                         }
-
                     }
-
                     break;
                 case 4:
-
                     for (int i = tx; i <= GameData.instance.blockSizex - 3; i++)
                     {
                         place = i;
@@ -245,7 +209,6 @@ namespace minigame.unblock
                     }
                     break;
                 case 5:
-
                     for (int i = ty; i <= GameData.instance.blockSizey - 3; i++)
                     {
                         place = i;
@@ -261,7 +224,6 @@ namespace minigame.unblock
                             break;
                         }
                     }
-
                     break;
             }
             return place;
