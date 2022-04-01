@@ -17,7 +17,7 @@ namespace Ieedo
                 return;
 
             var options = new InitializationOptions();
-            if (Statics.App.ApplicationConfig.AnalyticsDevEnvironment)
+            if (Statics.App.ApplicationConfig.AnalyticsDevEnv)
             {
                 options.SetEnvironmentName("dev");
             }
@@ -58,7 +58,7 @@ namespace Ieedo
             // Debug.Log("Analytics myActivity");
         }
 
-        public void Card(string action)
+        public void Card(string action, string category = "")
         {
             if (!AnalyticsEnabled)
                 return;
@@ -66,6 +66,7 @@ namespace Ieedo
             var parameters = new Dictionary<string, object>()
             {
                 { "myCardAction", action },
+                { "myCardCategory", category },
             };
 
             Events.CustomData("myCard", parameters);
@@ -73,5 +74,39 @@ namespace Ieedo
             Events.Flush();
 #endif
         }
+
+        public void Score(int score, string action)
+        {
+            if (!AnalyticsEnabled)
+                return;
+
+            var parameters = new Dictionary<string, object>()
+            {
+                { "myScore", score },
+                { "myCardAction", action },
+            };
+
+            Events.CustomData("myScore", parameters);
+#if UNITY_EDITOR
+            Events.Flush();
+#endif
+        }
+
+        public void App(string action)
+        {
+            if (!AnalyticsEnabled)
+                return;
+
+            var parameters = new Dictionary<string, object>()
+            {
+                { "myAction", action },
+            };
+
+            Events.CustomData("myApp", parameters);
+#if UNITY_EDITOR
+            Events.Flush();
+#endif
+        }
+
     }
 }

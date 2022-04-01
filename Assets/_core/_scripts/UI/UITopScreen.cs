@@ -46,12 +46,15 @@ namespace Ieedo
         private void SetTargetLocale()
         {
             var targetLocale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.App.ApplicationConfig.TargetLocale);
-            if (targetLocale != null) LocalizationSettings.SelectedLocale = targetLocale;
+            if (targetLocale != null)
+                LocalizationSettings.SelectedLocale = targetLocale;
+            Statics.Analytics.App("InstantTranslation");
         }
         private void SetSourceLocale()
         {
             var targetLocale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.App.ApplicationConfig.SourceLocale);
-            if (targetLocale != null) LocalizationSettings.SelectedLocale = targetLocale;
+            if (targetLocale != null)
+                LocalizationSettings.SelectedLocale = targetLocale;
         }
 
         public TopBarMode Mode;
