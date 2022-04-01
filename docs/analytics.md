@@ -33,6 +33,16 @@ Parameters:
 CustomEvent: myCard
 ```
 
+these actions are tracked:
+```
+Statics.Analytics.Card("create");
+Statics.Analytics.Card("validate");
+Statics.Analytics.Card("unvalidate");
+Statics.Analytics.Card("complete");
+Statics.Analytics.Card("uncomplete");
+Statics.Analytics.Card("delete");
+```
+
 ### Track App
 Track specific actions/features, like instant translate
 ```
