@@ -180,7 +180,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48151452267077632
-    m_Localized: Generare pilastri casuali.
+    m_Localized: Generare pilastri casuali
     m_Metadata:
       m_Items: []
   - m_Id: 48154400376250368
@@ -254,6 +254,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 50788328801296384
     m_Localized: Precedente
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51375399755522048
+    m_Localized: Esci da questionario
     m_Metadata:
       m_Items: []
   references:
