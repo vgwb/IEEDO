@@ -442,7 +442,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 100}
-  m_SizeDelta: {x: 900, y: 900}
+  m_SizeDelta: {x: 800, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &700324251
 MonoBehaviour:
@@ -563,7 +563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Activity: {fileID: 11400000, guid: 895ed3613206648d8ac53802e2f66bc3, type: 2}
   DebugAutoplay: 0
-  DebugStartLevel: 1
+  DebugStartLevel: 43
   levelText: {fileID: 463863876}
 --- !u!4 &1326222726
 Transform:
@@ -787,7 +787,7 @@ Transform:
   m_GameObject: {fileID: 1525274125}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.005, y: 0.005, z: 0.005}
+  m_LocalScale: {x: 0.0048, y: 0.0048, z: 0.0048}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1442386444}
