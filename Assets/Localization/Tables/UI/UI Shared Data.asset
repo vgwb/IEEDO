@@ -43,6 +43,10 @@ MonoBehaviour:
     m_Key: next
     m_Metadata:
       m_Items: []
+  - m_Id: 50788328801296384
+    m_Key: previous
+    m_Metadata:
+      m_Items: []
   - m_Id: 37308361245450243
     m_Key: exit
     m_Metadata:
@@ -237,6 +241,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 50660762391093260
     m_Key: abort_creation_question
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51375399755522048
+    m_Key: action_skip_assessment
     m_Metadata:
       m_Items: []
   m_Metadata:

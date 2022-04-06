@@ -98,7 +98,8 @@ namespace Ieedo
 
         public void RegisterResult(ActivityResult result)
         {
-            if (Equals(result.Timestamp, Timestamp.None)) result.Timestamp = Timestamp.Now;
+            if (Equals(result.Timestamp, Timestamp.None))
+                result.Timestamp = Timestamp.Now;
 
             // Save the result of this activity and its score
             var activityData = Statics.Data.Profile.ActivitiesData.GetActivityData(CurrentActivity.ID);
@@ -114,7 +115,7 @@ namespace Ieedo
             }
 
             Statics.Score.AddScore(result.Score);
-            Statics.Analytics.Activity(result.Result.ToString());
+            Statics.Analytics.Activity(activityData.ID.ToString(), result.Result.ToString());
         }
 
         public int CurrentLevel

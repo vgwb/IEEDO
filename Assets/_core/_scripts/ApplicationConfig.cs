@@ -41,7 +41,8 @@ namespace Ieedo
         public string SourceLocale;
         public string TargetLocale;
 
+        [Header("Analytics")]
         public bool AnalyticsEnabled;
-        public bool AnalyticsDevEnvironment;
+        public bool AnalyticsDevEnv;
     }
 }
