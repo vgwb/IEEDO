@@ -191,14 +191,17 @@ namespace Ieedo
             frontCardUI.Data.Status = CardValidationStatus.Todo;
             Statics.Data.SaveProfile();
 
-            uiCard.transform.localPositionTransition(new Vector3(-300, 600, -150), 0.5f, LeanEase.Accelerate);
-            uiCard.transform.localEulerAnglesTransform(new Vector3(0, -20, -20), 0.5f, LeanEase.Accelerate);
-            yield return new WaitForSeconds(0.5f);
-            Statics.Analytics.Card("uncomplete", uiCard.Data);
+            yield return AnimateCardOut(uiCard, -1);
             if (uiCard != null)
                 Destroy(uiCard.gameObject);
             CloseFrontView();
+
+            // Remove the card from the current pillar
+            var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
+            uiPillarsScreen.PillarsManager.CurrentFocusedPillar.RemoveSingleCard(uiCard.Data);
+
             Statics.Score.AddScore(-20);
+            Statics.Analytics.Card("uncomplete", uiCard.Data);
         }
 
         private IEnumerator ValidateCardCO(UICard uiCard)
@@ -214,7 +217,7 @@ namespace Ieedo
                 Destroy(uiCard.gameObject);
             CloseFrontView();
 
-            // Just add the new card
+            // Add the new card
             var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
             uiPillarsScreen.PillarsManager.PillarViews[COMPLETED_CARDS_PILLAR_INDEX].RemoveSingleCard(uiCard.Data);
             uiPillarsScreen.PillarsManager.PillarViews[VALIDATED_CARDS_PILLAR_INDEX].AddSingleCard(uiCard.Data);
@@ -248,7 +251,7 @@ namespace Ieedo
                 Destroy(uiCard.gameObject);
             CloseFrontView();
 
-            // Just add the new card
+            // Add the new card
             var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
             uiPillarsScreen.PillarsManager.PillarViews[VALIDATED_CARDS_PILLAR_INDEX].RemoveSingleCard(uiCard.Data);
             uiPillarsScreen.PillarsManager.PillarViews[COMPLETED_CARDS_PILLAR_INDEX].AddSingleCard(uiCard.Data);
@@ -557,7 +560,8 @@ namespace Ieedo
         {
             SetSubEditMode(true);
             var catResult = new Ref<CategoryDefinition>();
-            frontCardUI.transform.localPositionTransition(new Vector3(0, 100, 0), 0.25f);
+            frontCardUI.transform.localPositionTransition(new Vector3(0, -70, 0), 0.25f);
+            frontCardUI.transform.localScaleTransition(Vector3.one * 0.75f, 0.25f);
             var options = new List<OptionData>();
             var categories = Statics.Data.GetAll<CategoryDefinition>();
             foreach (var categoryDef in categories)
