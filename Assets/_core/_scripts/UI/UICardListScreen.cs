@@ -29,15 +29,16 @@ namespace Ieedo
         public GameObject ViewMode;
         public UIButton CompleteCardButton;
         public UIButton EditCardButton;
+        public UIButton UnCompleteCardButton_View;
         public Action OnCompletedCard;
 
-        [Header("Card Review")]
+        [Header("Review: Card Completed")]
         public GameObject CompletedMode;
         public UIButton ValidateCardButton;
-        public UIButton UnCompleteCardButton;
+        public UIButton UnCompleteCardButton_Review;
         public Action OnValidateCard;
 
-        [Header("Card Validated")]
+        [Header("Review: Card Validated")]
         public GameObject ValidatedMode;
         public UIButton UnValidateCardButton;
 
@@ -64,7 +65,8 @@ namespace Ieedo
             SetupButton(ValidateCardButton, () => StartCoroutine(ValidateCardCO(frontCardUI)));
             SetupButton(CompleteCardButton, () => StartCoroutine(CompleteCardCO(frontCardUI)));
             SetupButton(UnValidateCardButton, () => StartCoroutine(UnValidateCardCO(frontCardUI)));
-            SetupButton(UnCompleteCardButton, () => StartCoroutine(UnCompleteCardCO(frontCardUI)));
+            SetupButton(UnCompleteCardButton_View, () => StartCoroutine(UnCompleteCardCO(frontCardUI)));
+            SetupButton(UnCompleteCardButton_Review, () => StartCoroutine(UnCompleteCardCO(frontCardUI)));
             SetupButton(EditCardButton, () => SwitchToFrontViewMode(FrontViewMode.Edit));
             SetupButton(CreateCardButton, () => StartCoroutine(CreateCardFlowCO()));
             SetupButton(CreationAbortButton, () => StartCoroutine(CreationAbortCO()));
@@ -402,8 +404,8 @@ namespace Ieedo
                     CompletedMode.SetActive(false);
                     ValidatedMode.SetActive(false);
 
-                    UnCompleteCardButton.transform.localScale = Vector3.zero;
-                    UnCompleteCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
+                    UnCompleteCardButton_View.transform.localScale = Vector3.zero;
+                    UnCompleteCardButton_View.transform.localScaleTransition(Vector3.one, 0.25f);
                     break;
                 case FrontViewMode.Completed:
                     EditModeCardInteraction.SetActive(false);
@@ -412,10 +414,10 @@ namespace Ieedo
                     CompletedMode.SetActive(true);
                     ValidatedMode.SetActive(false);
 
+                    UnCompleteCardButton_Review.transform.localScale = Vector3.zero;
+                    UnCompleteCardButton_Review.transform.localScaleTransition(Vector3.one, 0.25f);
                     ValidateCardButton.transform.localScale = Vector3.zero;
                     ValidateCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
-                    UnCompleteCardButton.transform.localScale = Vector3.zero;
-                    UnCompleteCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
                     break;
                 case FrontViewMode.Validated:
                     EditModeCardInteraction.SetActive(false);
