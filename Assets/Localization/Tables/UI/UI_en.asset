@@ -191,8 +191,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762365927424
-    m_Localized: "Welcome to the IEEDO App! \nIf you don't understand something on
-      screen, hold the Translation button to read it in Arabic"
+    m_Localized: "Welcome! \nIEEDO goal is to help you to be successful in this country.\n\nIf
+      you don't understand something on screen, hold the Translation button to read
+      it in Arabic"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093248
@@ -204,12 +205,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093250
-    m_Localized: Your situation
+    m_Localized: Coaching Session
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093251
-    m_Localized: Remember, our goal is to help you to be successful in this country.
-      Do you want to answer a few questions about your current situation?
+    m_Localized: "Your Coach is here to help you. \n\nDo you want to answer a few
+      questions about your current situation?"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093252
@@ -217,27 +218,28 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093253
-    m_Localized: You have no card to review
+    m_Localized: You have no cards to review
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093254
-    m_Localized: Let's create cards about the things you will do in the coming days
+    m_Localized: It's now time to plan together the things you will do in the coming
+      days
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093255
-    m_Localized: Start Session Mode
+    m_Localized: Start Session
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093256
-    m_Localized: Are you sure you want to start a Session?
+    m_Localized: Are you sure you want to start a Coaching Session?
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093257
-    m_Localized: 'Leave Session Mode '
+    m_Localized: Leave Session
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093258
-    m_Localized: Are you sure you want to quit the Session?
+    m_Localized: Are you sure you want to quit the Coaching Session?
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093259
