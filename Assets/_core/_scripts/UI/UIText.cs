@@ -30,7 +30,7 @@ namespace Ieedo
                 if (!IgnoreRTL && LocalizationSettings.Instance.GetSelectedLocale().Identifier.Code == "ar")
                 {
                     alignment = RighterizeAlignment(alignment);
-                    text = ArabicFixer.Fix(value);
+                    text = ArabicFixer.Fix(value, false, false);
                 }
                 else
                 {

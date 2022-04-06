@@ -28,7 +28,7 @@ namespace Ieedo
             {
                 if (!IgnoreRTL && LocalizationSettings.Instance.GetSelectedLocale().Identifier.Code == "ar")
                 {
-                    text = ArabicFixer.Fix(value);
+                    text = ArabicFixer.Fix(value, false, false);
                 }
                 else
                 {
