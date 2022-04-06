@@ -28,7 +28,7 @@ namespace Ieedo.games.diary
 
         protected override void SetupActivity(int currentLevel)
         {
-            Debug.Log($"Starting ActivityDiary");
+            //            Debug.Log($"Starting ActivityDiary");
 
             var activityData = Statics.Data.Profile.ActivitiesData.GetActivityData(ActivityID.Diary);
 
@@ -84,7 +84,6 @@ namespace Ieedo.games.diary
 
         public void OnBtnNext()
         {
-            Debug.Log("OnBtnNext " + currentPageNumber);
             if (currentPageNumber < Pages.Count)
             {
                 currentPageNumber++;
@@ -94,7 +93,6 @@ namespace Ieedo.games.diary
 
         public void OnBtnPrev()
         {
-            Debug.Log("OnBtnPrev " + currentPageNumber);
             if (currentPageNumber > 1)
             {
                 currentPageNumber--;
@@ -105,7 +103,7 @@ namespace Ieedo.games.diary
         public void CompleteActivity()
         {
             var todayText = InputText.text;
-            Debug.LogError("Updating page of " + Timestamp.Today.Date + " with text " + todayText);
+            //            Debug.LogError("Updating page of " + Timestamp.Today.Date + " with text " + todayText);
             var activityData = Statics.Data.Profile.ActivitiesData.GetActivityData(ActivityID.Diary);
             var todayResult = activityData.Results.FirstOrDefault(x => x.Timestamp.Equals(Timestamp.Today));
             if (todayResult == null)
