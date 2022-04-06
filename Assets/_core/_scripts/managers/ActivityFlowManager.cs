@@ -96,25 +96,39 @@ namespace Ieedo
             uiTopScreen.SwitchMode(TopBarMode.MainApp);
         }
 
-        public void RegisterResult(ActivityResult result)
+        public void RegisterResult(ActivityResult result, ActivityID activityId = ActivityID.None)
         {
+            if (activityId == ActivityID.None) activityId = CurrentActivity.ID;
+
             if (Equals(result.Timestamp, Timestamp.None))
                 result.Timestamp = Timestamp.Now;
 
             // Save the result of this activity and its score
-            var activityData = Statics.Data.Profile.ActivitiesData.GetActivityData(CurrentActivity.ID);
+            var activityData = Statics.Data.Profile.ActivitiesData.GetActivityData(activityId);
 
-            if (!activityData.Results.Any(x => x.Timestamp.Equals(result.Timestamp)))
+            bool isNewResult = false;
+            var existingResult = activityData.Results.FirstOrDefault(x => x.Timestamp.Equals(result.Timestamp));
+            if (existingResult == null)
             {
                 activityData.Results.Add(result);
+                isNewResult = true;
             }
-
-            if (result.Result == ActivityResultState.Win)
+            else
             {
-                activityData.CurrentLevel += 1;
+                existingResult.Result = result.Result;
+                existingResult.CustomData = result.CustomData;
+                existingResult.Score = result.Score;
             }
 
-            Statics.Score.AddScore(result.Score);
+            if (isNewResult)
+            {
+                if (result.Result == ActivityResultState.Win)
+                {
+                    activityData.CurrentLevel += 1;
+                }
+                Statics.Score.AddScore(result.Score);
+            }
+
             Statics.Analytics.Activity(activityData.ID.ToString(), result.Result.ToString());
         }
 

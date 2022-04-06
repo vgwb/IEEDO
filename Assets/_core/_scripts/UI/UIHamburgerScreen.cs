@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Tables;
@@ -17,6 +18,7 @@ namespace Ieedo
         private UIButton btnGenerateTestCards;
         private UIButton btnTestIncreaseScore;
         private UIButton btnResetProfile;
+        private UIButton btnTestAddDiary;
 
         private bool initialised = false;
         void Init()
@@ -55,7 +57,7 @@ namespace Ieedo
                 Statics.Score.AddScore(100);
             });
 
-            btnResetProfile =  AddButton("action_reset_profile", () =>
+            btnResetProfile = AddButton("action_reset_profile", () =>
             {
                 Statics.Data.CreateNewProfile(new ProfileDescription
                 {
@@ -64,6 +66,22 @@ namespace Ieedo
                     Language = Language.English,
                     IsNewProfile = true
                 });
+                CloseImmediate();
+            });
+
+            btnTestAddDiary = AddUnlocalizedButton("Add Diary Pages", () =>
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    var res = new ActivityResult
+                    {
+                        Result = ActivityResultState.Win,
+                        Score = 10,
+                        Timestamp = new Timestamp(DateTime.Today + TimeSpan.FromDays(-i)),
+                        CustomData = $"Cheat added text for diary. Added with index {i}"
+                    };
+                    Statics.ActivityFlow.RegisterResult(res, ActivityID.Diary);
+                }
                 CloseImmediate();
             });
 
@@ -79,6 +97,7 @@ namespace Ieedo
             btnGenerateTestPillars.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
             btnTestIncreaseScore.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
             btnResetProfile.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
+            btnTestAddDiary.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
             yield break;
         }
 
@@ -94,6 +113,15 @@ namespace Ieedo
             var btn = Instantiate(ButtonPrefab, ButtonPrefab.transform.parent);
             SetupButton(btn, action);
             btn.Key = new LocalizedString("UI",locKey);
+            btn.gameObject.SetActive(true);
+            return btn;
+        }
+
+        private UIButton AddUnlocalizedButton(string text, System.Action action)
+        {
+            var btn = Instantiate(ButtonPrefab, ButtonPrefab.transform.parent);
+            SetupButton(btn, action);
+            btn.Text = text;
             btn.gameObject.SetActive(true);
             return btn;
         }
