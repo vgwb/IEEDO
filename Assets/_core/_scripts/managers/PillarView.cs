@@ -27,6 +27,7 @@ namespace Ieedo
         {
             var selectable = GetComponentInChildren<LeanSelectableByFinger>();
             selectable.OnSelected.AddListener(() => OnSelected?.Invoke());
+            labelColor = labelText.color;
         }
 
         private PillarData data;
@@ -46,19 +47,19 @@ namespace Ieedo
             else valueText.gameObject.SetActive(false);
         }
 
+        private bool isShowingLabel = false;
+        private Color labelColor;
         public void ShowLabel(bool choice)
         {
-            if (choice)
+            if (choice && !isShowingLabel)
             {
-                labelText.gameObject.SetActive(true);
-                labelText.GetComponent<LocalizeStringEvent>().StringReference = data.LocalizedKey;
-                var targetColor = labelText.color;
-                labelText.color = new Color(targetColor.r, targetColor.g, targetColor.b, 0f);
-                labelText.colorTransition(targetColor, 0.5f);
+                isShowingLabel = true;
+                labelText.colorTransition(labelColor, 0.5f);
             }
-            else
+            else if (!choice && isShowingLabel)
             {
-                labelText.gameObject.SetActive(false);
+                isShowingLabel = false;
+                labelText.colorTransition(new Color(labelColor.r, labelColor.g, labelColor.b, 0f), 0.5f);
             }
         }
 
@@ -68,6 +69,8 @@ namespace Ieedo
             if (!added) nCurrentCards = 0;
 
             this.data = data;
+            labelText.GetComponent<LocalizeStringEvent>().StringReference = data.LocalizedKey;
+            labelText.color = new Color(labelColor.r, labelColor.g, labelColor.b, 0f);
             var baseScale = 0.1f;
 
             if (!added)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Lean.Transition;
 using UnityEngine;
 using UnityEngine.Localization;
+using UnityEngine.ProBuilder;
 
 
 namespace Ieedo
@@ -35,7 +36,21 @@ namespace Ieedo
 
         public void Update()
         {
-            if (autoRotating && currentFocusedPillar == null) transform.localEulerAngles += Vector3.up * Time.deltaTime * RotationSpeed;
+            if (autoRotating && currentFocusedPillar == null)
+            {
+                transform.localEulerAngles += Vector3.up * Time.deltaTime * RotationSpeed;
+
+                // Detect the front pillar while rotating
+                int nPillars = 6;
+                var iFrontPillar = (nPillars-1) - (int)((30f+transform.localEulerAngles.y) / (360/nPillars));
+                iFrontPillar -= 2;
+                if (iFrontPillar < 0) iFrontPillar += nPillars;
+                for (int i = 0; i < PillarViews.Count; i++)
+                {
+                    PillarViews[i].ShowLabel(iFrontPillar == i);
+                }
+
+            }
 
             if (!TEST) return;
             ShowData(TestData, true);
@@ -100,9 +115,16 @@ namespace Ieedo
         {
             if (focusOnPillar != null && focusOnPillar == currentFocusedPillar) return;
 
+            foreach (PillarView view in PillarViews)
+            {
+                if (view != focusOnPillar)
+                {
+                    view.ShowLabel(false);
+                }
+            }
+
             if (currentFocusedPillar != null)
             {
-                currentFocusedPillar.ShowLabel(false);
                 currentFocusedPillar.CardsIn();
                 currentFocusedPillar = null;
             }

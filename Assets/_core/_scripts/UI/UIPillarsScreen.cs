@@ -39,6 +39,7 @@ namespace Ieedo
             SetupButton(SwitchViewButton, ToggleViewMode);
         }
 
+
         public void ToggleViewMode()
         {
             SwitchViewMode(ViewMode == PillarsViewMode.Categories ? PillarsViewMode.Review : PillarsViewMode.Categories);
@@ -190,17 +191,17 @@ namespace Ieedo
                     var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
                     if (uiCardListScreen.KeepPillars)
                     {
-                        Camera3D.transform.localRotationTransition(Quaternion.Euler(38f,10f,0f), 0.25f, LeanEase.Decelerate);
+                        Camera3D.transform.localRotationTransition(Quaternion.Euler(41.5f,10f,0f), 0.25f, LeanEase.Decelerate);
                     }
                     else
                     {
                         isFocused = false;
-                        Camera3D.transform.localRotationTransition(Quaternion.Euler(38f,-50f,0f), 0.25f, LeanEase.Decelerate);
+                        Camera3D.transform.localRotationTransition(Quaternion.Euler(41.5f,-50f,0f), 0.25f, LeanEase.Decelerate);
                     }
                     break;
                 case ScreenID.Activities:
                     isFocused = false;
-                    Camera3D.transform.localRotationTransition(Quaternion.Euler(38f,50f,0f), 0.25f, LeanEase.Decelerate);
+                    Camera3D.transform.localRotationTransition(Quaternion.Euler(41.5f,50f,0f), 0.25f, LeanEase.Decelerate);
                     break;
             }
         }
@@ -219,7 +220,7 @@ namespace Ieedo
         {
             isFocused = false;
             Camera3D.transform.localPositionTransition(new Vector3(0,15.1000004f,-13.3999996f), 0.5f);
-            Camera3D.transform.localRotationTransition(new Quaternion(0.32556805f,0,0,0.945518613f), 0.5f);
+            Camera3D.transform.localRotationTransition(new Quaternion(0.354291022f,0,0,0.935135245f), 0.5f);
         }
 
         #endregion
