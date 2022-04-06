@@ -361,6 +361,11 @@ namespace Ieedo
             uiCardRt.SetAsFirstSibling();
             uiCard.AnimateToParent();
 
+            EditModeCardInteraction.transform.SetParent(uiCardRt);
+            EditModeCardInteraction.transform.localScale = Vector3.one;
+            EditModeCardInteraction.transform.localRotation = Quaternion.identity;
+            EditModeCardInteraction.transform.localPosition = Vector3.zero;
+
             FrontView.gameObject.SetActive(true);
             frontCardUI = uiCard;
 
@@ -437,6 +442,7 @@ namespace Ieedo
 
         private void CloseFrontView()
         {
+            EditModeCardInteraction.transform.SetParent(null);
             FrontObscurer.colorTransition(new Color(FrontObscurer.color.r, FrontObscurer.color.g, FrontObscurer.color.b, 0f), 0.25f);
             FrontView.gameObject.SetActive(false);
 
@@ -466,11 +472,11 @@ namespace Ieedo
         public void SetSubEditMode(bool choice)
         {
             CloseFrontViewButton.gameObject.SetActive(!choice);
-            EditSubCategoryButton.gameObject.SetActive(!choice);
-            EditDifficultyButton.gameObject.SetActive(!choice);
-            EditDateButton.gameObject.SetActive(!choice);
-            EditTitleButton.gameObject.SetActive(!choice);
-            EditDescriptionButton.gameObject.SetActive(!choice);
+            EditSubCategoryButton.enabled = !choice;
+            EditDifficultyButton.enabled = !choice;
+            EditDateButton.enabled = !choice;
+            EditTitleButton.enabled = !choice;
+            EditDescriptionButton.enabled = !choice;
         }
 
         public IEnumerator CreationAbortCO()
@@ -546,11 +552,11 @@ namespace Ieedo
             frontCardUI.AnimateToParent();
 
             CreationAbortButton.gameObject.SetActive(false);
-            EditSubCategoryButton.gameObject.SetActive(true);
-            EditDifficultyButton.gameObject.SetActive(true);
-            EditDateButton.gameObject.SetActive(true);
-            EditDescriptionButton.gameObject.SetActive(true);
-            EditTitleButton.gameObject.SetActive(true);
+            EditSubCategoryButton.enabled = true;
+            EditDifficultyButton.enabled = true;
+            EditDateButton.enabled = true;
+            EditDescriptionButton.enabled = true;
+            EditTitleButton.enabled = true;
 
             Statics.Cards.AddCard(cardData);
             Statics.Analytics.Card("create", cardData);
@@ -560,7 +566,7 @@ namespace Ieedo
         {
             SetSubEditMode(true);
             var catResult = new Ref<CategoryDefinition>();
-            frontCardUI.transform.localPositionTransition(new Vector3(0, -70, 0), 0.25f);
+            frontCardUI.transform.localPositionTransition(new Vector3(0, 0, 0), 0.25f);
             frontCardUI.transform.localScaleTransition(Vector3.one * 0.75f, 0.25f);
             var options = new List<OptionData>();
             var categories = Statics.Data.GetAll<CategoryDefinition>();
@@ -592,9 +598,13 @@ namespace Ieedo
 
         private IEnumerator EditDifficultyCO(bool autoReset = false)
         {
+            EditDifficultyButton.Shadow.enabled = true;
+            frontCardUI.Difficulty.gameObject.SetActive(true);
+            frontCardUI.Difficulty.SetValue(frontCardUI.Data.Definition.Difficulty);
+
             SetSubEditMode(true);
             var result = new Ref<int>();
-            frontCardUI.transform.localPositionTransition(new Vector3(0, 150, 0), 0.25f);
+            frontCardUI.transform.localPositionTransition(new Vector3(0, 50, 0), 0.25f);
             var options = new List<OptionData>();
             var possibleDifficulties = new[] { 1, 2, 3 };
             foreach (var possibleDifficulty in possibleDifficulties)
@@ -627,10 +637,12 @@ namespace Ieedo
             if (autoReset)
                 frontCardUI.AnimateToParent();
             SetSubEditMode(false);
+            EditDifficultyButton.Shadow.enabled = false;
         }
 
         private IEnumerator EditDateCO(bool autoReset = false)
         {
+            EditDateButton.Shadow.enabled = true;
             SetSubEditMode(true);
             var result = new Ref<int>();
             frontCardUI.transform.localPositionTransition(new Vector3(0, 200, 0), 0.25f);
@@ -669,10 +681,12 @@ namespace Ieedo
             if (autoReset)
                 frontCardUI.AnimateToParent();
             SetSubEditMode(false);
+            EditDateButton.Shadow.enabled = false;
         }
 
         private IEnumerator EditSubCategoryCO(CategoryDefinition categoryDef, bool autoReset = false)
         {
+            EditSubCategoryButton.Shadow.enabled = true;
             SetSubEditMode(true);
             var result = new Ref<SubCategoryDefinition>();
             frontCardUI.transform.localPositionTransition(new Vector3(0, -15, 0), 0.25f);
@@ -703,10 +717,12 @@ namespace Ieedo
             if (autoReset)
                 frontCardUI.AnimateToParent();
             SetSubEditMode(false);
+            EditSubCategoryButton.Shadow.enabled = false;
         }
 
         public IEnumerator EditTitleCO(bool autoReset = false)
         {
+            EditTitleButton.Shadow.enabled = true;
             SetSubEditMode(true);
             frontCardUI.transform.localPositionTransition(new Vector3(0, -150, 0), 0.25f);
             frontCardUI.transform.localScaleTransition(Vector3.one * 1.3f, 0.25f);
@@ -720,10 +736,12 @@ namespace Ieedo
             if (autoReset)
                 frontCardUI.AnimateToParent();
             SetSubEditMode(false);
+            EditTitleButton.Shadow.enabled = false;
         }
 
         public IEnumerator EditDescriptionCO(bool autoReset = false)
         {
+            EditDescriptionButton.Shadow.enabled = true;
             SetSubEditMode(true);
             frontCardUI.transform.localPositionTransition(new Vector3(0, 120, 0), 0.25f);
             frontCardUI.transform.localScaleTransition(Vector3.one * 1.2f, 0.25f);
@@ -737,6 +755,7 @@ namespace Ieedo
             if (autoReset)
                 frontCardUI.AnimateToParent();
             SetSubEditMode(false);
+            EditDescriptionButton.Shadow.enabled = false;
         }
 
         private IEnumerator WaitForInputField(TMP_InputField inputField, UIText uiText)

@@ -163,7 +163,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 63.7
+  m_fontSize: 72
   m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -468,6 +468,7 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls: []
+  Shadow: {fileID: 8746676028111329280}
   Cap: {fileID: 8746676027328271599}
   NormalColor: {fileID: 8746676027367802014}
   DownColor: {fileID: 8746676027603403984}

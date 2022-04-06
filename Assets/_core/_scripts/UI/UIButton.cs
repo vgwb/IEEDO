@@ -28,6 +28,7 @@ namespace Ieedo
         }
 
 
+        public Image Shadow;
         public Image Cap;
         public LeanGraphicColor NormalColor;
         public LeanGraphicColor DownColor;
