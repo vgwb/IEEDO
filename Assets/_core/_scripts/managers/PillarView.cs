@@ -109,6 +109,7 @@ namespace Ieedo
         public void RemoveSingleCard(CardData cardData)
         {
             data.Cards.Remove(cardData);
+            nCurrentCards--;
         }
 
         public void AddSingleCard(CardData cardData)
