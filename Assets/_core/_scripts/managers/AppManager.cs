@@ -49,6 +49,7 @@ namespace Ieedo
                     Country = "en",
                     Language = Language.English,
                     IsNewProfile = true,
+                    SfxEnabled = true
                 });
             }
 
