@@ -94,7 +94,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 30.35
   m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -162,8 +162,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2371623362688251523}
-        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
-        m_MethodName: set_text
+        m_TargetAssemblyTypeName: Ieedo.UIText, Assembly-CSharp
+        m_MethodName: set_Text
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

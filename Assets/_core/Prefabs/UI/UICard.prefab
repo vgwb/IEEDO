@@ -135,6 +135,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+  IgnoreRTL: 0
 --- !u!1 &1625258384744630922
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,6 +327,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+  IgnoreRTL: 0
 --- !u!114 &6593511373119184315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,8 +354,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 688198345861798733}
-        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
-        m_MethodName: set_text
+        m_TargetAssemblyTypeName: Ieedo.UIText, Assembly-CSharp
+        m_MethodName: set_Text
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -502,6 +504,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+  IgnoreRTL: 0
 --- !u!114 &6009647657169079921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,8 +531,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8436679257402210682}
-        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
-        m_MethodName: set_text
+        m_TargetAssemblyTypeName: Ieedo.UIText, Assembly-CSharp
+        m_MethodName: set_Text
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -677,6 +680,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+  IgnoreRTL: 0
 --- !u!1 &2820791777997635084
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,6 +1014,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+  IgnoreRTL: 0
 --- !u!1 &5442373620485756744
 GameObject:
   m_ObjectHideFlags: 0
@@ -1706,6 +1711,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+  IgnoreRTL: 0
 --- !u!1 &8612290133984801122
 GameObject:
   m_ObjectHideFlags: 0
@@ -1917,6 +1923,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+  IgnoreRTL: 0
 --- !u!1001 &1723256215755519055
 PrefabInstance:
   m_ObjectHideFlags: 0

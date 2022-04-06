@@ -455,6 +455,14 @@ PrefabInstance:
       propertyPath: m_StringReference.m_WaitForCompletion
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7376773797247356537, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 40474458029056000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7376773797247356537, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
+      propertyPath: m_UpdateString.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetTextRaw
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
 --- !u!224 &4139050173851198866 stripped
@@ -657,7 +665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 29123062583139789, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -216.99998
+      value: -217
       objectReference: {fileID: 0}
     - target: {fileID: 29123062583139789, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_AnchoredPosition.y

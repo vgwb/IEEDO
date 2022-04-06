@@ -136,6 +136,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+  IgnoreRTL: 0
 --- !u!114 &5338859491733136659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,6 +660,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+  IgnoreRTL: 0
 --- !u!1 &8558207408488916440
 GameObject:
   m_ObjectHideFlags: 0
@@ -795,6 +797,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+  IgnoreRTL: 0
 --- !u!114 &3475440948005877239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1298,11 +1301,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 29123062583139789, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 29123062583139789, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 29123062583139789, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_AnchorMin.x
@@ -1310,11 +1313,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 29123062583139789, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 29123062583139789, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 612.32666
+      value: -419.3591
       objectReference: {fileID: 0}
     - target: {fileID: 29123062583139789, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1350,11 +1353,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 29123062583139789, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 654
+      value: 138.1571
       objectReference: {fileID: 0}
     - target: {fileID: 29123062583139789, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 66.594
+      value: -59.406
       objectReference: {fileID: 0}
     - target: {fileID: 29123062583139789, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1375,6 +1378,10 @@ PrefabInstance:
     - target: {fileID: 2371623362688251523, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_text
       value: Game title
+      objectReference: {fileID: 0}
+    - target: {fileID: 2371623362688251523, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
+      propertyPath: m_fontSize
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 2371623362688251523, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_fontColor.b
