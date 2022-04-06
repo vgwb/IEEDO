@@ -71,7 +71,7 @@ namespace Ieedo
 
             btnTestAddDiary = AddUnlocalizedButton("Add Diary Pages", () =>
             {
-                for (int i = 0; i < 5; i++)
+                for (int i = 4; i >= 0; i--)
                 {
                     var res = new ActivityResult
                     {
