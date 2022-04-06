@@ -95,9 +95,9 @@ namespace Ieedo
                 }
 
                 heldCard.transform.localEulerAnglesTransform(new Vector3(0, 0f, 0f), 0f); // fake transition to trigger the delay correctly
-                heldCard.transform.localPositionTransition(Vector3.left * 400, 0f); // fake transition to trigger the delay correctly
+                heldCard.transform.localPositionTransition(heldCard.transform.localPosition, 0f); // fake transition to trigger the delay correctly
                 var delay = (HeldCards.Count - 1 - iCard + 2) * 0.1f;
-                heldCard.transform.localPositionTransition(Vector3.left * 400, delay).JoinTransition().localPositionTransition(Vector3.zero, 0.5f);
+                heldCard.transform.localPositionTransition(heldCard.transform.localPosition, delay).JoinTransition().localPositionTransition(Vector3.zero, 0.5f);
 
                 if (currentListViewMode == UICardListScreen.ListViewMode.ToDo)
                 {
