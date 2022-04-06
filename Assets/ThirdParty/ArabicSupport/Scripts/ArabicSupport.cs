@@ -28,7 +28,7 @@ namespace ArabicSupport
 
 	public class ArabicFixer
     {
-        public static bool ConvertFarsiYehToAlefMaqsura;
+        public static bool ConvertFarsiYehToAlefMaqsura = true;
 
 		/// <summary>
 		/// Fix the specified string.
