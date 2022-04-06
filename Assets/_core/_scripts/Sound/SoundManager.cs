@@ -16,13 +16,22 @@ namespace Ieedo
         {
             if (I == null)
                 I = this;
-            audioSource = this.gameObject.GetComponent<AudioSource>();
+            audioSource = gameObject.GetComponent<AudioSource>();
         }
 
         public void PlaySfx(SfxEnum sfx)
         {
-            audioSource.clip = SoundsList.Sounds.Find(item => item.id == sfx).audioClip;
-            audioSource.Play();
+            var sound = SoundsList.Sounds.Find(item => item.id == sfx);
+            if (sound != null)
+            {
+                audioSource.clip = sound.audioClip;
+                audioSource.volume = sound.Volume;
+                audioSource.Play();
+            }
+            else
+            {
+                Debug.LogError("PlaySfx does not exist sound " + sfx.ToString());
+            }
         }
     }
 }

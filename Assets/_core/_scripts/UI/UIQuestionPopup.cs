@@ -29,21 +29,24 @@ namespace Ieedo
         public IEnumerator ShowQuestionFlow(string title, string question, string[] answers, Ref<int> selectedAnswer)
         {
             yield return ShowQuestion(title, question, answers);
-            while (IsOpen) yield return null;
+            while (IsOpen)
+                yield return null;
             selectedAnswer.Value = LatestSelectedOption;
         }
 
         public IEnumerator ShowQuestionFlow(LocalizedString title, LocalizedString question, LocalizedString[] answers, Ref<int> selectedAnswer)
         {
             yield return ShowQuestion(title, question, answers);
-            while (IsOpen) yield return null;
+            while (IsOpen)
+                yield return null;
             selectedAnswer.Value = LatestSelectedOption;
         }
 
         public IEnumerator ShowQuestion(string title, string question, string[] answers)
         {
             var answerKeys = new LocalizedString[answers.Length];
-            for (int i = 0; i < answers.Length; i++) answerKeys[i] = LocString.FromStr(answers[i]);
+            for (int i = 0; i < answers.Length; i++)
+                answerKeys[i] = LocString.FromStr(answers[i]);
             yield return ShowQuestion(LocString.FromStr(title), LocString.FromStr(question), answerKeys);
         }
 
@@ -51,7 +54,8 @@ namespace Ieedo
         {
             if (col == default)
             {
-                TitleBG.color = Color.gray;;
+                TitleBG.color = Color.gray;
+                ;
                 QuestionBG.color = new Color(0.35f, 0.35f, 0.35f, 1f);
             }
             else
@@ -83,6 +87,7 @@ namespace Ieedo
         public System.Action<int> OnSelectOption;
         private void SelectOption(int selectedOption)
         {
+            SoundManager.I.PlaySfx(SfxEnum.click);
             OnSelectOption?.Invoke(selectedOption);
             LatestSelectedOption = selectedOption;
             Close();
