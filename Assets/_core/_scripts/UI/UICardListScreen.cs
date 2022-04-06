@@ -23,7 +23,7 @@ namespace Ieedo
 
         public UIOptionsListPopup optionsListPopup;
 
-        public UnityEngine.UI.Image FrontObscurer;
+        public Image FrontObscurer;
 
         [Header("Card View")]
         public GameObject ViewMode;
@@ -105,17 +105,19 @@ namespace Ieedo
 
         private IEnumerator DeleteCardCO(bool isNewCard, UICard card)
         {
-            var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
-            Ref<int> selection = new Ref<int>();
-            yield return questionScreen.ShowQuestionFlow(new LocalizedString("UI","delete_card_confirmation_title"),
-                new LocalizedString("UI","delete_card_confirmation_description")
-                , new [] {
-                    new LocalizedString("UI","yes"),
-                    new LocalizedString("UI","no")
-                }, selection);
-
-            if (selection.Value == 1)
-                yield break;
+            if (!isNewCard)
+            {
+                var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
+                Ref<int> selection = new Ref<int>();
+                yield return questionScreen.ShowQuestionFlow(new LocalizedString("UI","delete_card_confirmation_title"),
+                    new LocalizedString("UI","delete_card_confirmation_description")
+                    , new [] {
+                        new LocalizedString("UI","yes"),
+                        new LocalizedString("UI","no")
+                    }, selection);
+                if (selection.Value == 1)
+                    yield break;
+            }
 
             if (!isNewCard) CardsList.RemoveCard(card);
             StopEditing();
@@ -468,11 +470,14 @@ namespace Ieedo
             yield return Statics.Screens.ShowQuestionFlow("UI/abort_creation_title", "UI/abort_creation_question", new[] { "UI/yes", "UI/no" }, answer);
             if (answer.Value == 0)
             {
+                aborted = true;
                 StopCoroutine(CreateCardFlowCO());
                 yield return DeleteCardCO(false, frontCardUI);
+                aborted = false;
             }
         }
 
+        private bool aborted;
         public IEnumerator CreateCardFlowCO()
         {
             CreationAbortButton.gameObject.SetActive(true);
@@ -548,7 +553,7 @@ namespace Ieedo
                 );
             }
             optionsListPopup.ShowOptions(new LocalizedString("UI","creation_choose_category"), options);
-            while (optionsListPopup.isActiveAndEnabled) yield return null;
+            while (optionsListPopup.isActiveAndEnabled && !aborted) yield return null;
             catResult.Value = categories[optionsListPopup.LatestSelectedOption];
             var selectedCategory = catResult.Value;
             frontCardUI.Data.Definition.Category = selectedCategory.ID;
@@ -582,7 +587,7 @@ namespace Ieedo
                 options.Add(optionData);
             }
             optionsListPopup.ShowOptions(new LocalizedString("UI","creation_choose_difficulty"), options);
-            while (optionsListPopup.isActiveAndEnabled) yield return null;
+            while (optionsListPopup.isActiveAndEnabled && !aborted) yield return null;
             result.Value = possibleDifficulties[optionsListPopup.LatestSelectedOption];
             var selection = result.Value;
             frontCardUI.Data.Definition.Difficulty = selection;
@@ -618,7 +623,7 @@ namespace Ieedo
                 );
             }
             optionsListPopup.ShowOptions(new LocalizedString("UI","creation_choose_date"), options);
-            while (optionsListPopup.isActiveAndEnabled) yield return null;
+            while (optionsListPopup.isActiveAndEnabled && !aborted) yield return null;
             result.Value = possibleDays[optionsListPopup.LatestSelectedOption];
             var selection = result.Value;
             frontCardUI.Data.ExpirationTimestamp = new Timestamp(DateTime.Now.AddDays(selection));
@@ -649,7 +654,7 @@ namespace Ieedo
                 );
             }
             optionsListPopup.ShowOptions(new LocalizedString("UI","creation_choose_subcategory"), options);
-            while (optionsListPopup.isActiveAndEnabled) yield return null;
+            while (optionsListPopup.isActiveAndEnabled && !aborted) yield return null;
             result.Value = subCategories[optionsListPopup.LatestSelectedOption];
             var selection = result.Value;
             frontCardUI.Data.Definition.SubCategory = selection.ID;
@@ -702,7 +707,7 @@ namespace Ieedo
                 inputField.ActivateInputField();
                 yield return null; // Must wait one frame
                 while (inputField.isFocused) yield return null;
-            } while (inputField.text.IsNullOrEmpty());
+            } while (inputField.text.IsNullOrEmpty() && !aborted);
         }
 
 
