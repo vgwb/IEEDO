@@ -54,12 +54,12 @@ namespace Ieedo
             if (choice && !isShowingLabel)
             {
                 isShowingLabel = true;
-                labelText.colorTransition(labelColor, 0.5f);
+                labelText.colorTransition(labelColor, 1f);
             }
             else if (!choice && isShowingLabel)
             {
                 isShowingLabel = false;
-                labelText.colorTransition(new Color(labelColor.r, labelColor.g, labelColor.b, 0f), 0.5f);
+                labelText.colorTransition(new Color(labelColor.r, labelColor.g, labelColor.b, 0f), 1f);
             }
         }
 
