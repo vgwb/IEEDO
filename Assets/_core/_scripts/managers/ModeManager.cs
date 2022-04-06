@@ -24,13 +24,13 @@ namespace Ieedo
         {
             if (SessionMode == SessionMode.Solo)
             {
-                var answer = new Ref<int>();
-                yield return Statics.Screens.ShowQuestionFlow("UI/session_start_title", "UI/session_start_question", new[] { "UI/yes", "UI/no" }, answer);
-                if (answer.Value == 0)
-                {
+                //var answer = new Ref<int>();
+                //yield return Statics.Screens.ShowQuestionFlow("UI/session_start_title", "UI/session_start_question", new[] { "UI/yes", "UI/no" }, answer);
+                //if (answer.Value == 0)
+                //{
                     SetSessionMode(SessionMode.Session);
                     yield return Statics.SessionFlow.SessionFlowCO();
-                }
+                //}
             }
             else
             {
