@@ -705,7 +705,7 @@ namespace Ieedo
         {
             SetSubEditMode(true);
             frontCardUI.transform.localPositionTransition(new Vector3(0, -150, 0), 0.25f);
-            frontCardUI.transform.localScaleTransition(Vector3.one * 1.2f, 0.25f);
+            frontCardUI.transform.localScaleTransition(Vector3.one * 1.3f, 0.25f);
             frontCardUI.transform.localEulerAnglesTransform(new Vector3(0, 10, 0), 0.25f);
             optionsListPopup.ShowOptions(new LocalizedString("UI", "creation_enter_title"), new List<OptionData>(), isTextEntry: true);
             yield return WaitForInputField(TitleInputField, frontCardUI.Title);
