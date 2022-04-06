@@ -53,10 +53,6 @@ namespace Ieedo.games.diary
                 });
             }
 
-            // foreach (Page page in Pages)
-            // {
-            //     Debug.LogError(page.Date + ": " + page.Text);
-            // }
             currentPageNumber = Pages.Count();
             totalPageNumber = Pages.Count();
             updateUI();
@@ -70,6 +66,15 @@ namespace Ieedo.games.diary
             DateText.text = Pages[currentPageNumber - 1].Date.ToString("dd-MM-yyyy");
             InputText.text = Pages[currentPageNumber - 1].Text;
             PageText.text = currentPageNumber + " / " + totalPageNumber;
+
+            if (currentPageNumber == totalPageNumber)
+            {
+                InputText.interactable = true;
+            }
+            else
+            {
+                InputText.interactable = false;
+            }
         }
 
         public void OnBtnDone()
