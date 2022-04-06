@@ -595,7 +595,7 @@ namespace Ieedo
             {
                 var optionData = new OptionData
                 {
-                    UseLocString = false,
+                    UseIconsString = true,
                     Text = "",
                     Color = Color.white,
                     ShowIconSquare = false

@@ -47,8 +47,7 @@ namespace Ieedo
 
         public void SwitchViewMode(PillarsViewMode newMode)
         {
-            var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
-            if (uiCardListScreen.IsOpen) uiCardListScreen.Close();
+            StartCoroutine(CloseCardList());
 
             ViewMode = newMode;
             StartCoroutine(OnOpen());
@@ -141,6 +140,12 @@ namespace Ieedo
             return base.OnOpen();
         }
 
+        protected override IEnumerator OnClose()
+        {
+            yield return CloseCardList();
+            yield return base.OnClose();
+        }
+
         #region Interaction
 
         private bool isFocused;
@@ -176,8 +181,14 @@ namespace Ieedo
             AnimateToUnfocused();
             PillarsManager.SetFocus();
 
+            StartCoroutine(CloseCardList());
+        }
+
+        private IEnumerator CloseCardList()
+        {
             var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
             if (uiCardListScreen.IsOpen) uiCardListScreen.Close();
+            while (uiCardListScreen.IsOpen) yield return null;
         }
 
         #endregion
