@@ -125,6 +125,7 @@ namespace Ieedo
 
             Statics.Cards.DeleteCard(card.Data);
             Statics.Cards.DeleteCardDefinition(card.Data.Definition);
+            Statics.Analytics.Card("delete");
         }
 
         private IEnumerator CompleteCardCO(UICard uiCard)
