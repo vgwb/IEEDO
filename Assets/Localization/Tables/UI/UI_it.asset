@@ -56,7 +56,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40474458029056000
-    m_Localized: '{Currentscore}'
+    m_Localized: '{CurrentScore}'
     m_Metadata:
       m_Items:
       - rid: 3992833648747610129
