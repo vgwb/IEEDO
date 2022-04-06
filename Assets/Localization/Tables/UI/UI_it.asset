@@ -114,7 +114,7 @@ MonoBehaviour:
       m_Items:
       - rid: 3992833648747610129
   - m_Id: 40544570652254208
-    m_Localized: Molto bene!
+    m_Localized: Ben fatto!
     m_Metadata:
       m_Items: []
   - m_Id: 40544588826173440
@@ -192,10 +192,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762365927424
-    m_Localized: 'Benvenuti nell''app IEEDO!
-
-      Se non capisci qualcosa sullo
-      schermo, tenere il pulsante di traduzione per leggerlo in arabo'
+    m_Localized: "Benvenuto!\nL'obiettivo di IEDO \xE8 aiutarti ad avere successo
+      in questo paese.\n\nSe non capisci qualcosa sullo schermo, tenere il pulsante
+      di traduzione per leggerlo in arabo"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093248
@@ -208,12 +207,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093250
-    m_Localized: La tua situazione
+    m_Localized: Sessione di coaching
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093251
-    m_Localized: "Ricorda, il nostro obiettivo \xE8 aiutarti ad avere successo in
-      questo paese. Vuoi rispondere ad alcune domande sulla tua situazione attuale?"
+    m_Localized: "Il tuo allenatore \xE8 qui per aiutarti.\n\nVuoi rispondere ad
+      alcune domande sulla tua situazione attuale?"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093252
@@ -221,27 +220,28 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093253
-    m_Localized: Non hai carta da revisione
+    m_Localized: Non hai carte da recensire
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093254
-    m_Localized: Creiamo carte sulle cose che farai nei prossimi giorni
+    m_Localized: "\xC8 giunto il momento di pianificare insieme le cose che farai
+      nei prossimi giorni"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093255
-    m_Localized: "Inizia la modalit\xE0 di sessione"
+    m_Localized: Start Session.
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093256
-    m_Localized: Sei sicuro di voler iniziare una sessione?
+    m_Localized: Sei sicuro di voler iniziare una sessione di coaching?
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093257
-    m_Localized: "Lasciare la modalit\xE0 di sessione"
+    m_Localized: Lasciare la sessione
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093258
-    m_Localized: Sei sicuro di voler lasciare la sessione?
+    m_Localized: Sei sicuro di voler lasciare la sessione di coaching?
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093259
