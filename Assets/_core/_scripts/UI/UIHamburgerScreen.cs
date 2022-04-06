@@ -44,7 +44,7 @@ namespace Ieedo
                     categoryData.AssessmentValue = UnityEngine.Random.value;
                 Statics.Data.SaveProfile();
                 Log.Err($"Generate random assessment data");
-                GoTo(ScreenID.Pillars);
+                Statics.Screens.GoTo(ScreenID.Pillars);
             });
 
             btnGenerateTestCards = AddButton("action_generate_test_cards", () =>

@@ -14,17 +14,14 @@ namespace Ieedo
         {
             SetupButton(btnActivities, () =>
             {
-                ToggleSelection(btnActivities);
-                GoTo(ScreenID.Activities);
+                Statics.Screens.GoTo(ScreenID.Activities);
             });
             SetupButton(btnPillars, () =>
             {
-                ToggleSelection(btnPillars);
-                GoTo(ScreenID.Pillars);
+                Statics.Screens.GoTo(ScreenID.Pillars);
             });
             SetupButton(btnCards, () =>
             {
-                ToggleSelection(btnCards);
                 Statics.Screens.GoToTodoList();
             });
 

@@ -20,7 +20,6 @@ namespace Ieedo
             var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
 
             // TODO: Close everything else first?
-
             Statics.Screens.GoTo(ScreenID.Pillars);
 
             // Assessment flow

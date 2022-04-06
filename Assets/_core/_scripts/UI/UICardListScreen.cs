@@ -152,11 +152,8 @@ namespace Ieedo
             yield return AnimateCardOut(uiCard, +1);
             if (uiCard != null) Destroy(uiCard.gameObject);
             CloseFrontView();
-            GoTo(ScreenID.Pillars);
 
-            // Select pillars view
-            var uiBottomScreen = Statics.Screens.Get(ScreenID.Bottom) as UIBottomScreen;
-            uiBottomScreen.ToggleSelection(uiBottomScreen.btnPillars);
+            Statics.Screens.GoTo(ScreenID.Pillars);
 
             Statics.Score.AddScore(20);
             Statics.Analytics.Card("complete");

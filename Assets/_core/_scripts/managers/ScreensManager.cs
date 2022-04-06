@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Lean.Gui;
 using UnityEngine;
 using UnityEngine.Localization;
 
@@ -78,6 +79,22 @@ namespace Ieedo
 
         public void GoTo(ScreenID toId)
         {
+            var uiBottomScreen = Statics.Screens.Get(ScreenID.Bottom) as UIBottomScreen;
+            LeanButton toButton = null;
+            switch (toId)
+            {
+                case ScreenID.Pillars:
+                    toButton = uiBottomScreen.btnPillars;
+                    break;
+                case ScreenID.CardList:
+                    toButton = uiBottomScreen.btnCards;
+                    break;
+                case ScreenID.Activities:
+                    toButton = uiBottomScreen.btnActivities;
+                    break;
+            }
+            if (toButton != null) uiBottomScreen.ToggleSelection(toButton);
+
             Statics.I.StartCoroutine(TransitionToCO(toId));
         }
 

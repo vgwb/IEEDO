@@ -90,11 +90,6 @@ namespace Ieedo
         protected virtual IEnumerator OnOpen() { yield break; }
         protected virtual IEnumerator OnClose() { yield break; }
 
-        public void GoTo(ScreenID toId)
-        {
-            Statics.Screens.GoTo(toId);
-        }
-
         protected void SetupButton(LeanButton btn, Action action)
         {
             btn.OnClick.RemoveAllListeners();
