@@ -12,6 +12,8 @@ namespace Ieedo
         public Image BlockerBG;
         public bool IsInsideAssessment;
 
+        public Coroutine assessmentCo;
+
         public IEnumerator SessionFlowCO()
         {
             var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
@@ -27,8 +29,9 @@ namespace Ieedo
             if (answer.Value == 0)
             {
                 IsInsideAssessment = true;
-                StartCoroutine(AssessmentFlowCO()); // @note: needs to be a StartCoroutine so we can stop it
+                assessmentCo = StartCoroutine(AssessmentFlowCO()); // @note: needs to be a StartCoroutine so we can stop it
                 while (IsInsideAssessment) yield return null;
+                assessmentCo = null;
             }
             else
             {
@@ -136,7 +139,11 @@ namespace Ieedo
 
         public void SkipAssessment()
         {
-            StopCoroutine(AssessmentFlowCO());
+            if (assessmentCo != null)
+            {
+                StopCoroutine(assessmentCo);
+                assessmentCo = null;
+            }
             StartCoroutine(SkipAssessmentCO());
         }
 
@@ -145,7 +152,7 @@ namespace Ieedo
             var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
             var assessmentRecapScreen = Statics.Screens.Get(ScreenID.AssessmentRecap) as UIAssessmentRecapPopup;
             var introScreen = Statics.Screens.Get(ScreenID.AssessmentIntro) as UIAssessmentIntroScreen;
-            var categoryIntroScreen = Statics.Screens.Get(ScreenID.AssessmentIntro) as UIAssessmentIntroScreen;
+            var categoryIntroScreen = Statics.Screens.Get(ScreenID.AssessmentCategoryIntro) as UIAssessmentCategoryIntroScreen;
 
             while (introScreen.IsOpen) yield return introScreen.CloseCO();
             while (questionScreen.IsOpen) yield return questionScreen.CloseCO();
