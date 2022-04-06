@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Localization;
@@ -9,7 +10,12 @@ namespace Ieedo
     {
         public bool ShowIconSquare;
         public string IconText;
+
+        public bool UseIconsString;
+        public bool UseLocString;
+        public LocalizedString Key;
         public string Text;
+
         public Color Color;
     }
 
@@ -43,7 +49,28 @@ namespace Ieedo
                     Options[i].Icon.Text.SetText(string.Empty);
                 }
 
-                Options[i].Button.Text = option.Text;
+                if (option.UseLocString)
+                {
+                    Options[i].Button.Key = option.Key;
+                    Options[i].ButtonIconsText.enabled = false;
+                    Options[i].Button.GetComponentInChildren<UIText>().enabled = true;
+                }
+                else
+                {
+                    if (option.UseIconsString)
+                    {
+                        Options[i].ButtonIconsText.text = option.Text;
+                        Options[i].ButtonIconsText.enabled = true;
+                        Options[i].Button.GetComponentInChildren<UIText>().enabled = false;
+                    }
+                    else
+                    {
+                        Options[i].Button.Key = new LocalizedString();
+                        Options[i].Button.Text = option.Text;
+                        Options[i].ButtonIconsText.enabled = false;
+                        Options[i].Button.GetComponentInChildren<UIText>().enabled = true;
+                    }
+                }
                 Options[i].Icon.BG.color = option.Color;
                 Options[i].gameObject.SetActive(true);
 

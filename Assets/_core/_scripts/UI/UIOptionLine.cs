@@ -6,5 +6,6 @@ namespace Ieedo
     {
         public UITextContent Icon;
         public UIButton Button;
+        public UIText ButtonIconsText;
     }
 }

@@ -563,7 +563,8 @@ namespace Ieedo
                 options.Add(
                     new OptionData
                     {
-                        Text = categoryDef.Title.Text,
+                        UseLocString = true,
+                        Key = categoryDef.Title.Key,
                         Color = categoryDef.Color,
                         ShowIconSquare = true
                     }
@@ -594,6 +595,7 @@ namespace Ieedo
             {
                 var optionData = new OptionData
                 {
+                    UseLocString = false,
                     Text = "",
                     Color = Color.white,
                     ShowIconSquare = false
@@ -642,6 +644,7 @@ namespace Ieedo
                 options.Add(
                     new OptionData
                     {
+                        UseLocString = false,
                         Text = new Timestamp(targetDate).ToString(),
                         Color = color,
                         ShowIconSquare = true
@@ -674,7 +677,8 @@ namespace Ieedo
                 options.Add(
                     new OptionData
                     {
-                        Text = subCategoryDef.Title.Text,
+                        UseLocString = true,
+                        Key = subCategoryDef.Title.Key,
                         Color = categoryDef.Color,
                         IconText = subCategoryDef.Icon,
                         ShowIconSquare = true
