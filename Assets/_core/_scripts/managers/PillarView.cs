@@ -122,7 +122,7 @@ namespace Ieedo
         {
             if (iCard >= cardGos.Count)
             {
-                AddNewCard(iCard);
+                AddNewCard();
             }
 
             var cardGo = cardGos[iCard].gameObject;
@@ -136,7 +136,7 @@ namespace Ieedo
         {
             float pillarTop = gfxHeight * 2.5f;
             var finalPos = Vector3.up * (pillarTop + (0.5f+iCard) * 0.075f);
-            finalPos += new Vector3(Random.Range(-0.2f, 0.2f), 0, Random.Range(-0.2f, 0.2f));
+            finalPos += new Vector3(Random.Range(-0.3f, 0.3f), 0, Random.Range(-0.3f, 0.3f));
             return finalPos;
         }
 
@@ -153,10 +153,9 @@ namespace Ieedo
                 var period = 0.75f;
                 period -= nAnimatedCards * 0.025f;
                 period = Mathf.Max(0.025f, period);
-                cardGo.transform.GetTransition().StopAll();
                 cardGo.transform.localPositionTransition(cardGo.transform.localPosition, 0.0f); // Fake transition to make the delay work correctly
-                cardGo.transform.JoinDelayTransition((iCard-fromCardIndex) * 0.1f).localPositionTransition(finalPos, period, LeanEase.Accelerate)
-                    .localEulerAnglesTransform(Vector3.up * Random.Range(0, 360f), period);
+                cardGo.transform.JoinDelayTransition((iCard - fromCardIndex) * 0.1f).localPositionTransition(finalPos, period, LeanEase.Accelerate);
+                cardGo.transform.localEulerAnglesTransform(Vector3.up * Random.Range(0, 360f), 1.25f, LeanEase.Decelerate);
                 nAnimatedCards++;
             }
         }
@@ -167,14 +166,15 @@ namespace Ieedo
             {
                 var cardGo = cardGos[iCard].gameObject;
                 float period = 0.25f;
-                cardGo.transform.GetTransition().StopAll();
+                //cardGo.transform.GetTransition().Stop();
+                cardGo.transform.localPositionTransition(cardGo.transform.localPosition, 0.0f);     // This forces a stop
                 cardGo.transform.localPositionTransition_y(15, period, LeanEase.Smooth);
                 cardGo.transform.positionTransition_x(2f, period, LeanEase.Smooth);
                 cardGo.transform.localRotationTransition(Quaternion.Euler(Random.Range(0, 360f),  Random.Range(0, 360f),  Random.Range(0, 360f)), period);
             }
         }
 
-        public void AddNewCard(int iCard)
+        public void AddNewCard()
         {
             var cardGo = Instantiate(cardPrefab, transform);
             cardGo.GetComponentInChildren<MeshRenderer>().material = new Material(cardGo.GetComponentInChildren<MeshRenderer>().material);
