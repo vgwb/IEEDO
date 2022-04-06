@@ -64,16 +64,18 @@ namespace Ieedo
         }
 
         private int nCurrentCards;
-        public void ShowData(PillarData data, bool added, bool reviewMode)
+        public void ShowData(PillarData data, bool showOnlyNewlyAddedCards)
         {
-            if (!added) nCurrentCards = 0;
-
             this.data = data;
+
+            if (!showOnlyNewlyAddedCards) nCurrentCards = 0;
+            else nCurrentCards = Mathf.Min(data.Cards.Count, nCurrentCards);
+
             labelText.GetComponent<LocalizeStringEvent>().StringReference = data.LocalizedKey;
             labelText.color = new Color(labelColor.r, labelColor.g, labelColor.b, 0f);
             var baseScale = 0.1f;
 
-            if (!added)
+            if (!showOnlyNewlyAddedCards)
             {
                 gfx.localScale = new Vector3(1f, 0f, 1f)*baseScale;
                 gfx.localScaleTransition_y(gfxHeight * baseScale, 0.25f);
@@ -91,17 +93,7 @@ namespace Ieedo
             int nPreviousCards = nCurrentCards;
             for (int iCard = 0; iCard < data.NCards; iCard++)
             {
-                if (iCard >= cardGos.Count)
-                {
-                    AddNewCard(iCard);
-                }
-
-                var cardGo = cardGos[iCard].gameObject;
-                var mr = cardGo.GetComponentInChildren<MeshRenderer>();
-                mr.material.color = data.Cards[iCard].Definition.CategoryDefinition.Color * (1.4f + Random.Range(-0.2f, 0.2f));
-
-                cardGos[iCard].SetActive(true);
-                if (nCurrentCards <= iCard) nCurrentCards++;
+                AddCard(iCard, data.Cards[iCard]);
             }
             for (int iCard = data.NCards; iCard < cardGos.Count; iCard++)
             {
@@ -112,6 +104,32 @@ namespace Ieedo
 
             int startNewIndex = nPreviousCards;
             CardsIn(startNewIndex);
+        }
+
+        public void RemoveSingleCard(CardData cardData)
+        {
+            data.Cards.Remove(cardData);
+        }
+
+        public void AddSingleCard(CardData cardData)
+        {
+            data.Cards.Add(cardData);
+            AddCard(nCurrentCards, cardData);
+            CardsIn(nCurrentCards-1);
+        }
+
+        public void AddCard(int iCard, CardData cardData)
+        {
+            if (iCard >= cardGos.Count)
+            {
+                AddNewCard(iCard);
+            }
+
+            var cardGo = cardGos[iCard].gameObject;
+            var mr = cardGo.GetComponentInChildren<MeshRenderer>();
+            mr.material.color = cardData.Definition.CategoryDefinition.Color * (1.4f + Random.Range(-0.2f, 0.2f));
+            cardGos[iCard].SetActive(true);
+            if (nCurrentCards <= iCard) nCurrentCards++;
         }
 
         private Vector3 ComputeFinalPos(int iCard)
@@ -166,5 +184,6 @@ namespace Ieedo
         {
             gameObject.SetActive(true);
         }
+
     }
 }

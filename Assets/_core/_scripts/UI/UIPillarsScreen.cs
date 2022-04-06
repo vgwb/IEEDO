@@ -54,14 +54,13 @@ namespace Ieedo
             StartCoroutine(OnOpen());
         }
 
-        public void RefreshData(int onlyPillarIndex = -1)
+        public PillarsData RegenerateData()
         {
             var profileData = Statics.Data.Profile;
             var pillarsData = new PillarsData
             {
                 Pillars = new List<PillarData>()
             };
-
             switch (ViewMode)
             {
                 case PillarsViewMode.Categories:
@@ -80,7 +79,6 @@ namespace Ieedo
                         pillarsData.Pillars.Add(pillarData);
                     }
                     pillarsData.ReviewMode = false;
-                    PillarsManager.SetFocus();
                     break;
                 case PillarsViewMode.Review:
                     {
@@ -108,15 +106,20 @@ namespace Ieedo
                         pillarsData.Pillars.Add(pillarData);
                     }
                     pillarsData.ReviewMode = true;
-                    PillarsManager.SetFocus();
                     break;
             }
+            return pillarsData;
+        }
 
+        public void RefreshData()
+        {
+            PillarsManager.SetFocus();
             AnimateToUnfocused();
 
-            bool added = ViewMode == prevViewMode;
+            bool showOnlyNewlyAddedCards = ViewMode == prevViewMode;
             prevViewMode = ViewMode;
-            PillarsManager.ShowData(pillarsData, added, onlyPillarIndex);
+            var pillarsData = RegenerateData();
+            PillarsManager.ShowData(pillarsData, showOnlyNewlyAddedCards);
             Scene3D.SetActive(true);
 
             for (var iPillar = 0; iPillar < PillarsManager.PillarViews.Count; iPillar++)
@@ -221,6 +224,8 @@ namespace Ieedo
             isFocused = false;
             Camera3D.transform.localPositionTransition(new Vector3(0,15.1000004f,-13.3999996f), 0.5f);
             Camera3D.transform.localRotationTransition(new Quaternion(0.354291022f,0,0,0.935135245f), 0.5f);
+
+            PillarsManager.RefreshPositionsAndRotations(animated:true);
         }
 
         #endregion

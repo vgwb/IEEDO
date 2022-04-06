@@ -59,12 +59,16 @@ namespace Ieedo
         public List<PillarView> PillarViews = new List<PillarView>();
         private PillarsData currentData;
 
-        public void ShowData(PillarsData data, bool added, int onlyPillarIndex = -1)
+        public void AssignData(PillarsData data)
         {
             this.currentData = data;
-            foreach (var pillarView in PillarViews)
-                pillarView.Hide();
+        }
 
+        public void RefreshPositionsAndRotations(bool animated = false)
+        {
+            animated = false; // TODO: fix this
+            if (currentData == null) return;
+            var data = currentData;
             for (var iPillar = 0; iPillar < data.Pillars.Count; iPillar++)
             {
                 var pillarView = PillarViews[iPillar];
@@ -82,30 +86,40 @@ namespace Ieedo
                 pillarView.transform.localPosition = locPos;
                 var locEul = rot.eulerAngles;
                 locEul.y += 180;
-                pillarView.transform.localEulerAngles = locEul;
                 if (data.ReviewMode)
                 {
-                    var finalRot = locEul;
-                    finalRot.y += iPillar == 0 ? 90 : -90;
-                    pillarView.transform.localRotationTransition(Quaternion.Euler(finalRot), 0.25f);
+                    locEul.y += iPillar == 0 ? 90 : -90;
                 }
+                if (animated) pillarView.transform.localEulerAnglesTransform(locEul, 0.5f);
+                else  pillarView.transform.localEulerAngles = locEul;
+            }
 
-                if (onlyPillarIndex < 0 || onlyPillarIndex == iPillar)
-                {
-                    RefreshPillarView(iPillar, added);
-                }
+        }
+
+        public void ShowData(PillarsData data, bool showOnlyNewlyAddedCards)
+        {
+            AssignData(data);
+            foreach (var pillarView in PillarViews)
+                pillarView.Hide();
+
+            RefreshPositionsAndRotations();
+
+            for (var iPillar = 0; iPillar < data.Pillars.Count; iPillar++)
+            {
+                var pillarView = PillarViews[iPillar];
+                RefreshPillarView(iPillar, showOnlyNewlyAddedCards);
                 pillarView.Show();
             }
 
             autoRotating = !data.ReviewMode;
-            if (!autoRotating) transform.localRotationTransition(Quaternion.identity, 0.5f);
+            if (!autoRotating) transform.localRotation = Quaternion.identity;
         }
 
-        public void RefreshPillarView(int iPillar, bool added)
+        public void RefreshPillarView(int iPillar, bool showOnlyNewlyAddedCards)
         {
             var pillarData = currentData.Pillars[iPillar];
             var pillarView = PillarViews[iPillar];
-            pillarView.ShowData(pillarData, added, currentData.ReviewMode);
+            pillarView.ShowData(pillarData, showOnlyNewlyAddedCards);
         }
 
         private bool autoRotating;
