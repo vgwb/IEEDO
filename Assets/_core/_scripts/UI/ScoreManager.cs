@@ -19,7 +19,7 @@ namespace Ieedo
             if (CurrentScoreText != null)
             {
                 CurrentScoreText.Key = new LocalizedString("UI", "top_score");
-                CurrentScoreText.Key.Arguments = new List<object>{this};
+                CurrentScoreText.Key.Arguments = new List<object> { this };
                 CurrentScoreText.Key.StringChanged += v =>
                 {
                     CurrentScoreText.text = v;
@@ -37,7 +37,7 @@ namespace Ieedo
 
         public void RefreshString()
         {
-            CurrentScoreText.Key.RefreshString();
+            CurrentScoreText?.Key.RefreshString();
         }
     }
 }
