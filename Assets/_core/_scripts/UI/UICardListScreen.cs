@@ -207,7 +207,7 @@ namespace Ieedo
             frontCardUI.Data.Status = CardValidationStatus.Validated;
             Statics.Data.SaveProfile();
 
-            yield return AnimateCardOut(uiCard, 1);
+            yield return AnimateCardOut(uiCard, 0);
             if (uiCard != null) Destroy(uiCard.gameObject);
             CloseFrontView();
 
@@ -240,7 +240,7 @@ namespace Ieedo
             frontCardUI.Data.Status = CardValidationStatus.Completed;
             Statics.Data.SaveProfile();
 
-            yield return AnimateCardOut(uiCard, -1);
+            yield return AnimateCardOut(uiCard, 0);
             if (uiCard != null) Destroy(uiCard.gameObject);
             CloseFrontView();
 
