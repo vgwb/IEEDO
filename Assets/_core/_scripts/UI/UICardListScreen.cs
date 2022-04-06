@@ -109,9 +109,9 @@ namespace Ieedo
             {
                 var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
                 Ref<int> selection = new Ref<int>();
-                yield return questionScreen.ShowQuestionFlow(new LocalizedString("UI","delete_card_confirmation_title"),
-                    new LocalizedString("UI","delete_card_confirmation_description")
-                    , new [] {
+                yield return questionScreen.ShowQuestionFlow(new LocalizedString("UI", "delete_card_confirmation_title"),
+                    new LocalizedString("UI", "delete_card_confirmation_description")
+                    , new[] {
                         new LocalizedString("UI","yes"),
                         new LocalizedString("UI","no")
                     }, selection);
@@ -119,13 +119,14 @@ namespace Ieedo
                     yield break;
             }
 
-            if (!isNewCard) CardsList.RemoveCard(card);
+            if (!isNewCard)
+                CardsList.RemoveCard(card);
             StopEditing();
             CloseFrontView();
 
+            Statics.Analytics.Card("delete", card.Data);
             Statics.Cards.DeleteCard(card.Data);
             Statics.Cards.DeleteCardDefinition(card.Data.Definition);
-            Statics.Analytics.Card("delete");
         }
 
         private IEnumerator CompleteCardCO(UICard uiCard)
@@ -150,21 +151,22 @@ namespace Ieedo
             Statics.Data.SaveProfile();
 
             yield return AnimateCardOut(uiCard, +1);
-            if (uiCard != null) Destroy(uiCard.gameObject);
+            if (uiCard != null)
+                Destroy(uiCard.gameObject);
             CloseFrontView();
 
             Statics.Screens.GoTo(ScreenID.Pillars);
 
             Statics.Score.AddScore(20);
-            Statics.Analytics.Card("complete");
+            Statics.Analytics.Card("complete", uiCard.Data);
             OnCompletedCard?.Invoke();
         }
 
         private IEnumerator AnimateCardOut(UICard uiCard, int direction)
         {
             var period = 0.5f;
-            uiCard.transform.localPositionTransition(new Vector3(direction*300,600,-150), period, LeanEase.Accelerate);
-            uiCard.transform.localEulerAnglesTransform(new Vector3(0,direction*20,direction*20), period, LeanEase.Accelerate);
+            uiCard.transform.localPositionTransition(new Vector3(direction * 300, 600, -150), period, LeanEase.Accelerate);
+            uiCard.transform.localEulerAnglesTransform(new Vector3(0, direction * 20, direction * 20), period, LeanEase.Accelerate);
             yield return new WaitForSeconds(period);
         }
 
@@ -172,9 +174,9 @@ namespace Ieedo
         {
             var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
             Ref<int> selection = new Ref<int>();
-            yield return questionScreen.ShowQuestionFlow(new LocalizedString("UI","uncomplete_card_confirmation_title"),
-                new LocalizedString("UI","uncomplete_card_confirmation_description")
-                , new [] {
+            yield return questionScreen.ShowQuestionFlow(new LocalizedString("UI", "uncomplete_card_confirmation_title"),
+                new LocalizedString("UI", "uncomplete_card_confirmation_description")
+                , new[] {
                     new LocalizedString("UI","yes"),
                     new LocalizedString("UI","no")
                 }, selection);
@@ -187,13 +189,14 @@ namespace Ieedo
             frontCardUI.Data.Status = CardValidationStatus.Todo;
             Statics.Data.SaveProfile();
 
-            uiCard.transform.localPositionTransition(new Vector3(-300,600,-150), 0.5f, LeanEase.Accelerate);
-            uiCard.transform.localEulerAnglesTransform(new Vector3(0,-20,-20), 0.5f, LeanEase.Accelerate);
+            uiCard.transform.localPositionTransition(new Vector3(-300, 600, -150), 0.5f, LeanEase.Accelerate);
+            uiCard.transform.localEulerAnglesTransform(new Vector3(0, -20, -20), 0.5f, LeanEase.Accelerate);
             yield return new WaitForSeconds(0.5f);
-            if (uiCard != null) Destroy(uiCard.gameObject);
+            Statics.Analytics.Card("uncomplete", uiCard.Data);
+            if (uiCard != null)
+                Destroy(uiCard.gameObject);
             CloseFrontView();
             Statics.Score.AddScore(-20);
-            Statics.Analytics.Card("uncomplete");
         }
 
         private IEnumerator ValidateCardCO(UICard uiCard)
@@ -205,7 +208,8 @@ namespace Ieedo
             Statics.Data.SaveProfile();
 
             yield return AnimateCardOut(uiCard, 0);
-            if (uiCard != null) Destroy(uiCard.gameObject);
+            if (uiCard != null)
+                Destroy(uiCard.gameObject);
             CloseFrontView();
 
             // Just add the new card
@@ -214,7 +218,7 @@ namespace Ieedo
             uiPillarsScreen.PillarsManager.PillarViews[VALIDATED_CARDS_PILLAR_INDEX].AddSingleCard(uiCard.Data);
 
             Statics.Score.AddScore(50);
-            Statics.Analytics.Card("validate");
+            Statics.Analytics.Card("validate", uiCard.Data);
             OnValidateCard?.Invoke();
         }
 
@@ -222,9 +226,9 @@ namespace Ieedo
         {
             var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
             Ref<int> selection = new Ref<int>();
-            yield return questionScreen.ShowQuestionFlow(new LocalizedString("UI","unvalidate_card_confirmation_title"),
-                new LocalizedString("UI","unvalidate_card_confirmation_description")
-                , new [] {
+            yield return questionScreen.ShowQuestionFlow(new LocalizedString("UI", "unvalidate_card_confirmation_title"),
+                new LocalizedString("UI", "unvalidate_card_confirmation_description")
+                , new[] {
                     new LocalizedString("UI","yes"),
                     new LocalizedString("UI","no")
                 }, selection);
@@ -238,7 +242,8 @@ namespace Ieedo
             Statics.Data.SaveProfile();
 
             yield return AnimateCardOut(uiCard, 0);
-            if (uiCard != null) Destroy(uiCard.gameObject);
+            if (uiCard != null)
+                Destroy(uiCard.gameObject);
             CloseFrontView();
 
             // Just add the new card
@@ -247,7 +252,7 @@ namespace Ieedo
             uiPillarsScreen.PillarsManager.PillarViews[COMPLETED_CARDS_PILLAR_INDEX].AddSingleCard(uiCard.Data);
 
             Statics.Score.AddScore(-50);
-            Statics.Analytics.Card("unvalidate");
+            Statics.Analytics.Card("unvalidate", uiCard.Data);
         }
 
         protected override IEnumerator OnOpen()
@@ -270,7 +275,7 @@ namespace Ieedo
         }
 
         private FrontViewMode desiredFrontViewMode;
-        public void LoadCards(List<CardData> cards, Func<CardData,CardData,int> sort, ListViewMode listViewMode, FrontViewMode frontViewMode)
+        public void LoadCards(List<CardData> cards, Func<CardData, CardData, int> sort, ListViewMode listViewMode, FrontViewMode frontViewMode)
         {
             FrontView.gameObject.SetActive(false);
 
@@ -289,7 +294,7 @@ namespace Ieedo
                     rt.anchorMin = new Vector2(0, 0);
                     rt.anchorMax = new Vector2(0, 1);
                     rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 400);
-                    rt.localPosition = new Vector3(-220,0,0);
+                    rt.localPosition = new Vector3(-220, 0, 0);
                     layout.padding.bottom = 300;
                     break;
                 case ListViewMode.Pillars:
@@ -340,7 +345,8 @@ namespace Ieedo
 
         public void OpenFrontView(UICard uiCard, FrontViewMode viewMode)
         {
-            if (CurrentFrontViewMode != FrontViewMode.None) return;
+            if (CurrentFrontViewMode != FrontViewMode.None)
+                return;
             FrontObscurer.colorTransition(new Color(FrontObscurer.color.r, FrontObscurer.color.g, FrontObscurer.color.b, 0.5f), 0.25f);
             prevFrontCardParent = uiCard.transform.parent;
             var uiCardRt = uiCard.GetComponent<RectTransform>();
@@ -482,12 +488,13 @@ namespace Ieedo
 
             // Create and show the card
             var cardDef = Statics.Cards.GenerateCardDefinition(
-                new CardDefinition {
+                new CardDefinition
+                {
                     Category = CategoryID.None,
                     SubCategory = 0,
                     Description = new LocString { DefaultText = "" },
                     Difficulty = 0,
-                    Title = new LocString { DefaultText = ""},
+                    Title = new LocString { DefaultText = "" },
                 },
                 isDefaultCard: AppManager.I.ApplicationConfig.SaveCardsAsDefault
             );
@@ -509,12 +516,24 @@ namespace Ieedo
             {
                 switch (cardFlowIndex)
                 {
-                    case 0: yield return EditCategoryCO(); break;
-                    case 1: yield return EditSubCategoryCO(cardUi.Data.Definition.CategoryDefinition); break;
-                    case 2: yield return EditTitleCO(); break;
-                    case 3: yield return EditDifficultyCO(); break;
-                    case 4: yield return EditDateCO(); break;
-                    case 5: yield return EditDescriptionCO(); break;
+                    case 0:
+                        yield return EditCategoryCO();
+                        break;
+                    case 1:
+                        yield return EditSubCategoryCO(cardUi.Data.Definition.CategoryDefinition);
+                        break;
+                    case 2:
+                        yield return EditTitleCO();
+                        break;
+                    case 3:
+                        yield return EditDifficultyCO();
+                        break;
+                    case 4:
+                        yield return EditDateCO();
+                        break;
+                    case 5:
+                        yield return EditDescriptionCO();
+                        break;
                 }
                 cardFlowIndex++;
             }
@@ -529,7 +548,7 @@ namespace Ieedo
             EditTitleButton.gameObject.SetActive(true);
 
             Statics.Cards.AddCard(cardData);
-            Statics.Analytics.Card("create");
+            Statics.Analytics.Card("create", cardData);
         }
 
         private IEnumerator EditCategoryCO(bool autoReset = false)
@@ -550,15 +569,17 @@ namespace Ieedo
                     }
                 );
             }
-            optionsListPopup.ShowOptions(new LocalizedString("UI","creation_choose_category"), options);
-            while (optionsListPopup.isActiveAndEnabled && !aborted) yield return null;
+            optionsListPopup.ShowOptions(new LocalizedString("UI", "creation_choose_category"), options);
+            while (optionsListPopup.isActiveAndEnabled && !aborted)
+                yield return null;
             catResult.Value = categories[optionsListPopup.LatestSelectedOption];
             var selectedCategory = catResult.Value;
             frontCardUI.Data.Definition.Category = selectedCategory.ID;
             Statics.Data.SaveProfile();
             Statics.Data.SaveCardDefinitions();
             frontCardUI.RefreshUI();
-            if (autoReset) frontCardUI.AnimateToParent();
+            if (autoReset)
+                frontCardUI.AnimateToParent();
             SetSubEditMode(false);
         }
 
@@ -571,12 +592,14 @@ namespace Ieedo
             var possibleDifficulties = new[] { 1, 2, 3 };
             foreach (var possibleDifficulty in possibleDifficulties)
             {
-                var optionData = new OptionData {
-                        Text = "",
-                        Color = Color.white,
-                        ShowIconSquare = false
-                    };
-                for (int i = 1; i <= 3; i++) {
+                var optionData = new OptionData
+                {
+                    Text = "",
+                    Color = Color.white,
+                    ShowIconSquare = false
+                };
+                for (int i = 1; i <= 3; i++)
+                {
                     if (i <= possibleDifficulty)
                         optionData.Text += "\uf005";
                     else
@@ -584,15 +607,17 @@ namespace Ieedo
                 }
                 options.Add(optionData);
             }
-            optionsListPopup.ShowOptions(new LocalizedString("UI","creation_choose_difficulty"), options);
-            while (optionsListPopup.isActiveAndEnabled && !aborted) yield return null;
+            optionsListPopup.ShowOptions(new LocalizedString("UI", "creation_choose_difficulty"), options);
+            while (optionsListPopup.isActiveAndEnabled && !aborted)
+                yield return null;
             result.Value = possibleDifficulties[optionsListPopup.LatestSelectedOption];
             var selection = result.Value;
             frontCardUI.Data.Definition.Difficulty = selection;
             Statics.Data.SaveProfile();
             Statics.Data.SaveCardDefinitions();
             frontCardUI.RefreshUI();
-            if (autoReset) frontCardUI.AnimateToParent();
+            if (autoReset)
+                frontCardUI.AnimateToParent();
             SetSubEditMode(false);
         }
 
@@ -603,13 +628,16 @@ namespace Ieedo
             frontCardUI.transform.localPositionTransition(new Vector3(0, 200, 0), 0.25f);
             var options = new List<OptionData>();
             var possibleDays = new List<int>();
-            for (int i = 0; i < 3*7; i++) possibleDays.Add(i);
+            for (int i = 0; i < 3 * 7; i++)
+                possibleDays.Add(i);
             foreach (var possibleDay in possibleDays)
             {
                 var targetDate = DateTime.Now.AddDays(possibleDay);
                 var color = Color.white;
-                if (targetDate.DayOfWeek == DayOfWeek.Saturday) color = Color.red;
-                if (targetDate.DayOfWeek == DayOfWeek.Sunday) color = Color.red;
+                if (targetDate.DayOfWeek == DayOfWeek.Saturday)
+                    color = Color.red;
+                if (targetDate.DayOfWeek == DayOfWeek.Sunday)
+                    color = Color.red;
 
                 options.Add(
                     new OptionData
@@ -620,15 +648,17 @@ namespace Ieedo
                     }
                 );
             }
-            optionsListPopup.ShowOptions(new LocalizedString("UI","creation_choose_date"), options);
-            while (optionsListPopup.isActiveAndEnabled && !aborted) yield return null;
+            optionsListPopup.ShowOptions(new LocalizedString("UI", "creation_choose_date"), options);
+            while (optionsListPopup.isActiveAndEnabled && !aborted)
+                yield return null;
             result.Value = possibleDays[optionsListPopup.LatestSelectedOption];
             var selection = result.Value;
             frontCardUI.Data.ExpirationTimestamp = new Timestamp(DateTime.Now.AddDays(selection));
             Statics.Data.SaveProfile();
             Statics.Data.SaveCardDefinitions();
             frontCardUI.RefreshUI();
-            if (autoReset) frontCardUI.AnimateToParent();
+            if (autoReset)
+                frontCardUI.AnimateToParent();
             SetSubEditMode(false);
         }
 
@@ -651,15 +681,17 @@ namespace Ieedo
                     }
                 );
             }
-            optionsListPopup.ShowOptions(new LocalizedString("UI","creation_choose_subcategory"), options);
-            while (optionsListPopup.isActiveAndEnabled && !aborted) yield return null;
+            optionsListPopup.ShowOptions(new LocalizedString("UI", "creation_choose_subcategory"), options);
+            while (optionsListPopup.isActiveAndEnabled && !aborted)
+                yield return null;
             result.Value = subCategories[optionsListPopup.LatestSelectedOption];
             var selection = result.Value;
             frontCardUI.Data.Definition.SubCategory = selection.ID;
             Statics.Data.SaveProfile();
             Statics.Data.SaveCardDefinitions();
             frontCardUI.RefreshUI();
-            if (autoReset) frontCardUI.AnimateToParent();
+            if (autoReset)
+                frontCardUI.AnimateToParent();
             SetSubEditMode(false);
         }
 
@@ -667,15 +699,16 @@ namespace Ieedo
         {
             SetSubEditMode(true);
             frontCardUI.transform.localPositionTransition(new Vector3(0, -150, 0), 0.25f);
-            frontCardUI.transform.localScaleTransition(Vector3.one*1.2f, 0.25f);
-            frontCardUI.transform.localEulerAnglesTransform(new Vector3(0,10,0), 0.25f);
-            optionsListPopup.ShowOptions(new LocalizedString("UI","creation_enter_title"), new List<OptionData>(), isTextEntry:true);
+            frontCardUI.transform.localScaleTransition(Vector3.one * 1.2f, 0.25f);
+            frontCardUI.transform.localEulerAnglesTransform(new Vector3(0, 10, 0), 0.25f);
+            optionsListPopup.ShowOptions(new LocalizedString("UI", "creation_enter_title"), new List<OptionData>(), isTextEntry: true);
             yield return WaitForInputField(TitleInputField, frontCardUI.Title);
             optionsListPopup.CloseImmediate();
             frontCardUI.Data.Definition.Title.DefaultText = TitleInputField.text;
             Statics.Data.SaveProfile();
             Statics.Data.SaveCardDefinitions();
-            if (autoReset) frontCardUI.AnimateToParent();
+            if (autoReset)
+                frontCardUI.AnimateToParent();
             SetSubEditMode(false);
         }
 
@@ -683,15 +716,16 @@ namespace Ieedo
         {
             SetSubEditMode(true);
             frontCardUI.transform.localPositionTransition(new Vector3(0, 120, 0), 0.25f);
-            frontCardUI.transform.localScaleTransition(Vector3.one*1.2f, 0.25f);
-            frontCardUI.transform.localEulerAnglesTransform(new Vector3(0,10,0), 0.25f);
-            optionsListPopup.ShowOptions(new LocalizedString("UI","creation_enter_description"), new List<OptionData>(), isTextEntry:true);
+            frontCardUI.transform.localScaleTransition(Vector3.one * 1.2f, 0.25f);
+            frontCardUI.transform.localEulerAnglesTransform(new Vector3(0, 10, 0), 0.25f);
+            optionsListPopup.ShowOptions(new LocalizedString("UI", "creation_enter_description"), new List<OptionData>(), isTextEntry: true);
             yield return WaitForInputField(DescriptionInputField, frontCardUI.Description);
             optionsListPopup.CloseImmediate();
             frontCardUI.Data.Definition.Description.DefaultText = DescriptionInputField.text;
             Statics.Data.SaveProfile();
             Statics.Data.SaveCardDefinitions();
-            if (autoReset) frontCardUI.AnimateToParent();
+            if (autoReset)
+                frontCardUI.AnimateToParent();
             SetSubEditMode(false);
         }
 
@@ -704,7 +738,8 @@ namespace Ieedo
             {
                 inputField.ActivateInputField();
                 yield return null; // Must wait one frame
-                while (inputField.isFocused) yield return null;
+                while (inputField.isFocused)
+                    yield return null;
             } while (inputField.text.IsNullOrEmpty() && !aborted);
         }
 
@@ -720,11 +755,11 @@ namespace Ieedo
             TitleInputField.text = cardUI.Title.text;
             TitleInputField.placeholder.enabled = TitleInputField.text == "";
 
-            SetupButton(EditDifficultyButton, () => StartCoroutine(EditDifficultyCO(autoReset:true)));
-            SetupButton(EditDateButton, () => StartCoroutine(EditDateCO(autoReset:true)));
-            SetupButton(EditSubCategoryButton, () => StartCoroutine(EditSubCategoryCO(cardUI.Data.Definition.CategoryDefinition, autoReset:true)));
-            SetupButton(EditTitleButton, () => StartCoroutine(EditTitleCO(autoReset:true)));
-            SetupButton(EditDescriptionButton, () => StartCoroutine(EditDescriptionCO(autoReset:true)));
+            SetupButton(EditDifficultyButton, () => StartCoroutine(EditDifficultyCO(autoReset: true)));
+            SetupButton(EditDateButton, () => StartCoroutine(EditDateCO(autoReset: true)));
+            SetupButton(EditSubCategoryButton, () => StartCoroutine(EditSubCategoryCO(cardUI.Data.Definition.CategoryDefinition, autoReset: true)));
+            SetupButton(EditTitleButton, () => StartCoroutine(EditTitleCO(autoReset: true)));
+            SetupButton(EditDescriptionButton, () => StartCoroutine(EditDescriptionCO(autoReset: true)));
 
             SetupButton(DeleteCardButton, () =>
             {

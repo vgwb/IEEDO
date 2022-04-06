@@ -58,7 +58,7 @@ namespace Ieedo
             // Debug.Log("Analytics myActivity");
         }
 
-        public void Card(string action, string category = "")
+        public void Card(string action, CardData card)
         {
             if (!AnalyticsEnabled)
                 return;
@@ -66,7 +66,7 @@ namespace Ieedo
             var parameters = new Dictionary<string, object>()
             {
                 { "myCardAction", action },
-                { "myCardCategory", category },
+                { "myCardCategory", card.Definition.ToString() },
             };
 
             Events.CustomData("myCard", parameters);
