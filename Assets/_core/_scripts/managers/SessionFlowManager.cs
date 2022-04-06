@@ -30,19 +30,21 @@ namespace Ieedo
                 StartCoroutine(AssessmentFlowCO()); // @note: needs to be a StartCoroutine so we can stop it
                 while (IsInsideAssessment) yield return null;
             }
-
-            // Review flow
-            uiPillarsScreen.SwitchViewMode(PillarsViewMode.Review);
-            yield return new WaitForSeconds(0.5f);
-            bool hasCardsToValidate = Statics.Data.Profile.Cards.HasCardsWithStatus(CardValidationStatus.Completed);
-            if (hasCardsToValidate)
-            {
-                yield return Statics.Screens.ShowDialog("UI/session_hint_review","UI/ok");
-                uiPillarsScreen.HandleSelectPillar(uiPillarsScreen.PillarsManager.PillarViews[UICardListScreen.COMPLETED_CARDS_PILLAR_INDEX], UICardListScreen.COMPLETED_CARDS_PILLAR_INDEX);
-            }
             else
             {
-                yield return Statics.Screens.ShowDialog("UI/session_hint_review_empty","UI/ok");
+                // Review flow
+                uiPillarsScreen.SwitchViewMode(PillarsViewMode.Review);
+                yield return new WaitForSeconds(0.5f);
+                bool hasCardsToValidate = Statics.Data.Profile.Cards.HasCardsWithStatus(CardValidationStatus.Completed);
+                if (hasCardsToValidate)
+                {
+                    yield return Statics.Screens.ShowDialog("UI/session_hint_review","UI/ok");
+                    uiPillarsScreen.HandleSelectPillar(uiPillarsScreen.PillarsManager.PillarViews[UICardListScreen.COMPLETED_CARDS_PILLAR_INDEX], UICardListScreen.COMPLETED_CARDS_PILLAR_INDEX);
+                }
+                else
+                {
+                    yield return Statics.Screens.ShowDialog("UI/session_hint_review_empty","UI/ok");
+                }
             }
 
             // Creation flow
