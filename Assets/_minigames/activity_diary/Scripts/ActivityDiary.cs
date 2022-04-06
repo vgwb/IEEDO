@@ -17,12 +17,14 @@ namespace Ieedo.games.diary
     public class ActivityDiary : ActivityManager
     {
         public TMP_Text DateText;
+        public TMP_Text PageText;
         public TMP_InputField InputText;
         public GameObject BtnNext;
         public GameObject BtnPrev;
 
         public List<Page> Pages = new List<Page>();
         private int currentPageNumber;
+        private int totalPageNumber;
 
         protected override void SetupActivity(int currentLevel)
         {
@@ -55,7 +57,8 @@ namespace Ieedo.games.diary
             // {
             //     Debug.LogError(page.Date + ": " + page.Text);
             // }
-            currentPageNumber = 1;
+            currentPageNumber = Pages.Count();
+            totalPageNumber = Pages.Count();
             updateUI();
         }
 
@@ -66,6 +69,7 @@ namespace Ieedo.games.diary
 
             DateText.text = Pages[currentPageNumber - 1].Date.ToString("dd-MM-yyyy");
             InputText.text = Pages[currentPageNumber - 1].Text;
+            PageText.text = currentPageNumber + " / " + totalPageNumber;
         }
 
         public void OnBtnDone()
@@ -75,18 +79,20 @@ namespace Ieedo.games.diary
 
         public void OnBtnNext()
         {
-            if (currentPageNumber > 1)
+            Debug.Log("OnBtnNext " + currentPageNumber);
+            if (currentPageNumber < Pages.Count)
             {
-                currentPageNumber--;
+                currentPageNumber++;
                 updateUI();
             }
         }
 
         public void OnBtnPrev()
         {
-            if (currentPageNumber < Pages.Count)
+            Debug.Log("OnBtnPrev " + currentPageNumber);
+            if (currentPageNumber > 1)
             {
-                currentPageNumber++;
+                currentPageNumber--;
                 updateUI();
             }
         }
