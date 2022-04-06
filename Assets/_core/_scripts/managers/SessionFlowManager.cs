@@ -61,7 +61,7 @@ namespace Ieedo
                 if (suggestToDoList)
                 {
                     // Creation flow
-                    yield return new WaitForSeconds(0.25f);
+                    yield return new WaitForSeconds(1f);
                     Statics.Screens.GoToTodoList();
                     yield return new WaitForSeconds(0.5f);
                     yield return Statics.Screens.ShowDialog("UI/session_hint_create_card","UI/ok");
