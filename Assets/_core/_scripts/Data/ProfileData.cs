@@ -57,7 +57,7 @@ namespace Ieedo
         public string Country;
         public Language Language;
         public bool IsNewProfile;
-        public bool SfxEnabled;
+        public bool SfxDisabled;
     }
 
     #region Activities

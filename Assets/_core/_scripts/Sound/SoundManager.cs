@@ -21,7 +21,7 @@ namespace Ieedo
 
         public void PlaySfx(SfxEnum sfx)
         {
-            if (!Statics.Data.Profile.Description.SfxEnabled)
+            if (Statics.Data.Profile.Description.SfxDisabled)
                 return;
 
             var sound = SoundsList.Sounds.Find(item => item.id == sfx);
