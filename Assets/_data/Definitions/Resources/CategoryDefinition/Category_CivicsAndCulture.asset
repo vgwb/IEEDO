@@ -101,7 +101,7 @@ MonoBehaviour:
         m_WaitForCompletion: 0
         m_LocalVariables: []
       DefaultText: B 2
-    Icon: \uf64f
+    Icon: \uf756
   - ID: 1000
     Title:
       Key:
