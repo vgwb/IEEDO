@@ -49,7 +49,7 @@ MonoBehaviour:
         m_WaitForCompletion: 0
         m_LocalVariables: []
       DefaultText: B 1
-    Icon: \uf66f
+    Icon: \uf557
   - ID: 501
     Title:
       Key:
@@ -62,7 +62,7 @@ MonoBehaviour:
         m_WaitForCompletion: 0
         m_LocalVariables: []
       DefaultText: B 2
-    Icon: \uf630
+    Icon: \uf7a6
   - ID: 502
     Title:
       Key:
@@ -75,7 +75,33 @@ MonoBehaviour:
         m_WaitForCompletion: 0
         m_LocalVariables: []
       DefaultText: B 2
-    Icon: \uf008
+    Icon: \uf66f
+  - ID: 503
+    Title:
+      Key:
+        m_TableReference:
+          m_TableCollectionName: GUID:c72a3e86bc710427d83055e5adb307c5
+        m_TableEntryReference:
+          m_KeyId: 28366007577812992
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      DefaultText: B 2
+    Icon: \uf1ea
+  - ID: 504
+    Title:
+      Key:
+        m_TableReference:
+          m_TableCollectionName: GUID:c72a3e86bc710427d83055e5adb307c5
+        m_TableEntryReference:
+          m_KeyId: 28366007577812993
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      DefaultText: B 2
+    Icon: \uf64f
   - ID: 1000
     Title:
       Key:

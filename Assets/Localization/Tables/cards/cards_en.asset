@@ -80,11 +80,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602241
-    m_Localized: Cultural event
+    m_Localized: Performing arts
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602242
-    m_Localized: Media (news, TV, books...)
+    m_Localized: Exposition
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602243
@@ -161,6 +161,18 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 22763239081189376
     m_Localized: Career
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28366007577812992
+    m_Localized: Media (news, TV, books...)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28366007577812993
+    m_Localized: Institutions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28366007577812994
+    m_Localized: Self-advocacy
     m_Metadata:
       m_Items: []
   references:

@@ -197,7 +197,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093248
-    m_Localized: You should be with your Coach, let's switch to Session Mode
+    m_Localized: You should be with your Coach, let's start a Coaching Session
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093249
@@ -227,11 +227,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093255
-    m_Localized: Start Session
+    m_Localized: Start Session <not used anymore>
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093256
-    m_Localized: Are you sure you want to start a Coaching Session?
+    m_Localized: Are you sure you want to start a Coaching Session? <not used anymore>
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093257

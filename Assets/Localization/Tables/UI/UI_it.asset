@@ -109,12 +109,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40543073474469888
-    m_Localized: Punteggio + {Punteggio}
+    m_Localized: Punteggio + {Score}
     m_Metadata:
       m_Items:
       - rid: 3992833648747610129
   - m_Id: 40544570652254208
-    m_Localized: Ben fatto!
+    m_Localized: Molto bene!
     m_Metadata:
       m_Items: []
   - m_Id: 40544588826173440
@@ -198,8 +198,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093248
-    m_Localized: "Dovresti essere con il tuo allenatore, passiamo alla modalit\xE0
-      di sessione"
+    m_Localized: Dovresti stare con il tuo allenatore, iniziamo una sessione di coaching
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093249
@@ -229,11 +228,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093255
-    m_Localized: Start Session.
+    m_Localized: "Inizia la sessione <non utilizzata pi\xF9>"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093256
-    m_Localized: Sei sicuro di voler iniziare una sessione di coaching?
+    m_Localized: "Sei sicuro di voler iniziare una sessione di coaching? <Non usato
+      pi\xF9>"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093257
