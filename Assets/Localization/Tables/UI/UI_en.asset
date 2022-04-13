@@ -258,6 +258,19 @@ MonoBehaviour:
     m_Localized: Quit Questionnaire
     m_Metadata:
       m_Items: []
+  - m_Id: 55672507820089344
+    m_Localized: Play Next Level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55672507820089345
+    m_Localized: Playing a few minutes a day will help your brain stay fit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55672507820089346
+    m_Localized: Writing a few lines about how you feel every day is good very good
+      practice for your wellbeing
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
