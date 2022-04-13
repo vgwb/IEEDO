@@ -37,8 +37,15 @@ namespace Ieedo
             newSlotRT.name = $"Slot{HeldSlots.Count}";
             newSlotRT.gameObject.SetActive(true);
             newSlotRT.localScale = Vector3.one * CardScale;
-            if (uiCard == null) uiCard = UICardManager.I.CreateCardUI(cardData, newSlotRT);
-            else uiCard.transform.SetParent(newSlotRT, true);
+            var targetParent = newSlotRT;
+            if (uiCard == null)
+            {
+                uiCard = UICardManager.I.CreateCardUI(cardData, targetParent);
+            }
+            else
+            {
+                uiCard.transform.SetParent(targetParent, true);
+            }
 
             uiCard.AnimateToParent();
 
@@ -53,11 +60,12 @@ namespace Ieedo
             var index = HeldCards.IndexOf(uiCard);
             if (index >= 0)
             {
-                //Destroy(HeldCards[index].gameObject);
                 HeldCards.RemoveAt(index);
 
                 Destroy(HeldSlots[index].gameObject);
                 HeldSlots.RemoveAt(index);
+
+                SortListAgain();
             }
         }
 
@@ -66,15 +74,22 @@ namespace Ieedo
             uiCard.OnInteraction(() => OnCardClicked(uiCard));
         }
 
+        private Func<CardData, CardData, int> currentSortFunc;
+
+        public void SortListAgain()
+        {
+            SortList(currentSortFunc);
+        }
+
         public void SortList(Func<CardData, CardData, int> sortFunc)
         {
+            currentSortFunc = sortFunc;
             HeldCards.Sort((ui1, ui2) => sortFunc(ui1.Data, ui2.Data));
             for (int i = 0; i < HeldCards.Count; i++)
             {
-                // Move to the correct slot (TODO: animate the sorting)
+                // Move to the correct slot
                 HeldCards[i].transform.SetParent(HeldSlots[i].transform);
-                HeldCards[i].transform.localScale = Vector3.one;
-                HeldCards[i].transform.localPosition = Vector3.zero;
+                HeldCards[i].AnimateToParent();
             }
         }
 

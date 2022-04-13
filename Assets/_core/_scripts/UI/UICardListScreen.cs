@@ -124,7 +124,7 @@ namespace Ieedo
                     slot.transform.localEulerAngles = new Vector3(0, 0f, -5f);
                 }
                 // TODO: Re-Sort only if it was edited, and then animate to the new sort order
-                //CardsList.SortList(SortByExpirationDate);
+                CardsList.SortListAgain();
                 cardUI.RefreshUI();
             });
 

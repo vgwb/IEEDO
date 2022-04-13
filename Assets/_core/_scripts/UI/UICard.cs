@@ -126,5 +126,15 @@ namespace Ieedo
             rt.localPositionTransition_z(0, period);
             rt.localScaleTransition(Vector3.one, period);
         }
+
+        public void AnimateTo(Transform targetTr)
+        {
+            var rt = transform as RectTransform;
+            var period = 0.1f;
+            rt.rotationTransition(targetTr.rotation, period);
+            rt.anchoredPositionTransition(targetTr.position, period);
+            rt.positionTransition_z(0, period);
+            rt.localScaleTransition(targetTr.localScale, period);
+        }
     }
 }
