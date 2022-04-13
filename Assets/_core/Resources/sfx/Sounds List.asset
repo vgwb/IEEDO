@@ -32,5 +32,5 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 45c4713df8913488d99553c4d8bd9282, type: 3}
     Volume: 1
   - id: 7
-    audioClip: {fileID: 8300000, guid: da7a41f0228bb451eb4df807d58f23e4, type: 3}
+    audioClip: {fileID: 8300000, guid: 7ee27596ba24249e09c384671ebbe96f, type: 3}
     Volume: 1
