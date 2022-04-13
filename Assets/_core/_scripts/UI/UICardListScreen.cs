@@ -131,7 +131,7 @@ namespace Ieedo
 
         }
 
-        private IEnumerator DeleteCardCO(bool isNewCard, UICard card, bool withConfirmation = true)
+        private IEnumerator DeleteCardCO(bool isNewCard, UICard uiCard, bool withConfirmation = true)
         {
             if (!isNewCard && withConfirmation)
             {
@@ -148,13 +148,17 @@ namespace Ieedo
             }
 
             if (!isNewCard)
-                CardsList.RemoveCard(card);
+                CardsList.RemoveCard(uiCard);
             StopEditing();
+
+            yield return AnimateCardOut(uiCard, 0, -1);
+            if (uiCard != null)
+                Destroy(uiCard.gameObject);
             CloseFrontView();
 
-            Statics.Analytics.Card("delete", card.Data);
-            Statics.Cards.DeleteCard(card.Data);
-            Statics.Cards.DeleteCardDefinition(card.Data.Definition);
+            Statics.Analytics.Card("delete", uiCard.Data);
+            Statics.Cards.DeleteCard(uiCard.Data);
+            Statics.Cards.DeleteCardDefinition(uiCard.Data.Definition);
         }
 
         private IEnumerator CompleteCardCO(UICard uiCard)
@@ -201,10 +205,10 @@ namespace Ieedo
             yield return new WaitForSeconds(0.25f);
         }
 
-        private IEnumerator AnimateCardOut(UICard uiCard, int direction)
+        private IEnumerator AnimateCardOut(UICard uiCard, int direction, int yDirection = 1)
         {
             var period = 0.5f;
-            uiCard.transform.localPositionTransition(new Vector3(direction * 300, 600, -150), period, LeanEase.Accelerate);
+            uiCard.transform.localPositionTransition(new Vector3(direction * 300, yDirection * 600, -150), period, LeanEase.Accelerate);
             uiCard.transform.localEulerAnglesTransform(new Vector3(0, direction * 20, direction * 20), period, LeanEase.Accelerate);
             yield return new WaitForSeconds(period);
         }
@@ -566,7 +570,7 @@ namespace Ieedo
                 if (createCardFlowCo != null) StopCoroutine(createCardFlowCo);
                 createCardFlowCo = null;
 
-                yield return DeleteCardCO(false, frontCardUI, withConfirmation:false);
+                yield return DeleteCardCO(true, frontCardUI, withConfirmation:false);
                 abortingCreation = false;
             }
         }
