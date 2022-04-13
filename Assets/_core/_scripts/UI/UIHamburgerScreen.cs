@@ -27,7 +27,7 @@ namespace Ieedo
             initialised = true;
             btnAbortActivity = AddButton("action_abort_activity", () =>
             {
-                StartCoroutine(AbortActivityCO());
+                AppManager.I.StartCoroutine(AbortActivityCO());
                 CloseImmediate();
             });
 
