@@ -54,7 +54,7 @@ namespace Ieedo
         }
         private void SetSourceLocale()
         {
-            SoundManager.I.PlaySfx(SfxEnum.click);
+            //SoundManager.I.PlaySfx(SfxEnum.click);
             var targetLocale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.App.ApplicationConfig.SourceLocale);
             if (targetLocale != null)
                 LocalizationSettings.SelectedLocale = targetLocale;

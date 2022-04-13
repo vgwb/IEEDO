@@ -21,11 +21,13 @@ namespace Ieedo
 
         public void OpenImmediate()
         {
+            SoundManager.I.PlaySfx(SfxEnum.open);
             gameObject.SetActive(true);
         }
 
         public void CloseImmediate()
         {
+            SoundManager.I.PlaySfx(SfxEnum.close);
             gameObject.SetActive(false);
         }
 
@@ -44,6 +46,7 @@ namespace Ieedo
         public IEnumerator OpenCO()
         {
             yield return OnPreOpen();
+            SoundManager.I.PlaySfx(SfxEnum.open);
             if (BlockerBG != null)
             {
                 var col = BlockerBG.color;
@@ -69,6 +72,7 @@ namespace Ieedo
 
         public IEnumerator CloseCO()
         {
+            SoundManager.I.PlaySfx(SfxEnum.close);
             if (BlockerBG != null)
             {
                 var col = BlockerBG.color;
