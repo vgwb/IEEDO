@@ -25,7 +25,6 @@ namespace Ieedo
             if (Statics.Data.Profile.Description.SfxDisabled)
                 return;
 
-
             var sound = SoundsList.Sounds.Find(item => item.id == sfx);
             if (sound != null)
             {

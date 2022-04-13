@@ -30,10 +30,13 @@ namespace Ieedo
 
         public void ShowOptions(LocalizedString titleKey, List<OptionData> options, bool isTextEntry = false)
         {
-            if (isTextEntry && !Application.isEditor) EditorBG.gameObject.SetActive(false);
-            else EditorBG.gameObject.SetActive(true);
+            if (isTextEntry && !Application.isEditor)
+                EditorBG.gameObject.SetActive(false);
+            else
+                EditorBG.gameObject.SetActive(true);
 
-            if (Options == null) Options = ButtonsPivot.GetComponentsInChildren<UIOptionLine>(true);
+            if (Options == null)
+                Options = ButtonsPivot.GetComponentsInChildren<UIOptionLine>(true);
             Tooltip.Text.Key = titleKey;
             for (var i = 0; i < options.Count; i++)
             {
@@ -88,6 +91,7 @@ namespace Ieedo
         public System.Action<int> OnSelectOption;
         private void SelectOption(int selectedOption)
         {
+            SoundManager.I.PlaySfx(SfxEnum.click);
             OnSelectOption?.Invoke(selectedOption);
             LatestSelectedOption = selectedOption;
             CloseImmediate();

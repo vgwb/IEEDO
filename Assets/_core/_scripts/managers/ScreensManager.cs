@@ -83,6 +83,7 @@ namespace Ieedo
 
         public void GoTo(ScreenID toId)
         {
+            SoundManager.I.PlaySfx(SfxEnum.click);
             var uiBottomScreen = Statics.Screens.Get(ScreenID.Bottom) as UIBottomScreen;
             LeanButton toButton = null;
             switch (toId)

@@ -441,6 +441,7 @@ namespace Ieedo
 
         private void SwitchToFrontViewMode(FrontViewMode viewMode)
         {
+            SoundManager.I.PlaySfx(SfxEnum.open);
             CurrentFrontViewMode = viewMode;
             switch (viewMode)
             {
@@ -571,11 +572,12 @@ namespace Ieedo
                 }
 
                 abortingCreation = true;
-                if (createCardFlowCo != null) StopCoroutine(createCardFlowCo);
+                if (createCardFlowCo != null)
+                    StopCoroutine(createCardFlowCo);
                 createCardFlowCo = null;
                 SetEditButtonsEnabled(true);
 
-                yield return DeleteCardCO(true, frontCardUI, withConfirmation:false);
+                yield return DeleteCardCO(true, frontCardUI, withConfirmation: false);
                 abortingCreation = false;
             }
         }
