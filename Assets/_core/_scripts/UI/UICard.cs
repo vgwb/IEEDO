@@ -84,13 +84,13 @@ namespace Ieedo
             else if (hasExpirationDate && data.IsExpired)
             {
                 StampGO.SetActive(true);
-                StampGO.GetComponent<Animation>().Play("pulse_icon");
+                StampGO.GetComponent<Animation>().Play("stamp_pulse");
                 StampIcon.text = Regex.Unescape("\uf54c");
             }
             else if(hasExpirationDate && data.IsDueToday)
             {
                 StampGO.SetActive(true);
-                StampGO.GetComponent<Animation>().Play("pulse_icon");
+                StampGO.GetComponent<Animation>().Play("stamp_pulse");
                 StampIcon.text = Regex.Unescape("\uf06a");
             }
             else

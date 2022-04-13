@@ -163,6 +163,8 @@ namespace Ieedo
             frontCardUI.Data.Status = CardValidationStatus.Completed;
             Statics.Data.SaveProfile();
 
+            yield return AnimateCardStatusChange(uiCard, 20);
+
             yield return AnimateCardOut(uiCard, +1);
             if (uiCard != null)
                 Destroy(uiCard.gameObject);
@@ -170,9 +172,18 @@ namespace Ieedo
 
             Statics.Screens.GoTo(ScreenID.Pillars);
 
-            Statics.Score.AddScore(20);
             Statics.Analytics.Card("complete", uiCard.Data);
             OnCompletedCard?.Invoke();
+        }
+
+        private IEnumerator AnimateCardStatusChange(UICard uiCard, int score)
+        {
+            uiCard.StampGO.GetComponent<Animation>().Play("stamp_exit");
+            yield return new WaitForSeconds(0.25f);
+            Statics.Score.AddScore(score);
+            uiCard.RefreshUI();
+            uiCard.StampGO.GetComponent<Animation>().Play("stamp_enter");
+            yield return new WaitForSeconds(0.25f);
         }
 
         private IEnumerator AnimateCardOut(UICard uiCard, int direction)
@@ -202,6 +213,8 @@ namespace Ieedo
             frontCardUI.Data.Status = CardValidationStatus.Todo;
             Statics.Data.SaveProfile();
 
+            yield return AnimateCardStatusChange(uiCard, -20);
+
             yield return AnimateCardOut(uiCard, -1);
             if (uiCard != null)
                 Destroy(uiCard.gameObject);
@@ -211,7 +224,6 @@ namespace Ieedo
             var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
             uiPillarsScreen.PillarsManager.CurrentFocusedPillar.RemoveSingleCard(uiCard.Data);
 
-            Statics.Score.AddScore(-20);
             Statics.Analytics.Card("uncomplete", uiCard.Data);
         }
 
@@ -223,6 +235,8 @@ namespace Ieedo
             frontCardUI.Data.Status = CardValidationStatus.Validated;
             Statics.Data.SaveProfile();
 
+            yield return AnimateCardStatusChange(uiCard, 50);
+
             yield return AnimateCardOut(uiCard, 0);
             if (uiCard != null)
                 Destroy(uiCard.gameObject);
@@ -233,7 +247,6 @@ namespace Ieedo
             uiPillarsScreen.PillarsManager.PillarViews[COMPLETED_CARDS_PILLAR_INDEX].RemoveSingleCard(uiCard.Data);
             uiPillarsScreen.PillarsManager.PillarViews[VALIDATED_CARDS_PILLAR_INDEX].AddSingleCard(uiCard.Data);
 
-            Statics.Score.AddScore(50);
             Statics.Analytics.Card("validate", uiCard.Data);
             OnValidateCard?.Invoke();
         }
@@ -251,23 +264,35 @@ namespace Ieedo
             if (selection.Value == 1)
                 yield break;
 
-            CardsList.RemoveCard(frontCardUI);
+            var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
+            if (uiPillarsScreen.ViewMode == PillarsViewMode.Review)
+            {
+                CardsList.RemoveCard(frontCardUI);
+            }
 
             frontCardUI.Data.ValidationTimestamp = Timestamp.None;
             frontCardUI.Data.Status = CardValidationStatus.Completed;
             Statics.Data.SaveProfile();
 
-            yield return AnimateCardOut(uiCard, 0);
-            if (uiCard != null)
-                Destroy(uiCard.gameObject);
-            CloseFrontView();
+            yield return AnimateCardStatusChange(uiCard, -50);
 
-            // Add the new card
-            var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
-            uiPillarsScreen.PillarsManager.PillarViews[VALIDATED_CARDS_PILLAR_INDEX].RemoveSingleCard(uiCard.Data);
-            uiPillarsScreen.PillarsManager.PillarViews[COMPLETED_CARDS_PILLAR_INDEX].AddSingleCard(uiCard.Data);
+            if (uiPillarsScreen.ViewMode == PillarsViewMode.Review)
+            {
+                yield return AnimateCardOut(uiCard, 0);
+                if (uiCard != null)
+                    Destroy(uiCard.gameObject);
+                CloseFrontView();
 
-            Statics.Score.AddScore(-50);
+                // Add the new card
+                uiPillarsScreen.PillarsManager.PillarViews[VALIDATED_CARDS_PILLAR_INDEX].RemoveSingleCard(uiCard.Data);
+                uiPillarsScreen.PillarsManager.PillarViews[COMPLETED_CARDS_PILLAR_INDEX].AddSingleCard(uiCard.Data);
+            }
+            else
+            {
+                // Must refresh buttons
+                SwitchToFrontViewMode(FrontViewMode.Completed);
+            }
+
             Statics.Analytics.Card("unvalidate", uiCard.Data);
         }
 
@@ -444,7 +469,7 @@ namespace Ieedo
                     }
                     else
                     {
-                        ValidateCardButton.transform.localScaleTransition(Vector3.zero, 0.25f);
+                        ValidateCardButton.transform.localScale = Vector3.zero;
                     }
                     break;
                 case FrontViewMode.Validated:

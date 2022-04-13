@@ -29,7 +29,7 @@ namespace Ieedo
                 //if (answer.Value == 0)
                 //{
                     SetSessionMode(SessionMode.Session);
-                    yield return Statics.SessionFlow.SessionFlowCO();
+                    Statics.SessionFlow.StartSessionMode();
                 //}
             }
             else
@@ -39,7 +39,7 @@ namespace Ieedo
                 if (answer.Value == 0)
                 {
                     SetSessionMode(SessionMode.Solo);
-                    // TODO: abort the flow (stop the coroutine)
+                    Statics.SessionFlow.StopSessionMode();
                 }
             }
         }

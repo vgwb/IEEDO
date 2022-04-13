@@ -13,7 +13,12 @@ namespace Ieedo
         public bool IsInsideAssessment;
 
         public Coroutine assessmentCo;
+        public Coroutine sessionFlowCo;
 
+        public void StartSessionMode()
+        {
+            StartCoroutine(Statics.SessionFlow.SessionFlowCO());
+        }
         public IEnumerator SessionFlowCO()
         {
             var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
@@ -136,6 +141,16 @@ namespace Ieedo
             IsInsideAssessment = false;
         }
 
+        public void StopSessionMode()
+        {
+            SkipAssessment();
+            if (sessionFlowCo != null)
+            {
+                StopCoroutine(sessionFlowCo);
+                sessionFlowCo = null;
+            }
+        }
+
         public void SkipAssessment()
         {
             if (assessmentCo != null)
@@ -167,5 +182,6 @@ namespace Ieedo
             Statics.Screens.GoTo(ScreenID.Pillars);
             IsInsideAssessment = false;
         }
+
     }
 }
