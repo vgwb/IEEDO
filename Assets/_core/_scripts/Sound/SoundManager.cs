@@ -10,13 +10,14 @@ namespace Ieedo
         public static SoundManager I;
         public SoundsListDefinition SoundsList;
 
-        private AudioSource audioSource;
+        public AudioSource audioSource;
+        public AudioSource audioSourceWin;
 
         public void Awake()
         {
             if (I == null)
                 I = this;
-            audioSource = gameObject.GetComponent<AudioSource>();
+            // audioSource = gameObject.GetComponent<AudioSource>();
         }
 
         public void PlaySfx(SfxEnum sfx)
@@ -28,9 +29,16 @@ namespace Ieedo
             var sound = SoundsList.Sounds.Find(item => item.id == sfx);
             if (sound != null)
             {
-                audioSource.clip = sound.audioClip;
-                audioSource.volume = sound.Volume;
-                audioSource.Play();
+                if (sfx == SfxEnum.win)
+                {
+                    audioSourceWin.Play();
+                }
+                else
+                {
+                    audioSource.clip = sound.audioClip;
+                    audioSource.volume = sound.Volume;
+                    audioSource.Play();
+                }
             }
             else
             {
