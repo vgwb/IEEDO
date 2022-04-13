@@ -131,8 +131,7 @@ MonoBehaviour:
       m_Items:
       - rid: 3992833648747610129
   - m_Id: 40549731508445184
-    m_Localized: IEDO si concentra su 6 categorie, controlliamo loro uno per uno
-      ...
+    m_Localized: Categorie
     m_Metadata:
       m_Items: []
   - m_Id: 40550106646994944
@@ -180,7 +179,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48151452267077632
-    m_Localized: Generare pilastri casuali.
+    m_Localized: Generare pilastri casuali
     m_Metadata:
       m_Items: []
   - m_Id: 48154400376250368
@@ -271,7 +270,36 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 55672507820089346
     m_Localized: "Scrivere alcune righe su come ti senti ogni giorno \xE8 una buona
-      buona pratica per il tuo benessere"
+      pratica per il tuo benessere"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55765040130629632
+    m_Localized: "Lasciare attivit\xE0"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55765040134823936
+    m_Localized: Sei sicuro di voler uscire?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768156938903552
+    m_Localized: Livello completato
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768156938903553
+    m_Localized: Riprova
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768156938903554
+    m_Localized: Ben fatto!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768156938903555
+    m_Localized: un
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768998995763200
+    m_Localized: IEDO si concentra su 6 categorie, controlliamo loro uno per uno
+      ...
     m_Metadata:
       m_Items: []
   references:

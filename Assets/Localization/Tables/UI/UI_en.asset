@@ -131,7 +131,7 @@ MonoBehaviour:
       m_Items:
       - rid: 3992833648747610127
   - m_Id: 40549731508445184
-    m_Localized: IEEDO focuses on 6 categories, let's check them one by one...
+    m_Localized: Categories
     m_Metadata:
       m_Items: []
   - m_Id: 40550106646994944
@@ -267,8 +267,36 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 55672507820089346
-    m_Localized: Writing a few lines about how you feel every day is good very good
-      practice for your wellbeing
+    m_Localized: Writing a few lines about how you feel every day is a good practice
+      for your wellbeing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55765040130629632
+    m_Localized: Leave Activity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55765040134823936
+    m_Localized: Are you sure you want to quit?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768156938903552
+    m_Localized: Level Completed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768156938903553
+    m_Localized: Try Again
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768156938903554
+    m_Localized: Well done!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768156938903555
+    m_Localized: a
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768998995763200
+    m_Localized: IEEDO focuses on 6 categories, let's check them one by one...
     m_Metadata:
       m_Items: []
   references:
