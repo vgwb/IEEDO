@@ -41,7 +41,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40525760616488960
-    m_Localized: "\u062A\u0642\u064A\u064A\u0645"
+    m_Localized: "\u062A\u0642\u062F\u064A\u0631"
     m_Metadata:
       m_Items: []
   - m_Id: 40525580437577728
@@ -140,11 +140,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40550106646994944
-    m_Localized: "\u0634\u0627\u0645\u0644\u0629"
+    m_Localized: "\u0625\u062C\u0645\u0627\u0644\u064A"
     m_Metadata:
       m_Items: []
   - m_Id: 40557809452736512
-    m_Localized: "\u0644\u0639\u0628"
+    m_Localized: "\u064A\u0644\u0639\u0628"
     m_Metadata:
       m_Items: []
   - m_Id: 43003187146022912
@@ -204,7 +204,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48447397204844544
-    m_Localized: "\u0645\u0646\u062C\u0632"
+    m_Localized: "\u0645\u0646\u062A\u0647\u064A"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762365927424
@@ -294,6 +294,24 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 51375399755522048
     m_Localized: "\u0625\u0646\u0647\u0627\u0621 \u0627\u0644\u0627\u0633\u062A\u0628\u064A\u0627\u0646"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55672507820089344
+    m_Localized: "\u0627\u0644\u0639\u0628 \u0627\u0644\u0645\u0633\u062A\u0648\u0649
+      \u0627\u0644\u062A\u0627\u0644\u064A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55672507820089345
+    m_Localized: "\u0627\u0644\u0644\u0639\u0628 \u0628\u0636\u0639 \u062F\u0642\u0627\u0626\u0642
+      \u0641\u064A \u0627\u0644\u064A\u0648\u0645 \u0633\u0648\u0641 \u064A\u0633\u0627\u0639\u062F
+      \u0639\u0642\u0644\u0643 \u0639\u0644\u0649 \u0627\u0644\u0627\u0633\u062A\u0645\u0631\u0627\u0631"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55672507820089346
+    m_Localized: "\u0643\u062A\u0627\u0628\u0629 \u0628\u0639\u0636 \u0627\u0644\u062E\u0637\u0648\u0637
+      \u062D\u0648\u0644 \u0643\u064A\u0641 \u062A\u0634\u0639\u0631 \u0643\u0644
+      \u064A\u0648\u0645 \u0647\u064A \u0645\u0645\u0627\u0631\u0633\u0629 \u062C\u064A\u062F\u0629
+      \u062C\u062F\u0627 \u0644\u0631\u0641\u0627\u0647\u064A\u062A\u0643"
     m_Metadata:
       m_Items: []
   references:

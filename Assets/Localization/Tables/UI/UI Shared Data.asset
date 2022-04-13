@@ -247,6 +247,18 @@ MonoBehaviour:
     m_Key: action_skip_assessment
     m_Metadata:
       m_Items: []
+  - m_Id: 55672507820089344
+    m_Key: play_next_level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55672507820089345
+    m_Key: activity_result_play_everyday
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55672507820089346
+    m_Key: activity_result_write_everyday
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
