@@ -1,13 +1,18 @@
 using System;
 using System.Collections;
+using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Tables;
+using Lean.Gui;
 
 namespace Ieedo
 {
     public class UIHamburgerScreen : UIScreen
     {
         public override ScreenID ID => ScreenID.Hamburger;
+
+        public LeanToggle SfxToggle;
+
 
         public UIButton ButtonPrefab;
 
@@ -23,8 +28,14 @@ namespace Ieedo
         private bool initialised = false;
         void Init()
         {
-            if (initialised) return;
+            if (initialised)
+                return;
             initialised = true;
+
+            SfxToggle.On = !Statics.Data.Profile.Description.SfxDisabled;
+
+
+            // Debug buttons
             btnAbortActivity = AddButton("action_abort_activity", () =>
             {
                 AppManager.I.StartCoroutine(AbortActivityCO());
@@ -116,7 +127,7 @@ namespace Ieedo
         {
             var btn = Instantiate(ButtonPrefab, ButtonPrefab.transform.parent);
             SetupButton(btn, action);
-            btn.Key = new LocalizedString("UI",locKey);
+            btn.Key = new LocalizedString("UI", locKey);
             btn.gameObject.SetActive(true);
             return btn;
         }
@@ -129,5 +140,13 @@ namespace Ieedo
             btn.gameObject.SetActive(true);
             return btn;
         }
+
+        public void OnSetSfx(bool _sfxOn)
+        {
+            Debug.Log("Sfx " + _sfxOn);
+            Statics.Data.Profile.Description.SfxDisabled = !_sfxOn;
+            Statics.Data.SaveProfile();
+        }
+
     }
 }
