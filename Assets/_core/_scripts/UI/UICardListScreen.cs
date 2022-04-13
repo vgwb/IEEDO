@@ -20,6 +20,7 @@ namespace Ieedo
         public RectTransform FrontViewPivot;
 
         public UIButton CreateCardButton;
+        private Coroutine createCardFlowCo;
 
         public UIOptionsListPopup optionsListPopup;
 
@@ -55,7 +56,6 @@ namespace Ieedo
 
         public UIButton DeleteCardButton;
         public UIButton CloseFrontViewButton;
-        public UIButton CreationAbortButton;
 
         public override ScreenID ID => ScreenID.CardList;
         public bool KeepPillars { get; set; }
@@ -68,8 +68,10 @@ namespace Ieedo
             SetupButton(UnCompleteCardButton_View, () => StartCoroutine(UnCompleteCardCO(frontCardUI)));
             SetupButton(UnCompleteCardButton_Review, () => StartCoroutine(UnCompleteCardCO(frontCardUI)));
             SetupButton(EditCardButton, () => SwitchToFrontViewMode(FrontViewMode.Edit));
-            SetupButton(CreateCardButton, () => StartCoroutine(CreateCardFlowCO()));
-            SetupButton(CreationAbortButton, () => StartCoroutine(CreationAbortCO()));
+            SetupButton(CreateCardButton, () =>
+            {
+                createCardFlowCo = StartCoroutine(CreateCardFlowCO());
+            });
 
             CardsList.OnCardClicked = uiCard =>
             {
@@ -89,6 +91,12 @@ namespace Ieedo
 
             SetupButton(CloseFrontViewButton, () =>
             {
+                if (CurrentFrontViewMode == FrontViewMode.Create)
+                {
+                    StartCoroutine(CreationAbortCO());
+                    return;
+                }
+
                 if (optionsListPopup.isActiveAndEnabled)
                 {
                     // We should actually close this (quit editing)
@@ -123,9 +131,9 @@ namespace Ieedo
 
         }
 
-        private IEnumerator DeleteCardCO(bool isNewCard, UICard card)
+        private IEnumerator DeleteCardCO(bool isNewCard, UICard card, bool withConfirmation = true)
         {
-            if (!isNewCard)
+            if (!isNewCard && withConfirmation)
             {
                 var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
                 Ref<int> selection = new Ref<int>();
@@ -236,7 +244,12 @@ namespace Ieedo
 
         private IEnumerator ValidateCardCO(UICard uiCard)
         {
-            CardsList.RemoveCard(frontCardUI);
+            var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
+
+            if (uiPillarsScreen.ViewMode == PillarsViewMode.Review)
+            {
+                CardsList.RemoveCard(frontCardUI);
+            }
 
             frontCardUI.Data.ValidationTimestamp = Timestamp.Now;
             frontCardUI.Data.Status = CardValidationStatus.Validated;
@@ -244,15 +257,22 @@ namespace Ieedo
 
             yield return AnimateCardStatusChange(uiCard, 50);
 
-            yield return AnimateCardOut(uiCard, 0);
-            if (uiCard != null)
-                Destroy(uiCard.gameObject);
-            CloseFrontView();
+            if (uiPillarsScreen.ViewMode == PillarsViewMode.Review)
+            {
+                yield return AnimateCardOut(uiCard, 0);
+                if (uiCard != null)
+                    Destroy(uiCard.gameObject);
+                CloseFrontView();
 
-            // Add the new card
-            var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
-            uiPillarsScreen.PillarsManager.PillarViews[COMPLETED_CARDS_PILLAR_INDEX].RemoveSingleCard(uiCard.Data);
-            uiPillarsScreen.PillarsManager.PillarViews[VALIDATED_CARDS_PILLAR_INDEX].AddSingleCard(uiCard.Data);
+                // Add the new card
+                uiPillarsScreen.PillarsManager.PillarViews[COMPLETED_CARDS_PILLAR_INDEX].RemoveSingleCard(uiCard.Data);
+                uiPillarsScreen.PillarsManager.PillarViews[VALIDATED_CARDS_PILLAR_INDEX].AddSingleCard(uiCard.Data);
+            }
+            else
+            {
+                // Must refresh buttons
+                SwitchToFrontViewMode(FrontViewMode.Validated);
+            }
 
             Statics.Analytics.Card("validate", uiCard.Data);
             OnValidateCard?.Invoke();
@@ -537,18 +557,23 @@ namespace Ieedo
             yield return Statics.Screens.ShowQuestionFlow("UI/abort_creation_title", "UI/abort_creation_question", new[] { "UI/yes", "UI/no" }, answer);
             if (answer.Value == 0)
             {
-                aborted = true;
-                StopCoroutine(CreateCardFlowCO());
-                yield return DeleteCardCO(false, frontCardUI);
-                aborted = false;
+                if (optionsListPopup.isActiveAndEnabled)
+                {
+                    optionsListPopup.CloseImmediate();
+                }
+
+                abortingCreation = true;
+                if (createCardFlowCo != null) StopCoroutine(createCardFlowCo);
+                createCardFlowCo = null;
+
+                yield return DeleteCardCO(false, frontCardUI, withConfirmation:false);
+                abortingCreation = false;
             }
         }
 
-        private bool aborted;
+        private bool abortingCreation;
         public IEnumerator CreateCardFlowCO()
         {
-            CreationAbortButton.gameObject.SetActive(true);
-
             // Create and show the card
             var cardDef = Statics.Cards.GenerateCardDefinition(
                 new CardDefinition
@@ -603,7 +628,6 @@ namespace Ieedo
 
             frontCardUI.AnimateToParent();
 
-            CreationAbortButton.gameObject.SetActive(false);
             EditSubCategoryButton.enabled = true;
             EditDifficultyButton.enabled = true;
             EditDateButton.enabled = true;
@@ -636,7 +660,7 @@ namespace Ieedo
             }
             CloseFrontViewButton.gameObject.SetActive(true);
             optionsListPopup.ShowOptions(new LocalizedString("UI", "creation_choose_category"), options);
-            while (optionsListPopup.isActiveAndEnabled && !aborted)
+            while (optionsListPopup.isActiveAndEnabled && !abortingCreation)
                 yield return null;
             CloseFrontViewButton.gameObject.SetActive(false);
             catResult.Value = categories[optionsListPopup.LatestSelectedOption];
@@ -681,7 +705,7 @@ namespace Ieedo
             }
             CloseFrontViewButton.gameObject.SetActive(true);
             optionsListPopup.ShowOptions(new LocalizedString("UI", "creation_choose_difficulty"), options);
-            while (optionsListPopup.isActiveAndEnabled && !aborted)
+            while (optionsListPopup.isActiveAndEnabled && !abortingCreation)
                 yield return null;
             CloseFrontViewButton.gameObject.SetActive(false);
             result.Value = possibleDifficulties[optionsListPopup.LatestSelectedOption];
@@ -727,7 +751,7 @@ namespace Ieedo
             }
             CloseFrontViewButton.gameObject.SetActive(true);
             optionsListPopup.ShowOptions(new LocalizedString("UI", "creation_choose_date"), options);
-            while (optionsListPopup.isActiveAndEnabled && !aborted)
+            while (optionsListPopup.isActiveAndEnabled && !abortingCreation)
                 yield return null;
             CloseFrontViewButton.gameObject.SetActive(false);
             result.Value = possibleDays[optionsListPopup.LatestSelectedOption];
@@ -765,7 +789,7 @@ namespace Ieedo
             }
             CloseFrontViewButton.gameObject.SetActive(true);
             optionsListPopup.ShowOptions(new LocalizedString("UI", "creation_choose_subcategory"), options);
-            while (optionsListPopup.isActiveAndEnabled && !aborted)
+            while (optionsListPopup.isActiveAndEnabled && !abortingCreation)
                 yield return null;
             CloseFrontViewButton.gameObject.SetActive(false);
             result.Value = subCategories[optionsListPopup.LatestSelectedOption];
@@ -829,7 +853,7 @@ namespace Ieedo
                 yield return null; // Must wait one frame
                 while (inputField.isFocused)
                     yield return null;
-            } while (inputField.text.IsNullOrEmpty() && !aborted);
+            } while (inputField.text.IsNullOrEmpty() && !abortingCreation);
         }
 
 
