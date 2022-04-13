@@ -18,9 +18,9 @@ namespace Ieedo
     {
         public override ScreenID ID => ScreenID.Top;
 
-        public LeanButton InstantTranslationButton;
-        public LeanButton HamburgerButton;
-        public LeanButton SessionModeButton;
+        public UIButton InstantTranslationButton;
+        public UIButton HamburgerButton;
+        public UIButton SessionModeButton;
 
         void Start()
         {
@@ -30,10 +30,12 @@ namespace Ieedo
                 SoundManager.I.PlaySfx(SfxEnum.click);
                 if (Statics.Screens.Get(ScreenID.Hamburger).IsOpen)
                 {
+                    HamburgerButton.Text = "\uf0c9";
                     Statics.Screens.Close(ScreenID.Hamburger);
                 }
                 else
                 {
+                    HamburgerButton.Text = "\uf00d";
                     Statics.Screens.Open(ScreenID.Hamburger);
                 }
             });
