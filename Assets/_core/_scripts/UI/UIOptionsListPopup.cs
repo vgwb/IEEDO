@@ -52,6 +52,9 @@ namespace Ieedo
                     Options[i].Icon.Text.SetText(string.Empty);
                 }
 
+                Options[i].ButtonIconsText.transform.parent.GetComponent<RectTransform>().sizeDelta = new Vector2(option.ShowIconSquare ? -100 : 0, 0);
+                Options[i].Button.Cap.GetComponent<RectTransform>().sizeDelta = new Vector2(option.ShowIconSquare ? -100 : 0, 0);
+
                 if (option.UseLocString)
                 {
                     Options[i].Button.Key = option.Key;
