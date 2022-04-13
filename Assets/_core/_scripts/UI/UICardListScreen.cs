@@ -73,6 +73,17 @@ namespace Ieedo
 
             CardsList.OnCardClicked = uiCard =>
             {
+                // Per-Card view mode when we are in pillars view (completed / validated cards)
+                switch (uiCard.Data.Status)
+                {
+                    case CardValidationStatus.Completed:
+                        desiredFrontViewMode = FrontViewMode.Completed;
+                        break;
+                    case CardValidationStatus.Validated:
+                        desiredFrontViewMode = FrontViewMode.Validated;
+                        break;
+                }
+
                 OpenFrontView(uiCard, desiredFrontViewMode);
             };
 
@@ -424,8 +435,17 @@ namespace Ieedo
 
                     UnCompleteCardButton_Review.transform.localScale = Vector3.zero;
                     UnCompleteCardButton_Review.transform.localScaleTransition(Vector3.one, 0.25f);
-                    ValidateCardButton.transform.localScale = Vector3.zero;
-                    ValidateCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
+
+                    bool canValidate = Statics.Mode.SessionMode == SessionMode.Session;
+                    if (canValidate)
+                    {
+                        ValidateCardButton.transform.localScale = Vector3.zero;
+                        ValidateCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
+                    }
+                    else
+                    {
+                        ValidateCardButton.transform.localScaleTransition(Vector3.zero, 0.25f);
+                    }
                     break;
                 case FrontViewMode.Validated:
                     EditModeCardInteraction.SetActive(false);
