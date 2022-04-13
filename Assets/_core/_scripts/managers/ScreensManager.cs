@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Lean.Gui;
 using UnityEngine;
-using UnityEngine.Localization;
 
 namespace Ieedo
 {
@@ -37,7 +36,8 @@ namespace Ieedo
         }
         public IEnumerator OpenCO(ScreenID id)
         {
-            if (!Screens.ContainsKey(id)) yield break;
+            if (!Screens.ContainsKey(id))
+                yield break;
             OpenScreens.Add(id);
             yield return Screens[id].OpenCO();
         }
@@ -48,21 +48,24 @@ namespace Ieedo
         }
         public IEnumerator CloseCO(ScreenID id)
         {
-            if (!Screens.ContainsKey(id)) yield break;
+            if (!Screens.ContainsKey(id))
+                yield break;
             OpenScreens.Remove(id);
             yield return Screens[id].CloseCO();
         }
 
         public void OpenImmediate(ScreenID id)
         {
-            if (!Screens.ContainsKey(id)) return;
+            if (!Screens.ContainsKey(id))
+                return;
             OpenScreens.Add(id);
             Screens[id].OpenImmediate();
         }
 
         public void CloseImmediate(ScreenID id)
         {
-            if (!Screens.ContainsKey(id)) return;
+            if (!Screens.ContainsKey(id))
+                return;
             OpenScreens.Remove(id);
             Screens[id].CloseImmediate();
         }
@@ -71,7 +74,8 @@ namespace Ieedo
 
         public IEnumerator TransitionToCO(ScreenID toId)
         {
-            if (CurrentFlowScreenID != ScreenID.None) yield return CloseCO(CurrentFlowScreenID);
+            if (CurrentFlowScreenID != ScreenID.None)
+                yield return CloseCO(CurrentFlowScreenID);
             CurrentFlowScreenID = toId;
             OnSwitchToScreen?.Invoke(toId);
             yield return OpenCO(CurrentFlowScreenID);
@@ -93,7 +97,8 @@ namespace Ieedo
                     toButton = uiBottomScreen.btnActivities;
                     break;
             }
-            if (toButton != null) uiBottomScreen.ToggleSelection(toButton);
+            if (toButton != null)
+                uiBottomScreen.ToggleSelection(toButton);
 
             Statics.I.StartCoroutine(TransitionToCO(toId));
         }
@@ -117,11 +122,13 @@ namespace Ieedo
         {
             var dialogScreen = Statics.Screens.Get(ScreenID.Dialog) as UIDialogPopup;
             yield return dialogScreen.ShowDialog(LocString.FromStr(contentKey), LocString.FromStr(answerKey));
-            while (dialogScreen.IsOpen) yield return null;
+            while (dialogScreen.IsOpen)
+                yield return null;
         }
 
         public void GoToTodoList()
         {
+            SoundManager.I.PlaySfx(SfxEnum.click);
             var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
             uiCardListScreen.LoadToDoCards();
             uiCardListScreen.KeepPillars = false;
@@ -129,6 +136,5 @@ namespace Ieedo
         }
 
         #endregion
-
     }
 }
