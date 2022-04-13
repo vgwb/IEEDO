@@ -42,9 +42,10 @@ namespace Ieedo
 
                 // Detect the front pillar while rotating
                 int nPillars = 6;
-                var iFrontPillar = (nPillars-1) - (int)((30f+transform.localEulerAngles.y) / (360/nPillars));
+                var iFrontPillar = (nPillars - 1) - (int)((30f + transform.localEulerAngles.y) / (360 / nPillars));
                 iFrontPillar -= 2;
-                if (iFrontPillar < 0) iFrontPillar += nPillars;
+                if (iFrontPillar < 0)
+                    iFrontPillar += nPillars;
                 for (int i = 0; i < PillarViews.Count; i++)
                 {
                     PillarViews[i].ShowLabel(iFrontPillar == i);
@@ -52,7 +53,8 @@ namespace Ieedo
 
             }
 
-            if (!TEST) return;
+            if (!TEST)
+                return;
             ShowData(TestData, true);
         }
 
@@ -67,7 +69,8 @@ namespace Ieedo
         public void RefreshPositionsAndRotations(bool animated = false)
         {
             animated = false; // TODO: fix this
-            if (currentData == null) return;
+            if (currentData == null)
+                return;
             var data = currentData;
             for (var iPillar = 0; iPillar < data.Pillars.Count; iPillar++)
             {
@@ -76,10 +79,12 @@ namespace Ieedo
                 var locPos = pillarView.transform.localPosition;
                 var delta = Vector3.forward * Radius;
                 var deltaAngle = 360f / 6;
-                if (data.ReviewMode) deltaAngle = 360f / 2;
+                if (data.ReviewMode)
+                    deltaAngle = 360f / 2;
 
                 var startRot = 0;
-                if (data.ReviewMode) startRot = 90;
+                if (data.ReviewMode)
+                    startRot = 90;
                 var rot = Quaternion.AngleAxis(startRot + deltaAngle * iPillar, Vector3.up);
 
                 locPos = rot * delta;
@@ -90,8 +95,10 @@ namespace Ieedo
                 {
                     locEul.y += iPillar == 0 ? 90 : -90;
                 }
-                if (animated) pillarView.transform.localEulerAnglesTransform(locEul, 0.5f);
-                else  pillarView.transform.localEulerAngles = locEul;
+                if (animated)
+                    pillarView.transform.localEulerAnglesTransform(locEul, 0.5f);
+                else
+                    pillarView.transform.localEulerAngles = locEul;
             }
 
         }
@@ -112,7 +119,8 @@ namespace Ieedo
             }
 
             autoRotating = !data.ReviewMode;
-            if (!autoRotating) transform.localRotation = Quaternion.identity;
+            if (!autoRotating)
+                transform.localRotation = Quaternion.identity;
         }
 
         public void RefreshPillarView(int iPillar, bool showOnlyNewlyAddedCards)
@@ -127,8 +135,9 @@ namespace Ieedo
         public PillarView CurrentFocusedPillar => currentFocusedPillar;
         public void SetFocus(PillarView focusOnPillar = null)
         {
-            if (focusOnPillar != null && focusOnPillar == currentFocusedPillar) return;
-
+            if (focusOnPillar != null && focusOnPillar == currentFocusedPillar)
+                return;
+            SoundManager.I.PlaySfx(SfxEnum.open);
             foreach (PillarView view in PillarViews)
             {
                 if (view != focusOnPillar)
@@ -160,7 +169,8 @@ namespace Ieedo
             }
             else
             {
-                if (!autoRotating) transform.localRotationTransition(Quaternion.identity, 0.5f);
+                if (!autoRotating)
+                    transform.localRotationTransition(Quaternion.identity, 0.5f);
             }
         }
 
