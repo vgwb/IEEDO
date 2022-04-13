@@ -149,6 +149,10 @@ namespace Ieedo
                 StopCoroutine(sessionFlowCo);
                 sessionFlowCo = null;
             }
+
+            Statics.Screens.GoTo(ScreenID.Pillars);
+            var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
+            uiPillarsScreen.SwitchViewMode(PillarsViewMode.Categories);
         }
 
         public void SkipAssessment()
