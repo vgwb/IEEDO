@@ -28,7 +28,7 @@ MonoBehaviour:
   Type: 1
   Image: {fileID: 0}
   SceneName: game_blank
-  ScoreToUnlock: 1000
+  ScoreToUnlock: 8000
   MaxLevel: 10
   references:
     version: 2

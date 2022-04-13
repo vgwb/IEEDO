@@ -28,7 +28,7 @@ MonoBehaviour:
   Type: 2
   Image: {fileID: 21300000, guid: 393831506ef7bac498d56e03f3157fa3, type: 3}
   SceneName: game_connect4
-  ScoreToUnlock: 200
+  ScoreToUnlock: 2000
   MaxLevel: 10
   references:
     version: 2
