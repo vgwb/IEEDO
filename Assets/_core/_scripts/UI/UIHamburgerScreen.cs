@@ -27,7 +27,7 @@ namespace Ieedo
             initialised = true;
             btnAbortActivity = AddButton("action_abort_activity", () =>
             {
-                AbortActivity();
+                StartCoroutine(AbortActivityCO());
                 CloseImmediate();
             });
 
@@ -102,10 +102,14 @@ namespace Ieedo
         }
 
 
-        private void AbortActivity()
+        private IEnumerator AbortActivityCO()
         {
-            Statics.ActivityFlow.CurrentActivityManager.CloseActivity(new ActivityResult(ActivityResultState.Quit, 0));
-            CloseImmediate();
+            var answer = new Ref<int>();
+            yield return Statics.Screens.ShowQuestionFlow("UI/activity_abort_title", "UI/activity_abort_question", new[] { "UI/yes", "UI/no" }, answer);
+            if (answer.Value == 0)
+            {
+                Statics.ActivityFlow.CurrentActivityManager.CloseActivity(new ActivityResult(ActivityResultState.Quit, 0));
+            }
         }
 
         private UIButton AddButton(string locKey, System.Action action)
