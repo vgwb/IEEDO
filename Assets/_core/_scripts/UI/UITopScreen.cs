@@ -27,6 +27,7 @@ namespace Ieedo
             SetupButtonDown(InstantTranslationButton, SetTargetLocale, SetSourceLocale);
             SetupButton(HamburgerButton, () =>
             {
+                SoundManager.I.PlaySfx(SfxEnum.click);
                 if (Statics.Screens.Get(ScreenID.Hamburger).IsOpen)
                 {
                     Statics.Screens.Close(ScreenID.Hamburger);
@@ -45,6 +46,7 @@ namespace Ieedo
 
         private void SetTargetLocale()
         {
+            SoundManager.I.PlaySfx(SfxEnum.click);
             var targetLocale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.App.ApplicationConfig.TargetLocale);
             if (targetLocale != null)
                 LocalizationSettings.SelectedLocale = targetLocale;
@@ -52,6 +54,7 @@ namespace Ieedo
         }
         private void SetSourceLocale()
         {
+            SoundManager.I.PlaySfx(SfxEnum.click);
             var targetLocale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.App.ApplicationConfig.SourceLocale);
             if (targetLocale != null)
                 LocalizationSettings.SelectedLocale = targetLocale;
