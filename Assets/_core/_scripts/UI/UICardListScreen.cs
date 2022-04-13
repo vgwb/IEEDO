@@ -89,6 +89,13 @@ namespace Ieedo
 
             SetupButton(CloseFrontViewButton, () =>
             {
+                if (optionsListPopup.isActiveAndEnabled)
+                {
+                    // We should actually close this (quit editing)
+                    optionsListPopup.CloseImmediate();
+                    return;
+                }
+
                 bool canCloseFront = !frontCardUI.Description.text.IsNullOrEmpty() && !frontCardUI.Title.text.IsNullOrEmpty();
                 if (!canCloseFront)
                 {
@@ -627,9 +634,11 @@ namespace Ieedo
                     }
                 );
             }
+            CloseFrontViewButton.gameObject.SetActive(true);
             optionsListPopup.ShowOptions(new LocalizedString("UI", "creation_choose_category"), options);
             while (optionsListPopup.isActiveAndEnabled && !aborted)
                 yield return null;
+            CloseFrontViewButton.gameObject.SetActive(false);
             catResult.Value = categories[optionsListPopup.LatestSelectedOption];
             var selectedCategory = catResult.Value;
             frontCardUI.Data.Definition.Category = selectedCategory.ID;
@@ -670,9 +679,11 @@ namespace Ieedo
                 }
                 options.Add(optionData);
             }
+            CloseFrontViewButton.gameObject.SetActive(true);
             optionsListPopup.ShowOptions(new LocalizedString("UI", "creation_choose_difficulty"), options);
             while (optionsListPopup.isActiveAndEnabled && !aborted)
                 yield return null;
+            CloseFrontViewButton.gameObject.SetActive(false);
             result.Value = possibleDifficulties[optionsListPopup.LatestSelectedOption];
             var selection = result.Value;
             frontCardUI.Data.Definition.Difficulty = selection;
@@ -714,9 +725,11 @@ namespace Ieedo
                     }
                 );
             }
+            CloseFrontViewButton.gameObject.SetActive(true);
             optionsListPopup.ShowOptions(new LocalizedString("UI", "creation_choose_date"), options);
             while (optionsListPopup.isActiveAndEnabled && !aborted)
                 yield return null;
+            CloseFrontViewButton.gameObject.SetActive(false);
             result.Value = possibleDays[optionsListPopup.LatestSelectedOption];
             var selection = result.Value;
             frontCardUI.Data.ExpirationTimestamp = new Timestamp(DateTime.Now.AddDays(selection));
@@ -750,9 +763,11 @@ namespace Ieedo
                     }
                 );
             }
+            CloseFrontViewButton.gameObject.SetActive(true);
             optionsListPopup.ShowOptions(new LocalizedString("UI", "creation_choose_subcategory"), options);
             while (optionsListPopup.isActiveAndEnabled && !aborted)
                 yield return null;
+            CloseFrontViewButton.gameObject.SetActive(false);
             result.Value = subCategories[optionsListPopup.LatestSelectedOption];
             var selection = result.Value;
             frontCardUI.Data.Definition.SubCategory = selection.ID;
