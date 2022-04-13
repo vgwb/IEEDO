@@ -114,17 +114,6 @@ namespace Ieedo
 
                 StopEditing();
                 CloseFrontView();
-
-                CardsList.AddCard(cardUI.Data, cardUI);
-
-                if (CurrentListViewMode == ListViewMode.ToDo)
-                {
-                    var cardIndex = CardsList.HeldCards.IndexOf(cardUI);
-                    var slot = CardsList.HeldSlots[cardIndex];
-                    slot.transform.localEulerAngles = new Vector3(0, 0f, -5f);
-                }
-                // TODO: Re-Sort only if it was edited, and then animate to the new sort order
-                CardsList.SortListAgain();
                 cardUI.RefreshUI();
             });
 
@@ -532,8 +521,6 @@ namespace Ieedo
                 }
                 CardsList.SetupInListInteraction(frontCardUI);
             }
-            frontCardUI = null;
-            prevFrontCardParent = null;
             CurrentFrontViewMode = FrontViewMode.None;
 
             if (CurrentListViewMode == ListViewMode.ToDo)
@@ -541,6 +528,22 @@ namespace Ieedo
                 CreateCardButton.transform.localScale = Vector3.zero;
                 CreateCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
             }
+
+            // Make sure that the card is added correctly
+            if (frontCardUI != null)
+            {
+                CardsList.AddCard(frontCardUI.Data, frontCardUI);
+                if (CurrentListViewMode == ListViewMode.ToDo)
+                {
+                    var cardIndex = CardsList.HeldCards.IndexOf(frontCardUI);
+                    var slot = CardsList.HeldSlots[cardIndex];
+                    slot.transform.localEulerAngles = new Vector3(0, 0f, -5f);
+                }
+                CardsList.SortListAgain();
+            }
+
+            frontCardUI = null;
+            prevFrontCardParent = null;
         }
 
 
