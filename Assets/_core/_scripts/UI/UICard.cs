@@ -15,6 +15,7 @@ namespace Ieedo
         public UIText Icon;
         public UIIconsBar Difficulty;
         public UIText Date;
+        public Image DateBase;
 
         public GameObject StampGO;
         public UIText StampIcon;
@@ -30,6 +31,9 @@ namespace Ieedo
         {
             AssignCard(data);
         }
+
+
+        public AnimationClip pulseIconClip;
 
         public void AssignCard(CardData data)
         {
@@ -57,6 +61,7 @@ namespace Ieedo
             Category.gameObject.SetActive(def.CategoryDefinition != null);
             Subcategory.gameObject.SetActive(def.CategoryDefinition != null);
             var color = def.CategoryDefinition ? def.CategoryDefinition.Color : new Color(0.8f, 0.8f, 0.8f, 1f);
+            var lightColor = color * 1.4f;
             ColorBase.color = color;
             Difficulty.gameObject.SetActive(def.Difficulty > 0);
             Difficulty.SetValue(def.Difficulty);
@@ -67,34 +72,41 @@ namespace Ieedo
 
             foreach (var borderImage in BorderImages)
             {
-                borderImage.color = color * 1.4f;
+                borderImage.color = lightColor;
             }
 
             StampIcon.color = color;
             if (data.Status == CardValidationStatus.Validated)
             {
+                DateBase.color = lightColor;
                 StampGO.SetActive(true);
+                StampGO.GetComponent<Animation>().clip = null;
                 StampIcon.text = Regex.Unescape("\uf560");
             }
             else if (data.Status == CardValidationStatus.Completed)
             {
+                DateBase.color = lightColor;
                 StampGO.SetActive(true);
+                StampGO.GetComponent<Animation>().clip = null;
                 StampIcon.text = Regex.Unescape("\uf00c");
             }
             else if (hasExpirationDate && data.IsExpired)
             {
+                DateBase.color = Color.white;
                 StampGO.SetActive(true);
-                StampGO.GetComponent<Animation>().Play("stamp_pulse");
+                StampGO.GetComponent<Animation>().clip = pulseIconClip;
                 StampIcon.text = Regex.Unescape("\uf071");
             }
             else if(hasExpirationDate && data.IsDueToday)
             {
+                DateBase.color = Color.white;
                 StampGO.SetActive(true);
-                StampGO.GetComponent<Animation>().Play("stamp_pulse");
+                StampGO.GetComponent<Animation>().clip = pulseIconClip;
                 StampIcon.text = Regex.Unescape("\uf017");
             }
             else
             {
+                DateBase.color = Color.white;
                 StampGO.SetActive(false);
             }
         }

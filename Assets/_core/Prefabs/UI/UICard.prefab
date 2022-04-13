@@ -1081,6 +1081,7 @@ MonoBehaviour:
   Icon: {fileID: 8122805968022469174}
   Difficulty: {fileID: 6541755279490168591}
   Date: {fileID: 6706833588280728278}
+  DateBase: {fileID: 1128892280795821696}
   StampGO: {fileID: 5587270733802415400}
   StampIcon: {fileID: 66168846751012978}
   InteractionButton: {fileID: 6057331460964608352}
@@ -1090,6 +1091,7 @@ MonoBehaviour:
   - {fileID: 5814309552034901237}
   - {fileID: 5954377242013023896}
   - {fileID: 4777832014696204234}
+  pulseIconClip: {fileID: 7400000, guid: bf312951819e46743ba919dd5ffcd211, type: 2}
 --- !u!1 &5587270733802415400
 GameObject:
   m_ObjectHideFlags: 0

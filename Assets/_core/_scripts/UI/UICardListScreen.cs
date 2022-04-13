@@ -91,7 +91,7 @@ namespace Ieedo
 
             SetupButton(CloseFrontViewButton, () =>
             {
-                if (CurrentFrontViewMode == FrontViewMode.Create)
+                if (CurrentFrontViewMode == FrontViewMode.Create && createCardFlowCo != null)
                 {
                     StartCoroutine(CreationAbortCO());
                     return;
@@ -133,7 +133,7 @@ namespace Ieedo
 
         private IEnumerator DeleteCardCO(bool isNewCard, UICard uiCard, bool withConfirmation = true)
         {
-            if (!isNewCard && withConfirmation)
+            if (withConfirmation)
             {
                 var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
                 Ref<int> selection = new Ref<int>();
@@ -548,11 +548,15 @@ namespace Ieedo
         public void SetSubEditMode(bool choice)
         {
             CloseFrontViewButton.gameObject.SetActive(!choice);
-            EditSubCategoryButton.enabled = !choice;
-            EditDifficultyButton.enabled = !choice;
-            EditDateButton.enabled = !choice;
-            EditTitleButton.enabled = !choice;
-            EditDescriptionButton.enabled = !choice;
+            SetEditButtonsEnabled(!choice);
+        }
+        public void SetEditButtonsEnabled(bool choice)
+        {
+            EditSubCategoryButton.enabled = choice;
+            EditDifficultyButton.enabled = choice;
+            EditDateButton.enabled = choice;
+            EditTitleButton.enabled = choice;
+            EditDescriptionButton.enabled = choice;
         }
 
         public IEnumerator CreationAbortCO()
@@ -569,6 +573,7 @@ namespace Ieedo
                 abortingCreation = true;
                 if (createCardFlowCo != null) StopCoroutine(createCardFlowCo);
                 createCardFlowCo = null;
+                SetEditButtonsEnabled(true);
 
                 yield return DeleteCardCO(true, frontCardUI, withConfirmation:false);
                 abortingCreation = false;
@@ -632,14 +637,11 @@ namespace Ieedo
 
             frontCardUI.AnimateToParent();
 
-            EditSubCategoryButton.enabled = true;
-            EditDifficultyButton.enabled = true;
-            EditDateButton.enabled = true;
-            EditDescriptionButton.enabled = true;
-            EditTitleButton.enabled = true;
+            SetEditButtonsEnabled(true);
 
             Statics.Cards.AddCard(cardData);
             Statics.Analytics.Card("create", cardData);
+            createCardFlowCo = null;
         }
 
         private IEnumerator EditCategoryCO(bool autoReset = false)
