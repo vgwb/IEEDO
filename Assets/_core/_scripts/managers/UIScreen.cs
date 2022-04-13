@@ -99,11 +99,17 @@ namespace Ieedo
         protected void SetupButtonDown(LeanButton btn, Action downAction, Action upAction)
         {
             btn.OnDown.RemoveAllListeners();
-            btn.OnDown.AddListener(() => downAction());
+            btn.OnDown.AddListener(() =>
+            {
+                Statics.Input.RegisterUpAction(upAction);
+                downAction();
+            });
 
             btn.OnClick.RemoveAllListeners();
-            btn.OnClick.AddListener(() => upAction());
-            Statics.Input.RegisterUpAction(upAction);
+            btn.OnClick.AddListener(() =>
+            {
+                upAction();
+            });
         }
     }
 }

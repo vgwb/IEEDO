@@ -58,6 +58,7 @@ namespace Ieedo
             var targetLocale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.App.ApplicationConfig.SourceLocale);
             if (targetLocale != null)
                 LocalizationSettings.SelectedLocale = targetLocale;
+            Statics.Input.UnregisterUpAction(SetSourceLocale);
         }
 
         public TopBarMode Mode;

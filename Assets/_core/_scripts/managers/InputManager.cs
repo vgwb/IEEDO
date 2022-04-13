@@ -10,13 +10,17 @@ namespace Ieedo
 
         private List<Action> onUpActions = new List<Action>();
         public void RegisterUpAction(Action a) => onUpActions.Add(a);
+        public void UnregisterUpAction(Action a) => onUpActions.Remove(a);
 
         public void Update()
         {
             if (Input.GetMouseButtonUp(0))
             {
-                foreach (Action onUpAction in onUpActions)
+                for (var index = onUpActions.Count - 1; index >= 0; index--)
+                {
+                    Action onUpAction = onUpActions[index];
                     onUpAction();
+                }
             }
         }
 
