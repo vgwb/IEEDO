@@ -58,15 +58,11 @@ namespace Ieedo
         public void RemoveCard(UICard uiCard)
         {
             var index = HeldCards.IndexOf(uiCard);
-            if (index >= 0)
-            {
-                HeldCards.RemoveAt(index);
+            if (index < 0) return;
 
-                Destroy(HeldSlots[index].gameObject);
-                HeldSlots.RemoveAt(index);
+            HeldCards.RemoveAt(index);
 
-                SortListAgain();
-            }
+            SortListAgain();
         }
 
         public void SetupInListInteraction(UICard uiCard)
