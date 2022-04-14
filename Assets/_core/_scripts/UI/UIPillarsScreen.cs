@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using Lean.Common;
 using Lean.Touch;
 using Lean.Transition;
 using UnityEngine;
@@ -80,32 +81,32 @@ namespace Ieedo
                     pillarsData.ReviewMode = false;
                     break;
                 case PillarsViewMode.Review:
+                {
+                    var completedCards = Statics.Data.Profile.Cards.Where(x => x.Status == CardValidationStatus.Completed);
+                    var validatedCards = Statics.Data.Profile.Cards.Where(x => x.Status == CardValidationStatus.Validated);
+
+                    var pillarData = new PillarData
                     {
-                        var completedCards = Statics.Data.Profile.Cards.Where(x => x.Status == CardValidationStatus.Completed);
-                        var validatedCards = Statics.Data.Profile.Cards.Where(x => x.Status == CardValidationStatus.Validated);
+                        Color = Color.gray,
+                        Height = 0.5f,
+                        Cards = validatedCards.ToList(),
+                        LocalizedKey = new LocalizedString("UI", "pillar_validated"),
+                        IconString = "\uf560"
+                    };
+                    pillarsData.Pillars.Add(pillarData);
 
-                        var pillarData = new PillarData
-                        {
-                            Color = Color.gray,
-                            Height = 0.5f,
-                            Cards = validatedCards.ToList(),
-                            LocalizedKey = new LocalizedString("UI","pillar_validated"),
-                            IconString = "\uf560"
-                        };
-                        pillarsData.Pillars.Add(pillarData);
-
-                        pillarData = new PillarData
-                        {
-                            Color = new Color(0.3f,0.3f,0.3f,1f),
-                            Height = 0.5f,
-                            Cards = completedCards.ToList(),
-                            LocalizedKey = new LocalizedString("UI","pillar_completed"),
-                            IconString = "\uf00c"
-                        };
-                        pillarsData.Pillars.Add(pillarData);
-                    }
-                    pillarsData.ReviewMode = true;
-                    break;
+                    pillarData = new PillarData
+                    {
+                        Color = new Color(0.3f, 0.3f, 0.3f, 1f),
+                        Height = 0.5f,
+                        Cards = completedCards.ToList(),
+                        LocalizedKey = new LocalizedString("UI", "pillar_completed"),
+                        IconString = "\uf00c"
+                    };
+                    pillarsData.Pillars.Add(pillarData);
+                }
+                pillarsData.ReviewMode = true;
+                break;
             }
             return pillarsData;
         }
@@ -153,7 +154,8 @@ namespace Ieedo
         private bool isFocused;
         public void HandleSelectPillar(PillarView pillarView, int iPillar)
         {
-            if (PillarsManager.CurrentFocusedPillar == pillarView) return;
+            if (PillarsManager.CurrentFocusedPillar == pillarView)
+                return;
             AnimateToFocused();
 
             PillarsManager.SetFocus(pillarView);
@@ -177,9 +179,10 @@ namespace Ieedo
             uiCardListScreen.Open();
         }
 
-        private void HandleSelectPlane()
+        private void HandleSelectPlane(LeanSelect select)
         {
-            if (!isFocused) return;
+            if (!isFocused)
+                return;
             AnimateToUnfocused();
             PillarsManager.SetFocus();
 
@@ -189,8 +192,10 @@ namespace Ieedo
         private IEnumerator CloseCardList()
         {
             var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
-            if (uiCardListScreen.IsOpen) uiCardListScreen.Close();
-            while (uiCardListScreen.IsOpen) yield return null;
+            if (uiCardListScreen.IsOpen)
+                uiCardListScreen.Close();
+            while (uiCardListScreen.IsOpen)
+                yield return null;
         }
 
         #endregion
@@ -207,17 +212,17 @@ namespace Ieedo
                     var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
                     if (uiCardListScreen.KeepPillars)
                     {
-                        Camera3D.transform.localRotationTransition(Quaternion.Euler(41.5f,10f,0f), 0.25f, LeanEase.Decelerate);
+                        Camera3D.transform.localRotationTransition(Quaternion.Euler(41.5f, 10f, 0f), 0.25f, LeanEase.Decelerate);
                     }
                     else
                     {
                         isFocused = false;
-                        Camera3D.transform.localRotationTransition(Quaternion.Euler(41.5f,-50f,0f), 0.25f, LeanEase.Decelerate);
+                        Camera3D.transform.localRotationTransition(Quaternion.Euler(41.5f, -50f, 0f), 0.25f, LeanEase.Decelerate);
                     }
                     break;
                 case ScreenID.Activities:
                     isFocused = false;
-                    Camera3D.transform.localRotationTransition(Quaternion.Euler(41.5f,50f,0f), 0.25f, LeanEase.Decelerate);
+                    Camera3D.transform.localRotationTransition(Quaternion.Euler(41.5f, 50f, 0f), 0.25f, LeanEase.Decelerate);
                     break;
             }
         }
@@ -226,19 +231,20 @@ namespace Ieedo
 
         private void AnimateToFocused()
         {
-            if (isFocused) return;
+            if (isFocused)
+                return;
             isFocused = true;
             Camera3D.transform.localPositionTransition(new Vector3(0, 10.5f, -13), 0.5f);
-            Camera3D.transform.localRotationTransition(new Quaternion(0.276550651f,0.0829450935f,-0.0267626494f,0.957038999f), 0.5f);
+            Camera3D.transform.localRotationTransition(new Quaternion(0.276550651f, 0.0829450935f, -0.0267626494f, 0.957038999f), 0.5f);
         }
 
         private void AnimateToUnfocused()
         {
             isFocused = false;
-            Camera3D.transform.localPositionTransition(new Vector3(0,15.1000004f,-13.3999996f), 0.5f);
-            Camera3D.transform.localRotationTransition(new Quaternion(0.354291022f,0,0,0.935135245f), 0.5f);
+            Camera3D.transform.localPositionTransition(new Vector3(0, 15.1000004f, -13.3999996f), 0.5f);
+            Camera3D.transform.localRotationTransition(new Quaternion(0.354291022f, 0, 0, 0.935135245f), 0.5f);
 
-            PillarsManager.RefreshPositionsAndRotations(animated:true);
+            PillarsManager.RefreshPositionsAndRotations(animated: true);
         }
 
         #endregion

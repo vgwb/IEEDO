@@ -26,7 +26,7 @@ namespace Ieedo
         void Awake()
         {
             var selectable = GetComponentInChildren<LeanSelectableByFinger>();
-            selectable.OnSelected.AddListener(() => OnSelected?.Invoke());
+            selectable.OnSelected.AddListener((selectable) => { OnSelected?.Invoke(); });
             labelColor = labelText.color;
         }
 
@@ -42,9 +42,10 @@ namespace Ieedo
                 if (!data.IconString.IsNullOrEmpty())
                     valueText.text = Regex.Unescape(data.IconString);
                 else
-                    valueText.text = $"{Mathf.RoundToInt(data.Height*100)}%";
+                    valueText.text = $"{Mathf.RoundToInt(data.Height * 100)}%";
             }
-            else valueText.gameObject.SetActive(false);
+            else
+                valueText.gameObject.SetActive(false);
         }
 
         private bool isShowingLabel = false;
@@ -68,8 +69,10 @@ namespace Ieedo
         {
             this.data = data;
 
-            if (!showOnlyNewlyAddedCards) nCurrentCards = 0;
-            else nCurrentCards = Mathf.Min(data.Cards.Count, nCurrentCards);
+            if (!showOnlyNewlyAddedCards)
+                nCurrentCards = 0;
+            else
+                nCurrentCards = Mathf.Min(data.Cards.Count, nCurrentCards);
 
             labelText.GetComponent<LocalizeStringEvent>().StringReference = data.LocalizedKey;
             labelText.color = new Color(labelColor.r, labelColor.g, labelColor.b, 0f);
@@ -77,16 +80,16 @@ namespace Ieedo
 
             if (!showOnlyNewlyAddedCards)
             {
-                gfx.localScale = new Vector3(1f, 0f, 1f)*baseScale;
+                gfx.localScale = new Vector3(1f, 0f, 1f) * baseScale;
                 gfx.localScaleTransition_y(gfxHeight * baseScale, 0.25f);
             }
             else
             {
-                gfx.localScale = new Vector3(1f, gfxHeight, 1f)*baseScale;
+                gfx.localScale = new Vector3(1f, gfxHeight, 1f) * baseScale;
             }
             mr.material = new Material(mr.material);
             mr.material.SetColor("_Color", data.Color);
-            mr.material.SetColor("_EmissionColor", data.Color*0.5f);
+            mr.material.SetColor("_EmissionColor", data.Color * 0.5f);
             ShowLabel(false);
             ShowValue(true);
 
@@ -116,7 +119,7 @@ namespace Ieedo
         {
             data.Cards.Add(cardData);
             AddCard(nCurrentCards, cardData);
-            CardsIn(nCurrentCards-1);
+            CardsIn(nCurrentCards - 1);
         }
 
         public void AddCard(int iCard, CardData cardData)
@@ -130,13 +133,14 @@ namespace Ieedo
             var mr = cardGo.GetComponentInChildren<MeshRenderer>();
             mr.material.color = cardData.Definition.CategoryDefinition.Color * (1.4f + Random.Range(-0.2f, 0.2f));
             cardGos[iCard].SetActive(true);
-            if (nCurrentCards <= iCard) nCurrentCards++;
+            if (nCurrentCards <= iCard)
+                nCurrentCards++;
         }
 
         private Vector3 ComputeFinalPos(int iCard)
         {
             float pillarTop = gfxHeight * 2.5f;
-            var finalPos = Vector3.up * (pillarTop + (0.5f+iCard) * 0.075f);
+            var finalPos = Vector3.up * (pillarTop + (0.5f + iCard) * 0.075f);
             finalPos += new Vector3(Random.Range(-0.3f, 0.3f), 0, Random.Range(-0.3f, 0.3f));
             return finalPos;
         }
@@ -171,7 +175,7 @@ namespace Ieedo
                 cardGo.transform.localPositionTransition(cardGo.transform.localPosition, 0.0f);     // This forces a stop
                 cardGo.transform.localPositionTransition_y(15, period, LeanEase.Smooth);
                 cardGo.transform.positionTransition_x(2f, period, LeanEase.Smooth);
-                cardGo.transform.localRotationTransition(Quaternion.Euler(Random.Range(0, 360f),  Random.Range(0, 360f),  Random.Range(0, 360f)), period);
+                cardGo.transform.localRotationTransition(Quaternion.Euler(Random.Range(0, 360f), Random.Range(0, 360f), Random.Range(0, 360f)), period);
             }
         }
 
