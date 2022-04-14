@@ -1,16 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Ieedo;
+using Ieedo.games;
 
-namespace Ieedo.games.tictac
+namespace minigame.tictac
 {
     public class WinLineScript : MonoBehaviour
     {
-
         public float animTime, maxWidthStraight, maxWidthDiag;
-
         private float startWidth, maxWidth;
-
         private RectTransform rectTransform;
 
         private void OnValidate()
@@ -32,7 +31,8 @@ namespace Ieedo.games.tictac
 
         private IEnumerator ScaleCoroutine()
         {
-            while (rectTransform.sizeDelta.x < maxWidth) {
+            while (rectTransform.sizeDelta.x < maxWidth)
+            {
                 float scaleSpeed = (maxWidth - startWidth) / animTime;
 
                 rectTransform.sizeDelta += new Vector2(scaleSpeed * Time.deltaTime, 0f);
@@ -50,8 +50,10 @@ namespace Ieedo.games.tictac
         /// <param name="straight">If true - line is straight, if false - line is diagonal.</param>
         public void SetStraight(bool straight)
         {
-            if (straight) maxWidth = maxWidthStraight;
-            else maxWidth = maxWidthDiag;
+            if (straight)
+                maxWidth = maxWidthStraight;
+            else
+                maxWidth = maxWidthDiag;
         }
 
         public void ResetLine()

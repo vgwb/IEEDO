@@ -1,5 +1,8 @@
 
-namespace Ieedo.games.connect4
+using Ieedo;
+using Ieedo.games;
+
+namespace minigame.connect4
 {
     public static class GameInfo
     {

@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Ieedo;
+using Ieedo.games;
 
-namespace Ieedo.games.connect4
+namespace minigame.connect4
 {
     public class Inputs : MonoBehaviour
     {

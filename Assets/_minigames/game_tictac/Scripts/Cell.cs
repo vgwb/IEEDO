@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 using UnityEngine.UI;
+using Ieedo;
+using Ieedo.games;
 
-namespace Ieedo.games.tictac
+namespace minigame.tictac
 {
     public class Cell : MonoBehaviour
     {
@@ -43,13 +44,17 @@ namespace Ieedo.games.tictac
         /// </summary>
         public void UpdateCellState()
         {
-            if (CurCellState == CellState.EMPTY) {
+            if (CurCellState == CellState.EMPTY)
+            {
                 Image fillingImage;
 
-                if (GameController.controller.CurPlayerSymbol == GameController.PlayerSymbol.X) {
+                if (GameController.controller.CurPlayerSymbol == GameController.PlayerSymbol.X)
+                {
                     curCellState = CellState.X;
                     fillingImage = X;
-                } else {
+                }
+                else
+                {
                     curCellState = CellState.O;
                     fillingImage = O;
                 }
@@ -67,7 +72,8 @@ namespace Ieedo.games.tictac
 
             float fillAnimSpeed = 1f / fillAnimTime;
 
-            while (fillingImage.fillAmount < 1f) {
+            while (fillingImage.fillAmount < 1f)
+            {
                 fillingImage.fillAmount += fillAnimSpeed * Time.fixedDeltaTime;
 
                 fillingImage.fillAmount = Mathf.Min(fillingImage.fillAmount, 1f);

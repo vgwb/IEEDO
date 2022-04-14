@@ -1,12 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Ieedo;
+using Ieedo.games;
 
-namespace Ieedo.games.tictac
+namespace minigame.tictac
 {
     public class GameController : MonoBehaviour
     {
-
         public AIScript ai;
         public TurnStateImageScript turnStateImage;
         public WinLineScript winLine;

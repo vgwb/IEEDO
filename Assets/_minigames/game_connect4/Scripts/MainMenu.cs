@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Ieedo;
+using Ieedo.games;
 
-namespace Ieedo.games.connect4
+namespace minigame.connect4
 {
     public class MainMenu : MonoBehaviour
     {

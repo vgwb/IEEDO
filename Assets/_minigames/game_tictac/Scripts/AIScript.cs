@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Ieedo;
+using Ieedo.games;
 
-namespace Ieedo.games.tictac
+namespace minigame.tictac
 {
     /// <summary>
     /// Simple AI. Can be beaten with "fork".
@@ -32,7 +34,8 @@ namespace Ieedo.games.tictac
         public void ActivateForTurn()
         {
             Cell lastClickedCell = GameController.controller.GetLastClickedCell();
-            if (lastClickedCell != null) enemyTurns.Add(GameController.controller.GetCellMatrixIndex(lastClickedCell));
+            if (lastClickedCell != null)
+                enemyTurns.Add(GameController.controller.GetCellMatrixIndex(lastClickedCell));
 
             StartCoroutine(TurnDelayCoroutine());
         }
@@ -57,17 +60,24 @@ namespace Ieedo.games.tictac
 
             Cell targetCell;
 
-            if (enemyTurns.Count < 2) {
+            if (enemyTurns.Count < 2)
+            {
                 targetCell = CenterTurn(center);
-                if (targetCell == null) targetCell = RandomCornerTurn(corners, 1000);
-            } else {
+                if (targetCell == null)
+                    targetCell = RandomCornerTurn(corners, 1000);
+            }
+            else
+            {
                 targetCell = SmartTurn(cells, prevTurns);
 
-                if (targetCell == null) targetCell = SmartTurn(cells, enemyTurns);
+                if (targetCell == null)
+                    targetCell = SmartTurn(cells, enemyTurns);
 
-                if (targetCell == null) {
+                if (targetCell == null)
+                {
                     targetCell = RandomCornerTurn(corners, rndCornerIterations);
-                    if (targetCell == null) targetCell = RandomTurn(true);
+                    if (targetCell == null)
+                        targetCell = RandomTurn(true);
                 }
             }
 
@@ -83,9 +93,12 @@ namespace Ieedo.games.tictac
         /// <returns>Returns targeted cell if success or null if not.</returns>
         private Cell CenterTurn(Cell center)
         {
-            if (center.CurCellState == Cell.CellState.EMPTY) {
+            if (center.CurCellState == Cell.CellState.EMPTY)
+            {
                 return center;
-            } else return null;
+            }
+            else
+                return null;
         }
 
         /// <summary>
@@ -96,10 +109,12 @@ namespace Ieedo.games.tictac
         /// <returns>Returns targeted cell if success or null if not.</returns>
         private Cell RandomCornerTurn(Cell[] corners, int iterations = 1)
         {
-            for (int i = 0; i < iterations; i++) {
+            for (int i = 0; i < iterations; i++)
+            {
                 Cell cor = corners[Random.Range(0, corners.Length)];
 
-                if (cor.CurCellState == Cell.CellState.EMPTY) {
+                if (cor.CurCellState == Cell.CellState.EMPTY)
+                {
                     return cor;
                 }
             }
@@ -115,20 +130,25 @@ namespace Ieedo.games.tictac
         /// <returns>Returns targeted cell if success or null if not.</returns>
         private Cell SmartTurn(Cell[,] cells, List<GameController.Int2D> turns)
         {
-            for (int i = 0; i < turns.Count; i++) {
+            for (int i = 0; i < turns.Count; i++)
+            {
                 GameController.Int2D outer = turns[i];
 
-                for (int j = i + 1; j < turns.Count; j++) {
+                for (int j = i + 1; j < turns.Count; j++)
+                {
                     GameController.Int2D inner = turns[j];
 
                     GameController.Int2D dir = inner - outer;
                     inner += dir;
                     inner.x %= 3;
                     inner.y %= 3;
-                    if (inner.x < 0) inner.x += 3;
-                    if (inner.y < 0) inner.y += 3;
+                    if (inner.x < 0)
+                        inner.x += 3;
+                    if (inner.y < 0)
+                        inner.y += 3;
 
-                    if (cells[inner.x, inner.y].CurCellState == Cell.CellState.EMPTY) {
+                    if (cells[inner.x, inner.y].CurCellState == Cell.CellState.EMPTY)
+                    {
                         return cells[inner.x, inner.y];
                     }
                 }
@@ -145,9 +165,11 @@ namespace Ieedo.games.tictac
         private Cell RandomTurn(bool performUntilSuccess)
         {
             Cell[] cellList = GameController.controller.GetCellList();
-            do {
+            do
+            {
                 int index = Random.Range(0, cellList.Length);
-                if (cellList[index].CurCellState == Cell.CellState.EMPTY) {
+                if (cellList[index].CurCellState == Cell.CellState.EMPTY)
+                {
                     return cellList[index];
                 }
             } while (performUntilSuccess);

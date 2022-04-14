@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-namespace Ieedo.games.connect4
+namespace minigame.connect4
 {
     public class GameManager : MonoBehaviour
     {
@@ -100,7 +99,8 @@ namespace Ieedo.games.connect4
                 {
                     player1Ghost.SetActive(true);
                     player1Ghost.transform.position = spawnLocations[column].transform.position;
-                } else
+                }
+                else
                 {
                     player2Ghost.SetActive(true);
                     player2Ghost.transform.position = spawnLocations[column].transform.position;
@@ -134,7 +134,8 @@ namespace Ieedo.games.connect4
                     playerWin = player1Turn;
 
                     Debug.LogWarning("Player " + (player1Turn ? 1 : 2) + " Won!");
-                } else if (isDraw(boardState))
+                }
+                else if (isDraw(boardState))
                 {
                     playerWin = false;
                     gameOver = true;
@@ -296,7 +297,8 @@ namespace Ieedo.games.connect4
 
                 if (p2 == 3 && empty == 1)
                     score -= 4;
-            } else
+            }
+            else
             {
                 if (p2 == 4)
                     score += 100;
@@ -387,7 +389,8 @@ namespace Ieedo.games.connect4
                         return (-1, -100000000000000);
                     else
                         return (-1, 0);
-                } else
+                }
+                else
                 {
                     return (-1, scorePosition(board, AIplayer));
                 }
@@ -419,7 +422,8 @@ namespace Ieedo.games.connect4
                         break;
                 }
                 return (column, value);
-            } else
+            }
+            else
             {
                 value = double.PositiveInfinity;
                 int row;
@@ -456,7 +460,8 @@ namespace Ieedo.games.connect4
             {
                 regularColor = color1;
                 winColor = winColor1;
-            } else
+            }
+            else
             {
                 regularColor = color2;
                 winColor = winColor2;

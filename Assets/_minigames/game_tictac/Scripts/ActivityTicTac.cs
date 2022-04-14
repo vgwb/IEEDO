@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Ieedo;
+using Ieedo.games;
 
-namespace Ieedo.games.tictac
+namespace minigame.tictac
 {
     public class ActivityTicTac : ActivityManager
     {
@@ -16,24 +17,15 @@ namespace Ieedo.games.tictac
         {
             if (playerWin)
             {
-                OnBtnWin();
+                SoundManager.I.PlaySfx(SfxEnum.win);
+                StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win, 10)));
             }
             else
             {
-                OnBtnLose();
+                SoundManager.I.PlaySfx(SfxEnum.lose);
+                StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Lose, 10)));
             }
         }
 
-        public void OnBtnWin()
-        {
-            Debug.Log("Game Blank Win");
-            CloseActivity(new ActivityResult(ActivityResultState.Win, 10));
-        }
-
-        public void OnBtnLose()
-        {
-            Debug.Log("Game Blank Lose");
-            CloseActivity(new ActivityResult(ActivityResultState.Lose, 2));
-        }
     }
 }
