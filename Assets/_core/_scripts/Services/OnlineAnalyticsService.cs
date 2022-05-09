@@ -7,7 +7,7 @@ using Unity.Services.Analytics;
 
 namespace Ieedo
 {
-    public class AnalyticsService : MonoBehaviour
+    public class OnlineAnalyticsService : MonoBehaviour
     {
         private bool AnalyticsEnabled => Statics.App.ApplicationConfig.AnalyticsEnabled;
 
@@ -20,9 +20,9 @@ namespace Ieedo
             if (Statics.App.ApplicationConfig.AnalyticsDevEnv)
             {
                 options.SetEnvironmentName("dev");
+                Debug.LogWarning("Analytics in DEV environment");
             }
             await UnityServices.InitializeAsync(options);
-            // Debug.Log("Analytics Enabled");
         }
 
         public void TestEvent()
@@ -35,8 +35,8 @@ namespace Ieedo
                 { "myNativeLang", Statics.App.ApplicationConfig.SourceLocale },
             };
 
-            Events.CustomData("myTestEvent", parameters);
-            Events.Flush();
+            AnalyticsService.Instance.CustomData("myTestEvent", parameters);
+            AnalyticsService.Instance.Flush();
             Debug.Log("Analytics TestEvent");
         }
 
@@ -51,9 +51,9 @@ namespace Ieedo
                 { "myActivityResult", result },
             };
 
-            Events.CustomData("myActivity", parameters);
+            AnalyticsService.Instance.CustomData("myActivity", parameters);
 #if UNITY_EDITOR
-            Events.Flush();
+            AnalyticsService.Instance.Flush();
 #endif
             // Debug.Log("Analytics myActivity");
         }
@@ -69,9 +69,9 @@ namespace Ieedo
                 { "myCardCategory", card.Definition.ToString() },
             };
 
-            Events.CustomData("myCard", parameters);
+            AnalyticsService.Instance.CustomData("myCard", parameters);
 #if UNITY_EDITOR
-            Events.Flush();
+            AnalyticsService.Instance.Flush();
 #endif
         }
 
@@ -86,9 +86,9 @@ namespace Ieedo
                 { "myCardAction", action },
             };
 
-            Events.CustomData("myScore", parameters);
+            AnalyticsService.Instance.CustomData("myScore", parameters);
 #if UNITY_EDITOR
-            Events.Flush();
+            AnalyticsService.Instance.Flush();
 #endif
         }
 
@@ -102,9 +102,9 @@ namespace Ieedo
                 { "myAction", action },
             };
 
-            Events.CustomData("myApp", parameters);
+            AnalyticsService.Instance.CustomData("myApp", parameters);
 #if UNITY_EDITOR
-            Events.Flush();
+            AnalyticsService.Instance.Flush();
 #endif
         }
 
