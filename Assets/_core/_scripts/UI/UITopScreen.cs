@@ -95,19 +95,16 @@ namespace Ieedo
             {
                 case TopBarMode.MainSection:
                     SetHamburgerIcon();
-                    SessionModeButton.gameObject.SetActive(true);
-                    //SessionModeButton.targetGraphic.color = Color.white;
+                    SessionModeButton.interactable = true;
                     break;
                 case TopBarMode.Special_Assessment:
                     SetCrossIcon();
-                    SessionModeButton.gameObject.SetActive(true);
-                    //SessionModeButton.targetGraphic.color = Color.gray;
+                    SessionModeButton.interactable = false;
                     break;
                 case TopBarMode.Special_Activity:
                 case TopBarMode.Special_CardCreation:
                     SetCrossIcon();
-                    SessionModeButton.gameObject.SetActive(false);
-                    //SessionModeButton.targetGraphic.color = Color.gray;
+                    SessionModeButton.interactable = false;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(mode), mode, null);
