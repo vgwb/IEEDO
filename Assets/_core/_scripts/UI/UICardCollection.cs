@@ -83,6 +83,7 @@ namespace Ieedo
             HeldCards.Sort((ui1, ui2) => sortFunc(ui1.Data, ui2.Data));
             for (int i = 0; i < HeldCards.Count; i++)
             {
+                if (HeldCards[i] == null) continue; // May have been destroyed
                 // Move to the correct slot
                 HeldCards[i].transform.SetParent(HeldSlots[i].transform);
                 HeldCards[i].AnimateToParent();
