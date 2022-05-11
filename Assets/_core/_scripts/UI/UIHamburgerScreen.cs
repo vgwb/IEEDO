@@ -22,7 +22,7 @@ namespace Ieedo
 
         public UIButton ButtonPrefab;
 
-        private UIButton btnAbortActivity;
+        private UIButton btnAbortSpecialSection;
         private UIButton btnSkipAssessment;
         private UIButton btnSwitchSessionMode;
         private UIButton btnGenerateTestPillars;
@@ -51,9 +51,9 @@ namespace Ieedo
             });
 
             // Debug buttons
-            btnAbortActivity = AddButton("action_abort_activity", () =>
+            btnAbortSpecialSection = AddButton("action_abort_activity", () =>
             {
-                AppManager.I.StartCoroutine(AbortActivityCO());
+                AppManager.I.StartCoroutine(AbortSpecialSectionCO());
                 CloseImmediate();
             });
 
@@ -111,7 +111,7 @@ namespace Ieedo
         protected override IEnumerator OnPreOpen()
         {
             Init();
-            btnAbortActivity.gameObject.SetActive(Statics.ActivityFlow.IsInsideActivity);
+            btnAbortSpecialSection.gameObject.SetActive(Statics.ActivityFlow.IsInsideActivity);
             btnSkipAssessment.gameObject.SetActive(Statics.SessionFlow.IsInsideAssessment);
             btnGenerateTestCards.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
             btnGenerateTestPillars.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
@@ -138,13 +138,20 @@ namespace Ieedo
             }
         }
 
-        public IEnumerator AbortActivityCO()
+        public IEnumerator AbortSpecialSectionCO()
         {
-            var answer = new Ref<int>();
-            yield return Statics.Screens.ShowQuestionFlow("UI/activity_abort_title", "UI/activity_abort_question", new[] { "UI/yes", "UI/no" }, answer);
-            if (answer.Value == 0)
+            if (Statics.SessionFlow.IsInsideAssessment)
             {
-                Statics.ActivityFlow.CurrentActivityManager.CloseActivity(new ActivityResult(ActivityResultState.Quit, 0));
+                Statics.SessionFlow.SkipAssessment();
+            }
+            else
+            {
+                var answer = new Ref<int>();
+                yield return Statics.Screens.ShowQuestionFlow("UI/activity_abort_title", "UI/activity_abort_question", new[] { "UI/yes", "UI/no" }, answer);
+                if (answer.Value == 0)
+                {
+                    Statics.ActivityFlow.CurrentActivityManager.CloseActivity(new ActivityResult(ActivityResultState.Quit, 0));
+                }
             }
         }
 

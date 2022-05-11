@@ -10,8 +10,9 @@ namespace Ieedo
 {
     public enum TopBarMode
     {
-        MainApp,
-        Activity,
+        MainSection,
+        SpecialSection_WithSession,
+        SpecialSection_NoSession,
     }
 
     public class UITopScreen : UIScreen
@@ -40,7 +41,7 @@ namespace Ieedo
                 SoundManager.I.PlaySfx(SfxEnum.click);
                 switch (Mode)
                 {
-                    case TopBarMode.MainApp:
+                    case TopBarMode.MainSection:
                         if (Statics.Screens.Get(ScreenID.Hamburger).IsOpen)
                         {
                             SetHamburgerIcon();
@@ -52,9 +53,10 @@ namespace Ieedo
                             Statics.Screens.Open(ScreenID.Hamburger);
                         }
                         break;
-                    case TopBarMode.Activity:
+                    case TopBarMode.SpecialSection_WithSession:
+                    case TopBarMode.SpecialSection_NoSession:
                         var hamburgerScreen = Statics.Screens.Get(ScreenID.Hamburger) as UIHamburgerScreen;
-                        StartCoroutine(hamburgerScreen.AbortActivityCO());
+                        StartCoroutine(hamburgerScreen.AbortSpecialSectionCO());
                         break;
                 }
 
@@ -63,7 +65,7 @@ namespace Ieedo
             {
                 Statics.Mode.ToggleSessionMode();
             });
-            SwitchMode(TopBarMode.MainApp);
+            SwitchMode(TopBarMode.MainSection);
         }
 
         private void SetTargetLocale()
@@ -89,11 +91,15 @@ namespace Ieedo
             Mode = mode;
             switch (mode)
             {
-                case TopBarMode.MainApp:
+                case TopBarMode.MainSection:
                     SetHamburgerIcon();
                     SessionModeButton.gameObject.SetActive(true);
                     break;
-                case TopBarMode.Activity:
+                case TopBarMode.SpecialSection_WithSession:
+                    SetCrossIcon();
+                    SessionModeButton.gameObject.SetActive(true);
+                    break;
+                case TopBarMode.SpecialSection_NoSession:
                     SetCrossIcon();
                     SessionModeButton.gameObject.SetActive(false);
                     break;

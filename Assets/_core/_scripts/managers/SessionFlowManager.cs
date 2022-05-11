@@ -80,6 +80,9 @@ namespace Ieedo
 
         private IEnumerator AssessmentFlowCO()
         {
+            var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
+            uiTopScreen.SwitchMode(TopBarMode.SpecialSection_WithSession);
+
             var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
             var assessmentRecapScreen = Statics.Screens.Get(ScreenID.AssessmentRecap) as UIAssessmentRecapPopup;
             var introScreen = Statics.Screens.Get(ScreenID.AssessmentIntro) as UIAssessmentIntroScreen;
@@ -139,6 +142,8 @@ namespace Ieedo
             // Refresh pillars
             Statics.Screens.GoTo(ScreenID.Pillars);
             IsInsideAssessment = false;
+
+            uiTopScreen.SwitchMode(TopBarMode.MainSection);
         }
 
         public void StopSessionMode()
@@ -150,6 +155,8 @@ namespace Ieedo
                 sessionFlowCo = null;
             }
 
+            var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
+            uiTopScreen.SwitchMode(TopBarMode.MainSection);
             Statics.Screens.GoTo(ScreenID.Pillars);
             var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
             uiPillarsScreen.SwitchViewMode(PillarsViewMode.Categories);
@@ -185,6 +192,10 @@ namespace Ieedo
 
             Statics.Screens.GoTo(ScreenID.Pillars);
             IsInsideAssessment = false;
+
+            var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
+            uiTopScreen.SwitchMode(TopBarMode.MainSection);
+
         }
 
     }

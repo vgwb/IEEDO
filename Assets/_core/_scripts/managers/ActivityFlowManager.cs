@@ -66,7 +66,7 @@ namespace Ieedo
             activityManager.OnActivityEnd = CloseActivity;
 
             var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
-            uiTopScreen.SwitchMode(TopBarMode.Activity);
+            uiTopScreen.SwitchMode(TopBarMode.SpecialSection_NoSession);
         }
 
         private void CloseActivity()
@@ -93,7 +93,7 @@ namespace Ieedo
             CurrentActivityManager = null;
 
             var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
-            uiTopScreen.SwitchMode(TopBarMode.MainApp);
+            uiTopScreen.SwitchMode(TopBarMode.MainSection);
         }
 
         public void RegisterResult(ActivityResult result, ActivityID activityId = ActivityID.None)
