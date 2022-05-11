@@ -66,7 +66,7 @@ namespace Ieedo
             activityManager.OnActivityEnd = CloseActivity;
 
             var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
-            uiTopScreen.SwitchMode(TopBarMode.SpecialSection_NoSession);
+            uiTopScreen.SwitchMode(TopBarMode.Special_Activity);
         }
 
         private void CloseActivity()

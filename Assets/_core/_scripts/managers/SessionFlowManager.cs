@@ -81,7 +81,7 @@ namespace Ieedo
         private IEnumerator AssessmentFlowCO()
         {
             var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
-            uiTopScreen.SwitchMode(TopBarMode.SpecialSection_WithSession);
+            uiTopScreen.SwitchMode(TopBarMode.Special_Assessment);
 
             var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
             var assessmentRecapScreen = Statics.Screens.Get(ScreenID.AssessmentRecap) as UIAssessmentRecapPopup;

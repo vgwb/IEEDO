@@ -140,18 +140,34 @@ namespace Ieedo
 
         public IEnumerator AbortSpecialSectionCO()
         {
-            if (Statics.SessionFlow.IsInsideAssessment)
+            var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
+            switch (uiTopScreen.Mode)
             {
-                Statics.SessionFlow.SkipAssessment();
-            }
-            else
-            {
-                var answer = new Ref<int>();
-                yield return Statics.Screens.ShowQuestionFlow("UI/activity_abort_title", "UI/activity_abort_question", new[] { "UI/yes", "UI/no" }, answer);
-                if (answer.Value == 0)
+                case TopBarMode.MainSection:
+                    break;
+                case TopBarMode.Special_Assessment:
                 {
-                    Statics.ActivityFlow.CurrentActivityManager.CloseActivity(new ActivityResult(ActivityResultState.Quit, 0));
+                    Statics.SessionFlow.SkipAssessment();
                 }
+                    break;
+                case TopBarMode.Special_Activity:
+                {
+                    var answer = new Ref<int>();
+                    yield return Statics.Screens.ShowQuestionFlow("UI/activity_abort_title", "UI/activity_abort_question", new[] { "UI/yes", "UI/no" }, answer);
+                    if (answer.Value == 0)
+                    {
+                        Statics.ActivityFlow.CurrentActivityManager.CloseActivity(new ActivityResult(ActivityResultState.Quit, 0));
+                    }
+                }
+                    break;
+                case TopBarMode.Special_CardCreation:
+                {
+                    var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
+                    AppManager.I.StartCoroutine(uiCardListScreen.CreationAbortCO());
+                }
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
             }
         }
 
