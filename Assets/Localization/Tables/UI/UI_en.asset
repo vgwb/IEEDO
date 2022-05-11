@@ -299,6 +299,37 @@ MonoBehaviour:
     m_Localized: IEEDO focuses on 6 categories, let's check them one by one...
     m_Metadata:
       m_Items: []
+  - m_Id: 65886906563190784
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906663854080
+    m_Localized: Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906663854081
+    m_Localized: Cheats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906663854082
+    m_Localized: Sound Effects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906663854083
+    m_Localized: This project IEEDO (2020-1-UK01-KA204-079117) was funded with the
+      support of the European Commission. This publication reflects the views only
+      of the author, and the Commission is not responsible for any use that may be
+      made of the information contained therein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65895845048639488
+    m_Localized: Reset Profile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65895845057028096
+    m_Localized: Do you really want to reset the profile?
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

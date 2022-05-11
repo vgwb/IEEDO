@@ -40,7 +40,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450241
-    m_Localized: Ricercare
+    m_Localized: Riprovare
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450242
@@ -73,7 +73,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40526294958235648
-    m_Localized: Ripristinare il profilo
+    m_Localized: Ripristina il profilo
     m_Metadata:
       m_Items: []
   - m_Id: 40534266346233856
@@ -101,7 +101,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40537204766564352
-    m_Localized: Inserire la descrizione
+    m_Localized: Inserisci la descrizione
     m_Metadata:
       m_Items: []
   - m_Id: 40544906540507136
@@ -126,7 +126,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40546818237161472
-    m_Localized: '{ScoreTounlock} Punti da sbloccare'
+    m_Localized: '{Scoretounlock} punta per sbloccare'
     m_Metadata:
       m_Items:
       - rid: 3992833648747610129
@@ -151,7 +151,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48089044619304960
-    m_Localized: Impostare come non completato
+    m_Localized: Impostato come non completato
     m_Metadata:
       m_Items: []
   - m_Id: 48089044644470784
@@ -159,15 +159,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48119887559598080
-    m_Localized: Impostare come non convalidato
+    m_Localized: Impostare come non validato
     m_Metadata:
       m_Items: []
   - m_Id: 48119887563792384
-    m_Localized: Sei sicuro di voler impostare la carta come non convalidata?
+    m_Localized: Sei sicuro di voler impostare la scheda come non convalidata?
     m_Metadata:
       m_Items: []
   - m_Id: 48125278888599552
-    m_Localized: Genera carte di prova
+    m_Localized: Generare schede di prova
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925888
@@ -175,7 +175,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925889
-    m_Localized: Sei sicuro di voler cancellare la carta?
+    m_Localized: Sei sicuro di voler eliminare la carta?
     m_Metadata:
       m_Items: []
   - m_Id: 48151452267077632
@@ -183,7 +183,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48154400376250368
-    m_Localized: Aumentare il punteggio +100.
+    m_Localized: Aumenta il punteggio +100
     m_Metadata:
       m_Items: []
   - m_Id: 48447397204844544
@@ -191,8 +191,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762365927424
-    m_Localized: "Benvenuto!\nL'obiettivo di IEDO \xE8 aiutarti ad avere successo
-      in questo paese.\n\nSe non capisci qualcosa sullo schermo, tenere il pulsante
+    m_Localized: "Benvenuto!\nL'obiettivo IEEDO \xE8 aiutarti ad avere successo in
+      questo paese.\n\nSe non capisci qualcosa sullo schermo, tieni premuto il pulsante
       di traduzione per leggerlo in arabo"
     m_Metadata:
       m_Items: []
@@ -201,7 +201,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093249
-    m_Localized: Start Session.
+    m_Localized: Avvia sessione
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093250
@@ -218,25 +218,25 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093253
-    m_Localized: Non hai carte da recensire
+    m_Localized: Non hai carte da rivedere
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093254
-    m_Localized: "\xC8 giunto il momento di pianificare insieme le cose che farai
-      nei prossimi giorni"
+    m_Localized: "Ora \xE8 il momento di pianificare insieme le cose che farai nei
+      prossimi giorni"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093255
-    m_Localized: "Inizia la sessione <non utilizzata pi\xF9>"
+    m_Localized: "Avvia la sessione <non pi\xF9 usato>"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093256
-    m_Localized: "Sei sicuro di voler iniziare una sessione di coaching? <Non usato
+    m_Localized: "Sei sicuro di voler iniziare una sessione di coaching? <non usato
       pi\xF9>"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093257
-    m_Localized: Lasciare la sessione
+    m_Localized: Lasciare sessione
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093258
@@ -244,7 +244,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093259
-    m_Localized: Quit Card Creation.
+    m_Localized: Smettila creazione di carte
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093260
@@ -256,15 +256,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 51375399755522048
-    m_Localized: Esci da questionario
+    m_Localized: Smettere questionario
     m_Metadata:
       m_Items: []
   - m_Id: 55672507820089344
-    m_Localized: Gioca il prossimo livello
+    m_Localized: Gioca al livello successivo
     m_Metadata:
       m_Items: []
   - m_Id: 55672507820089345
-    m_Localized: "Giocare a pochi minuti al giorno aiuter\xE0 il tuo cervello a rimanere
+    m_Localized: "Giocare qualche minuto al giorno ti aiuter\xE0 il cervello a rimanere
       in forma"
     m_Metadata:
       m_Items: []
@@ -274,7 +274,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 55765040130629632
-    m_Localized: "Lasciare attivit\xE0"
+    m_Localized: "Lasciare l'attivit\xE0"
     m_Metadata:
       m_Items: []
   - m_Id: 55765040134823936
@@ -298,8 +298,38 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 55768998995763200
-    m_Localized: IEDO si concentra su 6 categorie, controlliamo loro uno per uno
-      ...
+    m_Localized: IeeDo si concentra su 6 categorie, controlliamo una per una ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906563190784
+    m_Localized: Crediti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906663854080
+    m_Localized: Impostazioni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906663854081
+    m_Localized: Trucchi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906663854082
+    m_Localized: Effetti sonori
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906663854083
+    m_Localized: "Questo progetto IEEDO (2020-1-UK01-KA204-079117) \xE8 stato finanziato
+      con il sostegno della Commissione europea. Questa pubblicazione riflette solo
+      le opinioni dell'autore e la Commissione non \xE8 responsabile per qualsiasi
+      uso che possa essere effettuato dalle informazioni in essi contenute."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65895845048639488
+    m_Localized: Ripristina il profilo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65895845057028096
+    m_Localized: Vuoi davvero ripristinare il profilo?
     m_Metadata:
       m_Items: []
   references:

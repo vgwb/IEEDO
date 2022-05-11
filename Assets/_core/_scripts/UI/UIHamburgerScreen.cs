@@ -13,6 +13,12 @@ namespace Ieedo
 
         public LeanToggle SfxToggle;
 
+        public RectTransform CheatSection;
+        public RectTransform SettingsSection;
+        public RectTransform CreditsSection;
+
+        public UIButton btnHiddenCheats;
+        private int nCheatEnterCounter;
 
         public UIButton ButtonPrefab;
 
@@ -25,6 +31,7 @@ namespace Ieedo
         private UIButton btnResetProfile;
         private UIButton btnTestAddDiary;
 
+
         private bool initialised = false;
         void Init()
         {
@@ -34,6 +41,14 @@ namespace Ieedo
 
             SfxToggle.On = !Statics.Data.Profile.Description.SfxDisabled;
 
+            CheatSection.gameObject.SetActive(false);
+            SetupButton(btnHiddenCheats, () => {
+                nCheatEnterCounter++;
+                if (nCheatEnterCounter >= 5)
+                {
+                    CheatSection.gameObject.SetActive(true);
+                }
+            });
 
             // Debug buttons
             btnAbortActivity = AddButton("action_abort_activity", () =>
@@ -70,15 +85,9 @@ namespace Ieedo
 
             btnResetProfile = AddButton("action_reset_profile", () =>
             {
-                Statics.Data.CreateNewProfile(new ProfileDescription
-                {
-                    Name = "TEST",
-                    Country = "en",
-                    Language = Language.English,
-                    IsNewProfile = true
-                });
+                AppManager.I.StartCoroutine(ResetProfileCO());
                 CloseImmediate();
-            });
+            },SettingsSection);
 
             btnTestAddDiary = AddUnlocalizedButton("Add Diary Pages", () =>
             {
@@ -112,6 +121,22 @@ namespace Ieedo
             yield break;
         }
 
+        private IEnumerator ResetProfileCO()
+        {
+            var answer = new Ref<int>();
+            yield return Statics.Screens.ShowQuestionFlow("UI/reset_profile_title", "UI/reset_profile_question", new[] { "UI/yes", "UI/no" }, answer);
+            if (answer.Value == 0)
+            {
+                Statics.Data.CreateNewProfile(new ProfileDescription
+                {
+                    Name = "TEST",
+                    Country = "en",
+                    Language = Language.English,
+                    IsNewProfile = true
+                });
+                yield return AppManager.I.HandleNewProfileStart();
+            }
+        }
 
         private IEnumerator AbortActivityCO()
         {
@@ -123,18 +148,20 @@ namespace Ieedo
             }
         }
 
-        private UIButton AddButton(string locKey, System.Action action)
+        private UIButton AddButton(string locKey, System.Action action, RectTransform parent = null)
         {
-            var btn = Instantiate(ButtonPrefab, ButtonPrefab.transform.parent);
+            if (parent == null) parent = ButtonPrefab.transform.parent as RectTransform;
+            var btn = Instantiate(ButtonPrefab, parent);
             SetupButton(btn, action);
             btn.Key = new LocalizedString("UI", locKey);
             btn.gameObject.SetActive(true);
             return btn;
         }
 
-        private UIButton AddUnlocalizedButton(string text, System.Action action)
+        private UIButton AddUnlocalizedButton(string text, System.Action action, RectTransform parent = null)
         {
-            var btn = Instantiate(ButtonPrefab, ButtonPrefab.transform.parent);
+            if (parent == null) parent = ButtonPrefab.transform.parent as RectTransform;;
+            var btn = Instantiate(ButtonPrefab, parent);
             SetupButton(btn, action);
             btn.Text = text;
             btn.gameObject.SetActive(true);

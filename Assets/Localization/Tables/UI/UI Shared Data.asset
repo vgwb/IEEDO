@@ -287,6 +287,34 @@ MonoBehaviour:
     m_Key: a
     m_Metadata:
       m_Items: []
+  - m_Id: 65886906563190784
+    m_Key: hamburger_credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906663854080
+    m_Key: hamburger_settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906663854081
+    m_Key: hamburger_cheats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906663854082
+    m_Key: setting_sfx
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906663854083
+    m_Key: credits_content
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65895845048639488
+    m_Key: reset_profile_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65895845057028096
+    m_Key: reset_profile_question
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
