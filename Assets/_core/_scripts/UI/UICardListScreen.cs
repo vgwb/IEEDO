@@ -582,12 +582,18 @@ namespace Ieedo
 
                 yield return DeleteCardCO(true, frontCardUI, withConfirmation: false);
                 abortingCreation = false;
+
+                var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
+                uiTopScreen.SwitchMode(TopBarMode.MainSection);
             }
         }
 
         private bool abortingCreation;
         public IEnumerator CreateCardFlowCO()
         {
+            var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
+            uiTopScreen.SwitchMode(TopBarMode.Special_CardCreation);
+
             // Create and show the card
             var cardDef = Statics.Cards.GenerateCardDefinition(
                 new CardDefinition
@@ -647,6 +653,8 @@ namespace Ieedo
             Statics.Cards.AddCard(cardData);
             Statics.Analytics.Card("create", cardData);
             createCardFlowCo = null;
+
+            uiTopScreen.SwitchMode(TopBarMode.MainSection);
         }
 
         private IEnumerator EditCategoryCO(bool autoReset = false)

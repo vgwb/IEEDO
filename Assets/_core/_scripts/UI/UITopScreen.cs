@@ -11,8 +11,9 @@ namespace Ieedo
     public enum TopBarMode
     {
         MainSection,
-        SpecialSection_WithSession,
-        SpecialSection_NoSession,
+        Special_Assessment,
+        Special_Activity,
+        Special_CardCreation,
     }
 
     public class UITopScreen : UIScreen
@@ -53,8 +54,9 @@ namespace Ieedo
                             Statics.Screens.Open(ScreenID.Hamburger);
                         }
                         break;
-                    case TopBarMode.SpecialSection_WithSession:
-                    case TopBarMode.SpecialSection_NoSession:
+                    case TopBarMode.Special_Assessment:
+                    case TopBarMode.Special_Activity:
+                    case TopBarMode.Special_CardCreation:
                         var hamburgerScreen = Statics.Screens.Get(ScreenID.Hamburger) as UIHamburgerScreen;
                         StartCoroutine(hamburgerScreen.AbortSpecialSectionCO());
                         break;
@@ -94,14 +96,18 @@ namespace Ieedo
                 case TopBarMode.MainSection:
                     SetHamburgerIcon();
                     SessionModeButton.gameObject.SetActive(true);
+                    SessionModeButton.targetGraphic.color = Color.white;
                     break;
-                case TopBarMode.SpecialSection_WithSession:
+                case TopBarMode.Special_Assessment:
                     SetCrossIcon();
                     SessionModeButton.gameObject.SetActive(true);
+                    SessionModeButton.targetGraphic.color = Color.gray;
                     break;
-                case TopBarMode.SpecialSection_NoSession:
+                case TopBarMode.Special_Activity:
+                case TopBarMode.Special_CardCreation:
                     SetCrossIcon();
                     SessionModeButton.gameObject.SetActive(false);
+                    SessionModeButton.targetGraphic.color = Color.gray;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(mode), mode, null);
