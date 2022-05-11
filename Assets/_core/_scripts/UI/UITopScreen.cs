@@ -22,22 +22,42 @@ namespace Ieedo
         public UIButton HamburgerButton;
         public UIButton SessionModeButton;
 
+        public void SetHamburgerIcon()
+        {
+            HamburgerButton.Text = "\uf0c9";
+        }
+
+        public void SetCrossIcon()
+        {
+            HamburgerButton.Text = "\uf00d";
+        }
+
         void Start()
         {
             SetupButtonDown(InstantTranslationButton, SetTargetLocale, SetSourceLocale);
             SetupButton(HamburgerButton, () =>
             {
                 SoundManager.I.PlaySfx(SfxEnum.click);
-                if (Statics.Screens.Get(ScreenID.Hamburger).IsOpen)
+                switch (Mode)
                 {
-                    HamburgerButton.Text = "\uf0c9";
-                    Statics.Screens.Close(ScreenID.Hamburger);
+                    case TopBarMode.MainApp:
+                        if (Statics.Screens.Get(ScreenID.Hamburger).IsOpen)
+                        {
+                            SetHamburgerIcon();
+                            Statics.Screens.Close(ScreenID.Hamburger);
+                        }
+                        else
+                        {
+                            SetCrossIcon();
+                            Statics.Screens.Open(ScreenID.Hamburger);
+                        }
+                        break;
+                    case TopBarMode.Activity:
+                        var hamburgerScreen = Statics.Screens.Get(ScreenID.Hamburger) as UIHamburgerScreen;
+                        StartCoroutine(hamburgerScreen.AbortActivityCO());
+                        break;
                 }
-                else
-                {
-                    HamburgerButton.Text = "\uf00d";
-                    Statics.Screens.Open(ScreenID.Hamburger);
-                }
+
             });
             SetupButton(SessionModeButton, () =>
             {
@@ -70,9 +90,11 @@ namespace Ieedo
             switch (mode)
             {
                 case TopBarMode.MainApp:
+                    SetHamburgerIcon();
                     SessionModeButton.gameObject.SetActive(true);
                     break;
                 case TopBarMode.Activity:
+                    SetCrossIcon();
                     SessionModeButton.gameObject.SetActive(false);
                     break;
                 default:

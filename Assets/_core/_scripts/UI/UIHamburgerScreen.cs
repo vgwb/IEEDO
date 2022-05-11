@@ -138,7 +138,7 @@ namespace Ieedo
             }
         }
 
-        private IEnumerator AbortActivityCO()
+        public IEnumerator AbortActivityCO()
         {
             var answer = new Ref<int>();
             yield return Statics.Screens.ShowQuestionFlow("UI/activity_abort_title", "UI/activity_abort_question", new[] { "UI/yes", "UI/no" }, answer);
