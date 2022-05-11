@@ -54,7 +54,7 @@ namespace Ieedo
 
                 var scoreToUnlockLoc = new LocalizedString("UI", "activity_score_to_unlock");
                 scoreToUnlockLoc.Arguments = new List<object>{activityDefinition};
-                ActivityBlocks[i].LockedText.text = scoreToUnlockLoc.GetLocalizedString();
+                ActivityBlocks[i].LockedText.Key = scoreToUnlockLoc;
             }
 
             for (int i = allActivities.Count; i < ActivityBlocks.Count; i++)
