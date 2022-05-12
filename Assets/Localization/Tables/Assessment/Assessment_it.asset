@@ -24,7 +24,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7179342181294080
-    m_Localized: Riesci a capire le descrizioni degli eventi, scritti in inglese?
+    m_Localized: Riesci a capire le descrizioni degli eventi, scritte in inglese?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539303149568
@@ -33,7 +33,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539328315392
-    m_Localized: Partecipi a eventi culturali (festival, concerto, ecc ...)?
+    m_Localized: Partecipa a eventi culturali (festival, concerti, ecc ...)?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509696
@@ -41,7 +41,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509697
-    m_Localized: Fai amicizia e / o vicini si rivolgono a te per il supporto?
+    m_Localized: Amici e/o vicini si rivolgono a te per il supporto?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509698
@@ -49,21 +49,21 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509699
-    m_Localized: "Prendi parte ad attivit\xE0 sociali e gruppi? (volontariato, club,
-      gruppi comunitari)"
+    m_Localized: "Prendi parte alle attivit\xE0 e ai gruppi sociali? (Volontariato,
+      club, gruppi di comunit\xE0)"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509700
-    m_Localized: "Hai amici da una miscela di sfondi e nazionalit\xE0?"
+    m_Localized: "Hai amici di una miscela di background e nazionalit\xE0?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509701
-    m_Localized: Preferisci trascorrere del tempo da solo?
+    m_Localized: Preferisci passare il tempo da solo?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509702
-    m_Localized: Riesci a capire i principali punti di comunicazione parlata al lavoro,
-      scuola, ecc.?
+    m_Localized: Riesci a capire i punti principali della comunicazione parlata al
+      lavoro, alla scuola, ecc.?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509703
@@ -76,12 +76,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509705
-    m_Localized: Puoi utilizzare i pacchetti di Microsoft Office di base? per esempio.
-      Parola ed Excel.
+    m_Localized: Puoi usare i pacchetti di base Microsoft Office? per esempio. Parola
+      ed eccel
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509706
-    m_Localized: Puoi inviare una email in inglese?
+    m_Localized: Puoi inviare un'e -mail in inglese?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509707
@@ -93,22 +93,21 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509709
-    m_Localized: Puoi effettuare semplici calcoli? (aggiungi, moltiplicare, dividere,
-      percentuali)
+    m_Localized: Puoi eseguire semplici calcoli? (Aggiungi, moltiplica, dividi, percentuali)
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509710
-    m_Localized: Puoi cercare il supporto online utilizzando forum community / webchats
-      / blog?
+    m_Localized: Puoi cercare supporto online utilizzando forum/webchat/blog della
+      community?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509711
-    m_Localized: Puoi trovare siti Web e informazioni sul Web utilizzando motori
-      di ricerca ben noti? (Google, Yahoo, Bing ecc.)
+    m_Localized: Riesci a trovare siti Web e informazioni sul Web utilizzando motori
+      di ricerca noti? (Google, Yahoo, Bing ecc.)
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509712
-    m_Localized: Viaggi fuori dalla tua zona locale?
+    m_Localized: Viaggi fuori dalla tua zona?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509713
@@ -116,22 +115,22 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509714
-    m_Localized: Riesci a capire i tuoi rendiconti finanziari? per esempio. Dichiarazione
-      bancaria, bollette ecc.
+    m_Localized: Riesci a capire i tuoi bilanci? per esempio. Dichiarazione bancaria,
+      fatture ecc.
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509715
-    m_Localized: Puoi leggere e capire la corrispondenza e i documenti ufficiali
+    m_Localized: Riesci a leggere e comprendere la corrispondenza e i documenti ufficiali
       in inglese?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509716
-    m_Localized: Hai bisogno di aiuto per completare moduli dettagliati in inglese?
-      per esempio. Applicazioni di lavoro, trasferimenti di denaro
+    m_Localized: Hai bisogno di aiuto per il completamento di moduli dettagliati
+      in inglese? per esempio. applicazioni di lavoro, trasferimenti di denaro
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509717
-    m_Localized: I tuoi problemi di salute influenzano la tua vita quotidiana?
+    m_Localized: I tuoi problemi di salute influiscono sulla tua vita quotidiana?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509718
@@ -143,7 +142,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509720
-    m_Localized: Ti senti positivo del tuo futuro?
+    m_Localized: Ti senti positivo per il tuo futuro?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509721

@@ -191,9 +191,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762365927424
-    m_Localized: "Welcome! \nIEEDO goal is to help you to be successful in this country.\n\nIf
-      you don't understand something on screen, hold the Translation button to read
-      it in Arabic"
+    m_Localized: Welcome!  IEEDO goal is to help you to be successful in this country. 
+      If you don't understand something on screen, hold the Translation button to
+      read it in Arabic
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093248
@@ -209,8 +209,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093251
-    m_Localized: "Your Coach is here to help you. \n\nDo you want to answer a few
-      questions about your current situation?"
+    m_Localized: Your Coach is here to help you.   Do you want to answer a few questions
+      about your current situation?
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093252

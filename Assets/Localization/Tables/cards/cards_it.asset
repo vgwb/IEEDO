@@ -19,12 +19,12 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 10201661340147712
-    m_Localized: Civica e cultura
+    m_Localized: Civico e cultura
     m_Metadata:
       m_Items: []
   - m_Id: 10201788641468416
-    m_Localized: Tutto correlato alla vita civica e alla cultura locale nel tuo paese
-      ospitante
+    m_Localized: "Tutto ci\xF2 che riguarda la vita civile e la cultura locale nel
+      tuo paese ospitante"
     m_Metadata:
       m_Items: []
   - m_Id: 10257870520868864
@@ -32,7 +32,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10258501075755008
-    m_Localized: "Tutto sul tuo file sociale e il tuo impegno nella comunit\xE0 locale"
+    m_Localized: "Tutto sul tuo file sociale e il tuo coinvolgimento nella comunit\xE0
+      locale"
     m_Metadata:
       m_Items: []
   - m_Id: 15338261569101824
@@ -44,8 +45,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15338345862029312
-    m_Localized: "Tutto ci\xF2 che riguarda il lavoro, dal trovare un lavoro per
-      progredire nella tua carreria professionale"
+    m_Localized: "Tutto ci\xF2 che riguarda il lavoro, dalla ricerca di un lavoro
+      al progresso nel tuo carreer professionista"
     m_Metadata:
       m_Items: []
   - m_Id: 15338384780976128
@@ -62,8 +63,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15338417286832128
-    m_Localized: Tutto correlato alla salute fisica ed emotiva, compresa la nutrizione
-      e le abitudini per uno stile di vita sano.
+    m_Localized: "Tutto ci\xF2 che riguarda la salute fisica ed emotiva, compresa
+      la nutrizione e le abitudini per uno stile di vita sano."
     m_Metadata:
       m_Items: []
   - m_Id: 22534781286735872
@@ -96,7 +97,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602245
-    m_Localized: "Attivit\xE0 di gruppo (Chorus ...)"
+    m_Localized: "Attivit\xE0 di gruppo (coro ...)"
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602246
@@ -124,7 +125,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602252
-    m_Localized: Processo di applicazione
+    m_Localized: Processo di candidatura
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602253
@@ -140,7 +141,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602256
-    m_Localized: Lavoro di ufficio
+    m_Localized: Documenti
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602257
@@ -172,7 +173,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 28366007577812994
-    m_Localized: Auto-advocatezza
+    m_Localized: Auto-advocazione
     m_Metadata:
       m_Items: []
   references:
