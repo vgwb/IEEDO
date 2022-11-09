@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using Lean.Transition;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Ieedo
 {
     public class UICardCollection : MonoBehaviour
     {
         public RectTransform SlotPrefab;
-        public int CardScale = 3;
+        public float CardScale = 3;
 
         public Action<UICard> OnCardClicked;
 
@@ -111,9 +110,12 @@ namespace Ieedo
                 var delay = (HeldCards.Count - 1 - iCard + 2) * 0.1f;
                 heldCard.transform.localPositionTransition(heldCard.transform.localPosition, delay).JoinTransition().localPositionTransition(Vector3.zero, 0.5f);
 
-                if (currentListViewMode == UICardListScreen.ListViewMode.ToDo)
+                if (!UICardListScreen.FRONT_VIEW_ONLY)
                 {
-                    HeldSlots[iCard].transform.localEulerAnglesTransform(new Vector3(0, 0f, -5f), 0.5f);
+                    if (currentListViewMode == UICardListScreen.ListViewMode.ToDo)
+                    {
+                        HeldSlots[iCard].transform.localEulerAnglesTransform(new Vector3(0, 0f, -5f), 0.5f);
+                    }
                 }
             }
         }

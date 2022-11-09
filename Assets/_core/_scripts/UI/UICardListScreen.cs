@@ -12,6 +12,8 @@ namespace Ieedo
 {
     public class UICardListScreen : UIScreen
     {
+        public static bool FRONT_VIEW_ONLY = true;
+
         public static int VALIDATED_CARDS_PILLAR_INDEX = 0;
         public static int COMPLETED_CARDS_PILLAR_INDEX = 1;
 
@@ -330,6 +332,11 @@ namespace Ieedo
         private UICard frontCardUI;
         private Transform prevFrontCardParent;
 
+        public void ForceFrontCard(UICard cardUI)
+        {
+            this.frontCardUI = cardUI;
+        }
+
         public static int SortByExpirationDate(CardData c1, CardData c2)
         {
             return -c1.ExpirationTimestamp.Date.CompareTo(c2.ExpirationTimestamp.Date);
@@ -344,29 +351,29 @@ namespace Ieedo
             desiredFrontViewMode = frontViewMode;
 
             // Setup for this view
-            var rt = CardsList.GetComponent<RectTransform>();
-            var layout = CardsList.GetComponentInChildren<VerticalLayoutGroup>(true);
+            //var rt = CardsList.GetComponent<RectTransform>();
+            //var layout = CardsList.GetComponentInChildren<LayoutGroup>(true);
             switch (CurrentListViewMode)
             {
                 case ListViewMode.ToDo:
                     CreateCardButton.gameObject.SetActive(true);
                     DefaultOutEnterPosition = new Vector3(-2500, 0, 0);
                     DefaultOutExitPosition = new Vector3(-2500, 0, 0);
-                    rt.anchorMin = new Vector2(0, 0);
-                    rt.anchorMax = new Vector2(0, 1);
-                    rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 400);
-                    rt.localPosition = new Vector3(-220, 0, 0);
-                    layout.padding.bottom = 300;
+                    //rt.anchorMin = new Vector2(0, 0);
+                    //rt.anchorMax = new Vector2(0, 1);
+                    //rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 400);
+                    //rt.localPosition = new Vector3(-220, 0, 0);
+                    //layout.padding.bottom = 300;
                     break;
                 case ListViewMode.Pillars:
                     CreateCardButton.gameObject.SetActive(false);
                     DefaultOutEnterPosition = new Vector3(0, 2500, 0);
                     DefaultOutExitPosition = new Vector3(0, 2500, 0);
-                    rt.anchorMin = new Vector2(0, 0);
-                    rt.anchorMax = new Vector2(1, 1);
-                    rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 400);
-                    CardsList.transform.localPosition = new Vector3(153.734985f, 0, 0);
-                    layout.padding.bottom = 600;
+                    //rt.anchorMin = new Vector2(0, 0);
+                    //rt.anchorMax = new Vector2(1, 1);
+                    //rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 400);
+                    //CardsList.transform.localPosition = new Vector3(153.734985f, 0, 0);
+                    //layout.padding.bottom = 600;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -409,18 +416,22 @@ namespace Ieedo
             if (CurrentFrontViewMode != FrontViewMode.None)
                 return;
             FrontObscurer.colorTransition(new Color(FrontObscurer.color.r, FrontObscurer.color.g, FrontObscurer.color.b, 0.5f), 0.25f);
-            prevFrontCardParent = uiCard.transform.parent;
-            var uiCardRt = uiCard.GetComponent<RectTransform>();
-            uiCardRt.SetParent(FrontViewPivot, true);
-            uiCardRt.anchorMin = new Vector2(0.5f, 0.5f);
-            uiCardRt.anchorMax = new Vector2(0.5f, 0.5f);
-            uiCardRt.SetAsFirstSibling();
-            uiCard.AnimateToParent();
 
-            EditModeCardInteraction.transform.SetParent(uiCardRt);
-            EditModeCardInteraction.transform.localScale = Vector3.one;
-            EditModeCardInteraction.transform.localRotation = Quaternion.identity;
-            EditModeCardInteraction.transform.localPosition = Vector3.zero;
+            if (!FRONT_VIEW_ONLY)
+            {
+                prevFrontCardParent = uiCard.transform.parent;
+                var uiCardRt = uiCard.GetComponent<RectTransform>();
+                uiCardRt.SetParent(FrontViewPivot, true);
+                uiCardRt.anchorMin = new Vector2(0.5f, 0.5f);
+                uiCardRt.anchorMax = new Vector2(0.5f, 0.5f);
+                uiCardRt.SetAsFirstSibling();
+                uiCard.AnimateToParent();
+
+                EditModeCardInteraction.transform.SetParent(uiCardRt);
+                EditModeCardInteraction.transform.localScale = Vector3.one;
+                EditModeCardInteraction.transform.localRotation = Quaternion.identity;
+                EditModeCardInteraction.transform.localPosition = Vector3.zero;
+            }
 
             FrontView.gameObject.SetActive(true);
             frontCardUI = uiCard;
@@ -442,14 +453,10 @@ namespace Ieedo
                     ValidatedMode.SetActive(false);
                     StartEditing(false);
 
-                    CreateCardButton.transform.localScale = Vector3.one;
-                    CreateCardButton.transform.localScaleTransition(Vector3.zero, 0.25f);
-
-                    DeleteCardButton.transform.localScale = Vector3.zero;
-                    DeleteCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
+                    AnimateShowButton(CreateCardButton);
+                    AnimateShowButton(DeleteCardButton);
                     CompleteCardButton.gameObject.SetActive(true);
-                    CompleteCardButton.transform.localScale = Vector3.zero;
-                    CompleteCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
+                    AnimateShowButton(CompleteCardButton);
                     break;
                 case FrontViewMode.Create:
                     EditModeCardInteraction.SetActive(true);
@@ -469,8 +476,7 @@ namespace Ieedo
                     CompletedMode.SetActive(false);
                     ValidatedMode.SetActive(false);
 
-                    UnCompleteCardButton_View.transform.localScale = Vector3.zero;
-                    UnCompleteCardButton_View.transform.localScaleTransition(Vector3.one, 0.25f);
+                    AnimateShowButton(UnCompleteCardButton_View);
                     break;
                 case FrontViewMode.Completed:
                     EditModeCardInteraction.SetActive(false);
@@ -479,14 +485,12 @@ namespace Ieedo
                     CompletedMode.SetActive(true);
                     ValidatedMode.SetActive(false);
 
-                    UnCompleteCardButton_Review.transform.localScale = Vector3.zero;
-                    UnCompleteCardButton_Review.transform.localScaleTransition(Vector3.one, 0.25f);
+                    AnimateShowButton(UnCompleteCardButton_Review);
 
                     bool canValidate = Statics.Mode.SessionMode == SessionMode.Session;
                     if (canValidate)
                     {
-                        ValidateCardButton.transform.localScale = Vector3.zero;
-                        ValidateCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
+                        AnimateShowButton(ValidateCardButton);
                     }
                     else
                     {
@@ -500,10 +504,15 @@ namespace Ieedo
                     CompletedMode.SetActive(false);
                     ValidatedMode.SetActive(true);
 
-                    UnValidateCardButton.transform.localScale = Vector3.zero;
-                    UnValidateCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
+                    AnimateShowButton(UnValidateCardButton);
                     break;
             }
+        }
+
+        private void AnimateShowButton(UIButton btn)
+        {
+            btn.transform.localScale = Vector3.zero;
+            btn.transform.localScaleTransition(Vector3.one, 0.25f);
         }
 
         private void CloseFrontView()
@@ -525,8 +534,7 @@ namespace Ieedo
 
             if (CurrentListViewMode == ListViewMode.ToDo)
             {
-                CreateCardButton.transform.localScale = Vector3.zero;
-                CreateCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
+                AnimateShowButton(CreateCardButton);
             }
 
             // Make sure that the card is added correctly

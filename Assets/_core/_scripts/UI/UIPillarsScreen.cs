@@ -177,6 +177,13 @@ namespace Ieedo
             uiCardListScreen.LoadCards(pillarView.Data.Cards, UICardListScreen.SortByExpirationDate, UICardListScreen.ListViewMode.Pillars, desiredFrontViewMode);
             uiCardListScreen.KeepPillars = true;
             uiCardListScreen.Open();
+
+
+            if (UICardListScreen.FRONT_VIEW_ONLY)
+            {
+                // Directly open the front view
+                uiCardListScreen.OpenFrontView(uiCardListScreen.CardsList.HeldCards[0], desiredFrontViewMode);
+            }
         }
 
         private void HandleSelectPlane(LeanSelect select)

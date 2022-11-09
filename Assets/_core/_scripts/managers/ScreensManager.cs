@@ -134,6 +134,14 @@ namespace Ieedo
             uiCardListScreen.LoadToDoCards();
             uiCardListScreen.KeepPillars = false;
             GoTo(ScreenID.CardList);
+
+            if (UICardListScreen.FRONT_VIEW_ONLY)
+            {
+                if (uiCardListScreen.CardsList.HeldCards.Count > 0)
+                {
+                    uiCardListScreen.OpenFrontView(uiCardListScreen.CardsList.HeldCards[0], UICardListScreen.FrontViewMode.Edit);
+                }
+            }
         }
 
         #endregion

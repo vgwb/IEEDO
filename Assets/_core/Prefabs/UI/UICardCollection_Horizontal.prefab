@@ -56,12 +56,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1063561003611973686}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Script: {fileID: 11500000, guid: 104b0d7781b244a2ab1133779100cd95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 5515793274578586197}
-  m_Horizontal: 0
-  m_Vertical: 1
+  m_Horizontal: 1
+  m_Vertical: 0
   m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1
@@ -77,6 +77,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+  CardCollection: {fileID: 6437316955223693130}
 --- !u!1 &2067036017059844308
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,7 +89,7 @@ GameObject:
   - component: {fileID: 7102778298511453035}
   - component: {fileID: 6437316955223693130}
   m_Layer: 5
-  m_Name: UICardCollection
+  m_Name: UICardCollection_Horizontal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,6 +130,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SlotPrefab: {fileID: 793018993979755802}
   CardScale: 2
+  HeldSlots: []
+  HeldCards: []
 --- !u!1 &3045264494255232549
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,7 +165,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 443.34976, y: -578}
+  m_AnchoredPosition: {x: 953.6719, y: -578}
   m_SizeDelta: {x: 244, y: 356}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &6558755353056135740
@@ -247,8 +250,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 1665}
-  m_SizeDelta: {x: 0, y: 400}
+  m_AnchoredPosition: {x: -0.0005681024, y: 1665.1212}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &4351312593752694894
 MonoBehaviour:
@@ -259,18 +262,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 8105835662138277310}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 400
+    m_Left: 400
+    m_Right: 400
+    m_Top: 600
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: -200
+  m_Spacing: 400
   m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 0
+  m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
@@ -288,5 +291,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalFit: 0
-  m_VerticalFit: 2
+  m_HorizontalFit: 2
+  m_VerticalFit: 0
