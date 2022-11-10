@@ -19,6 +19,5 @@ namespace Ieedo.games
                 I = this;
 
         }
-
     }
 }
