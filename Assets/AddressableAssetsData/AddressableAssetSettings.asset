@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 775f73797149949d7a54cdad34b72a63
   m_CachedHash:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
+    Hash: 227adf30a4fb25a4081eaaaf6de55b3c
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_BundleLocalCatalog: 0
@@ -32,11 +32,14 @@ MonoBehaviour:
   m_ShaderBundleNaming: 0
   m_ShaderBundleCustomNaming: 
   m_MonoScriptBundleNaming: 0
+  m_CheckForContentUpdateRestrictionsOption: 0
   m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
     m_Id: 
   m_RemoteCatalogLoadPath:
     m_Id: 
+  m_ContentStateBuildPathProfileVariableName: 
+  m_CustomContentStateBuildPath: 
   m_ContentStateBuildPath: 
   m_BuildAddressablesWithPlayerBuild: 0
   m_overridePlayerVersion: 
@@ -51,6 +54,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bac725364fbcc4f73929d51420a1553f, type: 2}
   - {fileID: 11400000, guid: c6e379309b81f445ab653a500ff43f7f, type: 2}
   - {fileID: 11400000, guid: 9313be5d083734c41abd9529010e0990, type: 2}
+  - {fileID: 11400000, guid: b501f48d17e9c491da171e975d4cfa40, type: 2}
+  - {fileID: 11400000, guid: dc91072007980489c8716b2275369145, type: 2}
+  - {fileID: 11400000, guid: 2d3f32cf57e864b40898758804a09432, type: 2}
+  - {fileID: 11400000, guid: 78ac3c2d5c2494a40bfd2a42ab090fef, type: 2}
   m_BuildSettings:
     m_CompileScriptsInVirtualMode: 0
     m_CleanupStreamingAssetsAfterBuilds: 1
@@ -97,6 +104,10 @@ MonoBehaviour:
     - Preload
     - Locale-en
     - Locale-it
+    - Locale-el
+    - Locale-de
+    - Locale-es
+    - Locale-sv
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 82d7f727093a24682ba4f3664302e6af, type: 2}
@@ -116,6 +127,3 @@ MonoBehaviour:
     m_Settings: {fileID: 11400000}
     m_NextInstanceId: 0
     m_RegisteredServiceTypeRefs: []
-    m_GlobalProfileVariablesInfos:
-    - key: PrivateIpAddress
-      value: 192.168.1.207

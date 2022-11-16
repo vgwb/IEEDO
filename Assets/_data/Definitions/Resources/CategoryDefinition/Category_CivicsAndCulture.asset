@@ -88,7 +88,7 @@ MonoBehaviour:
         m_WaitForCompletion: 0
         m_LocalVariables: []
       DefaultText: B 2
-    Icon: \uf1ea
+    Icon: \uf772
   - ID: 504
     Title:
       Key:
@@ -101,7 +101,7 @@ MonoBehaviour:
         m_WaitForCompletion: 0
         m_LocalVariables: []
       DefaultText: B 2
-    Icon: \uf756
+    Icon: \uf1ea
   - ID: 1000
     Title:
       Key:

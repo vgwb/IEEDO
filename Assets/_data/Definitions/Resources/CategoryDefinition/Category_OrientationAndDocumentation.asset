@@ -89,6 +89,19 @@ MonoBehaviour:
         m_LocalVariables: []
       DefaultText: B 2
     Icon: \uf25a
+  - ID: 204
+    Title:
+      Key:
+        m_TableReference:
+          m_TableCollectionName: GUID:c72a3e86bc710427d83055e5adb307c5
+        m_TableEntryReference:
+          m_KeyId: 107049747551821824
+          m_Key: 
+        m_FallbackState: 0
+        m_WaitForCompletion: 0
+        m_LocalVariables: []
+      DefaultText: B 2
+    Icon: \uf1fa
   - ID: 1000
     Title:
       Key:

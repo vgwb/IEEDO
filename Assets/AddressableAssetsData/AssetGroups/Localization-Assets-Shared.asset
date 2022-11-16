@@ -21,18 +21,22 @@ MonoBehaviour:
     m_Address: Assets/Localization/Tables/UI Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c72a3e86bc710427d83055e5adb307c5
     m_Address: Assets/Localization/cards Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e48f391c1e96c7040b7091b267464dc8
     m_Address: Assets/Localization/Tables/Activity/Activity Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f57bdb4aff2f4cc469d2fc2820a81e92
     m_Address: Assets/Localization/Tables/Assessment/Assessment Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 040c13c27cf774e8f973d2fddbc2454d, type: 2}
   m_SchemaSet:

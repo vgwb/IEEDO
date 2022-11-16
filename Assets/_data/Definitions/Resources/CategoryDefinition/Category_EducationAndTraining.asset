@@ -62,7 +62,7 @@ MonoBehaviour:
         m_WaitForCompletion: 0
         m_LocalVariables: []
       DefaultText: C 2
-    Icon: \uf234
+    Icon: \uf2c2
   - ID: 302
     Title:
       Key:

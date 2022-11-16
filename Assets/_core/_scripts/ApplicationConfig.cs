@@ -41,6 +41,9 @@ namespace Ieedo
         public string SourceLocale;
         public string TargetLocale;
 
+        [Header("Notifications")]
+        public bool NotificationsEnabled;
+
         [Header("Analytics")]
         public bool AnalyticsEnabled;
         public bool AnalyticsDevEnv;

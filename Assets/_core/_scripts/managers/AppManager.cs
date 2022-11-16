@@ -71,6 +71,8 @@ namespace Ieedo
             {
                 yield return HandleNewProfileStart();
             }
+
+            Statics.Notifications.Init();
         }
 
         public IEnumerator HandleNewProfileStart()

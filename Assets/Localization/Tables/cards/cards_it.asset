@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 10201661340147712
-    m_Localized: Civico e cultura
+    m_Localized: Partecipazione e cultura locale
     m_Metadata:
       m_Items: []
   - m_Id: 10201788641468416
@@ -50,7 +50,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15338384780976128
-    m_Localized: Orientamento e documenti
+    m_Localized: Amministratore e andare in giro
     m_Metadata:
       m_Items: []
   - m_Id: 15338385938604032
@@ -85,7 +85,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602242
-    m_Localized: Esposizione
+    m_Localized: Vai a una mostra
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602243
@@ -97,7 +97,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602245
-    m_Localized: "Attivit\xE0 di gruppo (coro ...)"
+    m_Localized: "Attivit\xE0 di gruppo"
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602246
@@ -157,7 +157,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602260
-    m_Localized: Nutrizione
+    m_Localized: "Attivit\xE0 di benessere"
     m_Metadata:
       m_Items: []
   - m_Id: 22763239081189376
@@ -165,15 +165,27 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 28366007577812992
-    m_Localized: Media (notizie, TV, libri ...)
+    m_Localized: Supportare una campagna
     m_Metadata:
       m_Items: []
   - m_Id: 28366007577812993
-    m_Localized: Istituzioni
+    m_Localized: Media
     m_Metadata:
       m_Items: []
   - m_Id: 28366007577812994
     m_Localized: Auto-advocazione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107049747551821824
+    m_Localized: Usa i servizi online
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107049747551821825
+    m_Localized: Nutrizione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107338012276236288
+    m_Localized: Unisciti al gruppo Community
     m_Metadata:
       m_Items: []
   references:
