@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using Lean.Transition;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Ieedo
 {
     public class UICardCollection : MonoBehaviour
     {
         public RectTransform SlotPrefab;
+        public SnappingScrollRect ScrollRect;
         public float CardScale = 3;
 
         public Action<UICard> OnCardClicked;
@@ -87,6 +89,12 @@ namespace Ieedo
                 HeldCards[i].transform.SetParent(HeldSlots[i].transform);
                 HeldCards[i].AnimateToParent();
             }
+
+            // Remove unused slots
+            for (int i = HeldCards.Count; i < HeldSlots.Count; i++)
+            {
+                HeldSlots[i].SetActive(false);
+            }
         }
 
         public void AnimateEntrance(UICardListScreen.ListViewMode currentListViewMode)
@@ -98,7 +106,7 @@ namespace Ieedo
                 switch (currentListViewMode)
                 {
                     case UICardListScreen.ListViewMode.ToDo:
-                        heldCard.transform.localPosition = Vector3.left * 400;
+                        heldCard.transform.localPosition = Vector3.zero;// Vector3.left * 400;
                         break;
                     case UICardListScreen.ListViewMode.Pillars:
                         heldCard.transform.localPosition = Vector3.up * 1500;

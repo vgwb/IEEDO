@@ -137,9 +137,14 @@ namespace Ieedo
 
             if (UICardListScreen.FRONT_VIEW_ONLY)
             {
+                uiCardListScreen.CloseFrontView();
                 if (uiCardListScreen.CardsList.HeldCards.Count > 0)
                 {
                     uiCardListScreen.OpenFrontView(uiCardListScreen.CardsList.HeldCards[0], UICardListScreen.FrontViewMode.Edit);
+                }
+                else
+                {
+                    uiCardListScreen.OpenFrontView(null, UICardListScreen.FrontViewMode.Edit);
                 }
             }
         }
