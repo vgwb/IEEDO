@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace vgwb.notifications
+namespace NotificationSamples
 {
     /// <summary>
     /// Cross-platform wrapper to represent channels for notifications.

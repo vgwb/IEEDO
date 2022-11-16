@@ -1,6 +1,7 @@
 using System;
+using System.Collections;
 
-namespace vgwb.notifications
+namespace NotificationSamples
 {
     /// <summary>
     /// Any type that handles notifications for a specific game platform
@@ -11,6 +12,8 @@ namespace vgwb.notifications
         /// Fired when a notification is received.
         /// </summary>
         event Action<IGameNotification> NotificationReceived;
+
+        IEnumerator RequestNotificationPermission();
 
         /// <summary>
         /// Create a new instance of a <see cref="IGameNotification"/> for this platform.

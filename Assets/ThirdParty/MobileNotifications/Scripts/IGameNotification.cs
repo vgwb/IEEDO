@@ -1,6 +1,6 @@
 using System;
 
-namespace vgwb.notifications
+namespace NotificationSamples
 {
     /// <summary>
     /// Represents a notification that will be delivered for this application.

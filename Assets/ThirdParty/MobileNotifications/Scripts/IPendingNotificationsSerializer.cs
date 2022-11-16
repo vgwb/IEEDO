@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace vgwb.notifications
+namespace NotificationSamples
 {
     /// <summary>
     /// Responsible for the serialization and deserialization of pending notifications for a

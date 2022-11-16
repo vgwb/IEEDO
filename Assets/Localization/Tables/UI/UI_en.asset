@@ -330,6 +330,10 @@ MonoBehaviour:
     m_Localized: Do you really want to reset the profile?
     m_Metadata:
       m_Items: []
+  - m_Id: 134354837057822720
+    m_Localized: Remember to play and to update your to-do-list everyday!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

@@ -4,7 +4,7 @@ using Unity.Notifications.iOS;
 using UnityEngine;
 using UnityEngine.Assertions;
 
-namespace vgwb.notifications.iOS
+namespace NotificationSamples.iOS
 {
     /// <summary>
     /// iOS implementation of <see cref="IGameNotification"/>.
@@ -105,10 +105,10 @@ namespace vgwb.notifications.iOS
                     calendarTrigger.Hour ?? now.Hour,
                     calendarTrigger.Minute ?? now.Minute,
                     calendarTrigger.Second ?? now.Second,
-                    DateTimeKind.Local
+                    calendarTrigger.UtcTime ? DateTimeKind.Utc : DateTimeKind.Local
                     );
 
-                return result;
+                return result.ToLocalTime();
             }
             set
             {

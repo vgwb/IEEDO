@@ -948,6 +948,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3839293573520725286}
   - component: {fileID: 5829043089009805401}
+  - component: {fileID: 2324496876762576928}
   m_Layer: 0
   m_Name: NotificationsManager
   m_TagString: Untagged
@@ -982,3 +983,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50df9ad4aaeae41cfa7daacc1e9fda8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NotificationsManager: {fileID: 2324496876762576928}
+--- !u!114 &2324496876762576928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8532505013837568112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cee98b792935d2499e84d5f659c1895, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mode: 7
+  autoBadging: 1

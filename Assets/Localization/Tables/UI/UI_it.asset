@@ -139,7 +139,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40557809452736512
-    m_Localized: Giocare
+    m_Localized: Giocare a
     m_Metadata:
       m_Items: []
   - m_Id: 43003187146022912
@@ -191,8 +191,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762365927424
-    m_Localized: "Benvenuto! L'obiettivo IEEDO \xE8 aiutarti ad avere successo in
-      questo paese. Se non capisci qualcosa sullo schermo, tieni premuto il pulsante
+    m_Localized: "Ben arrivato! L'obiettivo IEEDO \xE8 aiutarti ad avere successo
+      in questo paese. Se non capisci qualcosa sullo schermo, tieni premuto il pulsante
       di traduzione per leggerlo in arabo"
     m_Metadata:
       m_Items: []
@@ -330,6 +330,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 65895845057028096
     m_Localized: Vuoi davvero ripristinare il profilo?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134354837057822720
+    m_Localized: Ricordati di giocare e aggiornare le tue cose da fare tutti i giorni!
     m_Metadata:
       m_Items: []
   references:

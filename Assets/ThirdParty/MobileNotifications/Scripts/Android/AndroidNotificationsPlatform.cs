@@ -1,8 +1,9 @@
 #if UNITY_ANDROID
 using System;
+using System.Collections;
 using Unity.Notifications.Android;
 
-namespace vgwb.notifications.Android
+namespace NotificationSamples.Android
 {
     /// <summary>
     /// Android implementation of <see cref="IGameNotificationsPlatform"/>.
@@ -25,6 +26,13 @@ namespace vgwb.notifications.Android
         public AndroidNotificationsPlatform()
         {
             AndroidNotificationCenter.OnNotificationReceived += OnLocalNotificationReceived;
+        }
+
+        public IEnumerator RequestNotificationPermission()
+        {
+            var request = new PermissionRequest();
+            while (request.Status == PermissionStatus.RequestPending)
+                yield return null;
         }
 
         /// <inheritdoc />
@@ -146,12 +154,12 @@ namespace vgwb.notifications.Android
         /// <summary>
         /// Does nothing on Android.
         /// </summary>
-        public void OnForeground() { }
+        public void OnForeground() {}
 
         /// <summary>
         /// Does nothing on Android.
         /// </summary>
-        public void OnBackground() { }
+        public void OnBackground() {}
 
         /// <summary>
         /// Unregister delegates.

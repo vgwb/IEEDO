@@ -1,7 +1,7 @@
 #if UNITY_ANDROID
 using UnityEngine;
 
-namespace vgwb.notifications.Android
+namespace NotificationSamples.Android
 {
     /// <summary>
     /// Class for managing Android notification center extensions.

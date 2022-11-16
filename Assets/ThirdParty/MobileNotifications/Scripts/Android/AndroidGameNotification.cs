@@ -3,7 +3,7 @@ using System;
 using Unity.Notifications.Android;
 using UnityEngine.Assertions;
 
-namespace vgwb.notifications.Android
+namespace NotificationSamples.Android
 {
     /// <summary>
     /// Android specific implementation of <see cref="IGameNotification"/>.
@@ -32,7 +32,7 @@ namespace vgwb.notifications.Android
         /// <summary>
         /// Does nothing on Android.
         /// </summary>
-        public string Subtitle { get => null; set { } }
+        public string Subtitle { get => null; set {} }
 
         /// <inheritdoc />
         public string Data { get => InternalNotification.IntentData; set => internalNotification.IntentData = value; }
