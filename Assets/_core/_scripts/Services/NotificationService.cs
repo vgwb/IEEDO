@@ -13,7 +13,7 @@ namespace Ieedo
         public const string ChannelId = "game_channel0";
         private bool inizialized = false;
         private GameObject myGameObject;
-        protected int playReminderHour = 18;
+        protected int playReminderHour = 7;
 
         // public NotificationService(GameObject _gameObject)
         // {
@@ -28,7 +28,7 @@ namespace Ieedo
                 if (!inizialized)
                 {
                     Debug.Log("NotificationService Init");
-                    //NotificationsManager = myGameObject.AddComponent<GameNotificationsManager>();
+                    //NotificationsManager = gameObject.AddComponent<GameNotificationsManager>();
 
                     var channel = new GameNotificationChannel(ChannelId, "Default Game Channel", "Generic notifications");
                     NotificationsManager.Initialize(channel);
