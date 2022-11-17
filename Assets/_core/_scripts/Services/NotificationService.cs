@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using NotificationSamples;
 
@@ -9,31 +10,20 @@ namespace Ieedo
         private bool NotificationsEnabled => Statics.App.ApplicationConfig.NotificationsEnabled;
 
         public GameNotificationsManager NotificationsManager;
-
-        public const string ChannelId = "game_channel0";
-        private bool inizialized = false;
-        private GameObject myGameObject;
+        public const string ChannelId = "game_remind";
         protected int playReminderHour = 7;
 
-        // public NotificationService(GameObject _gameObject)
-        // {
-        //     myGameObject = _gameObject;
-        //     Init();
-        // }
-
-        public void Init()
+        private IEnumerator Start()
         {
             if (NotificationsEnabled)
             {
-                if (!inizialized)
-                {
-                    Debug.Log("NotificationService Init");
-                    //NotificationsManager = gameObject.AddComponent<GameNotificationsManager>();
-
-                    var channel = new GameNotificationChannel(ChannelId, "Default Game Channel", "Generic notifications");
-                    NotificationsManager.Initialize(channel);
-                    inizialized = true;
-                }
+                Debug.Log("NotificationService Init");
+                var channel = new GameNotificationChannel(ChannelId, "Reminder Channel", "Reminder notifications");
+                return NotificationsManager.Initialize(channel);
+            }
+            else
+            {
+                return null;
             }
         }
 
@@ -65,7 +55,7 @@ namespace Ieedo
         private void PrepareNextLocalNotification()
         {
             //DeleteAllLocalNotifications();
-            //Debug.Log("Next Local Notifications prepared");
+            Debug.Log("Next Local Notifications prepared");
             ScheduleNotification(
                 GetDateTimeTomorrow(),
                 "IEEDO App",
@@ -127,7 +117,7 @@ namespace Ieedo
         #region tests
         public void TestLocalNotification()
         {
-            //Debug.Log("Tomorrows midnight is in " + CalculateSecondsToTomorrowMidnight() + " seconds");
+            Debug.Log("Tomorrows midnight is in " + CalculateSecondsToTomorrowMidnight() + " seconds");
             //            var description = LocalizationManager.GetLocalizationData(LocalizationDataId.UI_Notification_24h).NativeText;
             var description = LocString.FromStr("UI/notifications_remind_24h").GetLocalizedString();
             ScheduleNotification(
