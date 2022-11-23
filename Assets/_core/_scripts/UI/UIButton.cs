@@ -27,6 +27,14 @@ namespace Ieedo
             }
         }
 
+        public Sprite Sprite
+        {
+            set
+            {
+                var tm = GetComponentInChildren<Image>(true);
+                tm.sprite = value;
+            }
+        }
 
         public Image Shadow;
         public Image Cap;

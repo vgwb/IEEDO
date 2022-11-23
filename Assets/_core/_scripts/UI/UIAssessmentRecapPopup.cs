@@ -39,7 +39,7 @@ namespace Ieedo
 
             OpenImmediate();
 
-            SetupButton(ContinueButton, CloseImmediate);
+            SetupButton(ContinueButton, () => CloseImmediate());
         }
     }
 }

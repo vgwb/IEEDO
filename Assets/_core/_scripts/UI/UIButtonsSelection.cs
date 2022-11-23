@@ -1,18 +1,24 @@
-﻿using UnityEngine.Localization;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Components;
 
 namespace Ieedo
 {
-    public class UIButtonsSelection : UIScreen
+    public class UIButtonsSelection : UIInteractable
     {
-        public UIButton[] Buttons;
+        private UIButton[] Buttons;
         public int LatestSelectedOption;
+        private bool hasSelected;
 
-        public void SetupSelection(LocalizedString[] answers, System.Action<int> onSelection)
+        public IEnumerator PerformSelection(Locale[] answers, System.Action<int> onSelection = null)
         {
+            Buttons = GetComponentsInChildren<UIButton>(true);
             OnSelectOption = onSelection;
             for (var i = 0; i < answers.Length; i++)
             {
-                Buttons[i].Key = answers[i];
+                Buttons[i].Key = new LocalizedString("UI","LanguageName");//answers[i].local;
+                Buttons[i].GetComponentInChildren<LocalizeStringEvent>().StringReference.LocaleOverride = answers[i];
                 Buttons[i].gameObject.SetActive(true);
 
                 var selectedOption = i;
@@ -23,6 +29,31 @@ namespace Ieedo
             {
                 Buttons[i].gameObject.SetActive(false);
             }
+
+            hasSelected = false;
+            while (!hasSelected) yield return null;
+        }
+
+        public IEnumerator PerformSelection(Sprite[] answers, System.Action<int> onSelection = null)
+        {
+            Buttons = GetComponentsInChildren<UIButton>(true);
+            OnSelectOption = onSelection;
+            for (var i = 0; i < answers.Length; i++)
+            {
+                Buttons[i].Sprite = answers[i];
+                Buttons[i].gameObject.SetActive(true);
+
+                var selectedOption = i;
+                SetupButton(Buttons[i], () => SelectOption(selectedOption));
+            }
+
+            for (int i = answers.Length; i < Buttons.Length; i++)
+            {
+                Buttons[i].gameObject.SetActive(false);
+            }
+
+            hasSelected = false;
+            while (!hasSelected) yield return null;
         }
 
         public System.Action<int> OnSelectOption;
@@ -31,6 +62,7 @@ namespace Ieedo
             SoundManager.I.PlaySfx(SfxEnum.click);
             OnSelectOption?.Invoke(selectedOption);
             LatestSelectedOption = selectedOption;
+            hasSelected = true;
         }
     }
 }
