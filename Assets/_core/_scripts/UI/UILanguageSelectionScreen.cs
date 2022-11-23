@@ -1,21 +1,26 @@
 using System.Collections;
-using UnityEngine.Localization;
+using UnityEngine;
+using UnityEngine.Localization.Settings;
 
 namespace Ieedo
 {
-    public class UICountrySelectionScreen : UIScreen
+    public class UILanguageSelectionScreen : UIScreen
     {
+        public override ScreenID ID => ScreenID.LanguageSelection;
+
         public UIButtonsSelection ButtonsSelection;
-        
-        public IEnumerator PerformSelection()
+
+        public IEnumerator PerformSelection(ProfileData profileData)
         {
-            var locStrings = new LocalizedString[5];
-            
-            ButtonsSelection.SetupSelection(locStrings, index => );
-            
-            var targetLocale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.App.ApplicationConfig.TargetLocale);
-            if (targetLocale != null)
-                LocalizationSettings.SelectedLocale = targetLocale;
+            var availableLocales = LocalizationSettings.AvailableLocales.Locales;
+            yield return ButtonsSelection.PerformSelection(availableLocales.ToArray());
+            var chosenLocale = availableLocales[ButtonsSelection.LatestSelectedOption];
+            if (chosenLocale != null)
+            {
+                LocalizationSettings.SelectedLocale = chosenLocale;
+                Debug.Log("SELECTED LOCALE: " + chosenLocale);
+                profileData.Description.Language = chosenLocale.Identifier.Code;
+            }
         }
     }
 }

@@ -130,8 +130,8 @@ namespace Ieedo
                 Statics.Data.CreateNewProfile(new ProfileDescription
                 {
                     Name = "TEST",
-                    Country = "en",
-                    Language = Language.English,
+                    Country = "uk",
+                    Language = "uk-en",
                     IsNewProfile = true
                 });
                 yield return AppManager.I.HandleNewProfileStart();
