@@ -17,7 +17,7 @@ namespace Ieedo
             OnSelectOption = onSelection;
             for (var i = 0; i < answers.Length; i++)
             {
-                Buttons[i].Key = new LocalizedString("UI","LanguageName");//answers[i].local;
+                Buttons[i].Key = new LocalizedString("UI","language_name");
                 Buttons[i].GetComponentInChildren<LocalizeStringEvent>().StringReference.LocaleOverride = answers[i];
                 Buttons[i].gameObject.SetActive(true);
 

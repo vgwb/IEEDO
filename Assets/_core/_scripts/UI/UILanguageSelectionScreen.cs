@@ -18,7 +18,6 @@ namespace Ieedo
             if (chosenLocale != null)
             {
                 LocalizationSettings.SelectedLocale = chosenLocale;
-                Debug.Log("SELECTED LOCALE: " + chosenLocale);
                 profileData.Description.Language = chosenLocale.Identifier.Code;
             }
         }
