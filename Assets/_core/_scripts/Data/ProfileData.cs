@@ -55,7 +55,7 @@ namespace Ieedo
     {
         public string Name;
         public string Country;
-        public Language Language;
+        public string Language;
         public bool IsNewProfile;
         public bool SfxDisabled;
     }

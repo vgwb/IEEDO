@@ -22,7 +22,7 @@ namespace Ieedo
                 foreach (var item in items)
                 {
                     Screens[item.ID] = item;
-                    item.CloseImmediate();
+                    item.CloseImmediate(true);
                 }
             }
         }
