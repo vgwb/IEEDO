@@ -180,7 +180,10 @@ namespace Ieedo
             if (UICardListScreen.FRONT_VIEW_ONLY)
             {
                 // Directly open the front view
-                uiCardListScreen.OpenFrontView(uiCardListScreen.CardsList.HeldCards[0], desiredFrontViewMode);
+                if (uiCardListScreen.CardsList.HeldCards.Count > 0)
+                {
+                    uiCardListScreen.OpenFrontView(uiCardListScreen.CardsList.HeldCards[0], desiredFrontViewMode);
+                }
             }
         }
 

@@ -113,6 +113,8 @@ namespace Ieedo
             foreach (var category in categories)
             {
                 BlockerBG.colorTransition(category.Color.SetSaturation(0.5f), 0.25f);
+                assessmentFillbar.FillBar.FillImage.color = category.Color;
+                assessmentFillbar.FillBar.BGImage.color = category.Color.SetSaturation(0.5f);
                 yield return assessmentHeader.ShowCategory(category);
                 yield return categoryIntroScreen.ShowCategory(category);
                 while (categoryIntroScreen.isActiveAndEnabled) yield return null;
@@ -195,11 +197,15 @@ namespace Ieedo
             var assessmentRecapScreen = Statics.Screens.Get(ScreenID.AssessmentRecap) as UIAssessmentRecapPopup;
             var introScreen = Statics.Screens.Get(ScreenID.AssessmentIntro) as UIAssessmentIntroScreen;
             var categoryIntroScreen = Statics.Screens.Get(ScreenID.AssessmentCategoryIntro) as UIAssessmentCategoryIntroScreen;
+            var assessmentHeader = Statics.Screens.Get(ScreenID.AssessmentHeader) as UIAssessmentHeader;
+            var assessmentFillbar = Statics.Screens.Get(ScreenID.AssessmentFillbar) as UIAssessmentFillbar;
 
             while (introScreen.IsOpen) yield return introScreen.CloseCO();
             while (questionScreen.IsOpen) yield return questionScreen.CloseCO();
             while (assessmentRecapScreen.IsOpen) yield return assessmentRecapScreen.CloseCO();
             while (categoryIntroScreen.IsOpen) yield return categoryIntroScreen.CloseCO();
+            while (assessmentHeader.IsOpen) yield return assessmentHeader.CloseCO();
+            while (assessmentFillbar.IsOpen) yield return assessmentFillbar.CloseCO();
 
             if (BlockerBG != null)
             {
