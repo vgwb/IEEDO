@@ -30,6 +30,7 @@ namespace Ieedo
         private UIButton btnTestIncreaseScore;
         private UIButton btnResetProfile;
         private UIButton btnTestAddDiary;
+        private UIButton btnTestNotifications;
 
 
         private bool initialised = false;
@@ -42,7 +43,8 @@ namespace Ieedo
             SfxToggle.On = !Statics.Data.Profile.Description.SfxDisabled;
 
             CheatSection.gameObject.SetActive(false);
-            SetupButton(btnHiddenCheats, () => {
+            SetupButton(btnHiddenCheats, () =>
+            {
                 nCheatEnterCounter++;
                 if (nCheatEnterCounter >= 5)
                 {
@@ -87,7 +89,7 @@ namespace Ieedo
             {
                 AppManager.I.StartCoroutine(ResetProfileCO());
                 CloseImmediate();
-            },SettingsSection);
+            }, SettingsSection);
 
             btnTestAddDiary = AddUnlocalizedButton("Add Diary Pages", () =>
             {
@@ -103,6 +105,11 @@ namespace Ieedo
                     Statics.ActivityFlow.RegisterResult(res, ActivityID.Diary);
                 }
                 CloseImmediate();
+            });
+
+            btnTestNotifications = AddButton("Test Notifications", () =>
+            {
+                Statics.Notifications.TestLocalNotification();
             });
 
             ButtonPrefab.gameObject.SetActive(false);
@@ -149,7 +156,7 @@ namespace Ieedo
                 {
                     Statics.SessionFlow.SkipAssessment();
                 }
-                    break;
+                break;
                 case TopBarMode.Special_Activity:
                 {
                     var answer = new Ref<int>();
@@ -159,13 +166,13 @@ namespace Ieedo
                         Statics.ActivityFlow.CurrentActivityManager.CloseActivity(new ActivityResult(ActivityResultState.Quit, 0));
                     }
                 }
-                    break;
+                break;
                 case TopBarMode.Special_CardCreation:
                 {
                     var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
                     AppManager.I.StartCoroutine(uiCardListScreen.CreationAbortCO());
                 }
-                    break;
+                break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
@@ -173,7 +180,8 @@ namespace Ieedo
 
         private UIButton AddButton(string locKey, System.Action action, RectTransform parent = null)
         {
-            if (parent == null) parent = ButtonPrefab.transform.parent as RectTransform;
+            if (parent == null)
+                parent = ButtonPrefab.transform.parent as RectTransform;
             var btn = Instantiate(ButtonPrefab, parent);
             SetupButton(btn, action);
             btn.Key = new LocalizedString("UI", locKey);
@@ -183,7 +191,9 @@ namespace Ieedo
 
         private UIButton AddUnlocalizedButton(string text, System.Action action, RectTransform parent = null)
         {
-            if (parent == null) parent = ButtonPrefab.transform.parent as RectTransform;;
+            if (parent == null)
+                parent = ButtonPrefab.transform.parent as RectTransform;
+            ;
             var btn = Instantiate(ButtonPrefab, parent);
             SetupButton(btn, action);
             btn.Text = text;
