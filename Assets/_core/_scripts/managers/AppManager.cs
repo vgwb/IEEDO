@@ -35,6 +35,8 @@ namespace Ieedo
             { var _ = Statics.Cards; }
             { var _ = Statics.Screens; }
 
+            Statics.Screens.LoadScreens();
+
             // Load the current profile
             bool canLoad = Statics.Data.LoadProfile();
             if (!canLoad)
@@ -43,17 +45,8 @@ namespace Ieedo
                 Statics.Data.InitialiseCardDefinitions();
 
                 // For now, create a new one if none is found
-                Statics.Data.CreateNewProfile(new ProfileDescription
-                {
-                    Name = "TEST",
-                    Country = "en",
-                    Language = Language.English,
-                    IsNewProfile = true,
-                    SfxDisabled = false
-                });
+                Statics.Data.CreateDefaultNewProfile();
             }
-
-            Statics.Screens.LoadScreens();
 
             // Initialise some loc data
             Statics.Score.RefreshString();
@@ -75,8 +68,10 @@ namespace Ieedo
             Statics.Notifications.Init();
         }
 
+
         public IEnumerator HandleNewProfileStart()
         {
+            yield return ProfileCreationFlow();
             yield return Statics.Screens.ShowDialog("UI/intro_content_1", "UI/ok");
             yield return Statics.Screens.ShowDialog("UI/intro_content_2", "UI/start_session");
             Statics.Data.Profile.Description.IsNewProfile = false;
@@ -84,6 +79,21 @@ namespace Ieedo
             Statics.Mode.ToggleSessionMode();
         }
 
+        private IEnumerator ProfileCreationFlow()
+        {
+            Statics.Data.CreateDefaultNewProfile();
+            var languageScreen = Statics.Screens.Get(ScreenID.LanguageSelection) as UILanguageSelectionScreen;
+            var countryScreen = Statics.Screens.Get(ScreenID.CountrySelection) as UICountrySelectionScreen;
+
+            yield return Statics.Screens.OpenCO(ScreenID.LanguageSelection);
+            yield return languageScreen.PerformSelection(Statics.Data.Profile);
+            yield return Statics.Screens.CloseCO(ScreenID.LanguageSelection);
+
+            yield return Statics.Screens.OpenCO(ScreenID.CountrySelection);
+            yield return countryScreen.PerformSelection(Statics.Data.Profile);
+            yield return Statics.Screens.CloseCO(ScreenID.CountrySelection);
+
+        }
     }
 
 }
