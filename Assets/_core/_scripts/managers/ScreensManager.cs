@@ -22,7 +22,7 @@ namespace Ieedo
                 foreach (var item in items)
                 {
                     Screens[item.ID] = item;
-                    item.CloseImmediate();
+                    item.CloseImmediate(true);
                 }
             }
         }
@@ -52,6 +52,13 @@ namespace Ieedo
                 yield break;
             OpenScreens.Remove(id);
             yield return Screens[id].CloseCO();
+        }
+
+        // Smooth transition from-to
+        public IEnumerator CloseOpenCO(ScreenID from, ScreenID to)
+        {
+            Close(from);
+            yield return Screens[to].OpenCO();
         }
 
         public void OpenImmediate(ScreenID id)
@@ -119,12 +126,17 @@ namespace Ieedo
             yield return questionScreen.ShowQuestionFlow(titleKey, contentKey, answers, answer);
         }
 
-        public IEnumerator ShowDialog(string contentKey, string answerKey)
+        public IEnumerator ShowDialog(string contentKey, string answerKey, bool waitForClosing = true)
         {
             var dialogScreen = Statics.Screens.Get(ScreenID.Dialog) as UIDialogPopup;
             yield return dialogScreen.ShowDialog(LocString.FromStr(contentKey), LocString.FromStr(answerKey));
-            while (dialogScreen.IsOpen)
-                yield return null;
+            if (waitForClosing)
+            {
+                while (dialogScreen.IsOpen)
+                {
+                    yield return null;
+                }
+            }
         }
 
         public void GoToTodoList()
@@ -134,6 +146,19 @@ namespace Ieedo
             uiCardListScreen.LoadToDoCards();
             uiCardListScreen.KeepPillars = false;
             GoTo(ScreenID.CardList);
+
+            if (UICardListScreen.FRONT_VIEW_ONLY)
+            {
+                uiCardListScreen.CloseFrontView();
+                if (uiCardListScreen.CardsList.HeldCards.Count > 0)
+                {
+                    uiCardListScreen.OpenFrontView(uiCardListScreen.CardsList.HeldCards[0], UICardListScreen.FrontViewMode.Edit);
+                }
+                else
+                {
+                    uiCardListScreen.OpenFrontView(null, UICardListScreen.FrontViewMode.Edit);
+                }
+            }
         }
 
         #endregion

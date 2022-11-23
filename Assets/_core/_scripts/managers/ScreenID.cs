@@ -13,11 +13,16 @@
 
         AssessmentIntro,
         AssessmentCategoryIntro,
+        AssessmentHeader,
+        AssessmentFillbar,
         Question,
         Dialog,
         AssessmentRecap,
         ActivityResult,
         ActivityContinue,
+
+        CountrySelection,
+        LanguageSelection,
 
         Hamburger,
     }

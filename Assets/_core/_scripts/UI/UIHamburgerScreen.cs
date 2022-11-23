@@ -134,13 +134,7 @@ namespace Ieedo
             yield return Statics.Screens.ShowQuestionFlow("UI/reset_profile_title", "UI/reset_profile_question", new[] { "UI/yes", "UI/no" }, answer);
             if (answer.Value == 0)
             {
-                Statics.Data.CreateNewProfile(new ProfileDescription
-                {
-                    Name = "TEST",
-                    Country = "en",
-                    Language = Language.English,
-                    IsNewProfile = true
-                });
+                Statics.Data.CreateDefaultNewProfile();
                 yield return AppManager.I.HandleNewProfileStart();
             }
         }

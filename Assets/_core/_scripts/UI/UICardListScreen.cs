@@ -12,12 +12,15 @@ namespace Ieedo
 {
     public class UICardListScreen : UIScreen
     {
+        public static bool FRONT_VIEW_ONLY = true;
+
         public static int VALIDATED_CARDS_PILLAR_INDEX = 0;
         public static int COMPLETED_CARDS_PILLAR_INDEX = 1;
 
         public UICardCollection CardsList;
         public GameObject FrontView;
         public RectTransform FrontViewPivot;
+        public RectTransform FrontInteractionPivot;
 
         public UIButton CreateCardButton;
         private Coroutine createCardFlowCo;
@@ -72,6 +75,16 @@ namespace Ieedo
             {
                 createCardFlowCo = StartCoroutine(CreateCardFlowCO());
             });
+
+            var cardScroll = CardsList.GetComponentInChildren<SnappingScrollRect>();
+            //cardScroll.OnDragStart = () => SetButtonsVisible(false);
+            cardScroll.OnCardNotInFront = () => SetButtonsVisible(false);
+            cardScroll.OnCardInFront = () =>
+            {
+                SetButtonsVisible(true);
+                RefreshFrontViewMode();
+            };
+            //cardScroll.OnCardSelected = () => SetButtonsVisible(true);
 
             CardsList.OnCardClicked = uiCard =>
             {
@@ -136,14 +149,15 @@ namespace Ieedo
                     yield break;
             }
 
-            if (!isNewCard)
-                CardsList.RemoveCard(uiCard);
             StopEditing();
 
             yield return AnimateCardOut(uiCard, 0, -1);
             if (uiCard != null)
                 Destroy(uiCard.gameObject);
-            CloseFrontView();
+            if (!FRONT_VIEW_ONLY) CloseFrontView();
+
+            if (!isNewCard)
+                CardsList.RemoveCard(uiCard);
 
             Statics.Analytics.Card("delete", uiCard.Data);
             Statics.Cards.DeleteCard(uiCard.Data);
@@ -165,7 +179,6 @@ namespace Ieedo
                 yield break;
                 */
 
-            CardsList.RemoveCard(frontCardUI);
 
             frontCardUI.Data.CompletionTimestamp = Timestamp.Now;
             frontCardUI.Data.Status = CardValidationStatus.Completed;
@@ -176,7 +189,9 @@ namespace Ieedo
             yield return AnimateCardOut(uiCard, +1);
             if (uiCard != null)
                 Destroy(uiCard.gameObject);
-            CloseFrontView();
+            if (!FRONT_VIEW_ONLY) CloseFrontView();
+
+            CardsList.RemoveCard(frontCardUI);
 
             Statics.Screens.GoTo(ScreenID.Pillars);
 
@@ -215,8 +230,6 @@ namespace Ieedo
             if (selection.Value == 1)
                 yield break;
 
-            CardsList.RemoveCard(frontCardUI);
-
             frontCardUI.Data.CompletionTimestamp = Timestamp.None;
             frontCardUI.Data.Status = CardValidationStatus.Todo;
             Statics.Data.SaveProfile();
@@ -224,9 +237,12 @@ namespace Ieedo
             yield return AnimateCardStatusChange(uiCard, -20);
 
             yield return AnimateCardOut(uiCard, -1);
+
+            CardsList.RemoveCard(frontCardUI);
+
             if (uiCard != null)
                 Destroy(uiCard.gameObject);
-            CloseFrontView();
+            if (!FRONT_VIEW_ONLY) CloseFrontView();
 
             // Remove the card from the current pillar
             var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
@@ -239,11 +255,6 @@ namespace Ieedo
         {
             var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
 
-            if (uiPillarsScreen.ViewMode == PillarsViewMode.Review)
-            {
-                CardsList.RemoveCard(frontCardUI);
-            }
-
             frontCardUI.Data.ValidationTimestamp = Timestamp.Now;
             frontCardUI.Data.Status = CardValidationStatus.Validated;
             Statics.Data.SaveProfile();
@@ -255,7 +266,7 @@ namespace Ieedo
                 yield return AnimateCardOut(uiCard, 0);
                 if (uiCard != null)
                     Destroy(uiCard.gameObject);
-                CloseFrontView();
+                if (!FRONT_VIEW_ONLY) CloseFrontView();
 
                 // Add the new card
                 uiPillarsScreen.PillarsManager.PillarViews[COMPLETED_CARDS_PILLAR_INDEX].RemoveSingleCard(uiCard.Data);
@@ -265,6 +276,11 @@ namespace Ieedo
             {
                 // Must refresh buttons
                 SwitchToFrontViewMode(FrontViewMode.Validated);
+            }
+
+            if (uiPillarsScreen.ViewMode == PillarsViewMode.Review)
+            {
+                CardsList.RemoveCard(frontCardUI);
             }
 
             Statics.Analytics.Card("validate", uiCard.Data);
@@ -285,10 +301,6 @@ namespace Ieedo
                 yield break;
 
             var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
-            if (uiPillarsScreen.ViewMode == PillarsViewMode.Review)
-            {
-                CardsList.RemoveCard(frontCardUI);
-            }
 
             frontCardUI.Data.ValidationTimestamp = Timestamp.None;
             frontCardUI.Data.Status = CardValidationStatus.Completed;
@@ -301,7 +313,7 @@ namespace Ieedo
                 yield return AnimateCardOut(uiCard, 0);
                 if (uiCard != null)
                     Destroy(uiCard.gameObject);
-                CloseFrontView();
+                if(!FRONT_VIEW_ONLY) CloseFrontView();
 
                 // Add the new card
                 uiPillarsScreen.PillarsManager.PillarViews[VALIDATED_CARDS_PILLAR_INDEX].RemoveSingleCard(uiCard.Data);
@@ -311,6 +323,11 @@ namespace Ieedo
             {
                 // Must refresh buttons
                 SwitchToFrontViewMode(FrontViewMode.Completed);
+            }
+
+            if (uiPillarsScreen.ViewMode == PillarsViewMode.Review)
+            {
+                CardsList.RemoveCard(frontCardUI);
             }
 
             Statics.Analytics.Card("unvalidate", uiCard.Data);
@@ -330,6 +347,12 @@ namespace Ieedo
         private UICard frontCardUI;
         private Transform prevFrontCardParent;
 
+        public void ForceFrontCard(UICard cardUI)
+        {
+            this.frontCardUI = cardUI;
+            //Debug.LogError("FRONT CARD IS NOW " + cardUI);
+        }
+
         public static int SortByExpirationDate(CardData c1, CardData c2)
         {
             return -c1.ExpirationTimestamp.Date.CompareTo(c2.ExpirationTimestamp.Date);
@@ -344,29 +367,29 @@ namespace Ieedo
             desiredFrontViewMode = frontViewMode;
 
             // Setup for this view
-            var rt = CardsList.GetComponent<RectTransform>();
-            var layout = CardsList.GetComponentInChildren<VerticalLayoutGroup>(true);
+            //var rt = CardsList.GetComponent<RectTransform>();
+            //var layout = CardsList.GetComponentInChildren<LayoutGroup>(true);
             switch (CurrentListViewMode)
             {
                 case ListViewMode.ToDo:
                     CreateCardButton.gameObject.SetActive(true);
                     DefaultOutEnterPosition = new Vector3(-2500, 0, 0);
                     DefaultOutExitPosition = new Vector3(-2500, 0, 0);
-                    rt.anchorMin = new Vector2(0, 0);
-                    rt.anchorMax = new Vector2(0, 1);
-                    rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 400);
-                    rt.localPosition = new Vector3(-220, 0, 0);
-                    layout.padding.bottom = 300;
+                    //rt.anchorMin = new Vector2(0, 0);
+                    //rt.anchorMax = new Vector2(0, 1);
+                    //rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 400);
+                    //rt.localPosition = new Vector3(-220, 0, 0);
+                    //layout.padding.bottom = 300;
                     break;
                 case ListViewMode.Pillars:
                     CreateCardButton.gameObject.SetActive(false);
                     DefaultOutEnterPosition = new Vector3(0, 2500, 0);
                     DefaultOutExitPosition = new Vector3(0, 2500, 0);
-                    rt.anchorMin = new Vector2(0, 0);
-                    rt.anchorMax = new Vector2(1, 1);
-                    rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 400);
-                    CardsList.transform.localPosition = new Vector3(153.734985f, 0, 0);
-                    layout.padding.bottom = 600;
+                    //rt.anchorMin = new Vector2(0, 0);
+                    //rt.anchorMax = new Vector2(1, 1);
+                    //rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 400);
+                    //CardsList.transform.localPosition = new Vector3(153.734985f, 0, 0);
+                    //layout.padding.bottom = 600;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -406,26 +429,41 @@ namespace Ieedo
 
         public void OpenFrontView(UICard uiCard, FrontViewMode viewMode)
         {
-            if (CurrentFrontViewMode != FrontViewMode.None)
-                return;
-            FrontObscurer.colorTransition(new Color(FrontObscurer.color.r, FrontObscurer.color.g, FrontObscurer.color.b, 0.5f), 0.25f);
-            prevFrontCardParent = uiCard.transform.parent;
-            var uiCardRt = uiCard.GetComponent<RectTransform>();
-            uiCardRt.SetParent(FrontViewPivot, true);
-            uiCardRt.anchorMin = new Vector2(0.5f, 0.5f);
-            uiCardRt.anchorMax = new Vector2(0.5f, 0.5f);
-            uiCardRt.SetAsFirstSibling();
-            uiCard.AnimateToParent();
+            if (CurrentFrontViewMode == FrontViewMode.None)
+            {
+                FrontObscurer.colorTransition(new Color(FrontObscurer.color.r, FrontObscurer.color.g, FrontObscurer.color.b, 0.5f), 0.25f);
+            }
 
-            EditModeCardInteraction.transform.SetParent(uiCardRt);
-            EditModeCardInteraction.transform.localScale = Vector3.one;
-            EditModeCardInteraction.transform.localRotation = Quaternion.identity;
-            EditModeCardInteraction.transform.localPosition = Vector3.zero;
+            if (!FRONT_VIEW_ONLY)
+            {
+                prevFrontCardParent = uiCard.transform.parent;
+                var uiCardRt = uiCard.GetComponent<RectTransform>();
+                uiCardRt.SetParent(FrontViewPivot, true);
+                uiCardRt.anchorMin = new Vector2(0.5f, 0.5f);
+                uiCardRt.anchorMax = new Vector2(0.5f, 0.5f);
+                uiCardRt.SetAsFirstSibling();
+                uiCard.AnimateToParent();
+
+                EditModeCardInteraction.transform.SetParent(uiCardRt);
+                EditModeCardInteraction.transform.localScale = Vector3.one;
+                EditModeCardInteraction.transform.localRotation = Quaternion.identity;
+                EditModeCardInteraction.transform.localPosition = Vector3.zero;
+            }
 
             FrontView.gameObject.SetActive(true);
             frontCardUI = uiCard;
 
             SwitchToFrontViewMode(viewMode);
+        }
+
+        public void RefreshFrontViewMode()
+        {
+            // Stop creating, as we are moving to another card
+            if (CurrentFrontViewMode == FrontViewMode.Create)
+            {
+                CurrentFrontViewMode = FrontViewMode.Edit;
+            }
+            SwitchToFrontViewMode(CurrentFrontViewMode);
         }
 
         private void SwitchToFrontViewMode(FrontViewMode viewMode)
@@ -442,14 +480,10 @@ namespace Ieedo
                     ValidatedMode.SetActive(false);
                     StartEditing(false);
 
-                    CreateCardButton.transform.localScale = Vector3.one;
-                    CreateCardButton.transform.localScaleTransition(Vector3.zero, 0.25f);
-
-                    DeleteCardButton.transform.localScale = Vector3.zero;
-                    DeleteCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
+                    AnimateShowButton(CreateCardButton);
+                    AnimateShowButton(DeleteCardButton);
                     CompleteCardButton.gameObject.SetActive(true);
-                    CompleteCardButton.transform.localScale = Vector3.zero;
-                    CompleteCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
+                    AnimateShowButton(CompleteCardButton);
                     break;
                 case FrontViewMode.Create:
                     EditModeCardInteraction.SetActive(true);
@@ -469,8 +503,7 @@ namespace Ieedo
                     CompletedMode.SetActive(false);
                     ValidatedMode.SetActive(false);
 
-                    UnCompleteCardButton_View.transform.localScale = Vector3.zero;
-                    UnCompleteCardButton_View.transform.localScaleTransition(Vector3.one, 0.25f);
+                    AnimateShowButton(UnCompleteCardButton_View);
                     break;
                 case FrontViewMode.Completed:
                     EditModeCardInteraction.SetActive(false);
@@ -479,14 +512,12 @@ namespace Ieedo
                     CompletedMode.SetActive(true);
                     ValidatedMode.SetActive(false);
 
-                    UnCompleteCardButton_Review.transform.localScale = Vector3.zero;
-                    UnCompleteCardButton_Review.transform.localScaleTransition(Vector3.one, 0.25f);
+                    AnimateShowButton(UnCompleteCardButton_Review);
 
                     bool canValidate = Statics.Mode.SessionMode == SessionMode.Session;
                     if (canValidate)
                     {
-                        ValidateCardButton.transform.localScale = Vector3.zero;
-                        ValidateCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
+                        AnimateShowButton(ValidateCardButton);
                     }
                     else
                     {
@@ -500,13 +531,22 @@ namespace Ieedo
                     CompletedMode.SetActive(false);
                     ValidatedMode.SetActive(true);
 
-                    UnValidateCardButton.transform.localScale = Vector3.zero;
-                    UnValidateCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
+                    AnimateShowButton(UnValidateCardButton);
                     break;
             }
         }
 
-        private void CloseFrontView()
+        private void SetButtonsVisible(bool choice)
+        {
+            FrontInteractionPivot.gameObject.SetActive(choice);
+        }
+
+        private void AnimateShowButton(UIButton btn)
+        {
+            btn.AnimateAppear();
+        }
+
+        public void CloseFrontView()
         {
             EditModeCardInteraction.transform.SetParent(null);
             FrontObscurer.colorTransition(new Color(FrontObscurer.color.r, FrontObscurer.color.g, FrontObscurer.color.b, 0f), 0.25f);
@@ -525,21 +565,23 @@ namespace Ieedo
 
             if (CurrentListViewMode == ListViewMode.ToDo)
             {
-                CreateCardButton.transform.localScale = Vector3.zero;
-                CreateCardButton.transform.localScaleTransition(Vector3.one, 0.25f);
+                AnimateShowButton(CreateCardButton);
             }
 
             // Make sure that the card is added correctly
-            if (frontCardUI != null)
+            if (!FRONT_VIEW_ONLY)
             {
-                CardsList.AddCard(frontCardUI.Data, frontCardUI);
-                if (CurrentListViewMode == ListViewMode.ToDo)
+                if (frontCardUI != null)
                 {
-                    var cardIndex = CardsList.HeldCards.IndexOf(frontCardUI);
-                    var slot = CardsList.HeldSlots[cardIndex];
-                    slot.transform.localEulerAngles = new Vector3(0, 0f, -5f);
+                    CardsList.AddCard(frontCardUI.Data, frontCardUI);
+                    if (CurrentListViewMode == ListViewMode.ToDo)
+                    {
+                        var cardIndex = CardsList.HeldCards.IndexOf(frontCardUI);
+                        var slot = CardsList.HeldSlots[cardIndex];
+                        slot.transform.localEulerAngles = new Vector3(0, 0f, -5f);
+                    }
+                    CardsList.SortListAgain();
                 }
-                CardsList.SortListAgain();
             }
 
             frontCardUI = null;
@@ -553,6 +595,8 @@ namespace Ieedo
         {
             CloseFrontViewButton.gameObject.SetActive(!choice);
             SetEditButtonsEnabled(!choice);
+
+            CardsList.ScrollRect.enabled = !choice;
         }
         public void SetEditButtonsEnabled(bool choice)
         {
@@ -615,9 +659,20 @@ namespace Ieedo
                 ExpirationTimestamp = Timestamp.None
             };
             var cardUi = UICardManager.I.CreateCardUI(cardData, FrontViewPivot);
+
+            // We add it right away, now, so we can delete it from there
+            CardsList.AddCard(cardData, cardUi);
+            CardsList.SortListAgain();
+
             cardUi.transform.localPosition = new Vector3(0, 1000, 0);
             OpenFrontView(cardUi, FrontViewMode.Create);
+            //frontCardUI = cardUi;   // We need to force it to be the front one, now
             cardUi.AnimateToParent();
+
+            if (CardsList.HeldCards.Count > 1)
+            {
+                yield return CardsList.ScrollRect.ForceGoToCard(cardUi);
+            }
 
             var cardFlowIndex = 0;
             while (cardFlowIndex <= 6)
@@ -787,6 +842,7 @@ namespace Ieedo
 
         private IEnumerator EditSubCategoryCO(CategoryDefinition categoryDef, bool autoReset = false)
         {
+            isSubEditing = true;
             EditSubCategoryButton.Shadow.enabled = true;
             SetSubEditMode(true);
             var result = new Ref<SubCategoryDefinition>();
@@ -821,6 +877,7 @@ namespace Ieedo
                 frontCardUI.AnimateToParent();
             SetSubEditMode(false);
             EditSubCategoryButton.Shadow.enabled = false;
+            isSubEditing = false;
         }
 
         public IEnumerator EditTitleCO(bool autoReset = false)
@@ -829,7 +886,7 @@ namespace Ieedo
             SetSubEditMode(true);
             frontCardUI.transform.localPositionTransition(new Vector3(0, -130, 0), 0.25f);
             frontCardUI.transform.localScaleTransition(Vector3.one * 1.3f, 0.25f);
-            frontCardUI.transform.localEulerAnglesTransform(new Vector3(0, 10, 0), 0.25f);
+            //frontCardUI.transform.localEulerAnglesTransform(new Vector3(0, 10, 0), 0.25f);
             optionsListPopup.ShowOptions(new LocalizedString("UI", "creation_enter_title"), new List<OptionData>(), isTextEntry: true);
             yield return WaitForInputField(TitleInputField, frontCardUI.Title);
             optionsListPopup.CloseImmediate();
@@ -848,7 +905,7 @@ namespace Ieedo
             SetSubEditMode(true);
             frontCardUI.transform.localPositionTransition(new Vector3(0, 120, 0), 0.25f);
             frontCardUI.transform.localScaleTransition(Vector3.one * 1.2f, 0.25f);
-            frontCardUI.transform.localEulerAnglesTransform(new Vector3(0, 10, 0), 0.25f);
+            //frontCardUI.transform.localEulerAnglesTransform(new Vector3(0, 10, 0), 0.25f);
             optionsListPopup.ShowOptions(new LocalizedString("UI", "creation_enter_description"), new List<OptionData>(), isTextEntry: true);
             yield return WaitForInputField(DescriptionInputField, frontCardUI.Description);
             optionsListPopup.CloseImmediate();
@@ -868,35 +925,49 @@ namespace Ieedo
             inputField.placeholder.enabled = inputField.text.IsNullOrEmpty();
             do
             {
+                // Wait for closing...
+               /* TODO: MOVE HERE
+                while (CurrentFrontViewMode != FrontViewMode.None)
+                {
+                    frontCardUI.Data.Definition.Title.DefaultText = TitleInputField.text;
+                    frontCardUI.Data.Definition.Description.DefaultText = DescriptionInputField.text;
+                    yield return null; // Wait for completion
+                }*/
+
                 inputField.ActivateInputField();
                 yield return null; // Must wait one frame
                 while (inputField.isFocused)
                     yield return null;
+
+
             } while (inputField.text.IsNullOrEmpty() && !abortingCreation);
         }
 
+        private bool isSubEditing;
+        public bool IsSubEditing => isSubEditing;
 
         public void StartEditing(bool isNewCard)
         {
-            var cardUI = frontCardUI;
-            DescriptionInputField.textComponent = cardUI.Description;
-            DescriptionInputField.text = cardUI.Description.text;
-            DescriptionInputField.placeholder.enabled = DescriptionInputField.text == "";
+            //Debug.LogError("START EDITING (new card "+ isNewCard + ")");
 
-            TitleInputField.textComponent = cardUI.Title;
-            TitleInputField.text = cardUI.Title.text;
-            TitleInputField.placeholder.enabled = TitleInputField.text == "";
+            var cardUI = frontCardUI;
+            if (cardUI != null)
+            {
+                DescriptionInputField.textComponent = cardUI.Description;
+                DescriptionInputField.text = cardUI.Description.text;
+                DescriptionInputField.placeholder.enabled = DescriptionInputField.text == "";
+
+                TitleInputField.textComponent = cardUI.Title;
+                TitleInputField.text = cardUI.Title.text;
+                TitleInputField.placeholder.enabled = TitleInputField.text == "";
+            }
 
             SetupButton(EditDifficultyButton, () => StartCoroutine(EditDifficultyCO(autoReset: true)));
             SetupButton(EditDateButton, () => StartCoroutine(EditDateCO(autoReset: true)));
-            SetupButton(EditSubCategoryButton, () => StartCoroutine(EditSubCategoryCO(cardUI.Data.Definition.CategoryDefinition, autoReset: true)));
+            SetupButton(EditSubCategoryButton, () => StartCoroutine(EditSubCategoryCO(frontCardUI.Data.Definition.CategoryDefinition, autoReset: true)));
             SetupButton(EditTitleButton, () => StartCoroutine(EditTitleCO(autoReset: true)));
             SetupButton(EditDescriptionButton, () => StartCoroutine(EditDescriptionCO(autoReset: true)));
-
-            SetupButton(DeleteCardButton, () =>
-            {
-                StartCoroutine(DeleteCardCO(isNewCard, frontCardUI));
-            });
+            SetupButton(DeleteCardButton, () => StartCoroutine(DeleteCardCO(isNewCard, frontCardUI)));
 
             StartCoroutine(EditModeCO());
         }

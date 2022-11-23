@@ -191,9 +191,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762365927424
-    m_Localized: Welcome!  IEEDO goal is to help you to be successful in this country. 
-      If you don't understand something on screen, hold the Translation button to
-      read it in Arabic
+    m_Localized: 'Welcome!  IEEDO goal is to help you to be successful in this country. '
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093248
@@ -332,6 +330,19 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 134354837057822720
     m_Localized: Remember to play and to update your to-do-list everyday!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 136884804909817856
+    m_Localized: English
+    m_Metadata:
+      m_Items: []
+  - m_Id: 136953378097618944
+    m_Localized: Where are you?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 136954244812791808
+    m_Localized: ' If you don''t understand something on screen, hold the Translation
+      button to read it in Arabic'
     m_Metadata:
       m_Items: []
   references:

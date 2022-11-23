@@ -3,6 +3,7 @@ using System.Linq;
 using UnityEditor;
 #endif
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Ieedo
 {
@@ -37,9 +38,6 @@ namespace Ieedo
         /// If on, cards generated in the editor will be saved to the default cards instead of the profile cards
         /// </summary>
         public bool SaveCardsAsDefault = false;
-
-        public string SourceLocale;
-        public string TargetLocale;
 
         [Header("Notifications")]
         public bool NotificationsEnabled;

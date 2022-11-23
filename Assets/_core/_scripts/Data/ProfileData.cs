@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine.Serialization;
 
 namespace Ieedo
 {
@@ -54,8 +55,8 @@ namespace Ieedo
     public class ProfileDescription
     {
         public string Name;
-        public string Country;
-        public Language Language;
+        public string HostLocale;
+        public string NativeLocale;
         public bool IsNewProfile;
         public bool SfxDisabled;
     }
@@ -114,7 +115,7 @@ namespace Ieedo
         public override string ToString()
         {
             var s = new StringBuilder();
-            s.AppendLine($"{Description.Name}({Description.Country} - {Description.Language})");
+            s.AppendLine($"{Description.Name}({Description.HostLocale} - {Description.NativeLocale})");
             s.AppendLine(Categories.ToString());
             s.AppendLine(Cards.ToString());
             s.AppendLine(ActivitiesData.ToString());

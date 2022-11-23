@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections;
-using Lean.Gui;
+﻿using System.Collections;
 using Lean.Transition;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Ieedo
 {
-    public class UIScreen : MonoBehaviour
+    public class UIScreen : UIInteractable
     {
         public Image BlockerBG;
 
@@ -25,9 +23,9 @@ namespace Ieedo
             gameObject.SetActive(true);
         }
 
-        public void CloseImmediate()
+        public void CloseImmediate(bool reset = false)
         {
-            SoundManager.I.PlaySfx(SfxEnum.close);
+            if (!reset) SoundManager.I.PlaySfx(SfxEnum.close);
             gameObject.SetActive(false);
         }
 
@@ -42,6 +40,7 @@ namespace Ieedo
             StartCoroutine(CloseCO());
         }
 
+        private float animPeriod = 0.25f;
         private Ref<Vector3> startPos;
         public IEnumerator OpenCO()
         {
@@ -51,21 +50,20 @@ namespace Ieedo
             {
                 var col = BlockerBG.color;
                 col.a = 1f;
-                BlockerBG.colorTransition(col, 0.25f);
+                BlockerBG.colorTransition(col,animPeriod);
             }
 
             gameObject.SetActive(true);
             if (AutoAnimate)
             {
-                float period = 0.25f;
                 if (startPos == null)
                 {
                     startPos = new Ref<Vector3>();
                     startPos.Value = transform.localPosition;
                 }
                 transform.localPosition = DefaultOutEnterPosition;
-                transform.localPositionTransition(startPos.Value, period);
-                yield return new WaitForSeconds(period);
+                transform.localPositionTransition(startPos.Value, animPeriod);
+                yield return new WaitForSeconds(animPeriod);
             }
             yield return OnOpen();
         }
@@ -77,14 +75,13 @@ namespace Ieedo
             {
                 var col = BlockerBG.color;
                 col.a = 0.0f;
-                BlockerBG.colorTransition(col, 0.25f);
+                BlockerBG.colorTransition(col, animPeriod);
             }
 
             if (AutoAnimate)
             {
-                float period = 0.25f;
-                transform.localPositionTransition(DefaultOutExitPosition, period);
-                yield return new WaitForSeconds(period);
+                transform.localPositionTransition(DefaultOutExitPosition, animPeriod);
+                yield return new WaitForSeconds(animPeriod);
             }
             yield return OnClose();
             gameObject.SetActive(false);
@@ -94,26 +91,5 @@ namespace Ieedo
         protected virtual IEnumerator OnOpen() { yield break; }
         protected virtual IEnumerator OnClose() { yield break; }
 
-        protected void SetupButton(LeanButton btn, Action action)
-        {
-            btn.OnClick.RemoveAllListeners();
-            btn.OnClick.AddListener(() => action());
-        }
-
-        protected void SetupButtonDown(LeanButton btn, Action downAction, Action upAction)
-        {
-            btn.OnDown.RemoveAllListeners();
-            btn.OnDown.AddListener(() =>
-            {
-                Statics.Input.RegisterUpAction(upAction);
-                downAction();
-            });
-
-            btn.OnClick.RemoveAllListeners();
-            btn.OnClick.AddListener(() =>
-            {
-                upAction();
-            });
-        }
     }
 }

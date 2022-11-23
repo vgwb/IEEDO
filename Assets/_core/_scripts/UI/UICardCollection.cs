@@ -9,7 +9,8 @@ namespace Ieedo
     public class UICardCollection : MonoBehaviour
     {
         public RectTransform SlotPrefab;
-        public int CardScale = 3;
+        public SnappingScrollRect ScrollRect;
+        public float CardScale = 3;
 
         public Action<UICard> OnCardClicked;
 
@@ -88,6 +89,12 @@ namespace Ieedo
                 HeldCards[i].transform.SetParent(HeldSlots[i].transform);
                 HeldCards[i].AnimateToParent();
             }
+
+            // Remove unused slots
+            for (int i = HeldCards.Count; i < HeldSlots.Count; i++)
+            {
+                HeldSlots[i].SetActive(false);
+            }
         }
 
         public void AnimateEntrance(UICardListScreen.ListViewMode currentListViewMode)
@@ -99,7 +106,7 @@ namespace Ieedo
                 switch (currentListViewMode)
                 {
                     case UICardListScreen.ListViewMode.ToDo:
-                        heldCard.transform.localPosition = Vector3.left * 400;
+                        heldCard.transform.localPosition = Vector3.zero;// Vector3.left * 400;
                         break;
                     case UICardListScreen.ListViewMode.Pillars:
                         heldCard.transform.localPosition = Vector3.up * 1500;
@@ -111,9 +118,12 @@ namespace Ieedo
                 var delay = (HeldCards.Count - 1 - iCard + 2) * 0.1f;
                 heldCard.transform.localPositionTransition(heldCard.transform.localPosition, delay).JoinTransition().localPositionTransition(Vector3.zero, 0.5f);
 
-                if (currentListViewMode == UICardListScreen.ListViewMode.ToDo)
+                if (!UICardListScreen.FRONT_VIEW_ONLY)
                 {
-                    HeldSlots[iCard].transform.localEulerAnglesTransform(new Vector3(0, 0f, -5f), 0.5f);
+                    if (currentListViewMode == UICardListScreen.ListViewMode.ToDo)
+                    {
+                        HeldSlots[iCard].transform.localEulerAnglesTransform(new Vector3(0, 0f, -5f), 0.5f);
+                    }
                 }
             }
         }

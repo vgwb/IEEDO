@@ -24,6 +24,9 @@ namespace Ieedo
         public UIButton HamburgerButton;
         public UIButton SessionModeButton;
 
+        public Action OnTargetLocaleSwitched;
+        public Action OnSessionModeToggled;
+
         public void SetHamburgerIcon()
         {
             HamburgerButton.Text = "\uf0c9";
@@ -36,7 +39,7 @@ namespace Ieedo
 
         void Start()
         {
-            SetupButtonDown(InstantTranslationButton, SetTargetLocale, SetSourceLocale);
+            SetupButtonDown(InstantTranslationButton, UseNativeLocale, UseHostLocale);
             SetupButton(HamburgerButton, () =>
             {
                 SoundManager.I.PlaySfx(SfxEnum.click);
@@ -65,26 +68,33 @@ namespace Ieedo
             });
             SetupButton(SessionModeButton, () =>
             {
+                OnSessionModeToggled?.Invoke();
                 Statics.Mode.ToggleSessionMode();
             });
             SwitchMode(TopBarMode.MainSection);
         }
 
-        private void SetTargetLocale()
+        private void UseNativeLocale()
         {
             SoundManager.I.PlaySfx(SfxEnum.click);
-            var targetLocale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.App.ApplicationConfig.TargetLocale);
-            if (targetLocale != null)
-                LocalizationSettings.SelectedLocale = targetLocale;
+            var locale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.Data.Profile.Description.NativeLocale);
+            if (locale != null)
+            {
+                LocalizationSettings.SelectedLocale = locale;
+            }
             Statics.Analytics.App("InstantTranslation");
+
+            OnTargetLocaleSwitched?.Invoke();
         }
-        private void SetSourceLocale()
+        private void UseHostLocale()
         {
             //SoundManager.I.PlaySfx(SfxEnum.click);
-            var targetLocale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.App.ApplicationConfig.SourceLocale);
-            if (targetLocale != null)
-                LocalizationSettings.SelectedLocale = targetLocale;
-            Statics.Input.UnregisterUpAction(SetSourceLocale);
+            var locale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.Data.Profile.Description.HostLocale);
+            if (locale != null)
+            {
+                LocalizationSettings.SelectedLocale = locale;
+            }
+            Statics.Input.UnregisterUpAction(UseHostLocale);
         }
 
         public TopBarMode Mode;

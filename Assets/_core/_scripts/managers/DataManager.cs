@@ -34,6 +34,7 @@ namespace Ieedo
             LoadAll<CategoryDefinition>();
             LoadAll<ActivityDefinition>();
             LoadAll<AssessmentQuestionDefinition>();
+            LoadAll<CountryDefinition>();
         }
 
         public T Get<T>(int id) where T : class, IDefinition
@@ -129,6 +130,18 @@ namespace Ieedo
             }
 
             SaveProfile();
+        }
+
+        public void CreateDefaultNewProfile()
+        {
+            CreateNewProfile(new ProfileDescription
+            {
+                Name = "TEST",
+                HostLocale = "uk",
+                NativeLocale = "uk-en",
+                IsNewProfile = true,
+                SfxDisabled = false
+            });
         }
 
         public void SaveProfile()
@@ -230,5 +243,6 @@ namespace Ieedo
         {
             return Get<CategoryDefinition>((int)id);
         }
+
     }
 }
