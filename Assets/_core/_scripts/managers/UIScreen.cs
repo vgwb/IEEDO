@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections;
-using Lean.Gui;
+﻿using System.Collections;
 using Lean.Transition;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Ieedo
 {
-    public class UIScreen : MonoBehaviour
+    public class UIScreen : UIInteractable
     {
         public Image BlockerBG;
 
@@ -25,9 +23,9 @@ namespace Ieedo
             gameObject.SetActive(true);
         }
 
-        public void CloseImmediate()
+        public void CloseImmediate(bool reset = false)
         {
-            SoundManager.I.PlaySfx(SfxEnum.close);
+            if (!reset) SoundManager.I.PlaySfx(SfxEnum.close);
             gameObject.SetActive(false);
         }
 
@@ -94,26 +92,5 @@ namespace Ieedo
         protected virtual IEnumerator OnOpen() { yield break; }
         protected virtual IEnumerator OnClose() { yield break; }
 
-        protected void SetupButton(LeanButton btn, Action action)
-        {
-            btn.OnClick.RemoveAllListeners();
-            btn.OnClick.AddListener(() => action());
-        }
-
-        protected void SetupButtonDown(LeanButton btn, Action downAction, Action upAction)
-        {
-            btn.OnDown.RemoveAllListeners();
-            btn.OnDown.AddListener(() =>
-            {
-                Statics.Input.RegisterUpAction(upAction);
-                downAction();
-            });
-
-            btn.OnClick.RemoveAllListeners();
-            btn.OnClick.AddListener(() =>
-            {
-                upAction();
-            });
-        }
     }
 }
