@@ -336,6 +336,10 @@ MonoBehaviour:
     m_Localized: Ricordati di giocare e aggiornare le tue cose da fare tutti i giorni!
     m_Metadata:
       m_Items: []
+  - m_Id: 136884804909817856
+    m_Localized: Italiano
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
