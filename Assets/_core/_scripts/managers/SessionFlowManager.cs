@@ -10,6 +10,7 @@ namespace Ieedo
     public class SessionFlowManager : MonoBehaviour
     {
         public Image BlockerBG;
+        public UIFillBar AssessmentCompletionBar;
         public bool IsInsideAssessment;
 
         public Coroutine assessmentCo;
@@ -100,25 +101,33 @@ namespace Ieedo
             var overallValue = 0f;
             var assessmentPercentages = new Dictionary<int, float>();
             var categories = Statics.Data.GetAll<CategoryDefinition>();
+            var completionPercentage = 0f;
+
+            var allQuestions = Statics.Data.GetAll<AssessmentQuestionDefinition>();
+            var nQuestionsTotal = 0;
             foreach (var category in categories)
             {
+                BlockerBG.colorTransition(category.Color.SetSaturation(0.5f), 0.25f);
                 yield return categoryIntroScreen.ShowCategory(category);
                 while (categoryIntroScreen.isActiveAndEnabled) yield return null;
 
-                int nQuestions = 0;
-                var questions = Statics.Data.GetAll<AssessmentQuestionDefinition>();
-                questions = questions.Where(x => x.Category == category.ID).ToList();
+                var questions = allQuestions.Where(x => x.Category == category.ID).ToList();
                 float totValue = 0f;
+                var nQuestionsCategory = 0;
                 foreach (var question in questions)
                 {
                     yield return questionScreen.ShowQuestion(question);
                     while (questionScreen.IsOpen) yield return null;
                     var selectedAnswer = question.Answers[questionScreen.LatestSelectedOption];
                     totValue += selectedAnswer.Value;
-                    nQuestions++;
+                    nQuestionsCategory++;
+                    nQuestionsTotal++;
+                    AssessmentCompletionBar.SetValue(nQuestionsTotal, allQuestions.Count);
+                    AssessmentCompletionBar.FillImage.color = category.Color;
+                    AssessmentCompletionBar.BGImage.color = category.Color.SetSaturation(0.5f);
                 }
-                if (nQuestions == 0) nQuestions = 1; // To avoid NaN
-                assessmentPercentages[(int)category.ID] = totValue / nQuestions;
+                if (nQuestionsCategory == 0) nQuestionsCategory = 1; // To avoid NaN
+                assessmentPercentages[(int)category.ID] = totValue / nQuestionsCategory;
                 overallValue += assessmentPercentages[(int)category.ID];
             }
 
