@@ -32,7 +32,7 @@ namespace Ieedo
 
             var parameters = new Dictionary<string, object>()
             {
-                { "myNativeLang", Statics.App.ApplicationConfig.SourceLocale },
+                { "myNativeLang", Statics.Data.Profile.Description.NativeLocale },
             };
 
             AnalyticsService.Instance.CustomData("myTestEvent", parameters);

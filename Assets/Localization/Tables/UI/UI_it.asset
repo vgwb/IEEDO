@@ -192,8 +192,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 50660762365927424
     m_Localized: "Ben arrivato! L'obiettivo IEEDO \xE8 aiutarti ad avere successo
-      in questo paese. Se non capisci qualcosa sullo schermo, tieni premuto il pulsante
-      di traduzione per leggerlo in arabo"
+      in questo paese."
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093248
@@ -338,6 +337,15 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 136884804909817856
     m_Localized: Italiano
+    m_Metadata:
+      m_Items: []
+  - m_Id: 136953378097618944
+    m_Localized: Loading...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 136954244812791808
+    m_Localized: ' Se non capisci qualcosa sullo schermo, tieni premuto il pulsante
+      di traduzione per leggerlo in arabo'
     m_Metadata:
       m_Items: []
   references:

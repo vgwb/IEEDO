@@ -10,7 +10,6 @@ namespace Ieedo
     public class SessionFlowManager : MonoBehaviour
     {
         public Image BlockerBG;
-        public UIFillBar AssessmentCompletionBar;
         public bool IsInsideAssessment;
 
         public Coroutine assessmentCo;
@@ -88,6 +87,8 @@ namespace Ieedo
             var assessmentRecapScreen = Statics.Screens.Get(ScreenID.AssessmentRecap) as UIAssessmentRecapPopup;
             var introScreen = Statics.Screens.Get(ScreenID.AssessmentIntro) as UIAssessmentIntroScreen;
             var categoryIntroScreen = Statics.Screens.Get(ScreenID.AssessmentCategoryIntro) as UIAssessmentCategoryIntroScreen;
+            var assessmentHeader = Statics.Screens.Get(ScreenID.AssessmentHeader) as UIAssessmentHeader;
+            var assessmentFillbar = Statics.Screens.Get(ScreenID.AssessmentFillbar) as UIAssessmentFillbar;
 
             if (BlockerBG != null)
             {
@@ -102,12 +103,17 @@ namespace Ieedo
             var assessmentPercentages = new Dictionary<int, float>();
             var categories = Statics.Data.GetAll<CategoryDefinition>();
             var completionPercentage = 0f;
-
             var allQuestions = Statics.Data.GetAll<AssessmentQuestionDefinition>();
+            assessmentFillbar.FillBar.SetValue(0, allQuestions.Count);
+            assessmentFillbar.FillBar.FillImage.color = Statics.Art.UIColor.Color;
+            assessmentFillbar.FillBar.BGImage.color = Statics.Art.UIColor.Color.SetSaturation(0.5f);
+            yield return assessmentFillbar.OpenCO();
+
             var nQuestionsTotal = 0;
             foreach (var category in categories)
             {
                 BlockerBG.colorTransition(category.Color.SetSaturation(0.5f), 0.25f);
+                yield return assessmentHeader.ShowCategory(category);
                 yield return categoryIntroScreen.ShowCategory(category);
                 while (categoryIntroScreen.isActiveAndEnabled) yield return null;
 
@@ -122,14 +128,16 @@ namespace Ieedo
                     totValue += selectedAnswer.Value;
                     nQuestionsCategory++;
                     nQuestionsTotal++;
-                    AssessmentCompletionBar.SetValue(nQuestionsTotal, allQuestions.Count);
-                    AssessmentCompletionBar.FillImage.color = category.Color;
-                    AssessmentCompletionBar.BGImage.color = category.Color.SetSaturation(0.5f);
+                    assessmentFillbar.FillBar.SetValue(nQuestionsTotal, allQuestions.Count);
+                    assessmentFillbar.FillBar.FillImage.color = category.Color;
+                    assessmentFillbar.FillBar.BGImage.color = category.Color.SetSaturation(0.5f);
                 }
                 if (nQuestionsCategory == 0) nQuestionsCategory = 1; // To avoid NaN
                 assessmentPercentages[(int)category.ID] = totValue / nQuestionsCategory;
                 overallValue += assessmentPercentages[(int)category.ID];
             }
+            yield return assessmentHeader.CloseCO();
+            yield return assessmentFillbar.CloseCO();
 
             overallValue /= categories.Count;
             assessmentRecapScreen.ShowResults(assessmentPercentages, overallValue);

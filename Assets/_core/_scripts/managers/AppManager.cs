@@ -26,9 +26,6 @@ namespace Ieedo
 
             // Init localization
             yield return LocalizationSettings.InitializationOperation;
-            var locale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.App.ApplicationConfig.SourceLocale);
-            if (locale != null)
-                LocalizationSettings.SelectedLocale = locale;
 
             // Init data
             { var _ = Statics.Data; }
@@ -47,6 +44,11 @@ namespace Ieedo
                 // For now, create a new one if none is found
                 Statics.Data.CreateDefaultNewProfile();
             }
+
+            // Setup correct locale based on the player profile
+            var locale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.Data.Profile.Description.HostLocale);
+            if (locale != null)
+                LocalizationSettings.SelectedLocale = locale;
 
             // Initialise some loc data
             Statics.Score.RefreshString();
@@ -67,14 +69,57 @@ namespace Ieedo
         }
 
 
+        // TODO: move to OnboardingManager / TutorialManager?
         public IEnumerator HandleNewProfileStart()
         {
+            var topScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
+            var dialogPopup = Statics.Screens.Get(ScreenID.Dialog) as UIDialogPopup;
+
+            Statics.Score.CurrentScoreText.transform.parent.gameObject.SetActive(false);
+            topScreen.HamburgerButton.gameObject.SetActive(false);
+            topScreen.SessionModeButton.gameObject.SetActive(false);
+            topScreen.InstantTranslationButton.gameObject.SetActive(false);
+
             yield return ProfileCreationFlow();
             yield return Statics.Screens.ShowDialog("UI/intro_content_1", "UI/ok");
-            yield return Statics.Screens.ShowDialog("UI/intro_content_2", "UI/start_session");
+
+            // Instant translation tutorial
+            dialogPopup.Button.gameObject.SetActive(false);
+            bool passed = false;
+            void Pass() => passed = true;
+            topScreen.OnTargetLocaleSwitched += Pass;
+            yield return Statics.Screens.ShowDialog("UI/intro_instant_translation", "UI/ok", waitForClosing:false);
+            topScreen.InstantTranslationButton.gameObject.SetActive(true);
+            Statics.Tutorial.ShowTutorialArrowOn(topScreen.InstantTranslationButton.gameObject);
+            while (!passed) yield return null;
+            topScreen.OnTargetLocaleSwitched -= Pass;
+            Statics.Tutorial.HideTutorialArrow();
+            dialogPopup.Button.gameObject.SetActive(true);
+            while (Statics.Screens.Get(ScreenID.Dialog).IsOpen) yield return null;
+
+            // Session mode tutorial
+            passed = false;
+            dialogPopup.Button.gameObject.SetActive(false);
+            topScreen.OnSessionModeToggled += Pass;
+            yield return Statics.Screens.ShowDialog("UI/intro_content_2", "UI/ok", waitForClosing:false);
+            topScreen.SessionModeButton.gameObject.SetActive(true);
+            Statics.Tutorial.ShowTutorialArrowOn(topScreen.SessionModeButton.gameObject);
+            while (!passed) yield return null;
+            Statics.Tutorial.HideTutorialArrow();
+            topScreen.OnSessionModeToggled -= Pass;
+            dialogPopup.Button.gameObject.SetActive(true);
+            yield return dialogPopup.CloseCO();
+            //while (dialogPopup.IsOpen) yield return null;
+            //yield return Statics.Screens.ShowDialog("UI/intro_content_2", "UI/start_session");
+
             Statics.Data.Profile.Description.IsNewProfile = false;
             Statics.Data.SaveProfile();
-            Statics.Mode.ToggleSessionMode();
+            //Statics.Mode.ToggleSessionMode();
+
+            Statics.Score.CurrentScoreText.transform.parent.gameObject.SetActive(true);
+            topScreen.HamburgerButton.gameObject.SetActive(true);
+            topScreen.SessionModeButton.gameObject.SetActive(true);
+            topScreen.InstantTranslationButton.gameObject.SetActive(true);
         }
 
         private IEnumerator ProfileCreationFlow()
@@ -85,9 +130,7 @@ namespace Ieedo
 
             yield return Statics.Screens.OpenCO(ScreenID.LanguageSelection);
             yield return languageScreen.PerformSelection(Statics.Data.Profile);
-            yield return Statics.Screens.CloseCO(ScreenID.LanguageSelection);
-
-            yield return Statics.Screens.OpenCO(ScreenID.CountrySelection);
+            yield return Statics.Screens.CloseOpenCO(ScreenID.LanguageSelection, ScreenID.CountrySelection);
             yield return countryScreen.PerformSelection(Statics.Data.Profile);
             yield return Statics.Screens.CloseCO(ScreenID.CountrySelection);
 

@@ -54,14 +54,13 @@ namespace Ieedo
         {
             if (col == default)
             {
-                TitleBG.color = Color.gray;
-                ;
-                QuestionBG.color = new Color(0.35f, 0.35f, 0.35f, 1f);
+                TitleBG.color = Statics.Art.ToTitle(Statics.Art.UIColor.Color);
+                QuestionBG.color = Statics.Art.ToBG(Statics.Art.UIColor.Color);
             }
             else
             {
-                TitleBG.color = col;
-                QuestionBG.color = col.SetSaturation(0.5f).SetValue(0.5f);
+                TitleBG.color = Statics.Art.ToTitle(col);
+                QuestionBG.color = Statics.Art.ToBG(col);
             }
 
 
@@ -71,6 +70,7 @@ namespace Ieedo
             {
                 Buttons[i].Key = answers[i];
                 Buttons[i].gameObject.SetActive(true);
+                Buttons[i].transform.localScale = Vector3.zero;
 
                 var selectedOption = i;
                 SetupButton(Buttons[i], () => SelectOption(selectedOption));
@@ -82,6 +82,12 @@ namespace Ieedo
             }
 
             yield return OpenCO();
+
+            for (var i = 0; i < answers.Length; i++)
+            {
+                Buttons[i].AnimateAppear();
+            }
+
         }
 
         public System.Action<int> OnSelectOption;

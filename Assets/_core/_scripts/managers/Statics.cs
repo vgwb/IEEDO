@@ -16,5 +16,7 @@ namespace Ieedo
         private static ActivityFlowManager activityFlow; public static ActivityFlowManager ActivityFlow => activityFlow ??= FindObjectOfType<ActivityFlowManager>();
         private static OnlineAnalyticsService analytics; public static OnlineAnalyticsService Analytics => analytics ??= FindObjectOfType<OnlineAnalyticsService>();
         private static NotificationService notifications; public static NotificationService Notifications => notifications ??= FindObjectOfType<NotificationService>();
+        private static TutorialManager tutorial; public static TutorialManager Tutorial => tutorial ??= FindObjectOfType<TutorialManager>();
+        private static ArtManager art; public static ArtManager Art => art ??= FindObjectOfType<ArtManager>();
     }
 }

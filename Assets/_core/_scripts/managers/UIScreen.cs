@@ -40,6 +40,7 @@ namespace Ieedo
             StartCoroutine(CloseCO());
         }
 
+        private float animPeriod = 0.25f;
         private Ref<Vector3> startPos;
         public IEnumerator OpenCO()
         {
@@ -49,21 +50,20 @@ namespace Ieedo
             {
                 var col = BlockerBG.color;
                 col.a = 1f;
-                BlockerBG.colorTransition(col, 0.25f);
+                BlockerBG.colorTransition(col,animPeriod);
             }
 
             gameObject.SetActive(true);
             if (AutoAnimate)
             {
-                float period = 0.25f;
                 if (startPos == null)
                 {
                     startPos = new Ref<Vector3>();
                     startPos.Value = transform.localPosition;
                 }
                 transform.localPosition = DefaultOutEnterPosition;
-                transform.localPositionTransition(startPos.Value, period);
-                yield return new WaitForSeconds(period);
+                transform.localPositionTransition(startPos.Value, animPeriod);
+                yield return new WaitForSeconds(animPeriod);
             }
             yield return OnOpen();
         }
@@ -75,14 +75,13 @@ namespace Ieedo
             {
                 var col = BlockerBG.color;
                 col.a = 0.0f;
-                BlockerBG.colorTransition(col, 0.25f);
+                BlockerBG.colorTransition(col, animPeriod);
             }
 
             if (AutoAnimate)
             {
-                float period = 0.25f;
-                transform.localPositionTransition(DefaultOutExitPosition, period);
-                yield return new WaitForSeconds(period);
+                transform.localPositionTransition(DefaultOutExitPosition, animPeriod);
+                yield return new WaitForSeconds(animPeriod);
             }
             yield return OnClose();
             gameObject.SetActive(false);

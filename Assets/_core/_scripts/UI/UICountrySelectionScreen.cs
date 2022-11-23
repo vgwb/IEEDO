@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Linq;
+using UnityEngine.Localization.Settings;
 
 namespace Ieedo
 {
@@ -17,7 +18,9 @@ namespace Ieedo
             var targetCountry = availableCountries[ButtonsSelection.LatestSelectedOption];
             if (targetCountry != null)
             {
-                profileData.Description.Country = targetCountry.Code;
+                profileData.Description.HostLocale = targetCountry.Code;
+                var locale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.Data.Profile.Description.HostLocale);
+                LocalizationSettings.SelectedLocale = locale;
             }
         }
     }

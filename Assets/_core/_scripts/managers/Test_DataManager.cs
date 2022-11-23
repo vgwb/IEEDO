@@ -36,8 +36,8 @@ namespace Ieedo.Test
             Statics.Data.CreateNewProfile(new ProfileDescription()
             {
                 Name = "TEST",
-                Country = "uk",
-                Language = "uk-en"
+                HostLocale = "uk",
+                NativeLocale = "uk-en"
             });
         }
 

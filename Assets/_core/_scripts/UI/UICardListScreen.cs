@@ -543,8 +543,7 @@ namespace Ieedo
 
         private void AnimateShowButton(UIButton btn)
         {
-            btn.transform.localScale = Vector3.zero;
-            btn.transform.localScaleTransition(Vector3.one, 0.25f);
+            btn.AnimateAppear();
         }
 
         public void CloseFrontView()

@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
 
@@ -17,8 +19,11 @@ namespace Ieedo
             var chosenLocale = availableLocales[ButtonsSelection.LatestSelectedOption];
             if (chosenLocale != null)
             {
-                LocalizationSettings.SelectedLocale = chosenLocale;
-                profileData.Description.Language = chosenLocale.Identifier.Code;
+                profileData.Description.NativeLocale = chosenLocale.Identifier.Code;
+
+                // Temporarely set this as the locale, for next screen
+                var locale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.Data.Profile.Description.NativeLocale);
+                LocalizationSettings.SelectedLocale = locale;
             }
         }
     }

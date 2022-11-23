@@ -137,8 +137,8 @@ namespace Ieedo
             CreateNewProfile(new ProfileDescription
             {
                 Name = "TEST",
-                Country = "uk",
-                Language = "uk-en",
+                HostLocale = "uk",
+                NativeLocale = "uk-en",
                 IsNewProfile = true,
                 SfxDisabled = false
             });

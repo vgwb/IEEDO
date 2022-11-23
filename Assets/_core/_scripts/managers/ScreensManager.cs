@@ -54,6 +54,13 @@ namespace Ieedo
             yield return Screens[id].CloseCO();
         }
 
+        // Smooth transition from-to
+        public IEnumerator CloseOpenCO(ScreenID from, ScreenID to)
+        {
+            Close(from);
+            yield return Screens[to].OpenCO();
+        }
+
         public void OpenImmediate(ScreenID id)
         {
             if (!Screens.ContainsKey(id))
@@ -119,12 +126,17 @@ namespace Ieedo
             yield return questionScreen.ShowQuestionFlow(titleKey, contentKey, answers, answer);
         }
 
-        public IEnumerator ShowDialog(string contentKey, string answerKey)
+        public IEnumerator ShowDialog(string contentKey, string answerKey, bool waitForClosing = true)
         {
             var dialogScreen = Statics.Screens.Get(ScreenID.Dialog) as UIDialogPopup;
             yield return dialogScreen.ShowDialog(LocString.FromStr(contentKey), LocString.FromStr(answerKey));
-            while (dialogScreen.IsOpen)
-                yield return null;
+            if (waitForClosing)
+            {
+                while (dialogScreen.IsOpen)
+                {
+                    yield return null;
+                }
+            }
         }
 
         public void GoToTodoList()

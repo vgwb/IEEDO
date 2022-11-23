@@ -13,6 +13,8 @@
 
         AssessmentIntro,
         AssessmentCategoryIntro,
+        AssessmentHeader,
+        AssessmentFillbar,
         Question,
         Dialog,
         AssessmentRecap,

@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using Lean.Gui;
+using Lean.Transition;
 using Lean.Transition.Method;
 using UnityEngine;
 using UnityEngine.Localization;
@@ -31,7 +32,7 @@ namespace Ieedo
         {
             set
             {
-                var tm = GetComponentInChildren<Image>(true);
+                var tm = GetComponentInChildren<Image>(false);
                 tm.sprite = value;
             }
         }
@@ -46,6 +47,12 @@ namespace Ieedo
             Cap.color = c;
             NormalColor.Data.Value = c;
             DownColor.Data.Value = new Color(c.r, c.g, c.b, 1f);
+        }
+
+        public void AnimateAppear()
+        {
+            transform.localScale = Vector3.zero;
+            transform.localScaleTransition(Vector3.one, 0.25f);
         }
     }
 }
