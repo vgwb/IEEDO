@@ -19,6 +19,9 @@
         ActivityResult,
         ActivityContinue,
 
+        CountrySelection,
+        LanguageSelection,
+
         Hamburger,
     }
 }
