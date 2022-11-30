@@ -861,7 +861,7 @@ namespace Ieedo
             if (autoReset)
                 frontCardUI.AnimateToParent();
             SetSubEditMode(false);
-            EditDifficultyButton.Shadow.enabled = false;
+            //EditDifficultyButton.Shadow.enabled = false;
         }
 
         private IEnumerator EditDateCO(bool autoReset = false)
@@ -909,9 +909,14 @@ namespace Ieedo
             if (autoReset)
                 frontCardUI.AnimateToParent();
             SetSubEditMode(false);
-            EditDateButton.Shadow.enabled = false;
+            //EditDateButton.Shadow.enabled = false;
 
-            CardsList.SortListAgain();
+            // Sort again if we are only editing
+            if (createCardFlowCo == null)
+            {
+                CardsList.SortListAgain();
+                yield return CardsList.ScrollRect.ForceGoToCard(frontCardUI);
+            }
         }
 
         private IEnumerator EditSubCategoryCO(CategoryDefinition categoryDef, bool autoReset = false)
@@ -950,7 +955,7 @@ namespace Ieedo
             if (autoReset)
                 frontCardUI.AnimateToParent();
             SetSubEditMode(false);
-            EditSubCategoryButton.Shadow.enabled = false;
+            //EditSubCategoryButton.Shadow.enabled = false;
             isSubEditing = false;
         }
 
@@ -970,7 +975,7 @@ namespace Ieedo
             if (autoReset)
                 frontCardUI.AnimateToParent();
             SetSubEditMode(false);
-            EditTitleButton.Shadow.enabled = false;
+            //EditTitleButton.Shadow.enabled = false;
         }
 
         public IEnumerator EditDescriptionCO(bool autoReset = false)
@@ -989,7 +994,7 @@ namespace Ieedo
             if (autoReset)
                 frontCardUI.AnimateToParent();
             SetSubEditMode(false);
-            EditDescriptionButton.Shadow.enabled = false;
+            //EditDescriptionButton.Shadow.enabled = false;
         }
 
         private IEnumerator WaitForInputField(TMP_InputField inputField, UIText uiText)
