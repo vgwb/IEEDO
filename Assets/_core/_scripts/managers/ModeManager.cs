@@ -34,6 +34,7 @@ namespace Ieedo
             }
             else
             {
+                if (Statics.SessionFlow.IsInsideTutorial) yield break;
                 var answer = new Ref<int>();
                 yield return Statics.Screens.ShowQuestionFlow("UI/session_abort_title", "UI/session_abort_question", new[] { "UI/yes", "UI/no" }, answer);
                 if (answer.Value == 0)

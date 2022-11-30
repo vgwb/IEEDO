@@ -81,6 +81,7 @@ MonoBehaviour:
   CardListScreen: {fileID: 0}
   StopInertiaThreshold: 50
   SnappingSpeed: 0.5
+  CanScroll: 1
 --- !u!1 &2067036017059844308
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,7 +246,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8105835662138277310}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -256,8 +257,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.00013094238, y: 85.12207}
-  m_SizeDelta: {x: 0, y: 500}
+  m_AnchoredPosition: {x: -0.00012207031, y: 85.12207}
+  m_SizeDelta: {x: 0.00018310547, y: 500}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &4351312593752694894
 MonoBehaviour:

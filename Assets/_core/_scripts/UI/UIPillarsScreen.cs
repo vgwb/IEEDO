@@ -27,6 +27,9 @@ namespace Ieedo
 
         public UIButton SwitchViewButton;
 
+        [Header("Tutorial")]
+        public UITextContent PillarsTutorial;
+
         public override ScreenID ID => ScreenID.Pillars;
 
         public PillarsViewMode ViewMode = PillarsViewMode.Categories;
@@ -139,6 +142,8 @@ namespace Ieedo
 
             RefreshData();
 
+            PillarsTutorial.gameObject.SetActive(Statics.SessionFlow.IsInsideTutorial);
+
             return base.OnOpen();
         }
 
@@ -222,7 +227,7 @@ namespace Ieedo
                     else
                     {
                         isFocused = false;
-                        Camera3D.transform.localRotationTransition(Quaternion.Euler(41.5f,-50f,0f), 0.25f, LeanEase.Decelerate);
+                        Camera3D.transform.localRotationTransition(Quaternion.Euler(41.5f,-90f,0f), 0.25f, LeanEase.Decelerate);
                     }
                     break;
                 case ScreenID.Activities:

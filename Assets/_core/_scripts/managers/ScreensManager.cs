@@ -156,7 +156,7 @@ namespace Ieedo
                 }
                 else
                 {
-                    uiCardListScreen.OpenFrontView(null, UICardListScreen.FrontViewMode.Edit);
+                    //uiCardListScreen.OpenFrontView(null, UICardListScreen.FrontViewMode.Edit);
                 }
             }
         }

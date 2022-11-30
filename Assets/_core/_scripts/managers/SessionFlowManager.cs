@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Lean.Transition;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = System.Random;
 
 namespace Ieedo
 {
@@ -11,6 +13,7 @@ namespace Ieedo
     {
         public Image BlockerBG;
         public bool IsInsideAssessment;
+        public bool IsInsideTutorial;
 
         public Coroutine assessmentCo;
         public Coroutine sessionFlowCo;
@@ -29,7 +32,12 @@ namespace Ieedo
 
             // Assessment flow
             var answer = new Ref<int>();
-            yield return Statics.Screens.ShowQuestionFlow("UI/session_question_assessment_title", "UI/session_question_assessment_content", new[] { "UI/yes", "UI/no" }, answer);
+
+            if (!Statics.SessionFlow.IsInsideTutorial)
+            {
+                yield return Statics.Screens.ShowQuestionFlow("UI/session_question_assessment_title", "UI/session_question_assessment_content", new[] { "UI/yes", "UI/no" }, answer);
+            }
+
             if (answer.Value == 0)
             {
                 IsInsideAssessment = true;
@@ -84,7 +92,6 @@ namespace Ieedo
             uiTopScreen.SwitchMode(TopBarMode.Special_Assessment);
 
             var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
-            var assessmentRecapScreen = Statics.Screens.Get(ScreenID.AssessmentRecap) as UIAssessmentRecapPopup;
             var introScreen = Statics.Screens.Get(ScreenID.AssessmentIntro) as UIAssessmentIntroScreen;
             var categoryIntroScreen = Statics.Screens.Get(ScreenID.AssessmentCategoryIntro) as UIAssessmentCategoryIntroScreen;
             var assessmentHeader = Statics.Screens.Get(ScreenID.AssessmentHeader) as UIAssessmentHeader;
@@ -96,8 +103,11 @@ namespace Ieedo
                 BlockerBG.colorTransition(col, 0.25f);
             }
 
-            yield return introScreen.ShowIntro();
-            while (introScreen.IsOpen) yield return null;
+            if (Statics.SessionFlow.IsInsideTutorial)
+            {
+                yield return introScreen.ShowIntro();
+                while (introScreen.IsOpen) yield return null;
+            }
 
             var overallValue = 0f;
             var assessmentPercentages = new Dictionary<int, float>();
@@ -124,6 +134,9 @@ namespace Ieedo
                 var nQuestionsCategory = 0;
                 foreach (var question in questions)
                 {
+#if UNITY_EDITOR
+                    if (Input.GetKey(KeyCode.S)) break;
+#endif
                     yield return questionScreen.ShowQuestion(question);
                     while (questionScreen.IsOpen) yield return null;
                     var selectedAnswer = question.Answers[questionScreen.LatestSelectedOption];
@@ -137,13 +150,27 @@ namespace Ieedo
                 if (nQuestionsCategory == 0) nQuestionsCategory = 1; // To avoid NaN
                 assessmentPercentages[(int)category.ID] = totValue / nQuestionsCategory;
                 overallValue += assessmentPercentages[(int)category.ID];
+#if UNITY_EDITOR
+                if (Input.GetKey(KeyCode.S))
+                {
+                    foreach (var cd in categories)
+                    {
+                        assessmentPercentages[(int)cd.ID] = UnityEngine.Random.value;
+                    }
+                    break;
+                }
+#endif
             }
             yield return assessmentHeader.CloseCO();
             yield return assessmentFillbar.CloseCO();
 
+            // 30/11/22: Recap screen is deprecated
+            /*
+            var assessmentRecapScreen = Statics.Screens.Get(ScreenID.AssessmentRecap) as UIAssessmentRecapPopup;
             overallValue /= categories.Count;
             assessmentRecapScreen.ShowResults(assessmentPercentages, overallValue);
             while (assessmentRecapScreen.IsOpen) yield return null;
+            */
 
             var profileData = Statics.Data.Profile;
             foreach (var categoryData in profileData.Categories)

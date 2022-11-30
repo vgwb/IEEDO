@@ -60,6 +60,11 @@ namespace Ieedo
         public UIButton DeleteCardButton;
         public UIButton CloseFrontViewButton;
 
+        public Action OnCreateClicked;
+
+        [Header("Tutorial")]
+        public UITextContent TutorialNoCards;
+
         public override ScreenID ID => ScreenID.CardList;
         public bool KeepPillars { get; set; }
 
@@ -70,9 +75,10 @@ namespace Ieedo
             SetupButton(UnValidateCardButton, () => StartCoroutine(UnValidateCardCO(frontCardUI)));
             SetupButton(UnCompleteCardButton_View, () => StartCoroutine(UnCompleteCardCO(frontCardUI)));
             SetupButton(UnCompleteCardButton_Review, () => StartCoroutine(UnCompleteCardCO(frontCardUI)));
-            SetupButton(EditCardButton, () => SwitchToFrontViewMode(FrontViewMode.Edit));
+            SetupButton(EditCardButton, () => ToggleEditing());
             SetupButton(CreateCardButton, () =>
             {
+                OnCreateClicked?.Invoke();
                 createCardFlowCo = StartCoroutine(CreateCardFlowCO());
             });
 
@@ -133,6 +139,34 @@ namespace Ieedo
 
         }
 
+        #region Card Editing
+
+        private bool canEdit = false;
+        private void ToggleEditing()
+        {
+            canEdit = !canEdit;
+            EditModeCardInteraction.SetActive(canEdit);
+            EditCardButton.SetTextColor(canEdit ? Color.yellow : Color.white);
+
+            if (CurrentFrontViewMode == FrontViewMode.Edit)
+            {
+                if (canEdit)
+                {
+                    CreateCardButton.Hide();
+                    CompleteCardButton.Hide();
+                    DeleteCardButton.Hide();
+                }
+                else
+                {
+                    CreateCardButton.Show();
+                    CompleteCardButton.Show();
+                    DeleteCardButton.Show();
+                }
+            }
+        }
+
+        #endregion
+
         private IEnumerator DeleteCardCO(bool isNewCard, UICard uiCard, bool withConfirmation = true)
         {
             if (withConfirmation)
@@ -162,6 +196,17 @@ namespace Ieedo
             Statics.Analytics.Card("delete", uiCard.Data);
             Statics.Cards.DeleteCard(uiCard.Data);
             Statics.Cards.DeleteCardDefinition(uiCard.Data.Definition);
+
+            CheckEmptyHand();
+        }
+
+        private void CheckEmptyHand()
+        {
+            CardsList.SortListAgain();
+            if (CardsList.HeldCards.Count == 0)
+            {
+                CloseFrontView();
+            }
         }
 
         private IEnumerator CompleteCardCO(UICard uiCard)
@@ -201,11 +246,13 @@ namespace Ieedo
 
         private IEnumerator AnimateCardStatusChange(UICard uiCard, int score)
         {
+            uiCard.transform.localScaleTransition(new Vector3(1, 1, 1) * 1.2f, 0.25f, LeanEase.Elastic);
             uiCard.StampGO.GetComponent<Animation>().Play("stamp_exit");
             yield return new WaitForSeconds(0.25f);
             Statics.Score.AddScore(score);
             uiCard.RefreshUI();
             uiCard.StampGO.GetComponent<Animation>().Play("stamp_enter");
+            uiCard.transform.localScaleTransition(new Vector3(1, 1, 1) * 1f, 0.25f, LeanEase.Elastic);
             yield return new WaitForSeconds(0.25f);
         }
 
@@ -335,6 +382,8 @@ namespace Ieedo
 
         protected override IEnumerator OnOpen()
         {
+            var cardScroll = CardsList.GetComponentInChildren<SnappingScrollRect>();
+            cardScroll.ForceToPos(1f);
             yield return base.OnOpen();
         }
 
@@ -342,6 +391,11 @@ namespace Ieedo
         {
             CloseFrontView();
             yield return base.OnClose();
+        }
+
+        public void Update()
+        {
+            TutorialNoCards.gameObject.SetActive(CardsList.HeldCards.Count == 0 && !FrontView.gameObject.activeSelf);
         }
 
         private UICard frontCardUI;
@@ -355,7 +409,7 @@ namespace Ieedo
 
         public static int SortByExpirationDate(CardData c1, CardData c2)
         {
-            return -c1.ExpirationTimestamp.Date.CompareTo(c2.ExpirationTimestamp.Date);
+            return c1.ExpirationTimestamp.Date.CompareTo(c2.ExpirationTimestamp.Date);
         }
 
         private FrontViewMode desiredFrontViewMode;
@@ -429,6 +483,8 @@ namespace Ieedo
 
         public void OpenFrontView(UICard uiCard, FrontViewMode viewMode)
         {
+            Debug.LogError("OPENING FRONT VIEW " + viewMode);
+
             if (CurrentFrontViewMode == FrontViewMode.None)
             {
                 FrontObscurer.colorTransition(new Color(FrontObscurer.color.r, FrontObscurer.color.g, FrontObscurer.color.b, 0.5f), 0.25f);
@@ -468,12 +524,15 @@ namespace Ieedo
 
         private void SwitchToFrontViewMode(FrontViewMode viewMode)
         {
+            bool isSameMode = viewMode == CurrentFrontViewMode;
+            if (isSameMode) return;
+
             SoundManager.I.PlaySfx(SfxEnum.open);
             CurrentFrontViewMode = viewMode;
             switch (viewMode)
             {
                 case FrontViewMode.Edit:
-                    EditModeCardInteraction.SetActive(true);
+                    //EditModeCardInteraction.SetActive(true);
                     EditMode.SetActive(true);
                     ViewMode.SetActive(false);
                     CompletedMode.SetActive(false);
@@ -486,7 +545,7 @@ namespace Ieedo
                     AnimateShowButton(CompleteCardButton);
                     break;
                 case FrontViewMode.Create:
-                    EditModeCardInteraction.SetActive(true);
+                    //EditModeCardInteraction.SetActive(true);
                     EditMode.SetActive(true);
                     ViewMode.SetActive(false);
                     CompletedMode.SetActive(false);
@@ -497,7 +556,7 @@ namespace Ieedo
                     CompleteCardButton.gameObject.SetActive(false);
                     break;
                 case FrontViewMode.View:
-                    EditModeCardInteraction.SetActive(false);
+                    //EditModeCardInteraction.SetActive(false);
                     EditMode.SetActive(false);
                     ViewMode.SetActive(true);
                     CompletedMode.SetActive(false);
@@ -506,7 +565,7 @@ namespace Ieedo
                     AnimateShowButton(UnCompleteCardButton_View);
                     break;
                 case FrontViewMode.Completed:
-                    EditModeCardInteraction.SetActive(false);
+                    //EditModeCardInteraction.SetActive(false);
                     EditMode.SetActive(false);
                     ViewMode.SetActive(false);
                     CompletedMode.SetActive(true);
@@ -525,7 +584,7 @@ namespace Ieedo
                     }
                     break;
                 case FrontViewMode.Validated:
-                    EditModeCardInteraction.SetActive(false);
+                    //EditModeCardInteraction.SetActive(false);
                     EditMode.SetActive(false);
                     ViewMode.SetActive(false);
                     CompletedMode.SetActive(false);
@@ -548,7 +607,11 @@ namespace Ieedo
 
         public void CloseFrontView()
         {
-            EditModeCardInteraction.transform.SetParent(null);
+            Debug.LogError("CLOSING FRONT VIEW");
+
+            if (canEdit) ToggleEditing();
+
+            //EditModeCardInteraction.transform.SetParent(null);
             FrontObscurer.colorTransition(new Color(FrontObscurer.color.r, FrontObscurer.color.g, FrontObscurer.color.b, 0f), 0.25f);
             FrontView.gameObject.SetActive(false);
 
@@ -629,6 +692,8 @@ namespace Ieedo
 
                 var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
                 uiTopScreen.SwitchMode(TopBarMode.MainSection);
+
+                CheckEmptyHand();
             }
         }
 
@@ -637,6 +702,8 @@ namespace Ieedo
         {
             var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
             uiTopScreen.SwitchMode(TopBarMode.Special_CardCreation);
+
+            ToggleEditing();
 
             // Create and show the card
             var cardDef = Statics.Cards.GenerateCardDefinition(
@@ -665,7 +732,7 @@ namespace Ieedo
             CardsList.SortListAgain();
 
             cardUi.transform.localPosition = new Vector3(0, 1000, 0);
-            OpenFrontView(cardUi, FrontViewMode.Create);
+            OpenFrontView(cardUi, FrontViewMode.Edit);
             //frontCardUI = cardUi;   // We need to force it to be the front one, now
             cardUi.AnimateToParent();
 
@@ -704,12 +771,15 @@ namespace Ieedo
             frontCardUI.AnimateToParent();
 
             SetEditButtonsEnabled(true);
+            ToggleEditing();
 
             Statics.Cards.AddCard(cardData);
             Statics.Analytics.Card("create", cardData);
             createCardFlowCo = null;
 
             uiTopScreen.SwitchMode(TopBarMode.MainSection);
+
+            CardsList.SortListAgain();
         }
 
         private IEnumerator EditCategoryCO(bool autoReset = false)
@@ -802,7 +872,9 @@ namespace Ieedo
             frontCardUI.transform.localPositionTransition(new Vector3(0, 200, 0), 0.25f);
             var options = new List<OptionData>();
             var possibleDays = new List<int>();
-            for (int i = 0; i < 3 * 7; i++)
+            int nMonths = 2;
+            int nDaysPerMonth = 30;
+            for (int i = 0; i < nMonths * nDaysPerMonth; i++)
                 possibleDays.Add(i);
             foreach (var possibleDay in possibleDays)
             {
@@ -838,6 +910,8 @@ namespace Ieedo
                 frontCardUI.AnimateToParent();
             SetSubEditMode(false);
             EditDateButton.Shadow.enabled = false;
+
+            CardsList.SortListAgain();
         }
 
         private IEnumerator EditSubCategoryCO(CategoryDefinition categoryDef, bool autoReset = false)
@@ -969,6 +1043,8 @@ namespace Ieedo
             SetupButton(EditDescriptionButton, () => StartCoroutine(EditDescriptionCO(autoReset: true)));
             SetupButton(DeleteCardButton, () => StartCoroutine(DeleteCardCO(isNewCard, frontCardUI)));
 
+            // Make sure it is active before we can start the edit mode
+            if (!gameObject.activeSelf) gameObject.SetActive(true);
             StartCoroutine(EditModeCO());
         }
 

@@ -49,10 +49,26 @@ namespace Ieedo
             DownColor.Data.Value = new Color(c.r, c.g, c.b, 1f);
         }
 
+        public void SetTextColor(Color c)
+        {
+            var tm = GetComponentInChildren<UIText>(true);
+            tm.color = c;
+        }
+
         public void AnimateAppear()
         {
             transform.localScale = Vector3.zero;
             transform.localScaleTransition(Vector3.one, 0.25f);
+        }
+
+        public void Hide()
+        {
+            gameObject.SetActive(false);
+        }
+
+        public void Show()
+        {
+            gameObject.SetActive(true);
         }
     }
 }

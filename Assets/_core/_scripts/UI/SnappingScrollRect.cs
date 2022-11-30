@@ -38,10 +38,16 @@ namespace Ieedo
 
         protected override void OnEnable()
         {
-            normalizedPosition = Vector2.one;
-            //Debug.LogError("FORCE NORMALIZED POS: " + normalizedPosition);
+            //normalizedPosition = Vector2.one;
             hasInFront = false;
             base.OnEnable();
+        }
+
+
+        public void ForceToPos(float normalizedPos)
+        {
+            normalizedPosition = new Vector3(normalizedPos, 1);
+            Debug.LogError("FORCE NORMALIZED POS: " + normalizedPosition);
         }
 
         public float StopInertiaThreshold = 5f;
@@ -83,11 +89,18 @@ namespace Ieedo
             {
                 slot.transform.localScale = Vector3.one * baseScale;
             }
-            var desiredNormalizedPos = centerCardIndex * 1f / (Mathf.Max(1f, nCards - 1));
-            if (forceGoToCard)
-            {
-                desiredNormalizedPos = forcedCardIndex * 1f / (Mathf.Max(1f, nCards - 1));
-            }
+
+            var wantedCardIndex = centerCardIndex;
+            if (forceGoToCard) wantedCardIndex = forcedCardIndex;
+
+            //var layout = GetComponentInChildren<HorizontalLayoutGroup>(true);
+            //var padding = layout.padding.left + layout.padding.right;
+            //var size = layout.GetComponent<RectTransform>().rect.width;
+            //var contentPercent = (size - padding) / size;
+            //Debug.LogError("CONTENT PERCENT: " + contentPercent);
+
+            var desiredNormalizedPos = wantedCardIndex * 1f / (Mathf.Max(1f, nCards - 1));
+            //desiredNormalizedPos /= contentPercent;
             var diff = (desiredNormalizedPos - normalizedPosition.x);
 
             var normalizedStep = 1f / Mathf.Max(1,(nCards -1)*2);
@@ -100,7 +113,10 @@ namespace Ieedo
             //Debug.LogError("Diff " + diff);
             //Debug.LogError("Normalized step " + normalizedStep);
             float ratio = Mathf.Abs(diff) / normalizedStep;
-            var scaleFactor = CardCollection.CardScale * (0.3f * (1 - Mathf.Abs(diff) / normalizedStep));
+            if (nCards == 1) ratio = 0f;
+            var scaleFactor = CardCollection.CardScale * (0.3f * (1 - ratio));
+
+            scaleFactor = Mathf.Max(0, scaleFactor);
             //Debug.LogError("Scale factor " + scaleFactor);
 
             CardCollection.HeldSlots[centerCardIndex].transform.localScale = Vector3.one * (baseScale + scaleFactor);

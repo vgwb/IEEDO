@@ -11,12 +11,23 @@ namespace Ieedo
         public int LatestSelectedOption;
         private bool hasSelected;
 
+        public void HideButtons()
+        {
+            if (Buttons == null) Buttons = GetComponentsInChildren<UIButton>(true);
+            foreach (UIButton uiButton in Buttons)
+            {
+                uiButton.Hide();
+            }
+        }
+
         public IEnumerator PerformSelection(Locale[] answers, System.Action<int> onSelection = null)
         {
-            Buttons = GetComponentsInChildren<UIButton>(true);
+            if (Buttons == null) Buttons = GetComponentsInChildren<UIButton>(true);
             OnSelectOption = onSelection;
             for (var i = 0; i < answers.Length; i++)
             {
+                Buttons[i].Show();
+                Buttons[i].AnimateAppear();
                 Buttons[i].Key = new LocalizedString("UI","language_name");
                 Buttons[i].GetComponentInChildren<LocalizeStringEvent>().StringReference.LocaleOverride = answers[i];
                 Buttons[i].gameObject.SetActive(true);

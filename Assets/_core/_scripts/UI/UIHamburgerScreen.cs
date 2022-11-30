@@ -135,7 +135,7 @@ namespace Ieedo
             if (answer.Value == 0)
             {
                 Statics.Data.CreateDefaultNewProfile();
-                yield return AppManager.I.HandleNewProfileStart();
+                yield return AppManager.I.HandleTutorial();
             }
         }
 

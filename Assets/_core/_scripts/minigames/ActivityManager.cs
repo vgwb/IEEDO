@@ -20,6 +20,9 @@ namespace Ieedo.games
         // TODO: remove this result, not needed anymore
         public void CloseActivity(ActivityResult result = null)
         {
+            var continueScreen = Statics.Screens.Get(ScreenID.ActivityContinue);
+            if (continueScreen.IsOpen) continueScreen.Close();
+
             OnActivityEnd?.Invoke();
         }
 

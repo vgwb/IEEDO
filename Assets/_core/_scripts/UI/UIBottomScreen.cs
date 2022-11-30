@@ -1,4 +1,5 @@
-﻿using Lean.Gui;
+﻿using System;
+using Lean.Gui;
 
 namespace Ieedo
 {
@@ -9,6 +10,8 @@ namespace Ieedo
         public LeanButton btnActivities;
         public LeanButton btnPillars;
         public LeanButton btnCards;
+
+        public Action OnCardsClicked;
 
         void Start()
         {
@@ -22,6 +25,7 @@ namespace Ieedo
             });
             SetupButton(btnCards, () =>
             {
+                OnCardsClicked?.Invoke();
                 Statics.Screens.GoToTodoList();
             });
 

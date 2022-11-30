@@ -88,6 +88,7 @@ namespace Ieedo
                 // Move to the correct slot
                 HeldCards[i].transform.SetParent(HeldSlots[i].transform);
                 HeldCards[i].AnimateToParent();
+                HeldSlots[i].SetActive(true);
             }
 
             // Remove unused slots

@@ -64,15 +64,18 @@ namespace Ieedo
 
             if (Statics.Data.Profile.Description.IsNewProfile)
             {
-                yield return HandleNewProfileStart();
+                yield return HandleTutorial();
             }
         }
 
 
         // TODO: move to OnboardingManager / TutorialManager?
-        public IEnumerator HandleNewProfileStart()
+        public IEnumerator HandleTutorial()
         {
+            Statics.SessionFlow.IsInsideTutorial = true;
             var topScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
+            var botScreen = Statics.Screens.Get(ScreenID.Bottom) as UIBottomScreen;
+            var cardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
             var dialogPopup = Statics.Screens.Get(ScreenID.Dialog) as UIDialogPopup;
 
             Statics.Score.CurrentScoreText.transform.parent.gameObject.SetActive(false);
@@ -90,7 +93,7 @@ namespace Ieedo
             topScreen.OnTargetLocaleSwitched += Pass;
             yield return Statics.Screens.ShowDialog("UI/intro_instant_translation", "UI/ok", waitForClosing:false);
             topScreen.InstantTranslationButton.gameObject.SetActive(true);
-            Statics.Tutorial.ShowTutorialArrowOn(topScreen.InstantTranslationButton.gameObject);
+            Statics.Tutorial.ShowTutorialArrowOn(topScreen.InstantTranslationButton.gameObject, -20f);
             while (!passed) yield return null;
             topScreen.OnTargetLocaleSwitched -= Pass;
             Statics.Tutorial.HideTutorialArrow();
@@ -103,7 +106,8 @@ namespace Ieedo
             topScreen.OnSessionModeToggled += Pass;
             yield return Statics.Screens.ShowDialog("UI/intro_content_2", "UI/ok", waitForClosing:false);
             topScreen.SessionModeButton.gameObject.SetActive(true);
-            Statics.Tutorial.ShowTutorialArrowOn(topScreen.SessionModeButton.gameObject);
+            Statics.Tutorial.ShowTutorialArrowOn(topScreen.SessionModeButton.gameObject, 20f);
+            Statics.SessionFlow.IsInsideAssessment = true; // Force assessment on, so we make sure we do not advance the tutorial too early
             while (!passed) yield return null;
             Statics.Tutorial.HideTutorialArrow();
             topScreen.OnSessionModeToggled -= Pass;
@@ -114,12 +118,34 @@ namespace Ieedo
 
             Statics.Data.Profile.Description.IsNewProfile = false;
             Statics.Data.SaveProfile();
-            //Statics.Mode.ToggleSessionMode();
 
+            // Go directly to the session mode
+            //Statics.Mode.ToggleSessionMode();
+            // Wait for the assessment to end...
+            while (Statics.SessionFlow.IsInsideAssessment) yield return null;
+
+            // Go to Cards list tutorial
+            passed = false;
+            botScreen.OnCardsClicked += Pass;
+            Statics.Tutorial.ShowTutorialArrowOn(botScreen.btnCards.gameObject, 160f);
+            while (!passed) yield return null;
+            botScreen.OnCardsClicked -= Pass;
+            Statics.Tutorial.HideTutorialArrow();
+
+            // Create a card tutorial
+            passed = false;
+            cardListScreen.OnCreateClicked += Pass;
+            Statics.Tutorial.ShowTutorialArrowOn(cardListScreen.CreateCardButton.gameObject, 20f);
+            while (!passed) yield return null;
+            cardListScreen.OnCreateClicked -= Pass;
+            Statics.Tutorial.HideTutorialArrow();
+
+            // Tutorial end
             Statics.Score.CurrentScoreText.transform.parent.gameObject.SetActive(true);
             topScreen.HamburgerButton.gameObject.SetActive(true);
             topScreen.SessionModeButton.gameObject.SetActive(true);
             topScreen.InstantTranslationButton.gameObject.SetActive(true);
+            Statics.SessionFlow.IsInsideTutorial = false;
         }
 
         private IEnumerator ProfileCreationFlow()
@@ -128,8 +154,10 @@ namespace Ieedo
             var languageScreen = Statics.Screens.Get(ScreenID.LanguageSelection) as UILanguageSelectionScreen;
             var countryScreen = Statics.Screens.Get(ScreenID.CountrySelection) as UICountrySelectionScreen;
 
+            languageScreen.ButtonsSelection.HideButtons();
             yield return Statics.Screens.OpenCO(ScreenID.LanguageSelection);
             yield return languageScreen.PerformSelection(Statics.Data.Profile);
+            countryScreen.ButtonsSelection.HideButtons();
             yield return Statics.Screens.CloseOpenCO(ScreenID.LanguageSelection, ScreenID.CountrySelection);
             yield return countryScreen.PerformSelection(Statics.Data.Profile);
             yield return Statics.Screens.CloseCO(ScreenID.CountrySelection);
