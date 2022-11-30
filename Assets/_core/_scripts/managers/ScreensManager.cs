@@ -141,6 +141,8 @@ namespace Ieedo
 
         public void GoToTodoList()
         {
+            //StartCoroutine(GoToTodoListCO());
+
             SoundManager.I.PlaySfx(SfxEnum.click);
             var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
             uiCardListScreen.LoadToDoCards();
@@ -160,6 +162,11 @@ namespace Ieedo
                 }
             }
         }
+
+        /*private void StartCoroutine(object goToTodoListCO)
+        {
+            throw new NotImplementedException();
+        }*/
 
         #endregion
     }

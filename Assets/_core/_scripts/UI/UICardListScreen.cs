@@ -383,8 +383,10 @@ namespace Ieedo
         protected override IEnumerator OnOpen()
         {
             var cardScroll = CardsList.GetComponentInChildren<SnappingScrollRect>();
-            cardScroll.ForceToPos(1f);
+            //cardScroll.ForceToPos(1f);
             yield return base.OnOpen();
+
+            if (CardsList.HeldCards.Count > 0) yield return cardScroll.ForceGoToCard(CardsList.HeldCards[0]);
         }
 
         protected override IEnumerator OnClose()
@@ -483,7 +485,7 @@ namespace Ieedo
 
         public void OpenFrontView(UICard uiCard, FrontViewMode viewMode)
         {
-            Debug.LogError("OPENING FRONT VIEW " + viewMode);
+            //Debug.LogError("OPENING FRONT VIEW " + viewMode);
 
             if (CurrentFrontViewMode == FrontViewMode.None)
             {
@@ -607,7 +609,7 @@ namespace Ieedo
 
         public void CloseFrontView()
         {
-            Debug.LogError("CLOSING FRONT VIEW");
+            //Debug.LogError("CLOSING FRONT VIEW");
 
             if (canEdit) ToggleEditing();
 
