@@ -1,0 +1,193 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: cards_de
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: de
+  m_SharedData: {fileID: 11400000, guid: c72a3e86bc710427d83055e5adb307c5, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 10201661340147712
+    m_Localized: Lokale Teilnahme und Kultur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10201788641468416
+    m_Localized: "Alles, was mit dem B\xFCrgerleben und der lokalen Kultur in Ihrem
+      Gastland zusammenh\xE4ngt"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10257870520868864
+    m_Localized: "Engagement f\xFCr die Gemeinschaft"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10258501075755008
+    m_Localized: "Alles \xFCber Ihre soziale Datei und Ihr Engagement in der \xF6rtlichen
+      Gemeinschaft"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15338261569101824
+    m_Localized: Bildung und Ausbildung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22534781286735872
+    m_Localized: "Alle m\xF6glichen Aktivit\xE4ten zum Lernen in formellen und informellen
+      Umgebungen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15338341822914560
+    m_Localized: "Besch\xE4ftigung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15338345862029312
+    m_Localized: "Alles, was mit der Arbeit zusammenh\xE4ngt, von der Suche nach
+      einem Job bis hin zum Fortschritt in Ihrer professionellen Karreer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15338384780976128
+    m_Localized: Administrator & fortzufahren
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15338385938604032
+    m_Localized: "Alles \xFCber das Finden und Zugriff auf grundlegende Dienste in
+      der \xF6rtlichen Gemeinde, einschlie\xDFlich aller erforderlichen Unterlagen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15338416317947904
+    m_Localized: Wohlbefinden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15338417286832128
+    m_Localized: "Alles in Zusammenhang mit k\xF6rperlicher und emotionaler Gesundheit,
+      einschlie\xDFlich Ern\xE4hrung und Gewohnheiten f\xFCr einen gesunden Lebensstil."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599439687680
+    m_Localized: (Brauch)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602240
+    m_Localized: Besuchen Sie ein Wahrzeichen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602241
+    m_Localized: "Darstellende K\xFCnste"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602242
+    m_Localized: Zu einer Ausstellung gehen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28366007577812992
+    m_Localized: "Unterst\xFCtzung einer Kampagne"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28366007577812993
+    m_Localized: Medien
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602243
+    m_Localized: Soziales Zusammenkommen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602244
+    m_Localized: Anderen helfen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602245
+    m_Localized: "Gruppenaktivit\xE4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107338012276236288
+    m_Localized: Treten Sie der Community Group bei
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602246
+    m_Localized: Selbstlernend
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602247
+    m_Localized: Abonnieren Sie einen Kurs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602248
+    m_Localized: Folgen Sie einem Kurs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602249
+    m_Localized: "Eine Pr\xFCfung ablegen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602250
+    m_Localized: "Pers\xF6nliches Projekt"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602251
+    m_Localized: Praktikum
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602252
+    m_Localized: Bewerbungsprozess
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602253
+    m_Localized: "Bewerbungsgespr\xE4che"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22763239081189376
+    m_Localized: Karrierefortschritt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602254
+    m_Localized: Lokale Dienstleistungen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602255
+    m_Localized: Transport
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602256
+    m_Localized: Papierkram
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28366007577812994
+    m_Localized: Selbstvertretung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107049747551821824
+    m_Localized: Online -Dienste verwenden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602257
+    m_Localized: "Physische Aktivit\xE4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602258
+    m_Localized: Medizinische Behandlung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602259
+    m_Localized: Psychologische Therapie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602260
+    m_Localized: Wohlbefinden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107049747551821825
+    m_Localized: "Ern\xE4hrung"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

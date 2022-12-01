@@ -1,0 +1,157 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Assessment_so
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: so
+  m_SharedData: {fileID: 11400000, guid: f57bdb4aff2f4cc469d2fc2820a81e92, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 12759883776
+    m_Localized: Ma marineysaa adeegyada maxalliga ah? (Gym, beerta, maktabada, goobta
+      cibaadada)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7179342181294080
+    m_Localized: Ma fahmi kartaa sharraxaadaha dhacdooyinka, oo ku qoran Ingiriis?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539303149568
+    m_Localized: Ma booqatay soo jiidashada ugu weyn ee dalxiisayaasha maxalliga
+      ah (taallo, xaashiyo, iwm ...)?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539328315392
+    m_Localized: Ma ka qeybgashaa dhacdooyinka dhaqanka (Bandhiga, Riwaayadda, iwm
+      ...)?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509696
+    m_Localized: Ma raaceysaa wararka maxalliga ah?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509697
+    m_Localized: Asxaabta iyo / ama deriskaaga ma kuu soo jeedaan si aad u taageerto?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509698
+    m_Localized: Ma dareentaa kalsooni isku-dhafan oo dadka cusub iyo saaxiibo samaynaya?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509699
+    m_Localized: Miyaad ka qeybqaadataa nashaadaadka bulshada iyo kooxaha? (Tabarucid,
+      naadiyo, kooxaha bulshada)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509700
+    m_Localized: Ma leedahay saaxiibo ka soo jeeda asal ahaan iyo jinsiyado?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509701
+    m_Localized: Ma jeceshahay inaad kaligaa qaadatid kaligaa?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509702
+    m_Localized: Ma fahmi kartaa qodobbada ugu muhiimsan ee wada xiriirka lagu hadlo
+      shaqada, dugsiga, iwm?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509703
+    m_Localized: Ma qori kartaa warqad dabool ama warqad cabasho ah?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509704
+    m_Localized: Ma jeceshahay inaad u shaqeyso qayb ka mid ah koox? (Shaqo, Bulsho,
+      Ciyaaraha)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509705
+    m_Localized: Ma u adeegsan kartaa xirmooyinka aasaasiga ah ee Microsoft? E.g.
+      Ereyga iyo Excel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509706
+    m_Localized: Ma u diri kartaa emayl Ingiriisiga ah?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509707
+    m_Localized: Ma abuuri kartaa koonto e-mayl shaqsiyeed?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509708
+    m_Localized: Ma maarayn kartaa emaylka laga shakiyo, farriimaha iyo soo-dhejinta?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509709
+    m_Localized: Ma qaadi kartaa xisaabinta fudud? (ku dar, tarma, u qaybi, boqolleyda)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509710
+    m_Localized: Miyaad ka raadin kartaa taageerada khadka tooska ah adoo adeegsanaya
+      kulamada bulshada / webchats / bogagga?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509711
+    m_Localized: Ma ka heli kartaa websaydh iyo macluumaad ku saabsan websaydhka
+      adoo adeegsanaya makiinadaha raadinta si fiican loo yaqaan? (Google, Yahoo,
+      Bing iwm)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509712
+    m_Localized: Ma u safreysaa meel ka baxsan aaggaaga maxalliga ah?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509713
+    m_Localized: Ma ku bixin kartaa biilashaada khadka tooska ah?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509714
+    m_Localized: Ma fahmi kartaa bayaankaaga maaliyadeed? E.g. Bayaanka Bangiga,
+      biilasha iwm.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509715
+    m_Localized: Ma akhrisan kartaa oo fahmi kartaa is-weydaarsiga iyo dukumiinti
+      rasmi ah oo Ingiriis ah?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509716
+    m_Localized: Ma u baahan tahay caawimaad xagga buuxinta foomamka faahfaahsan
+      ee Ingiriisiga? E.g. Codsiyada shaqada, xawaaladaha lacagta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509717
+    m_Localized: Dhibaatooyinkaaga caafimaad ma saameeyaan maalintaada nolol maalmeedka?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509718
+    m_Localized: Badanaa miyaad dareentaa walwal?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509719
+    m_Localized: Ma leedahay qaab nololeed caafimaad oo guud ahaanba caafimaadka
+      leh?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509720
+    m_Localized: Ma dareentaa wax wanaagsan oo ku saabsan mustaqbalkaaga?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509721
+    m_Localized: Si joogto ah ma u jimicsataa?
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

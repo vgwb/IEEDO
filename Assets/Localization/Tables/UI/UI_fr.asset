@@ -1,0 +1,362 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UI_fr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: bf8d5c70485b84a24a821abb0ddb8f7e, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 136884804909817856
+    m_Localized: "Fran\xE7ais"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768156938903555
+    m_Localized: un
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093260
+    m_Localized: "\xCAtes-vous s\xFBr de vouloir quitter la cr\xE9ation de cette
+      carte?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093259
+    m_Localized: "Quitter la cr\xE9ation de la carte"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40525580437577728
+    m_Localized: Sortir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48125278888599552
+    m_Localized: "G\xE9n\xE9rer des cartes de test"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48151452267077632
+    m_Localized: "G\xE9n\xE9rer des piliers al\xE9atoires"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40526294958235648
+    m_Localized: "R\xE9initialiser le profil"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51375399755522048
+    m_Localized: Quitter le questionnaire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40525760616488960
+    m_Localized: "\xC9valuation"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40525707831173120
+    m_Localized: Mode commutateur
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48154400376250368
+    m_Localized: Augmenter le score +100
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55765040134823936
+    m_Localized: "\xCAtes-vous s\xFBr de vouloir quitter?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55765040130629632
+    m_Localized: "Laisser une activit\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768156938903554
+    m_Localized: Bien fait!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768156938903553
+    m_Localized: "R\xE9essayer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768156938903552
+    m_Localized: "Niveau termin\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40544588826173440
+    m_Localized: Tu as perdu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55672507820089345
+    m_Localized: "Jouer quelques minutes par jour aidera votre cerveau \xE0 rester
+      en forme"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40544604743557120
+    m_Localized: Sortir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40543073474469888
+    m_Localized: Score + {score}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40544906540507136
+    m_Localized: "Niveau termin\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40544570652254208
+    m_Localized: Bien fait!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55672507820089346
+    m_Localized: "\xC9crire quelques lignes sur la fa\xE7on dont vous vous sentez
+      chaque jour est une bonne pratique pour votre bien-\xEAtre"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40546818237161472
+    m_Localized: "{Scoretounlock} pointe pour d\xE9verrouiller"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24995527358668800
+    m_Localized: Votre assistant virtuel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768998995763200
+    m_Localized: "Ieedo se concentre sur 6 cat\xE9gories, v\xE9rifions-les un par
+      un ..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40549731508445184
+    m_Localized: "Cat\xE9gories"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40550106646994944
+    m_Localized: Globalement
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40534266346233856
+    m_Localized: "R\xE9sultats"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450240
+    m_Localized: Retour
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450244
+    m_Localized: Continuer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535113130074112
+    m_Localized: "choisissez une cat\xE9gorie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535419633033216
+    m_Localized: "D\xE9finir une date cible"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535270735241216
+    m_Localized: "D\xE9finir un niveau de difficult\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535579280826368
+    m_Localized: "S\xE9lectionnez le type de t\xE2che"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40537204766564352
+    m_Localized: Entrez description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535952167034880
+    m_Localized: Entrer le titre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906663854083
+    m_Localized: "Ce projet ieedo (2020-1-uk01-ka204-079117) a \xE9t\xE9 financ\xE9
+      avec le soutien de la Commission europ\xE9enne. Cette publication refl\xE8te
+      les opinions uniquement de l'auteur, et la Commission n'est pas responsable
+      de toute utilisation qui peut \xEAtre faite des informations qui y sont contenues."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48133898325925889
+    m_Localized: "\xCAtes-vous s\xFBr de vouloir supprimer la carte?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48133898325925888
+    m_Localized: Supprimer la carte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48447397204844544
+    m_Localized: Fait
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450243
+    m_Localized: Sortir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906663854081
+    m_Localized: Triche
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906563190784
+    m_Localized: "Cr\xE9dits"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906663854080
+    m_Localized: "R\xE9glages"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762365927424
+    m_Localized: "Accueillir! L'objectif Ieedo est de vous aider \xE0 r\xE9ussir
+      dans ce pays."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 136954244812791808
+    m_Localized: " Si vous ne comprenez pas quelque chose \xE0 l'\xE9cran, maintenez
+      le bouton de traduction pour le lire en arabe"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093248
+    m_Localized: "Vous devriez \xEAtre avec votre entra\xEEneur, commen\xE7ons une
+      session de coaching"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450242
+    m_Localized: Prochain
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24994957285646337
+    m_Localized: Non
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134354837057822720
+    m_Localized: "N'oubliez pas de jouer et de mettre \xE0 jour votre liste de t\xE2ches
+      tous les jours!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361241255936
+    m_Localized: D'ACCORD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43003187146022912
+    m_Localized: "Cartes termin\xE9es"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43003190425968640
+    m_Localized: "Cartes valid\xE9es"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40557809452736512
+    m_Localized: Jouer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55672507820089344
+    m_Localized: Jouer le niveau suivant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50788328801296384
+    m_Localized: "Pr\xE9c\xE9dent"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65895845057028096
+    m_Localized: "Voulez-vous vraiment r\xE9initialiser le profil?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65895845048639488
+    m_Localized: "R\xE9initialiser le profil"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450241
+    m_Localized: Recommencez
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093258
+    m_Localized: "\xCAtes-vous s\xFBr de vouloir quitter la session de coaching?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093257
+    m_Localized: "Session de d\xE9part"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093254
+    m_Localized: Il est maintenant temps de planifier ensemble les choses que vous
+      ferez dans les prochains jours
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093252
+    m_Localized: "Revordons ensemble toutes les cartes que vous avez termin\xE9es"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093253
+    m_Localized: "Vous n'avez pas de cartes \xE0 examiner"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093251
+    m_Localized: "Votre coach est l\xE0 pour vous aider. Voulez-vous r\xE9pondre
+      \xE0 quelques questions sur votre situation actuelle?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093250
+    m_Localized: "S\xE9ance de coaching"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093256
+    m_Localized: "\xCAtes-vous s\xFBr de vouloir commencer une session de coaching?
+      <non utilis\xE9>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093255
+    m_Localized: "D\xE9marrer la session <non utilis\xE9e>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906663854082
+    m_Localized: Effets sonores
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093249
+    m_Localized: "D\xE9marrer la session"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40474458029056000
+    m_Localized: '{Score actuel}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48089044644470784
+    m_Localized: "\xCAtes-vous s\xFBr que vous souhaitez d\xE9finir la carte comme
+      non termin\xE9e?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48089044619304960
+    m_Localized: "D\xE9finir comme non termin\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48119887563792384
+    m_Localized: "\xCAtes-vous s\xFBr de vouloir d\xE9finir la carte comme non valid\xE9?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48119887559598080
+    m_Localized: "D\xE9finir comme non valid\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24994957285646336
+    m_Localized: Oui
+    m_Metadata:
+      m_Items: []
+  - m_Id: 136953378097618944
+    m_Localized: "O\xF9 es-tu?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 139790834418524160
+    m_Localized: "Voici vos r\xE9sultats. Am\xE9lilons-les. Cr\xE9ons une carte."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 139790834443689984
+    m_Localized: "Vous n'avez pas de carte. Cr\xE9er une."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

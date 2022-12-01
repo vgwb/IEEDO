@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Activity_so
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: so
+  m_SharedData: {fileID: 11400000, guid: e48f391c1e96c7040b7091b267464dc8, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 8414584832
+    m_Localized: Bannaan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82758623232
+    m_Localized: Xusuus qor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143655723008
+    m_Localized: Ku xir 4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15270056583168
+    m_Localized: Tic tac toe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15319184465920
+    m_Localized: Manshock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7901862056419328
+    m_Localized: Xusuus-qorka furan
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -15,6 +15,10 @@ MonoBehaviour:
   m_TableCollectionName: UI
   m_TableCollectionNameGuidString: bf8d5c70485b84a24a821abb0ddb8f7e
   m_Entries:
+  - m_Id: 136884804909817856
+    m_Key: language_name
+    m_Metadata:
+      m_Items: []
   - m_Id: 55768156938903555
     m_Key: a
     m_Metadata:
@@ -323,12 +327,16 @@ MonoBehaviour:
     m_Key: yes
     m_Metadata:
       m_Items: []
-  - m_Id: 136884804909817856
-    m_Key: language_name
-    m_Metadata:
-      m_Items: []
   - m_Id: 136953378097618944
     m_Key: country_selection
+    m_Metadata:
+      m_Items: []
+  - m_Id: 139790834418524160
+    m_Key: tutorial_pillars
+    m_Metadata:
+      m_Items: []
+  - m_Id: 139790834443689984
+    m_Key: tutorial_no_cards
     m_Metadata:
       m_Items: []
   m_Metadata:

@@ -1,0 +1,194 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: cards_so
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: so
+  m_SharedData: {fileID: 11400000, guid: c72a3e86bc710427d83055e5adb307c5, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 10201661340147712
+    m_Localized: Kaqeybgalka Deegaanka & Dhaqanka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10201788641468416
+    m_Localized: Wax kasta oo laxiriira nolosha madaniga ah iyo dhaqanka maxalliga
+      ah ee dalkaaga martida loo yahay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10257870520868864
+    m_Localized: Kaqeybgalka bulshada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 10258501075755008
+    m_Localized: Dhamaan waxyaabaha ku saabsan faylkaaga bulshada iyo ka qeyb qaadashadaada
+      bulshada deegaanka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15338261569101824
+    m_Localized: Waxbarashada & Tababarka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22534781286735872
+    m_Localized: Dhammaan noocyada nashaadaadka ee barashada, ee qaab rasmi ah oo
+      rasmi ah iyo mid aan rasmi ahayn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15338341822914560
+    m_Localized: Shaqo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15338345862029312
+    m_Localized: Wax kasta oo laxiriira shaqada, laga bilaabo raadinta shaqo lagu
+      horumarinayo Karrer-kaaga xirfadeed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15338384780976128
+    m_Localized: Maamulka maamulka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15338385938604032
+    m_Localized: Oo dhan oo ku saabsan helitaanka iyo helitaanka adeegyada aasaasiga
+      ah ee bulshada maxalliga ah, oo ay ku jiraan dhammaan waraaqaha loo baahan
+      yahay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15338416317947904
+    m_Localized: Boggidin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 15338417286832128
+    m_Localized: Wax kasta oo laxiriira caafimaadka jirka iyo shucuurta, oo ay ku
+      jiraan nafaqada iyo caadooyinka qaab nololeed caafimaad leh.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599439687680
+    m_Localized: (caado)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602240
+    m_Localized: Booqo astaan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602241
+    m_Localized: FARSAMADA FARSAMADA
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602242
+    m_Localized: Tag bandhig
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28366007577812992
+    m_Localized: Taageer olole
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28366007577812993
+    m_Localized: Warbaahinta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602243
+    m_Localized: Soo-ururinta Bulshada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602244
+    m_Localized: Caawi dadka kale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602245
+    m_Localized: Hawlaha kooxda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107338012276236288
+    m_Localized: Ku soo biir Kooxda Bulshada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602246
+    m_Localized: Is-barasho
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602247
+    m_Localized: Ku dhaji koorso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602248
+    m_Localized: Raac koorso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602249
+    m_Localized: Imtixaan qaado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602250
+    m_Localized: Mashruuca Shakhsiyeed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602251
+    m_Localized: Shaqo barasho
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602252
+    m_Localized: Habka Codsiga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602253
+    m_Localized: Wareysiyo Shaqo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22763239081189376
+    m_Localized: Horumarinta Shaqada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602254
+    m_Localized: Adeegyada maxalliga ah
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602255
+    m_Localized: Gaadiidka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602256
+    m_Localized: Shirkad tuubbo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 28366007577812994
+    m_Localized: Is-doodashada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107049747551821824
+    m_Localized: Adeegso adeegyada khadka tooska ah
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602257
+    m_Localized: Nashaadaadka jirka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602258
+    m_Localized: Daaweynta Caafimaadka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602259
+    m_Localized: Daaweynta maskaxda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22742599502602260
+    m_Localized: Waxqabadka samaqabka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 107049747551821825
+    m_Localized: Nafaqo
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

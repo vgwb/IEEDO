@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Assessment_sv
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: sv
+  m_SharedData: {fileID: 11400000, guid: f57bdb4aff2f4cc469d2fc2820a81e92, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 12759883776
+    m_Localized: "\xC5tkomst till lokala tj\xE4nster? (gym, park, bibliotek, gudstj\xE4nst)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7179342181294080
+    m_Localized: "Kan du f\xF6rst\xE5 beskrivningar av evenemang, skrivna p\xE5 engelska?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539303149568
+    m_Localized: "Har du bes\xF6kt de viktigaste lokala turistattraktionerna (monument,
+      parker osv ...)?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539328315392
+    m_Localized: Deltar du i kulturevenemang (festival, konsert osv ...)?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509696
+    m_Localized: "F\xF6ljer du de lokala nyheterna?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509697
+    m_Localized: "V\xE4nner v\xE4nner och/eller grannar till dig f\xF6r st\xF6d?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509698
+    m_Localized: "K\xE4nner du dig s\xE4ker p\xE5 att tr\xE4ffa nya m\xE4nniskor
+      och f\xE5 v\xE4nner?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509699
+    m_Localized: "Deltar du i sociala aktiviteter och grupper? (Volont\xE4rarbete,
+      klubbar, samh\xE4llsgrupper)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509700
+    m_Localized: "Har du v\xE4nner fr\xE5n en blandning av bakgrunder och nationaliteter?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509701
+    m_Localized: "F\xF6redrar du att spendera tid ensam?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509702
+    m_Localized: "Kan du f\xF6rst\xE5 de viktigaste punkterna f\xF6r talad kommunikation
+      p\xE5 jobbet, skolan osv?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509703
+    m_Localized: "Kan du skriva ett brev eller klagom\xE5lsbrev?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509704
+    m_Localized: "Gillar du att arbeta som en del av ett team? (Anst\xE4llning, community,
+      sport)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509705
+    m_Localized: "Kan du anv\xE4nda grundl\xE4ggande Microsoft Office -paket? t.ex.
+      Ord och Excel"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509706
+    m_Localized: "Kan du skicka ett e -postmeddelande p\xE5 engelska?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509707
+    m_Localized: Kan du skapa ett personligt e -postkonto?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509708
+    m_Localized: "Kan du hantera misst\xE4nkta e-postmeddelanden, meddelanden och
+      pop-ups?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509709
+    m_Localized: "Kan du utf\xF6ra enkla ber\xE4kningar? (l\xE4gg till, multiplicera,
+      dela, procentsatser)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509710
+    m_Localized: "Kan du s\xF6ka efter support online med Community Forums/Webchats/bloggar?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509711
+    m_Localized: "Kan du hitta webbplatser och information p\xE5 webben med k\xE4nda
+      s\xF6kmotorer? (Google, Yahoo, Bing etc)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509712
+    m_Localized: "Reser du utanf\xF6r ditt lokala omr\xE5de?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509713
+    m_Localized: "Kan du betala dina r\xE4kningar online?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509714
+    m_Localized: "Kan du f\xF6rst\xE5 dina finansiella rapporter? t.ex. Bankuttalande,
+      r\xE4kningar etc."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509715
+    m_Localized: "Kan du l\xE4sa och f\xF6rst\xE5 korrespondens och officiella dokument
+      p\xE5 engelska?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509716
+    m_Localized: "Beh\xF6ver du hj\xE4lp med att fylla i detaljerade formul\xE4r
+      p\xE5 engelska? t.ex. jobbans\xF6kningar, pengar\xF6verf\xF6ringar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509717
+    m_Localized: "P\xE5verkar dina h\xE4lsoproblem ditt dagliga liv?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509718
+    m_Localized: "K\xE4nner du dig ofta orolig?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509719
+    m_Localized: "Har du en generellt h\xE4lsosam livsstil?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509720
+    m_Localized: "K\xE4nner du dig positiv till din framtid?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509721
+    m_Localized: "Tr\xE4nar du regelbundet?"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

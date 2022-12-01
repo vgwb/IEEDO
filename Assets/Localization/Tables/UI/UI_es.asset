@@ -17,7 +17,346 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: bf8d5c70485b84a24a821abb0ddb8f7e, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 136884804909817856
+    m_Localized: "Espa\xF1ol"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768156938903555
+    m_Localized: a
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093260
+    m_Localized: "\xBFEst\xE1s seguro de que quieres dejar la creaci\xF3n de esta
+      tarjeta?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093259
+    m_Localized: "Dejar la creaci\xF3n de tarjetas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40525580437577728
+    m_Localized: Salida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48125278888599552
+    m_Localized: Generar tarjetas de prueba
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48151452267077632
+    m_Localized: Generar pilares aleatorios
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40526294958235648
+    m_Localized: Restablecer perfil
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51375399755522048
+    m_Localized: Dejar el cuestionario
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40525760616488960
+    m_Localized: "Evaluaci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40525707831173120
+    m_Localized: Modo interruptor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48154400376250368
+    m_Localized: "Puntuaci\xF3n de aumento +100"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55765040134823936
+    m_Localized: "\xBFSeguro que quieres salir?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55765040130629632
+    m_Localized: Dejar la actividad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768156938903554
+    m_Localized: "\xA1Bien hecho!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768156938903553
+    m_Localized: Intentar otra vez
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768156938903552
+    m_Localized: Nivel completado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40544588826173440
+    m_Localized: "T\xFA pierdes"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55672507820089345
+    m_Localized: "Jugar unos minutos al d\xEDa ayudar\xE1 a que su cerebro se mantenga
+      en forma"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40544604743557120
+    m_Localized: Salida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40543073474469888
+    m_Localized: Puntaje +{puntaje}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40544906540507136
+    m_Localized: Nivel completado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40544570652254208
+    m_Localized: "\xA1Bien hecho!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55672507820089346
+    m_Localized: "Escribir algunas l\xEDneas sobre c\xF3mo te sientes todos los d\xEDas
+      es una buena pr\xE1ctica para tu bienestar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40546818237161472
+    m_Localized: "{ScoretOunlock} se\xF1ala para desbloquear"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24995527358668800
+    m_Localized: Tu asistente virtual
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768998995763200
+    m_Localized: "IEEDO se centra en 6 categor\xEDas, revisemos una por una ..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40549731508445184
+    m_Localized: "Categor\xEDas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40550106646994944
+    m_Localized: General
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40534266346233856
+    m_Localized: Resultados
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450240
+    m_Localized: "atr\xE1s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450244
+    m_Localized: Continuar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535113130074112
+    m_Localized: "Seleccione una categor\xEDa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535419633033216
+    m_Localized: Establecer una fecha de destino
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535270735241216
+    m_Localized: Establecer un nivel de dificultad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535579280826368
+    m_Localized: Seleccione el tipo de tarea
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40537204766564352
+    m_Localized: "Ingrese la descripci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535952167034880
+    m_Localized: "Ingrese el t\xEDtulo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906663854083
+    m_Localized: "Este proyecto IEEDO (2020-1-UK01-KA204-079117) fue financiado con
+      el apoyo de la Comisi\xF3n Europea. Esta publicaci\xF3n refleja solo las opiniones
+      del autor, y la Comisi\xF3n no es responsable de ning\xFAn uso que pueda hacerse
+      de la informaci\xF3n contenida en el mismo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48133898325925889
+    m_Localized: "\xBFEst\xE1s seguro de que quieres eliminar la tarjeta?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48133898325925888
+    m_Localized: "Tarjeta de eliminaci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48447397204844544
+    m_Localized: Hecho
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450243
+    m_Localized: Salida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906663854081
+    m_Localized: Trampas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906563190784
+    m_Localized: "Cr\xE9ditos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906663854080
+    m_Localized: Ajustes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762365927424
+    m_Localized: "\xA1Bienvenidos! El objetivo de Ieedo es ayudarlo a tener \xE9xito
+      en este pa\xEDs."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 136954244812791808
+    m_Localized: " Si no comprende algo en la pantalla, mantenga presionado el bot\xF3n
+      de traducci\xF3n para leerlo en \xE1rabe"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093248
+    m_Localized: "Deber\xEDas estar con tu entrenador, comencemos una sesi\xF3n de
+      entrenamiento"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450242
+    m_Localized: "pr\xF3ximo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24994957285646337
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134354837057822720
+    m_Localized: "\xA1Recuerde jugar y actualizar su lista de tareas todos los d\xEDas!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361241255936
+    m_Localized: OK
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43003187146022912
+    m_Localized: Tarjetas completadas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43003190425968640
+    m_Localized: Tarjetas validadas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40557809452736512
+    m_Localized: Tocar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55672507820089344
+    m_Localized: Juega el siguiente nivel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50788328801296384
+    m_Localized: Anterior
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65895845057028096
+    m_Localized: "\xBFRealmente quieres restablecer el perfil?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65895845048639488
+    m_Localized: Restablecer perfil
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450241
+    m_Localized: Rever
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093258
+    m_Localized: "\xBFEst\xE1s seguro de que quieres dejar la sesi\xF3n de entrenamiento?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093257
+    m_Localized: "Sesi\xF3n de licencia"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093254
+    m_Localized: "Ahora es el momento de planificar juntos las cosas que har\xE1s
+      en los pr\xF3ximos d\xEDas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093252
+    m_Localized: Revisemos todas las tarjetas que ha completado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093253
+    m_Localized: No tienes tarjetas para revisar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093251
+    m_Localized: "Tu entrenador est\xE1 aqu\xED para ayudarte. \xBFQuieres responder
+      algunas preguntas sobre tu situaci\xF3n actual?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093250
+    m_Localized: "Sesi\xF3n de entrenamiento"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093256
+    m_Localized: "\xBFEst\xE1s seguro de que quieres comenzar una sesi\xF3n de entrenamiento?
+      <No se usa m\xE1s>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093255
+    m_Localized: "Inicie la sesi\xF3n <No se usa m\xE1s>"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906663854082
+    m_Localized: Efectos de sonido
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093249
+    m_Localized: "Sesi\xF3n de inicio"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40474458029056000
+    m_Localized: "{Puntuaci\xF3n actual}"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48089044644470784
+    m_Localized: "\xBFEst\xE1s seguro de que quieres configurar la tarjeta como no
+      completada?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48089044619304960
+    m_Localized: Establecido como no completado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48119887563792384
+    m_Localized: "\xBFEst\xE1s seguro de que quieres configurar la tarjeta como no
+      validada?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48119887559598080
+    m_Localized: Establecido como no validado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24994957285646336
+    m_Localized: "S\xED"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 136953378097618944
+    m_Localized: "\xBFD\xF3nde est\xE1s?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 139790834418524160
+    m_Localized: "Aqu\xED est\xE1n sus resultados. Vamos a mejorarlos. Creemos una
+      tarjeta."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 139790834443689984
+    m_Localized: No tienes ninguna tarjeta. Crea uno.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

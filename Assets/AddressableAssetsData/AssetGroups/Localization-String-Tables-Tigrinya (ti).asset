@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Tigrinya (ti)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Tigrinya (ti)
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 904b534f83d8b434bb314ad8cfe66e86
+  m_SerializeEntries:
+  - m_GUID: 72d7ae45b2c43e341a51496c2a73050d
+    m_Address: Activity_ti
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ti
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9b285632cb3dfcc41b676466683c06f7
+    m_Address: Assessment_ti
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ti
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6188f866ad4425d42a742976f86bff2e
+    m_Address: Categories_ti
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ti
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0a65f652ba541724c9ca6ea7b74fa581
+    m_Address: UI_ti
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ti
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 040c13c27cf774e8f973d2fddbc2454d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b102f7dc84ce54049b41832c8d642a4e, type: 2}
+    - {fileID: 11400000, guid: f80c920ec2efe8143bcd192efbea9259, type: 2}

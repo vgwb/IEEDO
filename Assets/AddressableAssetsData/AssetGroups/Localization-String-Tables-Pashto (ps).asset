@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-String-Tables-Pashto (ps)
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-String-Tables-Pashto (ps)
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 507c153c41ea81d48927f6cbc2536279
+  m_SerializeEntries:
+  - m_GUID: 1a19f882775704e49ab069d1628f1dcb
+    m_Address: Activity_ps
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ps
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fbf26dec53a5cfe4797a53c924b0dabe
+    m_Address: Assessment_ps
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ps
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d215ccb684cac4e4f97f3eca7cae59f9
+    m_Address: Categories_ps
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ps
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f753d50cf7e81594aa5cab77511557b6
+    m_Address: UI_ps
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ps
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 040c13c27cf774e8f973d2fddbc2454d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 17019686688214149bbd345d24f1d620, type: 2}
+    - {fileID: 11400000, guid: 052f41f929cd2914aa1b6cce80935d78, type: 2}

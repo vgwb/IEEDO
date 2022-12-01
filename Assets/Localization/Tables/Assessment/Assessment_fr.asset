@@ -1,0 +1,161 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Assessment_fr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: f57bdb4aff2f4cc469d2fc2820a81e92, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 12759883776
+    m_Localized: "Acc\xE9dez-vous aux services locaux? (gymnase, parc, biblioth\xE8que,
+      lieu de culte)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7179342181294080
+    m_Localized: "Pouvez-vous comprendre des descriptions d'\xE9v\xE9nements, \xE9crits
+      en anglais?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539303149568
+    m_Localized: "Avez-vous visit\xE9 les principales attractions touristiques locales
+      (monuments, parcs, etc ...)?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539328315392
+    m_Localized: "Assistez-vous \xE0 des \xE9v\xE9nements culturels (festival, concert,
+      etc ...)?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509696
+    m_Localized: Suivez-vous les nouvelles locales?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509697
+    m_Localized: Les amis et / ou les voisins se tournent-ils vers vous pour obtenir
+      du soutien?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509698
+    m_Localized: Vous sentez-vous confiant de rencontrer de nouvelles personnes et
+      de vous faire des amis?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509699
+    m_Localized: "Participez-vous \xE0 des activit\xE9s sociales et des groupes?
+      (b\xE9n\xE9volat, clubs, groupes communautaires)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509700
+    m_Localized: "Avez-vous des amis d'un m\xE9lange d'horizons et de nationalit\xE9s?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509701
+    m_Localized: "Pr\xE9f\xE9rez-vous passer du temps seul?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509702
+    m_Localized: "Pouvez-vous comprendre les principaux points de la communication
+      parl\xE9e au travail, \xE0 l'\xE9cole, etc.?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509703
+    m_Localized: "Pouvez-vous \xE9crire une lettre de motivation ou une lettre de
+      plainte?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509704
+    m_Localized: "Aimez-vous travailler dans le cadre d'une \xE9quipe? (Emploi, communaut\xE9,
+      sport)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509705
+    m_Localized: Pouvez-vous utiliser des packages Microsoft Office de base? par
+      exemple. Mot et excel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509706
+    m_Localized: Pouvez-vous envoyer un e-mail en anglais?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509707
+    m_Localized: "Pouvez-vous cr\xE9er un compte de messagerie personnel?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509708
+    m_Localized: "Pouvez-vous g\xE9rer des e-mails suspects, des messages et des
+      fen\xEAtres contextuelles?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509709
+    m_Localized: Pouvez-vous effectuer des calculs simples? (Ajouter, multiplier,
+      diviser, pourcentages)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509710
+    m_Localized: "Pouvez-vous rechercher du support en ligne \xE0 l'aide de forums
+      communautaires / webchats / blogs?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509711
+    m_Localized: "Pouvez-vous trouver des sites Web et des informations sur le Web
+      \xE0 l'aide de moteurs de recherche bien connus? (Google, Yahoo, Bing, etc.)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509712
+    m_Localized: "Voyagez-vous en dehors de votre r\xE9gion?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509713
+    m_Localized: Pouvez-vous payer vos factures en ligne?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509714
+    m_Localized: "Pouvez-vous comprendre vos \xE9tats financiers? par exemple. D\xE9claration
+      bancaire, factures, etc."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509715
+    m_Localized: Pouvez-vous lire et comprendre la correspondance et les documents
+      officiels en anglais?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509716
+    m_Localized: "Avez-vous besoin d'aide pour remplir des formulaires d\xE9taill\xE9s
+      en anglais? par exemple. Demandes d'emploi, transferts d'argent"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509717
+    m_Localized: "Vos probl\xE8mes de sant\xE9 affectent-ils votre vie quotidienne?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509718
+    m_Localized: Vous sentez-vous souvent anxieux?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509719
+    m_Localized: "Avez-vous un mode de vie g\xE9n\xE9ralement sain?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509720
+    m_Localized: "Vous sentez-vous positif \xE0 propos de votre avenir?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7618539332509721
+    m_Localized: "Faites-vous de l'exercice r\xE9guli\xE8rement?"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,360 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: UI_so
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: so
+  m_SharedData: {fileID: 11400000, guid: bf8d5c70485b84a24a821abb0ddb8f7e, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 136884804909817856
+    m_Localized: Soomaaliga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768156938903555
+    m_Localized: a
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093260
+    m_Localized: Ma hubtaa inaad rabto inaad ka tagto abuurista kaarkan?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093259
+    m_Localized: Ka jooji kaarka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40525580437577728
+    m_Localized: Bixitaan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48125278888599552
+    m_Localized: Soo saar kaararka imtixaanka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48151452267077632
+    m_Localized: Soo saar tiirarka aan kala sooca lahayn
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40526294958235648
+    m_Localized: Dib-u-dejin Profile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51375399755522048
+    m_Localized: Jooji su'aalaha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40525760616488960
+    m_Localized: Qiimaynta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40525707831173120
+    m_Localized: Qaabka wareejinta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48154400376250368
+    m_Localized: Kordhinta dhibcaha +100
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55765040134823936
+    m_Localized: Ma hubtaa inaad rabto inaad joojiso?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55765040130629632
+    m_Localized: Firfircoonida ka tag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768156938903554
+    m_Localized: Waa hagaag!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768156938903553
+    m_Localized: Mar kale isku day
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768156938903552
+    m_Localized: Heerka dhameystiran
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40544588826173440
+    m_Localized: Waad lumisaa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55672507820089345
+    m_Localized: Ciyaar yar dhawr daqiiqo maalintiiba waxay ka caawin doontaa maskaxdaada
+      inuu ku habboon yahay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40544604743557120
+    m_Localized: Bixitaan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40543073474469888
+    m_Localized: Dhibcaha + {Dhibcaha}
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40544906540507136
+    m_Localized: Heerka dhameystiran
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40544570652254208
+    m_Localized: Waa hagaag!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55672507820089346
+    m_Localized: Qorista dhowr khad oo ku saabsan sida aad dareemeyso maalin kasta
+      waa dhaqan wanaagsan oo loogu talagalay wanaaggaaga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40546818237161472
+    m_Localized: '{Scoretortorck} dhibco si loo furo'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24995527358668800
+    m_Localized: Kaaliyahaaga Virtual
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55768998995763200
+    m_Localized: IEESO waxay diiradda saareysaa 6 qaybood, aan ka eegno mid ka mid
+      ah mid ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40549731508445184
+    m_Localized: Qeybaha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40550106646994944
+    m_Localized: Guud ahaan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40534266346233856
+    m_Localized: Natiijala
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450240
+    m_Localized: Xagga gadaale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450244
+    m_Localized: Socon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535113130074112
+    m_Localized: Xulo qayb
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535419633033216
+    m_Localized: Deji taariikhda bartilmaameedka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535270735241216
+    m_Localized: U deji heer dhib
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535579280826368
+    m_Localized: Xulo nooca hawsha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40537204766564352
+    m_Localized: Gali sharraxaad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40535952167034880
+    m_Localized: Geli cinwaanka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906663854083
+    m_Localized: Mashruucan IEEDO (2020-1-UK01-Ka20-07-0791117) waxaa lagu maalgeliyey
+      taageerada guddiga Yurub. Daabacaadan ayaa ka tarjumaya aragtida qoraaga oo
+      keliya, komishanka mas'uul kama ahan adeegsiga kasta oo laga yaabo inuu ka
+      kooban yahay macluumaadka ku jira.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48133898325925889
+    m_Localized: Ma hubtaa inaad rabto inaad tirtirto kaarka?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48133898325925888
+    m_Localized: Tirtir kaarka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48447397204844544
+    m_Localized: Sameeyey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450243
+    m_Localized: Bixitaan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906663854081
+    m_Localized: Khiyaamo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906563190784
+    m_Localized: Dhibcaha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906663854080
+    m_Localized: Dejinta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762365927424
+    m_Localized: Soo dhawow! Hadafka IEEDO waa inaan kaa caawiyo inaad ku guuleysato
+      dalkan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 136954244812791808
+    m_Localized: ' Haddii aadan wax shaashad ku fahmin, hayso badhanka tarjumaadda
+      si aad ugu aqriso Carabi'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093248
+    m_Localized: Waa inaad la joogtaa tababarahaaga, aan bilowno kulan tababbarasho
+      ah
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450242
+    m_Localized: U dhow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24994957285646337
+    m_Localized: Maya
+    m_Metadata:
+      m_Items: []
+  - m_Id: 134354837057822720
+    m_Localized: Xusuusnow inaad ciyaarto oo aad cusboonaysiiso liis------liis------ka
+      maalin kasta!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361241255936
+    m_Localized: Hagaag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43003187146022912
+    m_Localized: Kaararka oo dhameystiran
+    m_Metadata:
+      m_Items: []
+  - m_Id: 43003190425968640
+    m_Localized: Kaararka la ansaxiyay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40557809452736512
+    m_Localized: Cayaar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 55672507820089344
+    m_Localized: Ciyaar heerka xiga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50788328801296384
+    m_Localized: Hore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65895845057028096
+    m_Localized: Xaqiiqdii ma dooneysaa inaad dib u dejiso astaanta guud?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65895845048639488
+    m_Localized: Dib-u-dejin Profile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 37308361245450241
+    m_Localized: Isku tiir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093258
+    m_Localized: Ma hubtaa inaad rabto inaad ka tagto kulanka tababbarka?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093257
+    m_Localized: Ka tag kulan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093254
+    m_Localized: Hadda waa waqtigii la qorsheynayaa si loo qorsheeyo waxyaabaha aad
+      sameyn doontid maalmaha soo socda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093252
+    m_Localized: Aan dib u eegno dhammaan kaararka aad dhammeysay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093253
+    m_Localized: Ma lihid kaararka dib u eegista
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093251
+    m_Localized: Tababarahaagu halkan waa inuu ku caawiyaa. Ma rabtaa inaad ka jawaabto
+      dhowr su'aalood oo ku saabsan xaaladaada hadda jirta?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093250
+    m_Localized: Kalfadhiga tababarka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093256
+    m_Localized: Ma hubtaa inaad rabto inaad bilowdo tababar tababbarasho ah? <ma
+      isticmaalo mar dambe>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093255
+    m_Localized: Bilow fadhiga <oo aan loo isticmaalin mar dambe>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 65886906663854082
+    m_Localized: Saamaynta muuqata
+    m_Metadata:
+      m_Items: []
+  - m_Id: 50660762391093249
+    m_Localized: Bilow fadhiga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 40474458029056000
+    m_Localized: '{Qaansooyinka}'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48089044644470784
+    m_Localized: Ma hubtaa inaad rabto inaad kaadhka dhigatid oo aan la dhameystirin?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48089044619304960
+    m_Localized: U dhig sidii aan la dhameystirin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48119887563792384
+    m_Localized: Ma hubtaa inaad rabto inaad kaadhka dhisto sida aan loo xaqiijin?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48119887559598080
+    m_Localized: U dhig sidii aan la xaqiijin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 24994957285646336
+    m_Localized: Haa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 136953378097618944
+    m_Localized: Xagee joogtaa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 139790834418524160
+    m_Localized: Waa kuwan natiijooyinkaaga. Aynu horumarinno. Aynu abuurno kaar.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 139790834443689984
+    m_Localized: Ma haysato kaar kaar ah. Abuur mid.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
