@@ -8,9 +8,9 @@ namespace minigame.simonsays
     public class BoardController : MonoBehaviour
     {
         public GridController Grid;
+        public GameObject PiecesContainer;
 
         public Piece PiecePrefab;
-
 
         #region Pieces
 
@@ -20,7 +20,7 @@ namespace minigame.simonsays
 
         public Piece AddPiece(int x, int y)
         {
-            var piece = Instantiate(PiecePrefab, Grid.transform, true);
+            var piece = Instantiate(PiecePrefab, PiecesContainer.transform, true);
             piece.transform.localScale = Vector3.one;
             pieces.Add(piece);
 
