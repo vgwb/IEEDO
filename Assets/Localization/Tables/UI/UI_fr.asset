@@ -361,6 +361,50 @@ MonoBehaviour:
     m_Localized: "Vous n'avez pas de carte. Cr\xE9er une."
     m_Metadata:
       m_Items: []
+  - m_Id: 141937967278874624
+    m_Localized: "Liste de choses \xE0 faire"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959887966904320
+    m_Localized: Maison
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458752
+    m_Localized: "Activit\xE9s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458753
+    m_Localized: "Cr\xE9er"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458754
+    m_Localized: Effacer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458755
+    m_Localized: Fait
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458756
+    m_Localized: Pas fini
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458757
+    m_Localized: "\xC9diter"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458758
+    m_Localized: Valider
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888004653056
+    m_Localized: "Pas valid\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888004653057
+    m_Localized: Change de vue
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

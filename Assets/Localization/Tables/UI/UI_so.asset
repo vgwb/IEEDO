@@ -359,6 +359,50 @@ MonoBehaviour:
     m_Localized: Ma haysato kaar kaar ah. Abuur mid.
     m_Metadata:
       m_Items: []
+  - m_Id: 141937967278874624
+    m_Localized: In la sameeyo liiska
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959887966904320
+    m_Localized: Guri
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458752
+    m_Localized: Hawlaha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458753
+    m_Localized: Abuurid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458754
+    m_Localized: Tirtirid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458755
+    m_Localized: Sameeyey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458756
+    m_Localized: Lama qaban
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458757
+    m_Localized: Soo diyaarin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458758
+    m_Localized: Ansax
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888004653056
+    m_Localized: Lama ansixin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888004653057
+    m_Localized: Isbeddel aragtida
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

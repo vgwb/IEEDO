@@ -362,6 +362,50 @@ MonoBehaviour:
     m_Localized: Sie haben keine Karte. Erstelle einen.
     m_Metadata:
       m_Items: []
+  - m_Id: 141937967278874624
+    m_Localized: Aufgabenliste
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959887966904320
+    m_Localized: Heim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458752
+    m_Localized: "Aktivit\xE4ten"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458753
+    m_Localized: Schaffen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458754
+    m_Localized: "L\xF6schen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458755
+    m_Localized: Fertig
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458756
+    m_Localized: "Nicht durchgef\xFChrt"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458757
+    m_Localized: Bearbeiten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458758
+    m_Localized: "Best\xE4tigen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888004653056
+    m_Localized: Nicht validiert
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888004653057
+    m_Localized: "Ansicht \xE4ndern"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

@@ -361,6 +361,50 @@ MonoBehaviour:
     m_Localized: No tienes ninguna tarjeta. Crea uno.
     m_Metadata:
       m_Items: []
+  - m_Id: 141937967278874624
+    m_Localized: Lista de quehaceres
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959887966904320
+    m_Localized: Hogar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458752
+    m_Localized: Actividades
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458753
+    m_Localized: Crear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458754
+    m_Localized: Borrar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458755
+    m_Localized: Hecho
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458756
+    m_Localized: No hecho
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458757
+    m_Localized: Editar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458758
+    m_Localized: Validar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888004653056
+    m_Localized: No validado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888004653057
+    m_Localized: Cambio Vista
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

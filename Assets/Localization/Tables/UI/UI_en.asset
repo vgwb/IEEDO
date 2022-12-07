@@ -353,6 +353,50 @@ MonoBehaviour:
     m_Localized: You do not have any card. Create one.
     m_Metadata:
       m_Items: []
+  - m_Id: 141937967278874624
+    m_Localized: To Do List
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959887966904320
+    m_Localized: Home
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458752
+    m_Localized: Activities
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458753
+    m_Localized: Create
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458754
+    m_Localized: Delete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458755
+    m_Localized: Done
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458756
+    m_Localized: Not Done
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458757
+    m_Localized: Edit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458758
+    m_Localized: Validate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888004653056
+    m_Localized: Not Validated
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888004653057
+    m_Localized: Change View
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

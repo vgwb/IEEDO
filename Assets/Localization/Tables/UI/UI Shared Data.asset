@@ -19,6 +19,10 @@ MonoBehaviour:
     m_Key: language_name
     m_Metadata:
       m_Items: []
+  - m_Id: 40474458029056000
+    m_Key: top_score
+    m_Metadata:
+      m_Items: []
   - m_Id: 55768156938903555
     m_Key: a
     m_Metadata:
@@ -303,10 +307,6 @@ MonoBehaviour:
     m_Key: start_session
     m_Metadata:
       m_Items: []
-  - m_Id: 40474458029056000
-    m_Key: top_score
-    m_Metadata:
-      m_Items: []
   - m_Id: 48089044644470784
     m_Key: uncomplete_card_confirmation_description
     m_Metadata:
@@ -341,6 +341,46 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 141937967278874624
     m_Key: label_todolist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959887966904320
+    m_Key: label_home
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458752
+    m_Key: label_activities
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458753
+    m_Key: label_create
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458754
+    m_Key: label_delete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458755
+    m_Key: label_done
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458756
+    m_Key: label_undone
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458757
+    m_Key: label_edit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458758
+    m_Key: label_validate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888004653056
+    m_Key: label_unvalidate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888004653057
+    m_Key: label_switch_view
     m_Metadata:
       m_Items: []
   m_Metadata:

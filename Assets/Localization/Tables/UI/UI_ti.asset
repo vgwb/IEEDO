@@ -174,7 +174,14 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854083
-    m_Localized: '#VALUE!'
+    m_Localized: "\u12A5\u12DA \u1355\u122E\u1300\u12AD\u1275 \u12A5\u12DA IEEDO
+      (2020-1-UK01-KA204-079117) \u1265\u1213\u1308\u12DD \u12AE\u121A\u123D\u1295
+      \u12A4\u12CD\u122E\u1333 \u12A5\u12E9 \u12DA\u121D\u12C8\u120D \u1290\u12ED\u1229\u1362
+      \u12A5\u12DB \u133D\u1215\u134D\u1272 \u12A5\u12DA\u12A3 \u1295\u12A3\u1228\u12A3\u12A5\u12EB
+      \u1293\u12ED\u1272 \u12F0\u122B\u1232 \u1325\u122B\u12ED \u12A2\u12EB \u12A5\u1270\u1295\u1338\u1263\u122D\u1255
+      \u12A5\u1272 \u12AE\u121A\u123D\u1295 \u12A8\u12A3 \u1260\u1272 \u12A3\u1265\u12A1
+      \u12D8\u120E \u1213\u1260\u122C\u1273 \u1295\u12DD\u12C0\u1290 \u12ED\u12B9\u1295
+      \u12A3\u1320\u1253\u1255\u121B \u1270\u1213\u1273\u1272 \u12A3\u12ED\u12B0\u1290\u1295\u1362"
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925889
@@ -343,6 +350,50 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 139790834443689984
+    m_Localized: '#VALUE!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141937967278874624
+    m_Localized: '#VALUE!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959887966904320
+    m_Localized: '#VALUE!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458752
+    m_Localized: '#VALUE!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458753
+    m_Localized: '#VALUE!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458754
+    m_Localized: '#VALUE!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458755
+    m_Localized: '#VALUE!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458756
+    m_Localized: '#VALUE!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458757
+    m_Localized: '#VALUE!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458758
+    m_Localized: '#VALUE!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888004653056
+    m_Localized: '#VALUE!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888004653057
     m_Localized: '#VALUE!'
     m_Metadata:
       m_Items: []
