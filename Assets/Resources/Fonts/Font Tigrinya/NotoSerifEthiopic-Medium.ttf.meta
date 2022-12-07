@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: a7f15effaf1ae49dcae23af76326153b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Noto Serif Ethiopic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 217fc3cb66ddb49fab4d4bd2e5b3aef6, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
