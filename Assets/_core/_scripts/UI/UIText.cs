@@ -23,11 +23,24 @@ namespace Ieedo
             Text = s;
         }
 
+        public bool IsRTL
+        {
+            get
+            {
+                var locale = Key.LocaleOverride;
+                if (locale == null) locale = LocalizationSettings.Instance.GetSelectedLocale();
+                return locale.Identifier.Code == "ar"
+                       || locale.Identifier.Code == "fa"
+                       || locale.Identifier.Code == "ps";
+            }
+        }
+
         public string Text
         {
             set
             {
-                if (!IgnoreRTL && LocalizationSettings.Instance.GetSelectedLocale().Identifier.Code == "ar")
+
+                if (!IgnoreRTL && IsRTL)
                 {
                     alignment = RighterizeAlignment(alignment);
                     text = ArabicFixer.Fix(value, false, false);
