@@ -6,9 +6,9 @@ using Ieedo;
 using Ieedo.games;
 using Lean.Transition;
 
-namespace minigame.simonsays
+namespace minigame.memory
 {
-    public class ActivitySimonSays : ActivityManager
+    public class ActivityMemory : ActivityManager
     {
         void Start()
         {
@@ -29,11 +29,11 @@ namespace minigame.simonsays
             var sequentialNumber = 1;
             for (int x = 0; x < Board.Grid.SizeX; x++)
             {
-                for (int y = 0; y <  Board.Grid.SizeY; y++)
+                for (int y = 0; y < Board.Grid.SizeY; y++)
                 {
                     var cell = Board.Cell(x, y);
                     cell.Text = $"{x}-{y}";// sequentialNumber.ToString();
-                    cell.Color = Color.HSVToRGB(sequentialNumber * 1f/nNumbers, 1f, 1f);
+                    cell.Color = Color.HSVToRGB(sequentialNumber * 1f / nNumbers, 1f, 1f);
                     var _sequentialNumber = sequentialNumber;
                     cell.SetAction((c) => OnClickedCell(c, _sequentialNumber));
                     sequentialNumber++;
@@ -47,7 +47,7 @@ namespace minigame.simonsays
 
         void OnClickedCell(Cell cell, int sequentialNumber)
         {
-            Debug.LogError("CLICKED cell with Number " + sequentialNumber);
+            Debug.Log("CLICKED cell with Number " + sequentialNumber);
         }
 
         private IEnumerator StartGameCO()
@@ -87,7 +87,7 @@ namespace minigame.simonsays
 
             var p = Board.GetPiece(3, 1);
 
-            Debug.LogError("Piece: " + Board.GetPiece(3,1));
+            //            Debug.LogError("Piece: " + Board.GetPiece(3, 1));
         }
 
 
