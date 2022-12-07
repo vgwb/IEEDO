@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: el
   m_SharedData: {fileID: 11400000, guid: bf8d5c70485b84a24a821abb0ddb8f7e, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 5137596889296273418
   m_TableData:
   - m_Id: 136884804909817856
     m_Localized: "\u0395\u03BB\u03BB\u03B7\u03BD\u03B9\u03BA\u03AC"
@@ -115,7 +116,8 @@ MonoBehaviour:
   - m_Id: 40543073474469888
     m_Localized: "\u0392\u03B1\u03B8\u03BC\u03BF\u03BB\u03BF\u03B3\u03AF\u03B1 +{score}"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 5137596889296273418
   - m_Id: 40544906540507136
     m_Localized: "\u03A4\u03BF \u03B5\u03C0\u03AF\u03C0\u03B5\u03B4\u03BF \u03BF\u03BB\u03BF\u03BA\u03BB\u03B7\u03C1\u03CE\u03B8\u03B7\u03BA\u03B5"
     m_Metadata:
@@ -138,7 +140,8 @@ MonoBehaviour:
     m_Localized: "{Scoretounlock} \u03C3\u03B7\u03BC\u03B5\u03AF\u03B1 \u03B3\u03B9\u03B1
       \u03BE\u03B5\u03BA\u03BB\u03B5\u03AF\u03B4\u03C9\u03BC\u03B1"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 5137596889296273418
   - m_Id: 24995527358668800
     m_Localized: "\u039F \u03B5\u03B9\u03BA\u03BF\u03BD\u03B9\u03BA\u03CC\u03C2 \u03B2\u03BF\u03B7\u03B8\u03CC\u03C2
       \u03C3\u03B1\u03C2"
@@ -398,7 +401,8 @@ MonoBehaviour:
   - m_Id: 40474458029056000
     m_Localized: '{CurrentScore}'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 5137596889296273418
   - m_Id: 48089044644470784
     m_Localized: "\u0395\u03AF\u03C3\u03C4\u03B5 \u03B2\u03AD\u03B2\u03B1\u03B9\u03BF\u03B9
       \u03CC\u03C4\u03B9 \u03B8\u03AD\u03BB\u03B5\u03C4\u03B5 \u03BD\u03B1 \u03BF\u03C1\u03AF\u03C3\u03B5\u03C4\u03B5
@@ -447,4 +451,8 @@ MonoBehaviour:
       m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 5137596889296273418
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00604c1d4ecb8f0000608ce4b50990000060ccc91d0d9000

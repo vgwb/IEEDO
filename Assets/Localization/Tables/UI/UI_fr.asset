@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: fr
   m_SharedData: {fileID: 11400000, guid: bf8d5c70485b84a24a821abb0ddb8f7e, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 5137596889296273423
   m_TableData:
   - m_Id: 136884804909817856
     m_Localized: "Fran\xE7ais"
@@ -103,7 +104,8 @@ MonoBehaviour:
   - m_Id: 40543073474469888
     m_Localized: Score + {score}
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 5137596889296273423
   - m_Id: 40544906540507136
     m_Localized: "Niveau termin\xE9"
     m_Metadata:
@@ -120,7 +122,8 @@ MonoBehaviour:
   - m_Id: 40546818237161472
     m_Localized: "{Scoretounlock} pointe pour d\xE9verrouiller"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 5137596889296273423
   - m_Id: 24995527358668800
     m_Localized: Votre assistant virtuel
     m_Metadata:
@@ -323,7 +326,8 @@ MonoBehaviour:
   - m_Id: 40474458029056000
     m_Localized: '{CurrentScore}'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 5137596889296273423
   - m_Id: 48089044644470784
     m_Localized: "\xCAtes-vous s\xFBr que vous souhaitez d\xE9finir la carte comme
       non termin\xE9e?"
@@ -359,4 +363,8 @@ MonoBehaviour:
       m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 5137596889296273423
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00604c1d4ecb8f0000608ce4b50990000060ccc91d0d9000

@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: de
   m_SharedData: {fileID: 11400000, guid: bf8d5c70485b84a24a821abb0ddb8f7e, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 5137596889296273417
   m_TableData:
   - m_Id: 136884804909817856
     m_Localized: Deutch
@@ -103,7 +104,8 @@ MonoBehaviour:
   - m_Id: 40543073474469888
     m_Localized: Score +{Score}
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 5137596889296273417
   - m_Id: 40544906540507136
     m_Localized: Level abgeschlossen
     m_Metadata:
@@ -120,7 +122,8 @@ MonoBehaviour:
   - m_Id: 40546818237161472
     m_Localized: '{Scoretounlock} Punkte zum Freischalten'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 5137596889296273417
   - m_Id: 24995527358668800
     m_Localized: Ihr virtueller Assistent
     m_Metadata:
@@ -322,7 +325,8 @@ MonoBehaviour:
   - m_Id: 40474458029056000
     m_Localized: '{CurrentScore}'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 5137596889296273417
   - m_Id: 48089044644470784
     m_Localized: "Sind Sie sicher, dass Sie die Karte als nicht abgeschlossen einstellen
       m\xF6chten?"
@@ -360,4 +364,8 @@ MonoBehaviour:
       m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 5137596889296273417
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00604c1d4ecb8f0000608ce4b50990000060ccc91d0d9000

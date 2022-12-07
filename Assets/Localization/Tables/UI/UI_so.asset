@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: so
   m_SharedData: {fileID: 11400000, guid: bf8d5c70485b84a24a821abb0ddb8f7e, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 5137596889296273429
   m_TableData:
   - m_Id: 136884804909817856
     m_Localized: Soomaaliga
@@ -102,7 +103,8 @@ MonoBehaviour:
   - m_Id: 40543073474469888
     m_Localized: Dhibcaha + {Dhibcaha}
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 5137596889296273429
   - m_Id: 40544906540507136
     m_Localized: Heerka dhameystiran
     m_Metadata:
@@ -119,7 +121,8 @@ MonoBehaviour:
   - m_Id: 40546818237161472
     m_Localized: '{Scoretortorck} dhibco si loo furo'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 5137596889296273429
   - m_Id: 24995527358668800
     m_Localized: Kaaliyahaaga Virtual
     m_Metadata:
@@ -322,7 +325,8 @@ MonoBehaviour:
   - m_Id: 40474458029056000
     m_Localized: '{CurrentScore}'
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 5137596889296273429
   - m_Id: 48089044644470784
     m_Localized: Ma hubtaa inaad rabto inaad kaadhka dhigatid oo aan la dhameystirin?
     m_Metadata:
@@ -357,4 +361,8 @@ MonoBehaviour:
       m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 5137596889296273429
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00608ce4b50990000060ccc91d0d900000604c1d4ecb8f00
