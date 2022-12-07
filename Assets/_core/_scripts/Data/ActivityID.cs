@@ -9,5 +9,6 @@
         Diary,
         Connect4,
         Unblock,
+        SimonSays,
     }
 }
