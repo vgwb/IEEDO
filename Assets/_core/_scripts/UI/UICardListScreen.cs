@@ -75,7 +75,7 @@ namespace Ieedo
             SetupButton(UnValidateCardButton, () => StartCoroutine(UnValidateCardCO(frontCardUI)));
             SetupButton(UnCompleteCardButton_View, () => StartCoroutine(UnCompleteCardCO(frontCardUI)));
             SetupButton(UnCompleteCardButton_Review, () => StartCoroutine(UnCompleteCardCO(frontCardUI)));
-            SetupButton(EditCardButton, () => ToggleEditing());
+            SetupButton(EditCardButton, () => SetEditing(!canEdit));
             SetupButton(CreateCardButton, () =>
             {
                 OnCreateClicked?.Invoke();
@@ -142,9 +142,9 @@ namespace Ieedo
         #region Card Editing
 
         private bool canEdit = false;
-        private void ToggleEditing()
+        private void SetEditing(bool choice)
         {
-            canEdit = !canEdit;
+            canEdit = choice;
             EditModeCardInteraction.SetActive(canEdit);
             EditCardButton.SetTextColor(canEdit ? Color.yellow : Color.white);
 
@@ -397,7 +397,7 @@ namespace Ieedo
 
         public void Update()
         {
-            TutorialNoCards.gameObject.SetActive(CardsList.HeldCards.Count == 0 && !FrontView.gameObject.activeSelf);
+            TutorialNoCards.gameObject.SetActive(CurrentListViewMode == ListViewMode.ToDo && CardsList.HeldCards.Count == 0 && !FrontView.gameObject.activeSelf);
         }
 
         private UICard frontCardUI;
@@ -611,7 +611,7 @@ namespace Ieedo
         {
             //Debug.LogError("CLOSING FRONT VIEW");
 
-            if (canEdit) ToggleEditing();
+            if (canEdit) SetEditing(false);
 
             //EditModeCardInteraction.transform.SetParent(null);
             FrontObscurer.colorTransition(new Color(FrontObscurer.color.r, FrontObscurer.color.g, FrontObscurer.color.b, 0f), 0.25f);
@@ -705,7 +705,8 @@ namespace Ieedo
             var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
             uiTopScreen.SwitchMode(TopBarMode.Special_CardCreation);
 
-            ToggleEditing();
+            CreateCardButton.Hide();
+            SetEditing(false);
 
             // Create and show the card
             var cardDef = Statics.Cards.GenerateCardDefinition(
@@ -773,7 +774,7 @@ namespace Ieedo
             frontCardUI.AnimateToParent();
 
             SetEditButtonsEnabled(true);
-            ToggleEditing();
+            SetEditing(true);
 
             Statics.Cards.AddCard(cardData);
             Statics.Analytics.Card("create", cardData);
