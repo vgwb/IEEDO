@@ -2,7 +2,7 @@
 using Ieedo;
 using UnityEngine;
 
-namespace minigame.simonsays
+namespace Ieedo.games
 {
     public class Piece : MonoBehaviour
     {

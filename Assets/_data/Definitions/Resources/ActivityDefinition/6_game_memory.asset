@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7631c653b8f4c97a4340609bfb6c8fa, type: 3}
+  m_Name: 6_game_memory
+  m_EditorClassIdentifier: 
+  Enabled: 1
+  ID: 7
+  Title:
+    Key:
+      m_TableReference:
+        m_TableCollectionName: GUID:e48f391c1e96c7040b7091b267464dc8
+      m_TableEntryReference:
+        m_KeyId: 15270056583168
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    DefaultText: Memory
+  Type: 2
+  Image: {fileID: 21300000, guid: 6e1730608c4bcb146ad7ccc85d727d5e, type: 3}
+  SceneName: game_memory
+  ScoreToUnlock: 4000
+  MaxLevel: 10
+  references:
+    version: 2
+    RefIds: []

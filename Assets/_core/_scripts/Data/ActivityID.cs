@@ -9,6 +9,8 @@
         Diary,
         Connect4,
         Unblock,
-        SimonSays,
+        Memory,
+        Math,
+        Sequence
     }
 }

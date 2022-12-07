@@ -1,3 +1,4 @@
+using Ieedo;
 using UnityEngine;
 using UnityEngine.Localization;
 using System.Collections;
@@ -21,7 +22,8 @@ namespace Ieedo.games
         public void CloseActivity(ActivityResult result = null)
         {
             var continueScreen = Statics.Screens.Get(ScreenID.ActivityContinue);
-            if (continueScreen.IsOpen) continueScreen.Close();
+            if (continueScreen.IsOpen)
+                continueScreen.Close();
 
             OnActivityEnd?.Invoke();
         }

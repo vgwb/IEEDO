@@ -1,10 +1,9 @@
 ﻿using System;
 using Ieedo;
 using Lean.Transition;
-using minigame.simonsays;
 using UnityEngine;
 
-namespace minigame
+namespace Ieedo.games
 {
     public class Cell : MonoBehaviour
     {
