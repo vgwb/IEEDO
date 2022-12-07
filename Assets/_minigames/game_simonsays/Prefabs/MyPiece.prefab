@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 674990001354691724}
   - component: {fileID: 672667789744941814}
   - component: {fileID: 854151415529896054}
-  - component: {fileID: -3576591294453760074}
+  - component: {fileID: 2839199771576351171}
   m_Layer: 5
-  m_Name: Piece
+  m_Name: MyPiece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &-3576591294453760074
+--- !u!114 &2839199771576351171
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,9 +87,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 738955905319867792}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d491446e351b41e8908efd006a863a00, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ddb49e81a9b4819ab4868b0093b2c96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Button: {fileID: 3893259369736117950}
 --- !u!1 &1307456881074466884
 GameObject:
   m_ObjectHideFlags: 0

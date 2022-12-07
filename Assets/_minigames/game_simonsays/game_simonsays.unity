@@ -22896,7 +22896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Grid: {fileID: 1646198625}
-  PiecePrefab: {fileID: -3576591294453760074, guid: 4438770e3d099ee4883844d3c1f17815, type: 3}
+  PiecePrefab: {fileID: 2839199771576351171, guid: 4438770e3d099ee4883844d3c1f17815, type: 3}
 --- !u!1001 &1031538721
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -21,10 +21,10 @@ namespace minigame
         [Range(100,500)]
         public int Span = 200;
 
-        public GridCell CellPrefab;
+        public Cell CellPrefab;
 
-        public List<GridCell> pool;
-        private List<GridCell> cells;   // TODO: the current list of cells
+        public List<Cell> pool;
+        private List<Cell> cells;   // TODO: the current list of cells
 
         private bool cleanupAndRegenerate;
 
@@ -39,14 +39,14 @@ namespace minigame
             });
         }
 
-        public GridCell GetCellAt(int x, int y)
+        public Cell GetCell(int x, int y)
         {
             return cells[x * Columns + y];
         }
 
-        public void SetAction(Action<GridCell> action)
+        public void SetAction(Action<Cell> action)
         {
-            foreach (GridCell gridCell in pool)
+            foreach (Cell gridCell in pool)
             {
                 gridCell.SetAction(action);
             }
@@ -54,12 +54,12 @@ namespace minigame
 
         public void Regenerate(int rows, int columns)
         {
-            if (pool == null) pool = new List<GridCell>();
+            if (pool == null) pool = new List<Cell>();
 
             var currLength = pool.Count;
             for (int i = currLength; i < Max*Max; i++)
             {
-                var prefabInstance = PrefabUtility.InstantiatePrefab(CellPrefab) as GridCell;
+                var prefabInstance = PrefabUtility.InstantiatePrefab(CellPrefab) as Cell;
                 prefabInstance.transform.SetParent(transform);
                 prefabInstance.transform.localScale = Vector3.one;
                 pool.Add(prefabInstance);
@@ -68,14 +68,14 @@ namespace minigame
             Rows = rows;
             Columns = columns;
 
-            if (cells == null) cells = new List<GridCell>();
+            if (cells == null) cells = new List<Cell>();
             cells.Clear();
             var index = 0;
             for (int iRow = 0; iRow < rows; iRow++)
             {
                 for (int iCol = 0; iCol < columns; iCol++)
                 {
-                    GridCell cell;
+                    Cell cell;
                     cell = pool[index];
 
                     var iX = iCol - columns / 2f + 0.5f;

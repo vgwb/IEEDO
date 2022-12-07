@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using Lean.Transition;
 using UnityEngine;
 
@@ -10,61 +11,79 @@ namespace minigame.simonsays
 
         public Piece PiecePrefab;
 
-        public void Setup(int currentLevel)
+
+        #region Pieces
+
+        private List<Piece> pieces = new List<Piece>();
+
+        public Piece[] AllPieces => pieces.ToArray();
+
+        public Piece AddPiece(int x, int y)
         {
-            var gridSize = currentLevel + 1;
-            Grid.Regenerate(gridSize, gridSize);
-
-            var nNumbers = gridSize * gridSize;
-            var sequentialNumber = 1;
-            for (int x = 0; x < Grid.SizeX; x++)
-            {
-                for (int y = 0; y < Grid.SizeY; y++)
-                {
-                    var cell = Grid.GetCellAt(x, y);
-                    cell.Text = sequentialNumber.ToString();
-                    cell.Color = Color.HSVToRGB(sequentialNumber * 1f/nNumbers, 1f, 1f);
-                    var _sequentialNumber = sequentialNumber;
-                    cell.SetAction((c) => OnClickedCell(c, _sequentialNumber));
-                    sequentialNumber++;
-
-                    cell.MovingPart.localScale = Vector3.zero;
-                }
-            }
-
-            StartCoroutine(StartGameCO());
-        }
-
-        private IEnumerator StartGameCO()
-        {
-            // Animate entrance of the grid
-            for (int x = 0; x < Grid.SizeX; x++)
-            {
-                for (int y = 0; y < Grid.SizeY; y++)
-                {
-                    var cell = Grid.GetCellAt(x, y);
-                    cell.MovingPart.localScale = Vector3.zero;
-                    cell.MovingPart.localScaleTransition(new Vector3(2, 2, 2), 2f, LeanEase.Accelerate)
-                        .localScaleTransition(new Vector3(1, 1, 1), 0.2f, LeanEase.Accelerate);
-                    //yield return new WaitForSeconds(0.1f);
-                }
-            }
-
-            yield return null;
-
-            // Spawn the piece
-            var piece = Instantiate(PiecePrefab);
-            piece.transform.SetParent(Grid.transform);
+            var piece = Instantiate(PiecePrefab, Grid.transform, true);
             piece.transform.localScale = Vector3.one;
+            pieces.Add(piece);
 
-            piece.transform.position = Grid.GetCellAt(1, 3).transform.position;
-            piece.transform.positionTransition(Grid.GetCellAt(4, 2).transform.position, 3f, LeanEase.Elastic);
+            PlacePiece(piece, x, y);
+            return piece;
         }
 
-        void OnClickedCell(GridCell cell, int sequentialNumber)
+        private void PlacePiece(Piece piece, int x, int y)
         {
-            Debug.LogError("CLICKED cell with Number " + sequentialNumber);
+            var cell = Cell(x, y);
+            piece.Cell = cell;
+            cell.Piece = piece;
+            piece.transform.position = Cell(x, y).transform.position;
         }
 
+        public void RemovePiece(Piece piece)
+        {
+            piece.Cell.Piece = null;
+            piece.Cell = null;
+            Destroy(piece);
+            pieces.Remove(piece);
+        }
+
+        public void MovePiece(Piece piece, int toX, int toY)
+        {
+            var pastCell = piece.Cell;
+            piece.Cell.Piece = null;
+            PlacePiece(piece, toX, toY);
+
+            piece.transform.position = pastCell.transform.position;
+            piece.transform.positionTransition(piece.Cell.transform.position, 0.5f, LeanEase.Elastic);
+        }
+
+        public bool IsCellOccupied(int x, int y)
+        {
+            return Cell(x, y).Piece != null;
+        }
+
+        public bool IsCellFree(int x, int y)
+        {
+            return Cell(x, y).Piece == null;
+        }
+
+        public Cell Cell(int x, int y)
+        {
+            return Grid.GetCell(x, y);
+        }
+
+        public T Cell<T>(int x, int y) where T : MonoBehaviour
+        {
+            return Grid.GetCell(x, y).GetComponent<T>();
+        }
+
+        public Piece GetPiece(int x, int y)
+        {
+            return Grid.GetCell(x, y).Piece;
+        }
+
+        #endregion
+
+        public void GenerateGrid(int x, int y)
+        {
+            Grid.Regenerate(x, y);
+        }
     }
 }

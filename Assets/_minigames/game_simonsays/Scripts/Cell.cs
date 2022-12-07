@@ -1,11 +1,12 @@
 ﻿using System;
 using Ieedo;
 using Lean.Transition;
+using minigame.simonsays;
 using UnityEngine;
 
 namespace minigame
 {
-    public class GridCell : MonoBehaviour
+    public class Cell : MonoBehaviour
     {
         public int X { get; private set; }
         public int Y { get; private set; }
@@ -25,12 +26,13 @@ namespace minigame
             set => Button.SetColor(value);
         }
 
+        public Piece Piece { get; set; }
 
         public UIButton Button;
 
         public RectTransform MovingPart;
 
-        public void SetAction(Action<GridCell> action)
+        public void SetAction(Action<Cell> action)
         {
             Button.OnClick.RemoveAllListeners();
             Button.OnClick.AddListener(() => action(this));
