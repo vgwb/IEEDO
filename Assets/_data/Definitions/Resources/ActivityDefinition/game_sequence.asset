@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7631c653b8f4c97a4340609bfb6c8fa, type: 3}
-  m_Name: 7_game_math
+  m_Name: game_sequence
   m_EditorClassIdentifier: 
   Enabled: 1
-  ID: 8
+  ID: 9
   Title:
     Key:
       m_TableReference:
@@ -24,11 +24,11 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    DefaultText: Math
+    DefaultText: Sequence
   Type: 2
   Image: {fileID: 0}
-  SceneName: game_math
-  ScoreToUnlock: 4000
+  SceneName: game_sequence
+  ScoreToUnlock: 5000
   MaxLevel: 10
   references:
     version: 2

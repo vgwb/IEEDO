@@ -10,24 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7631c653b8f4c97a4340609bfb6c8fa, type: 3}
-  m_Name: 5_game Locked
+  m_Name: game_tictac
   m_EditorClassIdentifier: 
-  Enabled: 0
-  ID: 3
+  Enabled: 1
+  ID: 2
   Title:
     Key:
       m_TableReference:
-        m_TableCollectionName: 
+        m_TableCollectionName: GUID:e48f391c1e96c7040b7091b267464dc8
       m_TableEntryReference:
-        m_KeyId: 0
+        m_KeyId: 15270056583168
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    DefaultText: Locked example
-  Type: 1
-  SceneName: 
-  ScoreToUnlock: 200
+    DefaultText: Tic Tac Toe
+  Type: 2
+  Image: {fileID: 21300000, guid: 6e1730608c4bcb146ad7ccc85d727d5e, type: 3}
+  SceneName: game_tictac
+  ScoreToUnlock: 4000
   MaxLevel: 10
   references:
     version: 2

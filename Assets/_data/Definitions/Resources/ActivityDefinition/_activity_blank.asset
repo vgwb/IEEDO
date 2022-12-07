@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7631c653b8f4c97a4340609bfb6c8fa, type: 3}
-  m_Name: 5_activity_blank
+  m_Name: _activity_blank
   m_EditorClassIdentifier: Assembly-CSharp:Ieedo:ActivityDefinition
-  Enabled: 1
+  Enabled: 0
   ID: 1
   Title:
     Key:
