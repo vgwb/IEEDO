@@ -381,7 +381,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40474458029056000
-    m_Localized: "{\u062F\u0627\u0631\u0648\u0631\u067C\u0631 \u06A9\u0631\u064A}"
+    m_Localized: '{CurrentScore}'
     m_Metadata:
       m_Items: []
   - m_Id: 48089044644470784

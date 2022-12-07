@@ -320,7 +320,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40474458029056000
-    m_Localized: '{Momentaner Punktestand}'
+    m_Localized: '{CurrentScore}'
     m_Metadata:
       m_Items: []
   - m_Id: 48089044644470784
