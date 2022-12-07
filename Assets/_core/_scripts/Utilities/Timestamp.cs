@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Globalization;
 using Newtonsoft.Json;
+using UnityEngine.Localization.Settings;
 
 namespace Ieedo
 {
@@ -16,7 +17,7 @@ namespace Ieedo
 
         public override string ToString()
         {
-            return DateTime.FromBinary(binaryTimestamp).ToString("ddd dd MMM", CultureInfo.CurrentUICulture);
+            return DateTime.FromBinary(binaryTimestamp).ToString("ddd dd MMM", LocalizationSettings.SelectedLocale.Formatter);
         }
 
         [JsonIgnore]
