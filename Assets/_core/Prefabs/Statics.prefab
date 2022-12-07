@@ -91,8 +91,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlockerBG: {fileID: 0}
-  AssessmentCompletionBar: {fileID: 0}
   IsInsideAssessment: 0
+  IsInsideTutorial: 0
 --- !u!1 &4668475635819497386
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,6 +332,7 @@ Transform:
   - {fileID: 3839293573520725286}
   - {fileID: 2768003128063478054}
   - {fileID: 7437824626757670938}
+  - {fileID: 789845942806860913}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -655,6 +656,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa17020a48a884d5fa69a4f2f301baf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &5650202369908641639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 789845942806860913}
+  - component: {fileID: 4812694454308408722}
+  m_Layer: 0
+  m_Name: ArtManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &789845942806860913
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5650202369908641639}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4668475636701288263}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4812694454308408722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5650202369908641639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 340f661754504d6694ea69f7955fd792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIColor: {fileID: 11400000, guid: a85a83e974fb551498e3c538accb5caf, type: 2}
+  TitleSaturation: 1
+  BGSaturation: 0.75
 --- !u!1 &6659467709363886095
 GameObject:
   m_ObjectHideFlags: 0

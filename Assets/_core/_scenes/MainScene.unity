@@ -1115,6 +1115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -1345,8 +1346,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4542333321968561192, guid: 526496f18390cf546b7477138579ad1b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -4.8323975
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542333321968561192, guid: 526496f18390cf546b7477138579ad1b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 184.28003
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675760691872886582, guid: 526496f18390cf546b7477138579ad1b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -266.58862
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 526496f18390cf546b7477138579ad1b, type: 3}
@@ -1355,53 +1364,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1485521131095143359, guid: 526496f18390cf546b7477138579ad1b, type: 3}
   m_PrefabInstance: {fileID: 355386047}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &383949914
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 383949915}
-  - component: {fileID: 383949916}
-  m_Layer: 0
-  m_Name: ArtManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &383949915
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383949914}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1931276451}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &383949916
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 383949914}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 340f661754504d6694ea69f7955fd792, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UIColor: {fileID: 11400000, guid: a85a83e974fb551498e3c538accb5caf, type: 2}
-  TitleSaturation: 1
-  BGSaturation: 0.75
 --- !u!1 &405513860
 GameObject:
   m_ObjectHideFlags: 0
@@ -5849,11 +5811,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 10}
   m_SizeDelta: {x: 0, y: -340}
   m_Pivot: {x: 0.5, y: 0.5000003}
---- !u!4 &1931276451 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4668475636701288263, guid: e37b05479bb4d8a469cda915f629ea78, type: 3}
-  m_PrefabInstance: {fileID: 4668475635987070973}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1932382889
 GameObject:
   m_ObjectHideFlags: 0
@@ -6231,6 +6188,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 855486614}
     m_Modifications:
+    - target: {fileID: 1628617706, guid: ed198f5e9064b024e88b2d213a22f400, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 349657544719017564, guid: ed198f5e9064b024e88b2d213a22f400, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 349657545777405784, guid: ed198f5e9064b024e88b2d213a22f400, type: 3}
       propertyPath: m_Name
       value: Screen_Bot
