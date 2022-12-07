@@ -1995,7 +1995,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7376773797247356537, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
-      value: 139421712701480960
+      value: 139790834443689984
       objectReference: {fileID: 0}
     - target: {fileID: 7376773797247356537, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_StringReference.m_TableReference.m_TableCollectionName
