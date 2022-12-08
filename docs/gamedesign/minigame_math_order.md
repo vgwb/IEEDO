@@ -5,7 +5,8 @@
 **Type**
 tap the number in ascending (or descending) order before the time finishes.
 
-**difficulty changes** 
+**Difficulty** 
+the level (1-100) changes automatically these parameters
 - the grid size
 - how many numbers are shown
 - the "distance" between numbers

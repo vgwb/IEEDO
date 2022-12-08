@@ -2,17 +2,18 @@
 
 ![](img/minigame_sequence.excalidraw2.png)
 
-**Type**
+**Description**  
+memory game.  
 repeat the given sequence as much as you can.
-memory game
 
-difficulty: 
+**Difficulty:**
+the level (1-100) changes automatically these parameters: 
 - grid size
 - sequence length
 - speed
 
 **Result**
-level
+level achieved
 
 **UI**
 - Board: dynamic from 2x2 to 10x10

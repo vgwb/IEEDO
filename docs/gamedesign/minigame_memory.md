@@ -3,10 +3,11 @@
 ![](img/minigame_memory.excalidraw2.png)
 
 **Type**
-recreate the given patterns before the time ends.
+recreate the given patterns before the time ends.  
 memory game
 
-difficulty: 
+**difficulty:** 
+the level (1-100) changes automatically these parameters: 
 - grid size
 - number of cells
 - distance of cells

@@ -3,14 +3,15 @@
 ![](img/minigame_merge.excalidraw2.png)
 
 **Type**
-score as much as you can by merging suqares.
+score as much as you can by merging squares.
 
-difficulty: 
-- easy: give a number likely in the board
-- normal: give a random rumber
+**Difficulty:** 
+the level (1-100) changes automatically this parameter: 
+- level 0: give a number likely in the board.
+- level 100: give a real random rumber.
 
 **Result**
-high score
+high score and level
 
 **UI**
 - Board: grid 5x5
@@ -28,4 +29,5 @@ tap on a grid cell
 - when you group 3 or more 9, the "explode" also surrounding blocks
 - you score 1 point per block.
 - if you can't put any more number, game ends
+- the level == the number of plays done with at least a 999 explosion
 
