@@ -2,6 +2,7 @@
 
 **Type**
 score as much as you can.
+
 difficulty: 
 - easy: give a number likely in the board
 - normal: give a random rumber
@@ -10,14 +11,14 @@ difficulty:
 high score
 
 **UI**
-Board: grid 5x5
-Elements: 9 squares with numbers from 1 to 9
-some gfx when a cell explodes.
+- Board: grid 5x5
+- Elements: 9 squares with numbers from 1 to 9
+- some gfx when a cell explodes.
 
 **UX**
 tap on a grid cell
 
-![](minigame_merge.excalidraw2.png)
+![](img/minigame_merge.excalidraw2.png)
 
 **Gameplay:**
 - the board is filled with 12 random numbers
