@@ -18,28 +18,24 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 8414584832
-    m_Localized: '#VALUE!'
-    m_Metadata:
-      m_Items: []
   - m_Id: 82758623232
-    m_Localized: '#VALUE!'
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 143655723008
-    m_Localized: '#VALUE!'
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 15270056583168
-    m_Localized: '#VALUE!'
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 15319184465920
-    m_Localized: '#VALUE!'
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 7901862056419328
-    m_Localized: '#VALUE!'
+    m_Localized: 
     m_Metadata:
       m_Items: []
   references:

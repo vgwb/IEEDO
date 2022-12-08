@@ -18,10 +18,6 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 8414584832
-    m_Localized: Blanc
-    m_Metadata:
-      m_Items: []
   - m_Id: 82758623232
     m_Localized: Agenda
     m_Metadata:
@@ -40,6 +36,22 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 7901862056419328
     m_Localized: Journal ouvert
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101706107485937664
+    m_Localized: "Ordre de math\xE9matiques"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101706107498520576
+    m_Localized: "S\xE9quences"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101706107498520577
+    m_Localized: Motifs
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101706107498520578
+    m_Localized: Fusion
     m_Metadata:
       m_Items: []
   references:
