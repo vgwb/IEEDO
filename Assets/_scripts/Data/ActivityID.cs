@@ -12,6 +12,8 @@
         Memory,
         MathOrder,
         Sequence,
-        MergeNumbers
+        MergeNumbers,
+        MathSpeed,
+        FastReaction
     }
 }

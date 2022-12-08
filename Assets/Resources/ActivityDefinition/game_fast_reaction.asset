@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7631c653b8f4c97a4340609bfb6c8fa, type: 3}
-  m_Name: game_math_order
+  m_Name: game_fast_reaction
   m_EditorClassIdentifier: 
   Enabled: 1
-  ID: 8
+  ID: 12
   Title:
     Key:
       m_TableReference:
-        m_TableCollectionName: GUID:e48f391c1e96c7040b7091b267464dc8
+        m_TableCollectionName: 
       m_TableEntryReference:
-        m_KeyId: 101706107485937664
+        m_KeyId: 0
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    DefaultText: Math Order
+    DefaultText: Fast Reaction
   Type: 2
   Image: {fileID: 0}
-  SceneName: game_math_order
-  ScoreToUnlock: 2000
+  SceneName: game_fast_reaction
+  ScoreToUnlock: 2500
   MaxLevel: 10
   references:
     version: 2

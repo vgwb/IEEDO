@@ -6,9 +6,9 @@ using Ieedo;
 using Ieedo.games;
 using Lean.Transition;
 
-namespace minigame.math
+namespace minigame.math_order
 {
-    public class ActivityMath : ActivityManager
+    public class ActivityMathOrder : ActivityManager
     {
         void Start()
         {
