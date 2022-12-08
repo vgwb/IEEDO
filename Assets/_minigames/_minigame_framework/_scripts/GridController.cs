@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 namespace minigame
@@ -61,7 +60,7 @@ namespace minigame
             var currLength = pool.Count;
             for (int i = currLength; i < Max * Max; i++)
             {
-                var prefabInstance = PrefabUtility.InstantiatePrefab(CellPrefab) as Cell;
+                var prefabInstance = Instantiate(CellPrefab);
                 prefabInstance.transform.SetParent(transform);
                 prefabInstance.transform.localScale = Vector3.one;
                 pool.Add(prefabInstance);
