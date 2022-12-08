@@ -1,7 +1,9 @@
 # Minigame Merge
 
+![](img/minigame_merge.excalidraw2.png)
+
 **Type**
-score as much as you can.
+score as much as you can by merging suqares.
 
 difficulty: 
 - easy: give a number likely in the board
@@ -17,8 +19,6 @@ high score
 
 **UX**
 tap on a grid cell
-
-![](img/minigame_merge.excalidraw2.png)
 
 **Gameplay:**
 - the board is filled with 12 random numbers
