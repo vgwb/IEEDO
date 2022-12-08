@@ -2,17 +2,24 @@
 
 ![](img/minigame_memory.excalidraw2.png)
 
-**Description**
+**Description**  
 recreate the given patterns before the time ends.  
 memory game
 
-**difficulty:** 
+**Skills**
+- Non-verbal Memory
+- Short-Term Memory
+- Visual Short-Term Memory
+- Working Memory
+- Recognition
+
+**Difficulty**  
 the level (1-100) changes automatically these parameters: 
 - grid size
 - number of cells
 - distance of cells
 
-**Result**
+**Result**  
 level and high score
 
 **UI**
