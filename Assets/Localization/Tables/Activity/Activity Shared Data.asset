@@ -39,16 +39,24 @@ MonoBehaviour:
     m_Key: activity_title_math_order
     m_Metadata:
       m_Items: []
-  - m_Id: 101706107498520576
-    m_Key: activity_title_sequence
+  - m_Id: 101846840868069376
+    m_Key: activity_title_memory_sequence
     m_Metadata:
       m_Items: []
-  - m_Id: 101706107498520577
-    m_Key: activity_title_memory
+  - m_Id: 101846840880652288
+    m_Key: activity_title_memory_pattern
     m_Metadata:
       m_Items: []
   - m_Id: 101706107498520578
     m_Key: activity_title_mergenumbers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101846840880652289
+    m_Key: activity_title_math_speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101846840880652290
+    m_Key: activity_title_fastreaction
     m_Metadata:
       m_Items: []
   m_Metadata:

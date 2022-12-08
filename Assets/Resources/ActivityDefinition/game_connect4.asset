@@ -24,7 +24,7 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    DefaultText: Connect4
+    DefaultText: Connect 4
   Type: 2
   Image: {fileID: 0}
   SceneName: game_connect4

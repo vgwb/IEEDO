@@ -42,16 +42,24 @@ MonoBehaviour:
     m_Localized: "Pedido de matem\xE1ticas"
     m_Metadata:
       m_Items: []
-  - m_Id: 101706107498520576
+  - m_Id: 101706107498520578
+    m_Localized: "N\xFAmeros de combinaci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101846840868069376
     m_Localized: Secuencias
     m_Metadata:
       m_Items: []
-  - m_Id: 101706107498520577
+  - m_Id: 101846840880652288
     m_Localized: Patrones
     m_Metadata:
       m_Items: []
-  - m_Id: 101706107498520578
-    m_Localized: "N\xFAmeros de combinaci\xF3n"
+  - m_Id: 101846840880652289
+    m_Localized: "Velocidad matem\xE1tica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101846840880652290
+    m_Localized: "Reacci\xF3n r\xE1pida"
     m_Metadata:
       m_Items: []
   references:

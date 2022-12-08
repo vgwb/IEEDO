@@ -42,16 +42,24 @@ MonoBehaviour:
     m_Localized: Math order
     m_Metadata:
       m_Items: []
-  - m_Id: 101706107498520576
+  - m_Id: 101706107498520578
+    m_Localized: Merge Numbers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101846840868069376
     m_Localized: Sequences
     m_Metadata:
       m_Items: []
-  - m_Id: 101706107498520577
+  - m_Id: 101846840880652288
     m_Localized: Patterns
     m_Metadata:
       m_Items: []
-  - m_Id: 101706107498520578
-    m_Localized: Merge Numbers
+  - m_Id: 101846840880652289
+    m_Localized: Math Speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101846840880652290
+    m_Localized: Fast Reaction
     m_Metadata:
       m_Items: []
   references:

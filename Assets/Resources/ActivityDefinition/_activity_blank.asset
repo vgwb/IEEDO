@@ -17,9 +17,9 @@ MonoBehaviour:
   Title:
     Key:
       m_TableReference:
-        m_TableCollectionName: GUID:e48f391c1e96c7040b7091b267464dc8
+        m_TableCollectionName: 
       m_TableEntryReference:
-        m_KeyId: 101706107498520577
+        m_KeyId: 0
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -27,7 +27,7 @@ MonoBehaviour:
     DefaultText: Blank example
   Type: 1
   Image: {fileID: 0}
-  SceneName: game_blank
+  SceneName: 
   ScoreToUnlock: 8000
   MaxLevel: 10
   references:

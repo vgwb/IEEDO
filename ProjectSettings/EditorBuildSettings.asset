@@ -21,10 +21,10 @@ EditorBuildSettings:
     path: Assets/_minigames/game_mergenumbers/game_mergenumbers.unity
     guid: d4cc48773fa654851b7e037887b6affa
   - enabled: 1
-    path: Assets/_minigames/game_memory/game_memory.unity
+    path: Assets/_minigames/game_memory_pattern/game_memory_pattern.unity
     guid: 08530aad30f9bf8418b528fe5fb81564
   - enabled: 1
-    path: Assets/_minigames/game_sequence/game_sequence.unity
+    path: Assets/_minigames/game_memory_sequence/game_memory_sequence.unity
     guid: e6d899af1dcd24b5a82b89a33f0490d3
   - enabled: 1
     path: Assets/_minigames/game_math_order/game_math_order.unity

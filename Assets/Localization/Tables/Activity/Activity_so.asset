@@ -42,16 +42,24 @@ MonoBehaviour:
     m_Localized: Amarka Xisaabta
     m_Metadata:
       m_Items: []
-  - m_Id: 101706107498520576
+  - m_Id: 101706107498520578
+    m_Localized: Lambarrada isku darka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101846840868069376
     m_Localized: Isku xigxid
     m_Metadata:
       m_Items: []
-  - m_Id: 101706107498520577
+  - m_Id: 101846840880652288
     m_Localized: Naqshadaha
     m_Metadata:
       m_Items: []
-  - m_Id: 101706107498520578
-    m_Localized: Lambarrada isku darka
+  - m_Id: 101846840880652289
+    m_Localized: Xawaaraha xisaabta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 101846840880652290
+    m_Localized: Fal-fal celin degdeg ah
     m_Metadata:
       m_Items: []
   references:

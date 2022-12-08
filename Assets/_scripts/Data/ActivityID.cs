@@ -9,9 +9,9 @@
         Diary,
         Connect4,
         Unblock,
-        Memory,
+        MemoryPattern,
         MathOrder,
-        Sequence,
+        MemorySequence,
         MergeNumbers,
         MathSpeed,
         FastReaction
