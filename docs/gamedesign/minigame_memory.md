@@ -2,7 +2,7 @@
 
 ![](img/minigame_memory.excalidraw2.png)
 
-**Type**
+**Description**
 recreate the given patterns before the time ends.  
 memory game
 
@@ -27,7 +27,7 @@ tap on a grid cell
 - START popup
 - timer gets to 120
 - a pattern of random squared get highlighted for a few seconds.
-- then it disappers and  you have to tap the cells.
+- then it disappears and  you have to tap the cells.
 - if you make an error: timer gets -5 score.
 - if you make it, you go to next level
 - you play until the timer ends

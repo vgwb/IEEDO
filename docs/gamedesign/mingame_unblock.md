@@ -2,7 +2,7 @@
 
 ![](../assets/img/unblock.webp)
 
-**Type**
+**Description**
 slide the blocks to let the red block exit
 
 **difficulty:** 

@@ -17,7 +17,7 @@ level achieved
 
 **UI**
 - Board: dynamic from 2x2 to 10x10
-- Elements: colored squares
+- Elements: coloured squares
 - some gfx when a cell is highlighted.
 
 **UX**
