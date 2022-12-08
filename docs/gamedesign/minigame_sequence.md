@@ -17,7 +17,8 @@ the level (1-100) changes automatically these parameters:
 - grid size
 - sequence length
 - speed
-
+- *advanced: later we could introduce repetitions*
+ 
 **Result**  
 level achieved
 

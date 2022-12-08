@@ -5,7 +5,7 @@ nav_order: 20
 has_children: false
 ---
 
-# Analytics
+# Game Analytics
 
 ## Custom Events
 

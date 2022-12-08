@@ -4,7 +4,7 @@ title: IEEDO Docs
 nav_order: 1
 has_children: false
 ---
-# IEEDO Docs
+# IEEDO app docs
 this documentation website is dedicated to Teachers, Designers and Developers who want to work with IEEDO app.
 
 - **IEEDO Docs:** [vgwb.github.io/IEEDO](http://vgwb.github.io/IEEDO)
