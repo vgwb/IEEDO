@@ -17,7 +17,7 @@ some gfx when a cell explodes.
 **UX**
 tap on a grid cell
 
-![[minigame_merge.excalidraw2.png]]
+![](minigame_merge.excalidraw2.png)
 
 **Gameplay:**
 - the board is filled with 12 random numbers
