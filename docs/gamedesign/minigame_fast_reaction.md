@@ -8,6 +8,7 @@ was the previous image the same as this one?
 a fast game about recognising shapes
 
 **Skills**
+- Speed
 - Short-Term Memory
 - Visual Short-Term Memory
 - Inhibition
@@ -20,6 +21,7 @@ automatic speed (always faster)
 high score
 
 **UI**  
+- timer
 - 12 simple images
 - two buttons
 
@@ -28,11 +30,12 @@ high score
 
 **Gameplay:**
 - START popup
+- timer to 60 seconds
 - a random image is show
-- you tap: YES if it the same as previous one, no if different
+- you tap: YES if it the same as previous one,  NO if different
+- if correct, ok. if wrong, you lose 5 seconds
+- if you make 10 good in a row, you increate time by 5 seconds.
 - a new image is shown
-- always faster
-- you can make up to 3 errors
+- always a bit faster
+- the game ends when timer goes to 0
 - each image is a point
-
-

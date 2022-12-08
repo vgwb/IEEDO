@@ -1,6 +1,6 @@
 
 # Cognitive skills glossary 
-![](../assets/img/brain-skills.jpg)
+![](../assets/img/brain-skills.webp)
 ## Attention
 ### Focused Attention
 The ability to focus attention on a single stimulus
