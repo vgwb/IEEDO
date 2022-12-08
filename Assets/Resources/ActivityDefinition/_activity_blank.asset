@@ -19,12 +19,12 @@ MonoBehaviour:
       m_TableReference:
         m_TableCollectionName: GUID:e48f391c1e96c7040b7091b267464dc8
       m_TableEntryReference:
-        m_KeyId: 8414584832
+        m_KeyId: 101706107498520577
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    DefaultText: Blank
+    DefaultText: Blank example
   Type: 1
   Image: {fileID: 0}
   SceneName: game_blank

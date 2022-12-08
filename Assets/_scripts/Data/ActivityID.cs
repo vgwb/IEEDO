@@ -10,7 +10,8 @@
         Connect4,
         Unblock,
         Memory,
-        Math,
-        Sequence
+        MathOrder,
+        Sequence,
+        MergeNumbers
     }
 }
