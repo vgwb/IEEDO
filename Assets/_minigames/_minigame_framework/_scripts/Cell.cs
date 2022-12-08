@@ -3,7 +3,7 @@ using Ieedo;
 using Lean.Transition;
 using UnityEngine;
 
-namespace Ieedo.games
+namespace minigame
 {
     public class Cell : MonoBehaviour
     {

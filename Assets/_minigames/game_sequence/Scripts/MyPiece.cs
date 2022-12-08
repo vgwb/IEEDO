@@ -1,7 +1,6 @@
-﻿using Ieedo.games;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Ieedo.games.sequence
+namespace minigame.sequence
 {
     public class MyPiece : Piece
     {

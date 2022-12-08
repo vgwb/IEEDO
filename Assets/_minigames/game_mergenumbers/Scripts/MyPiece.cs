@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace minigame.memory
+﻿namespace minigame.mergenumbers
 {
     public class MyPiece : Piece
     {
@@ -11,7 +9,7 @@ namespace minigame.memory
 
         private void Clicked(Piece piece)
         {
-            Debug.Log("CLICKED piece with Number " + piece.Cell.X + " - " + piece.Cell.Y);
+
         }
     }
 }

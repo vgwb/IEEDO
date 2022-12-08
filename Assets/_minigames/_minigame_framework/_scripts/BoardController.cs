@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Lean.Transition;
 using UnityEngine;
 
-namespace Ieedo.games
+namespace minigame
 {
     public class BoardController : MonoBehaviour
     {

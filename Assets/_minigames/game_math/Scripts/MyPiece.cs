@@ -1,5 +1,4 @@
-﻿using Ieedo.games;
-namespace minigame.math
+﻿namespace minigame.math
 {
     public class MyPiece : Piece
     {

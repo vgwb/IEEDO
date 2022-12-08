@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using Ieedo;
-using Ieedo.games;
 
 namespace minigame.tictac
 {

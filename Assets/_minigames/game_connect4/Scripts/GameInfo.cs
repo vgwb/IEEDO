@@ -1,7 +1,3 @@
-
-using Ieedo;
-using Ieedo.games;
-
 namespace minigame.connect4
 {
     public static class GameInfo
