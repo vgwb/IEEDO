@@ -22,17 +22,18 @@ level progression
 
 **UI**
 - two buttons text fields + 1 = button
-- timer
+- timer (with malus and bonus indicators)
 
 **UX**
 tap on of the three buttons
 
 **Gameplay:**
 - (calculate two numbers based on level)
+- timer at 60 seconds
 - show the two numbers
 - select the greater or the ==
-- if correct, increase level, repeat
-- if wrong, go back one level, repeat
+- if you do 5 right in a line, +10 time bonus
+- if wrong, timer -3 secs
 - until timer ends
 
 
