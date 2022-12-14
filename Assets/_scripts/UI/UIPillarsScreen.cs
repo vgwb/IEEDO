@@ -83,6 +83,7 @@ namespace Ieedo
                     pillarsData.ReviewMode = false;
                     break;
                 case PillarsViewMode.Review:
+                {
                     var completedCards = Statics.Data.Profile.Cards.Where(x => x.Status == CardStatus.Completed);
                     var validatedCards = Statics.Data.Profile.Cards.Where(x => x.Status == CardStatus.Validated);
 
