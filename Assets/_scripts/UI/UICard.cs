@@ -76,14 +76,14 @@ namespace Ieedo
             }
 
             StampIcon.color = color;
-            if (data.Status == CardValidationStatus.Validated)
+            if (data.Status == CardStatus.Validated)
             {
                 DateBase.color = lightColor;
                 StampGO.SetActive(true);
                 StampGO.GetComponent<Animation>().clip = null;
                 StampIcon.text = Regex.Unescape("\uf560");
             }
-            else if (data.Status == CardValidationStatus.Completed)
+            else if (data.Status == CardStatus.Completed)
             {
                 DateBase.color = lightColor;
                 StampGO.SetActive(true);
