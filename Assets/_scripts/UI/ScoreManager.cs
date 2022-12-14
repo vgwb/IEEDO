@@ -14,8 +14,11 @@ namespace Ieedo
 
         public void RefreshScoreText()
         {
-            CurrentScoreText.transform.localScaleTransition(Vector3.one * 1.5f, 0.25f).JoinDelayTransition(0.25f).localScaleTransition(Vector3.one, 0.25f);
-            CurrentScoreText.SetTextRaw($"{Statics.Data.Profile.CurrentScore.ToString()}");
+            if (CurrentScoreText != null)
+            {
+                CurrentScoreText.transform.localScaleTransition(Vector3.one * 1.5f, 0.25f).JoinDelayTransition(0.25f).localScaleTransition(Vector3.one, 0.25f);
+                CurrentScoreText.SetTextRaw($"{Statics.Data.Profile.CurrentScore.ToString()}");
+            }
         }
 
         public void AddScore(int value)
