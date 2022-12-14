@@ -21,7 +21,7 @@ namespace Ieedo
         void RefreshData()
         {
             var allActivities = Statics.Data.GetAll<ActivityDefinition>();
-            allActivities = allActivities.Where(x => x.Enabled).ToList();
+            allActivities = allActivities.Where(x => x.Enabled).OrderBy(x => x.ScoreToUnlock).ToList();
 
             for (var i = 0; i < allActivities.Count; i++)
             {

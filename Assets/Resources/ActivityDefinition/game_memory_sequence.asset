@@ -28,7 +28,9 @@ MonoBehaviour:
   Type: 2
   Image: {fileID: 0}
   SceneName: game_memory_sequence
-  ScoreToUnlock: 5000
+  ScoreToUnlock: 3300
+  ScoreOnWin: 100
+  ScoreOnLoss: 20
   MaxLevel: 10
   references:
     version: 2
