@@ -316,11 +316,6 @@ MonoBehaviour:
     m_Localized: '#VALUE!'
     m_Metadata:
       m_Items: []
-  - m_Id: 40474458029056000
-    m_Localized: '{CurrentScore}'
-    m_Metadata:
-      m_Items:
-      - rid: 5137596889296273427
   - m_Id: 48089044644470784
     m_Localized: '#VALUE!'
     m_Metadata:
@@ -394,6 +389,14 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 141959888004653057
+    m_Localized: '#VALUE!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144439249164066816
+    m_Localized: '#VALUE!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144439249336033280
     m_Localized: '#VALUE!'
     m_Metadata:
       m_Items: []

@@ -55,11 +55,6 @@ MonoBehaviour:
     m_Localized: Continue
     m_Metadata:
       m_Items: []
-  - m_Id: 40474458029056000
-    m_Localized: '{CurrentScore}'
-    m_Metadata:
-      m_Items:
-      - rid: 3992833648747610127
   - m_Id: 40525580437577728
     m_Localized: Exit
     m_Metadata:
@@ -395,6 +390,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 141959888004653057
     m_Localized: Change View
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144439249164066816
+    m_Localized: Quit the questionnaire
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144439249336033280
+    m_Localized: Do you want to skip the questionnaire?
     m_Metadata:
       m_Items: []
   references:

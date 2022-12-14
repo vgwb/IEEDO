@@ -61,7 +61,7 @@ namespace Ieedo
 
             btnSkipAssessment = AddButton("action_skip_assessment", () =>
             {
-                Statics.SessionFlow.SkipAssessment();
+                Statics.SessionFlow.SkipAssessment(true);
                 CloseImmediate();
             });
 
@@ -148,7 +148,7 @@ namespace Ieedo
                     break;
                 case TopBarMode.Special_Assessment:
                 {
-                    Statics.SessionFlow.SkipAssessment();
+                    Statics.SessionFlow.SkipAssessment(true);
                 }
                 break;
                 case TopBarMode.Special_Activity:

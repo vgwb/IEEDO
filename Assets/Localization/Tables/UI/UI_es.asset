@@ -321,11 +321,6 @@ MonoBehaviour:
     m_Localized: "Sesi\xF3n de inicio"
     m_Metadata:
       m_Items: []
-  - m_Id: 40474458029056000
-    m_Localized: '{CurrentScore}'
-    m_Metadata:
-      m_Items:
-      - rid: 5137596889296273419
   - m_Id: 48089044644470784
     m_Localized: "\xBFEst\xE1s seguro de que quieres configurar la tarjeta como no
       completada?"
@@ -403,6 +398,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 141959888004653057
     m_Localized: Cambio Vista
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144439249164066816
+    m_Localized: Deja el cuestionario
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144439249336033280
+    m_Localized: "\xBFQuieres omitir el cuestionario?"
     m_Metadata:
       m_Items: []
   references:

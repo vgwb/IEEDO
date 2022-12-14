@@ -31,11 +31,6 @@ MonoBehaviour:
     m_Localized: "\u0646\u0639\u0645"
     m_Metadata:
       m_Items: []
-  - m_Id: 40474458029056000
-    m_Localized: '{CurrentScore}'
-    m_Metadata:
-      m_Items:
-      - rid: 3992833648747610128
   - m_Id: 40525707831173120
     m_Localized: "\u062A\u063A\u064A\u064A\u0631 \u0627\u0644\u0646\u0638\u0627\u0645"
     m_Metadata:
@@ -454,6 +449,15 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 141959888004653057
     m_Localized: "\u062A\u063A\u064A\u064A\u0631 \u0627\u0644\u0639\u0631\u0636"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144439249164066816
+    m_Localized: "\u062A\u0631\u0643 \u0627\u0644\u0627\u0633\u062A\u0628\u064A\u0627\u0646"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144439249336033280
+    m_Localized: "\u0647\u0644 \u062A\u0631\u064A\u062F \u062A\u062E\u0637\u064A
+      \u0627\u0644\u0627\u0633\u062A\u0628\u064A\u0627\u0646\u061F"
     m_Metadata:
       m_Items: []
   references:

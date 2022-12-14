@@ -28,7 +28,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093260
-    m_Localized: "\xC4r du s\xE4ker p\xE5 att du vill l\xE4mna skapandet av det h\xE4r
+    m_Localized: "\xC4r du s\xE4ker p\xE5 att du vill avsluta skapandet av det h\xE4r
       kortet?"
     m_Metadata:
       m_Items: []
@@ -321,11 +321,6 @@ MonoBehaviour:
     m_Localized: Startsession
     m_Metadata:
       m_Items: []
-  - m_Id: 40474458029056000
-    m_Localized: '{CurrentScore}'
-    m_Metadata:
-      m_Items:
-      - rid: 5137596889296273428
   - m_Id: 48089044644470784
     m_Localized: "\xC4r du s\xE4ker p\xE5 att du vill st\xE4lla in kortet som inte
       slutf\xF6rt?"
@@ -403,6 +398,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 141959888004653057
     m_Localized: "\xC4ndra vy"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144439249164066816
+    m_Localized: "Avsluta fr\xE5geformul\xE4ret"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144439249336033280
+    m_Localized: "Vill du hoppa \xF6ver fr\xE5geformul\xE4ret?"
     m_Metadata:
       m_Items: []
   references:

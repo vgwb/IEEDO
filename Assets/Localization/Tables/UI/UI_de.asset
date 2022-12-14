@@ -322,11 +322,6 @@ MonoBehaviour:
     m_Localized: Starten Sie die Sitzung
     m_Metadata:
       m_Items: []
-  - m_Id: 40474458029056000
-    m_Localized: '{CurrentScore}'
-    m_Metadata:
-      m_Items:
-      - rid: 5137596889296273417
   - m_Id: 48089044644470784
     m_Localized: "Sind Sie sicher, dass Sie die Karte als nicht abgeschlossen einstellen
       m\xF6chten?"
@@ -404,6 +399,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 141959888004653057
     m_Localized: "Ansicht \xE4ndern"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144439249164066816
+    m_Localized: Beenden Sie den Fragebogen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144439249336033280
+    m_Localized: "M\xF6chten Sie den Fragebogen \xFCberspringen?"
     m_Metadata:
       m_Items: []
   references:

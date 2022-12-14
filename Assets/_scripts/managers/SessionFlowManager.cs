@@ -194,7 +194,7 @@ namespace Ieedo
 
         public void StopSessionMode()
         {
-            SkipAssessment();
+            SkipAssessment(false);
             if (sessionFlowCo != null)
             {
                 StopCoroutine(sessionFlowCo);
@@ -208,18 +208,25 @@ namespace Ieedo
             uiPillarsScreen.SwitchViewMode(PillarsViewMode.Categories);
         }
 
-        public void SkipAssessment()
+        public void SkipAssessment(bool withConfirm)
         {
             if (assessmentCo != null)
             {
                 StopCoroutine(assessmentCo);
                 assessmentCo = null;
             }
-            StartCoroutine(SkipAssessmentCO());
+            StartCoroutine(SkipAssessmentCO(withConfirm));
         }
 
-        private IEnumerator SkipAssessmentCO()
+        private IEnumerator SkipAssessmentCO(bool withConfirm)
         {
+            if (withConfirm)
+            {
+                var answer = new Ref<int>();
+                yield return Statics.Screens.ShowQuestionFlow("UI/session_question_assessment_skip_title", "UI/session_question_assessment_skip_content", new[] { "UI/yes", "UI/no" }, answer);
+                if (answer.Value == 1) yield break;
+            }
+
             var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
             var assessmentRecapScreen = Statics.Screens.Get(ScreenID.AssessmentRecap) as UIAssessmentRecapPopup;
             var introScreen = Statics.Screens.Get(ScreenID.AssessmentIntro) as UIAssessmentIntroScreen;

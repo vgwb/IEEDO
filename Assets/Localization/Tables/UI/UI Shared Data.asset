@@ -19,10 +19,6 @@ MonoBehaviour:
     m_Key: language_name
     m_Metadata:
       m_Items: []
-  - m_Id: 40474458029056000
-    m_Key: top_score
-    m_Metadata:
-      m_Items: []
   - m_Id: 55768156938903555
     m_Key: a
     m_Metadata:
@@ -381,6 +377,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 141959888004653057
     m_Key: label_switch_view
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144439249164066816
+    m_Key: session_question_assessment_skip_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144439249336033280
+    m_Key: session_question_assessment_skip_content
     m_Metadata:
       m_Items: []
   m_Metadata:

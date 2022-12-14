@@ -11,15 +11,13 @@ namespace Ieedo
     {
         public UIText CurrentScoreText;
 
-        // @note: used by Localization
-        public string CurrentScore => $"{Statics.Data.Profile.CurrentScore.ToString(),5}";
 
         public void AddScore(int value)
         {
             SoundManager.I.PlaySfx(SfxEnum.score);
             Statics.Data.Profile.CurrentScore += value;
             CurrentScoreText.transform.localScaleTransition(Vector3.one * 1.5f, 0.25f).JoinDelayTransition(0.25f).localScaleTransition(Vector3.one, 0.25f);
-            CurrentScoreText.Text = CurrentScore;
+            CurrentScoreText.Text = $"{Statics.Data.Profile.CurrentScore.ToString()}";
             Statics.Data.SaveProfile();
         }
 
