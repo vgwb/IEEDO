@@ -60,7 +60,6 @@ namespace Ieedo
             if (locale != null)
                 LocalizationSettings.SelectedLocale = locale;
 
-
             // Initialise UI
             Statics.Score.RefreshScoreText();
 
@@ -184,5 +183,4 @@ namespace Ieedo
 
         }
     }
-
 }

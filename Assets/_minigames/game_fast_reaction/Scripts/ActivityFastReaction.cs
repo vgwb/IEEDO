@@ -25,7 +25,6 @@ namespace minigame.fast_reaction
             StartCoroutine(StartGameCO());
         }
 
-
         private IEnumerator StartGameCO()
         {
             yield return new WaitForSeconds(1f);
