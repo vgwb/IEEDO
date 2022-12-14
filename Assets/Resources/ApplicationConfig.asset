@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DebugLogEnabled: 1
   DebugSaveProfileInJSON: 1
+  Version: 1
+  ResetProfileAtVersionMismatch: 1
   SaveCardsAsDefault: 0
-  SourceLocale: en
-  TargetLocale: ar
   NotificationsEnabled: 1
   AnalyticsEnabled: 1
   AnalyticsDevEnv: 1

@@ -45,13 +45,14 @@ namespace Ieedo
                 Statics.Data.CreateDefaultNewProfile();
             }
 
-            #if UNITY_EDITOR
-            // Reset profile at the new version (for now)
-            if (Statics.Data.Profile.Version != ApplicationConfig.Version)
+            if (ApplicationConfig.ResetProfileAtVersionMismatch)
             {
-                Statics.Data.CreateDefaultNewProfile();
+                // Reset profile at the new version (for now)
+                if (Statics.Data.Profile.Version != ApplicationConfig.Version)
+                {
+                    Statics.Data.CreateDefaultNewProfile();
+                }
             }
-            #endif
 
             // Setup correct locale based on the player profile
             var locale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.Data.Profile.Settings.HostCountryLocale);

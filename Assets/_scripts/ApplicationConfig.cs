@@ -40,7 +40,12 @@ namespace Ieedo
         public int Version = 1;
 
         /// <summary>
-        /// If on, cards generated in the editor will be saved to the default cards instead of the profile cards
+        /// If true, the profile will be reset if the version of the profile does not match the version of the application.
+        /// </summary>
+        public bool ResetProfileAtVersionMismatch = true;
+
+        /// <summary>
+        /// If true, cards generated in the editor will be saved to the default cards instead of the profile cards
         /// </summary>
         public bool SaveCardsAsDefault = false;
 
