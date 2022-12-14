@@ -82,11 +82,13 @@ namespace Ieedo
             var botScreen = Statics.Screens.Get(ScreenID.Bottom) as UIBottomScreen;
             var cardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
             var dialogPopup = Statics.Screens.Get(ScreenID.Dialog) as UIDialogPopup;
+            var pillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
 
             Statics.Score.CurrentScoreText.transform.parent.gameObject.SetActive(false);
-            topScreen.HamburgerButton.gameObject.SetActive(false);
-            topScreen.SessionModeButton.gameObject.SetActive(false);
-            topScreen.InstantTranslationButton.gameObject.SetActive(false);
+            topScreen.HamburgerButton.Hide();
+            topScreen.SessionModeButton.Hide();
+            topScreen.InstantTranslationButton.Hide();
+            pillarsScreen.SwitchViewButton.Hide();
 
             yield return ProfileCreationFlow();
             yield return Statics.Screens.ShowDialog("UI/intro_content_1", "UI/ok");
@@ -147,9 +149,10 @@ namespace Ieedo
 
             // Tutorial end
             Statics.Score.CurrentScoreText.transform.parent.gameObject.SetActive(true);
-            topScreen.HamburgerButton.gameObject.SetActive(true);
-            topScreen.SessionModeButton.gameObject.SetActive(true);
-            topScreen.InstantTranslationButton.gameObject.SetActive(true);
+            topScreen.HamburgerButton.Show();
+            topScreen.SessionModeButton.Show();
+            topScreen.InstantTranslationButton.Show();
+            pillarsScreen.SwitchViewButton.Show();
             Statics.SessionFlow.IsInsideTutorial = false;
         }
 
