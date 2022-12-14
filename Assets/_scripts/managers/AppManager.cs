@@ -104,24 +104,27 @@ namespace Ieedo
             bool passed = false;
             void Pass() => passed = true;
             topScreen.OnTargetLocaleSwitched += Pass;
-            yield return Statics.Screens.ShowDialog("UI/intro_instant_translation", "UI/ok", waitForClosing:false);
+            yield return Statics.Screens.ShowDialog("UI/intro_instant_translation", "UI/ok", waitForClosing: false);
             topScreen.InstantTranslationButton.gameObject.SetActive(true);
             Statics.Tutorial.ShowTutorialArrowOn(topScreen.InstantTranslationButton.gameObject, -20f);
-            while (!passed) yield return null;
+            while (!passed)
+                yield return null;
             topScreen.OnTargetLocaleSwitched -= Pass;
             Statics.Tutorial.HideTutorialArrow();
             dialogPopup.Button.gameObject.SetActive(true);
-            while (Statics.Screens.Get(ScreenID.Dialog).IsOpen) yield return null;
+            while (Statics.Screens.Get(ScreenID.Dialog).IsOpen)
+                yield return null;
 
             // Session mode tutorial
             passed = false;
             dialogPopup.Button.gameObject.SetActive(false);
             topScreen.OnSessionModeToggled += Pass;
-            yield return Statics.Screens.ShowDialog("UI/intro_content_2", "UI/ok", waitForClosing:false);
+            yield return Statics.Screens.ShowDialog("UI/intro_content_2", "UI/ok", waitForClosing: false);
             topScreen.SessionModeButton.gameObject.SetActive(true);
             Statics.Tutorial.ShowTutorialArrowOn(topScreen.SessionModeButton.gameObject, 20f);
             Statics.SessionFlow.IsInsideAssessment = true; // Force assessment on, so we make sure we do not advance the tutorial too early
-            while (!passed) yield return null;
+            while (!passed)
+                yield return null;
             Statics.Tutorial.HideTutorialArrow();
             topScreen.OnSessionModeToggled -= Pass;
             dialogPopup.Button.gameObject.SetActive(true);
@@ -135,13 +138,15 @@ namespace Ieedo
             // Go directly to the session mode
             //Statics.Mode.ToggleSessionMode();
             // Wait for the assessment to end...
-            while (Statics.SessionFlow.IsInsideAssessment) yield return null;
+            while (Statics.SessionFlow.IsInsideAssessment)
+                yield return null;
 
             // Go to Cards list tutorial
             passed = false;
             botScreen.OnCardsClicked += Pass;
             Statics.Tutorial.ShowTutorialArrowOn(botScreen.btnCards.gameObject, 160f);
-            while (!passed) yield return null;
+            while (!passed)
+                yield return null;
             botScreen.OnCardsClicked -= Pass;
             Statics.Tutorial.HideTutorialArrow();
 
@@ -149,7 +154,8 @@ namespace Ieedo
             passed = false;
             cardListScreen.OnCreateClicked += Pass;
             Statics.Tutorial.ShowTutorialArrowOn(cardListScreen.CreateCardButton.gameObject, 20f);
-            while (!passed) yield return null;
+            while (!passed)
+                yield return null;
             cardListScreen.OnCreateClicked -= Pass;
             Statics.Tutorial.HideTutorialArrow();
 
