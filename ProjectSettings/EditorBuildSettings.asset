@@ -35,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_minigames/game_fast_reaction/game_fast_reaction.unity
     guid: a63d243176bbf4eaab748412ced2332c
+  - enabled: 1
+    path: Assets/_minigames/game_2048/game_2048.unity
+    guid: db56e3fe50b715d46be1c8e8bb4bceff
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: c559a39ced25e4dcea1ab135796b61b9, type: 2}
     com.unity.localization.settings: {fileID: 11400000, guid: 15a3896ed851c4573bfef8067263c7b3, type: 2}

@@ -14,6 +14,7 @@
         MemorySequence = 24,
         MergeNumbers = 25,
         MathSpeed = 26,
-        FastReaction = 27
+        FastReaction = 27,
+        Game2048 = 28
     }
 }
