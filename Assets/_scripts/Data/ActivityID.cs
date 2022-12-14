@@ -3,17 +3,17 @@
     public enum ActivityID
     {
         None = 0,
-        Blank = 1,
-        TicTac = 2,
-        Locked,
-        Diary,
-        Connect4,
-        Unblock,
-        MemoryPattern,
-        MathOrder,
-        MemorySequence,
-        MergeNumbers,
-        MathSpeed,
-        FastReaction
+        Test = 1,
+        Write_Diary = 10,
+        Write_2Friend = 11,
+        Write_2myself = 12,
+        TicTac = 20,
+        Unblock = 21,
+        MemoryPattern = 22,
+        MathOrder = 23,
+        MemorySequence = 24,
+        MergeNumbers = 25,
+        MathSpeed = 26,
+        FastReaction = 27
     }
 }

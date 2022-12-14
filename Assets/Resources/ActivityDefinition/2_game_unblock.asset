@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 2_game_unblock
   m_EditorClassIdentifier: 
   Enabled: 1
-  ID: 6
+  ID: 21
   Title:
     Key:
       m_TableReference:

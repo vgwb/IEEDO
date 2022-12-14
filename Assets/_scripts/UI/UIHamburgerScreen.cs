@@ -102,7 +102,7 @@ namespace Ieedo
                         Timestamp = new Timestamp(DateTime.Today + TimeSpan.FromDays(-i)),
                         CustomData = $"Cheat added text for diary. Added with index {i}"
                     };
-                    Statics.ActivityFlow.RegisterResult(res, ActivityID.Diary);
+                    Statics.ActivityFlow.RegisterResult(res, ActivityID.Write_Diary);
                 }
                 CloseImmediate();
             });
