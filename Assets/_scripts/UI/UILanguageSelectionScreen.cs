@@ -19,10 +19,10 @@ namespace Ieedo
             var chosenLocale = availableLocales[ButtonsSelection.LatestSelectedOption];
             if (chosenLocale != null)
             {
-                profileData.Description.NativeLocale = chosenLocale.Identifier.Code;
+                profileData.Settings.NativeLocale = chosenLocale.Identifier.Code;
 
                 // Temporarely set this as the locale, for next screen
-                var locale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.Data.Profile.Description.NativeLocale);
+                var locale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.Data.Profile.Settings.NativeLocale);
                 LocalizationSettings.SelectedLocale = locale;
             }
         }

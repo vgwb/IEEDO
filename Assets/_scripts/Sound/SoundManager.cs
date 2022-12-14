@@ -23,7 +23,7 @@ namespace Ieedo
         public void PlaySfx(SfxEnum sfx)
         {
             //Debug.Log("PlaySfx " + sfx);
-            if (Statics.Data.Profile.Description.SfxDisabled)
+            if (Statics.Data.Profile.Settings.SfxDisabled)
                 return;
 
             var sound = SoundsList.Sounds.Find(item => item.id == sfx);

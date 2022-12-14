@@ -40,7 +40,7 @@ namespace Ieedo
                 return;
             initialised = true;
 
-            SfxToggle.On = !Statics.Data.Profile.Description.SfxDisabled;
+            SfxToggle.On = !Statics.Data.Profile.Settings.SfxDisabled;
 
             CheatSection.gameObject.SetActive(false);
             SetupButton(btnHiddenCheats, () =>
@@ -198,7 +198,7 @@ namespace Ieedo
         public void OnSetSfx(bool _sfxOn)
         {
             Debug.Log("Sfx " + _sfxOn);
-            Statics.Data.Profile.Description.SfxDisabled = !_sfxOn;
+            Statics.Data.Profile.Settings.SfxDisabled = !_sfxOn;
             Statics.Data.SaveProfile();
         }
 

@@ -77,7 +77,7 @@ namespace Ieedo
         private void UseNativeLocale()
         {
             SoundManager.I.PlaySfx(SfxEnum.click);
-            var locale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.Data.Profile.Description.NativeLocale);
+            var locale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.Data.Profile.Settings.NativeLocale);
             if (locale != null)
             {
                 LocalizationSettings.SelectedLocale = locale;
@@ -89,7 +89,7 @@ namespace Ieedo
         private void UseHostLocale()
         {
             //SoundManager.I.PlaySfx(SfxEnum.click);
-            var locale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.Data.Profile.Description.HostLocale);
+            var locale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.Data.Profile.Settings.HostCountryLocale);
             if (locale != null)
             {
                 LocalizationSettings.SelectedLocale = locale;

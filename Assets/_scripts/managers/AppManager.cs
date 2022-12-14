@@ -46,7 +46,7 @@ namespace Ieedo
             }
 
             // Setup correct locale based on the player profile
-            var locale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.Data.Profile.Description.HostLocale);
+            var locale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.Data.Profile.Settings.HostCountryLocale);
             if (locale != null)
                 LocalizationSettings.SelectedLocale = locale;
 
@@ -59,7 +59,7 @@ namespace Ieedo
                 LoadingObscurer.colorTransition(new Color(LoadingObscurer.color.r, LoadingObscurer.color.g, LoadingObscurer.color.b, 0f), 1f);
             }
 
-            if (Statics.Data.Profile.Description.IsNewProfile)
+            if (Statics.Data.Profile.Settings.TutorialNotCompleted)
             {
                 yield return HandleTutorial();
             }
@@ -113,7 +113,7 @@ namespace Ieedo
             //while (dialogPopup.IsOpen) yield return null;
             //yield return Statics.Screens.ShowDialog("UI/intro_content_2", "UI/start_session");
 
-            Statics.Data.Profile.Description.IsNewProfile = false;
+            Statics.Data.Profile.Settings.TutorialNotCompleted = false;
             Statics.Data.SaveProfile();
 
             // Go directly to the session mode

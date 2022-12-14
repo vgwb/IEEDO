@@ -35,6 +35,11 @@ namespace Ieedo
 
         [Header("App")]
         /// <summary>
+        /// Incremental version
+        /// </summary>
+        public int Version = 1;
+
+        /// <summary>
         /// If on, cards generated in the editor will be saved to the default cards instead of the profile cards
         /// </summary>
         public bool SaveCardsAsDefault = false;

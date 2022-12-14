@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Linq;
 using Ieedo.games;
@@ -17,6 +18,7 @@ namespace Ieedo
     [System.Serializable]
     public class ActivityResult
     {
+        public int PlayedLevel;
         public int Score;
         public ActivityResultState Result;
         public string CustomData;
@@ -61,7 +63,7 @@ namespace Ieedo
             }
 
             CurrentActivityManager = activityManager;
-            var activityData = Statics.Data.Profile.ActivitiesData.First(x => x.ID == CurrentActivity.ID);
+            var activityData = Statics.Data.Profile.Activities.First(x => x.ID == CurrentActivity.ID);
             activityManager.ExternSetupActivity(activityData.CurrentLevel);
             activityManager.OnActivityEnd = CloseActivity;
 
@@ -104,7 +106,7 @@ namespace Ieedo
                 result.Timestamp = Timestamp.Now;
 
             // Save the result of this activity and its score
-            var activityData = Statics.Data.Profile.ActivitiesData.GetActivityData(activityId);
+            var activityData = Statics.Data.Profile.Activities.GetActivityData(activityId);
 
             bool isNewResult = false;
             var existingResult = activityData.Results.FirstOrDefault(x => x.Timestamp.Equals(result.Timestamp));
@@ -118,15 +120,23 @@ namespace Ieedo
                 existingResult.Result = result.Result;
                 existingResult.CustomData = result.CustomData;
                 existingResult.Score = result.Score;
+                existingResult.PlayedLevel = Statics.ActivityFlow.CurrentLevel;
             }
 
             if (isNewResult)
             {
+                var activityDef = Statics.Data.Get<ActivityDefinition>((int)activityId);
                 if (result.Result == ActivityResultState.Win)
                 {
                     activityData.CurrentLevel += 1;
+                    Statics.Score.AddScore(activityDef.ScoreOnWin);
                 }
-                Statics.Score.AddScore(result.Score);
+                else
+                {
+                    Statics.Score.AddScore(activityDef.ScoreOnLoss);
+                }
+
+                activityData.MaxScore = activityData.Results.Max(x => x.Score);
             }
 
             Statics.Analytics.Activity(activityData.ID.ToString(), result.Result.ToString());
@@ -136,7 +146,7 @@ namespace Ieedo
         {
             get
             {
-                var activityData = Statics.Data.Profile.ActivitiesData.First(x => x.ID == CurrentActivity.ID);
+                var activityData = Statics.Data.Profile.Activities.First(x => x.ID == CurrentActivity.ID);
                 return activityData.CurrentLevel;
             }
         }

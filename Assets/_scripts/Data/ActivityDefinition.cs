@@ -12,6 +12,8 @@ namespace Ieedo
         public Sprite Image;
         public string SceneName;
         public int ScoreToUnlock;
+        public int ScoreOnWin = 100;
+        public int ScoreOnLoss = 20;
         public int MaxLevel = 10;
 
         public int Id => (int)ID;

@@ -30,7 +30,7 @@ namespace Ieedo.games.diary
         {
             //            Debug.Log($"Starting ActivityDiary");
 
-            var activityData = Statics.Data.Profile.ActivitiesData.GetActivityData(ActivityID.Diary);
+            var activityData = Statics.Data.Profile.Activities.GetActivityData(ActivityID.Diary);
 
             Pages.Clear();
             if (activityData.Results.Count > 0)
@@ -104,7 +104,7 @@ namespace Ieedo.games.diary
         {
             var todayText = InputText.text;
             //            Debug.LogError("Updating page of " + Timestamp.Today.Date + " with text " + todayText);
-            var activityData = Statics.Data.Profile.ActivitiesData.GetActivityData(ActivityID.Diary);
+            var activityData = Statics.Data.Profile.Activities.GetActivityData(ActivityID.Diary);
             var todayResult = activityData.Results.FirstOrDefault(x => x.Timestamp.Equals(Timestamp.Today));
             if (todayResult == null)
             {

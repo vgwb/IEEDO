@@ -33,10 +33,9 @@ namespace Ieedo.Test
         private void Test_CreateProfile()
         {
             Log.Info(MethodBase.GetCurrentMethod().Name);
-            Statics.Data.CreateNewProfile(new ProfileDescription()
+            Statics.Data.CreateNewProfile(new AppSettings()
             {
-                Name = "TEST",
-                HostLocale = "uk",
+                HostCountryLocale = "uk",
                 NativeLocale = "uk-en"
             });
         }

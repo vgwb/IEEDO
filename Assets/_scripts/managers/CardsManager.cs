@@ -98,7 +98,7 @@ namespace Ieedo
                     DefID = cardDef.UID,
                     CreationTimestamp = new Timestamp(DateTime.Now),
                     ExpirationTimestamp = new Timestamp(DateTime.Now + TimeSpan.FromDays(UnityEngine.Random.Range(0, 12))),
-                    Status = CardValidationStatus.Todo,
+                    Status = CardStatus.Todo,
                 };
                 Statics.Data.Profile.Cards.Add(cardData);
             }

@@ -97,10 +97,10 @@ namespace Ieedo
                 // Per-Card view mode when we are in pillars view (completed / validated cards)
                 switch (uiCard.Data.Status)
                 {
-                    case CardValidationStatus.Completed:
+                    case CardStatus.Completed:
                         desiredFrontViewMode = FrontViewMode.Completed;
                         break;
-                    case CardValidationStatus.Validated:
+                    case CardStatus.Validated:
                         desiredFrontViewMode = FrontViewMode.Validated;
                         break;
                 }
@@ -226,7 +226,7 @@ namespace Ieedo
 
 
             frontCardUI.Data.CompletionTimestamp = Timestamp.Now;
-            frontCardUI.Data.Status = CardValidationStatus.Completed;
+            frontCardUI.Data.Status = CardStatus.Completed;
             Statics.Data.SaveProfile();
 
             yield return AnimateCardStatusChange(uiCard, 20);
@@ -278,7 +278,7 @@ namespace Ieedo
                 yield break;
 
             frontCardUI.Data.CompletionTimestamp = Timestamp.None;
-            frontCardUI.Data.Status = CardValidationStatus.Todo;
+            frontCardUI.Data.Status = CardStatus.Todo;
             Statics.Data.SaveProfile();
 
             yield return AnimateCardStatusChange(uiCard, -20);
@@ -303,7 +303,7 @@ namespace Ieedo
             var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
 
             frontCardUI.Data.ValidationTimestamp = Timestamp.Now;
-            frontCardUI.Data.Status = CardValidationStatus.Validated;
+            frontCardUI.Data.Status = CardStatus.Validated;
             Statics.Data.SaveProfile();
 
             yield return AnimateCardStatusChange(uiCard, 50);
@@ -350,7 +350,7 @@ namespace Ieedo
             var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
 
             frontCardUI.Data.ValidationTimestamp = Timestamp.None;
-            frontCardUI.Data.Status = CardValidationStatus.Completed;
+            frontCardUI.Data.Status = CardStatus.Completed;
             Statics.Data.SaveProfile();
 
             yield return AnimateCardStatusChange(uiCard, -50);
@@ -460,7 +460,7 @@ namespace Ieedo
 
         public void LoadToDoCards()
         {
-            var cards = Statics.Data.Profile.Cards.Where(x => x.Status == CardValidationStatus.Todo).ToList();
+            var cards = Statics.Data.Profile.Cards.Where(x => x.Status == CardStatus.Todo).ToList();
             LoadCards(cards, SortByExpirationDate, ListViewMode.ToDo, FrontViewMode.Edit);
         }
 

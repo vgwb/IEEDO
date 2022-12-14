@@ -6,11 +6,6 @@ using UnityEngine.Serialization;
 
 namespace Ieedo
 {
-    [Serializable]
-    public class OnboardingState
-    {
-
-    }
 
     [Serializable]
     public class CardDataCollection : List<CardData>
@@ -25,12 +20,12 @@ namespace Ieedo
             return s.ToString();
         }
 
-        public bool HasCardsWithStatus(CardValidationStatus status)
+        public bool HasCardsWithStatus(CardStatus status)
         {
             return this.Count(x => x.Status == status) > 0;
         }
 
-        public int NCardsWithStatus(CardValidationStatus status)
+        public int NCardsWithStatus(CardStatus status)
         {
             return this.Count(x => x.Status == status);
         }
@@ -52,19 +47,19 @@ namespace Ieedo
     }
 
     [Serializable]
-    public class ProfileDescription
+    public class AppSettings
     {
-        public string Name;
-        public string HostLocale;
+        public bool TutorialNotCompleted;
+        public string HostCountryLocale;
         public string NativeLocale;
-        public bool IsNewProfile;
         public bool SfxDisabled;
     }
+
 
     #region Activities
 
     [Serializable]
-    public class ActivitiesData : List<ActivityData>
+    public class ActivitiesDataCollection : List<ActivityData>
     {
         public ActivityData GetActivityData(ActivityID id)
         {
@@ -79,6 +74,7 @@ namespace Ieedo
         public ActivityID ID;
         public bool Unlocked;
         public int CurrentLevel;
+        public int MaxScore;
         public ActivityResults Results = new();
     }
 
@@ -101,24 +97,23 @@ namespace Ieedo
     [Serializable]
     public class ProfileData
     {
-        public ProfileDescription Description;
+        public int Version;
+        public AppSettings Settings;
 
         // State
-        public int Level;
         public int CurrentScore;
-
-        public OnboardingState OnboardingState;
         public CategoryDataCollection Categories;
         public CardDataCollection Cards;
-        public ActivitiesData ActivitiesData;
+        public ActivitiesDataCollection Activities;
 
         public override string ToString()
         {
             var s = new StringBuilder();
-            s.AppendLine($"{Description.Name}({Description.HostLocale} - {Description.NativeLocale})");
+            s.AppendLine($"({Settings.HostCountryLocale} - {Settings.NativeLocale})");
+            s.AppendLine($"Score: {CurrentScore}");
             s.AppendLine(Categories.ToString());
             s.AppendLine(Cards.ToString());
-            s.AppendLine(ActivitiesData.ToString());
+            s.AppendLine(Activities.ToString());
             return s.ToString();
         }
     }

@@ -68,7 +68,7 @@ namespace Ieedo
                 case PillarsViewMode.Categories:
                     foreach (var category in profileData.Categories)
                     {
-                        var cards = Statics.Data.Profile.Cards.Where(x => x.Status != CardValidationStatus.Todo && x.Definition.Category == category.ID);
+                        var cards = Statics.Data.Profile.Cards.Where(x => x.Status != CardStatus.Todo && x.Definition.Category == category.ID);
 
                         var pillarData = new PillarData
                         {
@@ -84,8 +84,8 @@ namespace Ieedo
                     break;
                 case PillarsViewMode.Review:
                     {
-                        var completedCards = Statics.Data.Profile.Cards.Where(x => x.Status == CardValidationStatus.Completed);
-                        var validatedCards = Statics.Data.Profile.Cards.Where(x => x.Status == CardValidationStatus.Validated);
+                        var completedCards = Statics.Data.Profile.Cards.Where(x => x.Status == CardStatus.Completed);
+                        var validatedCards = Statics.Data.Profile.Cards.Where(x => x.Status == CardStatus.Validated);
 
                         var pillarData = new PillarData
                         {

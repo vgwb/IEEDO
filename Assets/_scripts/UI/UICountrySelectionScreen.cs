@@ -18,8 +18,8 @@ namespace Ieedo
             var targetCountry = availableCountries[ButtonsSelection.LatestSelectedOption];
             if (targetCountry != null)
             {
-                profileData.Description.HostLocale = targetCountry.Code;
-                var locale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.Data.Profile.Description.HostLocale);
+                profileData.Settings.HostCountryLocale = targetCountry.Code;
+                var locale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.Data.Profile.Settings.HostCountryLocale);
                 LocalizationSettings.SelectedLocale = locale;
             }
         }

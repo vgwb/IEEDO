@@ -32,7 +32,7 @@ namespace Ieedo
                 ActivityBlocks[i].Title.Key = activityDefinition.Title.Key;
                 ActivityBlocks[i].Image.sprite = activityDefinition.Image;
 
-                var data = Statics.Data.Profile.ActivitiesData.FirstOrDefault(x => x.ID == activityDefinition.ID);
+                var data = Statics.Data.Profile.Activities.FirstOrDefault(x => x.ID == activityDefinition.ID);
                 if (data == null)
                 {
                     // Generate data in the profile if the activity is unknown
@@ -41,9 +41,10 @@ namespace Ieedo
                         ID = activityDefinition.ID,
                         Unlocked = false,
                         CurrentLevel = 1,
-                        Results = new ActivityResults()
+                        Results = new ActivityResults(),
+                        MaxScore = 0,
                     };
-                    Statics.Data.Profile.ActivitiesData.Add(data);
+                    Statics.Data.Profile.Activities.Add(data);
                     Statics.Data.SaveProfile();
                 }
                 ActivityBlocks[i].ProgressBar.SetValue(data.CurrentLevel, activityDefinition.MaxLevel);

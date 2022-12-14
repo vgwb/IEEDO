@@ -110,15 +110,14 @@ namespace Ieedo
         public ProfileData Profile => ProfileData;
         private static string profileName = "default";
 
-        public void CreateNewProfile(ProfileDescription description)
+        public void CreateNewProfile(AppSettings settings)
         {
             ProfileData = new ProfileData {
-                Description = description,
-                OnboardingState = new OnboardingState(),
-                Level = 0,
+                Version = AppManager.I.ApplicationConfig.Version,
+                Settings = settings,
                 Cards = new CardDataCollection(),
                 Categories = new CategoryDataCollection(),
-                ActivitiesData = new ActivitiesData(),
+                Activities = new ActivitiesDataCollection(),
             };
 
             foreach (var def in GetAll<CategoryDefinition>())
@@ -134,12 +133,11 @@ namespace Ieedo
 
         public void CreateDefaultNewProfile()
         {
-            CreateNewProfile(new ProfileDescription
+            CreateNewProfile(new AppSettings
             {
-                Name = "TEST",
-                HostLocale = "uk",
+                HostCountryLocale = "uk",
                 NativeLocale = "uk-en",
-                IsNewProfile = true,
+                TutorialNotCompleted = true,
                 SfxDisabled = false
             });
         }

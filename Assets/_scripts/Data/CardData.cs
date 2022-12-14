@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace Ieedo
 {
-    public enum CardValidationStatus
+    public enum CardStatus
     {
         Todo,
         Completed,
@@ -19,7 +19,7 @@ namespace Ieedo
         public Timestamp ExpirationTimestamp;
         public Timestamp CompletionTimestamp;
         public Timestamp ValidationTimestamp;
-        public CardValidationStatus Status;
+        public CardStatus Status;
 
         [JsonIgnore]
         public CardDefinition Definition => Statics.Data.CardDefinitions.Find(x => x.UID == DefID);
