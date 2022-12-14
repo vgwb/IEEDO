@@ -18,52 +18,104 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 82758623232
+  - m_Id: 104043542744129536
     m_Localized: Diary
     m_Metadata:
       m_Items: []
-  - m_Id: 15270056583168
-    m_Localized: Tic tac toe
+  - m_Id: 104043542752518144
+    m_Localized: Write a daily note
     m_Metadata:
       m_Items: []
-  - m_Id: 15319184465920
-    m_Localized: Unblock
+  - m_Id: 104043542752518145
+    m_Localized: Letter to a friend
     m_Metadata:
       m_Items: []
-  - m_Id: 7901862056419328
-    m_Localized: Open Diary
+  - m_Id: 104043542752518146
+    m_Localized: Write a letter to a friend
     m_Metadata:
       m_Items: []
-  - m_Id: 101706107485937664
-    m_Localized: Math order
-    m_Metadata:
-      m_Items: []
-  - m_Id: 101706107498520578
-    m_Localized: Merge Numbers
-    m_Metadata:
-      m_Items: []
-  - m_Id: 101846840868069376
-    m_Localized: Sequences
-    m_Metadata:
-      m_Items: []
-  - m_Id: 101846840880652288
-    m_Localized: Patterns
-    m_Metadata:
-      m_Items: []
-  - m_Id: 101846840880652289
-    m_Localized: Math Speed
-    m_Metadata:
-      m_Items: []
-  - m_Id: 101846840880652290
-    m_Localized: Fast Reaction
-    m_Metadata:
-      m_Items: []
-  - m_Id: 103991698357477376
+  - m_Id: 104043542756712448
     m_Localized: Letter to myself
     m_Metadata:
       m_Items: []
-  - m_Id: 103991698365865984
-    m_Localized: Letter to a friend
+  - m_Id: 104043542756712449
+    m_Localized: Write a letter to yoruself
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712450
+    m_Localized: 2048
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712451
+    m_Localized: Move the blocks and score as much as you can
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712452
+    m_Localized: Fast Reaction
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712453
+    m_Localized: Is the mage the same as previous one? be fast!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712454
+    m_Localized: Math order
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712455
+    m_Localized: Select the numbers in ascending or descending order
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712456
+    m_Localized: Math Speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712457
+    m_Localized: Which of the two numbers is greater? or are they equal?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712458
+    m_Localized: Patterns
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712459
+    m_Localized: Can you remember what you saw?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712460
+    m_Localized: Sequences
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712461
+    m_Localized: Can you repeat the sequence?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712462
+    m_Localized: Merge Numbers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712463
+    m_Localized: 3 equal numbers will merge. can you score to the max?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712464
+    m_Localized: Tic tac toe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712465
+    m_Localized: The classic game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712466
+    m_Localized: Unblock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712467
+    m_Localized: Move the red element to the exit.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712468
+    m_Localized: Open Diary
     m_Metadata:
       m_Items: []
   references:

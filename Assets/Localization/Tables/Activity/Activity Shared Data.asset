@@ -15,52 +15,104 @@ MonoBehaviour:
   m_TableCollectionName: Activity
   m_TableCollectionNameGuidString: e48f391c1e96c7040b7091b267464dc8
   m_Entries:
-  - m_Id: 82758623232
-    m_Key: activity_title_diary
+  - m_Id: 104043542744129536
+    m_Key: activity_write_diary
     m_Metadata:
       m_Items: []
-  - m_Id: 15270056583168
-    m_Key: activity_title_tictac
+  - m_Id: 104043542752518144
+    m_Key: activity_write_diary_description
     m_Metadata:
       m_Items: []
-  - m_Id: 15319184465920
-    m_Key: activity_title_unblock
+  - m_Id: 104043542752518145
+    m_Key: activity_write_friend
     m_Metadata:
       m_Items: []
-  - m_Id: 7901862056419328
-    m_Key: diary_OpenDiary
+  - m_Id: 104043542752518146
+    m_Key: activity_write_friend_description
     m_Metadata:
       m_Items: []
-  - m_Id: 101706107485937664
-    m_Key: activity_title_math_order
+  - m_Id: 104043542756712448
+    m_Key: activity_write_myself
     m_Metadata:
       m_Items: []
-  - m_Id: 101846840868069376
-    m_Key: activity_title_memory_sequence
+  - m_Id: 104043542756712449
+    m_Key: activity_write_myself_description
     m_Metadata:
       m_Items: []
-  - m_Id: 101846840880652288
-    m_Key: activity_title_memory_pattern
+  - m_Id: 104043542756712450
+    m_Key: game_2048
     m_Metadata:
       m_Items: []
-  - m_Id: 101706107498520578
-    m_Key: activity_title_mergenumbers
+  - m_Id: 104043542756712451
+    m_Key: game_2048_description
     m_Metadata:
       m_Items: []
-  - m_Id: 101846840880652289
-    m_Key: activity_title_math_speed
+  - m_Id: 104043542756712452
+    m_Key: game_fastreaction
     m_Metadata:
       m_Items: []
-  - m_Id: 101846840880652290
-    m_Key: activity_title_fastreaction
+  - m_Id: 104043542756712453
+    m_Key: game_fastreaction_description
     m_Metadata:
       m_Items: []
-  - m_Id: 103991698357477376
-    m_Key: activity_title_write_myself
+  - m_Id: 104043542756712454
+    m_Key: game_math_order
     m_Metadata:
       m_Items: []
-  - m_Id: 103991698365865984
-    m_Key: activity_title_write_friend
+  - m_Id: 104043542756712455
+    m_Key: game_math_order_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712456
+    m_Key: game_math_speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712457
+    m_Key: game_math_speed_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712458
+    m_Key: game_memory_pattern
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712459
+    m_Key: game_memory_pattern_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712460
+    m_Key: game_memory_sequence
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712461
+    m_Key: game_memory_sequence_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712462
+    m_Key: game_mergenumbers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712463
+    m_Key: game_mergenumbers_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712464
+    m_Key: game_tictac
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712465
+    m_Key: game_tictac_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712466
+    m_Key: game_unblock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712467
+    m_Key: game_unblock_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712468
+    m_Key: writediary_OpenDiary
     m_Metadata:
       m_Items: []
   m_Metadata:

@@ -18,52 +18,56 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 82758623232
+  - m_Id: 104043542744129536
     m_Localized: Diario
     m_Metadata:
       m_Items: []
-  - m_Id: 15270056583168
-    m_Localized: Tic tac toe
+  - m_Id: 104043542752518145
+    m_Localized: Carta a un amigo
     m_Metadata:
       m_Items: []
-  - m_Id: 15319184465920
-    m_Localized: Desatascar
-    m_Metadata:
-      m_Items: []
-  - m_Id: 7901862056419328
-    m_Localized: Diario abierto
-    m_Metadata:
-      m_Items: []
-  - m_Id: 101706107485937664
-    m_Localized: "Pedido de matem\xE1ticas"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 101706107498520578
-    m_Localized: "N\xFAmeros de combinaci\xF3n"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 101846840868069376
-    m_Localized: Secuencias
-    m_Metadata:
-      m_Items: []
-  - m_Id: 101846840880652288
-    m_Localized: Patrones
-    m_Metadata:
-      m_Items: []
-  - m_Id: 101846840880652289
-    m_Localized: "Velocidad matem\xE1tica"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 101846840880652290
-    m_Localized: "Reacci\xF3n r\xE1pida"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 103991698357477376
+  - m_Id: 104043542756712448
     m_Localized: "Carta para m\xED"
     m_Metadata:
       m_Items: []
-  - m_Id: 103991698365865984
-    m_Localized: Carta a un amigo
+  - m_Id: 104043542756712450
+    m_Localized: 2048
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712452
+    m_Localized: "Reacci\xF3n r\xE1pida"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712454
+    m_Localized: "Pedido de matem\xE1ticas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712456
+    m_Localized: "Velocidad matem\xE1tica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712458
+    m_Localized: Patrones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712460
+    m_Localized: Secuencias
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712462
+    m_Localized: "N\xFAmeros de combinaci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712464
+    m_Localized: Tic tac toe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712466
+    m_Localized: Desatascar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712468
+    m_Localized: Diario abierto
     m_Metadata:
       m_Items: []
   references:

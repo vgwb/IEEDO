@@ -19,7 +19,7 @@ MonoBehaviour:
       m_TableReference:
         m_TableCollectionName: GUID:e48f391c1e96c7040b7091b267464dc8
       m_TableEntryReference:
-        m_KeyId: 15270056583168
+        m_KeyId: 104043542756712464
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -32,6 +32,7 @@ MonoBehaviour:
   ScoreOnWin: 100
   ScoreOnLoss: 20
   MaxLevel: 100
+  HasHighScore: 0
   references:
     version: 2
     RefIds: []
