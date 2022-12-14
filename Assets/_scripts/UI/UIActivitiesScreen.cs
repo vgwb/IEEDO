@@ -52,8 +52,7 @@ namespace Ieedo
                 ActivityBlocks[i].ScoreText.text =
                   "Lvl: " + data.CurrentLevel
                   + (activityDefinition.MaxLevel > 1 ? " / " + activityDefinition.MaxLevel : "")
-                  + "\n"
-                  + "Score: " + data.MaxScore;
+                  + (activityDefinition.HasHighScore ? "\nHi Score: " + data.MaxScore : "");
 
                 // Check unlock state
                 data.Unlocked = Statics.Data.Profile.CurrentScore >= activityDefinition.ScoreToUnlock;

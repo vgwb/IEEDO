@@ -31,7 +31,8 @@ MonoBehaviour:
   ScoreToUnlock: 300
   ScoreOnWin: 100
   ScoreOnLoss: 20
-  MaxLevel: 10
+  MaxLevel: 30
+  HasHighScore: 1
   references:
     version: 2
     RefIds: []
