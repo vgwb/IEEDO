@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace Ieedo
 {
@@ -10,6 +11,7 @@ namespace Ieedo
 
         public Image Image;
         public UIText Title;
+        public TextMeshProUGUI ScoreText;
         public UIButton LaunchButton;
 
         public UIFillBar ProgressBar;

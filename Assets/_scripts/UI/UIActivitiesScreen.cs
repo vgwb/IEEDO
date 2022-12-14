@@ -48,13 +48,16 @@ namespace Ieedo
                     Statics.Data.SaveProfile();
                 }
                 ActivityBlocks[i].ProgressBar.SetValue(data.CurrentLevel, activityDefinition.MaxLevel);
+                ActivityBlocks[i].ScoreText.text =
+                 "Lvl: " + data.CurrentLevel + "\n"
+                 + "Score: " + data.MaxScore;
 
                 // Check unlock state
                 data.Unlocked = Statics.Data.Profile.CurrentScore >= activityDefinition.ScoreToUnlock;
                 ActivityBlocks[i].LockedGO.SetActive(!data.Unlocked);
 
                 var scoreToUnlockLoc = new LocalizedString("UI", "activity_score_to_unlock");
-                scoreToUnlockLoc.Arguments = new List<object>{activityDefinition};
+                scoreToUnlockLoc.Arguments = new List<object> { activityDefinition };
                 ActivityBlocks[i].LockedText.Key = scoreToUnlockLoc;
             }
 
