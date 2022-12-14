@@ -50,6 +50,7 @@ namespace Ieedo
                 // Reset profile at the new version (for now)
                 if (Statics.Data.Profile.Version != ApplicationConfig.Version)
                 {
+                    Debug.LogWarning("Profile version mismatch! We reset to a new profile");
                     Statics.Data.CreateDefaultNewProfile();
                 }
             }
@@ -58,6 +59,10 @@ namespace Ieedo
             var locale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.Data.Profile.Settings.HostCountryLocale);
             if (locale != null)
                 LocalizationSettings.SelectedLocale = locale;
+
+
+            // Initialise UI
+            Statics.Score.RefreshScoreText();
 
             // Load the game
             Statics.Screens.OpenImmediate(ScreenID.Top);
