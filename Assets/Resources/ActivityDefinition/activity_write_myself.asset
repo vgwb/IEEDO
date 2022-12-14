@@ -10,26 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7631c653b8f4c97a4340609bfb6c8fa, type: 3}
-  m_Name: game_connect4
-  m_EditorClassIdentifier: 
+  m_Name: activity_write_myself
+  m_EditorClassIdentifier: Assembly-CSharp:Ieedo:ActivityDefinition
   Enabled: 0
-  ID: 5
+  ID: 12
   Title:
     Key:
       m_TableReference:
-        m_TableCollectionName: GUID:e48f391c1e96c7040b7091b267464dc8
+        m_TableCollectionName: 
       m_TableEntryReference:
-        m_KeyId: 143655723008
+        m_KeyId: 0
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    DefaultText: Connect 4
-  Type: 2
+    DefaultText: Blank example
+  Type: 1
   Image: {fileID: 0}
-  SceneName: game_connect4
-  ScoreToUnlock: 2000
-  MaxLevel: 10
+  SceneName: activity_diary
+  ScoreToUnlock: 8000
+  MaxLevel: -1
   references:
     version: 2
     RefIds: []

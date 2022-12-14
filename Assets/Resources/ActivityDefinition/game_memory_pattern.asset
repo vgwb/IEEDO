@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: game_memory_pattern
   m_EditorClassIdentifier: 
   Enabled: 1
-  ID: 7
+  ID: 22
   Title:
     Key:
       m_TableReference:

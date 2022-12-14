@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a7631c653b8f4c97a4340609bfb6c8fa, type: 3}
-  m_Name: _game Locked
-  m_EditorClassIdentifier: 
+  m_Name: activity_write_friend
+  m_EditorClassIdentifier: Assembly-CSharp:Ieedo:ActivityDefinition
   Enabled: 0
-  ID: 3
+  ID: 11
   Title:
     Key:
       m_TableReference:
@@ -24,11 +24,12 @@ MonoBehaviour:
       m_FallbackState: 0
       m_WaitForCompletion: 0
       m_LocalVariables: []
-    DefaultText: Locked example
+    DefaultText: Blank example
   Type: 1
-  SceneName: 
-  ScoreToUnlock: 200
-  MaxLevel: 10
+  Image: {fileID: 0}
+  SceneName: activity_diary
+  ScoreToUnlock: 8000
+  MaxLevel: -1
   references:
     version: 2
     RefIds: []
