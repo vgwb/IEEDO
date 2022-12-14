@@ -19,10 +19,6 @@ MonoBehaviour:
     m_Key: activity_title_diary
     m_Metadata:
       m_Items: []
-  - m_Id: 143655723008
-    m_Key: activity_title_connect4
-    m_Metadata:
-      m_Items: []
   - m_Id: 15270056583168
     m_Key: activity_title_tictac
     m_Metadata:
@@ -57,6 +53,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 101846840880652290
     m_Key: activity_title_fastreaction
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103991698357477376
+    m_Key: activity_title_write_myself
+    m_Metadata:
+      m_Items: []
+  - m_Id: 103991698365865984
+    m_Key: activity_title_write_friend
     m_Metadata:
       m_Items: []
   m_Metadata:
