@@ -12,8 +12,10 @@ namespace Ieedo
 
         public void SetValue(int value, int max)
         {
+            if (value <= 1)
+                value = 0;
             var ratio = value * 1f / max;
-            PercentText.SetText($"{ratio*100}%");
+            PercentText.SetText($"{ratio * 100}%");
             FillImage.fillAmount = ratio;
         }
     }

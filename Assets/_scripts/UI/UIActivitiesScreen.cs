@@ -47,10 +47,13 @@ namespace Ieedo
                     Statics.Data.Profile.Activities.Add(data);
                     Statics.Data.SaveProfile();
                 }
+                //                Debug.Log(activityDefinition.ID + " / " + activityDefinition.MaxLevel);
                 ActivityBlocks[i].ProgressBar.SetValue(data.CurrentLevel, activityDefinition.MaxLevel);
                 ActivityBlocks[i].ScoreText.text =
-                 "Lvl: " + data.CurrentLevel + "\n"
-                 + "Score: " + data.MaxScore;
+                  "Lvl: " + data.CurrentLevel
+                  + (activityDefinition.MaxLevel > 1 ? " / " + activityDefinition.MaxLevel : "")
+                  + "\n"
+                  + "Score: " + data.MaxScore;
 
                 // Check unlock state
                 data.Unlocked = Statics.Data.Profile.CurrentScore >= activityDefinition.ScoreToUnlock;
