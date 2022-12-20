@@ -36,7 +36,7 @@ namespace minigame.g2048
         public RectTransform emptyNodeRect;
         public RectTransform realNodeRect;
         public TextMeshProUGUI ScoreText;
-
+        private SwipeDirection currentSwipe;
         private int m_score;
         public int score
         {
@@ -409,19 +409,37 @@ namespace minigame.g2048
             }
             //        Debug.Log(v);
         }
+
+        public void Swipe(SwipeDirection direction)
+        {
+            currentSwipe = direction;
+        }
+
         private void Update()
         {
             UpdateState();
             if (state == State.WAIT)
             {
-                if (Input.GetKeyUp(KeyCode.RightArrow))
+                if (currentSwipe == SwipeDirection.E || Input.GetKeyUp(KeyCode.RightArrow))
+                {
+                    currentSwipe = SwipeDirection.None;
                     MoveTo(Node.Direction.RIGHT);
-                if (Input.GetKeyUp(KeyCode.LeftArrow))
+                }
+                if (currentSwipe == SwipeDirection.W || Input.GetKeyUp(KeyCode.LeftArrow))
+                {
+                    currentSwipe = SwipeDirection.None;
                     MoveTo(Node.Direction.LEFT);
-                if (Input.GetKeyUp(KeyCode.UpArrow))
+                }
+                if (currentSwipe == SwipeDirection.N || Input.GetKeyUp(KeyCode.UpArrow))
+                {
+                    currentSwipe = SwipeDirection.None;
                     MoveTo(Node.Direction.UP);
-                if (Input.GetKeyUp(KeyCode.DownArrow))
+                }
+                if (currentSwipe == SwipeDirection.S || Input.GetKeyUp(KeyCode.DownArrow))
+                {
+                    currentSwipe = SwipeDirection.None;
                     MoveTo(Node.Direction.DOWN);
+                }
             }
 
             if (Input.GetKeyUp(KeyCode.Space))
