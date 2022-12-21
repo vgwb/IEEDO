@@ -20,7 +20,14 @@ namespace Ieedo
 
         public void StartSessionMode()
         {
-            StartCoroutine(Statics.SessionFlow.SessionFlowCO());
+            if (Statics.App.ApplicationConfig.DebugMode)
+            {
+
+            }
+            else
+            {
+                StartCoroutine(Statics.SessionFlow.SessionFlowCO());
+            }
         }
         public IEnumerator SessionFlowCO()
         {
@@ -42,7 +49,8 @@ namespace Ieedo
             {
                 IsInsideAssessment = true;
                 assessmentCo = StartCoroutine(AssessmentFlowCO()); // @note: needs to be a StartCoroutine so we can stop it
-                while (IsInsideAssessment) yield return null;
+                while (IsInsideAssessment)
+                    yield return null;
                 assessmentCo = null;
             }
             else
@@ -53,12 +61,12 @@ namespace Ieedo
                 bool hasCardsToValidate = Statics.Data.Profile.Cards.HasCardsWithStatus(CardStatus.Completed);
                 if (hasCardsToValidate)
                 {
-                    yield return Statics.Screens.ShowDialog("UI/session_hint_review","UI/ok");
+                    yield return Statics.Screens.ShowDialog("UI/session_hint_review", "UI/ok");
                     uiPillarsScreen.HandleSelectPillar(uiPillarsScreen.PillarsManager.PillarViews[UICardListScreen.COMPLETED_CARDS_PILLAR_INDEX], UICardListScreen.COMPLETED_CARDS_PILLAR_INDEX);
                 }
                 else
                 {
-                    yield return Statics.Screens.ShowDialog("UI/session_hint_review_empty","UI/ok");
+                    yield return Statics.Screens.ShowDialog("UI/session_hint_review_empty", "UI/ok");
                 }
             }
 
@@ -79,7 +87,7 @@ namespace Ieedo
                     yield return new WaitForSeconds(1f);
                     Statics.Screens.GoToTodoList();
                     yield return new WaitForSeconds(0.5f);
-                    yield return Statics.Screens.ShowDialog("UI/session_hint_create_card","UI/ok");
+                    yield return Statics.Screens.ShowDialog("UI/session_hint_create_card", "UI/ok");
                     suggestToDoList = false;
                 }
                 yield return null;
@@ -99,14 +107,16 @@ namespace Ieedo
 
             if (BlockerBG != null)
             {
-                var col = BlockerBG.color; col.a = 1f;
+                var col = BlockerBG.color;
+                col.a = 1f;
                 BlockerBG.colorTransition(col, 0.25f);
             }
 
             if (Statics.SessionFlow.IsInsideTutorial)
             {
                 yield return introScreen.ShowIntro();
-                while (introScreen.IsOpen) yield return null;
+                while (introScreen.IsOpen)
+                    yield return null;
             }
 
             var overallValue = 0f;
@@ -127,7 +137,8 @@ namespace Ieedo
                 assessmentFillbar.FillBar.BGImage.color = category.Color.SetSaturation(0.5f);
                 yield return assessmentHeader.ShowCategory(category);
                 yield return categoryIntroScreen.ShowCategory(category);
-                while (categoryIntroScreen.isActiveAndEnabled) yield return null;
+                while (categoryIntroScreen.isActiveAndEnabled)
+                    yield return null;
 
                 var questions = allQuestions.Where(x => x.Category == category.ID).ToList();
                 float totValue = 0f;
@@ -135,10 +146,12 @@ namespace Ieedo
                 foreach (var question in questions)
                 {
 #if UNITY_EDITOR
-                    if (Input.GetKey(KeyCode.S)) break;
+                    if (Input.GetKey(KeyCode.S))
+                        break;
 #endif
                     yield return questionScreen.ShowQuestion(question);
-                    while (questionScreen.IsOpen) yield return null;
+                    while (questionScreen.IsOpen)
+                        yield return null;
                     var selectedAnswer = question.Answers[questionScreen.LatestSelectedOption];
                     totValue += selectedAnswer.Value;
                     nQuestionsCategory++;
@@ -147,7 +160,8 @@ namespace Ieedo
                     assessmentFillbar.FillBar.FillImage.color = category.Color;
                     assessmentFillbar.FillBar.BGImage.color = category.Color.SetSaturation(0.5f);
                 }
-                if (nQuestionsCategory == 0) nQuestionsCategory = 1; // To avoid NaN
+                if (nQuestionsCategory == 0)
+                    nQuestionsCategory = 1; // To avoid NaN
                 assessmentPercentages[(int)category.ID] = totValue / nQuestionsCategory;
                 overallValue += assessmentPercentages[(int)category.ID];
 #if UNITY_EDITOR
@@ -181,7 +195,8 @@ namespace Ieedo
 
             if (BlockerBG != null)
             {
-                var col = BlockerBG.color; col.a = 0f;
+                var col = BlockerBG.color;
+                col.a = 0f;
                 BlockerBG.colorTransition(col, 0.25f);
             }
 
@@ -224,7 +239,8 @@ namespace Ieedo
             {
                 var answer = new Ref<int>();
                 yield return Statics.Screens.ShowQuestionFlow("UI/session_question_assessment_skip_title", "UI/session_question_assessment_skip_content", new[] { "UI/yes", "UI/no" }, answer);
-                if (answer.Value == 1) yield break;
+                if (answer.Value == 1)
+                    yield break;
             }
 
             var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
@@ -234,16 +250,23 @@ namespace Ieedo
             var assessmentHeader = Statics.Screens.Get(ScreenID.AssessmentHeader) as UIAssessmentHeader;
             var assessmentFillbar = Statics.Screens.Get(ScreenID.AssessmentFillbar) as UIAssessmentFillbar;
 
-            while (introScreen.IsOpen) yield return introScreen.CloseCO();
-            while (questionScreen.IsOpen) yield return questionScreen.CloseCO();
-            while (assessmentRecapScreen.IsOpen) yield return assessmentRecapScreen.CloseCO();
-            while (categoryIntroScreen.IsOpen) yield return categoryIntroScreen.CloseCO();
-            while (assessmentHeader.IsOpen) yield return assessmentHeader.CloseCO();
-            while (assessmentFillbar.IsOpen) yield return assessmentFillbar.CloseCO();
+            while (introScreen.IsOpen)
+                yield return introScreen.CloseCO();
+            while (questionScreen.IsOpen)
+                yield return questionScreen.CloseCO();
+            while (assessmentRecapScreen.IsOpen)
+                yield return assessmentRecapScreen.CloseCO();
+            while (categoryIntroScreen.IsOpen)
+                yield return categoryIntroScreen.CloseCO();
+            while (assessmentHeader.IsOpen)
+                yield return assessmentHeader.CloseCO();
+            while (assessmentFillbar.IsOpen)
+                yield return assessmentFillbar.CloseCO();
 
             if (BlockerBG != null)
             {
-                var col = BlockerBG.color; col.a = 0f;
+                var col = BlockerBG.color;
+                col.a = 0f;
                 BlockerBG.colorTransition(col, 0.25f);
             }
 
