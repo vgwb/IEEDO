@@ -25,6 +25,8 @@ namespace Ieedo
 #endif
 
         [Header("Debug")]
+        public bool DebugMode;
+
         /// <summary>
         /// Switches on all Debug.Log calls for performance.
         /// Set to FALSE for production.
