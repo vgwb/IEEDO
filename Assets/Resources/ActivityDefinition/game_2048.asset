@@ -26,7 +26,7 @@ MonoBehaviour:
       m_LocalVariables: []
     DefaultText: 
   Type: 2
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: 38cb948e8cb84420fae86136f20d7bcf, type: 3}
   SceneName: game_2048
   ScoreToUnlock: 100
   ScoreOnWin: 100
