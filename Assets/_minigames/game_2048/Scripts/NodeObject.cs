@@ -29,7 +29,7 @@ namespace minigame.g2048
 
         private void SetColor(int value)
         {
-            Color color = new Color(1f, 0.42f, 0.42f);
+            var color = new Color(1f, 0.42f, 0.42f);
             switch (value)
             {
                 case 2:
@@ -68,6 +68,7 @@ namespace minigame.g2048
                 case 4096:
                     color = new Color(1f, 0, 0);
                     break;
+                default:
                     color = Color.black;
                     break;
             }
@@ -100,18 +101,18 @@ namespace minigame.g2048
                 {
                     target.realNodeObj.value = value * 2;
                     var t = target.realNodeObj.transform.DOPunchScale(new Vector3(.25f, .25f, .25f), 0.15f, 3);
-                    this.gameObject.SetActive(false);
+                    gameObject.SetActive(false);
                     t.onComplete += () =>
                     {
-                        this.needDestroy = true;
-                        this.target = null;
-                        this.from = null;
+                        needDestroy = true;
+                        target = null;
+                        from = null;
                     };
                 }
                 else
                 {
-                    this.from = null;
-                    this.target = null;
+                    from = null;
+                    target = null;
                 }
             }
         }
@@ -121,8 +122,8 @@ namespace minigame.g2048
         {
             if (target != null)
             {
-                this.name = target.point.ToString();
-                var tween = this.blockImage.rectTransform.DOLocalMove(target.position, 0.1f);
+                name = target.point.ToString();
+                var tween = blockImage.rectTransform.DOLocalMove(target.position, 0.1f);
                 tween.onComplete += () =>
                 {
                     OnEndMove();
@@ -134,10 +135,10 @@ namespace minigame.g2048
         {
             if (target != null)
             {
-                this.name = target.point.ToString();
-                var p = Vector2.Lerp(this.transform.localPosition, target.position, 0.35f);
-                this.transform.localPosition = p;
-                if (Vector2.Distance(this.transform.localPosition, target.position) < 0.25f)
+                name = target.point.ToString();
+                var p = Vector2.Lerp(transform.localPosition, target.position, 0.35f);
+                transform.localPosition = p;
+                if (Vector2.Distance(transform.localPosition, target.position) < 0.25f)
                 {
                     OnEndMove();
                 }
