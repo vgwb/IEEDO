@@ -26,7 +26,7 @@ MonoBehaviour:
       m_LocalVariables: []
     DefaultText: Merge Numbers
   Type: 2
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: 6345bb855875c4e17b2fb629fff0cd9c, type: 3}
   SceneName: game_mergenumbers
   ScoreToUnlock: 300
   ScoreOnWin: 100

@@ -22,7 +22,7 @@ namespace minigame.mergenumbers
         {
             Debug.Log($"Starting game at level {currentLevel}");
 
-            var gridSize = currentLevel + 1;
+            var gridSize = 5;
             Board.GenerateGrid(gridSize, gridSize);
 
             var nNumbers = gridSize * gridSize;
