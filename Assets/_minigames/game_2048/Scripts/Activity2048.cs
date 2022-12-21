@@ -19,6 +19,12 @@ namespace minigame.g2048
     public class Activity2048 : ActivityManager
     {
         public Board board;
+        public static Activity2048 I;
+
+        void Awake()
+        {
+            I = this;
+        }
 
         protected override void SetupActivity(int currentLevel)
         {
@@ -40,7 +46,7 @@ namespace minigame.g2048
 
         public void OnSwipe(string direction)
         {
-            SoundManager.I.PlaySfx(SfxEnum.win);
+            SoundManager.I.PlaySfx(SfxEnum.score);
             SwipeDirection currentSwipe = SwipeDirection.None;
             switch (direction)
             {

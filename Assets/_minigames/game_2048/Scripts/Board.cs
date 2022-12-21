@@ -51,7 +51,9 @@ namespace minigame.g2048
         public void OnGameOver()
         {
             Debug.Log("Game Over!!!!");
+            Activity2048.I.OnBtnLose();
         }
+
         private void CreateBoard()
         {
             /* first initialize empty Node rect*/
