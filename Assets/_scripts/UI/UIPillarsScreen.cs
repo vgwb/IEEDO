@@ -169,15 +169,13 @@ namespace Ieedo
             var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
 
             UICardListScreen.FrontViewMode desiredFrontViewMode = UICardListScreen.FrontViewMode.None;
-            switch (Statics.Mode.SessionMode)
+            if (ViewMode == PillarsViewMode.Categories)
             {
-                case SessionMode.Session:
-                    desiredFrontViewMode = iPillar == 0 ? UICardListScreen.FrontViewMode.Validated : UICardListScreen.FrontViewMode.Completed;
-                    break;
-
-                case SessionMode.Solo:
-                    desiredFrontViewMode = UICardListScreen.FrontViewMode.View;
-                    break;
+                desiredFrontViewMode =  UICardListScreen.FrontViewMode.View;
+            }
+            else
+            {
+                desiredFrontViewMode = iPillar == 0 ? UICardListScreen.FrontViewMode.Validated : UICardListScreen.FrontViewMode.Completed;
             }
 
             uiCardListScreen.LoadCards(pillarView.Data.Cards, UICardListScreen.SortByExpirationDate, UICardListScreen.ListViewMode.Pillars, desiredFrontViewMode);

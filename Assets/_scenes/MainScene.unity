@@ -1505,7 +1505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4542333321968561192, guid: 526496f18390cf546b7477138579ad1b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -4.8323975
+      value: -4.8325195
       objectReference: {fileID: 0}
     - target: {fileID: 8675760691872886582, guid: 526496f18390cf546b7477138579ad1b, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -6785,7 +6785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 915821222474085921, guid: 0dbfc00e0a8e19d4682b54403f909450, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 915821222474085921, guid: 0dbfc00e0a8e19d4682b54403f909450, type: 3}
       propertyPath: m_AnchorMin.x
@@ -6801,7 +6801,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 915821222474085921, guid: 0dbfc00e0a8e19d4682b54403f909450, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -1616.55
+      value: 143.44995
       objectReference: {fileID: 0}
     - target: {fileID: 915821222474085921, guid: 0dbfc00e0a8e19d4682b54403f909450, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6837,7 +6837,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 915821222474085921, guid: 0dbfc00e0a8e19d4682b54403f909450, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -843.8999
+      value: 36.100098
       objectReference: {fileID: 0}
     - target: {fileID: 915821222474085921, guid: 0dbfc00e0a8e19d4682b54403f909450, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7867,7 +7867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8984423255412884824, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -756.2853
+      value: -756.6504
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
