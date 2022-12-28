@@ -742,10 +742,7 @@ namespace Ieedo
             //frontCardUI = cardUi;   // We need to force it to be the front one, now
             cardUi.AnimateToParent();
 
-            if (CardsList.HeldCards.Count > 1)
-            {
-                yield return CardsList.ScrollRect.ForceGoToCard(cardUi);
-            }
+            yield return CardsList.ScrollRect.ForceGoToCard(cardUi);
 
             var cardFlowIndex = 0;
             while (cardFlowIndex <= 6)
@@ -777,7 +774,7 @@ namespace Ieedo
             frontCardUI.AnimateToParent();
 
             SetEditButtonsEnabled(true);
-            SetEditing(true);
+            SetEditing(false);  // @note: We go back to the basic view here
 
             Statics.Cards.AddCard(cardData);
             Statics.Analytics.Card("create", cardData);
@@ -786,6 +783,7 @@ namespace Ieedo
             uiTopScreen.SwitchMode(TopBarMode.MainSection);
 
             CardsList.SortListAgain();
+            yield return CardsList.ScrollRect.ForceGoToCard(frontCardUI);
         }
 
         private IEnumerator EditCategoryCO(bool autoReset = false)
