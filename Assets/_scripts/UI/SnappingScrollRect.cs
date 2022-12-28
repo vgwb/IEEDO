@@ -171,8 +171,14 @@ namespace Ieedo
                 velocity = v;
 
                 //Debug.LogError("ratio " + ratio);
-                if (ratio < ratioThreshold && !hasInFront)
+                if (ratio < ratioThreshold && (!hasInFront || forceGoToCard))
                 {
+                    // When we have it in front, if forcing, SNAP IT
+                    if (forceGoToCard)
+                    {
+                        content.anchoredPosition = new Vector2(desiredPos, content.anchoredPosition.y);
+                    }
+
                     hasInFront = true;
                     OnCardInFront?.Invoke();
                     //Debug.LogError("IN FRONT");
