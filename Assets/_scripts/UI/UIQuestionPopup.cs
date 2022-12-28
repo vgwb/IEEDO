@@ -55,12 +55,12 @@ namespace Ieedo
             if (col == default)
             {
                 TitleBG.color = Statics.Art.ToTitle(Statics.Art.UIColor.Color);
-                QuestionBG.color = Statics.Art.ToBG(Statics.Art.UIColor.Color);
+                QuestionBG.color = Statics.Art.ToBG(Statics.Art.UIColor.Color).SetSaturation(0.5f);
             }
             else
             {
                 TitleBG.color = Statics.Art.ToTitle(col);
-                QuestionBG.color = Statics.Art.ToBG(col);
+                QuestionBG.color = Statics.Art.ToBG(col).SetSaturation(0.5f);
             }
 
 
