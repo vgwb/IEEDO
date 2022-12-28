@@ -148,6 +148,9 @@ namespace Ieedo
             EditModeCardInteraction.SetActive(canEdit);
             EditCardButton.SetTextColor(canEdit ? Color.yellow : Color.white);
 
+            var cardScroll = CardsList.GetComponentInChildren<SnappingScrollRect>();
+            cardScroll.enabled = !canEdit;
+
             if (CurrentFrontViewMode == FrontViewMode.Edit)
             {
                 if (canEdit)
