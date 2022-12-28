@@ -6767,6 +6767,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UIAssessmentCompletionBar
       objectReference: {fileID: 0}
+    - target: {fileID: 915821222474085920, guid: 0dbfc00e0a8e19d4682b54403f909450, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 915821222474085921, guid: 0dbfc00e0a8e19d4682b54403f909450, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7867,7 +7871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8984423255412884824, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -756.6504
+      value: -642.0058
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
