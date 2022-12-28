@@ -82,6 +82,8 @@ namespace Ieedo
         // TODO: move to OnboardingManager / TutorialManager?
         public IEnumerator HandleTutorial()
         {
+            Statics.Mode.SetSessionMode(SessionMode.Solo);
+
             Statics.SessionFlow.IsInsideTutorial = true;
             var topScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
             var botScreen = Statics.Screens.Get(ScreenID.Bottom) as UIBottomScreen;
