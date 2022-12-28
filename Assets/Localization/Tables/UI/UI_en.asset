@@ -337,15 +337,15 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 136954244812791808
     m_Localized: ' If you don''t understand something on screen, hold the Translation
-      button to read it in Arabic'
+      button to read it in your mother language'
     m_Metadata:
       m_Items: []
   - m_Id: 139790834418524160
-    m_Localized: Here are your results. Let's improve them. Let's create a card.
+    m_Localized: Here are your results for now. Let's improve them together.
     m_Metadata:
       m_Items: []
   - m_Id: 139790834443689984
-    m_Localized: You do not have any card. Create one.
+    m_Localized: You do not have any card.
     m_Metadata:
       m_Items: []
   - m_Id: 141937967278874624
@@ -397,7 +397,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 144439249336033280
-    m_Localized: Do you want to skip the questionnaire?
+    m_Localized: Are you sure you want to leave the questionnaire?
     m_Metadata:
       m_Items: []
   references:

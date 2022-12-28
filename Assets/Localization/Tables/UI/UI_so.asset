@@ -217,8 +217,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 136954244812791808
-    m_Localized: ' Haddii aadan wax shaashad ku fahmin, hayso badhanka tarjumaadda
-      si aad ugu aqriso Carabi'
+    m_Localized: ' Haddii aadan wax shaashad ku fahmin shaashadda, hayso badhanka
+      tarjumaadda si aad ugu aqriso luqaddaada hooyo'
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093248
@@ -347,11 +347,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 139790834418524160
-    m_Localized: Waa kuwan natiijooyinkaaga. Aynu horumarinno. Aynu abuurno kaar.
+    m_Localized: Halkan waxaa ah natiijooyinkaaga hadda. Aynu si wada jir ah u horumarinno.
     m_Metadata:
       m_Items: []
   - m_Id: 139790834443689984
-    m_Localized: Ma haysato kaar kaar ah. Abuur mid.
+    m_Localized: Ma haysato kaar kaar ah.
     m_Metadata:
       m_Items: []
   - m_Id: 141937967278874624
@@ -403,7 +403,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 144439249336033280
-    m_Localized: Ma rabtaa inaad ka booddo foomka su'aalaha?
+    m_Localized: Ma hubtaa inaad rabto inaad ka baxdo foomka su'aalaha?
     m_Metadata:
       m_Items: []
   references:
