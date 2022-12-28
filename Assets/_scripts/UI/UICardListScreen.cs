@@ -190,8 +190,7 @@ namespace Ieedo
                 Destroy(uiCard.gameObject);
             if (!FRONT_VIEW_ONLY) CloseFrontView();
 
-            if (!isNewCard)
-                CardsList.RemoveCard(uiCard);
+            CardsList.RemoveCard(uiCard);
 
             Statics.Analytics.Card("delete", uiCard.Data);
             Statics.Cards.DeleteCard(uiCard.Data);
@@ -206,6 +205,7 @@ namespace Ieedo
             if (CardsList.HeldCards.Count == 0)
             {
                 CloseFrontView();
+                CreateCardButton.Show();
             }
         }
 
