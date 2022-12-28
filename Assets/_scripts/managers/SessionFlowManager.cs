@@ -225,11 +225,6 @@ namespace Ieedo
 
         public void SkipAssessment(bool withConfirm)
         {
-            if (assessmentCo != null)
-            {
-                StopCoroutine(assessmentCo);
-                assessmentCo = null;
-            }
             StartCoroutine(SkipAssessmentCO(withConfirm));
         }
 
@@ -241,6 +236,12 @@ namespace Ieedo
                 yield return Statics.Screens.ShowQuestionFlow("UI/session_question_assessment_skip_title", "UI/session_question_assessment_skip_content", new[] { "UI/yes", "UI/no" }, answer);
                 if (answer.Value == 1)
                     yield break;
+            }
+
+            if (assessmentCo != null)
+            {
+                StopCoroutine(assessmentCo);
+                assessmentCo = null;
             }
 
             var questionScreen = Statics.Screens.Get(ScreenID.AssessmentQuestion) as UIQuestionPopup;
