@@ -219,7 +219,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 136954244812791808
     m_Localized: " Si vous ne comprenez pas quelque chose \xE0 l'\xE9cran, maintenez
-      le bouton de traduction pour le lire en arabe"
+      le bouton de traduction pour le lire dans votre langue maternelle"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093248
@@ -349,11 +349,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 139790834418524160
-    m_Localized: "Voici vos r\xE9sultats. Am\xE9lilons-les. Cr\xE9ons une carte."
+    m_Localized: "Voici vos r\xE9sultats pour l'instant. Am\xE9lilons-les ensemble."
     m_Metadata:
       m_Items: []
   - m_Id: 139790834443689984
-    m_Localized: "Vous n'avez pas de carte. Cr\xE9er une."
+    m_Localized: Vous n'avez pas de carte.
     m_Metadata:
       m_Items: []
   - m_Id: 141937967278874624
@@ -405,7 +405,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 144439249336033280
-    m_Localized: Voulez-vous sauter le questionnaire?
+    m_Localized: "\xCAtes-vous s\xFBr de vouloir quitter le questionnaire?"
     m_Metadata:
       m_Items: []
   references:
