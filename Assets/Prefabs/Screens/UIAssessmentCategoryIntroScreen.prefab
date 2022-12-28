@@ -277,7 +277,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6377568620739488933, guid: 5cea964cdbb36d5469636770238e2ff3, type: 3}
       propertyPath: m_text
-      value: OK
+      value: DE ACUERDO
       objectReference: {fileID: 0}
     - target: {fileID: 6377568620739488933, guid: 5cea964cdbb36d5469636770238e2ff3, type: 3}
       propertyPath: m_fontSize
@@ -522,6 +522,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2371623362688251523, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
+      propertyPath: m_text
+      value: 'text texttexttext texttexttextt exttex ttexttexttex ttextt exttexttexttext '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2371623362688251523, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_fontSize
       value: 72
       objectReference: {fileID: 0}
@@ -555,7 +559,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5118505011779755731, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 706.1785
+      value: 494
       objectReference: {fileID: 0}
     - target: {fileID: 6579875410280131145, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_Name
