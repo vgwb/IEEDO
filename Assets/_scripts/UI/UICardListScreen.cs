@@ -659,10 +659,12 @@ namespace Ieedo
 
         public void SetSubEditMode(bool choice)
         {
+            EditModeCardInteraction.SetActive(!choice && !isCreating);
+
             CloseFrontViewButton.gameObject.SetActive(!choice);
             SetEditButtonsEnabled(!choice);
 
-            CardsList.ScrollRect.enabled = !choice;
+            CardsList.ScrollRect.enabled = !choice && !isCreating;
         }
         public void SetEditButtonsEnabled(bool choice)
         {
@@ -692,6 +694,7 @@ namespace Ieedo
 
                 yield return DeleteCardCO(true, frontCardUI, withConfirmation: false);
                 abortingCreation = false;
+                isCreating = false;
 
                 var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
                 uiTopScreen.SwitchMode(TopBarMode.MainSection);
@@ -701,8 +704,10 @@ namespace Ieedo
         }
 
         private bool abortingCreation;
+        private bool isCreating;
         public IEnumerator CreateCardFlowCO()
         {
+            isCreating = true;
             var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
             uiTopScreen.SwitchMode(TopBarMode.Special_CardCreation);
 
@@ -782,6 +787,7 @@ namespace Ieedo
 
             CardsList.SortListAgain();
             yield return CardsList.ScrollRect.ForceGoToCard(frontCardUI);
+            isCreating = false;
         }
 
         private IEnumerator EditCategoryCO(bool autoReset = false)
@@ -914,7 +920,7 @@ namespace Ieedo
             //EditDateButton.Shadow.enabled = false;
 
             // Sort again if we are only editing
-            if (createCardFlowCo == null)
+            if (!isCreating)
             {
                 CardsList.SortListAgain();
                 yield return CardsList.ScrollRect.ForceGoToCard(frontCardUI);
@@ -963,6 +969,7 @@ namespace Ieedo
 
         public IEnumerator EditTitleCO(bool autoReset = false)
         {
+            TitleInputField.gameObject.SetActive(true);
             EditTitleButton.Shadow.enabled = true;
             SetSubEditMode(true);
             frontCardUI.transform.localPositionTransition(new Vector3(0, -130, 0), 0.25f);
@@ -978,10 +985,12 @@ namespace Ieedo
                 frontCardUI.AnimateToParent();
             SetSubEditMode(false);
             //EditTitleButton.Shadow.enabled = false;
+            TitleInputField.gameObject.SetActive(false);
         }
 
         public IEnumerator EditDescriptionCO(bool autoReset = false)
         {
+            DescriptionInputField.gameObject.SetActive(true);
             EditDescriptionButton.Shadow.enabled = true;
             SetSubEditMode(true);
             frontCardUI.transform.localPositionTransition(new Vector3(0, 120, 0), 0.25f);
@@ -997,6 +1006,7 @@ namespace Ieedo
                 frontCardUI.AnimateToParent();
             SetSubEditMode(false);
             //EditDescriptionButton.Shadow.enabled = false;
+            DescriptionInputField.gameObject.SetActive(false);
         }
 
         private IEnumerator WaitForInputField(TMP_InputField inputField, UIText uiText)
