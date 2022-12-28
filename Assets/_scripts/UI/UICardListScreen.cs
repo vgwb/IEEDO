@@ -708,8 +708,8 @@ namespace Ieedo
             var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
             uiTopScreen.SwitchMode(TopBarMode.Special_CardCreation);
 
-            CreateCardButton.Hide();
             SetEditing(false);
+            CreateCardButton.Hide();
 
             // Create and show the card
             var cardDef = Statics.Cards.GenerateCardDefinition(
