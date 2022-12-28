@@ -119,7 +119,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40546818237161472
-    m_Localized: '{Scoretortorck} dhibco si loo furo'
+    m_Localized: '{ScoreToUnlock} dhibco si loo furo'
     m_Metadata:
       m_Items:
       - rid: 5137596889296273429

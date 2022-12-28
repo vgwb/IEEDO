@@ -137,7 +137,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40546818237161472
-    m_Localized: "{Scoretounlock} \u03C3\u03B7\u03BC\u03B5\u03AF\u03B1 \u03B3\u03B9\u03B1
+    m_Localized: "{ScoreToUnlock} \u03C3\u03B7\u03BC\u03B5\u03AF\u03B1 \u03B3\u03B9\u03B1
       \u03BE\u03B5\u03BA\u03BB\u03B5\u03AF\u03B4\u03C9\u03BC\u03B1"
     m_Metadata:
       m_Items:
