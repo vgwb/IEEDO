@@ -158,6 +158,8 @@ namespace Ieedo
         private bool isFocused;
         public void HandleSelectPillar(PillarView pillarView, int iPillar)
         {
+            if (Statics.SessionFlow.IsInsideTutorial) return;
+
             if (PillarsManager.CurrentFocusedPillar == pillarView)
                 return;
             AnimateToFocused();
@@ -195,6 +197,8 @@ namespace Ieedo
 
         private void HandleSelectPlane()
         {
+            if (Statics.SessionFlow.IsInsideTutorial) return;
+
             if (!isFocused)
                 return;
             AnimateToUnfocused();

@@ -95,6 +95,9 @@ namespace Ieedo
             topScreen.InstantTranslationButton.Hide();
             pillarsScreen.SwitchViewButton.Hide();
 
+            botScreen.btnActivities.enabled = false;
+            botScreen.btnPillars.enabled = false;
+
             yield return ProfileCreationFlow();
             yield return Statics.Screens.ShowDialog("UI/intro_content_1", "UI/ok");
 
@@ -164,6 +167,10 @@ namespace Ieedo
             topScreen.SessionModeButton.Show();
             topScreen.InstantTranslationButton.Show();
             pillarsScreen.SwitchViewButton.Show();
+
+            botScreen.btnActivities.enabled = true;
+            botScreen.btnPillars.enabled = true;
+
             Statics.SessionFlow.IsInsideTutorial = false;
         }
 
