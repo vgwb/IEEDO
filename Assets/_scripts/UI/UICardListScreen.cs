@@ -143,7 +143,6 @@ namespace Ieedo
         private bool canEdit = false;
         private void SetEditing(bool choice)
         {
-            Debug.LogError("SET EDITING " + choice + " with front view mode " + CurrentFrontViewMode);
             canEdit = choice;
             EditModeCardInteraction.SetActive(canEdit);
             EditCardButton.Text = canEdit ? "\uf14a" : "\uf044";
@@ -487,7 +486,7 @@ namespace Ieedo
 
         public void OpenFrontView(UICard uiCard, FrontViewMode viewMode)
         {
-            Debug.LogError("OPENING FRONT VIEW " + viewMode);
+            //Debug.LogError("OPENING FRONT VIEW " + viewMode);
 
             if (CurrentFrontViewMode == FrontViewMode.None)
             {
@@ -528,8 +527,6 @@ namespace Ieedo
 
         private void SwitchToFrontViewMode(FrontViewMode viewMode)
         {
-            Debug.LogError("SWITCH TO FRONT VIEW MODE " + viewMode);
-
             bool isSameMode = viewMode == CurrentFrontViewMode;
             if (isSameMode) return;
 
@@ -613,7 +610,6 @@ namespace Ieedo
 
         public void CloseFrontView()
         {
-            Debug.LogError("CLOSING FRONT VIEW");
 
             if (canEdit) SetEditing(false);
 
