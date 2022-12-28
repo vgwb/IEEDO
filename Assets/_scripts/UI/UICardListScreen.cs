@@ -82,10 +82,9 @@ namespace Ieedo
                 createCardFlowCo = StartCoroutine(CreateCardFlowCO());
             });
 
-            var cardScroll = CardsList.GetComponentInChildren<SnappingScrollRect>();
             //cardScroll.OnDragStart = () => SetButtonsVisible(false);
-            cardScroll.OnCardNotInFront = () => SetButtonsVisible(false);
-            cardScroll.OnCardInFront = () =>
+            CardsList.ScrollRect.OnCardNotInFront = () => SetButtonsVisible(false);
+            CardsList.ScrollRect.OnCardInFront = () =>
             {
                 SetButtonsVisible(true);
                 RefreshFrontViewMode();
@@ -148,8 +147,7 @@ namespace Ieedo
             EditModeCardInteraction.SetActive(canEdit);
             EditCardButton.SetTextColor(canEdit ? Color.yellow : Color.white);
 
-            var cardScroll = CardsList.GetComponentInChildren<SnappingScrollRect>();
-            cardScroll.enabled = !canEdit;
+            CardsList.ScrollRect.enabled = !canEdit;
 
             if (CurrentFrontViewMode == FrontViewMode.Edit)
             {
