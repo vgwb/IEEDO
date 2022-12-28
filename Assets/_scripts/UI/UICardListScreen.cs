@@ -696,6 +696,9 @@ namespace Ieedo
                 abortingCreation = false;
                 isCreating = false;
 
+                SetEditing(false);
+                CreateCardButton.Show();
+
                 var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
                 uiTopScreen.SwitchMode(TopBarMode.MainSection);
 
