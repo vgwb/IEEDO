@@ -47,6 +47,7 @@ namespace Ieedo
 
         public void SetSessionMode(SessionMode mode)
         {
+            Debug.LogError("Set session mode " + mode);
             SessionMode = mode;
             ModeText.text = SessionMode == SessionMode.Solo ? "\uf007" : "\uf500";
         }

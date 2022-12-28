@@ -93,33 +93,53 @@ namespace Ieedo
             var wantedCardIndex = centerCardIndex;
             if (forceGoToCard) wantedCardIndex = forcedCardIndex;
 
-            //var layout = GetComponentInChildren<HorizontalLayoutGroup>(true);
-            //var padding = layout.padding.left + layout.padding.right;
-            //var size = layout.GetComponent<RectTransform>().rect.width;
-            //var contentPercent = (size - padding) / size;
-            //Debug.LogError("CONTENT PERCENT: " + contentPercent);
+            var layout = GetComponentInChildren<HorizontalLayoutGroup>(true);
+            var spacing = layout.spacing;
+            var size = layout.GetComponent<RectTransform>().rect.width;
 
-            var desiredNormalizedPos = wantedCardIndex * 1f / (Mathf.Max(1f, nCards - 1));
-            //desiredNormalizedPos /= contentPercent;
-            var diff = (desiredNormalizedPos - normalizedPosition.x);
+            var slotSize = CardCollection.HeldSlots[0].GetComponent<RectTransform>().rect.width;
+            //var sizeWithoutPadding = size - padding;
+            var desiredPos = -(layout.padding.left + wantedCardIndex * slotSize + (0.5f * slotSize) + wantedCardIndex * spacing);
+            var actualPos = content.anchoredPosition.x;
+
+            //Debug.LogError("Pos of wanted: " + desiredPos);
+            //var desiredNormalizedPos = desiredPos / size;
+
+            //Debug.LogError("size  " + size + " padding " + padding);
+            //Debug.LogError("DESIRED NORMALIZED  " + desiredNormalizedPos);
+            //Debug.LogError("ACTUAL NORMALIZED  " + normalizedPosition.x);
+            //Debug.LogError("DESIRED POS  " + desiredPos);
+            //Debug.LogError("ACTUAL POS  " + actualPos);
+
+            var normalizedDiff = (desiredPos - actualPos) / size;
 
             var normalizedStep = 1f / Mathf.Max(1,(nCards -1)*2);
-            // WIth 2, it works with 2.
-            // with 3 cards, it works with 4.
-            // With 4 cards, nroamlized is 0.25, but should be 0.1666 (1/6)
-            // With 5 cards, nroamlized is 0.2, but should be 0.125 (1/8)
+            // With 2, it works with 2.
+            // With 3 cards, it works with 4.
+            // With 4 cards, normalized is 0.25, but should be 0.1666 (1/6)
+            // With 5 cards, normalized is 0.2, but should be 0.125 (1/8)
             //Debug.LogError("CEnter card index " + centerCardIndex);
             //Debug.LogError("desiredNormalizedPos " + desiredNormalizedPos);
             //Debug.LogError("Diff " + diff);
             //Debug.LogError("Normalized step " + normalizedStep);
-            float ratio = Mathf.Abs(diff) / normalizedStep;
-            if (nCards == 1) ratio = 0f;
-            var scaleFactor = CardCollection.CardScale * (0.3f * (1 - ratio));
 
-            scaleFactor = Mathf.Max(0, scaleFactor);
-            //Debug.LogError("Scale factor " + scaleFactor);
+            float ratio = Mathf.Abs(normalizedDiff) / normalizedStep;
 
-            CardCollection.HeldSlots[centerCardIndex].transform.localScale = Vector3.one * (baseScale + scaleFactor);
+            var camera = GameObject.Find("CameraUI").GetComponent<Camera>();    // TODO: cache this
+            for (var index = 0; index < CardCollection.HeldCards.Count; index++)
+            {
+                var card = CardCollection.HeldCards[index];
+                var screenPos = camera.WorldToScreenPoint(card.transform.position);
+                var normalizedScreenPos = screenPos.x / Screen.width;
+                //card.Title.SetTextRaw(normalizedScreenPos.ToString("F"));
+                //if (index == centerCardIndex) card.Title.SetTextRaw("CENTER " + normalizedScreenPos);
+
+                var scaleRatio = 1 - Mathf.Abs(normalizedScreenPos - 0.5f)*2f;
+                if (nCards == 1) scaleRatio = 1f;
+                var scaleFactor = CardCollection.CardScale * (0.3f * (scaleRatio));
+                scaleFactor = Mathf.Max(0, scaleFactor);
+                CardCollection.HeldSlots[index].transform.localScale = Vector3.one * (baseScale + scaleFactor);
+            }
 
             CardListScreen.ForceFrontCard(CardCollection.HeldCards[centerCardIndex]);
 
@@ -131,7 +151,7 @@ namespace Ieedo
             // While NOT dragging, change velocity to snap
             if (!hasStoppedPhysicalInertia)
             {
-                if (Mathf.Abs(velocity.x) < StopInertiaThreshold && Math.Abs(Mathf.Sign(accel) - Mathf.Sign(velocity.x)) > 0.01f)
+                if (accel == 0.0f || (Mathf.Abs(velocity.x) < StopInertiaThreshold && Math.Abs(Mathf.Sign(accel) - Mathf.Sign(velocity.x)) > 0.01f))
                 {
                     //Debug.LogError("STOP PHYSICAL INERTIA");
                     hasStoppedPhysicalInertia = true;
@@ -146,7 +166,7 @@ namespace Ieedo
             var ratioThreshold = 0.3f;
             if (!isDragging)
             {
-                v = new Vector2(- Mathf.Sign(diff) * Mathf.Abs(diff) * Mathf.Abs(diff) * SnappingSpeed * nCards * 100000, 0f);
+                v = new Vector2( Mathf.Sign(normalizedDiff) * Mathf.Abs(normalizedDiff) * Mathf.Abs(normalizedDiff) * SnappingSpeed * nCards * 100000, 0f);
                 //Debug.LogError("DESIRED VELOCITY " + v  + "(" + normalizedPosition.x + " to " + desiredNormalizedPos +")");
                 velocity = v;
 
