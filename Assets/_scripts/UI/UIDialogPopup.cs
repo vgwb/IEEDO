@@ -19,7 +19,6 @@ namespace Ieedo
 
             BGImage.color = Statics.Art.ToBG(Statics.Art.UIColor.Color);
             Content.BG.color = Statics.Art.ToTitle(Statics.Art.UIColor.Color);
-            Button.SetColor(Statics.Art.ToTitle(Statics.Art.UIColor.Color));
 
             SetupButton(Button, Close);
             yield return OpenCO();
