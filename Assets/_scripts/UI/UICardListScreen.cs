@@ -145,7 +145,7 @@ namespace Ieedo
         {
             canEdit = choice;
             EditModeCardInteraction.SetActive(canEdit);
-            EditCardButton.SetTextColor(canEdit ? Color.yellow : Color.white);
+            EditCardButton.Text = canEdit ? "\uf14a" : "\uf044";
 
             CardsList.ScrollRect.enabled = !canEdit;
 
