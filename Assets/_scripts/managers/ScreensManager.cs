@@ -120,9 +120,9 @@ namespace Ieedo
 
         #region Custom Flows
 
-        public IEnumerator ShowQuestionFlow(string titleKey, string contentKey, string[] answers, Ref<int> answer)
+        public IEnumerator ShowQuestionFlow(string titleKey, string contentKey, string[] answers, Ref<int> answer, ScreenID customScreenId = ScreenID.Question)
         {
-            var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
+            var questionScreen = Statics.Screens.Get(customScreenId) as UIQuestionPopup;
             yield return questionScreen.ShowQuestionFlow(titleKey, contentKey, answers, answer);
         }
 

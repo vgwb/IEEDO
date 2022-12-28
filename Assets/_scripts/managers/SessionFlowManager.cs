@@ -99,7 +99,7 @@ namespace Ieedo
             var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
             uiTopScreen.SwitchMode(TopBarMode.Special_Assessment);
 
-            var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
+            var questionScreen = Statics.Screens.Get(ScreenID.AssessmentQuestion) as UIQuestionPopup;
             var introScreen = Statics.Screens.Get(ScreenID.AssessmentIntro) as UIAssessmentIntroScreen;
             var categoryIntroScreen = Statics.Screens.Get(ScreenID.AssessmentCategoryIntro) as UIAssessmentCategoryIntroScreen;
             var assessmentHeader = Statics.Screens.Get(ScreenID.AssessmentHeader) as UIAssessmentHeader;
@@ -243,7 +243,7 @@ namespace Ieedo
                     yield break;
             }
 
-            var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
+            var questionScreen = Statics.Screens.Get(ScreenID.AssessmentQuestion) as UIQuestionPopup;
             var assessmentRecapScreen = Statics.Screens.Get(ScreenID.AssessmentRecap) as UIAssessmentRecapPopup;
             var introScreen = Statics.Screens.Get(ScreenID.AssessmentIntro) as UIAssessmentIntroScreen;
             var categoryIntroScreen = Statics.Screens.Get(ScreenID.AssessmentCategoryIntro) as UIAssessmentCategoryIntroScreen;

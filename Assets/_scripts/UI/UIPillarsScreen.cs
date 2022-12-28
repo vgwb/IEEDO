@@ -253,7 +253,7 @@ namespace Ieedo
                 return;
             isFocused = true;
             Camera3D.transform.localPositionTransition(new Vector3(0, 10.5f, -13), 0.5f);
-            Camera3D.transform.localRotationTransition(new Quaternion(0.276550651f, 0.0829450935f, -0.0267626494f, 0.957038999f), 0.5f);
+            Camera3D.transform.localRotationTransition(new Quaternion(0.277820408f,0.00249855802f,-0.00350660528f,0.960623443f), 0.5f);
         }
 
         private void AnimateToUnfocused()

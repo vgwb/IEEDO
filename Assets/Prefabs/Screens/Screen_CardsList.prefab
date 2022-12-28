@@ -2608,6 +2608,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7380397472601391755, guid: 9224fabccd8ff9e42bf67a2d85ba2ac6, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7915357893556443430, guid: 9224fabccd8ff9e42bf67a2d85ba2ac6, type: 3}
       propertyPath: SnappingSpeed
       value: 5

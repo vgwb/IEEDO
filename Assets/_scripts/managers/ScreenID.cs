@@ -18,7 +18,7 @@
         Question,
         Dialog,
         AssessmentRecap,
-        ActivityResult,
+        AssessmentQuestion,
         ActivityContinue,
 
         CountrySelection,
