@@ -120,7 +120,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40546818237161472
-    m_Localized: "{ScoretOunlock} se\xF1ala para desbloquear"
+    m_Localized: '{ScoreToUnlock} puntos para desbloquear'
     m_Metadata:
       m_Items:
       - rid: 5137596889296273419
@@ -227,7 +227,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450242
-    m_Localized: "pr\xF3ximo"
+    m_Localized: "Pr\xF3ximo"
     m_Metadata:
       m_Items: []
   - m_Id: 24994957285646337
@@ -239,7 +239,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37308361241255936
-    m_Localized: OK
+    m_Localized: DE ACUERDO
     m_Metadata:
       m_Items: []
   - m_Id: 43003187146022912
@@ -251,7 +251,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40557809452736512
-    m_Localized: Tocar
+    m_Localized: Jugar
     m_Metadata:
       m_Items: []
   - m_Id: 55672507820089344
@@ -361,7 +361,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 141959887966904320
-    m_Localized: Hogar
+    m_Localized: Casa
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458752

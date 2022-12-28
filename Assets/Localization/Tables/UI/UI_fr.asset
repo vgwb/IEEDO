@@ -24,7 +24,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 55768156938903555
-    m_Localized: un
+    m_Localized: une
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093260
@@ -120,7 +120,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40546818237161472
-    m_Localized: "{Scoretounlock} pointe pour d\xE9verrouiller"
+    m_Localized: "{ScoreToUnlock} pointe pour d\xE9verrouiller"
     m_Metadata:
       m_Items:
       - rid: 5137596889296273423
@@ -146,7 +146,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450240
-    m_Localized: Retour
+    m_Localized: "Arri\xE8re"
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450244
@@ -213,8 +213,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762365927424
-    m_Localized: "Accueillir! L'objectif Ieedo est de vous aider \xE0 r\xE9ussir
-      dans ce pays."
+    m_Localized: "Bienvenue! L'objectif Ieedo est de vous aider \xE0 r\xE9ussir dans
+      ce pays."
     m_Metadata:
       m_Items: []
   - m_Id: 136954244812791808
@@ -228,7 +228,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450242
-    m_Localized: Prochain
+    m_Localized: Suivant
     m_Metadata:
       m_Items: []
   - m_Id: 24994957285646337
@@ -273,7 +273,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450241
-    m_Localized: Recommencez
+    m_Localized: Retenter
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093258
@@ -345,7 +345,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 136953378097618944
-    m_Localized: "O\xF9 es-tu?"
+    m_Localized: "O\xF9 es tu?"
     m_Metadata:
       m_Items: []
   - m_Id: 139790834418524160
@@ -361,7 +361,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 141959887966904320
-    m_Localized: Maison
+    m_Localized: Domicile
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458752

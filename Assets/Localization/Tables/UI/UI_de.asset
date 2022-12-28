@@ -77,7 +77,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 55768156938903554
-    m_Localized: Gut erledigt!
+    m_Localized: Gut gemacht!
     m_Metadata:
       m_Items: []
   - m_Id: 55768156938903553
@@ -111,7 +111,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40544570652254208
-    m_Localized: Gut erledigt!
+    m_Localized: Gut gemacht!
     m_Metadata:
       m_Items: []
   - m_Id: 55672507820089346
@@ -120,7 +120,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40546818237161472
-    m_Localized: '{Scoretounlock} Punkte zum Freischalten'
+    m_Localized: '{ScoreToUnlock} Punkte zum Freischalten'
     m_Metadata:
       m_Items:
       - rid: 5137596889296273417
@@ -193,7 +193,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48447397204844544
-    m_Localized: Fertig
+    m_Localized: Erledigt
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450243
@@ -345,7 +345,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 136953378097618944
-    m_Localized: Wo sind Sie?
+    m_Localized: Wo bist du?
     m_Metadata:
       m_Items: []
   - m_Id: 139790834418524160
@@ -362,7 +362,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 141959887966904320
-    m_Localized: Heim
+    m_Localized: Zuhause
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458752
@@ -378,7 +378,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458755
-    m_Localized: Fertig
+    m_Localized: Erledigt
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458756
