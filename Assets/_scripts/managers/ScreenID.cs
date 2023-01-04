@@ -20,6 +20,7 @@
         AssessmentRecap,
         AssessmentQuestion,
         ActivityContinue,
+        ActivityIntro,
 
         CountrySelection,
         LanguageSelection,

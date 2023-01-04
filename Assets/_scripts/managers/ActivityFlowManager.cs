@@ -69,6 +69,10 @@ namespace Ieedo
 
             var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
             uiTopScreen.SwitchMode(TopBarMode.Special_Activity);
+
+            var introScreen = Statics.Screens.Get(ScreenID.ActivityIntro) as UIActivityIntroScreen;
+            introScreen.gameObject.SetActive(true);
+            StartCoroutine(introScreen.ShowIntro());
         }
 
         private void CloseActivity()

@@ -11,7 +11,7 @@ namespace Ieedo
 
         public Image Image;
         public UIText Title;
-        public TextMeshProUGUI ScoreText;
+        public UIText ScoreText;
         public UIButton LaunchButton;
 
         public UIFillBar ProgressBar;
