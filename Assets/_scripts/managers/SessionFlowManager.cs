@@ -201,6 +201,12 @@ namespace Ieedo
             }
 
             // Refresh pillars
+            var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
+            foreach (PillarView pillarView in uiPillarsScreen.PillarsManager.PillarViews)
+            {
+                pillarView.ResetCardPlacement();
+            }
+
             Statics.Screens.GoTo(ScreenID.Pillars);
             IsInsideAssessment = false;
 

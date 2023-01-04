@@ -64,6 +64,11 @@ namespace Ieedo
             }
         }
 
+        public void ResetCardPlacement()
+        {
+            nCurrentCards = 0; // @note: this will trigger the appearance of all cards from scracth
+        }
+
         private int nCurrentCards;
         public void ShowData(PillarData data, bool showOnlyNewlyAddedCards)
         {
