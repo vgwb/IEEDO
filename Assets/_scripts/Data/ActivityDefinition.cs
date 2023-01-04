@@ -10,6 +10,8 @@ namespace Ieedo
         public LocString Title;
         public ActivityType Type;
         public ScoreType ScoreType;
+        public ActivityCategory Category;
+        public ActivitySkills Skills;
         public Sprite Image;
         public string SceneName;
         public int ScoreToUnlock;
