@@ -351,11 +351,11 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 139790834418524160
     m_Localized: Hier sind Ihre Ergebnisse vorerst. Lassen Sie uns sie gemeinsam
-      verbessern.
+      verbessern
     m_Metadata:
       m_Items: []
   - m_Id: 139790834443689984
-    m_Localized: Sie haben keine Karte.
+    m_Localized: Sie haben keine Karte
     m_Metadata:
       m_Items: []
   - m_Id: 141937967278874624
@@ -410,10 +410,25 @@ MonoBehaviour:
     m_Localized: "Sind Sie sicher, dass Sie den Fragebogen verlassen m\xF6chten?"
     m_Metadata:
       m_Items: []
+  - m_Id: 152079645197230080
+    m_Localized: 
+    m_Metadata:
+      m_Items:
+      - rid: 5137596889296273417
+  - m_Id: 152079645394362368
+    m_Localized: 
+    m_Metadata:
+      m_Items:
+      - rid: 5137596889296273417
+  - m_Id: 152079645394362369
+    m_Localized: 
+    m_Metadata:
+      m_Items:
+      - rid: 5137596889296273417
   references:
     version: 2
     RefIds:
     - rid: 5137596889296273417
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 00604c1d4ecb8f0000608ce4b50990000060ccc91d0d9000
+        m_Entries: 00604c1d4ecb8f0000608ce4b50990000060ccc91d0d900000608cada14b1c0200604cb9a14b1c0201604cb9a14b1c02

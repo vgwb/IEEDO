@@ -348,12 +348,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 139790834418524160
-    m_Localized: "H\xE4r \xE4r dina resultat f\xF6r nu. L\xE5t oss f\xF6rb\xE4ttra
-      dem tillsammans."
+    m_Localized: "H\xE4r \xE4r dina resultat f\xF6r nu, l\xE5t oss f\xF6rb\xE4ttra
+      dem tillsammans"
     m_Metadata:
       m_Items: []
   - m_Id: 139790834443689984
-    m_Localized: Du har inget kort.
+    m_Localized: Du har inget kort
     m_Metadata:
       m_Items: []
   - m_Id: 141937967278874624
@@ -408,10 +408,25 @@ MonoBehaviour:
     m_Localized: "\xC4r du s\xE4ker p\xE5 att du vill l\xE4mna fr\xE5geformul\xE4ret?"
     m_Metadata:
       m_Items: []
+  - m_Id: 152079645197230080
+    m_Localized: 
+    m_Metadata:
+      m_Items:
+      - rid: 5137596889296273428
+  - m_Id: 152079645394362369
+    m_Localized: 
+    m_Metadata:
+      m_Items:
+      - rid: 5137596889296273428
+  - m_Id: 152079645394362368
+    m_Localized: 
+    m_Metadata:
+      m_Items:
+      - rid: 5137596889296273428
   references:
     version: 2
     RefIds:
     - rid: 5137596889296273428
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 00608ce4b50990000060ccc91d0d900000604c1d4ecb8f00
+        m_Entries: 00608ce4b50990000060ccc91d0d900000604c1d4ecb8f0000608cada14b1c0201604cb9a14b1c0200604cb9a14b1c02

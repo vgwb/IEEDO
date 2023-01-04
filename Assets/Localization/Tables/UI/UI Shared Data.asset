@@ -115,6 +115,18 @@ MonoBehaviour:
     m_Key: activity_score_to_unlock
     m_Metadata:
       m_Items: []
+  - m_Id: 152079645197230080
+    m_Key: activity_scoretype_highscore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152079645394362368
+    m_Key: activity_scoretype_levelreached
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152079645394362369
+    m_Key: activity_scoretype_numberofplays
+    m_Metadata:
+      m_Items: []
   - m_Id: 24995527358668800
     m_Key: app.subtitle
     m_Metadata:

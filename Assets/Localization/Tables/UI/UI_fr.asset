@@ -349,11 +349,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 139790834418524160
-    m_Localized: "Voici vos r\xE9sultats pour l'instant. Am\xE9lilons-les ensemble."
+    m_Localized: "Voici vos r\xE9sultats pour l'instant, am\xE9liorons-les ensemble"
     m_Metadata:
       m_Items: []
   - m_Id: 139790834443689984
-    m_Localized: Vous n'avez pas de carte.
+    m_Localized: Vous n'avez pas de carte
     m_Metadata:
       m_Items: []
   - m_Id: 141937967278874624
@@ -408,10 +408,25 @@ MonoBehaviour:
     m_Localized: "\xCAtes-vous s\xFBr de vouloir quitter le questionnaire?"
     m_Metadata:
       m_Items: []
+  - m_Id: 152079645197230080
+    m_Localized: 
+    m_Metadata:
+      m_Items:
+      - rid: 5137596889296273423
+  - m_Id: 152079645394362369
+    m_Localized: 
+    m_Metadata:
+      m_Items:
+      - rid: 5137596889296273423
+  - m_Id: 152079645394362368
+    m_Localized: 
+    m_Metadata:
+      m_Items:
+      - rid: 5137596889296273423
   references:
     version: 2
     RefIds:
     - rid: 5137596889296273423
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 00604c1d4ecb8f0000608ce4b50990000060ccc91d0d9000
+        m_Entries: 00604c1d4ecb8f0000608ce4b50990000060ccc91d0d900000608cada14b1c0201604cb9a14b1c0200604cb9a14b1c02

@@ -400,10 +400,25 @@ MonoBehaviour:
     m_Localized: '#VALUE!'
     m_Metadata:
       m_Items: []
+  - m_Id: 152079645197230080
+    m_Localized: 
+    m_Metadata:
+      m_Items:
+      - rid: 5137596889296273427
+  - m_Id: 152079645394362368
+    m_Localized: 
+    m_Metadata:
+      m_Items:
+      - rid: 5137596889296273427
+  - m_Id: 152079645394362369
+    m_Localized: 
+    m_Metadata:
+      m_Items:
+      - rid: 5137596889296273427
   references:
     version: 2
     RefIds:
     - rid: 5137596889296273427
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 00604c1d4ecb8f0000608ce4b50990000060ccc91d0d9000
+        m_Entries: 00604c1d4ecb8f0000608ce4b50990000060ccc91d0d900000608cada14b1c0200604cb9a14b1c0201604cb9a14b1c02
