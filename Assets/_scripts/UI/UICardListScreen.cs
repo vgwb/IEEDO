@@ -145,6 +145,15 @@ namespace Ieedo
         {
             canEdit = choice;
             EditModeCardInteraction.SetActive(canEdit);
+            if (canEdit)
+            {
+                EditModeCardInteraction.transform.SetParent(frontCardUI.transform);
+                EditModeCardInteraction.transform.localPosition = Vector3.zero;
+            }
+            else
+            {
+                EditModeCardInteraction.transform.SetParent(transform);
+            }
             EditCardButton.Text = canEdit ? "\uf14a" : "\uf044";
 
             CardsList.ScrollRect.enabled = !canEdit;
