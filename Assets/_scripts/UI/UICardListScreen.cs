@@ -713,6 +713,9 @@ namespace Ieedo
             var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
             uiTopScreen.SwitchMode(TopBarMode.Special_CardCreation);
 
+            TitleInputField.text = "";
+            DescriptionInputField.text = "";
+
             SetEditing(false);
             CreateCardButton.Hide();
 
