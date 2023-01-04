@@ -32,8 +32,8 @@ namespace Ieedo
         /// Set to FALSE for production.
         /// </summary>
         public bool DebugLogEnabled = true;
-
         public bool DebugSaveProfileInJSON = true;
+        public bool EnableSafeAreaInEditor;
 
         [Header("App")]
         /// <summary>

@@ -15,6 +15,7 @@ MonoBehaviour:
   DebugMode: 0
   DebugLogEnabled: 1
   DebugSaveProfileInJSON: 1
+  EnableSafeAreaInEditor: 0
   Version: 2
   ResetProfileAtVersionMismatch: 1
   SaveCardsAsDefault: 0
