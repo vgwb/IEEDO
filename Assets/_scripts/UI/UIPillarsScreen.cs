@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using Lean.Touch;
 using Lean.Transition;
@@ -149,7 +148,11 @@ namespace Ieedo
 
         protected override IEnumerator OnClose()
         {
-            yield return CloseCardList();
+            var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
+            if (IsOpen && uiCardListScreen.CardsList.HeldCards.Count > 0)
+            {
+                yield return CloseCardList();
+            }
             yield return base.OnClose();
         }
 

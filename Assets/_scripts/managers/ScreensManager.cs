@@ -141,7 +141,17 @@ namespace Ieedo
 
         public void GoToTodoList()
         {
-            //StartCoroutine(GoToTodoListCO());
+            AppManager.I.StartCoroutine(GoToTodoListCO());
+        }
+
+        public IEnumerator GoToTodoListCO()
+        {
+            // @note: This fixes the card list closing too early when switching from an open pillar
+            var pillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
+            if (pillarsScreen.IsOpen)
+            {
+                yield return pillarsScreen.CloseCO();
+            }
 
             SoundManager.I.PlaySfx(SfxEnum.click);
             var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
@@ -162,11 +172,6 @@ namespace Ieedo
                 }
             }
         }
-
-        /*private void StartCoroutine(object goToTodoListCO)
-        {
-            throw new NotImplementedException();
-        }*/
 
         #endregion
     }
