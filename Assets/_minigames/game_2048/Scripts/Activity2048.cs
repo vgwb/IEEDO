@@ -46,7 +46,8 @@ namespace minigame.g2048
 
         public void OnSwipe(string direction)
         {
-            SoundManager.I.PlaySfx(SfxEnum.score);
+
+            SoundManager.I.PlaySfx(SfxEnum.click);
             SwipeDirection currentSwipe = SwipeDirection.None;
             switch (direction)
             {
@@ -69,5 +70,13 @@ namespace minigame.g2048
             board.Swipe(currentSwipe);
         }
 
+        public void Score(int score)
+        {
+            SoundManager.I.PlaySfx(SfxEnum.score);
+            Debug.Log("SCORE " + score);
+
+        }
+
     }
 }
+

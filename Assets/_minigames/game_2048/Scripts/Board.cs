@@ -132,7 +132,7 @@ namespace minigame.g2048
             to.value = to.value * 2;
 
             score += (int)to.value;
-            Debug.Log("SCORE " + score);
+            Activity2048.I.Score((int)to.value);
 
             from.value = null;
             if (from.realNodeObj != null)
