@@ -37,6 +37,16 @@ namespace minigame.g2048
             StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win, 10)));
         }
 
+        public void Update()
+        {
+            #if UNITY_EDITOR
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                OnBtnWin();
+            }
+            #endif
+        }
+
         public void OnBtnLose()
         {
             SoundManager.I.PlaySfx(SfxEnum.lose);
