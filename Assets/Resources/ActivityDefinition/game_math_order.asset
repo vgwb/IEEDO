@@ -26,13 +26,13 @@ MonoBehaviour:
       m_LocalVariables: []
     DefaultText: Math Order
   Type: 2
+  ScoreType: 1
   Image: {fileID: 0}
   SceneName: game_math_order
   ScoreToUnlock: 1000
   ScoreOnWin: 100
   ScoreOnLoss: 20
   MaxLevel: 50
-  HasHighScore: 1
   references:
     version: 2
     RefIds: []

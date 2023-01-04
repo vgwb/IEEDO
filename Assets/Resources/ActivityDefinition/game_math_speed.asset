@@ -26,13 +26,13 @@ MonoBehaviour:
       m_LocalVariables: []
     DefaultText: Math Speed
   Type: 2
+  ScoreType: 1
   Image: {fileID: 0}
   SceneName: game_math_speed
   ScoreToUnlock: 2000
   ScoreOnWin: 100
   ScoreOnLoss: 20
   MaxLevel: 50
-  HasHighScore: 1
   references:
     version: 2
     RefIds: []

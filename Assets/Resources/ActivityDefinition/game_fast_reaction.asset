@@ -26,13 +26,13 @@ MonoBehaviour:
       m_LocalVariables: []
     DefaultText: Fast Reaction
   Type: 2
+  ScoreType: 1
   Image: {fileID: 21300000, guid: 0696497972984427b8ccc75c55878eed, type: 3}
   SceneName: game_fast_reaction
   ScoreToUnlock: 500
   ScoreOnWin: 100
   ScoreOnLoss: 20
   MaxLevel: 50
-  HasHighScore: 1
   references:
     version: 2
     RefIds: []

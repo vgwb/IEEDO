@@ -26,13 +26,13 @@ MonoBehaviour:
       m_LocalVariables: []
     DefaultText: Blank example
   Type: 1
+  ScoreType: 3
   Image: {fileID: 21300000, guid: 50758501e29a647029a83039b0a32acd, type: 3}
   SceneName: activity_diary
   ScoreToUnlock: 5500
   ScoreOnWin: 100
   ScoreOnLoss: 20
   MaxLevel: 20
-  HasHighScore: 0
   references:
     version: 2
     RefIds: []
