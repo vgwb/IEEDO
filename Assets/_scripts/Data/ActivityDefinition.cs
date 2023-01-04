@@ -9,13 +9,13 @@ namespace Ieedo
         public ActivityID ID;
         public LocString Title;
         public ActivityType Type;
+        public ScoreType ScoreType;
         public Sprite Image;
         public string SceneName;
         public int ScoreToUnlock;
         public int ScoreOnWin = 100;
         public int ScoreOnLoss = 20;
         public int MaxLevel = 10;
-        public bool HasHighScore;
 
         public int Id => (int)ID;
     }
