@@ -19,7 +19,7 @@ MonoBehaviour:
       m_TableReference:
         m_TableCollectionName: GUID:e48f391c1e96c7040b7091b267464dc8
       m_TableEntryReference:
-        m_KeyId: 104043542756712462
+        m_KeyId: 111594514833760257
         m_Key: 
       m_FallbackState: 0
       m_WaitForCompletion: 0
@@ -27,6 +27,8 @@ MonoBehaviour:
     DefaultText: Merge Numbers
   Type: 2
   ScoreType: 1
+  Category: 0
+  Skills: 0
   Image: {fileID: 21300000, guid: 6345bb855875c4e17b2fb629fff0cd9c, type: 3}
   SceneName: game_mergenumbers
   ScoreToUnlock: 300

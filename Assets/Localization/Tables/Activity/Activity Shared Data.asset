@@ -15,44 +15,44 @@ MonoBehaviour:
   m_TableCollectionName: Activity
   m_TableCollectionNameGuidString: e48f391c1e96c7040b7091b267464dc8
   m_Entries:
-  - m_Id: 104043542744129536
-    m_Key: activity_write_diary
+  - m_Id: 111599790488051712
+    m_Key: daily_write_diary
     m_Metadata:
       m_Items: []
-  - m_Id: 104043542752518144
-    m_Key: activity_write_diary_description
+  - m_Id: 111599790680989696
+    m_Key: daily_write_diary_description
     m_Metadata:
       m_Items: []
-  - m_Id: 111561110342066176
-    m_Key: activity_write_diary_end
+  - m_Id: 111599790680989697
+    m_Key: daily_write_diary_end
     m_Metadata:
       m_Items: []
-  - m_Id: 111552523360264192
-    m_Key: activity_write_diary_prompt
+  - m_Id: 111599790680989698
+    m_Key: daily_write_diary_prompt
     m_Metadata:
       m_Items: []
-  - m_Id: 104043542752518145
-    m_Key: activity_write_friend
+  - m_Id: 111599790680989699
+    m_Key: daily_write_to_friend
     m_Metadata:
       m_Items: []
-  - m_Id: 104043542752518146
-    m_Key: activity_write_friend_description
+  - m_Id: 111599790680989700
+    m_Key: daily_write_to_friend_description
     m_Metadata:
       m_Items: []
-  - m_Id: 111552523372847104
-    m_Key: activity_write_friend_prompt
+  - m_Id: 111599790680989701
+    m_Key: daily_write_to_friend_prompt
     m_Metadata:
       m_Items: []
-  - m_Id: 104043542756712448
-    m_Key: activity_write_myself
+  - m_Id: 111599790680989702
+    m_Key: daily_write_to_myself
     m_Metadata:
       m_Items: []
-  - m_Id: 104043542756712449
-    m_Key: activity_write_myself_description
+  - m_Id: 111599790680989703
+    m_Key: daily_write_to_myself_description
     m_Metadata:
       m_Items: []
-  - m_Id: 111552523372847105
-    m_Key: activity_write_myself_prompt
+  - m_Id: 111599790680989704
+    m_Key: daily_write_to_myself_prompt
     m_Metadata:
       m_Items: []
   - m_Id: 111561110350454784
@@ -87,20 +87,20 @@ MonoBehaviour:
     m_Key: category_word
     m_Metadata:
       m_Items: []
-  - m_Id: 104043542756712450
-    m_Key: game_2048
+  - m_Id: 111594514829565957
+    m_Key: game_play_2048
     m_Metadata:
       m_Items: []
-  - m_Id: 104043542756712451
-    m_Key: game_2048_description
+  - m_Id: 111594514833760256
+    m_Key: game_play_2048_description
     m_Metadata:
       m_Items: []
-  - m_Id: 104043542756712452
-    m_Key: game_fastreaction
+  - m_Id: 111596475083677696
+    m_Key: game_fast_reaction
     m_Metadata:
       m_Items: []
-  - m_Id: 104043542756712453
-    m_Key: game_fastreaction_description
+  - m_Id: 111596475087872000
+    m_Key: game_fast_reaction_description
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712454
@@ -135,12 +135,12 @@ MonoBehaviour:
     m_Key: game_memory_sequence_description
     m_Metadata:
       m_Items: []
-  - m_Id: 104043542756712462
-    m_Key: game_mergenumbers
+  - m_Id: 111594514833760257
+    m_Key: game_merge_numbers
     m_Metadata:
       m_Items: []
-  - m_Id: 104043542756712463
-    m_Key: game_mergenumbers_description
+  - m_Id: 111594514833760258
+    m_Key: game_merge_numbers_description
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712464

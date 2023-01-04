@@ -18,26 +18,6 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 104043542744129536
-    m_Localized: Dagbok
-    m_Metadata:
-      m_Items: []
-  - m_Id: 104043542752518145
-    m_Localized: "Brev till en v\xE4n"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 104043542756712448
-    m_Localized: "Brev till mig sj\xE4lv"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 104043542756712450
-    m_Localized: 2048
-    m_Metadata:
-      m_Items: []
-  - m_Id: 104043542756712452
-    m_Localized: Snabb reaktion
-    m_Metadata:
-      m_Items: []
   - m_Id: 104043542756712454
     m_Localized: Matematikordning
     m_Metadata:
@@ -54,10 +34,6 @@ MonoBehaviour:
     m_Localized: Sekvenser
     m_Metadata:
       m_Items: []
-  - m_Id: 104043542756712462
-    m_Localized: "Sl\xE5 samman nummer"
-    m_Metadata:
-      m_Items: []
   - m_Id: 104043542756712464
     m_Localized: Luffarschack
     m_Metadata:
@@ -68,20 +44,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 104043542756712468
     m_Localized: "\xD6ppen dagbok"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 104043542752518144
-    m_Localized: "Skriv en daglig anteckning i din personliga dagbok.\n\nDetta hj\xE4lper
-      dig att t\xE4nka p\xE5 riktningen i ditt liv och kontrollera framsteg eller
-      problem,"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 104043542752518146
-    m_Localized: "Skriv ett brev till en v\xE4n"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 104043542756712449
-    m_Localized: "Skriv ett brev till dig sj\xE4lv"
     m_Metadata:
       m_Items: []
   - m_Id: 111561110350454784
@@ -114,16 +76,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 111561110350454791
     m_Localized: Ord
-    m_Metadata:
-      m_Items: []
-  - m_Id: 104043542756712451
-    m_Localized: "Flytta blocken f\xF6r att sl\xE5 samman siffror med samma v\xE4rde
-      och g\xF6ra s\xE5 mycket du kan"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 104043542756712453
-    m_Localized: "\xC4r bilden densamma som tidigare eller \xE4r den annorlunda?
-      Svara ja eller nej s\xE5 snabbt du kan"
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712467
@@ -224,6 +176,59 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 111552523372847137
     m_Localized: Gynna
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111594514829565957
+    m_Localized: 2048
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111594514833760256
+    m_Localized: "Flytta blocken f\xF6r att sl\xE5 samman siffror med samma v\xE4rde
+      och g\xF6ra s\xE5 mycket du kan"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111594514833760257
+    m_Localized: "Sl\xE5 samman nummer"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111596475083677696
+    m_Localized: Snabb reaktion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111596475087872000
+    m_Localized: "\xC4r bilden densamma som tidigare eller \xE4r den annorlunda?
+      Svara ja eller nej s\xE5 snabbt du kan"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790488051712
+    m_Localized: Dagbok
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989696
+    m_Localized: "Skriv en daglig anteckning i din personliga dagbok.\n\nDetta hj\xE4lper
+      dig att t\xE4nka p\xE5 riktningen i ditt liv och kontrollera framsteg eller
+      problem,"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989697
+    m_Localized: "Att skriva n\xE5gra rader om hur du k\xE4nner dig varje dag \xE4r
+      en bra praxis f\xF6r ditt v\xE4lbefinnande"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989699
+    m_Localized: "Brev till en v\xE4n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989700
+    m_Localized: "Skriv ett brev till en v\xE4n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989702
+    m_Localized: "Brev till mig sj\xE4lv"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989703
+    m_Localized: "Skriv ett brev till dig sj\xE4lv"
     m_Metadata:
       m_Items: []
   references:

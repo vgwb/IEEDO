@@ -5,16 +5,16 @@
         None = 0,
         Test = 1,
         Write_Diary = 10,
-        Write_2Friend = 11,
-        Write_2myself = 12,
+        Write_To_Friend = 11,
+        Write_To_Myself = 12,
         TicTac = 20,
         Unblock = 21,
-        MemoryPattern = 22,
-        MathOrder = 23,
-        MemorySequence = 24,
-        MergeNumbers = 25,
-        MathSpeed = 26,
-        FastReaction = 27,
-        Game2048 = 28
+        Memory_Pattern = 22,
+        Math_Order = 23,
+        Memory_Sequence = 24,
+        Merge_Numbers = 25,
+        Math_Speed = 26,
+        Fast_Reaction = 27,
+        Play_2048 = 28
     }
 }

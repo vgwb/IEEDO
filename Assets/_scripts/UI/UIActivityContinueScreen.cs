@@ -30,14 +30,14 @@ namespace Ieedo
             {
                 case ActivityType.Daily:
                     Title.Text.Key = new LocalizedString("UI", $"activity_result_daily_complete");
-                    Content.Text.Key =  new LocalizedString("UI", $"{activityDef.SceneName}_end");
+                    Content.Text.Key =  new LocalizedString("Activity", $"{activityDef.LocName}_end");
                     break;
                 case ActivityType.Game:
                     switch (activityDef.ScoreType)
                     {
                         case ScoreType.Highscore:
                             Title.Text.Key = new LocalizedString("UI", $"activity_result_game_over");
-                            Content.Text.Key =  new LocalizedString("UI", $"{activityDef.SceneName}_end");
+                            Content.Text.Key =  new LocalizedString("Activity", $"{activityDef.LocName}_end");
                             NextLevelButton.Key = new LocalizedString("UI", "play_again");
                             break;
                         case ScoreType.LevelReached:

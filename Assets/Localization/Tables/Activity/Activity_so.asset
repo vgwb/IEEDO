@@ -18,26 +18,6 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 104043542744129536
-    m_Localized: Xusuus qor
-    m_Metadata:
-      m_Items: []
-  - m_Id: 104043542752518145
-    m_Localized: Warqad saaxiib saaxiib
-    m_Metadata:
-      m_Items: []
-  - m_Id: 104043542756712448
-    m_Localized: Warqad naftayda
-    m_Metadata:
-      m_Items: []
-  - m_Id: 104043542756712450
-    m_Localized: 2048
-    m_Metadata:
-      m_Items: []
-  - m_Id: 104043542756712452
-    m_Localized: Fal-fal celin degdeg ah
-    m_Metadata:
-      m_Items: []
   - m_Id: 104043542756712454
     m_Localized: Amarka Xisaabta
     m_Metadata:
@@ -54,10 +34,6 @@ MonoBehaviour:
     m_Localized: Isku xigxid
     m_Metadata:
       m_Items: []
-  - m_Id: 104043542756712462
-    m_Localized: Lambarrada isku darka
-    m_Metadata:
-      m_Items: []
   - m_Id: 104043542756712464
     m_Localized: Tic tac toe
     m_Metadata:
@@ -68,23 +44,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 104043542756712468
     m_Localized: Xusuus-qorka furan
-    m_Metadata:
-      m_Items: []
-  - m_Id: 104043542752518144
-    m_Localized: 'Ku qor qoraal maalinle ah xusuus-qoryadaada shaqsiyeed.
-
-
-      Tani
-      waxay kaa caawin doontaa inaad ka fikirto jihada noloshaada oo aad u hubiso
-      horumarka ama dhibaatooyinka,'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 104043542752518146
-    m_Localized: Warqad u qor saaxiib saaxiib
-    m_Metadata:
-      m_Items: []
-  - m_Id: 104043542756712449
-    m_Localized: U qor warqad naftaada
     m_Metadata:
       m_Items: []
   - m_Id: 111561110350454784
@@ -117,16 +76,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 111561110350454791
     m_Localized: Erey
-    m_Metadata:
-      m_Items: []
-  - m_Id: 104043542756712451
-    m_Localized: U dhaqaaji baloogyada si aad ugu biirto nambarada leh isla isla
-      qiimo oo dhib ah ugu badan intii aad karto
-    m_Metadata:
-      m_Items: []
-  - m_Id: 104043542756712453
-    m_Localized: Muuqaalka ma la mid yahay kan kii hore mise waa ka duwan yahay?
-      Jawaab haa ama maya sida ugu dhakhsaha badan ee aad awoodid
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712467
@@ -227,6 +176,62 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 111552523372847137
     m_Localized: Faa'iidooyinka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111594514829565957
+    m_Localized: 2048
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111594514833760256
+    m_Localized: U dhaqaaji baloogyada si aad ugu biirto nambarada leh isla isla
+      qiimo oo dhib ah ugu badan intii aad karto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111594514833760257
+    m_Localized: Lambarrada isku darka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111596475083677696
+    m_Localized: Fal-fal celin degdeg ah
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111596475087872000
+    m_Localized: Muuqaalka ma la mid yahay kan kii hore mise waa ka duwan yahay?
+      Jawaab haa ama maya sida ugu dhakhsaha badan ee aad awoodid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790488051712
+    m_Localized: Xusuus qor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989696
+    m_Localized: 'Ku qor qoraal maalinle ah xusuus-qoryadaada shaqsiyeed.
+
+
+      Tani
+      waxay kaa caawin doontaa inaad ka fikirto jihada noloshaada oo aad u hubiso
+      horumarka ama dhibaatooyinka,'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989697
+    m_Localized: Qorista dhowr khad oo ku saabsan sida aad dareemeyso maalin kasta
+      waa dhaqan wanaagsan oo loogu talagalay wanaaggaaga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989699
+    m_Localized: Warqad saaxiib saaxiib
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989700
+    m_Localized: Warqad u qor saaxiib saaxiib
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989702
+    m_Localized: Warqad naftayda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989703
+    m_Localized: U qor warqad naftaada
     m_Metadata:
       m_Items: []
   references:

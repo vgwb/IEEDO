@@ -20,5 +20,6 @@ namespace Ieedo
         public int MaxLevel = 10;
 
         public int Id => (int)ID;
+        public string LocName => $"{Type}_{ID}".ToLower();
     }
 }

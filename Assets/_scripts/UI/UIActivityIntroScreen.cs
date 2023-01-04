@@ -14,7 +14,7 @@ namespace Ieedo
 
         public IEnumerator ShowIntro()
         {
-            var gameName = Statics.ActivityFlow.CurrentActivity.SceneName;
+            var gameName = $"{Statics.ActivityFlow.CurrentActivity.LocName}";
             Title.Text.Key = new LocalizedString("Activity", $"{gameName}");
             Description.Text.Key =  new LocalizedString("Activity", $"{gameName}_description");
             SetupButton(ContinueButton, Continue);
