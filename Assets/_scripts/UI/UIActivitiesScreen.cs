@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Localization;
+using UnityEngine.Localization.SmartFormat.PersistentVariables;
 
 namespace Ieedo
 {
@@ -48,11 +49,30 @@ namespace Ieedo
                     Statics.Data.SaveProfile();
                 }
                 //                Debug.Log(activityDefinition.ID + " / " + activityDefinition.MaxLevel);
-                ActivityBlocks[i].ProgressBar.SetValue(data.CurrentLevel, activityDefinition.MaxLevel);
-                ActivityBlocks[i].ScoreText.text =
-                  "Lvl: " + data.CurrentLevel
-                  + (activityDefinition.MaxLevel > 1 ? " / " + activityDefinition.MaxLevel : "")
-                  + (activityDefinition.HasHighScore ? "\nHi Score: " + data.MaxScore : "");
+                //ActivityBlocks[i].ProgressBar.SetValue(data.CurrentLevel, activityDefinition.MaxLevel);
+
+
+                var scoreTypeLoc = new LocalizedString("UI", $"activity_scoretype_{activityDefinition.ScoreType.ToString().ToLower()}");
+                switch (activityDefinition.ScoreType)
+                {
+                    case ScoreType.Highscore:
+                        scoreTypeLoc.Arguments = new List<object> { data.MaxScore };
+                        scoreTypeLoc.Add("HighScore", new IntVariable{Value = data.MaxScore});
+                        break;
+                    case ScoreType.LevelReached:
+                        scoreTypeLoc.Arguments = new List<object> { data.CurrentLevel, activityDefinition.MaxLevel };
+                        scoreTypeLoc.Add("CurrentLevel", new IntVariable{Value = data.CurrentLevel});
+                        scoreTypeLoc.Add("MaxLevel", new IntVariable{Value = activityDefinition.MaxLevel});
+                        break;
+                    case ScoreType.NumberOfPlays:
+                        scoreTypeLoc.Arguments = new List<object> { data.Results.Count };
+                        scoreTypeLoc.Add("Count", new IntVariable{Value = data.Results.Count});
+                        break;
+                    case ScoreType.None:
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+                ActivityBlocks[i].ScoreText.Key = scoreTypeLoc;
 
                 // Check unlock state
                 data.Unlocked = Statics.Data.Profile.CurrentScore >= activityDefinition.ScoreToUnlock;
