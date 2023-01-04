@@ -70,6 +70,162 @@ MonoBehaviour:
     m_Localized: "\xD6ppen dagbok"
     m_Metadata:
       m_Items: []
+  - m_Id: 104043542752518144
+    m_Localized: "Skriv en daglig anteckning i din personliga dagbok.\n\nDetta hj\xE4lper
+      dig att t\xE4nka p\xE5 riktningen i ditt liv och kontrollera framsteg eller
+      problem,"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542752518146
+    m_Localized: "Skriv ett brev till en v\xE4n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712449
+    m_Localized: "Skriv ett brev till dig sj\xE4lv"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110350454784
+    m_Localized: "Uppm\xE4rksamhet"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110350454785
+    m_Localized: "K\xE4nslor"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110350454786
+    m_Localized: Flexibilitet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110350454787
+    m_Localized: Matematik
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110350454788
+    m_Localized: Minne
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110350454789
+    m_Localized: "Probleml\xF6sning"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110350454790
+    m_Localized: Fart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110350454791
+    m_Localized: Ord
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712451
+    m_Localized: "Flytta blocken f\xF6r att sl\xE5 samman siffror med samma v\xE4rde
+      och g\xF6ra s\xE5 mycket du kan"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712453
+    m_Localized: "\xC4r bilden densamma som tidigare eller \xE4r den annorlunda?
+      Svara ja eller nej s\xE5 snabbt du kan"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712467
+    m_Localized: "Flytta det r\xF6da elementet till utg\xE5ngen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649088
+    m_Localized: "Uppdelad uppm\xE4rksamhet"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649090
+    m_Localized: "Selektiv uppm\xE4rksamhet"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649092
+    m_Localized: Uppgiftsomkoppling
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649094
+    m_Localized: Tidpunkt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649096
+    m_Localized: Lemissighet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649098
+    m_Localized: "Livsk\xE4nsla"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037696
+    m_Localized: "Synf\xE4lt"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037698
+    m_Localized: Logiskt resonemang
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037700
+    m_Localized: "Numerisk ber\xE4kning"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037702
+    m_Localized: Numerisk uppskattning
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037704
+    m_Localized: Probabilistisk resonemang
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037706
+    m_Localized: Fungerande minne
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111552523372847118
+    m_Localized: Planera
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037709
+    m_Localized: Bearbetningshastighet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232000
+    m_Localized: Proportionell resonemang
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232002
+    m_Localized: "L\xE4sf\xF6rst\xE5else"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232004
+    m_Localized: Svarinhibering
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232006
+    m_Localized: Rumsliga orientering
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232008
+    m_Localized: Rumsliga resonemang
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232010
+    m_Localized: "Rumsligt \xE5terkallelse"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111552523372847126
+    m_Localized: Visualisering
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232013
+    m_Localized: "Ordf\xF6rr\xE5dskompetens"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232015
+    m_Localized: Verbal flytande
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111552523372847137
+    m_Localized: Gynna
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

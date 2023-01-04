@@ -32,7 +32,7 @@ MonoBehaviour:
   ScoreToUnlock: 0
   ScoreOnWin: 50
   ScoreOnLoss: 0
-  MaxLevel: 100
+  MaxLevel: 30
   references:
     version: 2
     RefIds: []

@@ -23,7 +23,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 104043542752518144
-    m_Localized: Write a daily note
+    m_Localized: 'Write a daily note in your personal diary.
+
+
+      This will help
+      you thinking about the direction of your life and check progressions or problems,'
     m_Metadata:
       m_Items: []
   - m_Id: 104043542752518145
@@ -39,7 +43,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712449
-    m_Localized: Write a letter to yoruself
+    m_Localized: Write a letter to yourself
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712450
@@ -47,7 +51,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712451
-    m_Localized: Move the blocks and score as much as you can
+    m_Localized: Move the blocks to merge numbers with the same value and score as
+      much as you can
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712452
@@ -55,7 +60,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712453
-    m_Localized: Is the mage the same as previous one? be fast!
+    m_Localized: Is the image the same as previous one or is it different? Answer
+      Yes or No as fast as you can
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712454
@@ -63,7 +69,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712455
-    m_Localized: Select the numbers in ascending or descending order
+    m_Localized: Select the numbers in ascending or descending order as indicated
+      by the arrow.
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712456
@@ -79,7 +86,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712459
-    m_Localized: Can you remember what you saw?
+    m_Localized: Can you remember the image that you saw?
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712460
@@ -87,7 +94,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712461
-    m_Localized: Can you repeat the sequence?
+    m_Localized: Can you repeat the sequence of blocks?
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712462
@@ -95,7 +102,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712463
-    m_Localized: 3 equal numbers will merge. can you score to the max?
+    m_Localized: 3 equal adiacent numbers will merge and generate an higher number.
+      Score as much as you can.
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712464
@@ -116,6 +124,258 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 104043542756712468
     m_Localized: Open Diary
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111552523360264192
+    m_Localized: Enter your thoughts and feelings here...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111552523372847104
+    m_Localized: Write here what you want to write to a friend...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111552523372847105
+    m_Localized: Write here what you want to write to your future self...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111552523372847118
+    m_Localized: Planning
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111552523372847126
+    m_Localized: Visualization
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111552523372847137
+    m_Localized: Benefits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110350454784
+    m_Localized: Attention
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110350454785
+    m_Localized: Emotions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110350454786
+    m_Localized: Flexibility
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110350454787
+    m_Localized: Math
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110350454788
+    m_Localized: Memory
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110350454789
+    m_Localized: Problem Solving
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110350454790
+    m_Localized: Speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110350454791
+    m_Localized: Word
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649088
+    m_Localized: Divided Attention
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649089
+    m_Localized: Divided attention refers to the ability to simultaneously respond
+      to multiple tasks or task demands.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649090
+    m_Localized: Selective Attention
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649091
+    m_Localized: The ability to focus on relevant information while ignoring irrelevant
+      distractions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649092
+    m_Localized: Task Switching
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649093
+    m_Localized: Task switching is the process of adapting to changing circumstances,
+      switching from one goal to another.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649094
+    m_Localized: Timing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649095
+    m_Localized: Timing is the ability to synchronize activities and accurately keep
+      time.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649096
+    m_Localized: Inclusiveness
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649097
+    m_Localized: The feeling of being accepted as part of a community
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649098
+    m_Localized: Sense of life
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649099
+    m_Localized: Refers to the meaning and to the good direction of what we are doing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037696
+    m_Localized: Field of View
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037697
+    m_Localized: Field of view refers to the area over which you can absorb visual
+      information without moving your eyes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037698
+    m_Localized: Logical Reasoning
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037699
+    m_Localized: 'Logical reasoning is the ability to combine multiple cognitive
+      processes to recognize patterns, draw conclusions, and make decisions. '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037700
+    m_Localized: Numerical Calculation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037701
+    m_Localized: Numerical calculation is the ability to perform simple arithmetic
+      operations including addition, subtraction, multiplication, and division.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037702
+    m_Localized: Numerical Estimation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037703
+    m_Localized: "Part of quantitative reasoning is numerical estimation \u2014 the
+      ability to approximate numerical relationships quickly or with incomplete information."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037704
+    m_Localized: Probabilistic Reasoning
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037705
+    m_Localized: Probabilistic reasoning is the ability to analyze and evaluate the
+      likelihood of events.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037706
+    m_Localized: Working Memory
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037707
+    m_Localized: Working memory is used for temporarily storing and manipulating
+      information.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037708
+    m_Localized: Planning involves thinking ahead, evaluating options, and choosing
+      the best course of action.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037709
+    m_Localized: Processing Speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037710
+    m_Localized: Processing speed is the ability to rapidly identify and analyze
+      incoming sensory input.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232000
+    m_Localized: Proportional Reasoning
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232001
+    m_Localized: Proportional reasoning is the ability to compare and convert quantities
+      across different ratios and representations.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232002
+    m_Localized: Reading Comprehension
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232003
+    m_Localized: Reading comprehension is the ability to read, process, and understand
+      written language.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232004
+    m_Localized: Response Inhibition
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232005
+    m_Localized: Response inhibition is the ability to suppress inappropriate responses
+      that interfere with goal-directed actions.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232006
+    m_Localized: Spatial Orientation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232007
+    m_Localized: Spatial orientation, also known as sense of direction, involves
+      being aware of the surrounding environment.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232008
+    m_Localized: Spatial Reasoning
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232009
+    m_Localized: Spatial reasoning is the ability to visualize spatial relationships
+      and analyze them to draw conclusions.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232010
+    m_Localized: Spatial Recall
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232011
+    m_Localized: Spatial recall is a form of memory involved in tracking location
+      and position within an environment.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232012
+    m_Localized: Visualization is the ability to manipulate or imagine the interaction
+      of objects in your mind.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232013
+    m_Localized: Vocabulary Proficiency
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232014
+    m_Localized: Vocabulary proficiency is the ability to understand and use words.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232015
+    m_Localized: Verbal Fluency
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232016
+    m_Localized: Verbal fluency is the ability to rapidly retrieve words from your
+      mental vocabulary.
     m_Metadata:
       m_Items: []
   references:

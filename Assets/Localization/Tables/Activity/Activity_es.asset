@@ -70,6 +70,161 @@ MonoBehaviour:
     m_Localized: Diario abierto
     m_Metadata:
       m_Items: []
+  - m_Id: 104043542752518144
+    m_Localized: "Escriba una nota diaria en su diario personal.\n\nEsto lo ayudar\xE1
+      a pensar en la direcci\xF3n de su vida y verificar las progresiones o problemas,"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542752518146
+    m_Localized: Escribir una carta a un amigo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712449
+    m_Localized: Escribe una carta a ti mismo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110350454784
+    m_Localized: "Atenci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110350454785
+    m_Localized: Emociones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110350454786
+    m_Localized: Flexibilidad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110350454787
+    m_Localized: "Matem\xE1ticas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110350454788
+    m_Localized: Memoria
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110350454789
+    m_Localized: "Resoluci\xF3n de problemas"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110350454790
+    m_Localized: Velocidad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110350454791
+    m_Localized: Palabra
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712451
+    m_Localized: "Mueva los bloques para fusionar n\xFAmeros con el mismo valor y
+      puntaje tanto como pueda"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712453
+    m_Localized: "\xBFLa imagen es la misma que la anterior o es diferente? Respuesta
+      s\xED o no tan r\xE1pido como pueda"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712467
+    m_Localized: Mueva el elemento rojo a la salida.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649088
+    m_Localized: Atencion dividida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649090
+    m_Localized: "Atenci\xF3n selectiva"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649092
+    m_Localized: Cambiar de tarea
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649094
+    m_Localized: "Sincronizaci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649096
+    m_Localized: "Inclusi\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649098
+    m_Localized: Sentido de vida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037696
+    m_Localized: "Campo de visi\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037698
+    m_Localized: Razonamiento logico
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037700
+    m_Localized: "C\xE1lculo num\xE9rico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037702
+    m_Localized: "Estimaci\xF3n num\xE9rica"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037704
+    m_Localized: "Razonamiento probabil\xEDstico"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037706
+    m_Localized: Memoria de trabajo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111552523372847118
+    m_Localized: "Planificaci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037709
+    m_Localized: Velocidad de procesamiento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232000
+    m_Localized: Razonamiento proporcional
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232002
+    m_Localized: "Comprensi\xF3n lectora"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232004
+    m_Localized: "Inhibici\xF3n de la respuesta"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232006
+    m_Localized: "Orientaci\xF3n espacial"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232008
+    m_Localized: Razonamiento espacial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232010
+    m_Localized: Recuerdo espacial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111552523372847126
+    m_Localized: "Visualizaci\xF3n"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232013
+    m_Localized: Competencia de vocabulario
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232015
+    m_Localized: Fluidez verbal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111552523372847137
+    m_Localized: Beneficios
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
