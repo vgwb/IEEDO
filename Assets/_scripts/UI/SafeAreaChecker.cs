@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Ieedo
@@ -16,7 +17,9 @@ namespace Ieedo
 
         public void ApplyVerticalSafeArea()
         {
-            if (Screen.safeArea.x == 0 && Screen.safeArea.y == 0)
+            if (Screen.safeArea.x == 0 && Screen.safeArea.y == 0 
+                && Math.Abs(Screen.safeArea.width - Screen.currentResolution.width) < 0.01f 
+                && Math.Abs(Screen.safeArea.height - Screen.currentResolution.height) < 0.01f)
                 return;
             var bottomPixels = Screen.safeArea.y;
             var topPixel = Screen.currentResolution.height - (Screen.safeArea.y + Screen.safeArea.height);
