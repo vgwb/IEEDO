@@ -70,6 +70,170 @@ MonoBehaviour:
     m_Localized: Xusuus-qorka furan
     m_Metadata:
       m_Items: []
+  - m_Id: 104043542752518144
+    m_Localized: 'Ku qor qoraal maalinle ah xusuus-qoryadaada shaqsiyeed.
+
+
+      Tani
+      waxay kaa caawin doontaa inaad ka fikirto jihada noloshaada oo aad u hubiso
+      horumarka ama dhibaatooyinka,'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178645733376
+    m_Localized: Qorista dhowr khad oo ku saabsan sida aad dareemeyso maalin kasta
+      waa dhaqan wanaagsan oo loogu talagalay wanaaggaaga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542752518146
+    m_Localized: Warqad u qor saaxiib saaxiib
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712449
+    m_Localized: U qor warqad naftaada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178813505539
+    m_Localized: Digtooni
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699840
+    m_Localized: Shucfo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699841
+    m_Localized: Difaac
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699842
+    m_Localized: Xagga maalintii
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699843
+    m_Localized: Xusuus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699844
+    m_Localized: Xalinta dhibaatada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699845
+    m_Localized: Xawaare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699846
+    m_Localized: Erey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712451
+    m_Localized: U dhaqaaji baloogyada si aad ugu biirto nambarada leh isla isla
+      qiimo oo dhib ah ugu badan intii aad karto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712453
+    m_Localized: Muuqaalka ma la mid yahay kan kii hore mise waa ka duwan yahay?
+      Jawaab haa ama maya sida ugu dhakhsaha badan ee aad awoodid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712467
+    m_Localized: U dhaqaaji qaybta gaduudan bixitaanka.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699847
+    m_Localized: Kala qaybiyay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699849
+    m_Localized: Iibiyaha xulashada ah
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699851
+    m_Localized: Hawsha wareejinta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699853
+    m_Localized: Waqti
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699855
+    m_Localized: Kala soo ka fool
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699857
+    m_Localized: Dareenka nolosha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699859
+    m_Localized: Goobta aragtida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699861
+    m_Localized: Sababo macquul ah
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699863
+    m_Localized: Xisaabinta Tirada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699865
+    m_Localized: Qiyaasta nambarada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699867
+    m_Localized: Sababaha suurtagalka ah
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699869
+    m_Localized: Xusuusta Shaqada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699871
+    m_Localized: Qorid wax dhici kara
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699873
+    m_Localized: Xawaareynta xawaaraha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699875
+    m_Localized: Sababta saamiyeed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699877
+    m_Localized: Fahamka aqrinta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699879
+    m_Localized: Xaraashka jawaabta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699881
+    m_Localized: Hanuuninta Xawaaladda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699883
+    m_Localized: Sababaha Xakamaynta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699885
+    m_Localized: Dib-u-soo-celin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699887
+    m_Localized: Qhiye
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699889
+    m_Localized: Aqoonta Erayada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699891
+    m_Localized: Evend Evend
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699893
+    m_Localized: Faa'iidooyinka
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

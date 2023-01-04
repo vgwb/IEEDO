@@ -22,6 +22,10 @@ MonoBehaviour:
     m_Localized: 2048
     m_Metadata:
       m_Items: []
+  - m_Id: 111581178645733376
+    m_Localized: '#VALUE!'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -114,7 +114,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40543073474469888
-    m_Localized: "\u0392\u03B1\u03B8\u03BC\u03BF\u03BB\u03BF\u03B3\u03AF\u03B1 +{score}"
+    m_Localized: "\u0392\u03B1\u03B8\u03BC\u03BF\u03BB\u03BF\u03B3\u03AF\u03B1: {score}"
     m_Metadata:
       m_Items:
       - rid: 5137596889296273418
@@ -514,6 +514,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 5137596889296273418
+  - m_Id: 152127485441236992
+    m_Localized: "\u03A4\u03AD\u03BB\u03BF\u03C2 \u03C0\u03B1\u03B9\u03C7\u03BD\u03B9\u03B4\u03B9\u03BF\u03CD"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

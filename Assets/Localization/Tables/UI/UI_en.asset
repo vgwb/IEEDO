@@ -104,7 +104,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40543073474469888
-    m_Localized: Score +{Score}
+    m_Localized: 'Score: {Score}'
     m_Metadata:
       m_Items:
       - rid: 3992833648747610127
@@ -415,6 +415,14 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 3992833648747610127
+  - m_Id: 152127485441236992
+    m_Localized: Game Over
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152127485453819904
+    m_Localized: 'Highscore: {Score}'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

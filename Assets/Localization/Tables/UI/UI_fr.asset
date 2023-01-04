@@ -102,7 +102,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40543073474469888
-    m_Localized: Score + {score}
+    m_Localized: 'Score: {score}'
     m_Metadata:
       m_Items:
       - rid: 5137596889296273423
@@ -423,6 +423,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 5137596889296273423
+  - m_Id: 152127485441236992
+    m_Localized: "Jeu termin\xE9"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

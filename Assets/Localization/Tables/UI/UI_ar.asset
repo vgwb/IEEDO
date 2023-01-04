@@ -105,7 +105,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40543073474469888
-    m_Localized: "\u0627\u0644\u0646\u062A\u064A\u062C\u0629 {Score}+"
+    m_Localized: "\u0627\u0644\u0646\u062A\u064A\u062C\u0629 {Score}"
     m_Metadata:
       m_Items:
       - rid: 3992833648747610128
@@ -475,6 +475,14 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 3992833648747610128
+  - m_Id: 152127485441236992
+    m_Localized: "\u0627\u0646\u062A\u0647\u062A \u0627\u0644\u0644\u0639\u0628\u0629"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152127485453819904
+    m_Localized: "\u0627\u0644\u0646\u062A\u064A\u062C\u0629 {Score}"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

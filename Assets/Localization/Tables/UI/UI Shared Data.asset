@@ -83,6 +83,10 @@ MonoBehaviour:
     m_Key: activity_result_game_win
     m_Metadata:
       m_Items: []
+  - m_Id: 152127485441236992
+    m_Key: activity_result_game_over
+    m_Metadata:
+      m_Items: []
   - m_Id: 40544588826173440
     m_Key: activity_result_lose
     m_Metadata:
@@ -97,6 +101,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 40543073474469888
     m_Key: activity_result_score
+    m_Metadata:
+      m_Items: []
+  - m_Id: 152127485453819904
+    m_Key: activity_result_highscore
     m_Metadata:
       m_Items: []
   - m_Id: 40544906540507136

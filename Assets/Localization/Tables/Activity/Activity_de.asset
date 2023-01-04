@@ -70,6 +70,167 @@ MonoBehaviour:
     m_Localized: Offenes Tagebuch
     m_Metadata:
       m_Items: []
+  - m_Id: 104043542752518144
+    m_Localized: "Schreiben Sie eine t\xE4gliche Notiz in Ihr pers\xF6nliches Tagebuch.\n\nDies
+      wird Ihnen helfen, \xFCber die Richtung Ihres Lebens nachzudenken und Fortschritte
+      oder Probleme zu \xFCberpr\xFCfen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178645733376
+    m_Localized: "Ein paar Zeilen dar\xFCber zu schreiben, wie Sie sich jeden Tag
+      f\xFChlen, ist eine gute Praxis f\xFCr Ihr Wohlbefinden"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542752518146
+    m_Localized: Schreiben Sie einen Brief an einen Freund
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712449
+    m_Localized: Schreiben Sie sich einen Brief an sich
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178813505539
+    m_Localized: Beachtung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699840
+    m_Localized: Emotionen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699841
+    m_Localized: "Flexibilit\xE4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699842
+    m_Localized: Mathematik
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699843
+    m_Localized: Erinnerung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699844
+    m_Localized: "Probleme l\xF6sen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699845
+    m_Localized: Geschwindigkeit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699846
+    m_Localized: Wort
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712451
+    m_Localized: "Bewegen Sie die Bl\xF6cke, um Zahlen mit dem gleichen Wert zu verschmelzen
+      und so viel wie m\xF6glich zu bewerten"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712453
+    m_Localized: "Ist das Bild das gleiche wie vorher oder ist es anders? Antwort
+      Ja oder nein so schnell wie m\xF6glich"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712467
+    m_Localized: Bewegen Sie das rote Element zum Ausgang.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699847
+    m_Localized: Geteilte Aufmerksamkeit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699849
+    m_Localized: Selektive Aufmerksamkeit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699851
+    m_Localized: Aufgabenwechsel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699853
+    m_Localized: Zeitliche Koordinierung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699855
+    m_Localized: "Inklusivit\xE4t"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699857
+    m_Localized: Sinn des Lebens
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699859
+    m_Localized: Sichtfeld
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699861
+    m_Localized: Logische Argumentation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699863
+    m_Localized: Numerische Berechnung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699865
+    m_Localized: "Numerische Sch\xE4tzung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699867
+    m_Localized: Probabilistisches Denken
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699869
+    m_Localized: "Arbeitsged\xE4chtnis"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699871
+    m_Localized: Planung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699873
+    m_Localized: Verarbeitungsgeschwindigkeit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699875
+    m_Localized: Proportionales Denken
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699877
+    m_Localized: "Leseverst\xE4ndnis"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699879
+    m_Localized: Reaktionshemmung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699881
+    m_Localized: "R\xE4umliche Orientierung"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699883
+    m_Localized: "R\xE4umliche Argumentation"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699885
+    m_Localized: "R\xE4umlicher R\xFCckruf"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699887
+    m_Localized: Visualisierung
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699889
+    m_Localized: Wortschatzkenntnis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699891
+    m_Localized: "Verbale Flie\xDFf\xE4higkeit"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111581178817699893
+    m_Localized: Leistungen
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

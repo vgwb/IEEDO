@@ -415,6 +415,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 5137596889296273427
+  - m_Id: 152127485441236992
+    m_Localized: '#VALUE!'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

@@ -101,7 +101,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40543073474469888
-    m_Localized: Dhibcaha + {Dhibcaha}
+    m_Localized: 'Dhibcaha: {Dhibcaha}'
     m_Metadata:
       m_Items:
       - rid: 5137596889296273429
@@ -421,6 +421,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items:
       - rid: 5137596889296273429
+  - m_Id: 152127485441236992
+    m_Localized: Cayaar ka dhan
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
