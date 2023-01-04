@@ -226,7 +226,7 @@ namespace Ieedo
 
                     hasInFront = true;
                     OnCardInFront?.Invoke();
-                    Debug.LogError("IN FRONT " + wantedCardIndex + " (center is " + centerCardIndex + ")");
+                    //Debug.LogError("IN FRONT " + wantedCardIndex + " (center is " + centerCardIndex + ")");
                     forceGoToCard = false;
                     swipeToCardIndex = -1;
                 }
