@@ -93,7 +93,7 @@ namespace Ieedo
 
             CardsList.OnCardClicked = _ =>
             {
-                /*
+                /* @note: this was used only in the old interaction view
                 // Per-Card view mode when we are in pillars view (completed / validated cards)
                 switch (uiCard.Data.Status)
                 {

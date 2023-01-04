@@ -18,9 +18,12 @@ namespace Ieedo.games
 
         protected bool Inited = false;
 
-        // TODO: remove this result, not needed anymore
-        public void CloseActivity(ActivityResult result = null)
+        public void CloseActivity()
         {
+            var introScreen = Statics.Screens.Get(ScreenID.ActivityIntro);
+            if (introScreen.IsOpen)
+                introScreen.Close();
+
             var continueScreen = Statics.Screens.Get(ScreenID.ActivityContinue);
             if (continueScreen.IsOpen)
                 continueScreen.Close();
