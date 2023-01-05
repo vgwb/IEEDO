@@ -27,6 +27,7 @@ namespace Ieedo
         public override void OnBeginDrag(PointerEventData eventData)
         {
             isDragging = true;
+            hasInFront = false;
             swipeStartPos = content.anchoredPosition.x;
 
             var nCards = CardCollection.HeldCards.Count;
