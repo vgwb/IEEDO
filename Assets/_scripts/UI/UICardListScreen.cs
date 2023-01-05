@@ -82,8 +82,8 @@ namespace Ieedo
                 createCardFlowCo = StartCoroutine(CreateCardFlowCO());
             });
 
-            //cardScroll.OnDragStart = () => SetButtonsVisible(false);
-            CardsList.ScrollRect.OnCardNotInFront = () => SetButtonsVisible(false);
+            CardsList.ScrollRect.OnDragStart = () => SetButtonsVisible(false);
+            /*CardsList.ScrollRect.OnCardNotInFront = () => SetButtonsVisible(false);*/
             CardsList.ScrollRect.OnCardInFront = () =>
             {
                 SetButtonsVisible(true);

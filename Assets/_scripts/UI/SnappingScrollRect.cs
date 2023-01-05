@@ -81,7 +81,6 @@ namespace Ieedo
             Debug.LogError("FORCE NORMALIZED POS: " + normalizedPosition);
         }
 
-        public float StopInertiaThreshold = 5f;
         public float SnappingSpeed = 1f;
 
         private int prevCardIndex;

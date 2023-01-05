@@ -80,7 +80,7 @@ MonoBehaviour:
   CardCollection: {fileID: 6437316955223693130}
   CardListScreen: {fileID: 0}
   StopInertiaThreshold: 50
-  SnappingSpeed: 0.5
+  SnappingSpeed: 2
   CanScroll: 1
 --- !u!1 &2067036017059844308
 GameObject:
