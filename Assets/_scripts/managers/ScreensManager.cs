@@ -141,6 +141,9 @@ namespace Ieedo
 
         public void GoToTodoList()
         {
+            var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
+            uiCardListScreen.SaveStartPos();
+
             AppManager.I.StartCoroutine(GoToTodoListCO());
         }
 
@@ -148,13 +151,13 @@ namespace Ieedo
         {
             // @note: This fixes the card list closing too early when switching from an open pillar
             var pillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
+            var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
             if (pillarsScreen.IsOpen)
             {
                 yield return pillarsScreen.CloseCO();
             }
 
             SoundManager.I.PlaySfx(SfxEnum.click);
-            var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
             uiCardListScreen.LoadToDoCards();
             uiCardListScreen.KeepPillars = false;
             GoTo(ScreenID.CardList);
@@ -165,10 +168,8 @@ namespace Ieedo
                 if (uiCardListScreen.CardsList.HeldCards.Count > 0)
                 {
                     uiCardListScreen.OpenFrontView(uiCardListScreen.CardsList.HeldCards[0], UICardListScreen.FrontViewMode.Edit);
-                }
-                else
-                {
-                    //uiCardListScreen.OpenFrontView(null, UICardListScreen.FrontViewMode.Edit);
+                    if (uiCardListScreen.CardsList.HeldCards.Count > 0)
+                        yield return uiCardListScreen.CardsList.ScrollRect.ForceGoToCard(uiCardListScreen.CardsList.HeldCards[0], immediate:true);
                 }
             }
         }

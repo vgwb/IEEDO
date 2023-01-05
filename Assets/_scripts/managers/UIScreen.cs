@@ -56,16 +56,21 @@ namespace Ieedo
             gameObject.SetActive(true);
             if (AutoAnimate)
             {
-                if (startPos == null)
-                {
-                    startPos = new Ref<Vector3>();
-                    startPos.Value = transform.localPosition;
-                }
-                transform.localPosition = DefaultOutEnterPosition;
+                SaveStartPos();
                 transform.localPositionTransition(startPos.Value, animPeriod);
                 yield return new WaitForSeconds(animPeriod);
             }
             yield return OnOpen();
+        }
+
+        public void SaveStartPos()
+        {
+            if (startPos == null)
+            {
+                startPos = new Ref<Vector3>();
+                startPos.Value = transform.localPosition;
+            }
+            transform.localPosition = DefaultOutEnterPosition;
         }
 
         public IEnumerator CloseCO()

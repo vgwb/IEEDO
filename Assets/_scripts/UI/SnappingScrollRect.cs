@@ -79,7 +79,7 @@ namespace Ieedo
         public void ForceToPos(float normalizedPos)
         {
             normalizedPosition = new Vector3(normalizedPos, 1);
-            Debug.LogError("FORCE NORMALIZED POS: " + normalizedPosition);
+            //Debug.LogError("FORCE NORMALIZED POS: " + normalizedPosition);
         }
 
         public float SnappingSpeed = 1f;
@@ -89,12 +89,16 @@ namespace Ieedo
         private Vector2 prevVelocity;
         private int forcedCardIndex;
         private bool forceGoToCard;
+        private bool forceGoToCardImmediate;
 
-        public IEnumerator ForceGoToCard(UICard card)
+        public IEnumerator ForceGoToCard(UICard card, bool immediate = false)
         {
+            //Debug.LogError("FORCE GO TO CARD! Immediate? " + immediate);
             forceGoToCard = true;
+            forceGoToCardImmediate = immediate;
             forcedCardIndex = CardCollection.HeldCards.IndexOf(card);
             while (forceGoToCard) yield return null;
+            enabled = true; // Reset enabled now as we reached the correct card
             hasInFront = true; // Force this, otherwise it will trigger again later
         }
 
@@ -103,8 +107,9 @@ namespace Ieedo
         public void Update()
         {
             if (CardListScreen == null) CardListScreen = FindObjectOfType<UICardListScreen>();
-
             if (!Application.isPlaying) return;
+
+            //Debug.Log(content.anchoredPosition.x);
 
             // When not scrolling, snap to a card and set it as the FRONT one
             var v = velocity;
@@ -122,33 +127,44 @@ namespace Ieedo
             float highestScaleRatio = 0f;
             int highestScaleCardIndex = 0;
             if (camera == null) camera = GameObject.Find("CameraUI").GetComponent<Camera>();
-            for (var index = 0; index < CardCollection.HeldCards.Count; index++)
+            highestScaleCardIndex = ResizeAndFindHighestScaleCardIndex();
+
+            int ResizeAndFindHighestScaleCardIndex()
             {
-                var card = CardCollection.HeldCards[index];
-                var screenPos = camera.WorldToScreenPoint(card.transform.position);
-                var normalizedScreenPos = screenPos.x / Screen.width;
-                //card.Title.SetTextRaw(normalizedScreenPos.ToString("F"));
-                //if (index == centerCardIndex) card.Title.SetTextRaw("CENTER " + normalizedScreenPos);
-
-                var scaleRatio = 1 - Mathf.Abs(normalizedScreenPos - 0.5f)*2f;
-                if (nCards == 1) scaleRatio = 1f;
-                var scaleFactor = CardCollection.CardScale * (0.3f * (scaleRatio));
-                scaleFactor = Mathf.Max(0, scaleFactor);
-                CardCollection.HeldSlots[index].transform.localScale = Vector3.one * (baseScale + scaleFactor);
-
-                if (scaleRatio > highestScaleRatio)
+                for (var index = 0; index < CardCollection.HeldCards.Count; index++)
                 {
-                    highestScaleRatio = scaleRatio;
-                    highestScaleCardIndex = index;
+                    var card = CardCollection.HeldCards[index];
+                    var screenPos = camera.WorldToScreenPoint(card.transform.position);
+                    var normalizedScreenPos = screenPos.x / Screen.width;
+                    //card.Title.SetTextRaw(normalizedScreenPos.ToString("F"));
+                    //if (index == centerCardIndex) card.Title.SetTextRaw("CENTER " + normalizedScreenPos);
+
+                    var scaleRatio = 1 - Mathf.Abs(normalizedScreenPos - 0.5f) * 2f;
+                    if (nCards == 1) scaleRatio = 1f;
+                    var scaleFactor = CardCollection.CardScale * (0.3f * (scaleRatio));
+                    scaleFactor = Mathf.Max(0, scaleFactor);
+                    CardCollection.HeldSlots[index].transform.localScale = Vector3.one * (baseScale + scaleFactor);
+
+                    if (scaleRatio > highestScaleRatio)
+                    {
+                        highestScaleRatio = scaleRatio;
+                        highestScaleCardIndex = index;
+                    }
                 }
+
+                return highestScaleCardIndex;
             }
 
-            var centerCardIndex = highestScaleCardIndex;// nCards == 1 ? 0 : Mathf.RoundToInt(normalizedPosition.x * (nCards-1));
+            var centerCardIndex = highestScaleCardIndex;
             centerCardIndex = Mathf.Clamp(centerCardIndex, 0, nCards - 1);
 
             var wantedCardIndex = centerCardIndex;
-            if (forceGoToCard) wantedCardIndex = forcedCardIndex;
             if (swipeToCardIndex >= 0) wantedCardIndex = swipeToCardIndex;
+            if (forceGoToCard)
+            {
+                swipeToCardIndex = -1; // Override this, forcing has precedence
+                wantedCardIndex = forcedCardIndex;
+            }
 
             var layout = GetComponentInChildren<HorizontalLayoutGroup>(true);
             var spacing = layout.spacing;
@@ -202,7 +218,7 @@ namespace Ieedo
 
             CardListScreen.ForceFrontCard(CardCollection.HeldCards[centerCardIndex]);
 
-            var accel = (velocity.x - prevVelocity.x) / Time.deltaTime;
+            //var accel = (velocity.x - prevVelocity.x) / Time.deltaTime;
             //Debug.Log($"ACC <color={(velocity.x > 0 ? "#00FF00" : "#FF0000")}>{velocity.x}</color> ACC <color={(accel > 0 ? "#00FF00" : "#FF0000")}>{accel}</color>");
 
             prevVelocity = velocity;
@@ -213,18 +229,25 @@ namespace Ieedo
             {
                 v = new Vector2( Mathf.Sign(normalizedDiff) * Mathf.Abs(normalizedDiff) * Mathf.Abs(normalizedDiff) * SnappingSpeed * nCards * 100000, 0f);
                 //Debug.LogError("DESIRED VELOCITY " + v  + "(" + normalizedPosition.x + " to " + desiredNormalizedPos +")");
+                //if (forceGoToCard || swipeToCardIndex >= 0)
                 velocity = v;
 
                 //Debug.LogError("ratio " + ratio);
-                if (ratio < ratioThreshold && (!hasInFront || forceGoToCard) && centerCardIndex == wantedCardIndex)
+                if (forceGoToCardImmediate || (ratio < ratioThreshold && (!hasInFront || forceGoToCard) && centerCardIndex == wantedCardIndex))
                 {
-                    // When we have it in front, if forcing, SNAP IT
+                    // When we have it in front, if forcing, SNAP IT, to make sure it arrives at the correct position
                     if (forceGoToCard)
                     {
                         content.anchoredPosition = new Vector2(desiredPos, content.anchoredPosition.y);
+                        //Debug.LogError("FORCED FINAL POSITION TO " + desiredPos);
+                        velocity = Vector2.zero;// = false; // @note: we always need to disable the scrolling when forcing the movement, or it will mess up the position
+                        prevCardIndex = centerCardIndex;
+                        CardListScreen.ForceFrontCard(CardCollection.HeldCards[wantedCardIndex]);
+                        ResizeAndFindHighestScaleCardIndex();
                     }
 
                     hasInFront = true;
+                    forceGoToCardImmediate = false;
                     OnCardInFront?.Invoke();
                     //Debug.LogError("IN FRONT " + wantedCardIndex + " (center is " + centerCardIndex + ")");
                     forceGoToCard = false;
@@ -245,6 +268,7 @@ namespace Ieedo
             {
                 OnCardSelected?.Invoke();
                 prevCardIndex = centerCardIndex;
+                //Debug.LogError("OnCardSelected");
             }
         }
     }

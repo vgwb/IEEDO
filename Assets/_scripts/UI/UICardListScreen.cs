@@ -82,7 +82,11 @@ namespace Ieedo
                 createCardFlowCo = StartCoroutine(CreateCardFlowCO());
             });
 
-            CardsList.ScrollRect.OnDragStart = () => SetButtonsVisible(false);
+            CardsList.ScrollRect.OnDragStart = () =>
+            {
+                if (!CardsList.ScrollRect.enabled) return;
+                SetButtonsVisible(false);
+            };
             /*CardsList.ScrollRect.OnCardNotInFront = () => SetButtonsVisible(false);*/
             CardsList.ScrollRect.OnCardInFront = () =>
             {
@@ -393,10 +397,9 @@ namespace Ieedo
         protected override IEnumerator OnOpen()
         {
             var cardScroll = CardsList.GetComponentInChildren<SnappingScrollRect>();
-            //cardScroll.ForceToPos(1f);
+            //if (CurrentListViewMode == ListViewMode.ToDo) cardScroll.ForceToPos(0f);
             yield return base.OnOpen();
-
-            if (CardsList.HeldCards.Count > 0) yield return cardScroll.ForceGoToCard(CardsList.HeldCards[0]);
+            if (CardsList.HeldCards.Count > 0) yield return cardScroll.ForceGoToCard(CardsList.HeldCards[0], immediate:true);
         }
 
         protected override IEnumerator OnClose()
@@ -439,8 +442,8 @@ namespace Ieedo
             {
                 case ListViewMode.ToDo:
                     CreateCardButton.gameObject.SetActive(true);
-                    DefaultOutEnterPosition = new Vector3(-2500, 0, 0);
-                    DefaultOutExitPosition = new Vector3(-2500, 0, 0);
+                    DefaultOutEnterPosition = new Vector3(0, -2500, 0);
+                    DefaultOutExitPosition = new Vector3(0, -2500, 0);
                     //rt.anchorMin = new Vector2(0, 0);
                     //rt.anchorMax = new Vector2(0, 1);
                     //rt.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 400);
@@ -519,7 +522,7 @@ namespace Ieedo
             }
 
             FrontView.gameObject.SetActive(true);
-            frontCardUI = uiCard;
+            ForceFrontCard(uiCard);
 
             SwitchToFrontViewMode(viewMode);
         }
@@ -658,7 +661,8 @@ namespace Ieedo
                 }
             }
 
-            frontCardUI = null;
+            ForceFrontCard(null);
+
             prevFrontCardParent = null;
         }
 
@@ -756,10 +760,11 @@ namespace Ieedo
 
             cardUi.transform.localPosition = new Vector3(0, 1000, 0);
             OpenFrontView(cardUi, FrontViewMode.Edit);
-            //frontCardUI = cardUi;   // We need to force it to be the front one, now
             cardUi.AnimateToParent();
 
-            yield return CardsList.ScrollRect.ForceGoToCard(cardUi);
+            yield return CardsList.ScrollRect.ForceGoToCard(cardUi, immediate:true);
+            // Make sure it is set as the correct front one
+            ForceFrontCard(cardUi);
 
             var cardFlowIndex = 0;
             while (cardFlowIndex <= 6)
