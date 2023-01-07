@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: sv
   m_SharedData: {fileID: 11400000, guid: e48f391c1e96c7040b7091b267464dc8, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 3196637817602572296
   m_TableData:
   - m_Id: 104043542756712454
     m_Localized: Matematikordning
@@ -79,7 +80,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712467
-    m_Localized: "Flytta det r\xF6da elementet till utg\xE5ngen."
+    m_Localized: "Flytta det blockerade elementet till utg\xE5ngen genom att ta bort
+      alla hinder"
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649088
@@ -184,7 +186,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 111594514833760256
     m_Localized: "Flytta blocken f\xF6r att sl\xE5 samman siffror med samma v\xE4rde
-      och g\xF6ra s\xE5 mycket du kan"
+      och g\xF6ra s\xE5 mycket du kan. Kan du komma till 2048?"
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760257
@@ -206,7 +208,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 111599790680989696
     m_Localized: "Skriv en daglig anteckning i din personliga dagbok.\n\nDetta hj\xE4lper
-      dig att t\xE4nka p\xE5 riktningen i ditt liv och kontrollera framsteg eller
+      dig att t\xE4nka p\xE5 riktningen i ditt liv och utv\xE4rdera framsteg och
       problem,"
     m_Metadata:
       m_Items: []
@@ -231,6 +233,86 @@ MonoBehaviour:
     m_Localized: "Skriv ett brev till dig sj\xE4lv"
     m_Metadata:
       m_Items: []
+  - m_Id: 112797993814450176
+    m_Localized: "\xC4r du s\xE4ker p\xE5 att du vill sluta?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033088
+    m_Localized: Ledighet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033089
+    m_Localized: Spela
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033090
+    m_Localized: Spela igen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033091
+    m_Localized: "Spela n\xE4sta niv\xE5"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033092
+    m_Localized: Bra gjort!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033093
+    m_Localized: "F\xF6rs\xF6k igen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033094
+    m_Localized: "Spela \xF6ver"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033095
+    m_Localized: "Niv\xE5n avklarad"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033097
+    m_Localized: "Du f\xF6rlorar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227392
+    m_Localized: "Att spela n\xE5gra minuter om dagen hj\xE4lper din hj\xE4rna att
+      h\xE5lla sig i form"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227393
+    m_Localized: "Utg\xE5ng"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227394
+    m_Localized: "Po\xE4ng: {po\xE4ng}"
+    m_Metadata:
+      m_Items:
+      - rid: 3196637817602572296
+  - m_Id: 112797993831227395
+    m_Localized: "Niv\xE5n avklarad"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227396
+    m_Localized: Bra gjort!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227397
+    m_Localized: "Att skriva n\xE5gra rader om hur du k\xE4nner dig varje dag \xE4r
+      en bra praxis f\xF6r ditt v\xE4lbefinnande"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227398
+    m_Localized: "{ScoreToUnlock} Po\xE4ng f\xF6r att l\xE5sa upp"
+    m_Metadata:
+      m_Items:
+      - rid: 3196637817602572296
+  - m_Id: 112797993831227402
+    m_Localized: Kategori
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 3196637817602572296
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 02e0af812dbd900106e0af812dbd9001

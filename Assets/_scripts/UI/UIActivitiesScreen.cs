@@ -52,7 +52,7 @@ namespace Ieedo
                 //ActivityBlocks[i].ProgressBar.SetValue(data.CurrentLevel, activityDefinition.MaxLevel);
 
 
-                var scoreTypeLoc = new LocalizedString("UI", $"activity_scoretype_{activityDefinition.ScoreType.ToString().ToLower()}");
+                var scoreTypeLoc = new LocalizedString("Activity", $"activity_scoretype_{activityDefinition.ScoreType.ToString().ToLower()}");
                 switch (activityDefinition.ScoreType)
                 {
                     case ScoreType.Highscore:
@@ -78,7 +78,7 @@ namespace Ieedo
                 data.Unlocked = Statics.Data.Profile.CurrentScore >= activityDefinition.ScoreToUnlock;
                 ActivityBlocks[i].LockedGO.SetActive(!data.Unlocked);
 
-                var scoreToUnlockLoc = new LocalizedString("UI", "activity_score_to_unlock");
+                var scoreToUnlockLoc = new LocalizedString("Activity", "activity_score_to_unlock");
                 scoreToUnlockLoc.Arguments = new List<object> { activityDefinition };
                 ActivityBlocks[i].LockedText.Key = scoreToUnlockLoc;
             }

@@ -15,10 +15,6 @@ MonoBehaviour:
   m_TableCollectionName: UI
   m_TableCollectionNameGuidString: bf8d5c70485b84a24a821abb0ddb8f7e
   m_Entries:
-  - m_Id: 136884804909817856
-    m_Key: language_name
-    m_Metadata:
-      m_Items: []
   - m_Id: 55768156938903555
     m_Key: a
     m_Metadata:
@@ -63,78 +59,6 @@ MonoBehaviour:
     m_Key: action_test_increase_score
     m_Metadata:
       m_Items: []
-  - m_Id: 55765040134823936
-    m_Key: activity_abort_question
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55765040130629632
-    m_Key: activity_abort_title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55768156938903554
-    m_Key: activity_result_daily_complete
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55768156938903553
-    m_Key: activity_result_game_lose
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55768156938903552
-    m_Key: activity_result_game_win
-    m_Metadata:
-      m_Items: []
-  - m_Id: 152127485441236992
-    m_Key: activity_result_game_over
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40544588826173440
-    m_Key: activity_result_lose
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55672507820089345
-    m_Key: activity_result_play_everyday
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40544604743557120
-    m_Key: activity_result_quit
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40543073474469888
-    m_Key: activity_result_score
-    m_Metadata:
-      m_Items: []
-  - m_Id: 152127485453819904
-    m_Key: activity_result_highscore
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40544906540507136
-    m_Key: activity_result_title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40544570652254208
-    m_Key: activity_result_win
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55672507820089346
-    m_Key: activity_result_write_everyday
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40546818237161472
-    m_Key: activity_score_to_unlock
-    m_Metadata:
-      m_Items: []
-  - m_Id: 152079645197230080
-    m_Key: activity_scoretype_highscore
-    m_Metadata:
-      m_Items: []
-  - m_Id: 152079645394362368
-    m_Key: activity_scoretype_levelreached
-    m_Metadata:
-      m_Items: []
-  - m_Id: 152079645394362369
-    m_Key: activity_scoretype_numberofplays
-    m_Metadata:
-      m_Items: []
   - m_Id: 24995527358668800
     m_Key: app.subtitle
     m_Metadata:
@@ -161,6 +85,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 37308361245450244
     m_Key: continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 136953378097618944
+    m_Key: country_selection
     m_Metadata:
       m_Items: []
   - m_Id: 40535113130074112
@@ -223,12 +151,60 @@ MonoBehaviour:
     m_Key: intro_content_1
     m_Metadata:
       m_Items: []
+  - m_Id: 50660762391093248
+    m_Key: intro_content_2
+    m_Metadata:
+      m_Items: []
   - m_Id: 136954244812791808
     m_Key: intro_instant_translation
     m_Metadata:
       m_Items: []
-  - m_Id: 50660762391093248
-    m_Key: intro_content_2
+  - m_Id: 141959888000458752
+    m_Key: label_activities
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458753
+    m_Key: label_create
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458754
+    m_Key: label_delete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458755
+    m_Key: label_done
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458757
+    m_Key: label_edit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959887966904320
+    m_Key: label_home
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888004653057
+    m_Key: label_switch_view
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141937967278874624
+    m_Key: label_todolist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458756
+    m_Key: label_undone
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888004653056
+    m_Key: label_unvalidate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 141959888000458758
+    m_Key: label_validate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 136884804909817856
+    m_Key: language_name
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450242
@@ -253,18 +229,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 43003190425968640
     m_Key: pillar_validated
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40557809452736512
-    m_Key: play
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55672507820089344
-    m_Key: play_next_level
-    m_Metadata:
-      m_Items: []
-  - m_Id: 153336414290829312
-    m_Key: play_again
     m_Metadata:
       m_Items: []
   - m_Id: 50788328801296384
@@ -307,6 +271,14 @@ MonoBehaviour:
     m_Key: session_question_assessment_content
     m_Metadata:
       m_Items: []
+  - m_Id: 144439249336033280
+    m_Key: session_question_assessment_skip_content
+    m_Metadata:
+      m_Items: []
+  - m_Id: 144439249164066816
+    m_Key: session_question_assessment_skip_title
+    m_Metadata:
+      m_Items: []
   - m_Id: 50660762391093250
     m_Key: session_question_assessment_title
     m_Metadata:
@@ -327,6 +299,14 @@ MonoBehaviour:
     m_Key: start_session
     m_Metadata:
       m_Items: []
+  - m_Id: 139790834443689984
+    m_Key: tutorial_no_cards
+    m_Metadata:
+      m_Items: []
+  - m_Id: 139790834418524160
+    m_Key: tutorial_pillars
+    m_Metadata:
+      m_Items: []
   - m_Id: 48089044644470784
     m_Key: uncomplete_card_confirmation_description
     m_Metadata:
@@ -345,70 +325,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 24994957285646336
     m_Key: yes
-    m_Metadata:
-      m_Items: []
-  - m_Id: 136953378097618944
-    m_Key: country_selection
-    m_Metadata:
-      m_Items: []
-  - m_Id: 139790834418524160
-    m_Key: tutorial_pillars
-    m_Metadata:
-      m_Items: []
-  - m_Id: 139790834443689984
-    m_Key: tutorial_no_cards
-    m_Metadata:
-      m_Items: []
-  - m_Id: 141937967278874624
-    m_Key: label_todolist
-    m_Metadata:
-      m_Items: []
-  - m_Id: 141959887966904320
-    m_Key: label_home
-    m_Metadata:
-      m_Items: []
-  - m_Id: 141959888000458752
-    m_Key: label_activities
-    m_Metadata:
-      m_Items: []
-  - m_Id: 141959888000458753
-    m_Key: label_create
-    m_Metadata:
-      m_Items: []
-  - m_Id: 141959888000458754
-    m_Key: label_delete
-    m_Metadata:
-      m_Items: []
-  - m_Id: 141959888000458755
-    m_Key: label_done
-    m_Metadata:
-      m_Items: []
-  - m_Id: 141959888000458756
-    m_Key: label_undone
-    m_Metadata:
-      m_Items: []
-  - m_Id: 141959888000458757
-    m_Key: label_edit
-    m_Metadata:
-      m_Items: []
-  - m_Id: 141959888000458758
-    m_Key: label_validate
-    m_Metadata:
-      m_Items: []
-  - m_Id: 141959888004653056
-    m_Key: label_unvalidate
-    m_Metadata:
-      m_Items: []
-  - m_Id: 141959888004653057
-    m_Key: label_switch_view
-    m_Metadata:
-      m_Items: []
-  - m_Id: 144439249164066816
-    m_Key: session_question_assessment_skip_title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 144439249336033280
-    m_Key: session_question_assessment_skip_content
     m_Metadata:
       m_Items: []
   m_Metadata:

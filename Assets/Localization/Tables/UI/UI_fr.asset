@@ -68,62 +68,6 @@ MonoBehaviour:
     m_Localized: Augmenter le score +100
     m_Metadata:
       m_Items: []
-  - m_Id: 55765040134823936
-    m_Localized: "\xCAtes-vous s\xFBr de vouloir quitter?"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55765040130629632
-    m_Localized: "Laisser une activit\xE9"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55768156938903554
-    m_Localized: Bien fait!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55768156938903553
-    m_Localized: "Essayer \xE0 nouveau"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55768156938903552
-    m_Localized: "Niveau termin\xE9"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40544588826173440
-    m_Localized: Tu as perdu
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55672507820089345
-    m_Localized: "Jouer quelques minutes par jour aidera votre cerveau \xE0 rester
-      en forme"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40544604743557120
-    m_Localized: Sortir
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40543073474469888
-    m_Localized: 'Score: {score}'
-    m_Metadata:
-      m_Items:
-      - rid: 5137596889296273423
-  - m_Id: 40544906540507136
-    m_Localized: "Niveau termin\xE9"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40544570652254208
-    m_Localized: Bien fait!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55672507820089346
-    m_Localized: "\xC9crire quelques lignes sur la fa\xE7on dont vous vous sentez
-      chaque jour est une bonne pratique pour votre bien-\xEAtre"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40546818237161472
-    m_Localized: "{ScoreToUnlock} pointe pour d\xE9verrouiller"
-    m_Metadata:
-      m_Items:
-      - rid: 5137596889296273423
   - m_Id: 24995527358668800
     m_Localized: Votre assistant virtuel
     m_Metadata:
@@ -251,14 +195,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 43003190425968640
     m_Localized: "Cartes valid\xE9es"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40557809452736512
-    m_Localized: Jouer
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55672507820089344
-    m_Localized: Jouer le niveau suivant
     m_Metadata:
       m_Items: []
   - m_Id: 50788328801296384
@@ -407,29 +343,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 144439249336033280
     m_Localized: "\xCAtes-vous s\xFBr de vouloir quitter le questionnaire?"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 152079645197230080
-    m_Localized: 
-    m_Metadata:
-      m_Items:
-      - rid: 5137596889296273423
-  - m_Id: 152079645394362369
-    m_Localized: 
-    m_Metadata:
-      m_Items:
-      - rid: 5137596889296273423
-  - m_Id: 152079645394362368
-    m_Localized: 
-    m_Metadata:
-      m_Items:
-      - rid: 5137596889296273423
-  - m_Id: 152127485441236992
-    m_Localized: "Jeu termin\xE9"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 153336414290829312
-    m_Localized: Rejouer
     m_Metadata:
       m_Items: []
   references:

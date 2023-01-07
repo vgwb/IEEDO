@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: fr
   m_SharedData: {fileID: 11400000, guid: e48f391c1e96c7040b7091b267464dc8, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 3196637817602572299
   m_TableData:
   - m_Id: 104043542756712454
     m_Localized: "Ordre de math\xE9matiques"
@@ -55,11 +56,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111561110350454786
-    m_Localized: Souplesse
+    m_Localized: "La flexibilit\xE9"
     m_Metadata:
       m_Items: []
   - m_Id: 111561110350454787
-    m_Localized: "Math\xE9matiques"
+    m_Localized: Math
     m_Metadata:
       m_Items: []
   - m_Id: 111561110350454788
@@ -79,7 +80,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712467
-    m_Localized: "D\xE9placez l'\xE9l\xE9ment rouge \xE0 la sortie."
+    m_Localized: "D\xE9placez l'\xE9l\xE9ment bloqu\xE9 \xE0 la sortie en supprimant
+      tous les obstacles"
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649088
@@ -184,7 +186,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 111594514833760256
     m_Localized: "D\xE9placez les blocs pour fusionner les nombres avec la m\xEAme
-      valeur et marquez autant que vous pouvez"
+      valeur et marquez autant que possible. Pouvez-vous arriver \xE0 2048?"
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760257
@@ -201,13 +203,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111599790488051712
-    m_Localized: Journal intime
+    m_Localized: Agenda
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989696
     m_Localized: "\xC9crivez une note quotidienne dans votre journal personnel.\n\nCela
-      vous aidera \xE0 r\xE9fl\xE9chir \xE0 la direction de votre vie et \xE0 v\xE9rifier
-      les progressions ou les probl\xE8mes,"
+      vous aidera \xE0 r\xE9fl\xE9chir \xE0 la direction de votre vie et \xE0 \xE9valuer
+      les progressions et les probl\xE8mes,"
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989697
@@ -231,6 +233,86 @@ MonoBehaviour:
     m_Localized: "\xC9crivez une lettre \xE0 vous-m\xEAme"
     m_Metadata:
       m_Items: []
+  - m_Id: 112797993814450176
+    m_Localized: "\xCAtes-vous s\xFBr de vouloir quitter?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033088
+    m_Localized: "Laisser une activit\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033089
+    m_Localized: Jouer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033090
+    m_Localized: Rejouer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033091
+    m_Localized: Jouer le niveau suivant
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033092
+    m_Localized: Bien fait!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033093
+    m_Localized: "Essayer \xE0 nouveau"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033094
+    m_Localized: "Jeu termin\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033095
+    m_Localized: "Niveau termin\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033097
+    m_Localized: Tu as perdu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227392
+    m_Localized: "Jouer quelques minutes par jour aidera votre cerveau \xE0 rester
+      en forme"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227393
+    m_Localized: Sortir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227394
+    m_Localized: 'Score: {score}'
+    m_Metadata:
+      m_Items:
+      - rid: 3196637817602572299
+  - m_Id: 112797993831227395
+    m_Localized: "Niveau termin\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227396
+    m_Localized: Bien fait!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227397
+    m_Localized: "\xC9crire quelques lignes sur la fa\xE7on dont vous vous sentez
+      chaque jour est une bonne pratique pour votre bien-\xEAtre"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227398
+    m_Localized: "{ScoreToUnlock} pointe pour d\xE9verrouiller"
+    m_Metadata:
+      m_Items:
+      - rid: 3196637817602572299
+  - m_Id: 112797993831227402
+    m_Localized: "Cat\xE9gorie"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 3196637817602572299
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 06e0af812dbd900102e0af812dbd9001

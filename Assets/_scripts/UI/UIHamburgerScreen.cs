@@ -154,7 +154,7 @@ namespace Ieedo
                 case TopBarMode.Special_Activity:
                 {
                     var answer = new Ref<int>();
-                    yield return Statics.Screens.ShowQuestionFlow("UI/activity_abort_title", "UI/activity_abort_question", new[] { "UI/yes", "UI/no" }, answer);
+                    yield return Statics.Screens.ShowQuestionFlow("Activity/activity_abort_title", "Activity/activity_abort_question", new[] { "UI/yes", "UI/no" }, answer);
                     if (answer.Value == 0)
                     {
                         Statics.ActivityFlow.CurrentActivityManager.CloseActivity();

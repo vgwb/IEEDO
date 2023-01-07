@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: de
   m_SharedData: {fileID: 11400000, guid: e48f391c1e96c7040b7091b267464dc8, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 3196637817602572293
   m_TableData:
   - m_Id: 104043542756712454
     m_Localized: Mathematikauftrag
@@ -47,7 +48,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111561110350454784
-    m_Localized: Beachtung
+    m_Localized: Aufmerksamkeit
     m_Metadata:
       m_Items: []
   - m_Id: 111561110350454785
@@ -79,7 +80,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712467
-    m_Localized: Bewegen Sie das rote Element zum Ausgang.
+    m_Localized: Bewegen Sie das blockierte Element zum Ausgang, indem Sie alle Hindernisse
+      entfernen
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649088
@@ -175,7 +177,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111552523372847137
-    m_Localized: Leistungen
+    m_Localized: Vorteile
     m_Metadata:
       m_Items: []
   - m_Id: 111594514829565957
@@ -184,7 +186,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 111594514833760256
     m_Localized: "Bewegen Sie die Bl\xF6cke, um Zahlen mit dem gleichen Wert zu verschmelzen
-      und so viel wie m\xF6glich zu bewerten"
+      und so viel wie m\xF6glich zu bewerten. Kannst du zu 2048 kommen?"
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760257
@@ -207,7 +209,7 @@ MonoBehaviour:
   - m_Id: 111599790680989696
     m_Localized: "Schreiben Sie eine t\xE4gliche Notiz in Ihr pers\xF6nliches Tagebuch.\n\nDies
       wird Ihnen helfen, \xFCber die Richtung Ihres Lebens nachzudenken und Fortschritte
-      oder Probleme zu \xFCberpr\xFCfen."
+      und Probleme zu bewerten."
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989697
@@ -231,6 +233,86 @@ MonoBehaviour:
     m_Localized: Schreiben Sie sich einen Brief an sich
     m_Metadata:
       m_Items: []
+  - m_Id: 112797993814450176
+    m_Localized: "Sind Sie sicher, dass Sie aufh\xF6ren wollen?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033088
+    m_Localized: "Aktivit\xE4t verlassen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033089
+    m_Localized: Spiel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033090
+    m_Localized: Nochmal abspielen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033091
+    m_Localized: "Spielen Sie das n\xE4chste Level"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033092
+    m_Localized: Gut gemacht!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033093
+    m_Localized: Versuchen Sie es nochmal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033094
+    m_Localized: Spiel ist aus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033095
+    m_Localized: Level abgeschlossen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033097
+    m_Localized: Du verlierst
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227392
+    m_Localized: Wenn Sie ein paar Minuten am Tag spielen, bleibt Ihrem Gehirn fit
+      fit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227393
+    m_Localized: Ausgang
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227394
+    m_Localized: 'Punktzahl: {Score}'
+    m_Metadata:
+      m_Items:
+      - rid: 3196637817602572293
+  - m_Id: 112797993831227395
+    m_Localized: Level abgeschlossen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227396
+    m_Localized: Gut gemacht!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227397
+    m_Localized: "Ein paar Zeilen dar\xFCber zu schreiben, wie Sie sich jeden Tag
+      f\xFChlen, ist eine gute Praxis f\xFCr Ihr Wohlbefinden"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227398
+    m_Localized: '{ScoreToUnlock} Punkte zum Freischalten'
+    m_Metadata:
+      m_Items:
+      - rid: 3196637817602572293
+  - m_Id: 112797993831227402
+    m_Localized: Kategorie
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 3196637817602572293
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 02e0af812dbd900106e0af812dbd9001

@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: so
   m_SharedData: {fileID: 11400000, guid: e48f391c1e96c7040b7091b267464dc8, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 3196637817602572297
   m_TableData:
   - m_Id: 104043542756712454
     m_Localized: Amarka Xisaabta
@@ -79,7 +80,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712467
-    m_Localized: U dhaqaaji qaybta gaduudan bixitaanka.
+    m_Localized: U dhaqaaq element-ka xannibay bixitaanka adoo ka saaraysa dhammaan
+      caqabadaha
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649088
@@ -183,8 +185,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760256
-    m_Localized: U dhaqaaji baloogyada si aad ugu biirto nambarada leh isla isla
-      qiimo oo dhib ah ugu badan intii aad karto
+    m_Localized: U dhaqaaji baloogyada si aad ugu biirto nambarada isla qiime isku
+      mid ah oo dhibco ugu badan oo aad u dhisan karto. Ma heli kartaa 2048?
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760257
@@ -209,8 +211,8 @@ MonoBehaviour:
 
 
       Tani
-      waxay kaa caawin doontaa inaad ka fikirto jihada noloshaada oo aad u hubiso
-      horumarka ama dhibaatooyinka,'
+      waxay kaa caawin doontaa inaad ka fikirto jihada noloshaada oo aad qiimeyso
+      miisaaniyada iyo dhibaatooyinka,'
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989697
@@ -234,6 +236,86 @@ MonoBehaviour:
     m_Localized: U qor warqad naftaada
     m_Metadata:
       m_Items: []
+  - m_Id: 112797993814450176
+    m_Localized: Ma hubtaa inaad rabto inaad joojiso?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033088
+    m_Localized: Firfircoonida ka tag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033089
+    m_Localized: Cayaar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033090
+    m_Localized: Mar kale ciyaar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033091
+    m_Localized: Ciyaar heerka xiga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033092
+    m_Localized: Waa hagaag!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033093
+    m_Localized: Mar kale isku day
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033094
+    m_Localized: Cayaar ka dhan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033095
+    m_Localized: Heerka dhameystiran
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033097
+    m_Localized: Waad lumisaa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227392
+    m_Localized: Ciyaar yar dhawr daqiiqo maalintiiba waxay ka caawin doontaa maskaxdaada
+      inuu ku habboon yahay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227393
+    m_Localized: Bixitaan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227394
+    m_Localized: 'Dhibcaha: {Dhibcaha}'
+    m_Metadata:
+      m_Items:
+      - rid: 3196637817602572297
+  - m_Id: 112797993831227395
+    m_Localized: Heerka dhameystiran
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227396
+    m_Localized: Waa hagaag!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227397
+    m_Localized: Qorista dhowr khad oo ku saabsan sida aad dareemeyso maalin kasta
+      waa dhaqan wanaagsan oo loogu talagalay wanaaggaaga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227398
+    m_Localized: '{ScoreToUnlock} dhibco si loo furo'
+    m_Metadata:
+      m_Items:
+      - rid: 3196637817602572297
+  - m_Id: 112797993831227402
+    m_Localized: Dabaqad
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 3196637817602572297
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 02e0af812dbd900106e0af812dbd9001

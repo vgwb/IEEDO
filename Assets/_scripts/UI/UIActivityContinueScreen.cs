@@ -29,21 +29,21 @@ namespace Ieedo
             switch (Statics.ActivityFlow.CurrentActivity.Type)
             {
                 case ActivityType.Daily:
-                    Title.Text.Key = new LocalizedString("UI", $"activity_result_daily_complete");
+                    Title.Text.Key = new LocalizedString("Activity", $"activity_result_daily_complete");
                     Content.Text.Key = new LocalizedString("Activity", $"{activityDef.LocName}_end");
                     break;
                 case ActivityType.Game:
                     switch (activityDef.ScoreType)
                     {
                         case ScoreType.Highscore:
-                            Title.Text.Key = new LocalizedString("UI", $"activity_result_game_over");
-                            Content.Text.Key = new LocalizedString("Activity", $"{activityDef.LocName}_end");
-                            NextLevelButton.Key = new LocalizedString("UI", "play_again");
+                            Title.Text.Key = new LocalizedString("Activity", $"activity_result_game_over");
+                            Content.Text.Key = new LocalizedString("Activity", "activity_result_play_everyday");
+                            NextLevelButton.Key = new LocalizedString("Activity", "activity_play_again");
                             break;
                         case ScoreType.LevelReached:
-                            Title.Text.Key = new LocalizedString("UI", $"activity_result_game_{result.Result.ToString().ToLower()}");
-                            Content.Text.Key = new LocalizedString("UI", "activity_result_play_everyday");
-                            NextLevelButton.Key = new LocalizedString("UI", "play_next_level");
+                            Title.Text.Key = new LocalizedString("Activity", $"activity_result_game_{result.Result.ToString().ToLower()}");
+                            Content.Text.Key = new LocalizedString("Activity", "activity_result_play_everyday");
+                            NextLevelButton.Key = new LocalizedString("Activity", "activity_play_next_level");
                             break;
                     }
                     break;
@@ -54,12 +54,12 @@ namespace Ieedo
 
             ScorePivot.SetActive(Statics.ActivityFlow.CurrentActivity.ScoreType == ScoreType.Highscore);
 
-            var scoreLoc = new LocalizedString("UI", $"activity_result_score");
+            var scoreLoc = new LocalizedString("Activity", $"activity_result_score");
             scoreLoc.Arguments = new List<object> { result.Score };
             scoreLoc.Add("Score", new IntVariable { Value = result.Score });
             CurrentScore.Text.Key = scoreLoc;
 
-            var highscoreLoc = new LocalizedString("UI", $"activity_result_highscore");
+            var highscoreLoc = new LocalizedString("Activity", $"activity_result_highscore");
             highscoreLoc.Arguments = new List<object> { activityData.MaxScore };
             highscoreLoc.Add("HighScore", new IntVariable { Value = activityData.MaxScore });
             HighScore.Text.Key = highscoreLoc;

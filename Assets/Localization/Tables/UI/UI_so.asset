@@ -67,62 +67,6 @@ MonoBehaviour:
     m_Localized: Kordhinta dhibcaha +100
     m_Metadata:
       m_Items: []
-  - m_Id: 55765040134823936
-    m_Localized: Ma hubtaa inaad rabto inaad joojiso?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55765040130629632
-    m_Localized: Firfircoonida ka tag
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55768156938903554
-    m_Localized: Waa hagaag!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55768156938903553
-    m_Localized: Mar kale isku day
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55768156938903552
-    m_Localized: Heerka dhameystiran
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40544588826173440
-    m_Localized: Waad lumisaa
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55672507820089345
-    m_Localized: Ciyaar yar dhawr daqiiqo maalintiiba waxay ka caawin doontaa maskaxdaada
-      inuu ku habboon yahay
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40544604743557120
-    m_Localized: Bixitaan
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40543073474469888
-    m_Localized: 'Dhibcaha: {Dhibcaha}'
-    m_Metadata:
-      m_Items:
-      - rid: 5137596889296273429
-  - m_Id: 40544906540507136
-    m_Localized: Heerka dhameystiran
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40544570652254208
-    m_Localized: Waa hagaag!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55672507820089346
-    m_Localized: Qorista dhowr khad oo ku saabsan sida aad dareemeyso maalin kasta
-      waa dhaqan wanaagsan oo loogu talagalay wanaaggaaga
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40546818237161472
-    m_Localized: '{ScoreToUnlock} dhibco si loo furo'
-    m_Metadata:
-      m_Items:
-      - rid: 5137596889296273429
   - m_Id: 24995527358668800
     m_Localized: Kaaliyahaaga Virtual
     m_Metadata:
@@ -249,14 +193,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 43003190425968640
     m_Localized: Kaararka la ansaxiyay
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40557809452736512
-    m_Localized: Cayaar
-    m_Metadata:
-      m_Items: []
-  - m_Id: 55672507820089344
-    m_Localized: Ciyaar heerka xiga
     m_Metadata:
       m_Items: []
   - m_Id: 50788328801296384
@@ -404,29 +340,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 144439249336033280
     m_Localized: Ma hubtaa inaad rabto inaad ka baxdo foomka su'aalaha?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 152079645197230080
-    m_Localized: 
-    m_Metadata:
-      m_Items:
-      - rid: 5137596889296273429
-  - m_Id: 152079645394362369
-    m_Localized: 
-    m_Metadata:
-      m_Items:
-      - rid: 5137596889296273429
-  - m_Id: 152079645394362368
-    m_Localized: 
-    m_Metadata:
-      m_Items:
-      - rid: 5137596889296273429
-  - m_Id: 152127485441236992
-    m_Localized: Cayaar ka dhan
-    m_Metadata:
-      m_Items: []
-  - m_Id: 153336414290829312
-    m_Localized: Mar kale ciyaar
     m_Metadata:
       m_Items: []
   references:

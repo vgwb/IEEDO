@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: e48f391c1e96c7040b7091b267464dc8, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 3196637817602572291
   m_TableData:
   - m_Id: 104043542756712454
     m_Localized: Math order
@@ -48,7 +49,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712461
-    m_Localized: Can you repeat the sequence of blocks?
+    m_Localized: Can you repeat the sequence?
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712464
@@ -64,7 +65,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712467
-    m_Localized: Move the red element to the exit.
+    m_Localized: Move the blocked element to the exit by removing all obstacles
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712468
@@ -317,7 +318,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 111594514833760256
     m_Localized: Move the blocks to merge numbers with the same value and score as
-      much as you can
+      much as you can. Can you get to 2048?
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760257
@@ -347,7 +348,8 @@ MonoBehaviour:
 
 
       This will help
-      you thinking about the direction of your life and check progressions or problems,'
+      you thinking about the direction of your life and evaluate progressions and
+      problems,'
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989697
@@ -380,9 +382,108 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989704
-    m_Localized: Write here what you want to write to your future self...
+    m_Localized: Write here a letter tto yourself
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993814450176
+    m_Localized: Are you sure you want to quit?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033088
+    m_Localized: Leave Activity
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033089
+    m_Localized: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033090
+    m_Localized: Play Again
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033091
+    m_Localized: Play Next Level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033092
+    m_Localized: Well done!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033093
+    m_Localized: Try Again
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033094
+    m_Localized: Game Over
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033095
+    m_Localized: Level Completed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033096
+    m_Localized: 'Highscore: {Score}'
+    m_Metadata:
+      m_Items:
+      - rid: 3196637817602572291
+  - m_Id: 112797993827033097
+    m_Localized: You lose
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227392
+    m_Localized: Playing a few minutes a day will help your brain stay fit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227393
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227394
+    m_Localized: 'Score: {Score}'
+    m_Metadata:
+      m_Items:
+      - rid: 3196637817602572291
+  - m_Id: 112797993831227395
+    m_Localized: Level Completed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227396
+    m_Localized: Well done!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227397
+    m_Localized: Writing a few lines about how you feel every day is a good practice
+      for your wellbeing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227398
+    m_Localized: '{ScoreToUnlock} points to unlock'
+    m_Metadata:
+      m_Items:
+      - rid: 3196637817602572291
+  - m_Id: 112797993831227399
+    m_Localized: 'Highscore: {HighScore}'
+    m_Metadata:
+      m_Items:
+      - rid: 3196637817602572291
+  - m_Id: 112797993831227400
+    m_Localized: 'Level: {CurrentLevel} / {MaxLevel}'
+    m_Metadata:
+      m_Items:
+      - rid: 3196637817602572291
+  - m_Id: 112797993831227401
+    m_Localized: Played {Count}
+    m_Metadata:
+      m_Items:
+      - rid: 3196637817602572291
+  - m_Id: 112797993831227402
+    m_Localized: Category
     m_Metadata:
       m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 3196637817602572291
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 08e06f812dbd900102e0af812dbd900107e0af812dbd900108e0af812dbd900109e0af812dbd900106e0af812dbd9001

@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: es
   m_SharedData: {fileID: 11400000, guid: e48f391c1e96c7040b7091b267464dc8, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 3196637817602572295
   m_TableData:
   - m_Id: 104043542756712454
     m_Localized: "Pedido de matem\xE1ticas"
@@ -79,7 +80,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712467
-    m_Localized: Mueva el elemento rojo a la salida.
+    m_Localized: "Mueva el elemento bloqueado a la salida eliminando todos los obst\xE1culos"
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649088
@@ -184,7 +185,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 111594514833760256
     m_Localized: "Mueva los bloques para fusionar n\xFAmeros con el mismo valor y
-      puntaje tanto como pueda"
+      puntaje tanto como pueda. \xBFPuedes llegar al 2048?"
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760257
@@ -206,7 +207,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 111599790680989696
     m_Localized: "Escriba una nota diaria en su diario personal.\n\nEsto lo ayudar\xE1
-      a pensar en la direcci\xF3n de su vida y verificar las progresiones o problemas,"
+      a pensar en la direcci\xF3n de su vida y evaluar las progresiones y problemas,"
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989697
@@ -230,6 +231,86 @@ MonoBehaviour:
     m_Localized: Escribe una carta a ti mismo
     m_Metadata:
       m_Items: []
+  - m_Id: 112797993814450176
+    m_Localized: "\xBFSeguro que quieres salir?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033088
+    m_Localized: Dejar la actividad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033089
+    m_Localized: Tocar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033090
+    m_Localized: Juega de nuevo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033091
+    m_Localized: Juega el siguiente nivel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033092
+    m_Localized: "\xA1Bien hecho!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033093
+    m_Localized: Intentar otra vez
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033094
+    m_Localized: Juego terminado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033095
+    m_Localized: Nivel completado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033097
+    m_Localized: "T\xFA pierdes"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227392
+    m_Localized: "Jugar unos minutos al d\xEDa ayudar\xE1 a que su cerebro se mantenga
+      en forma"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227393
+    m_Localized: Salida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227394
+    m_Localized: 'Score: {Score}'
+    m_Metadata:
+      m_Items:
+      - rid: 3196637817602572295
+  - m_Id: 112797993831227395
+    m_Localized: Nivel completado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227396
+    m_Localized: "\xA1Bien hecho!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227397
+    m_Localized: "Escribir algunas l\xEDneas sobre c\xF3mo te sientes todos los d\xEDas
+      es una buena pr\xE1ctica para tu bienestar"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227398
+    m_Localized: '{ScoreToUnlock} puntos para desbloquear'
+    m_Metadata:
+      m_Items:
+      - rid: 3196637817602572295
+  - m_Id: 112797993831227402
+    m_Localized: "Categor\xEDa"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 3196637817602572295
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 02e0af812dbd900106e0af812dbd9001
