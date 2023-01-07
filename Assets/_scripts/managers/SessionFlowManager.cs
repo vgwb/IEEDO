@@ -146,6 +146,7 @@ namespace Ieedo
                 foreach (var question in questions)
                 {
 #if UNITY_EDITOR
+                    // SKIP SHORTCUT
                     if (Input.GetKey(KeyCode.S))
                         break;
 #endif
@@ -165,6 +166,7 @@ namespace Ieedo
                 assessmentPercentages[(int)category.ID] = totValue / nQuestionsCategory;
                 overallValue += assessmentPercentages[(int)category.ID];
 #if UNITY_EDITOR
+                // SKIP SHORTCUT
                 if (Input.GetKey(KeyCode.S))
                 {
                     foreach (var cd in categories)
