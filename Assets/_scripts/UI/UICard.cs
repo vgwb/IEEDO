@@ -97,7 +97,7 @@ namespace Ieedo
                 StampGO.GetComponent<Animation>().clip = pulseIconClip;
                 StampIcon.text = Regex.Unescape("\uf071");
             }
-            else if(hasExpirationDate && data.IsDueToday)
+            else if (hasExpirationDate && data.IsDueToday)
             {
                 DateBase.color = Color.white;
                 StampGO.SetActive(true);

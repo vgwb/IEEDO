@@ -25,14 +25,14 @@ namespace Ieedo
                 var category = categories[iCategory];
 
                 Categories[iCategory].Title.Key = category.Title.Key;
-                Categories[iCategory].Value.SetValue(Mathf.RoundToInt(assessmentPercentages[category.Id]*100), 100);
+                Categories[iCategory].Value.SetValue(Mathf.RoundToInt(assessmentPercentages[category.Id] * 100), 100);
                 Categories[iCategory].BG.color = category.Color;
                 Categories[iCategory].Value.FillImage.color = category.Color.SetValue(1f);
                 Categories[iCategory].Value.BGImage.color = category.Color.SetValue(0.3f);
             }
 
             Overall.Title.Key = new LocalizedString("UI", "assessment_recap_overall");
-            Overall.Value.SetValue(Mathf.RoundToInt(overallValue*100), 100);
+            Overall.Value.SetValue(Mathf.RoundToInt(overallValue * 100), 100);
             Overall.BG.color = Color.black;
             Overall.Value.FillImage.color = Color.black.SetValue(1f);
             Overall.Value.BGImage.color = Color.black.SetValue(0.3f);

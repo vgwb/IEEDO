@@ -28,7 +28,8 @@ namespace Ieedo
             get
             {
                 var locale = Key.LocaleOverride;
-                if (locale == null) locale = LocalizationSettings.Instance.GetSelectedLocale();
+                if (locale == null)
+                    locale = LocalizationSettings.Instance.GetSelectedLocale();
                 return locale.Identifier.Code == "ar"
                        || locale.Identifier.Code == "fa"
                        || locale.Identifier.Code == "ps";
@@ -47,7 +48,8 @@ namespace Ieedo
                 }
                 else
                 {
-                    if (!IgnoreRTL) alignment = LeftizeAlignment(alignment);
+                    if (!IgnoreRTL)
+                        alignment = LeftizeAlignment(alignment);
                     text = value;
                 }
             }

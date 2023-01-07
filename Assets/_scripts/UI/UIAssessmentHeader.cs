@@ -13,7 +13,8 @@ namespace Ieedo
             Title.Text.Key = category.Title.Key;
             Title.BG.color = category.Color;
 
-            if (!IsOpen) yield return OpenCO();
+            if (!IsOpen)
+                yield return OpenCO();
         }
     }
 }

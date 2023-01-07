@@ -13,7 +13,8 @@ namespace Ieedo
 
         public void HideButtons()
         {
-            if (Buttons == null) Buttons = GetComponentsInChildren<UIButton>(true);
+            if (Buttons == null)
+                Buttons = GetComponentsInChildren<UIButton>(true);
             foreach (UIButton uiButton in Buttons)
             {
                 uiButton.Hide();
@@ -22,13 +23,14 @@ namespace Ieedo
 
         public IEnumerator PerformSelection(Locale[] answers, System.Action<int> onSelection = null)
         {
-            if (Buttons == null) Buttons = GetComponentsInChildren<UIButton>(true);
+            if (Buttons == null)
+                Buttons = GetComponentsInChildren<UIButton>(true);
             OnSelectOption = onSelection;
             for (var i = 0; i < answers.Length; i++)
             {
                 Buttons[i].Show();
                 Buttons[i].AnimateAppear();
-                Buttons[i].Key = new LocalizedString("UI","language_name");
+                Buttons[i].Key = new LocalizedString("UI", "language_name");
                 Buttons[i].GetComponentInChildren<LocalizeStringEvent>().StringReference.LocaleOverride = answers[i];
                 Buttons[i].gameObject.SetActive(true);
 
@@ -42,7 +44,8 @@ namespace Ieedo
             }
 
             hasSelected = false;
-            while (!hasSelected) yield return null;
+            while (!hasSelected)
+                yield return null;
         }
 
         public IEnumerator PerformSelection(Sprite[] answers, System.Action<int> onSelection = null)
@@ -64,7 +67,8 @@ namespace Ieedo
             }
 
             hasSelected = false;
-            while (!hasSelected) yield return null;
+            while (!hasSelected)
+                yield return null;
         }
 
         public System.Action<int> OnSelectOption;

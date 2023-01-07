@@ -33,15 +33,17 @@ namespace Ieedo
             var nCards = CardCollection.HeldCards.Count;
             float highestScaleRatio = 0f;
             int highestScaleCardIndex = 0;
-            if (camera == null) camera = GameObject.Find("CameraUI").GetComponent<Camera>();
+            if (camera == null)
+                camera = GameObject.Find("CameraUI").GetComponent<Camera>();
             for (var index = 0; index < CardCollection.HeldCards.Count; index++)
             {
                 var card = CardCollection.HeldCards[index];
                 var screenPos = camera.WorldToScreenPoint(card.transform.position);
                 var normalizedScreenPos = screenPos.x / Screen.width;
 
-                var scaleRatio = 1 - Mathf.Abs(normalizedScreenPos - 0.5f)*2f;
-                if (nCards == 1) scaleRatio = 1f;
+                var scaleRatio = 1 - Mathf.Abs(normalizedScreenPos - 0.5f) * 2f;
+                if (nCards == 1)
+                    scaleRatio = 1f;
 
                 if (scaleRatio > highestScaleRatio)
                 {
@@ -97,7 +99,8 @@ namespace Ieedo
             forceGoToCard = true;
             forceGoToCardImmediate = immediate;
             forcedCardIndex = CardCollection.HeldCards.IndexOf(card);
-            while (forceGoToCard) yield return null;
+            while (forceGoToCard)
+                yield return null;
             enabled = true; // Reset enabled now as we reached the correct card
             hasInFront = true; // Force this, otherwise it will trigger again later
         }
@@ -106,8 +109,10 @@ namespace Ieedo
         public bool CanScroll = true;
         public void Update()
         {
-            if (CardListScreen == null) CardListScreen = FindObjectOfType<UICardListScreen>();
-            if (!Application.isPlaying) return;
+            if (CardListScreen == null)
+                CardListScreen = FindObjectOfType<UICardListScreen>();
+            if (!Application.isPlaying)
+                return;
 
             //Debug.Log(content.anchoredPosition.x);
 
@@ -116,7 +121,8 @@ namespace Ieedo
             //Debug.LogError("Velocity " + v + " Position " + normalizedPosition);
 
             var nCards = CardCollection.HeldCards.Count;
-            if (nCards == 0) return;
+            if (nCards == 0)
+                return;
 
             var baseScale = CardCollection.CardScale * 0.8f;
             foreach (var slot in CardCollection.HeldSlots)
@@ -126,7 +132,8 @@ namespace Ieedo
 
             float highestScaleRatio = 0f;
             int highestScaleCardIndex = 0;
-            if (camera == null) camera = GameObject.Find("CameraUI").GetComponent<Camera>();
+            if (camera == null)
+                camera = GameObject.Find("CameraUI").GetComponent<Camera>();
             highestScaleCardIndex = ResizeAndFindHighestScaleCardIndex();
 
             int ResizeAndFindHighestScaleCardIndex()
@@ -140,7 +147,8 @@ namespace Ieedo
                     //if (index == centerCardIndex) card.Title.SetTextRaw("CENTER " + normalizedScreenPos);
 
                     var scaleRatio = 1 - Mathf.Abs(normalizedScreenPos - 0.5f) * 2f;
-                    if (nCards == 1) scaleRatio = 1f;
+                    if (nCards == 1)
+                        scaleRatio = 1f;
                     var scaleFactor = CardCollection.CardScale * (0.3f * (scaleRatio));
                     scaleFactor = Mathf.Max(0, scaleFactor);
                     CardCollection.HeldSlots[index].transform.localScale = Vector3.one * (baseScale + scaleFactor);
@@ -159,7 +167,8 @@ namespace Ieedo
             centerCardIndex = Mathf.Clamp(centerCardIndex, 0, nCards - 1);
 
             var wantedCardIndex = centerCardIndex;
-            if (swipeToCardIndex >= 0) wantedCardIndex = swipeToCardIndex;
+            if (swipeToCardIndex >= 0)
+                wantedCardIndex = swipeToCardIndex;
             if (forceGoToCard)
             {
                 swipeToCardIndex = -1; // Override this, forcing has precedence
@@ -204,7 +213,7 @@ namespace Ieedo
 
             var normalizedDiff = (desiredPos - actualPos) / size;
 
-            var normalizedStep = 1f / Mathf.Max(1,(nCards -1)*2);
+            var normalizedStep = 1f / Mathf.Max(1, (nCards - 1) * 2);
             // With 2, it works with 2.
             // With 3 cards, it works with 4.
             // With 4 cards, normalized is 0.25, but should be 0.1666 (1/6)
@@ -227,7 +236,7 @@ namespace Ieedo
             var ratioThreshold = 0.3f;
             if (!isDragging)    // @note: we snap only if the card has changed from the previous one
             {
-                v = new Vector2( Mathf.Sign(normalizedDiff) * Mathf.Abs(normalizedDiff) * Mathf.Abs(normalizedDiff) * SnappingSpeed * nCards * 100000, 0f);
+                v = new Vector2(Mathf.Sign(normalizedDiff) * Mathf.Abs(normalizedDiff) * Mathf.Abs(normalizedDiff) * SnappingSpeed * nCards * 100000, 0f);
                 //Debug.LogError("DESIRED VELOCITY " + v  + "(" + normalizedPosition.x + " to " + desiredNormalizedPos +")");
                 //if (forceGoToCard || swipeToCardIndex >= 0)
                 velocity = v;
@@ -254,7 +263,6 @@ namespace Ieedo
                     swipeToCardIndex = -1;
                 }
             }
-
 
             if (ratio > ratioThreshold && hasInFront)
             {

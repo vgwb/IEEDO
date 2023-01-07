@@ -57,16 +57,16 @@ namespace Ieedo
                 {
                     case ScoreType.Highscore:
                         scoreTypeLoc.Arguments = new List<object> { data.MaxScore };
-                        scoreTypeLoc.Add("HighScore", new IntVariable{Value = data.MaxScore});
+                        scoreTypeLoc.Add("HighScore", new IntVariable { Value = data.MaxScore });
                         break;
                     case ScoreType.LevelReached:
                         scoreTypeLoc.Arguments = new List<object> { data.CurrentLevel, activityDefinition.MaxLevel };
-                        scoreTypeLoc.Add("CurrentLevel", new IntVariable{Value = data.CurrentLevel});
-                        scoreTypeLoc.Add("MaxLevel", new IntVariable{Value = activityDefinition.MaxLevel});
+                        scoreTypeLoc.Add("CurrentLevel", new IntVariable { Value = data.CurrentLevel });
+                        scoreTypeLoc.Add("MaxLevel", new IntVariable { Value = activityDefinition.MaxLevel });
                         break;
                     case ScoreType.NumberOfPlays:
                         scoreTypeLoc.Arguments = new List<object> { data.Results.Count };
-                        scoreTypeLoc.Add("Count", new IntVariable{Value = data.Results.Count});
+                        scoreTypeLoc.Add("Count", new IntVariable { Value = data.Results.Count });
                         break;
                     case ScoreType.None:
                     default:

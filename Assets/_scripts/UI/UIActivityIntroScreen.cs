@@ -16,11 +16,12 @@ namespace Ieedo
         {
             var gameName = $"{Statics.ActivityFlow.CurrentActivity.LocName}";
             Title.Text.Key = new LocalizedString("Activity", $"{gameName}");
-            Description.Text.Key =  new LocalizedString("Activity", $"{gameName}_description");
+            Description.Text.Key = new LocalizedString("Activity", $"{gameName}_description");
             SetupButton(ContinueButton, Continue);
             yield return OpenCO();
 
-            while (IsOpen) yield return null;
+            while (IsOpen)
+                yield return null;
         }
 
         private void Continue()

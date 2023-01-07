@@ -30,14 +30,14 @@ namespace Ieedo
             {
                 case ActivityType.Daily:
                     Title.Text.Key = new LocalizedString("UI", $"activity_result_daily_complete");
-                    Content.Text.Key =  new LocalizedString("Activity", $"{activityDef.LocName}_end");
+                    Content.Text.Key = new LocalizedString("Activity", $"{activityDef.LocName}_end");
                     break;
                 case ActivityType.Game:
                     switch (activityDef.ScoreType)
                     {
                         case ScoreType.Highscore:
                             Title.Text.Key = new LocalizedString("UI", $"activity_result_game_over");
-                            Content.Text.Key =  new LocalizedString("Activity", $"{activityDef.LocName}_end");
+                            Content.Text.Key = new LocalizedString("Activity", $"{activityDef.LocName}_end");
                             NextLevelButton.Key = new LocalizedString("UI", "play_again");
                             break;
                         case ScoreType.LevelReached:
@@ -46,7 +46,7 @@ namespace Ieedo
                             NextLevelButton.Key = new LocalizedString("UI", "play_next_level");
                             break;
                     }
-                   break;
+                    break;
             }
 
             NextLevelButton.gameObject.SetActive(Statics.ActivityFlow.CurrentActivity.Type == ActivityType.Game);
@@ -56,12 +56,12 @@ namespace Ieedo
 
             var scoreLoc = new LocalizedString("UI", $"activity_result_score");
             scoreLoc.Arguments = new List<object> { result.Score };
-            scoreLoc.Add("Score", new IntVariable{Value = result.Score});
+            scoreLoc.Add("Score", new IntVariable { Value = result.Score });
             CurrentScore.Text.Key = scoreLoc;
 
             var highscoreLoc = new LocalizedString("UI", $"activity_result_highscore");
             highscoreLoc.Arguments = new List<object> { activityData.MaxScore };
-            highscoreLoc.Add("HighScore", new IntVariable{Value = activityData.MaxScore});
+            highscoreLoc.Add("HighScore", new IntVariable { Value = activityData.MaxScore });
             HighScore.Text.Key = highscoreLoc;
 
             SetupButton(NextLevelButton, () => Continue());

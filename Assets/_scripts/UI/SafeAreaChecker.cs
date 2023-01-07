@@ -17,7 +17,8 @@ namespace Ieedo
 
         public void ApplyVerticalSafeArea()
         {
-            if (Application.isEditor && !AppManager.I.ApplicationConfig.EnableSafeAreaInEditor) return;
+            if (Application.isEditor && !AppManager.I.ApplicationConfig.EnableSafeAreaInEditor)
+                return;
             if (Screen.safeArea.x == 0 && Screen.safeArea.y == 0
                 && Math.Abs(Screen.safeArea.width - Screen.currentResolution.width) < 0.01f
                 && Math.Abs(Screen.safeArea.height - Screen.currentResolution.height) < 0.01f)
