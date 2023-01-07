@@ -81,7 +81,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 55768156938903553
-    m_Localized: Versuch es noch einmal
+    m_Localized: Versuchen Sie es nochmal
     m_Metadata:
       m_Items: []
   - m_Id: 55768156938903552
@@ -129,8 +129,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 55768998995763200
-    m_Localized: "Ieedo konzentriert sich auf 6 Kategorien. Lassen Sie uns sie nacheinander
-      \xFCberpr\xFCfen ..."
+    m_Localized: Ieedo konzentriert sich auf 6 Kategorien. Schauen wir sie nacheinander
+      nach.
     m_Metadata:
       m_Items: []
   - m_Id: 40549731508445184
@@ -150,11 +150,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450244
-    m_Localized: Fortsetzen
+    m_Localized: Weitermachen
     m_Metadata:
       m_Items: []
   - m_Id: 40535113130074112
-    m_Localized: "W\xE4hlen Sie eine Kategorie"
+    m_Localized: "W\xE4hlen Sie eine Kategorie aus"
     m_Metadata:
       m_Items: []
   - m_Id: 40535419633033216
@@ -193,7 +193,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48447397204844544
-    m_Localized: Erledigt
+    m_Localized: Getan
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450243
@@ -253,7 +253,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40557809452736512
-    m_Localized: Spielen
+    m_Localized: Spiel
     m_Metadata:
       m_Items: []
   - m_Id: 55672507820089344
@@ -346,7 +346,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 136953378097618944
-    m_Localized: Wo bist du?
+    m_Localized: Wo sind Sie?
     m_Metadata:
       m_Items: []
   - m_Id: 139790834418524160
@@ -363,7 +363,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 141959887966904320
-    m_Localized: Zuhause
+    m_Localized: Heim
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458752
@@ -371,7 +371,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458753
-    m_Localized: Schaffen
+    m_Localized: Erstellen
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458754
@@ -379,7 +379,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458755
-    m_Localized: Erledigt
+    m_Localized: Getan
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458756
@@ -427,6 +427,10 @@ MonoBehaviour:
       - rid: 5137596889296273417
   - m_Id: 152127485441236992
     m_Localized: Spiel ist aus
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153336414290829312
+    m_Localized: Nochmal abspielen
     m_Metadata:
       m_Items: []
   references:

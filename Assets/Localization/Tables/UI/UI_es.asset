@@ -239,7 +239,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37308361241255936
-    m_Localized: DE ACUERDO
+    m_Localized: OK
     m_Metadata:
       m_Items: []
   - m_Id: 43003187146022912
@@ -251,7 +251,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40557809452736512
-    m_Localized: Jugar
+    m_Localized: Tocar
     m_Metadata:
       m_Items: []
   - m_Id: 55672507820089344
@@ -424,6 +424,10 @@ MonoBehaviour:
       - rid: 5137596889296273419
   - m_Id: 152127485441236992
     m_Localized: Juego terminado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153336414290829312
+    m_Localized: Juega de nuevo
     m_Metadata:
       m_Items: []
   references:

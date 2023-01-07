@@ -24,7 +24,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 55768156938903555
-    m_Localized: une
+    m_Localized: un
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093260
@@ -81,7 +81,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 55768156938903553
-    m_Localized: "R\xE9essayer"
+    m_Localized: "Essayer \xE0 nouveau"
     m_Metadata:
       m_Items: []
   - m_Id: 55768156938903552
@@ -146,11 +146,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450240
-    m_Localized: "Arri\xE8re"
+    m_Localized: Dos
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450244
-    m_Localized: Continuer
+    m_Localized: Continuez
     m_Metadata:
       m_Items: []
   - m_Id: 40535113130074112
@@ -181,7 +181,8 @@ MonoBehaviour:
     m_Localized: "Ce projet ieedo (2020-1-uk01-ka204-079117) a \xE9t\xE9 financ\xE9
       avec le soutien de la Commission europ\xE9enne. Cette publication refl\xE8te
       les opinions uniquement de l'auteur, et la Commission n'est pas responsable
-      de toute utilisation qui peut \xEAtre faite des informations qui y sont contenues."
+      de toute utilisation qui pourrait \xEAtre faite des informations qui y sont
+      contenues."
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925889
@@ -209,7 +210,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854080
-    m_Localized: "R\xE9glages"
+    m_Localized: "Param\xE8tres"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762365927424
@@ -345,7 +346,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 136953378097618944
-    m_Localized: "O\xF9 es tu?"
+    m_Localized: "O\xF9 es-tu?"
     m_Metadata:
       m_Items: []
   - m_Id: 139790834418524160
@@ -373,7 +374,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458754
-    m_Localized: Effacer
+    m_Localized: Supprimer
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458755
@@ -425,6 +426,10 @@ MonoBehaviour:
       - rid: 5137596889296273423
   - m_Id: 152127485441236992
     m_Localized: "Jeu termin\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153336414290829312
+    m_Localized: Rejouer
     m_Metadata:
       m_Items: []
   references:

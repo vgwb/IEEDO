@@ -263,6 +263,10 @@ MonoBehaviour:
     m_Key: play_next_level
     m_Metadata:
       m_Items: []
+  - m_Id: 153336414290829312
+    m_Key: play_again
+    m_Metadata:
+      m_Items: []
   - m_Id: 50788328801296384
     m_Key: previous
     m_Metadata:

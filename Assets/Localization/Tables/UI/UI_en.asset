@@ -423,6 +423,10 @@ MonoBehaviour:
     m_Localized: 'Highscore: {Score}'
     m_Metadata:
       m_Items: []
+  - m_Id: 153336414290829312
+    m_Localized: Play Again
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
