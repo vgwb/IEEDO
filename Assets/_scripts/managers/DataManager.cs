@@ -75,8 +75,9 @@ namespace Ieedo
         public void InitialiseCardDefinitions()
         {
             LoadSerialized(out cards, Application.streamingAssetsPath, "cards");
-            if (cards == null) cards = new();
-            SaveCardDefinitions(saveAsDefaultCards:false);
+            if (cards == null)
+                cards = new();
+            SaveCardDefinitions(saveAsDefaultCards: false);
         }
 
         public void AddCardDefinition(CardDefinition def, bool isDefaultCard = false)
@@ -88,7 +89,7 @@ namespace Ieedo
         public void DeleteAllCardDefinitions()
         {
             cards.Cards.Clear();
-            SaveCardDefinitions(saveAsDefaultCards:false);
+            SaveCardDefinitions(saveAsDefaultCards: false);
         }
 
         public void SaveCardDefinitions(bool saveAsDefaultCards = false)
@@ -112,7 +113,8 @@ namespace Ieedo
 
         public void CreateNewProfile(AppSettings settings)
         {
-            ProfileData = new ProfileData {
+            ProfileData = new ProfileData
+            {
                 Version = AppManager.I.ApplicationConfig.Version,
                 Settings = settings,
                 Cards = new CardDataCollection(),
@@ -122,7 +124,8 @@ namespace Ieedo
 
             foreach (var def in GetAll<CategoryDefinition>())
             {
-                ProfileData.Categories.Add(new() {
+                ProfileData.Categories.Add(new()
+                {
                     ID = def.ID,
                     AssessmentValue = 0f
                 });
@@ -172,13 +175,15 @@ namespace Ieedo
                     if (Statics.App.ApplicationConfig.DebugSaveProfileInJSON)
                     {
                         stream.Write(bytes);
-                    } else
+                    }
+                    else
                     {
                         bf.Serialize(stream, bytes);
                     }
                     return true;
                 }
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 Debug.LogError($"Could not save data at path {path}\nException {e.Message}");
                 return false;
@@ -212,7 +217,8 @@ namespace Ieedo
                         data = jobj.ToObject<T>(serializer);
                         return true;
                     }
-                } else
+                }
+                else
                 {
                     using (var stream = File.OpenRead(path))
                     {
@@ -226,7 +232,8 @@ namespace Ieedo
                     }
                 }
 
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 Debug.LogError($"Could not load data at path {path}\nException {e.Message}");
                 data = default;

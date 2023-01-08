@@ -18,7 +18,7 @@ namespace Ieedo
         public void ToggleSessionMode()
         {
             StartCoroutine(ToggleSessionModeCO());
-       }
+        }
 
         private IEnumerator ToggleSessionModeCO()
         {
@@ -28,13 +28,14 @@ namespace Ieedo
                 //yield return Statics.Screens.ShowQuestionFlow("UI/session_start_title", "UI/session_start_question", new[] { "UI/yes", "UI/no" }, answer);
                 //if (answer.Value == 0)
                 //{
-                    SetSessionMode(SessionMode.Session);
-                    Statics.SessionFlow.StartSessionMode();
+                SetSessionMode(SessionMode.Session);
+                Statics.SessionFlow.StartSessionMode();
                 //}
             }
             else
             {
-                if (Statics.SessionFlow.IsInsideTutorial) yield break;
+                if (Statics.SessionFlow.IsInsideTutorial)
+                    yield break;
                 var answer = new Ref<int>();
                 yield return Statics.Screens.ShowQuestionFlow("UI/session_abort_title", "UI/session_abort_question", new[] { "UI/yes", "UI/no" }, answer);
                 if (answer.Value == 0)

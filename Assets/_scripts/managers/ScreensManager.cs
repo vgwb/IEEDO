@@ -169,7 +169,7 @@ namespace Ieedo
                 {
                     uiCardListScreen.OpenFrontView(uiCardListScreen.CardsList.HeldCards[0], UICardListScreen.FrontViewMode.Edit);
                     if (uiCardListScreen.CardsList.HeldCards.Count > 0)
-                        yield return uiCardListScreen.CardsList.ScrollRect.ForceGoToCard(uiCardListScreen.CardsList.HeldCards[0], immediate:true);
+                        yield return uiCardListScreen.CardsList.ScrollRect.ForceGoToCard(uiCardListScreen.CardsList.HeldCards[0], immediate: true);
                 }
             }
         }

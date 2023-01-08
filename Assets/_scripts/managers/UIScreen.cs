@@ -25,7 +25,8 @@ namespace Ieedo
 
         public void CloseImmediate(bool reset = false)
         {
-            if (!reset) SoundManager.I.PlaySfx(SfxEnum.close);
+            if (!reset)
+                SoundManager.I.PlaySfx(SfxEnum.close);
             gameObject.SetActive(false);
         }
 
@@ -50,7 +51,7 @@ namespace Ieedo
             {
                 var col = BlockerBG.color;
                 col.a = 1f;
-                BlockerBG.colorTransition(col,animPeriod);
+                BlockerBG.colorTransition(col, animPeriod);
             }
 
             gameObject.SetActive(true);

@@ -33,7 +33,6 @@ namespace Ieedo
             Result = result;
             Score = score;
         }
-
     }
 
     public class ActivityFlowManager : MonoBehaviour
@@ -104,7 +103,8 @@ namespace Ieedo
 
         public void RegisterResult(ActivityResult result, ActivityID activityId = ActivityID.None)
         {
-            if (activityId == ActivityID.None) activityId = CurrentActivity.ID;
+            if (activityId == ActivityID.None)
+                activityId = CurrentActivity.ID;
 
             if (Equals(result.Timestamp, Timestamp.None))
                 result.Timestamp = Timestamp.Now;
@@ -142,7 +142,6 @@ namespace Ieedo
 
                 activityData.MaxScore = activityData.Results.Max(x => x.Score);
             }
-
             Statics.Analytics.Activity(activityData.ID.ToString(), result.Result.ToString());
         }
 
