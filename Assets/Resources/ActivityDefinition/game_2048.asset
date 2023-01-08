@@ -33,7 +33,7 @@ MonoBehaviour:
   SceneName: game_2048
   ScoreToUnlock: 100
   ScoreOnWin: 100
-  ScoreOnLoss: 20
+  ScoreOnLoss: 0
   MaxLevel: 2048
   references:
     version: 2
