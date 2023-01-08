@@ -122,7 +122,7 @@ namespace Ieedo
             var overallValue = 0f;
             var assessmentPercentages = new Dictionary<int, float>();
             var categories = Statics.Data.GetAll<CategoryDefinition>();
-            var completionPercentage = 0f;
+            // var completionPercentage = 0f;
             var allQuestions = Statics.Data.GetAll<AssessmentQuestionDefinition>();
             assessmentFillbar.FillBar.SetValue(0, allQuestions.Count);
             assessmentFillbar.FillBar.FillImage.color = Statics.Art.UIColor.Color;
