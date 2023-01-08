@@ -25,6 +25,12 @@ namespace minigame
            .SetAutoKill(false).Pause();
         }
 
+        public void SetLevel(int level)
+        {
+            ScoreText.text = "Level " + level;
+            HiScoreText.text = "";
+        }
+
         public void Init(int score, int hiscore)
         {
             ScoreText.text = score.ToString();

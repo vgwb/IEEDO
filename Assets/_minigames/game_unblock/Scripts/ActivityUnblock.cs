@@ -10,8 +10,10 @@ namespace minigame.unblock
     public class ActivityUnblock : ActivityManager
     {
         public static ActivityUnblock I;
-        public TMPro.TextMeshProUGUI levelText;
+        public ui_score ScoreUI;
+
         private int currentLevel;
+
         void Awake()
         {
             I = this;
@@ -36,7 +38,7 @@ namespace minigame.unblock
         {
             GameManager.I().init();
             Debug.Log($"Starting game at level {currentLevel}");
-            levelText.text = "Level " + (currentLevel);
+            ScoreUI.SetLevel(currentLevel);
             GameData.I().isLock = false;
             Unblock tg = GameObject.Find("unblock").GetComponent<Unblock>();
             tg.clear();
