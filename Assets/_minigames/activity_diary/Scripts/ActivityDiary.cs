@@ -69,7 +69,7 @@ namespace Ieedo.games.diary
 
             DateText.text = Pages[currentPageNumber - 1].Date.ToString("ddd dd MMM", LocalizationSettings.SelectedLocale.Formatter);
             InputText.text = Pages[currentPageNumber - 1].Text;
-            PageText.text = currentPageNumber + " / " + totalPageNumber;
+            PageText.text = currentPageNumber + "\n-\n" + totalPageNumber;
 
             if (currentPageNumber == totalPageNumber)
             {
@@ -117,6 +117,12 @@ namespace Ieedo.games.diary
             }
             todayResult.CustomData = todayText;
             StartCoroutine(CompleteActivity(todayResult));
+        }
+
+        protected override void CustomCloseActivity()
+        {
+            // Debug.Log("CustomCloseActivity");
+            CompleteActivity();
         }
 
     }

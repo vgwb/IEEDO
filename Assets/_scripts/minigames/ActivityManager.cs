@@ -28,7 +28,12 @@ namespace Ieedo.games
             if (continueScreen.IsOpen)
                 continueScreen.Close();
 
+            CustomCloseActivity();
             OnActivityEnd?.Invoke();
+        }
+
+        protected virtual void CustomCloseActivity()
+        {
         }
 
         public void ExternSetupActivity(int currentLevel)
