@@ -201,8 +201,8 @@ namespace Ieedo
 
         public void OnBtnResetProfile()
         {
-            // AppManager.I.StartCoroutine(ResetProfileCO());
-            // CloseImmediate();
+            AppManager.I.StartCoroutine(ResetProfileCO());
+            CloseImmediate();
         }
 
         public void OnOpenHelpWebsite()
