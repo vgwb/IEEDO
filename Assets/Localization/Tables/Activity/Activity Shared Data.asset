@@ -83,8 +83,8 @@ MonoBehaviour:
     m_Key: activity_result_write_everyday
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993831227398
-    m_Key: activity_score_to_unlock
+  - m_Id: 113049161866141696
+    m_Key: activity_points_to_unlock
     m_Metadata:
       m_Items: []
   - m_Id: 112797993831227399
@@ -433,6 +433,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 112797993831227402
     m_Key: ui_category
+    m_Metadata:
+      m_Items: []
+  - m_Id: 113049161870336000
+    m_Key: ui_save
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712468

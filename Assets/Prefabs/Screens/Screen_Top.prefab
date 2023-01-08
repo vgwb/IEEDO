@@ -626,7 +626,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6579875410280131145, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_Name
-      value: UITextContent_Score
+      value: UITextContent_Points
       objectReference: {fileID: 0}
     - target: {fileID: 7376773797247356537, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_StringReference.m_WaitForCompletion

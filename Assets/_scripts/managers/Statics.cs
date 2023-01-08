@@ -10,7 +10,7 @@ namespace Ieedo
         private static InputManager input; public static InputManager Input => input ??= FindObjectOfType<InputManager>();
 
         private static AppManager app; public static AppManager App => app ??= FindObjectOfType<AppManager>();
-        private static ScoreManager score; public static ScoreManager Score => score ??= FindObjectOfType<ScoreManager>();
+        private static PointsManager points; public static PointsManager Points => points ??= FindObjectOfType<PointsManager>();
         private static ModeManager mode; public static ModeManager Mode => mode ??= FindObjectOfType<ModeManager>();
         private static SessionFlowManager sessionFlow; public static SessionFlowManager SessionFlow => sessionFlow ??= FindObjectOfType<SessionFlowManager>();
         private static ActivityFlowManager activityFlow; public static ActivityFlowManager ActivityFlow => activityFlow ??= FindObjectOfType<ActivityFlowManager>();

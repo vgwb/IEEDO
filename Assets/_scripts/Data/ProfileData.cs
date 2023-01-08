@@ -74,7 +74,7 @@ namespace Ieedo
         public ActivityID ID;
         public bool Unlocked;
         public int CurrentLevel;
-        public int MaxScore;
+        public int HiScore;
         public ActivityResults Results = new();
     }
 
@@ -101,7 +101,7 @@ namespace Ieedo
         public AppSettings Settings;
 
         // State
-        public int CurrentScore;
+        public int CurrentPoints;
         public CategoryDataCollection Categories;
         public CardDataCollection Cards;
         public ActivitiesDataCollection Activities;
@@ -110,7 +110,7 @@ namespace Ieedo
         {
             var s = new StringBuilder();
             s.AppendLine($"({Settings.HostCountryLocale} - {Settings.NativeLocale})");
-            s.AppendLine($"Score: {CurrentScore}");
+            s.AppendLine($"Points: {CurrentPoints}");
             s.AppendLine(Categories.ToString());
             s.AppendLine(Cards.ToString());
             s.AppendLine(Activities.ToString());

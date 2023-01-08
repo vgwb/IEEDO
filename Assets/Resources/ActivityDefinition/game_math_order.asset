@@ -27,11 +27,13 @@ MonoBehaviour:
     DefaultText: Math Order
   Type: 2
   ScoreType: 1
+  Category: 0
+  Skills: 0
   Image: {fileID: 0}
   SceneName: game_math_order
-  ScoreToUnlock: 1000
-  ScoreOnWin: 100
-  ScoreOnLoss: 20
+  PointsToUnlock: 1000
+  PointsOnWin: 20
+  PointsOnLoss: 0
   MaxLevel: 50
   references:
     version: 2

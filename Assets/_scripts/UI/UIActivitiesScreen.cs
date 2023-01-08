@@ -22,7 +22,7 @@ namespace Ieedo
         void RefreshData()
         {
             var allActivities = Statics.Data.GetAll<ActivityDefinition>();
-            allActivities = allActivities.Where(x => x.Enabled).OrderBy(x => x.ScoreToUnlock).ToList();
+            allActivities = allActivities.Where(x => x.Enabled).OrderBy(x => x.PointsToUnlock).ToList();
 
             for (var i = 0; i < allActivities.Count; i++)
             {
@@ -43,7 +43,7 @@ namespace Ieedo
                         Unlocked = false,
                         CurrentLevel = 1,
                         Results = new ActivityResults(),
-                        MaxScore = 0,
+                        HiScore = 0,
                     };
                     Statics.Data.Profile.Activities.Add(data);
                     Statics.Data.SaveProfile();
@@ -56,8 +56,8 @@ namespace Ieedo
                 switch (activityDefinition.ScoreType)
                 {
                     case ScoreType.Highscore:
-                        scoreTypeLoc.Arguments = new List<object> { data.MaxScore };
-                        scoreTypeLoc.Add("HighScore", new IntVariable { Value = data.MaxScore });
+                        scoreTypeLoc.Arguments = new List<object> { data.HiScore };
+                        scoreTypeLoc.Add("HighScore", new IntVariable { Value = data.HiScore });
                         break;
                     case ScoreType.LevelReached:
                         scoreTypeLoc.Arguments = new List<object> { data.CurrentLevel, activityDefinition.MaxLevel };
@@ -75,12 +75,12 @@ namespace Ieedo
                 ActivityBlocks[i].ScoreText.Key = scoreTypeLoc;
 
                 // Check unlock state
-                data.Unlocked = Statics.Data.Profile.CurrentScore >= activityDefinition.ScoreToUnlock;
+                data.Unlocked = Statics.Data.Profile.CurrentPoints >= activityDefinition.PointsToUnlock;
                 ActivityBlocks[i].LockedGO.SetActive(!data.Unlocked);
 
-                var scoreToUnlockLoc = new LocalizedString("Activity", "activity_score_to_unlock");
-                scoreToUnlockLoc.Arguments = new List<object> { activityDefinition };
-                ActivityBlocks[i].LockedText.Key = scoreToUnlockLoc;
+                var pointsToUnlockLoc = new LocalizedString("Activity", "activity_points_to_unlock");
+                pointsToUnlockLoc.Arguments = new List<object> { activityDefinition };
+                ActivityBlocks[i].LockedText.Key = pointsToUnlockLoc;
             }
 
             for (int i = allActivities.Count; i < ActivityBlocks.Count; i++)

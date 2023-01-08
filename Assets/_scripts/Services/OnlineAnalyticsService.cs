@@ -75,18 +75,18 @@ namespace Ieedo
 #endif
         }
 
-        public void Score(int score, string action)
+        public void Points(int points, string action)
         {
             if (!AnalyticsEnabled)
                 return;
 
             var parameters = new Dictionary<string, object>()
             {
-                { "myScore", score },
+                { "myPoints", points },
                 { "myCardAction", action },
             };
 
-            AnalyticsService.Instance.CustomData("myScore", parameters);
+            AnalyticsService.Instance.CustomData("myPoints", parameters);
 #if UNITY_EDITOR
             AnalyticsService.Instance.Flush();
 #endif

@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: ti
   m_SharedData: {fileID: 11400000, guid: e48f391c1e96c7040b7091b267464dc8, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 3196637817602572303
   m_TableData:
   - m_Id: 111581178645733376
     m_Localized: '#VALUE!'
@@ -31,73 +32,78 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 112797993814450176
-    m_Localized: '#VALUE!'
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033088
-    m_Localized: '#VALUE!'
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033089
-    m_Localized: '#VALUE!'
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033090
-    m_Localized: '#VALUE!'
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033091
-    m_Localized: '#VALUE!'
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033092
-    m_Localized: '#VALUE!'
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033093
-    m_Localized: '#VALUE!'
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033094
-    m_Localized: '#VALUE!'
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033095
-    m_Localized: '#VALUE!'
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033097
-    m_Localized: '#VALUE!'
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 112797993831227392
-    m_Localized: '#VALUE!'
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 112797993831227393
-    m_Localized: '#VALUE!'
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 112797993831227394
-    m_Localized: '#VALUE!'
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 112797993831227395
-    m_Localized: '#VALUE!'
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 112797993831227396
-    m_Localized: '#VALUE!'
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 112797993831227397
-    m_Localized: '#VALUE!'
+    m_Localized: 
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993831227398
-    m_Localized: '#VALUE!'
+  - m_Id: 113049161866141696
+    m_Localized: 
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3196637817602572303
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 3196637817602572303
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00e02f1f9da19101

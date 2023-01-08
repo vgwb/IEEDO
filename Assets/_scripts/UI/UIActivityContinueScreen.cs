@@ -55,13 +55,13 @@ namespace Ieedo
             ScorePivot.SetActive(Statics.ActivityFlow.CurrentActivity.ScoreType == ScoreType.Highscore);
 
             var scoreLoc = new LocalizedString("Activity", $"activity_result_score");
-            scoreLoc.Arguments = new List<object> { result.Score };
-            scoreLoc.Add("Score", new IntVariable { Value = result.Score });
+            scoreLoc.Arguments = new List<object> { result.Points };
+            scoreLoc.Add("Score", new IntVariable { Value = result.Points });
             CurrentScore.Text.Key = scoreLoc;
 
             var highscoreLoc = new LocalizedString("Activity", $"activity_result_highscore");
-            highscoreLoc.Arguments = new List<object> { activityData.MaxScore };
-            highscoreLoc.Add("HighScore", new IntVariable { Value = activityData.MaxScore });
+            highscoreLoc.Arguments = new List<object> { activityData.HiScore };
+            highscoreLoc.Add("HighScore", new IntVariable { Value = activityData.HiScore });
             HighScore.Text.Key = highscoreLoc;
 
             SetupButton(NextLevelButton, () => Continue());

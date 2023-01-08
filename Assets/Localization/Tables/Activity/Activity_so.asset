@@ -303,13 +303,17 @@ MonoBehaviour:
       waa dhaqan wanaagsan oo loogu talagalay wanaaggaaga
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993831227398
-    m_Localized: '{ScoreToUnlock} dhibco si loo furo'
+  - m_Id: 112797993831227402
+    m_Localized: Dabaqad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 113049161866141696
+    m_Localized: '{PointsToUnlock} dhibco si loo furo'
     m_Metadata:
       m_Items:
       - rid: 3196637817602572297
-  - m_Id: 112797993831227402
-    m_Localized: Dabaqad
+  - m_Id: 113049161870336000
+    m_Localized: Badbaadin
     m_Metadata:
       m_Items: []
   references:
@@ -318,4 +322,4 @@ MonoBehaviour:
     - rid: 3196637817602572297
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 02e0af812dbd900106e0af812dbd9001
+        m_Entries: 02e0af812dbd900106e0af812dbd900100e02f1f9da19101

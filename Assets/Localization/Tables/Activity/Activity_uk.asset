@@ -336,14 +336,18 @@ MonoBehaviour:
       \u0441\u0430\u043C\u043E\u043F\u043E\u0447\u0443\u0442\u0442\u044F"
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993831227398
-    m_Localized: "{ScoreToUnlock} \u0432\u043A\u0430\u0437\u0443\u0454 \u043D\u0430
+  - m_Id: 112797993831227402
+    m_Localized: "\u041A\u0430\u0442\u0435\u0433\u043E\u0440\u0456\u044F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 113049161866141696
+    m_Localized: "{PointsToUnlock} \u0432\u043A\u0430\u0437\u0443\u0454 \u043D\u0430
       \u0440\u043E\u0437\u0431\u043B\u043E\u043A\u0443\u0432\u0430\u043D\u043D\u044F"
     m_Metadata:
       m_Items:
       - rid: 3196637817602572298
-  - m_Id: 112797993831227402
-    m_Localized: "\u041A\u0430\u0442\u0435\u0433\u043E\u0440\u0456\u044F"
+  - m_Id: 113049161870336000
+    m_Localized: "\u0417\u0431\u0430\u0433\u0430\u0447\u0443\u0432\u0430\u0442\u0438"
     m_Metadata:
       m_Items: []
   references:
@@ -352,4 +356,4 @@ MonoBehaviour:
     - rid: 3196637817602572298
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 02e0af812dbd900106e0af812dbd9001
+        m_Entries: 02e0af812dbd900106e0af812dbd900100e02f1f9da19101

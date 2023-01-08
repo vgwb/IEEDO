@@ -300,13 +300,17 @@ MonoBehaviour:
       en bra praxis f\xF6r ditt v\xE4lbefinnande"
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993831227398
-    m_Localized: "{ScoreToUnlock} Po\xE4ng f\xF6r att l\xE5sa upp"
+  - m_Id: 112797993831227402
+    m_Localized: Kategori
+    m_Metadata:
+      m_Items: []
+  - m_Id: 113049161866141696
+    m_Localized: "{PointsToUnlock} Po\xE4ng f\xF6r att l\xE5sa upp"
     m_Metadata:
       m_Items:
       - rid: 3196637817602572296
-  - m_Id: 112797993831227402
-    m_Localized: Kategori
+  - m_Id: 113049161870336000
+    m_Localized: Spara
     m_Metadata:
       m_Items: []
   references:
@@ -315,4 +319,4 @@ MonoBehaviour:
     - rid: 3196637817602572296
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 02e0af812dbd900106e0af812dbd9001
+        m_Entries: 02e0af812dbd900106e0af812dbd900100e02f1f9da19101

@@ -31,9 +31,9 @@ MonoBehaviour:
   Skills: 0
   Image: {fileID: 21300000, guid: 50758501e29a647029a83039b0a32acd, type: 3}
   SceneName: activity_diary
-  ScoreToUnlock: 0
-  ScoreOnWin: 2
-  ScoreOnLoss: 0
+  PointsToUnlock: 0
+  PointsOnWin: 2
+  PointsOnLoss: 0
   MaxLevel: 30
   references:
     version: 2

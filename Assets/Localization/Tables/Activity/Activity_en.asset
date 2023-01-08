@@ -456,11 +456,6 @@ MonoBehaviour:
       for your wellbeing
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993831227398
-    m_Localized: '{ScoreToUnlock} points to unlock'
-    m_Metadata:
-      m_Items:
-      - rid: 3196637817602572291
   - m_Id: 112797993831227399
     m_Localized: 'Highscore: {HighScore}'
     m_Metadata:
@@ -480,10 +475,19 @@ MonoBehaviour:
     m_Localized: Category
     m_Metadata:
       m_Items: []
+  - m_Id: 113049161866141696
+    m_Localized: '{PointsToUnlock} to unlock'
+    m_Metadata:
+      m_Items:
+      - rid: 3196637817602572291
+  - m_Id: 113049161870336000
+    m_Localized: Save
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
     - rid: 3196637817602572291
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 08e06f812dbd900102e0af812dbd900107e0af812dbd900108e0af812dbd900109e0af812dbd900106e0af812dbd9001
+        m_Entries: 08e06f812dbd900102e0af812dbd900107e0af812dbd900108e0af812dbd900109e0af812dbd900106e0af812dbd900100e02f1f9da19101

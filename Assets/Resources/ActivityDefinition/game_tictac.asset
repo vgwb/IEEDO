@@ -31,9 +31,9 @@ MonoBehaviour:
   Skills: 0
   Image: {fileID: 21300000, guid: 6e1730608c4bcb146ad7ccc85d727d5e, type: 3}
   SceneName: game_tictac
-  ScoreToUnlock: 4000
-  ScoreOnWin: 1
-  ScoreOnLoss: 0
+  PointsToUnlock: 1000
+  PointsOnWin: 1
+  PointsOnLoss: 0
   MaxLevel: 100
   references:
     version: 2

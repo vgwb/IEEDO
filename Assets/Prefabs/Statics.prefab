@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 4668475635819497381}
   - component: {fileID: 4668475635819497380}
   m_Layer: 0
-  m_Name: ScoreManager
+  m_Name: PointsManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b732ff86db014f828e272c8a79ebfa56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentScoreText: {fileID: 0}
+  CurrentPointsText: {fileID: 0}
 --- !u!1 &4668475635862936156
 GameObject:
   m_ObjectHideFlags: 0

@@ -82,7 +82,7 @@ namespace Ieedo
 
             btnTestIncreaseScore = AddButton("action_test_increase_score", () =>
             {
-                Statics.Score.AddScore(100);
+                Statics.Points.AddPoints(100);
             });
 
             btnResetProfile = AddButton("action_reset_profile", () =>
@@ -98,7 +98,7 @@ namespace Ieedo
                     var res = new ActivityResult
                     {
                         Result = ActivityResultState.Win,
-                        Score = 10,
+                        Points = 10,
                         Timestamp = new Timestamp(DateTime.Today + TimeSpan.FromDays(-i)),
                         CustomData = $"Cheat added text for diary. Added with index {i}"
                     };

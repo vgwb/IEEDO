@@ -31,9 +31,9 @@ MonoBehaviour:
   Skills: 0
   Image: {fileID: 21300000, guid: 6345bb855875c4e17b2fb629fff0cd9c, type: 3}
   SceneName: game_mergenumbers
-  ScoreToUnlock: 300
-  ScoreOnWin: 100
-  ScoreOnLoss: 20
+  PointsToUnlock: 300
+  PointsOnWin: 20
+  PointsOnLoss: 0
   MaxLevel: 30
   references:
     version: 2
