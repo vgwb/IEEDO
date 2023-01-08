@@ -24,11 +24,43 @@ namespace minigame.g2048
         void Awake()
         {
             I = this;
+            board.CreateBoard();
         }
 
+        void Start()
+        {
+            if (DebugAutoplay)
+            {
+                SetupActivity(DebugStartLevel);
+            }
+        }
         protected override void SetupActivity(int currentLevel)
         {
             Debug.Log($"Starting game at level {currentLevel}");
+            board.StartGame();
+        }
+
+        public override IEnumerator PlayNextLevel(int _currentLevel)
+        {
+            Debug.Log("NEXT GAME!");
+            board.Reset();
+            board.CreateBoard();
+            board.StartGame();
+            yield break;
+        }
+
+        public void Update()
+        {
+#if UNITY_EDITOR
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                OnBtnWin();
+            }
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                board.StartGame();
+            }
+#endif
         }
 
         public void OnBtnWin()
@@ -37,26 +69,14 @@ namespace minigame.g2048
             StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win, 10)));
         }
 
-        public void Update()
-        {
-            #if UNITY_EDITOR
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                OnBtnWin();
-            }
-            #endif
-        }
-
         public void OnBtnLose()
         {
             SoundManager.I.PlaySfx(SfxEnum.lose);
-            Debug.Log("Game Blank Lose");
             StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Lose, 2)));
         }
 
         public void OnSwipe(string direction)
         {
-
             SoundManager.I.PlaySfx(SfxEnum.click);
             SwipeDirection currentSwipe = SwipeDirection.None;
             switch (direction)
@@ -84,7 +104,6 @@ namespace minigame.g2048
         {
             SoundManager.I.PlaySfx(SfxEnum.score);
             Debug.Log("SCORE " + score);
-
         }
 
     }

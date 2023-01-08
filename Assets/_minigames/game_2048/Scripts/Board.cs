@@ -48,13 +48,28 @@ namespace minigame.g2048
             }
         }
 
+        public void StartGame()
+        {
+            CreateRandom();
+        }
+
         public void OnGameOver()
         {
             Debug.Log("Game Over!!!!");
             Activity2048.I.OnBtnLose();
         }
 
-        private void CreateBoard()
+        public void Reset()
+        {
+            var children = new List<GameObject>();
+            foreach (Transform t in emptyNodeRect.transform)
+                children.Add(t.gameObject);
+            foreach (Transform t in realNodeRect.transform)
+                children.Add(t.gameObject);
+            children.ForEach(c => DestroyImmediate(c));
+        }
+
+        public void CreateBoard()
         {
             /* first initialize empty Node rect*/
             realNodeList.Clear();
@@ -96,7 +111,7 @@ namespace minigame.g2048
                     this.nodeMap.Add(point, node);
                 }
             }
-            /* grid 정렬 */
+            /* grid*/
             LayoutRebuilder.ForceRebuildLayoutImmediate(emptyNodeRect);
             foreach (var data in nodeData)
                 data.position = data.nodeRectObj.GetComponent<RectTransform>().localPosition;
@@ -109,6 +124,7 @@ namespace minigame.g2048
 
             return true;
         }
+
         private void CreateBlock(int x, int y)
         {
             if (nodeMap[new Vector2Int(x, y)].realNodeObj != null)
@@ -331,7 +347,6 @@ namespace minigame.g2048
                 if (IsGameOver())
                 {
                     OnGameOver();
-                    ;
                 }
             }
             else
@@ -340,10 +355,6 @@ namespace minigame.g2048
                 var pt = emptys[rand].point;
                 CreateBlock(pt.x, pt.y);
             }
-        }
-        private void Awake()
-        {
-            CreateBoard();
         }
 
         public void UpdateState()
@@ -363,7 +374,7 @@ namespace minigame.g2048
                 if (state == State.PROCESSING)
                 {
                     var removed = new List<NodeObject>();
-                    List<NodeObject> removeTarget = new List<NodeObject>();
+                    var removeTarget = new List<NodeObject>();
                     foreach (var data in realNodeList)
                     {
                         if (data.needDestroy)
@@ -450,9 +461,5 @@ namespace minigame.g2048
             }
         }
 
-        private void Start()
-        {
-            CreateRandom();
-        }
     }
 }
