@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: game_fast_reaction
   m_EditorClassIdentifier: 
   Enabled: 1
+  Available: 0
   ID: 27
   Title:
     Key:
@@ -27,8 +28,8 @@ MonoBehaviour:
     DefaultText: Fast Reaction
   Type: 2
   ScoreType: 1
-  Category: 0
-  Skills: 0
+  Category: 7
+  Skills: 20480
   Image: {fileID: 21300000, guid: 0696497972984427b8ccc75c55878eed, type: 3}
   SceneName: game_fast_reaction
   PointsToUnlock: 500

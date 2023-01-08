@@ -28,8 +28,8 @@ MonoBehaviour:
     DefaultText: Unblock
   Type: 2
   ScoreType: 2
-  Category: 0
-  Skills: 0
+  Category: 6
+  Skills: 524544
   Image: {fileID: 21300000, guid: 3aa38459aecf34661bb7746ccc047739, type: 3}
   SceneName: game_unblock
   PointsToUnlock: 0

@@ -28,8 +28,8 @@ MonoBehaviour:
     DefaultText: 
   Type: 2
   ScoreType: 1
-  Category: 0
-  Skills: 0
+  Category: 1
+  Skills: 784
   Image: {fileID: 21300000, guid: 38cb948e8cb84420fae86136f20d7bcf, type: 3}
   SceneName: game_2048
   PointsToUnlock: 100
