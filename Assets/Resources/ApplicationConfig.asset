@@ -16,9 +16,12 @@ MonoBehaviour:
   DebugLogEnabled: 1
   DebugSaveProfileInJSON: 1
   EnableSafeAreaInEditor: 0
+  SaveCardsAsDefault: 0
   Version: 3
   ResetProfileAtVersionMismatch: 1
-  SaveCardsAsDefault: 0
+  UrlSupportWebsite: https://vgwb.github.io/IEEDO/
+  PointsCardCompleted: 20
+  PointsCardValidated: 50
   NotificationsEnabled: 1
   AnalyticsEnabled: 0
   AnalyticsDevEnv: 0
