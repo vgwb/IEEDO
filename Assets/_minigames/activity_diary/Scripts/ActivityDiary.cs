@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
 using TMPro;
 
 namespace Ieedo.games.diary
@@ -43,15 +44,19 @@ namespace Ieedo.games.diary
                     });
                 }
             }
+
+            if (Pages.Count() > 0 && Pages[Pages.Count() - 1].Date == DateTime.Today)
+            {
+
+            }
             else
             {
                 Pages.Add(new Page
                 {
-                    Text = "write",
+                    Text = "",
                     Date = DateTime.Today,
                 });
             }
-
             currentPageNumber = Pages.Count();
             totalPageNumber = Pages.Count();
             updateUI();
@@ -62,7 +67,7 @@ namespace Ieedo.games.diary
             BtnNext.SetActive(Pages.Count > 1 && currentPageNumber < Pages.Count);
             BtnPrev.SetActive(Pages.Count > 1 && currentPageNumber > 1);
 
-            DateText.text = Pages[currentPageNumber - 1].Date.ToString("dd-MM-yyyy");
+            DateText.text = Pages[currentPageNumber - 1].Date.ToString("ddd dd MMM", LocalizationSettings.SelectedLocale.Formatter);
             InputText.text = Pages[currentPageNumber - 1].Text;
             PageText.text = currentPageNumber + " / " + totalPageNumber;
 

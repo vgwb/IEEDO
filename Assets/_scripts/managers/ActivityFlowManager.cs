@@ -142,6 +142,7 @@ namespace Ieedo
 
                 activityData.MaxScore = activityData.Results.Max(x => x.Score);
             }
+            Statics.Data.SaveProfile();
             Statics.Analytics.Activity(activityData.ID.ToString(), result.Result.ToString());
         }
 
