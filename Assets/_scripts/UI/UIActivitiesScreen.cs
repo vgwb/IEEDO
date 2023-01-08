@@ -75,12 +75,20 @@ namespace Ieedo
                 ActivityBlocks[i].ScoreText.Key = scoreTypeLoc;
 
                 // Check unlock state
-                data.Unlocked = Statics.Data.Profile.CurrentPoints >= activityDefinition.PointsToUnlock;
-                ActivityBlocks[i].LockedGO.SetActive(!data.Unlocked);
+                if (activityDefinition.Available)
+                {
+                    data.Unlocked = Statics.Data.Profile.CurrentPoints >= activityDefinition.PointsToUnlock;
+                    ActivityBlocks[i].LockedGO.SetActive(!data.Unlocked);
 
-                var pointsToUnlockLoc = new LocalizedString("Activity", "activity_points_to_unlock");
-                pointsToUnlockLoc.Arguments = new List<object> { activityDefinition };
-                ActivityBlocks[i].LockedText.Key = pointsToUnlockLoc;
+                    var pointsToUnlockLoc = new LocalizedString("Activity", "activity_points_to_unlock");
+                    pointsToUnlockLoc.Arguments = new List<object> { activityDefinition };
+                    ActivityBlocks[i].LockedText.Key = pointsToUnlockLoc;
+                }
+                else
+                {
+                    data.Unlocked = false;
+                    ActivityBlocks[i].LockedText.Key = new LocalizedString("Activity", "activity_available_soon");
+                }
             }
 
             for (int i = allActivities.Count; i < ActivityBlocks.Count; i++)

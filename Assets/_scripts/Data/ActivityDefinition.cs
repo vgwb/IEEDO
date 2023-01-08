@@ -6,6 +6,7 @@ namespace Ieedo
     public class ActivityDefinition : ScriptableObject, IDefinition
     {
         public bool Enabled;
+        public bool Available;
         public ActivityID ID;
         public LocString Title;
         public ActivityType Type;

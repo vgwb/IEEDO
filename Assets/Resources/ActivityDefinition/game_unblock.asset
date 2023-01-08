@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: game_unblock
   m_EditorClassIdentifier: 
   Enabled: 1
+  Available: 1
   ID: 21
   Title:
     Key:

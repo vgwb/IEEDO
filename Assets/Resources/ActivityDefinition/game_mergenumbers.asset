@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: game_mergenumbers
   m_EditorClassIdentifier: 
   Enabled: 1
+  Available: 0
   ID: 25
   Title:
     Key:
@@ -31,7 +32,7 @@ MonoBehaviour:
   Skills: 0
   Image: {fileID: 21300000, guid: 6345bb855875c4e17b2fb629fff0cd9c, type: 3}
   SceneName: game_mergenumbers
-  PointsToUnlock: 300
+  PointsToUnlock: 400
   PointsOnWin: 20
   PointsOnLoss: 0
   MaxLevel: 30

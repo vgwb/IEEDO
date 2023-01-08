@@ -295,11 +295,6 @@ MonoBehaviour:
     m_Localized: Bien fait!
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993831227397
-    m_Localized: "\xC9crire quelques lignes sur la fa\xE7on dont vous vous sentez
-      chaque jour est une bonne pratique pour votre bien-\xEAtre"
-    m_Metadata:
-      m_Items: []
   - m_Id: 112797993831227402
     m_Localized: "Cat\xE9gorie"
     m_Metadata:
@@ -311,6 +306,10 @@ MonoBehaviour:
       - rid: 3196637817602572299
   - m_Id: 113049161870336000
     m_Localized: Sauver
+    m_Metadata:
+      m_Items: []
+  - m_Id: 113092616990482432
+    m_Localized: "Bient\xF4t disponible"
     m_Metadata:
       m_Items: []
   references:

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: game_2048
   m_EditorClassIdentifier: 
   Enabled: 1
+  Available: 1
   ID: 28
   Title:
     Key:

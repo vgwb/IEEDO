@@ -295,11 +295,6 @@ MonoBehaviour:
     m_Localized: Gut gemacht!
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993831227397
-    m_Localized: "Ein paar Zeilen dar\xFCber zu schreiben, wie Sie sich jeden Tag
-      f\xFChlen, ist eine gute Praxis f\xFCr Ihr Wohlbefinden"
-    m_Metadata:
-      m_Items: []
   - m_Id: 112797993831227402
     m_Localized: Kategorie
     m_Metadata:
@@ -311,6 +306,10 @@ MonoBehaviour:
       - rid: 3196637817602572293
   - m_Id: 113049161870336000
     m_Localized: Speichern
+    m_Metadata:
+      m_Items: []
+  - m_Id: 113092616990482432
+    m_Localized: "In K\xFCrze erh\xE4ltlich"
     m_Metadata:
       m_Items: []
   references:

@@ -23,6 +23,10 @@ MonoBehaviour:
     m_Key: activity_abort_title
     m_Metadata:
       m_Items: []
+  - m_Id: 113092616990482432
+    m_Key: activity_available_soon
+    m_Metadata:
+      m_Items: []
   - m_Id: 112797993827033089
     m_Key: activity_play
     m_Metadata:
@@ -33,6 +37,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 112797993827033091
     m_Key: activity_play_next_level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 113049161866141696
+    m_Key: activity_points_to_unlock
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033092
@@ -77,14 +85,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 112797993831227396
     m_Key: activity_result_win
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993831227397
-    m_Key: activity_result_write_everyday
-    m_Metadata:
-      m_Items: []
-  - m_Id: 113049161866141696
-    m_Key: activity_points_to_unlock
     m_Metadata:
       m_Items: []
   - m_Id: 112797993831227399

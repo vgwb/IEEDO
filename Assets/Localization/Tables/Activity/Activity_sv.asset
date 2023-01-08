@@ -295,11 +295,6 @@ MonoBehaviour:
     m_Localized: Bra gjort!
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993831227397
-    m_Localized: "Att skriva n\xE5gra rader om hur du k\xE4nner dig varje dag \xE4r
-      en bra praxis f\xF6r ditt v\xE4lbefinnande"
-    m_Metadata:
-      m_Items: []
   - m_Id: 112797993831227402
     m_Localized: Kategori
     m_Metadata:
@@ -311,6 +306,10 @@ MonoBehaviour:
       - rid: 3196637817602572296
   - m_Id: 113049161870336000
     m_Localized: Spara
+    m_Metadata:
+      m_Items: []
+  - m_Id: 113092616990482432
+    m_Localized: "Snart tillg\xE4nglig"
     m_Metadata:
       m_Items: []
   references:

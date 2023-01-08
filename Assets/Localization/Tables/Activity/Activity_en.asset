@@ -451,11 +451,6 @@ MonoBehaviour:
     m_Localized: Well done!
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993831227397
-    m_Localized: Writing a few lines about how you feel every day is a good practice
-      for your wellbeing
-    m_Metadata:
-      m_Items: []
   - m_Id: 112797993831227399
     m_Localized: 'Highscore: {HighScore}'
     m_Metadata:
@@ -482,6 +477,10 @@ MonoBehaviour:
       - rid: 3196637817602572291
   - m_Id: 113049161870336000
     m_Localized: Save
+    m_Metadata:
+      m_Items: []
+  - m_Id: 113092616990482432
+    m_Localized: Available soon
     m_Metadata:
       m_Items: []
   references:
