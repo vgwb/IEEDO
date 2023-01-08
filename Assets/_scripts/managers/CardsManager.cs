@@ -102,7 +102,7 @@ namespace Ieedo
                 };
                 Statics.Data.Profile.Cards.Add(cardData);
             }
-            Log.Err($"{nToGenerate} card(s) generated");
+            Log.Warn($"{nToGenerate} card(s) generated");
         }
 
         #endregion

@@ -71,7 +71,7 @@ namespace Ieedo
                 foreach (var categoryData in profileData.Categories)
                     categoryData.AssessmentValue = UnityEngine.Random.value;
                 Statics.Data.SaveProfile();
-                Log.Err($"Generate random assessment data");
+                Log.Warn($"Generate random assessment data");
                 Statics.Screens.GoTo(ScreenID.Pillars);
             });
 

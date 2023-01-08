@@ -24,7 +24,7 @@ namespace Ieedo
         }
 #endif
 
-        [Header("Debug")]
+        [Header("Development")]
         public bool DebugMode;
 
         /// <summary>
@@ -34,6 +34,11 @@ namespace Ieedo
         public bool DebugLogEnabled = true;
         public bool DebugSaveProfileInJSON = true;
         public bool EnableSafeAreaInEditor;
+
+        /// <summary>
+        /// If true, cards generated in the editor will be saved to the default cards instead of the profile cards
+        /// </summary>
+        public bool SaveCardsAsDefault = false;
 
         [Header("App")]
         /// <summary>
@@ -46,15 +51,12 @@ namespace Ieedo
         /// </summary>
         public bool ResetProfileAtVersionMismatch = true;
 
-        /// <summary>
-        /// If true, cards generated in the editor will be saved to the default cards instead of the profile cards
-        /// </summary>
-        public bool SaveCardsAsDefault = false;
+        public string UrlSupportWebsite;
+        public int PointsCardCompleted;
+        public int PointsCardValidated;
 
-        [Header("Notifications")]
+        [Header("Services")]
         public bool NotificationsEnabled;
-
-        [Header("Analytics")]
         public bool AnalyticsEnabled;
         public bool AnalyticsDevEnv;
     }

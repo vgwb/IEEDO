@@ -240,12 +240,11 @@ namespace Ieedo
                 yield break;
                 */
 
-
             frontCardUI.Data.CompletionTimestamp = Timestamp.Now;
             frontCardUI.Data.Status = CardStatus.Completed;
             Statics.Data.SaveProfile();
 
-            yield return AnimateCardStatusChange(uiCard, 20);
+            yield return AnimateCardStatusChange(uiCard, Statics.App.ApplicationConfig.PointsCardCompleted);
 
             yield return AnimateCardOut(uiCard, +1);
             if (uiCard != null)
@@ -298,7 +297,7 @@ namespace Ieedo
             frontCardUI.Data.Status = CardStatus.Todo;
             Statics.Data.SaveProfile();
 
-            yield return AnimateCardStatusChange(uiCard, -20);
+            yield return AnimateCardStatusChange(uiCard, -Statics.App.ApplicationConfig.PointsCardCompleted);
 
             yield return AnimateCardOut(uiCard, -1);
 
@@ -324,7 +323,7 @@ namespace Ieedo
             frontCardUI.Data.Status = CardStatus.Validated;
             Statics.Data.SaveProfile();
 
-            yield return AnimateCardStatusChange(uiCard, 50);
+            yield return AnimateCardStatusChange(uiCard, Statics.App.ApplicationConfig.PointsCardValidated);
 
             if (uiPillarsScreen.ViewMode == PillarsViewMode.Review)
             {
@@ -372,7 +371,7 @@ namespace Ieedo
             frontCardUI.Data.Status = CardStatus.Completed;
             Statics.Data.SaveProfile();
 
-            yield return AnimateCardStatusChange(uiCard, -50);
+            yield return AnimateCardStatusChange(uiCard, -Statics.App.ApplicationConfig.PointsCardValidated);
 
             if (uiPillarsScreen.ViewMode == PillarsViewMode.Review)
             {

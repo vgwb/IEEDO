@@ -71,7 +71,7 @@ namespace Ieedo.Test
 
             Statics.Data.DeleteAllCardDefinitions();
 
-            Log.Err(Statics.Data.CardDefinitions.ToJoinedString());
+            Log.Warn(Statics.Data.CardDefinitions.ToJoinedString());
         }
 
         [Button("Test_AssignCard")]
