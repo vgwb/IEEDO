@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 namespace minigame.g2048
 {
@@ -35,7 +34,6 @@ namespace minigame.g2048
         public GameObject nodePrefab;
         public RectTransform emptyNodeRect;
         public RectTransform realNodeRect;
-        public TextMeshProUGUI ScoreText;
         private SwipeDirection currentSwipe;
         private int m_score;
         public int score
@@ -44,7 +42,6 @@ namespace minigame.g2048
             set
             {
                 m_score = value;
-                ScoreText.text = value.ToString();
             }
         }
 
@@ -148,7 +145,7 @@ namespace minigame.g2048
             to.value = to.value * 2;
 
             score += (int)to.value;
-            Activity2048.I.Score((int)to.value);
+            Activity2048.I.Score(score, (int)to.value);
 
             from.value = null;
             if (from.realNodeObj != null)

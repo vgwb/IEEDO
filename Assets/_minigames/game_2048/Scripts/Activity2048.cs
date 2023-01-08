@@ -19,7 +19,10 @@ namespace minigame.g2048
     public class Activity2048 : ActivityManager
     {
         public Board board;
+        public ui_score ScoreUI;
         public static Activity2048 I;
+
+        private int currentScore;
 
         void Awake()
         {
@@ -36,7 +39,19 @@ namespace minigame.g2048
         }
         protected override void SetupActivity(int currentLevel)
         {
+            int maxScore = 0;
+            if (Statics.Data != null)
+            {
+                var activityData = Statics.Data.Profile?.Activities?.GetActivityData(ActivityID.Play_2048);
+                if (activityData != null)
+                {
+                    Debug.Log(activityData.MaxScore);
+                    maxScore = activityData.MaxScore;
+                }
+            }
             Debug.Log($"Starting game at level {currentLevel}");
+
+            ScoreUI.Init(0, maxScore);
             board.StartGame();
         }
 
@@ -66,13 +81,13 @@ namespace minigame.g2048
         public void OnBtnWin()
         {
             SoundManager.I.PlaySfx(SfxEnum.win);
-            StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win, 10)));
+            StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win, currentScore)));
         }
 
         public void OnBtnLose()
         {
             SoundManager.I.PlaySfx(SfxEnum.lose);
-            StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Lose, 2)));
+            StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Lose, currentScore)));
         }
 
         public void OnSwipe(string direction)
@@ -100,10 +115,10 @@ namespace minigame.g2048
             board.Swipe(currentSwipe);
         }
 
-        public void Score(int score)
+        public void Score(int totalScore, int deltascore = 0)
         {
-            SoundManager.I.PlaySfx(SfxEnum.score);
-            Debug.Log("SCORE " + score);
+            currentScore = totalScore;
+            ScoreUI.UpdateScore(totalScore);
         }
 
     }

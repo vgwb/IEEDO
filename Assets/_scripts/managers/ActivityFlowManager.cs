@@ -103,6 +103,7 @@ namespace Ieedo
 
         public void RegisterResult(ActivityResult result, ActivityID activityId = ActivityID.None)
         {
+            Debug.Log("RegisterResult" + result.Score);
             if (activityId == ActivityID.None)
                 activityId = CurrentActivity.ID;
 
