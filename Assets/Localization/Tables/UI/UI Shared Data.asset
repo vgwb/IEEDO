@@ -39,6 +39,10 @@ MonoBehaviour:
     m_Key: action_generate_test_pillars
     m_Metadata:
       m_Items: []
+  - m_Id: 153714070861635584
+    m_Key: action_open_help
+    m_Metadata:
+      m_Items: []
   - m_Id: 40526294958235648
     m_Key: action_reset_profile
     m_Metadata:
@@ -141,6 +145,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 65886906563190784
     m_Key: hamburger_credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153714070870024192
+    m_Key: hamburger_help
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854080
@@ -289,6 +297,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 50660762391093255
     m_Key: session_start_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153714070870024193
+    m_Key: setting_notifications
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854082

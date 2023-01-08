@@ -125,8 +125,7 @@ MonoBehaviour:
     m_Localized: "Ce projet ieedo (2020-1-uk01-ka204-079117) a \xE9t\xE9 financ\xE9
       avec le soutien de la Commission europ\xE9enne. Cette publication refl\xE8te
       les opinions uniquement de l'auteur, et la Commission n'est pas responsable
-      de toute utilisation qui pourrait \xEAtre faite des informations qui y sont
-      contenues."
+      de toute utilisation qui peut \xEAtre faite des informations qui y sont contenues."
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925889
@@ -343,6 +342,18 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 144439249336033280
     m_Localized: "\xCAtes-vous s\xFBr de vouloir quitter le questionnaire?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153714070861635584
+    m_Localized: Site Web d'aide ouverte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153714070870024192
+    m_Localized: Aider
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153714070870024193
+    m_Localized: Notifications
     m_Metadata:
       m_Items: []
   references:

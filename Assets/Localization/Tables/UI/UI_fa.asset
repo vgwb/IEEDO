@@ -412,6 +412,19 @@ MonoBehaviour:
       \u0631\u0627 \u062A\u0631\u06A9 \u06A9\u0646\u06CC\u062F\u061F"
     m_Metadata:
       m_Items: []
+  - m_Id: 153714070861635584
+    m_Localized: "\u0648\u0628 \u0633\u0627\u06CC\u062A \u0631\u0627\u0647\u0646\u0645\u0627\u06CC
+      \u0628\u0627\u0632"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153714070870024192
+    m_Localized: "\u06A9\u0645\u06A9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153714070870024193
+    m_Localized: "\u0627\u0637\u0644\u0627\u0639\u06CC\u0647"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

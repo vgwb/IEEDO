@@ -346,6 +346,18 @@ MonoBehaviour:
     m_Localized: "Sind Sie sicher, dass Sie den Fragebogen verlassen m\xF6chten?"
     m_Metadata:
       m_Items: []
+  - m_Id: 153714070861635584
+    m_Localized: "Help -Website \xF6ffnen"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153714070870024192
+    m_Localized: Hilfe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153714070870024193
+    m_Localized: Benachrichtigungen
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

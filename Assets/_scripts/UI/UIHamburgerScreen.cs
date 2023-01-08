@@ -11,7 +11,9 @@ namespace Ieedo
     {
         public override ScreenID ID => ScreenID.Hamburger;
 
+        public UIText AppVersionText;
         public LeanToggle SfxToggle;
+        public LeanToggle NotificationsToggle;
 
         public RectTransform CheatSection;
         public RectTransform SettingsSection;
@@ -28,7 +30,7 @@ namespace Ieedo
         private UIButton btnGenerateTestPillars;
         private UIButton btnGenerateTestCards;
         private UIButton btnTestIncreaseScore;
-        private UIButton btnResetProfile;
+        // private UIButton btnResetProfile;
         private UIButton btnTestAddDiary;
         private UIButton btnTestNotifications;
 
@@ -41,6 +43,8 @@ namespace Ieedo
             initialised = true;
 
             SfxToggle.On = !Statics.Data.Profile.Settings.SfxDisabled;
+            NotificationsToggle.On = !Statics.Data.Profile.Settings.NotificationsDisabled;
+            AppVersionText.SetTextRaw("Version v0." + Statics.App.ApplicationConfig.Version.ToString());
 
             CheatSection.gameObject.SetActive(false);
             SetupButton(btnHiddenCheats, () =>
@@ -85,11 +89,11 @@ namespace Ieedo
                 Statics.Points.AddPoints(100);
             });
 
-            btnResetProfile = AddButton("action_reset_profile", () =>
-            {
-                AppManager.I.StartCoroutine(ResetProfileCO());
-                CloseImmediate();
-            }, SettingsSection);
+            // btnResetProfile = AddButton("action_reset_profile", () =>
+            // {
+            //     AppManager.I.StartCoroutine(ResetProfileCO());
+            //     CloseImmediate();
+            // }, SettingsSection);
 
             btnTestAddDiary = AddUnlocalizedButton("Add Diary Pages", () =>
             {
@@ -123,7 +127,7 @@ namespace Ieedo
             btnGenerateTestCards.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
             btnGenerateTestPillars.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
             btnTestIncreaseScore.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
-            btnResetProfile.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
+            //            btnResetProfile.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
             btnTestAddDiary.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
             yield break;
         }
@@ -195,10 +199,29 @@ namespace Ieedo
             return btn;
         }
 
+        public void OnBtnResetProfile()
+        {
+            // AppManager.I.StartCoroutine(ResetProfileCO());
+            // CloseImmediate();
+        }
+
+        public void OnOpenHelpWebsite()
+        {
+            Debug.Log("OnOpenHelpWebsite");
+            Application.OpenURL(Statics.App.ApplicationConfig.UrlSupportWebsite);
+        }
+
         public void OnSetSfx(bool _sfxOn)
         {
             Debug.Log("Sfx " + _sfxOn);
             Statics.Data.Profile.Settings.SfxDisabled = !_sfxOn;
+            Statics.Data.SaveProfile();
+        }
+
+        public void OnSetNotifications(bool _notificationsOn)
+        {
+            Debug.Log("OnSetNotifications " + _notificationsOn);
+            Statics.Data.Profile.Settings.NotificationsDisabled = !_notificationsOn;
             Statics.Data.SaveProfile();
         }
 

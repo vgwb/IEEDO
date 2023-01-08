@@ -338,6 +338,18 @@ MonoBehaviour:
     m_Localized: '#VALUE!'
     m_Metadata:
       m_Items: []
+  - m_Id: 153714070861635584
+    m_Localized: '#VALUE!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153714070870024192
+    m_Localized: '#VALUE!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153714070870024193
+    m_Localized: '#VALUE!'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

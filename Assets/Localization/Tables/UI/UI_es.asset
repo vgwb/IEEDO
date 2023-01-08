@@ -343,6 +343,18 @@ MonoBehaviour:
     m_Localized: "\xBFEst\xE1s seguro de que quieres dejar el cuestionario?"
     m_Metadata:
       m_Items: []
+  - m_Id: 153714070861635584
+    m_Localized: Sitio web de ayuda de ayuda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153714070870024192
+    m_Localized: Ayudar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153714070870024193
+    m_Localized: Notificaciones
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

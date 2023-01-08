@@ -337,6 +337,18 @@ MonoBehaviour:
     m_Localized: Are you sure you want to leave the questionnaire?
     m_Metadata:
       m_Items: []
+  - m_Id: 153714070861635584
+    m_Localized: Open Help website
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153714070870024192
+    m_Localized: Help
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153714070870024193
+    m_Localized: Notifications
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

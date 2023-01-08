@@ -342,6 +342,18 @@ MonoBehaviour:
     m_Localized: Ma hubtaa inaad rabto inaad ka baxdo foomka su'aalaha?
     m_Metadata:
       m_Items: []
+  - m_Id: 153714070861635584
+    m_Localized: Websaydhka Caawinta Furan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153714070870024192
+    m_Localized: I caawi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153714070870024193
+    m_Localized: Ogeysiisyada
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

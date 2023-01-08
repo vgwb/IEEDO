@@ -53,8 +53,8 @@ namespace Ieedo
         public string HostCountryLocale;
         public string NativeLocale;
         public bool SfxDisabled;
+        public bool NotificationsDisabled;
     }
-
 
     #region Activities
 
