@@ -81,37 +81,57 @@ namespace minigame.g2048
         public void OnBtnWin()
         {
             SoundManager.I.PlaySfx(SfxEnum.win);
-            StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win, currentScore)));
+
+            var points = 0;
+            if (currentScore >= 2048)
+            {
+                points = Activity.ScoreOnWin;
+            }
+            else if (currentScore >= 1024)
+            {
+                points = Activity.ScoreOnWin / 2;
+            }
+            else if (currentScore >= 512)
+            {
+                points = Activity.ScoreOnWin / 4;
+            }
+            else if (currentScore >= 256)
+            {
+                points = Activity.ScoreOnWin / 8;
+            }
+            else if (currentScore >= 128)
+            {
+                points = Activity.ScoreOnWin / 16;
+            }
+            else if (currentScore >= 64)
+            {
+                points = Activity.ScoreOnWin / 32;
+            }
+            else if (currentScore >= 32)
+            {
+                points = Activity.ScoreOnWin / 64;
+            }
+
+            StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win, points)));
         }
 
         public void OnBtnLose()
         {
             SoundManager.I.PlaySfx(SfxEnum.lose);
-            StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Lose, currentScore)));
+            StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Lose, Activity.ScoreOnLoss)));
         }
 
         public void OnSwipe(string direction)
         {
             SoundManager.I.PlaySfx(SfxEnum.click);
-            SwipeDirection currentSwipe = SwipeDirection.None;
-            switch (direction)
+            var currentSwipe = direction switch
             {
-                case "N":
-                    currentSwipe = SwipeDirection.N;
-                    break;
-                case "E":
-                    currentSwipe = SwipeDirection.E;
-                    break;
-                case "S":
-                    currentSwipe = SwipeDirection.S;
-                    break;
-                case "W":
-                    currentSwipe = SwipeDirection.W;
-                    break;
-                default:
-                    currentSwipe = SwipeDirection.None;
-                    break;
-            }
+                "N" => SwipeDirection.N,
+                "E" => SwipeDirection.E,
+                "S" => SwipeDirection.S,
+                "W" => SwipeDirection.W,
+                _ => SwipeDirection.None,
+            };
             board.Swipe(currentSwipe);
         }
 
