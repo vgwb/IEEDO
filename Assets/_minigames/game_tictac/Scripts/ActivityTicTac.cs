@@ -18,12 +18,12 @@ namespace minigame.tictac
             if (playerWin)
             {
                 SoundManager.I.PlaySfx(SfxEnum.win);
-                StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win, 10)));
+                StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win, Activity.PointsOnWin)));
             }
             else
             {
                 SoundManager.I.PlaySfx(SfxEnum.lose);
-                StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Lose, 10)));
+                StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Lose, Activity.PointsOnLoss)));
             }
         }
 

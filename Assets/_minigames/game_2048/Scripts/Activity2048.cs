@@ -45,8 +45,8 @@ namespace minigame.g2048
                 var activityData = Statics.Data.Profile?.Activities?.GetActivityData(ActivityID.Play_2048);
                 if (activityData != null)
                 {
-                    Debug.Log(activityData.MaxScore);
-                    maxScore = activityData.MaxScore;
+                    Debug.Log(activityData.HiScore);
+                    maxScore = activityData.HiScore;
                 }
             }
             Debug.Log($"Starting game at level {currentLevel}");
@@ -85,31 +85,31 @@ namespace minigame.g2048
             var points = 0;
             if (currentScore >= 2048)
             {
-                points = Activity.ScoreOnWin;
+                points = Activity.PointsOnWin;
             }
             else if (currentScore >= 1024)
             {
-                points = Activity.ScoreOnWin / 2;
+                points = Activity.PointsOnWin / 2;
             }
             else if (currentScore >= 512)
             {
-                points = Activity.ScoreOnWin / 4;
+                points = Activity.PointsOnWin / 4;
             }
             else if (currentScore >= 256)
             {
-                points = Activity.ScoreOnWin / 8;
+                points = Activity.PointsOnWin / 8;
             }
             else if (currentScore >= 128)
             {
-                points = Activity.ScoreOnWin / 16;
+                points = Activity.PointsOnWin / 16;
             }
             else if (currentScore >= 64)
             {
-                points = Activity.ScoreOnWin / 32;
+                points = Activity.PointsOnWin / 32;
             }
             else if (currentScore >= 32)
             {
-                points = Activity.ScoreOnWin / 64;
+                points = Activity.PointsOnWin / 64;
             }
 
             StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win, points)));
@@ -118,7 +118,7 @@ namespace minigame.g2048
         public void OnBtnLose()
         {
             SoundManager.I.PlaySfx(SfxEnum.lose);
-            StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Lose, Activity.ScoreOnLoss)));
+            StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Lose, Activity.PointsOnLoss)));
         }
 
         public void OnSwipe(string direction)

@@ -112,7 +112,7 @@ namespace Ieedo.games.diary
             var todayResult = activityData.Results.FirstOrDefault(x => x.Timestamp.Equals(Timestamp.Today));
             if (todayResult == null)
             {
-                todayResult = new ActivityResult(ActivityResultState.Win, 10);
+                todayResult = new ActivityResult(ActivityResultState.Win, Activity.PointsOnWin);
                 todayResult.Timestamp = Timestamp.Today;
             }
             todayResult.CustomData = todayText;
