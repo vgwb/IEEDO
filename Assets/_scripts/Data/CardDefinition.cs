@@ -32,7 +32,8 @@ namespace Ieedo
         {
             get
             {
-                if (SubCategoryDefinition == null) return string.Empty;
+                if (SubCategoryDefinition == null)
+                    return string.Empty;
                 return SubCategoryDefinition.Icon;
             }
         }
@@ -40,11 +41,13 @@ namespace Ieedo
         [JsonIgnore]
         public CategoryDefinition CategoryDefinition => Statics.Data.Get<CategoryDefinition>((int)Category);
 
-        [JsonIgnore] public SubCategoryDefinition SubCategoryDefinition
+        [JsonIgnore]
+        public SubCategoryDefinition SubCategoryDefinition
         {
             get
             {
-                if (CategoryDefinition == null) return null;
+                if (CategoryDefinition == null)
+                    return null;
                 return CategoryDefinition.SubCategories.FirstOrDefault(x => x.ID == SubCategory);
             }
         }

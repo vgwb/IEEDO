@@ -16,5 +16,4 @@ namespace Ieedo
 
         public int Id => (int)ID;
     }
-
 }
