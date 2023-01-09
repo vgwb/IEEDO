@@ -6975,6 +6975,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5653074619220517357}
     - target: {fileID: 4668475635819497380, guid: e37b05479bb4d8a469cda915f629ea78, type: 3}
+      propertyPath: PointsUI
+      value: 
+      objectReference: {fileID: 5653074619220517358}
+    - target: {fileID: 4668475635819497380, guid: e37b05479bb4d8a469cda915f629ea78, type: 3}
       propertyPath: CurrentPointsText
       value: 
       objectReference: {fileID: 5653074619220517356}
@@ -7322,6 +7326,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3faba2012c9a4ed8a744c2eae5fd3e0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5653074619220517358 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4514460054580906469, guid: cdfd30230c15d254a825996ef01ff3c7, type: 3}
+  m_PrefabInstance: {fileID: 5653074619220517355}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c4fdcf9175ce4f2e9e20b45f1ddd031, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &6170029312735753735

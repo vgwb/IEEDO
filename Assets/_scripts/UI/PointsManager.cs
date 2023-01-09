@@ -10,22 +10,31 @@ namespace Ieedo
 {
     public class PointsManager : MonoBehaviour
     {
-        public UIText CurrentPointsText;
+        public ui_points PointsUI;
 
-        public void RefreshPointsText()
+        // public void RefreshPointsText()
+        // {
+        //     if (PointsUI != null)
+        //     {
+        //         CurrentPointsText.transform.localScaleTransition(Vector3.one * 1.5f, 0.25f).JoinDelayTransition(0.25f).localScaleTransition(Vector3.one, 0.25f);
+        //         CurrentPointsText.SetTextRaw($"{Statics.Data.Profile.CurrentPoints.ToString()}");
+        //     }
+        // }
+
+        public void Init()
         {
-            if (CurrentPointsText != null)
-            {
-                CurrentPointsText.transform.localScaleTransition(Vector3.one * 1.5f, 0.25f).JoinDelayTransition(0.25f).localScaleTransition(Vector3.one, 0.25f);
-                CurrentPointsText.SetTextRaw($"{Statics.Data.Profile.CurrentPoints.ToString()}");
-            }
+            PointsUI.UpdatePoints(Statics.Data.Profile.CurrentPoints, 0);
+        }
+
+        public void ShowPoints(bool visible)
+        {
+            PointsUI.gameObject.SetActive(visible);
         }
 
         public void AddPoints(int value)
         {
-            SoundManager.I.PlaySfx(SfxEnum.score);
             Statics.Data.Profile.CurrentPoints += value;
-            RefreshPointsText();
+            PointsUI.UpdatePoints(Statics.Data.Profile.CurrentPoints, value);
             Statics.Data.SaveProfile();
         }
 

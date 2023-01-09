@@ -61,7 +61,7 @@ namespace Ieedo
                 LocalizationSettings.SelectedLocale = locale;
 
             // Initialise UI
-            Statics.Points.RefreshPointsText();
+            Statics.Points.Init();
 
             // Load the game
             Statics.Screens.OpenImmediate(ScreenID.Top);
@@ -91,7 +91,7 @@ namespace Ieedo
             var dialogPopup = Statics.Screens.Get(ScreenID.Dialog) as UIDialogPopup;
             var pillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
 
-            Statics.Points.CurrentPointsText.transform.parent.gameObject.SetActive(false);
+            Statics.Points.ShowPoints(false);
             topScreen.HamburgerButton.Hide();
             topScreen.SessionModeButton.Hide();
             topScreen.InstantTranslationButton.Hide();
@@ -164,7 +164,7 @@ namespace Ieedo
             Statics.Tutorial.HideTutorialArrow();
 
             // Tutorial end
-            Statics.Points.CurrentPointsText.transform.parent.gameObject.SetActive(true);
+            Statics.Points.ShowPoints(true);
             topScreen.HamburgerButton.Show();
             topScreen.SessionModeButton.Show();
             topScreen.InstantTranslationButton.Show();
