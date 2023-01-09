@@ -19,7 +19,7 @@ MonoBehaviour:
   m_LocaleName: Tigrinya (ti)
   m_CustomFormatCultureCode: 
   m_UseCustomFormatter: 0
-  m_SortOrder: 0
+  m_SortOrder: 12
   references:
     version: 2
     RefIds: []
