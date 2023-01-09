@@ -69,7 +69,7 @@ namespace Ieedo.games.diary
 
             DateText.text = Pages[currentPageNumber - 1].Date.ToString("ddd dd MMM", LocalizationSettings.SelectedLocale.Formatter);
             InputText.text = Pages[currentPageNumber - 1].Text;
-            PageText.text = currentPageNumber + "\n-\n" + totalPageNumber;
+            PageText.text = currentPageNumber + " / " + totalPageNumber;
 
             if (currentPageNumber == totalPageNumber)
             {
