@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: decad2ba933a747bcaf04fbfa920dc64, type: 3}
   m_Name: ApplicationConfig
   m_EditorClassIdentifier: 
-  DebugMode: 0
-  DebugLogEnabled: 1
-  DebugSaveProfileInJSON: 1
-  EnableSafeAreaInEditor: 0
-  SaveCardsAsDefault: 0
   Version: 3
   ResetProfileAtVersionMismatch: 1
   UrlSupportWebsite: https://vgwb.github.io/IEEDO/
   PointsCardCompleted: 20
   PointsCardValidated: 50
   NotificationsEnabled: 1
-  AnalyticsEnabled: 0
-  AnalyticsDevEnv: 0
+  AnalyticsEnabled: 1
+  AnalyticsDevEnv: 1
+  DebugMode: 0
+  DebugLogEnabled: 1
+  DebugSaveProfileInJSON: 1
+  EnableSafeAreaInEditor: 0
+  SaveCardsAsDefault: 0

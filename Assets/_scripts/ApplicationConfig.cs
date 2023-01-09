@@ -24,22 +24,6 @@ namespace Ieedo
         }
 #endif
 
-        [Header("Development")]
-        public bool DebugMode;
-
-        /// <summary>
-        /// Switches on all Debug.Log calls for performance.
-        /// Set to FALSE for production.
-        /// </summary>
-        public bool DebugLogEnabled = true;
-        public bool DebugSaveProfileInJSON = true;
-        public bool EnableSafeAreaInEditor;
-
-        /// <summary>
-        /// If true, cards generated in the editor will be saved to the default cards instead of the profile cards
-        /// </summary>
-        public bool SaveCardsAsDefault = false;
-
         [Header("App")]
         /// <summary>
         /// Incremental version
@@ -59,5 +43,22 @@ namespace Ieedo
         public bool NotificationsEnabled;
         public bool AnalyticsEnabled;
         public bool AnalyticsDevEnv;
+
+        [Header("Development")]
+        public bool DebugMode;
+
+        /// <summary>
+        /// Switches on all Debug.Log calls for performance.
+        /// Set to FALSE for production.
+        /// </summary>
+        public bool DebugLogEnabled = true;
+        public bool DebugSaveProfileInJSON = true;
+        public bool EnableSafeAreaInEditor;
+
+        /// <summary>
+        /// If true, cards generated in the editor will be saved to the default cards instead of the profile cards
+        /// </summary>
+        public bool SaveCardsAsDefault = false;
+
     }
 }
