@@ -1,3 +1,7 @@
+---
+title: Minigame Unblock
+parent: Game Design
+---
 # Minigame Unblock
 
 ![](../assets/img/unblock.webp)

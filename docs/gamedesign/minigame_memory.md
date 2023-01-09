@@ -1,3 +1,7 @@
+---
+title: Minigame Memory Pattern
+parent: Game Design
+---
 # Minigame Memory Pattern
 
 ![](img/minigame_memory.excalidraw2.png)

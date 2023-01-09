@@ -1,3 +1,7 @@
+---
+title: Minigame Math Speed
+parent: Game Design
+---
 # Minigame Math Speed
 
 ![](img/minigame_math_speed.exalidraw2.png)

@@ -1,3 +1,8 @@
+---
+title: Writing Activities
+parent: Game Design
+---
+
 ## Writing Activities
 ![](assets/img/write.webp)
 

@@ -1,3 +1,7 @@
+---
+title: Minigame Fast Reaction
+parent: Game Design
+---
 # Minigame Fast Reaction
 
 ![](img/minigame_fast_reaction.excalidraw2.png)

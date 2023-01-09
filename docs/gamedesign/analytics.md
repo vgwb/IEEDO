@@ -1,10 +1,7 @@
 ---
-layout: default
-title: Analytics
-nav_order: 20
-has_children: false
+title: Game Analytics
+parent: Game Design
 ---
-
 # Game Analytics
 
 ## Custom Events

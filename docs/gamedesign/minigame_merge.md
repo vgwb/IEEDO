@@ -1,3 +1,7 @@
+---
+title: Minigame Merge
+parent: Game Design
+---
 # Minigame Merge
 
 ![](img/minigame_merge.excalidraw2.png)

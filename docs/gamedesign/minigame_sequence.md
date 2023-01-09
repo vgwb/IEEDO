@@ -1,3 +1,7 @@
+---
+title: Minigame Sequence
+parent: Game Design
+---
 # Minigame Sequence
 
 ![](img/minigame_sequence.excalidraw2.png)

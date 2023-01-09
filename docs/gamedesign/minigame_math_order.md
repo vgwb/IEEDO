@@ -1,3 +1,7 @@
+---
+title: Minigame Math Order
+parent: Game Design
+---
 # Minigame Math Order
 
 ![](img/minigame_math_order.excalidraw2.png)

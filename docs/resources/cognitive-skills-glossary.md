@@ -1,3 +1,7 @@
+---
+title: Cognitive skills glossary
+parent: Resources
+---
 
 # Cognitive skills glossary 
 ![](../assets/img/brain-skills.webp)
