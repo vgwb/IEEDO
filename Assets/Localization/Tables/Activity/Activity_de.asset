@@ -312,10 +312,25 @@ MonoBehaviour:
     m_Localized: "In K\xFCrze erh\xE4ltlich"
     m_Metadata:
       m_Items: []
+  - m_Id: 112797993831227399
+    m_Localized: 'Highscore: {HighScore}'
+    m_Metadata:
+      m_Items:
+      - rid: 3196637817602572293
+  - m_Id: 112797993831227400
+    m_Localized: 'Level: {CurrentLevel} / {MaxLevel}'
+    m_Metadata:
+      m_Items:
+      - rid: 3196637817602572293
+  - m_Id: 112797993831227401
+    m_Localized: Played {Count}
+    m_Metadata:
+      m_Items:
+      - rid: 3196637817602572293
   references:
     version: 2
     RefIds:
     - rid: 3196637817602572293
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 02e0af812dbd900106e0af812dbd900100e02f1f9da19101
+        m_Entries: 02e0af812dbd900106e0af812dbd900100e02f1f9da1910109e0af812dbd900108e0af812dbd900107e0af812dbd9001

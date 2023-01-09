@@ -344,10 +344,25 @@ MonoBehaviour:
     m_Localized: "\u0689\u06CC\u0631 \u0698\u0631"
     m_Metadata:
       m_Items: []
+  - m_Id: 112797993831227399
+    m_Localized: 'Highscore: {HighScore}'
+    m_Metadata:
+      m_Items:
+      - rid: 3196637817602572300
+  - m_Id: 112797993831227400
+    m_Localized: 'Level: {CurrentLevel} / {MaxLevel}'
+    m_Metadata:
+      m_Items:
+      - rid: 3196637817602572300
+  - m_Id: 112797993831227401
+    m_Localized: Played {Count}
+    m_Metadata:
+      m_Items:
+      - rid: 3196637817602572300
   references:
     version: 2
     RefIds:
     - rid: 3196637817602572300
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 06e0af812dbd900102e0af812dbd900100e02f1f9da19101
+        m_Entries: 06e0af812dbd900102e0af812dbd900100e02f1f9da1910107e0af812dbd900108e0af812dbd900109e0af812dbd9001
