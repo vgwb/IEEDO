@@ -15,8 +15,8 @@ MonoBehaviour:
   Version: 3
   ResetProfileAtVersionMismatch: 1
   UrlSupportWebsite: https://vgwb.github.io/IEEDO/
-  PointsCardCompleted: 20
-  PointsCardValidated: 50
+  PointsCardCompleted: 40
+  PointsCardValidated: 60
   NotificationsEnabled: 1
   AnalyticsEnabled: 1
   AnalyticsDevEnv: 1

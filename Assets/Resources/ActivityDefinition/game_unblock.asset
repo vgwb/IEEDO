@@ -33,7 +33,7 @@ MonoBehaviour:
   Image: {fileID: 21300000, guid: 3aa38459aecf34661bb7746ccc047739, type: 3}
   SceneName: game_unblock
   PointsToUnlock: 0
-  PointsOnWin: 2
+  PointsOnWin: 1
   PointsOnLoss: 0
   MaxLevel: 252
   references:
