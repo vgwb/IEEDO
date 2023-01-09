@@ -1,7 +1,7 @@
 title: "IEEDO"
 remote_theme: just-the-docs/just-the-docs
 color_scheme: "light"
-search_enabled: true
+search_enabled: false
 baseurl: "/IEEDO"
 url: "http://vgwb.github.io"
 logo: "/assets/img/IEEDO_icon.webp"
