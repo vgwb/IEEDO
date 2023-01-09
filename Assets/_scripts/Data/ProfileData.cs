@@ -54,6 +54,7 @@ namespace Ieedo
         public string NativeLocale;
         public bool SfxDisabled;
         public bool NotificationsDisabled;
+        public bool AnalyticsDisabled;
     }
 
     #region Activities
@@ -65,7 +66,6 @@ namespace Ieedo
         {
             return this.FirstOrDefault(x => x.ID == id);
         }
-
     }
 
     [Serializable]
