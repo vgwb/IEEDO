@@ -23,18 +23,18 @@ namespace Ieedo
 
         public void Init()
         {
-            PointsUI.UpdatePoints(Statics.Data.Profile.CurrentPoints, 0);
+            PointsUI?.UpdatePoints(Statics.Data.Profile.CurrentPoints, 0);
         }
 
         public void ShowPoints(bool visible)
         {
-            PointsUI.gameObject.SetActive(visible);
+            PointsUI?.gameObject.SetActive(visible);
         }
 
         public void AddPoints(int value)
         {
             Statics.Data.Profile.CurrentPoints += value;
-            PointsUI.UpdatePoints(Statics.Data.Profile.CurrentPoints, value);
+            PointsUI?.UpdatePoints(Statics.Data.Profile.CurrentPoints, value);
             Statics.Data.SaveProfile();
         }
 

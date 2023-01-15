@@ -18,7 +18,7 @@ namespace Ieedo
 
         public void Update()
         {
-            if (TutorialArrow.activeSelf)
+            if (TutorialArrow != null && TutorialArrow.activeSelf)
             {
                 TutorialArrow.transform.position = targetGo.transform.position;
             }

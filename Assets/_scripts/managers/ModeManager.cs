@@ -50,7 +50,10 @@ namespace Ieedo
         {
             Debug.Log("Set session mode " + mode);
             SessionMode = mode;
-            ModeText.text = SessionMode == SessionMode.Solo ? "\uf007" : "\uf500";
+            if (ModeText != null)
+            {
+                ModeText.text = SessionMode == SessionMode.Solo ? "\uf007" : "\uf500";
+            }
         }
     }
 }
