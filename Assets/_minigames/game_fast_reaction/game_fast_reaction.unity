@@ -342,7 +342,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -216.14, y: -300}
+  m_AnchoredPosition: {x: -216.14001, y: -300}
   m_SizeDelta: {x: 272.28, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &440508312
@@ -5722,6 +5722,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1446900620}
   - component: {fileID: 1446900621}
+  - component: {fileID: 1446900622}
   m_Layer: 0
   m_Name: ActivityManager
   m_TagString: Untagged
@@ -5759,7 +5760,21 @@ MonoBehaviour:
   Activity: {fileID: 11400000, guid: a052c322e34204f3b83ba0c8d1e22a2e, type: 2}
   DebugAutoplay: 1
   DebugStartLevel: 1
-  Board: {fileID: 0}
+  MinigameManager: {fileID: 1446900622}
+--- !u!114 &1446900622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446900618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f92800a14d8c4be0b8ed27a7c5770c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  damage: 20
 --- !u!1 &1451054033
 GameObject:
   m_ObjectHideFlags: 0

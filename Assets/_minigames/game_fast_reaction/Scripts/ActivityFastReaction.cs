@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ieedo;
 using Ieedo.games;
-using Lean.Transition;
 
 namespace minigame.fast_reaction
 {
     public class ActivityFastReaction : ActivityManager
     {
+
         void Start()
         {
             if (DebugAutoplay)
@@ -22,13 +22,7 @@ namespace minigame.fast_reaction
         {
             Debug.Log($"Starting game at level {currentLevel}");
 
-            StartCoroutine(StartGameCO());
-        }
-
-        private IEnumerator StartGameCO()
-        {
-            yield return new WaitForSeconds(1f);
-
+            PlayFastReaction.I.InitGame();
         }
 
         public void FinishGame(bool playerWin)
