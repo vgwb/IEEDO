@@ -12,8 +12,10 @@ namespace minigame
         public GameObject ScoreGO;
         public TextMeshProUGUI ScoreText;
         public TextMeshProUGUI HiScoreText;
+        public GameObject BonusPrefab;
 
         private Sequence PunchAnimation;
+        private GameObject bonusGO;
 
         void Start()
         {
@@ -37,14 +39,21 @@ namespace minigame
             UpdateHiScore(hiscore);
         }
 
-        public void UpdateScore(int value)
+        public void AddScore(int bonus, int totalScore)
+        {
+            bonusGO = Instantiate(BonusPrefab, transform);
+            bonusGO.GetComponent<ui_score_bonus>().Init(bonus);
+            UpdateScore(totalScore);
+        }
+
+        private void UpdateScore(int value)
         {
             ScoreText.text = value.ToString();
             PunchAnimation.Rewind();
             PunchAnimation.Play();
             SoundManager.I.PlaySfx(SfxEnum.score);
         }
-        public void UpdateHiScore(int value)
+        private void UpdateHiScore(int value)
         {
             HiScoreText.text = value.ToString();
         }

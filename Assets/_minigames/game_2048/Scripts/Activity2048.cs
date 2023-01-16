@@ -138,7 +138,7 @@ namespace minigame.g2048
         public void Score(int totalScore, int deltascore = 0)
         {
             currentScore = totalScore;
-            ScoreUI.UpdateScore(totalScore);
+            ScoreUI.AddScore(deltascore, totalScore);
         }
 
     }

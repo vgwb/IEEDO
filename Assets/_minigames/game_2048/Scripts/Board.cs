@@ -430,22 +430,22 @@ namespace minigame.g2048
             UpdateState();
             if (state == State.WAIT)
             {
-                if (currentSwipe == SwipeDirection.E || Input.GetKeyUp(KeyCode.RightArrow))
+                if (currentSwipe == SwipeDirection.E || Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D))
                 {
                     currentSwipe = SwipeDirection.None;
                     MoveTo(Node.Direction.RIGHT);
                 }
-                if (currentSwipe == SwipeDirection.W || Input.GetKeyUp(KeyCode.LeftArrow))
+                if (currentSwipe == SwipeDirection.W || Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.A))
                 {
                     currentSwipe = SwipeDirection.None;
                     MoveTo(Node.Direction.LEFT);
                 }
-                if (currentSwipe == SwipeDirection.N || Input.GetKeyUp(KeyCode.UpArrow))
+                if (currentSwipe == SwipeDirection.N || Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.W))
                 {
                     currentSwipe = SwipeDirection.None;
                     MoveTo(Node.Direction.UP);
                 }
-                if (currentSwipe == SwipeDirection.S || Input.GetKeyUp(KeyCode.DownArrow))
+                if (currentSwipe == SwipeDirection.S || Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.S))
                 {
                     currentSwipe = SwipeDirection.None;
                     MoveTo(Node.Direction.DOWN);
