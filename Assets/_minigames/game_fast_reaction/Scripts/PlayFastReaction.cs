@@ -138,5 +138,15 @@ namespace minigame.fast_reaction
                 fsm.ChangeState(States.Countdown);
             }
         }
+
+        public void OnBtnYes()
+        {
+            Debug.Log("YES");
+        }
+
+        public void OnBtnNo()
+        {
+            Debug.Log("NO");
+        }
     }
 }
