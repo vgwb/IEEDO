@@ -6,7 +6,7 @@ using DG.Tweening;
 
 namespace Ieedo
 {
-    public class ui_points : MonoBehaviour
+    public class UIPoints : MonoBehaviour
     {
         public TextMeshProUGUI PointsText;
         public TextMeshProUGUI IconText;
@@ -16,7 +16,7 @@ namespace Ieedo
 
         void Start()
         {
-            IconText.text = "\uf06d";
+            IconText.text = Statics.App.ApplicationConfig.PointsSymbol;
             //     PunchAnimation = DOTween.Sequence()
             //    .Insert(0, IconGO.transform.DOPunchScale(new Vector3(0.5f, 0.5f, 0.5f), 1, 3, 0f))
             //    .SetAutoKill(false).Pause();

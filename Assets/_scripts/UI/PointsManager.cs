@@ -10,7 +10,7 @@ namespace Ieedo
 {
     public class PointsManager : MonoBehaviour
     {
-        public ui_points PointsUI;
+        public UIPoints PointsUI;
 
         // public void RefreshPointsText()
         // {
