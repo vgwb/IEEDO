@@ -39,6 +39,8 @@ namespace Ieedo
         public int PointsCardCompleted;
         public int PointsCardValidated;
 
+        public string PointsSymbol;
+
         [Header("Services")]
         public bool NotificationsEnabled;
         public bool AnalyticsEnabled;

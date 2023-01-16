@@ -17,6 +17,7 @@ MonoBehaviour:
   UrlSupportWebsite: https://vgwb.github.io/IEEDO/
   PointsCardCompleted: 40
   PointsCardValidated: 60
+  PointsSymbol: \uf06d
   NotificationsEnabled: 1
   AnalyticsEnabled: 1
   AnalyticsDevEnv: 1
