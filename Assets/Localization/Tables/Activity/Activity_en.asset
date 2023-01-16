@@ -492,6 +492,18 @@ MonoBehaviour:
     m_Localized: Answer Yes or No as fast as you can.
     m_Metadata:
       m_Items: []
+  - m_Id: 115989062555262976
+    m_Localized: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115989062559457280
+    m_Localized: Resume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115989062559457281
+    m_Localized: Start
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

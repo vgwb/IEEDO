@@ -27,6 +27,18 @@ MonoBehaviour:
     m_Key: activity_available_soon
     m_Metadata:
       m_Items: []
+  - m_Id: 115987864720760834
+    m_Key: activity_comment_do_better
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864720760833
+    m_Key: activity_comment_doing_well
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864720760832
+    m_Key: activity_comment_great
+    m_Metadata:
+      m_Items: []
   - m_Id: 115977790945173504
     m_Key: activity_completed
     m_Metadata:
@@ -87,18 +99,6 @@ MonoBehaviour:
     m_Key: activity_result_win
     m_Metadata:
       m_Items: []
-  - m_Id: 115987864720760832
-    m_Key: activity_comment_great
-    m_Metadata:
-      m_Items: []
-  - m_Id: 115987864720760833
-    m_Key: activity_comment_doing_well
-    m_Metadata:
-      m_Items: []
-  - m_Id: 115987864720760834
-    m_Key: activity_comment_do_better
-    m_Metadata:
-      m_Items: []
   - m_Id: 115977791037448192
     m_Key: activity_score
     m_Metadata:
@@ -115,8 +115,20 @@ MonoBehaviour:
     m_Key: activity_ui_category
     m_Metadata:
       m_Items: []
+  - m_Id: 115989062555262976
+    m_Key: activity_ui_pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115989062559457280
+    m_Key: activity_ui_resume
+    m_Metadata:
+      m_Items: []
   - m_Id: 115977791037448196
     m_Key: activity_ui_save
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115989062559457281
+    m_Key: activity_ui_start
     m_Metadata:
       m_Items: []
   - m_Id: 111561110350454784
