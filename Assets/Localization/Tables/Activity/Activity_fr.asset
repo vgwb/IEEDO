@@ -191,8 +191,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111596475087872000
-    m_Localized: "L'image est-elle la m\xEAme que celle pr\xE9c\xE9dente ou est-elle
-      diff\xE9rente?\n\nR\xE9pondez oui ou non aussi vite que possible."
+    m_Localized: "L'image est-elle la m\xEAme que la pr\xE9c\xE9dente?"
     m_Metadata:
       m_Items: []
   - m_Id: 111599790488051712

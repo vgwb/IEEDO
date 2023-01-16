@@ -43,6 +43,10 @@ MonoBehaviour:
     m_Key: activity_level
     m_Metadata:
       m_Items: []
+  - m_Id: 115987864716566528
+    m_Key: activity_level_choose
+    m_Metadata:
+      m_Items: []
   - m_Id: 112797993827033089
     m_Key: activity_play
     m_Metadata:
@@ -81,6 +85,18 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 112797993831227396
     m_Key: activity_result_win
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864720760832
+    m_Key: activity_comment_great
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864720760833
+    m_Key: activity_comment_doing_well
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864720760834
+    m_Key: activity_comment_do_better
     m_Metadata:
       m_Items: []
   - m_Id: 115977791037448192
@@ -181,6 +197,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 111596475087872000
     m_Key: game_fast_reaction_description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864724955136
+    m_Key: game_fast_reaction_description_2
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712454

@@ -190,8 +190,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111596475087872000
-    m_Localized: "\xC4r bilden densamma som tidigare eller \xE4r den annorlunda?\n\nSvara
-      ja eller nej s\xE5 snabbt du kan."
+    m_Localized: "\xC4r bilden densamma som den f\xF6reg\xE5ende?"
     m_Metadata:
       m_Items: []
   - m_Id: 111599790488051712

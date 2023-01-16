@@ -191,8 +191,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111596475087872000
-    m_Localized: "Ist das Bild das gleiche wie vorher oder ist es anders?\n\nAntworte
-      Ja oder Nein so schnell wie m\xF6glich."
+    m_Localized: Ist das Bild das gleiche wie das vorherige?
     m_Metadata:
       m_Items: []
   - m_Id: 111599790488051712

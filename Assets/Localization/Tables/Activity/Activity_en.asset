@@ -327,8 +327,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111596475087872000
-    m_Localized: "Is the image the same as previous one or is it different? \n\nAnswer
-      Yes or No as fast as you can."
+    m_Localized: 'Is the image the same as the previous one? '
     m_Metadata:
       m_Items: []
   - m_Id: 111599790488051712
@@ -471,6 +470,26 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 115977791037448196
     m_Localized: Save
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864716566528
+    m_Localized: Select a level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864720760832
+    m_Localized: Great!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864720760833
+    m_Localized: You are doing well
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864720760834
+    m_Localized: You can do better
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864724955136
+    m_Localized: Answer Yes or No as fast as you can.
     m_Metadata:
       m_Items: []
   references:
