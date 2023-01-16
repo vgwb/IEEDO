@@ -63,27 +63,7 @@ MonoBehaviour:
     m_Localized: 
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993827033095
-    m_Localized: 
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993827033097
-    m_Localized: 
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993831227392
-    m_Localized: 
-    m_Metadata:
-      m_Items: []
   - m_Id: 112797993831227393
-    m_Localized: 
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993831227394
-    m_Localized: 
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993831227395
     m_Localized: 
     m_Metadata:
       m_Items: []
@@ -91,26 +71,6 @@ MonoBehaviour:
     m_Localized: 
     m_Metadata:
       m_Items: []
-  - m_Id: 113049161866141696
-    m_Localized: 
-    m_Metadata:
-      m_Items:
-      - rid: 3196637817602572303
-  - m_Id: 112797993831227399
-    m_Localized: 'Highscore: {HighScore}'
-    m_Metadata:
-      m_Items:
-      - rid: 3196637817602572303
-  - m_Id: 112797993831227400
-    m_Localized: 'Level: {CurrentLevel} / {MaxLevel}'
-    m_Metadata:
-      m_Items:
-      - rid: 3196637817602572303
-  - m_Id: 112797993831227401
-    m_Localized: Played {Count}
-    m_Metadata:
-      m_Items:
-      - rid: 3196637817602572303
   references:
     version: 2
     RefIds:

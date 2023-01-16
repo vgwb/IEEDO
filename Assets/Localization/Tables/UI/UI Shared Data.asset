@@ -15,10 +15,6 @@ MonoBehaviour:
   m_TableCollectionName: UI
   m_TableCollectionNameGuidString: bf8d5c70485b84a24a821abb0ddb8f7e
   m_Entries:
-  - m_Id: 55768156938903555
-    m_Key: a
-    m_Metadata:
-      m_Items: []
   - m_Id: 50660762391093260
     m_Key: abort_creation_question
     m_Metadata:
@@ -63,20 +59,12 @@ MonoBehaviour:
     m_Key: action_test_increase_score
     m_Metadata:
       m_Items: []
-  - m_Id: 24995527358668800
-    m_Key: app.subtitle
-    m_Metadata:
-      m_Items: []
   - m_Id: 55768998995763200
     m_Key: assessment_intro_content
     m_Metadata:
       m_Items: []
   - m_Id: 40549731508445184
     m_Key: assessment_intro_title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40550106646994944
-    m_Key: assessment_recap_overall
     m_Metadata:
       m_Items: []
   - m_Id: 40534266346233856
@@ -291,16 +279,12 @@ MonoBehaviour:
     m_Key: session_question_assessment_title
     m_Metadata:
       m_Items: []
-  - m_Id: 50660762391093256
-    m_Key: session_start_question
-    m_Metadata:
-      m_Items: []
-  - m_Id: 50660762391093255
-    m_Key: session_start_title
-    m_Metadata:
-      m_Items: []
   - m_Id: 153714070870024193
     m_Key: setting_notifications
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156524221040631808
+    m_Key: setting_analytics
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854082
@@ -337,6 +321,14 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 24994957285646336
     m_Key: yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156524221074186240
+    m_Key: prompt_notifications
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156524221074186241
+    m_Key: prompt_online_analytics
     m_Metadata:
       m_Items: []
   m_Metadata:

@@ -23,7 +23,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7179342181294080
-    m_Localized: Can you understand descriptions of events, written in English?
+    m_Localized: Can you understand descriptions of events, written in the local
+      language?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539303149568
@@ -70,7 +71,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509704
-    m_Localized: Do you enjoy working as part of a team?(employment, community, sports)
+    m_Localized: Do you enjoy working as part of a team? (employment, community,
+      sports)
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509705
@@ -78,7 +80,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509706
-    m_Localized: Can you send an email in English?
+    m_Localized: Can you send an email in the local language?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509707
@@ -94,12 +96,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509710
-    m_Localized: Can you search for support online using community forums/webchats/blogs?
+    m_Localized: Can you search for support online using community forums, webchats
+      or blogs?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509711
     m_Localized: Can you find websites and information on the web using well known
-      search engines? (Google, Yahoo, Bing etc)
+      search engines? (Google, Yahoo, Bing, etc...)
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509712
@@ -117,12 +120,12 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 7618539332509715
     m_Localized: Can you read and understand correspondence and official documents
-      in English?
+      in the local langauge?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509716
-    m_Localized: Do you need help completing detailed forms in English? e.g. job
-      applications, money transfers
+    m_Localized: Do you need help completing detailed forms in local language? e.g.
+      job applications, money transfers
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509717

@@ -25,7 +25,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 7179342181294080
     m_Localized: "Pouvez-vous comprendre des descriptions d'\xE9v\xE9nements, \xE9crits
-      en anglais?"
+      dans la langue locale?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539303149568
@@ -77,7 +77,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 7618539332509704
     m_Localized: "Aimez-vous travailler dans le cadre d'une \xE9quipe? (Emploi, communaut\xE9,
-      sport)"
+      sports)"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509705
@@ -86,7 +86,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509706
-    m_Localized: Pouvez-vous envoyer un e-mail en anglais?
+    m_Localized: Pouvez-vous envoyer un e-mail dans la langue locale?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509707
@@ -104,13 +104,14 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509710
-    m_Localized: "Pouvez-vous rechercher du support en ligne \xE0 l'aide de forums
-      communautaires / webchats / blogs?"
+    m_Localized: "Pouvez-vous rechercher un support en ligne \xE0 l'aide de forums
+      communautaires, de webchats ou de blogs?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509711
     m_Localized: "Pouvez-vous trouver des sites Web et des informations sur le Web
-      \xE0 l'aide de moteurs de recherche bien connus? (Google, Yahoo, Bing, etc.)"
+      \xE0 l'aide de moteurs de recherche bien connus? (Google, Yahoo, Bing, etc
+      ...)"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509712
@@ -128,12 +129,12 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 7618539332509715
     m_Localized: Pouvez-vous lire et comprendre la correspondance et les documents
-      officiels en anglais?
+      officiels dans le Langauge local?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509716
     m_Localized: "Avez-vous besoin d'aide pour remplir des formulaires d\xE9taill\xE9s
-      en anglais? par exemple. Demandes d'emploi, transferts d'argent"
+      dans la langue locale? par exemple. Demandes d'emploi, transferts d'argent"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509717

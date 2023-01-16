@@ -43,10 +43,6 @@ MonoBehaviour:
     m_Localized: Desatascar
     m_Metadata:
       m_Items: []
-  - m_Id: 104043542756712468
-    m_Localized: Diario abierto
-    m_Metadata:
-      m_Items: []
   - m_Id: 111561110350454784
     m_Localized: "Atenci\xF3n"
     m_Metadata:
@@ -175,17 +171,13 @@ MonoBehaviour:
     m_Localized: Fluidez verbal
     m_Metadata:
       m_Items: []
-  - m_Id: 111552523372847137
-    m_Localized: Beneficios
-    m_Metadata:
-      m_Items: []
   - m_Id: 111594514829565957
     m_Localized: 2048
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760256
-    m_Localized: "Mueva los bloques para fusionar n\xFAmeros con el mismo valor y
-      puntaje tanto como pueda. \xBFPuedes llegar al 2048?"
+    m_Localized: "Mueva los bloques en cualquier direcci\xF3n para fusionar n\xFAmeros
+      con el mismo valor y puntaje tanto como pueda. \xBFPuedes llegar al 2048?"
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760257
@@ -197,8 +189,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111596475087872000
-    m_Localized: "\xBFLa imagen es la misma que la anterior o es diferente? Respuesta
-      s\xED o no tan r\xE1pido como pueda"
+    m_Localized: "\xBFLa imagen es la misma que la anterior o es diferente?\n\nResponda
+      s\xED o no tan r\xE1pido como pueda."
     m_Metadata:
       m_Items: []
   - m_Id: 111599790488051712
@@ -220,7 +212,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989700
-    m_Localized: Escribir una carta a un amigo
+    m_Localized: "Escribir una carta a un amigo.\n\nLa escritura de cartas puede
+      ser terap\xE9utica tanto para el escritor como para el destinatario, y puede
+      ser justo ayudarlo a cambiar la perspectiva."
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989702
@@ -228,7 +222,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989703
-    m_Localized: Escribe una carta a ti mismo
+    m_Localized: "Escribir una carta a su yo futuro ofrece el beneficio de \"planificar
+      al rev\xE9s\" que nos alienta a ser m\xE1s intencionales con nuestro tiempo
+      y centrarnos en qu\xE9 progreso incremental podemos hacer en el presente hacia
+      nuestros objetivos a largo plazo para el futuro."
     m_Metadata:
       m_Items: []
   - m_Id: 112797993814450176
@@ -263,68 +260,63 @@ MonoBehaviour:
     m_Localized: Juego terminado
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993827033095
-    m_Localized: Nivel completado
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993827033097
-    m_Localized: "T\xFA pierdes"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993831227392
-    m_Localized: "Jugar unos minutos al d\xEDa ayudar\xE1 a que su cerebro se mantenga
-      en forma"
-    m_Metadata:
-      m_Items: []
   - m_Id: 112797993831227393
     m_Localized: Salida
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993831227394
-    m_Localized: 'Score: {Score}'
-    m_Metadata:
-      m_Items:
-      - rid: 3196637817602572295
-  - m_Id: 112797993831227395
-    m_Localized: Nivel completado
     m_Metadata:
       m_Items: []
   - m_Id: 112797993831227396
     m_Localized: "\xA1Bien hecho!"
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993831227402
-    m_Localized: "Categor\xEDa"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 113049161866141696
-    m_Localized: '{PointsToUnlock} para desbloquear'
-    m_Metadata:
-      m_Items:
-      - rid: 3196637817602572295
-  - m_Id: 113049161870336000
-    m_Localized: Salvar
-    m_Metadata:
-      m_Items: []
   - m_Id: 113092616990482432
     m_Localized: Disponible pronto
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993831227399
-    m_Localized: 'Highscore: {HighScore}'
+  - m_Id: 115977790945173504
+    m_Localized: Terminado
     m_Metadata:
-      m_Items:
-      - rid: 3196637817602572295
-  - m_Id: 112797993831227400
-    m_Localized: 'Level: {CurrentLevel} / {MaxLevel}'
+      m_Items: []
+  - m_Id: 115977791033253888
+    m_Localized: Ha fallado
     m_Metadata:
-      m_Items:
-      - rid: 3196637817602572295
-  - m_Id: 112797993831227401
-    m_Localized: Played {Count}
+      m_Items: []
+  - m_Id: 115977791033253889
+    m_Localized: "Mejor puntuaci\xF3n"
     m_Metadata:
-      m_Items:
-      - rid: 3196637817602572295
+      m_Items: []
+  - m_Id: 115977791033253890
+    m_Localized: Nivel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791033253891
+    m_Localized: "Jugar unos minutos al d\xEDa ayudar\xE1 a que su cerebro se mantenga
+      en forma"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791033253892
+    m_Localized: Jugado
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448192
+    m_Localized: Puntaje
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448193
+    m_Localized: para desbloquear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448194
+    m_Localized: Beneficios
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448195
+    m_Localized: "Categor\xEDa"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448196
+    m_Localized: Salvar
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

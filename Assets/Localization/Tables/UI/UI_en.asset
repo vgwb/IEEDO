@@ -19,10 +19,6 @@ MonoBehaviour:
     m_Items:
     - rid: 3992833648747610127
   m_TableData:
-  - m_Id: 24995527358668800
-    m_Localized: your virtual assistant
-    m_Metadata:
-      m_Items: []
   - m_Id: 24994957285646337
     m_Localized: No
     m_Metadata:
@@ -101,10 +97,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 40549731508445184
     m_Localized: Categories
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40550106646994944
-    m_Localized: Overall
     m_Metadata:
       m_Items: []
   - m_Id: 43003187146022912
@@ -189,14 +181,6 @@ MonoBehaviour:
       days
     m_Metadata:
       m_Items: []
-  - m_Id: 50660762391093255
-    m_Localized: Start Session <not used anymore>
-    m_Metadata:
-      m_Items: []
-  - m_Id: 50660762391093256
-    m_Localized: Are you sure you want to start a Coaching Session? <not used anymore>
-    m_Metadata:
-      m_Items: []
   - m_Id: 50660762391093257
     m_Localized: Leave Session
     m_Metadata:
@@ -221,10 +205,6 @@ MonoBehaviour:
     m_Localized: Quit Questionnaire
     m_Metadata:
       m_Items: []
-  - m_Id: 55768156938903555
-    m_Localized: a
-    m_Metadata:
-      m_Items: []
   - m_Id: 55768998995763200
     m_Localized: IEEDO focuses on 6 categories, let's check them one by one...
     m_Metadata:
@@ -246,10 +226,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854083
-    m_Localized: This project IEEDO (2020-1-UK01-KA204-079117) was funded with the
-      support of the European Commission. This publication reflects the views only
-      of the author, and the Commission is not responsible for any use that may be
-      made of the information contained therein.
+    m_Localized: "Project Partners:\n- Ashley Community Housing (United Kingdom)\n-
+      Folkuniversitetet (Sweden)\n- MetropolisNet (Germany)\n- Rinova Ltd (United
+      Kingdom)\n- Dimitra (Greece)\n- Videojuegos Sin Fronteras (Spain)\n\nCo-Funded
+      by the Erasmus+ Programme of the European Union. \nThis publication reflects
+      the views only of the author, and the Commission is not responsible for any
+      use that may be made of the information contained therein.\n\n"
     m_Metadata:
       m_Items: []
   - m_Id: 65895845048639488
@@ -278,11 +260,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 139790834418524160
-    m_Localized: Here are your results for now, let's improve them together
+    m_Localized: Here are your results, let's improve them together
     m_Metadata:
       m_Items: []
   - m_Id: 139790834443689984
-    m_Localized: You do not have any card
+    m_Localized: This is your to-do-list. You do not have any card to do.
     m_Metadata:
       m_Items: []
   - m_Id: 141937967278874624
@@ -347,6 +329,19 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 153714070870024193
     m_Localized: Notifications
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156524221040631808
+    m_Localized: Online Analytics
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156524221074186240
+    m_Localized: Would you like to receive notifications from this app?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156524221074186241
+    m_Localized: Would you like to help us improve this app by sharing online your
+      ANONYMOUS play data?
     m_Metadata:
       m_Items: []
   references:

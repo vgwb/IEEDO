@@ -24,7 +24,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7179342181294080
-    m_Localized: Ma fahmi kartaa sharraxaadaha dhacdooyinka, oo ku qoran Ingiriis?
+    m_Localized: Ma fahmi kartaa sharraxaadaha dhacdooyinka, oo ku qoran luuqadda
+      maxalliga ah?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539303149568
@@ -72,7 +73,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509704
-    m_Localized: Ma jeceshahay inaad u shaqeyso qayb ka mid ah koox? (Shaqo, Bulsho,
+    m_Localized: Ma jeceshahay inaad ka shaqeyso qayb ka mid ah koox? (Shaqo, Bulsho,
       Ciyaaraha)
     m_Metadata:
       m_Items: []
@@ -82,7 +83,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509706
-    m_Localized: Ma u diri kartaa emayl Ingiriisiga ah?
+    m_Localized: Ma u soo diri kartaa emayl ku qoran luqadda maxalliga ah?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509707
@@ -99,13 +100,13 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 7618539332509710
     m_Localized: Miyaad ka raadin kartaa taageerada khadka tooska ah adoo adeegsanaya
-      kulamada bulshada / webchats / bogagga?
+      kulamada bulshada, websaalooyinka ama baloogyada?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509711
     m_Localized: Ma ka heli kartaa websaydh iyo macluumaad ku saabsan websaydhka
       adoo adeegsanaya makiinadaha raadinta si fiican loo yaqaan? (Google, Yahoo,
-      Bing iwm)
+      Bing, iwm ...)
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509712
@@ -122,13 +123,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509715
-    m_Localized: Ma akhrisan kartaa oo fahmi kartaa is-weydaarsiga iyo dukumiinti
-      rasmi ah oo Ingiriis ah?
+    m_Localized: Ma akhrisan kartaa oo fahmi kartaa is-weydaarsiga iyo dukumiintiyada
+      rasmiga ah ee kuyaal Langauge maxalliga ah?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509716
-    m_Localized: Ma u baahan tahay caawimaad xagga buuxinta foomamka faahfaahsan
-      ee Ingiriisiga? E.g. Codsiyada shaqada, xawaaladaha lacagta
+    m_Localized: Ma u baahan tahay caawimaad dhammaystirka foomamka faahfaahsan ee
+      luqadda maxalliga ah? E.g. Codsiyada shaqada, xawaaladaha lacagta
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509717

@@ -43,10 +43,6 @@ MonoBehaviour:
     m_Localized: Entsperren
     m_Metadata:
       m_Items: []
-  - m_Id: 104043542756712468
-    m_Localized: Offenes Tagebuch
-    m_Metadata:
-      m_Items: []
   - m_Id: 111561110350454784
     m_Localized: Aufmerksamkeit
     m_Metadata:
@@ -176,17 +172,14 @@ MonoBehaviour:
     m_Localized: "Verbale Flie\xDFf\xE4higkeit"
     m_Metadata:
       m_Items: []
-  - m_Id: 111552523372847137
-    m_Localized: Vorteile
-    m_Metadata:
-      m_Items: []
   - m_Id: 111594514829565957
     m_Localized: 2048
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760256
-    m_Localized: "Bewegen Sie die Bl\xF6cke, um Zahlen mit dem gleichen Wert zu verschmelzen
-      und so viel wie m\xF6glich zu bewerten. Kannst du zu 2048 kommen?"
+    m_Localized: "Bewegen Sie die Bl\xF6cke in eine beliebige Richtung, um Zahlen
+      mit dem gleichen Wert zu verschmelzen und so viel wie m\xF6glich zu erzielen.
+      Kannst du zu 2048 kommen?"
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760257
@@ -198,8 +191,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111596475087872000
-    m_Localized: "Ist das Bild das gleiche wie vorher oder ist es anders? Antwort
-      Ja oder nein so schnell wie m\xF6glich"
+    m_Localized: "Ist das Bild das gleiche wie vorher oder ist es anders?\n\nAntworte
+      Ja oder Nein so schnell wie m\xF6glich."
     m_Metadata:
       m_Items: []
   - m_Id: 111599790488051712
@@ -222,7 +215,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989700
-    m_Localized: Schreiben Sie einen Brief an einen Freund
+    m_Localized: "Schreiben Sie einen Brief an einen Freund.\n\nDas Schreiben von
+      Briefen kann sowohl f\xFCr den Schriftsteller als auch f\xFCr den Empf\xE4nger
+      therapeutisch sein, und es kann genau das Richtige f\xFCr die Ver\xE4nderung
+      der Perspektive sein."
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989702
@@ -230,11 +226,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989703
-    m_Localized: Schreiben Sie sich einen Brief an sich
+    m_Localized: "Das Schreiben eines Briefes an Ihr zuk\xFCnftiges Selbst bietet
+      den Vorteil der \u201ER\xFCckw\xE4rtsplanung\u201C, in dem wir dazu ermutigt
+      werden, mit unserer Zeit beabsichtigt zu sein und uns darauf zu konzentrieren,
+      welche inkrementellen Fortschritte wir in der Gegenwart zu unseren langfristigen
+      Zielen f\xFCr die Zukunft machen k\xF6nnen."
     m_Metadata:
       m_Items: []
   - m_Id: 112797993814450176
-    m_Localized: "Sind Sie sicher, dass Sie aufh\xF6ren wollen?"
+    m_Localized: Sie sind sicher, dass Sie beenden wollen?
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033088
@@ -265,68 +265,63 @@ MonoBehaviour:
     m_Localized: Spiel ist aus
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993827033095
-    m_Localized: Level abgeschlossen
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993827033097
-    m_Localized: Du verlierst
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993831227392
-    m_Localized: Wenn Sie ein paar Minuten am Tag spielen, bleibt Ihrem Gehirn fit
-      fit
-    m_Metadata:
-      m_Items: []
   - m_Id: 112797993831227393
     m_Localized: Ausgang
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993831227394
-    m_Localized: 'Punktzahl: {Score}'
-    m_Metadata:
-      m_Items:
-      - rid: 3196637817602572293
-  - m_Id: 112797993831227395
-    m_Localized: Level abgeschlossen
     m_Metadata:
       m_Items: []
   - m_Id: 112797993831227396
     m_Localized: Gut gemacht!
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993831227402
-    m_Localized: Kategorie
-    m_Metadata:
-      m_Items: []
-  - m_Id: 113049161866141696
-    m_Localized: '{PointsToUnlock} zum Freischalten'
-    m_Metadata:
-      m_Items:
-      - rid: 3196637817602572293
-  - m_Id: 113049161870336000
-    m_Localized: Speichern
-    m_Metadata:
-      m_Items: []
   - m_Id: 113092616990482432
     m_Localized: "In K\xFCrze erh\xE4ltlich"
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993831227399
-    m_Localized: 'Highscore: {HighScore}'
+  - m_Id: 115977790945173504
+    m_Localized: Vollendet
     m_Metadata:
-      m_Items:
-      - rid: 3196637817602572293
-  - m_Id: 112797993831227400
-    m_Localized: 'Level: {CurrentLevel} / {MaxLevel}'
+      m_Items: []
+  - m_Id: 115977791033253888
+    m_Localized: Gescheitert
     m_Metadata:
-      m_Items:
-      - rid: 3196637817602572293
-  - m_Id: 112797993831227401
-    m_Localized: Played {Count}
+      m_Items: []
+  - m_Id: 115977791033253889
+    m_Localized: Bestes Ergebnis
     m_Metadata:
-      m_Items:
-      - rid: 3196637817602572293
+      m_Items: []
+  - m_Id: 115977791033253890
+    m_Localized: Eben
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791033253891
+    m_Localized: Wenn Sie ein paar Minuten am Tag spielen, bleibt Ihrem Gehirn fit
+      fit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791033253892
+    m_Localized: Gespielt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448192
+    m_Localized: Punktzahl
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448193
+    m_Localized: zum Freischalten
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448194
+    m_Localized: Vorteile
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448195
+    m_Localized: Kategorie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448196
+    m_Localized: Speichern
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

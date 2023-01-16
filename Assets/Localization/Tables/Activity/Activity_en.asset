@@ -57,7 +57,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712465
-    m_Localized: The classic game
+    m_Localized: 'The classic game: can you place three markers in a row in any direction?'
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712466
@@ -68,20 +68,12 @@ MonoBehaviour:
     m_Localized: Move the blocked element to the exit by removing all obstacles
     m_Metadata:
       m_Items: []
-  - m_Id: 104043542756712468
-    m_Localized: Open Diary
-    m_Metadata:
-      m_Items: []
   - m_Id: 111552523372847118
     m_Localized: Planning
     m_Metadata:
       m_Items: []
   - m_Id: 111552523372847126
     m_Localized: Visualization
-    m_Metadata:
-      m_Items: []
-  - m_Id: 111552523372847137
-    m_Localized: Benefits
     m_Metadata:
       m_Items: []
   - m_Id: 111561110350454784
@@ -200,8 +192,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037703
-    m_Localized: "Part of quantitative reasoning is numerical estimation \u2014 the
-      ability to approximate numerical relationships quickly or with incomplete information."
+    m_Localized: Numerical estimation is the ability to approximate numerical relationships
+      quickly or with incomplete information.
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037704
@@ -317,8 +309,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760256
-    m_Localized: Move the blocks to merge numbers with the same value and score as
-      much as you can. Can you get to 2048?
+    m_Localized: Move the blocks in any direction to merge numbers with the same
+      value and score as much as you can. Can you get to 2048?
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760257
@@ -335,8 +327,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111596475087872000
-    m_Localized: Is the image the same as previous one or is it different? Answer
-      Yes or No as fast as you can
+    m_Localized: "Is the image the same as previous one or is it different? \n\nAnswer
+      Yes or No as fast as you can."
     m_Metadata:
       m_Items: []
   - m_Id: 111599790488051712
@@ -366,11 +358,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989700
-    m_Localized: Write a letter to a friend
+    m_Localized: 'Write a letter to a friend.
+
+
+      Letter writing can be therapeutic
+      for the writer as well as the recipient, and it may be just the thing to help
+      you change perspective.'
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989701
-    m_Localized: Write here what you want to write to a friend...
+    m_Localized: Write here a few lines for your friend...
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989702
@@ -378,15 +375,18 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989703
-    m_Localized: Write a letter to yourself
+    m_Localized: "Writing a letter to your future self offers the benefit of \u201Cplanning
+      backwards\u201D which encourages us to be more intentional with our time and
+      focus on what incremental progress we can make in the present towards our long-term
+      goals for the future."
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989704
-    m_Localized: Write here a letter tto yourself
+    m_Localized: Write here a message to your future self...
     m_Metadata:
       m_Items: []
   - m_Id: 112797993814450176
-    m_Localized: Are you sure you want to quit?
+    m_Localized: Are you sure you want to exit?
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033088
@@ -417,70 +417,60 @@ MonoBehaviour:
     m_Localized: Game Over
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993827033095
-    m_Localized: Level Completed
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993827033096
-    m_Localized: 'Highscore: {Score}'
-    m_Metadata:
-      m_Items:
-      - rid: 3196637817602572291
-  - m_Id: 112797993827033097
-    m_Localized: You lose
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993831227392
-    m_Localized: Playing a few minutes a day will help your brain stay fit
-    m_Metadata:
-      m_Items: []
   - m_Id: 112797993831227393
     m_Localized: Exit
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993831227394
-    m_Localized: 'Score: {Score}'
-    m_Metadata:
-      m_Items:
-      - rid: 3196637817602572291
-  - m_Id: 112797993831227395
-    m_Localized: Level Completed
     m_Metadata:
       m_Items: []
   - m_Id: 112797993831227396
     m_Localized: Well done!
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993831227399
-    m_Localized: 'Highscore: {HighScore}'
+  - m_Id: 113092616990482432
+    m_Localized: Available soon
     m_Metadata:
-      m_Items:
-      - rid: 3196637817602572291
-  - m_Id: 112797993831227400
-    m_Localized: 'Level: {CurrentLevel} / {MaxLevel}'
+      m_Items: []
+  - m_Id: 115977790945173504
+    m_Localized: Completed
     m_Metadata:
-      m_Items:
-      - rid: 3196637817602572291
-  - m_Id: 112797993831227401
-    m_Localized: Played {Count}
+      m_Items: []
+  - m_Id: 115977791033253888
+    m_Localized: Failed
     m_Metadata:
-      m_Items:
-      - rid: 3196637817602572291
-  - m_Id: 112797993831227402
+      m_Items: []
+  - m_Id: 115977791033253889
+    m_Localized: Best Score
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791033253890
+    m_Localized: Level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791033253891
+    m_Localized: Playing a few minutes a day will help your brain stay fit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791033253892
+    m_Localized: Played
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448192
+    m_Localized: Score
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448193
+    m_Localized: to unlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448194
+    m_Localized: Benefits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448195
     m_Localized: Category
     m_Metadata:
       m_Items: []
-  - m_Id: 113049161866141696
-    m_Localized: '{PointsToUnlock} to unlock'
-    m_Metadata:
-      m_Items:
-      - rid: 3196637817602572291
-  - m_Id: 113049161870336000
+  - m_Id: 115977791037448196
     m_Localized: Save
-    m_Metadata:
-      m_Items: []
-  - m_Id: 113092616990482432
-    m_Localized: Available soon
     m_Metadata:
       m_Items: []
   references:

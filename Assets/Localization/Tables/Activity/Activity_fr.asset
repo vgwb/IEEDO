@@ -43,10 +43,6 @@ MonoBehaviour:
     m_Localized: "D\xE9bloquer"
     m_Metadata:
       m_Items: []
-  - m_Id: 104043542756712468
-    m_Localized: Journal ouvert
-    m_Metadata:
-      m_Items: []
   - m_Id: 111561110350454784
     m_Localized: Attention
     m_Metadata:
@@ -176,17 +172,14 @@ MonoBehaviour:
     m_Localized: Aisance verbale
     m_Metadata:
       m_Items: []
-  - m_Id: 111552523372847137
-    m_Localized: Avantages
-    m_Metadata:
-      m_Items: []
   - m_Id: 111594514829565957
     m_Localized: 2048
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760256
-    m_Localized: "D\xE9placez les blocs pour fusionner les nombres avec la m\xEAme
-      valeur et marquez autant que possible. Pouvez-vous arriver \xE0 2048?"
+    m_Localized: "D\xE9placez les blocs dans n'importe quelle direction pour fusionner
+      les nombres avec la m\xEAme valeur et marquez autant que possible. Pouvez-vous
+      arriver \xE0 2048?"
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760257
@@ -199,7 +192,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 111596475087872000
     m_Localized: "L'image est-elle la m\xEAme que celle pr\xE9c\xE9dente ou est-elle
-      diff\xE9rente? R\xE9ponse oui ou non aussi vite que possible"
+      diff\xE9rente?\n\nR\xE9pondez oui ou non aussi vite que possible."
     m_Metadata:
       m_Items: []
   - m_Id: 111599790488051712
@@ -222,7 +215,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989700
-    m_Localized: "\xC9crire une lettre \xE0 un ami"
+    m_Localized: "\xC9crire une lettre \xE0 un ami.\n\nL'\xE9criture de lettres peut
+      \xEAtre th\xE9rapeutique pour l'\xE9crivain ainsi que pour le destinataire,
+      et c'est peut-\xEAtre la chose de vous aider \xE0 changer la perspective."
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989702
@@ -230,7 +225,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989703
-    m_Localized: "\xC9crivez une lettre \xE0 vous-m\xEAme"
+    m_Localized: "La r\xE9daction d'une lettre \xE0 votre futur moi offre le b\xE9n\xE9fice
+      de la \xABplanification \xE0 l'arri\xE8re\xBB qui nous encourage \xE0 \xEAtre
+      plus intentionnels avec notre temps et \xE0 nous concentrer sur les progr\xE8s
+      progressifs que nous pouvons faire dans le pr\xE9sent vers nos objectifs \xE0
+      long terme pour l'avenir."
     m_Metadata:
       m_Items: []
   - m_Id: 112797993814450176
@@ -265,68 +264,63 @@ MonoBehaviour:
     m_Localized: "Jeu termin\xE9"
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993827033095
-    m_Localized: "Niveau termin\xE9"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993827033097
-    m_Localized: Tu as perdu
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993831227392
-    m_Localized: "Jouer quelques minutes par jour aidera votre cerveau \xE0 rester
-      en forme"
-    m_Metadata:
-      m_Items: []
   - m_Id: 112797993831227393
     m_Localized: Sortir
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993831227394
-    m_Localized: 'Score: {score}'
-    m_Metadata:
-      m_Items:
-      - rid: 3196637817602572299
-  - m_Id: 112797993831227395
-    m_Localized: "Niveau termin\xE9"
     m_Metadata:
       m_Items: []
   - m_Id: 112797993831227396
     m_Localized: Bien fait!
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993831227402
-    m_Localized: "Cat\xE9gorie"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 113049161866141696
-    m_Localized: "{PointsToUnlock} pour d\xE9verrouiller"
-    m_Metadata:
-      m_Items:
-      - rid: 3196637817602572299
-  - m_Id: 113049161870336000
-    m_Localized: Sauver
-    m_Metadata:
-      m_Items: []
   - m_Id: 113092616990482432
     m_Localized: "Bient\xF4t disponible"
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993831227399
-    m_Localized: 'Highscore: {HighScore}'
+  - m_Id: 115977790945173504
+    m_Localized: "Compl\xE9t\xE9"
     m_Metadata:
-      m_Items:
-      - rid: 3196637817602572299
-  - m_Id: 112797993831227400
-    m_Localized: 'Level: {CurrentLevel} / {MaxLevel}'
+      m_Items: []
+  - m_Id: 115977791033253888
+    m_Localized: "\xC9chou\xE9"
     m_Metadata:
-      m_Items:
-      - rid: 3196637817602572299
-  - m_Id: 112797993831227401
-    m_Localized: Played {Count}
+      m_Items: []
+  - m_Id: 115977791033253889
+    m_Localized: Meilleur score
     m_Metadata:
-      m_Items:
-      - rid: 3196637817602572299
+      m_Items: []
+  - m_Id: 115977791033253890
+    m_Localized: Niveau
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791033253891
+    m_Localized: "Jouer quelques minutes par jour aidera votre cerveau \xE0 rester
+      en forme"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791033253892
+    m_Localized: "Jou\xE9"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448192
+    m_Localized: Score
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448193
+    m_Localized: "pour d\xE9verrouiller"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448194
+    m_Localized: Avantages
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448195
+    m_Localized: "Cat\xE9gorie"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448196
+    m_Localized: Sauver
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

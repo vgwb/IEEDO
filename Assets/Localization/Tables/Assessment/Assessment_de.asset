@@ -25,7 +25,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 7179342181294080
     m_Localized: "K\xF6nnen Sie Beschreibungen von Ereignissen verstehen, die in
-      englischer Sprache geschrieben wurden?"
+      der Landessprache geschrieben wurden?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539303149568
@@ -84,7 +84,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509706
-    m_Localized: "K\xF6nnen Sie eine E -Mail in Englisch senden?"
+    m_Localized: "K\xF6nnen Sie eine E -Mail in der Landessprache senden?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509707
@@ -101,8 +101,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509710
-    m_Localized: "K\xF6nnen Sie mit Community -Foren/Webchats/Blogs online nach Unterst\xFCtzung
-      suchen?"
+    m_Localized: "K\xF6nnen Sie mit Community -Foren, Webchats oder Blogs online
+      nach Unterst\xFCtzung suchen?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509711
@@ -124,13 +124,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509715
-    m_Localized: "K\xF6nnen Sie Korrespondenz und offizielle Dokumente auf Englisch
-      lesen und verstehen?"
+    m_Localized: "K\xF6nnen Sie Korrespondenz und offizielle Dokumente in der \xF6rtlichen
+      Langauge lesen und verstehen?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509716
     m_Localized: "Ben\xF6tigen Sie Hilfe beim Ausf\xFCllen detaillierter Formulare
-      in Englisch? z.B. Bewerbungen, Geldtransfers"
+      in der Landessprache? z.B. Bewerbungen, Geldtransfers"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509717

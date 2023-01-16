@@ -23,7 +23,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7179342181294080
-    m_Localized: "Kan du f\xF6rst\xE5 beskrivningar av evenemang, skrivna p\xE5 engelska?"
+    m_Localized: "Kan du f\xF6rst\xE5 beskrivningar av h\xE4ndelser, skrivna p\xE5
+      det lokala spr\xE5ket?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539303149568
@@ -71,7 +72,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509704
-    m_Localized: "Gillar du att arbeta som en del av ett team? (Anst\xE4llning, community,
+    m_Localized: "Gillar du att arbeta som en del av ett team? (Anst\xE4llning, samh\xE4lle,
       sport)"
     m_Metadata:
       m_Items: []
@@ -81,7 +82,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509706
-    m_Localized: "Kan du skicka ett e -postmeddelande p\xE5 engelska?"
+    m_Localized: "Kan du skicka ett e -postmeddelande p\xE5 det lokala spr\xE5ket?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509707
@@ -99,12 +100,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509710
-    m_Localized: "Kan du s\xF6ka efter support online med Community Forums/Webchats/bloggar?"
+    m_Localized: "Kan du s\xF6ka efter support online med Community Forums, Webchats
+      eller bloggar?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509711
     m_Localized: "Kan du hitta webbplatser och information p\xE5 webben med k\xE4nda
-      s\xF6kmotorer? (Google, Yahoo, Bing etc)"
+      s\xF6kmotorer? (Google, Yahoo, Bing, etc. ...)"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509712
@@ -122,12 +124,12 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 7618539332509715
     m_Localized: "Kan du l\xE4sa och f\xF6rst\xE5 korrespondens och officiella dokument
-      p\xE5 engelska?"
+      i den lokala Langauge?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509716
     m_Localized: "Beh\xF6ver du hj\xE4lp med att fylla i detaljerade formul\xE4r
-      p\xE5 engelska? t.ex. jobbans\xF6kningar, pengar\xF6verf\xF6ringar"
+      p\xE5 lokalt spr\xE5k? t.ex. jobbans\xF6kningar, pengar\xF6verf\xF6ringar"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509717

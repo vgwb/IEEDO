@@ -24,8 +24,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7179342181294080
-    m_Localized: "\xBFPuedes entender las descripciones de los eventos, escritos
-      en ingl\xE9s?"
+    m_Localized: "\xBFPuede comprender las descripciones de eventos, escritas en
+      el idioma local?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539303149568
@@ -83,7 +83,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509706
-    m_Localized: "\xBFPuedes enviar un correo electr\xF3nico en ingl\xE9s?"
+    m_Localized: "\xBFPuedes enviar un correo electr\xF3nico en el idioma local?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509707
@@ -101,13 +101,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509710
-    m_Localized: "\xBFPuede buscar apoyo en l\xEDnea utilizando foros/webchats/blogs
-      comunitarios?"
+    m_Localized: "\xBFPuede buscar apoyo en l\xEDnea utilizando foros comunitarios,
+      webes web o blogs?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509711
     m_Localized: "\xBFPuede encontrar sitios web e informaci\xF3n en la web utilizando
-      motores de b\xFAsqueda bien conocidos? (Google, Yahoo, Bing, etc.)"
+      motores de b\xFAsqueda bien conocidos? (Google, Yahoo, Bing, etc ...)"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509712
@@ -125,12 +125,12 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 7618539332509715
     m_Localized: "\xBFPuede leer y comprender la correspondencia y los documentos
-      oficiales en ingl\xE9s?"
+      oficiales en el Langauge local?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509716
-    m_Localized: "\xBFNecesita ayuda para completar formularios detallados en ingl\xE9s?
-      p.ej. solicitudes de empleo, transferencias de dinero"
+    m_Localized: "\xBFNecesita ayuda para completar formularios detallados en idioma
+      local? p.ej. solicitudes de empleo, transferencias de dinero"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509717

@@ -23,10 +23,6 @@ MonoBehaviour:
     m_Localized: Deutch
     m_Metadata:
       m_Items: []
-  - m_Id: 55768156938903555
-    m_Localized: a
-    m_Metadata:
-      m_Items: []
   - m_Id: 50660762391093260
     m_Localized: "Sind Sie sicher, dass Sie die Erstellung dieser Karte k\xFCndigen
       m\xF6chten?"
@@ -68,10 +64,6 @@ MonoBehaviour:
     m_Localized: "Erh\xF6hen Sie die Punktzahl +100"
     m_Metadata:
       m_Items: []
-  - m_Id: 24995527358668800
-    m_Localized: Ihr virtueller Assistent
-    m_Metadata:
-      m_Items: []
   - m_Id: 55768998995763200
     m_Localized: Ieedo konzentriert sich auf 6 Kategorien. Schauen wir sie nacheinander
       nach.
@@ -79,10 +71,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 40549731508445184
     m_Localized: Kategorien
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40550106646994944
-    m_Localized: Gesamt
     m_Metadata:
       m_Items: []
   - m_Id: 40534266346233856
@@ -122,10 +110,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854083
-    m_Localized: "Dieses Projekt IEEDO (2020-1-UK01-KA204-079117) wurde mit Unterst\xFCtzung
-      der Europ\xE4ischen Kommission finanziert. Diese Ver\xF6ffentlichung spiegelt
-      nur die Ansichten des Autors wider, und die Kommission ist nicht f\xFCr die
-      Verwendung der darin enthaltenen Informationen verantwortlich."
+    m_Localized: "Projektpartner:\n- Ashley Community Housing (Vereinigtes K\xF6nigreich)\n-
+      Folkuniversitetet (Schweden)\n- Metropolisnet (Deutschland)\n- Rinova Ltd (Vereinigtes
+      K\xF6nigreich)\n- Dimitra (Griechenland)\n- Videojuegos Sin Fronteras (Spanien)\n\nMit
+      finanziert vom Erasmus+ -Programm der Europ\xE4ischen Union.\nDiese Ver\xF6ffentlichung
+      spiegelt nur die Ansichten des Autors wider, und die Kommission ist nicht f\xFCr
+      die Verwendung der darin enthaltenen Informationen verantwortlich.\n\n"
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925889
@@ -242,15 +232,6 @@ MonoBehaviour:
     m_Localized: Coaching-Sitzung
     m_Metadata:
       m_Items: []
-  - m_Id: 50660762391093256
-    m_Localized: "Sind Sie sicher, dass Sie eine Coaching -Sitzung beginnen m\xF6chten?
-      <nicht mehr verwendet>"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 50660762391093255
-    m_Localized: Start Session <nicht mehr verwendet>
-    m_Metadata:
-      m_Items: []
   - m_Id: 65886906663854082
     m_Localized: Soundeffekte
     m_Metadata:
@@ -286,12 +267,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 139790834418524160
-    m_Localized: Hier sind Ihre Ergebnisse vorerst. Lassen Sie uns sie gemeinsam
-      verbessern
+    m_Localized: Hier sind Ihre Ergebnisse. Lassen Sie uns sie gemeinsam verbessern
     m_Metadata:
       m_Items: []
   - m_Id: 139790834443689984
-    m_Localized: Sie haben keine Karte
+    m_Localized: Dies ist Ihre To-Do-Liste. Sie haben keine Karte zu tun.
     m_Metadata:
       m_Items: []
   - m_Id: 141937967278874624
@@ -356,6 +336,19 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 153714070870024193
     m_Localized: Benachrichtigungen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156524221040631808
+    m_Localized: Online -Analyse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156524221074186240
+    m_Localized: "M\xF6chten Sie Benachrichtigungen von dieser App erhalten?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156524221074186241
+    m_Localized: "M\xF6chten Sie uns helfen, diese App zu verbessern, indem Sie Ihre
+      anonymen Spieldaten online teilen?"
     m_Metadata:
       m_Items: []
   references:

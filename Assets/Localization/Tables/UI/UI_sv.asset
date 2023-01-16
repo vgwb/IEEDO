@@ -23,12 +23,8 @@ MonoBehaviour:
     m_Localized: Svenska
     m_Metadata:
       m_Items: []
-  - m_Id: 55768156938903555
-    m_Localized: en
-    m_Metadata:
-      m_Items: []
   - m_Id: 50660762391093260
-    m_Localized: "\xC4r du s\xE4ker p\xE5 att du vill avsluta skapandet av det h\xE4r
+    m_Localized: "\xC4r du s\xE4ker p\xE5 att du vill l\xE4mna skapandet av det h\xE4r
       kortet?"
     m_Metadata:
       m_Items: []
@@ -68,10 +64,6 @@ MonoBehaviour:
     m_Localized: "\xD6ka po\xE4ngen +100"
     m_Metadata:
       m_Items: []
-  - m_Id: 24995527358668800
-    m_Localized: Din virtuella assistent
-    m_Metadata:
-      m_Items: []
   - m_Id: 55768998995763200
     m_Localized: "Ieedo fokuserar p\xE5 6 kategorier, l\xE5t oss kontrollera dem
       en efter en ..."
@@ -79,10 +71,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 40549731508445184
     m_Localized: Kategorier
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40550106646994944
-    m_Localized: "\xD6vergripande"
     m_Metadata:
       m_Items: []
   - m_Id: 40534266346233856
@@ -122,10 +110,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854083
-    m_Localized: "Detta projekt IEEDO (2020-1-UK01-KA204-079117) finansierades med
-      st\xF6d av Europeiska kommissionen. Denna publikation \xE5terspeglar bara f\xF6rfattarens
+    m_Localized: "Projektpartners:\n- Ashley Community Housing (Storbritannien)\n-
+      FolkUniversItetet (Sverige)\n- Metropolisnet (Tyskland)\n- Rinova Ltd (Storbritannien)\n-
+      Dimitra (Grekland)\n- Videojuegos Sin Fronteras (Spanien)\n\nSamfinansierad
+      av Europeiska unionens Erasmus+.\nDenna publikation \xE5terspeglar bara f\xF6rfattarens
       \xE5sikter, och kommissionen ansvarar inte f\xF6r n\xE5gon anv\xE4ndning som
-      kan anv\xE4ndas av den information som finns i den."
+      kan anv\xE4ndas av den information som finns i den.\n\n"
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925889
@@ -240,15 +230,6 @@ MonoBehaviour:
     m_Localized: Coaching session
     m_Metadata:
       m_Items: []
-  - m_Id: 50660762391093256
-    m_Localized: "\xC4r du s\xE4ker p\xE5 att du vill starta en coachningssession?
-      <Anv\xE4nds inte l\xE4ngre>"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 50660762391093255
-    m_Localized: "Start session <Anv\xE4nds inte l\xE4ngre>"
-    m_Metadata:
-      m_Items: []
   - m_Id: 65886906663854082
     m_Localized: Ljudeffekter
     m_Metadata:
@@ -284,12 +265,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 139790834418524160
-    m_Localized: "H\xE4r \xE4r dina resultat f\xF6r nu, l\xE5t oss f\xF6rb\xE4ttra
-      dem tillsammans"
+    m_Localized: "H\xE4r \xE4r dina resultat, l\xE5t oss f\xF6rb\xE4ttra dem tillsammans"
     m_Metadata:
       m_Items: []
   - m_Id: 139790834443689984
-    m_Localized: Du har inget kort
+    m_Localized: "Det h\xE4r \xE4r din to-do-lista. Du har inget kort att g\xF6ra."
     m_Metadata:
       m_Items: []
   - m_Id: 141937967278874624
@@ -354,6 +334,19 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 153714070870024193
     m_Localized: Meddelanden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156524221040631808
+    m_Localized: Onlineanalys
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156524221074186240
+    m_Localized: "Vill du f\xE5 aviseringar fr\xE5n den h\xE4r appen?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156524221074186241
+    m_Localized: "Vill du hj\xE4lpa oss att f\xF6rb\xE4ttra den h\xE4r appen genom
+      att dela online dina anonyma speldata?"
     m_Metadata:
       m_Items: []
   references:

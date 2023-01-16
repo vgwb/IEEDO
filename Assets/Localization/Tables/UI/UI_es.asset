@@ -23,10 +23,6 @@ MonoBehaviour:
     m_Localized: "Espa\xF1ol"
     m_Metadata:
       m_Items: []
-  - m_Id: 55768156938903555
-    m_Localized: a
-    m_Metadata:
-      m_Items: []
   - m_Id: 50660762391093260
     m_Localized: "\xBFEst\xE1s seguro de que quieres dejar la creaci\xF3n de esta
       tarjeta?"
@@ -68,20 +64,12 @@ MonoBehaviour:
     m_Localized: "Puntuaci\xF3n de aumento +100"
     m_Metadata:
       m_Items: []
-  - m_Id: 24995527358668800
-    m_Localized: Tu asistente virtual
-    m_Metadata:
-      m_Items: []
   - m_Id: 55768998995763200
     m_Localized: "IEEDO se centra en 6 categor\xEDas, revisemos una por una ..."
     m_Metadata:
       m_Items: []
   - m_Id: 40549731508445184
     m_Localized: "Categor\xEDas"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40550106646994944
-    m_Localized: General
     m_Metadata:
       m_Items: []
   - m_Id: 40534266346233856
@@ -121,10 +109,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854083
-    m_Localized: "Este proyecto IEEDO (2020-1-UK01-KA204-079117) fue financiado con
-      el apoyo de la Comisi\xF3n Europea. Esta publicaci\xF3n refleja solo las opiniones
-      del autor, y la Comisi\xF3n no es responsable de ning\xFAn uso que pueda hacerse
-      de la informaci\xF3n contenida en el mismo."
+    m_Localized: "Socios del proyecto:\n- Ashley Community Housing (Reino Unido)\n-
+      Folkuniversitetet (Suecia)\n- Metropolisnet (Alemania)\n- Rinova Ltd (Reino
+      Unido)\n- Dimitra (Grecia)\n- VideoJuegos sin fronteras (Espa\xF1a)\n\nCofinanciado
+      por el programa Erasmus+ de la Uni\xF3n Europea.\nEsta publicaci\xF3n refleja
+      solo las opiniones del autor, y la Comisi\xF3n no es responsable de ning\xFAn
+      uso que pueda hacerse de la informaci\xF3n contenida en el mismo.\n\n"
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925889
@@ -240,15 +230,6 @@ MonoBehaviour:
     m_Localized: "Sesi\xF3n de entrenamiento"
     m_Metadata:
       m_Items: []
-  - m_Id: 50660762391093256
-    m_Localized: "\xBFEst\xE1s seguro de que quieres comenzar una sesi\xF3n de entrenamiento?
-      <No se usa m\xE1s>"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 50660762391093255
-    m_Localized: "Inicie la sesi\xF3n <No se usa m\xE1s>"
-    m_Metadata:
-      m_Items: []
   - m_Id: 65886906663854082
     m_Localized: Efectos de sonido
     m_Metadata:
@@ -284,11 +265,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 139790834418524160
-    m_Localized: "Aqu\xED est\xE1n sus resultados por ahora, mejoremoslos juntos"
+    m_Localized: "Aqu\xED est\xE1n sus resultados, mejoremoslos juntos"
     m_Metadata:
       m_Items: []
   - m_Id: 139790834443689984
-    m_Localized: No tienes ninguna tarjeta
+    m_Localized: Esta es tu lista de tareas pendientes. No tienes ninguna tarjeta
+      que hacer.
     m_Metadata:
       m_Items: []
   - m_Id: 141937967278874624
@@ -353,6 +335,19 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 153714070870024193
     m_Localized: Notificaciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156524221040631808
+    m_Localized: "An\xE1lisis en l\xEDnea"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156524221074186240
+    m_Localized: "\xBFLe gustar\xEDa recibir notificaciones de esta aplicaci\xF3n?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156524221074186241
+    m_Localized: "\xBFLe gustar\xEDa ayudarnos a mejorar esta aplicaci\xF3n compartiendo
+      en l\xEDnea sus datos de juego an\xF3nimo?"
     m_Metadata:
       m_Items: []
   references:

@@ -27,6 +27,22 @@ MonoBehaviour:
     m_Key: activity_available_soon
     m_Metadata:
       m_Items: []
+  - m_Id: 115977790945173504
+    m_Key: activity_completed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791033253888
+    m_Key: activity_failed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791033253889
+    m_Key: activity_highscore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791033253890
+    m_Key: activity_level
+    m_Metadata:
+      m_Items: []
   - m_Id: 112797993827033089
     m_Key: activity_play
     m_Metadata:
@@ -35,12 +51,16 @@ MonoBehaviour:
     m_Key: activity_play_again
     m_Metadata:
       m_Items: []
+  - m_Id: 115977791033253891
+    m_Key: activity_play_everyday
+    m_Metadata:
+      m_Items: []
   - m_Id: 112797993827033091
     m_Key: activity_play_next_level
     m_Metadata:
       m_Items: []
-  - m_Id: 113049161866141696
-    m_Key: activity_points_to_unlock
+  - m_Id: 115977791033253892
+    m_Key: activity_played
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033092
@@ -55,48 +75,32 @@ MonoBehaviour:
     m_Key: activity_result_game_over
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993827033095
-    m_Key: activity_result_game_win
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993827033096
-    m_Key: activity_result_highscore
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993827033097
-    m_Key: activity_result_lose
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993831227392
-    m_Key: activity_result_play_everyday
-    m_Metadata:
-      m_Items: []
   - m_Id: 112797993831227393
     m_Key: activity_result_quit
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993831227394
-    m_Key: activity_result_score
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993831227395
-    m_Key: activity_result_title
     m_Metadata:
       m_Items: []
   - m_Id: 112797993831227396
     m_Key: activity_result_win
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993831227399
-    m_Key: activity_scoretype_highscore
+  - m_Id: 115977791037448192
+    m_Key: activity_score
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993831227400
-    m_Key: activity_scoretype_levelreached
+  - m_Id: 115977791037448193
+    m_Key: activity_to_unlock
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993831227401
-    m_Key: activity_scoretype_numberofplays
+  - m_Id: 115977791037448194
+    m_Key: activity_ui_benefits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448195
+    m_Key: activity_ui_category
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448196
+    m_Key: activity_ui_save
     m_Metadata:
       m_Items: []
   - m_Id: 111561110350454784
@@ -425,22 +429,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 111561110367232016
     m_Key: skill_word_verbal_fluency_info
-    m_Metadata:
-      m_Items: []
-  - m_Id: 111552523372847137
-    m_Key: ui_benefits
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993831227402
-    m_Key: ui_category
-    m_Metadata:
-      m_Items: []
-  - m_Id: 113049161870336000
-    m_Key: ui_save
-    m_Metadata:
-      m_Items: []
-  - m_Id: 104043542756712468
-    m_Key: writediary_OpenDiary
     m_Metadata:
       m_Items: []
   m_Metadata:

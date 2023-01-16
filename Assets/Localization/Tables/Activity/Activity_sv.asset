@@ -43,10 +43,6 @@ MonoBehaviour:
     m_Localized: Avblockera
     m_Metadata:
       m_Items: []
-  - m_Id: 104043542756712468
-    m_Localized: "\xD6ppen dagbok"
-    m_Metadata:
-      m_Items: []
   - m_Id: 111561110350454784
     m_Localized: "Uppm\xE4rksamhet"
     m_Metadata:
@@ -176,17 +172,13 @@ MonoBehaviour:
     m_Localized: Verbal flytande
     m_Metadata:
       m_Items: []
-  - m_Id: 111552523372847137
-    m_Localized: Gynna
-    m_Metadata:
-      m_Items: []
   - m_Id: 111594514829565957
     m_Localized: 2048
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760256
-    m_Localized: "Flytta blocken f\xF6r att sl\xE5 samman siffror med samma v\xE4rde
-      och g\xF6ra s\xE5 mycket du kan. Kan du komma till 2048?"
+    m_Localized: "Flytta blocken i valfri riktning f\xF6r att sl\xE5 samman siffror
+      med samma v\xE4rde och g\xF6ra s\xE5 mycket du kan. Kan du komma till 2048?"
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760257
@@ -198,8 +190,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111596475087872000
-    m_Localized: "\xC4r bilden densamma som tidigare eller \xE4r den annorlunda?
-      Svara ja eller nej s\xE5 snabbt du kan"
+    m_Localized: "\xC4r bilden densamma som tidigare eller \xE4r den annorlunda?\n\nSvara
+      ja eller nej s\xE5 snabbt du kan."
     m_Metadata:
       m_Items: []
   - m_Id: 111599790488051712
@@ -222,7 +214,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989700
-    m_Localized: "Skriv ett brev till en v\xE4n"
+    m_Localized: "Skriv ett brev till en v\xE4n.\n\nBrevskrivning kan vara terapeutiskt
+      f\xF6r f\xF6rfattaren s\xE5v\xE4l som mottagaren, och det kan vara bara saken
+      som hj\xE4lper dig att \xE4ndra perspektiv."
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989702
@@ -230,11 +224,14 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989703
-    m_Localized: "Skriv ett brev till dig sj\xE4lv"
+    m_Localized: "Att skriva ett brev till ditt framtida jag erbjuder f\xF6rdelen
+      med att \"planera bak\xE5t\" som uppmuntrar oss att vara mer avsiktliga med
+      v\xE5r tid och fokusera p\xE5 vilken \xF6kande framsteg vi kan g\xF6ra i nuet
+      mot v\xE5ra l\xE5ngsiktiga m\xE5l f\xF6r framtiden."
     m_Metadata:
       m_Items: []
   - m_Id: 112797993814450176
-    m_Localized: "\xC4r du s\xE4ker p\xE5 att du vill sluta?"
+    m_Localized: "\xC4r du s\xE4ker p\xE5 att du vill avsluta?"
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033088
@@ -265,68 +262,63 @@ MonoBehaviour:
     m_Localized: "Spela \xF6ver"
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993827033095
-    m_Localized: "Niv\xE5n avklarad"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993827033097
-    m_Localized: "Du f\xF6rlorar"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993831227392
-    m_Localized: "Att spela n\xE5gra minuter om dagen hj\xE4lper din hj\xE4rna att
-      h\xE5lla sig i form"
-    m_Metadata:
-      m_Items: []
   - m_Id: 112797993831227393
     m_Localized: "Utg\xE5ng"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993831227394
-    m_Localized: "Po\xE4ng: {po\xE4ng}"
-    m_Metadata:
-      m_Items:
-      - rid: 3196637817602572296
-  - m_Id: 112797993831227395
-    m_Localized: "Niv\xE5n avklarad"
     m_Metadata:
       m_Items: []
   - m_Id: 112797993831227396
     m_Localized: Bra gjort!
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993831227402
-    m_Localized: Kategori
-    m_Metadata:
-      m_Items: []
-  - m_Id: 113049161866141696
-    m_Localized: "{PointsToUnlock} Po\xE4ng f\xF6r att l\xE5sa upp"
-    m_Metadata:
-      m_Items:
-      - rid: 3196637817602572296
-  - m_Id: 113049161870336000
-    m_Localized: Spara
-    m_Metadata:
-      m_Items: []
   - m_Id: 113092616990482432
     m_Localized: "Snart tillg\xE4nglig"
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993831227399
-    m_Localized: 'Highscore: {HighScore}'
+  - m_Id: 115977790945173504
+    m_Localized: Avslutad
     m_Metadata:
-      m_Items:
-      - rid: 3196637817602572296
-  - m_Id: 112797993831227400
-    m_Localized: 'Level: {CurrentLevel} / {MaxLevel}'
+      m_Items: []
+  - m_Id: 115977791033253888
+    m_Localized: Misslyckad
     m_Metadata:
-      m_Items:
-      - rid: 3196637817602572296
-  - m_Id: 112797993831227401
-    m_Localized: Played {Count}
+      m_Items: []
+  - m_Id: 115977791033253889
+    m_Localized: "B\xE4sta po\xE4ng"
     m_Metadata:
-      m_Items:
-      - rid: 3196637817602572296
+      m_Items: []
+  - m_Id: 115977791033253890
+    m_Localized: "Niv\xE5"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791033253891
+    m_Localized: "Att spela n\xE5gra minuter om dagen hj\xE4lper din hj\xE4rna att
+      h\xE5lla sig i form"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791033253892
+    m_Localized: Spelad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448192
+    m_Localized: "G\xF6ra"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448193
+    m_Localized: "Po\xE4ng f\xF6r att l\xE5sa upp"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448194
+    m_Localized: Gynna
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448195
+    m_Localized: Kategori
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448196
+    m_Localized: Spara
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

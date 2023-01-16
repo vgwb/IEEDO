@@ -23,10 +23,6 @@ MonoBehaviour:
     m_Localized: Soomaaliga
     m_Metadata:
       m_Items: []
-  - m_Id: 55768156938903555
-    m_Localized: a
-    m_Metadata:
-      m_Items: []
   - m_Id: 50660762391093260
     m_Localized: Ma hubtaa inaad rabto inaad ka tagto abuurista kaarkan?
     m_Metadata:
@@ -67,10 +63,6 @@ MonoBehaviour:
     m_Localized: Kordhinta dhibcaha +100
     m_Metadata:
       m_Items: []
-  - m_Id: 24995527358668800
-    m_Localized: Kaaliyahaaga Virtual
-    m_Metadata:
-      m_Items: []
   - m_Id: 55768998995763200
     m_Localized: IEESO waxay diiradda saareysaa 6 qaybood, aan ka eegno mid ka mid
       ah mid ...
@@ -78,10 +70,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 40549731508445184
     m_Localized: Qeybaha
-    m_Metadata:
-      m_Items: []
-  - m_Id: 40550106646994944
-    m_Localized: Guud ahaan
     m_Metadata:
       m_Items: []
   - m_Id: 40534266346233856
@@ -121,10 +109,33 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854083
-    m_Localized: Mashruucan IEEDO (2020-1-UK01-Ka20-07-0791117) waxaa lagu maalgeliyey
-      taageerada guddiga Yurub. Daabacaadan ayaa ka tarjumaya aragtida qoraaga oo
-      keliya, komishanka mas'uul kama ahan adeegsiga kasta oo laga yaabo inuu ka
-      kooban yahay macluumaadka ku jira.
+    m_Localized: 'Wada-hawlgalayaasha mashruuca:
+
+      - Ashley Community Guriyeynta
+      (Boqortooyada Midowday)
+
+      - Folkuniversitet (Sweden)
+
+      - metropolist
+      (Jarmalka)
+
+      - Rinova Ltd (Boqortooyada Ingiriiska)
+
+      - Dimitra (Giriigga)
+
+      -
+      Videojuegos Sind Fronteas (Spain)
+
+
+      Waxaa iska kaashanaya barnaamijka
+      Erasmus + Midowga Yurub.
+
+      Daabacaadan ayaa ka tarjumaya aragtida qoraaga
+      oo keliya, komishanka mas''uul kama ahan adeegsiga kasta oo laga yaabo inuu
+      ka kooban yahay macluumaadka ku jira.
+
+
+'
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925889
@@ -241,15 +252,6 @@ MonoBehaviour:
     m_Localized: Kalfadhiga tababarka
     m_Metadata:
       m_Items: []
-  - m_Id: 50660762391093256
-    m_Localized: Ma hubtaa inaad rabto inaad bilowdo tababar tababbarasho ah? <ma
-      isticmaalo mar dambe>
-    m_Metadata:
-      m_Items: []
-  - m_Id: 50660762391093255
-    m_Localized: Bilow fadhiga <oo aan loo isticmaalin mar dambe>
-    m_Metadata:
-      m_Items: []
   - m_Id: 65886906663854082
     m_Localized: Saamaynta muuqata
     m_Metadata:
@@ -283,11 +285,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 139790834418524160
-    m_Localized: Halkan waxaa ah natiijooyinkaaga hadda, bal aan wada hagaajino
+    m_Localized: Halkan waxaa ah natiijooyinkaaga, aynu wanaajino
     m_Metadata:
       m_Items: []
   - m_Id: 139790834443689984
-    m_Localized: Kaar ma haysid
+    m_Localized: Kani waa liis---qorihiin. Ma lihid wax kaar ah oo aad sameyso.
     m_Metadata:
       m_Items: []
   - m_Id: 141937967278874624
@@ -352,6 +354,19 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 153714070870024193
     m_Localized: Ogeysiisyada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156524221040631808
+    m_Localized: Falanqaynta khadka tooska ah
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156524221074186240
+    m_Localized: Ma jeceshahay inaad ka hesho ogeysiisyo barnaamijkan?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 156524221074186241
+    m_Localized: Ma jeceshahay inaad naga caawiso sidii aan u wanaajin lahaa appkaan
+      adiga oo wadaagaya khadka tooska ah ee macluumaadkaaga qarsoon?
     m_Metadata:
       m_Items: []
   references:
