@@ -123,13 +123,14 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 115977791037448193
-    m_Localized: " \u0646\u0642\u0627\u0637 \u0644\u0641\u062A\u062D"
+    m_Localized: " \u0646\u0642\u0627\u0637 \u0644\u0641\u062A\u062D{points} "
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3196637817602572292
   references:
     version: 2
     RefIds:
     - rid: 3196637817602572292
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 08e06f812dbd900102e0af812dbd900106e0af812dbd900100e02f1f9da1910109e0af812dbd900107e0af812dbd900108e0af812dbd9001
+        m_Entries: 08e06f812dbd900102e0af812dbd900106e0af812dbd900100e02f1f9da1910109e0af812dbd900107e0af812dbd900108e0af812dbd900101209fbc2f099c01

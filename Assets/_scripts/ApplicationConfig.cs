@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -40,6 +41,11 @@ namespace Ieedo
         public int PointsCardValidated;
 
         public string PointsSymbol;
+        public string GetPointsSymbolString()
+        {
+            return System.Text.RegularExpressions.Regex.Unescape(PointsSymbol);
+            //return char.Parse(PointsSymbol).ToString();
+        }
 
         [Header("Services")]
         public bool NotificationsEnabled;

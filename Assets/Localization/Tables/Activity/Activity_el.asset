@@ -360,9 +360,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 115977791037448193
-    m_Localized: "\u03C3\u03B7\u03BC\u03B5\u03AF\u03B1 \u03B3\u03B9\u03B1 \u03BE\u03B5\u03BA\u03BB\u03B5\u03AF\u03B4\u03C9\u03BC\u03B1"
+    m_Localized: "{points} \u03C3\u03B7\u03BC\u03B5\u03AF\u03B1 \u03B3\u03B9\u03B1
+      \u03BE\u03B5\u03BA\u03BB\u03B5\u03AF\u03B4\u03C9\u03BC\u03B1"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3196637817602572294
   - m_Id: 115977791037448194
     m_Localized: "\u03A9\u03C6\u03B5\u03BB\u03B5\u03AF\u03C4\u03B1\u03B9"
     m_Metadata:
@@ -381,4 +383,4 @@ MonoBehaviour:
     - rid: 3196637817602572294
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 02e0af812dbd900106e0af812dbd900100e02f1f9da1910107e0af812dbd900108e0af812dbd900109e0af812dbd9001
+        m_Entries: 02e0af812dbd900106e0af812dbd900100e02f1f9da1910107e0af812dbd900108e0af812dbd900109e0af812dbd900101209fbc2f099c01

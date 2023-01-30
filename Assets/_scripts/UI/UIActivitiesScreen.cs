@@ -51,37 +51,41 @@ namespace Ieedo
                 //                Debug.Log(activityDefinition.ID + " / " + activityDefinition.MaxLevel);
                 //ActivityBlocks[i].ProgressBar.SetValue(data.CurrentLevel, activityDefinition.MaxLevel);
 
-
-                var scoreTypeLoc = new LocalizedString("Activity", $"activity_scoretype_{activityDefinition.ScoreType.ToString().ToLower()}");
+                LocalizedString ScoreLabel;
+                string ScoreText = "";
                 switch (activityDefinition.ScoreType)
                 {
                     case ScoreType.Highscore:
-                        scoreTypeLoc.Arguments = new List<object> { data.HiScore };
-                        scoreTypeLoc.Add("HighScore", new IntVariable { Value = data.HiScore });
+                        ScoreLabel = new LocalizedString("Activity", "activity_highscore");
+                        ScoreText = data.HiScore.ToString();
                         break;
                     case ScoreType.LevelReached:
-                        scoreTypeLoc.Arguments = new List<object> { data.CurrentLevel, activityDefinition.MaxLevel };
-                        scoreTypeLoc.Add("CurrentLevel", new IntVariable { Value = data.CurrentLevel });
-                        scoreTypeLoc.Add("MaxLevel", new IntVariable { Value = activityDefinition.MaxLevel });
+                        ScoreLabel = new LocalizedString("Activity", "activity_level");
+                        ScoreText = data.CurrentLevel + " / " + activityDefinition.MaxLevel;
                         break;
                     case ScoreType.NumberOfPlays:
-                        scoreTypeLoc.Arguments = new List<object> { data.Results.Count };
-                        scoreTypeLoc.Add("Count", new IntVariable { Value = data.Results.Count });
+                        ScoreLabel = new LocalizedString("Activity", "activity_played");
+                        ScoreText = data.Results.Count.ToString();
                         break;
                     case ScoreType.None:
                     default:
                         throw new ArgumentOutOfRangeException();
                 }
-                ActivityBlocks[i].ScoreText.Key = scoreTypeLoc;
+                ActivityBlocks[i].ScoreText.Key = ScoreLabel;
+                ActivityBlocks[i].ScoreValue.SetTextRaw(ScoreText);
+
 
                 // Check unlock state
                 if (activityDefinition.Available)
                 {
+                    //Debug.Log("ciccio " + Statics.App.ApplicationConfig.GetPointsSymbolString());
                     data.Unlocked = Statics.Data.Profile.CurrentPoints >= activityDefinition.PointsToUnlock;
                     ActivityBlocks[i].LockedGO.SetActive(!data.Unlocked);
 
-                    var pointsToUnlockLoc = new LocalizedString("Activity", "activity_points_to_unlock");
-                    pointsToUnlockLoc.Arguments = new List<object> { activityDefinition };
+                    var pointsToUnlockLoc = new LocalizedString("Activity", "activity_to_unlock");
+                    pointsToUnlockLoc.Arguments = new List<object> { activityDefinition.PointsToUnlock };
+                    string points = activityDefinition.PointsToUnlock + " " + Statics.App.ApplicationConfig.GetPointsSymbolString();
+                    pointsToUnlockLoc.Add("points", new StringVariable { Value = points });
                     ActivityBlocks[i].LockedText.Key = pointsToUnlockLoc;
                 }
                 else

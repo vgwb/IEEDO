@@ -305,9 +305,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 115977791037448193
-    m_Localized: "pour d\xE9verrouiller"
+    m_Localized: "{points} pour d\xE9verrouiller"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3196637817602572299
   - m_Id: 115977791037448194
     m_Localized: Avantages
     m_Metadata:
@@ -326,4 +327,4 @@ MonoBehaviour:
     - rid: 3196637817602572299
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 06e0af812dbd900102e0af812dbd900100e02f1f9da1910109e0af812dbd900108e0af812dbd900107e0af812dbd9001
+        m_Entries: 06e0af812dbd900102e0af812dbd900100e02f1f9da1910109e0af812dbd900108e0af812dbd900107e0af812dbd900101209fbc2f099c01

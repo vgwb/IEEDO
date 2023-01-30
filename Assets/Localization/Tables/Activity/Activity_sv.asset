@@ -303,9 +303,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 115977791037448193
-    m_Localized: "Po\xE4ng f\xF6r att l\xE5sa upp"
+    m_Localized: "{points} Po\xE4ng f\xF6r att l\xE5sa upp"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3196637817602572296
   - m_Id: 115977791037448194
     m_Localized: Gynna
     m_Metadata:
@@ -324,4 +325,4 @@ MonoBehaviour:
     - rid: 3196637817602572296
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 02e0af812dbd900106e0af812dbd900100e02f1f9da1910107e0af812dbd900108e0af812dbd900109e0af812dbd9001
+        m_Entries: 02e0af812dbd900106e0af812dbd900100e02f1f9da1910107e0af812dbd900108e0af812dbd900109e0af812dbd900101209fbc2f099c01

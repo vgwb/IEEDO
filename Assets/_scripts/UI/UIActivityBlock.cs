@@ -12,6 +12,7 @@ namespace Ieedo
         public Image Image;
         public UIText Title;
         public UIText ScoreText;
+        public UIText ScoreValue;
         public UIButton LaunchButton;
 
         public UIFillBar ProgressBar;

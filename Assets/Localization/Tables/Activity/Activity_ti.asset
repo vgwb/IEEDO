@@ -71,6 +71,10 @@ MonoBehaviour:
     m_Localized: 
     m_Metadata:
       m_Items: []
+  - m_Id: 115977791037448193
+    m_Localized: '{points} '
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
