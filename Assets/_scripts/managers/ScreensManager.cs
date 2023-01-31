@@ -90,7 +90,7 @@ namespace Ieedo
 
         public void GoTo(ScreenID toId)
         {
-            SoundManager.I.PlaySfx(SfxEnum.ui_click);
+            SoundManager.I.PlaySfx(AudioEnum.ui_click);
             var uiBottomScreen = Statics.Screens.Get(ScreenID.Bottom) as UIBottomScreen;
             LeanButton toButton = null;
             switch (toId)
@@ -157,7 +157,7 @@ namespace Ieedo
                 yield return pillarsScreen.CloseCO();
             }
 
-            SoundManager.I.PlaySfx(SfxEnum.ui_click);
+            SoundManager.I.PlaySfx(AudioEnum.ui_click);
             uiCardListScreen.LoadToDoCards();
             uiCardListScreen.KeepPillars = false;
             GoTo(ScreenID.CardList);

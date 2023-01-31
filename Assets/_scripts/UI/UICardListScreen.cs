@@ -598,7 +598,7 @@ namespace Ieedo
             if (isSameMode)
                 return;
 
-            SoundManager.I.PlaySfx(SfxEnum.panel_open);
+            SoundManager.I.PlaySfx(AudioEnum.panel_open);
             CurrentFrontViewMode = viewMode;
             switch (viewMode)
             {

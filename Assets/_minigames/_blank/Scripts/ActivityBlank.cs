@@ -14,7 +14,7 @@ namespace Ieedo.games.blank
 
         public void OnBtnWin()
         {
-            SoundManager.I.PlaySfx(SfxEnum.game_win);
+            SoundManager.I.PlaySfx(AudioEnum.game_win);
             StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win, 10)));
         }
 
@@ -43,7 +43,7 @@ namespace Ieedo.games.blank
 
         public void OnBtnLose()
         {
-            SoundManager.I.PlaySfx(SfxEnum.game_lose);
+            SoundManager.I.PlaySfx(AudioEnum.game_lose);
             Debug.Log("Game Blank Lose");
             StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Lose, 2)));
         }

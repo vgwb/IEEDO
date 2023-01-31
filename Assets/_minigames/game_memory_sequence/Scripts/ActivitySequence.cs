@@ -95,12 +95,12 @@ namespace minigame.sequence
         {
             if (playerWin)
             {
-                SoundManager.I.PlaySfx(SfxEnum.game_win);
+                SoundManager.I.PlaySfx(AudioEnum.game_win);
                 StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win, 10)));
             }
             else
             {
-                SoundManager.I.PlaySfx(SfxEnum.game_lose);
+                SoundManager.I.PlaySfx(AudioEnum.game_lose);
                 StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Lose, 10)));
             }
         }

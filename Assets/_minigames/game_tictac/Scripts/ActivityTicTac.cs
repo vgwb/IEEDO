@@ -17,12 +17,12 @@ namespace minigame.tictac
         {
             if (playerWin)
             {
-                SoundManager.I.PlaySfx(SfxEnum.game_win);
+                SoundManager.I.PlaySfx(AudioEnum.game_win);
                 StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win, Activity.PointsOnWin)));
             }
             else
             {
-                SoundManager.I.PlaySfx(SfxEnum.game_lose);
+                SoundManager.I.PlaySfx(AudioEnum.game_lose);
                 StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Lose, Activity.PointsOnLoss)));
             }
         }

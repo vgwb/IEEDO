@@ -51,7 +51,7 @@ namespace minigame
             ScoreText.text = value.ToString();
             PunchAnimation.Rewind();
             PunchAnimation.Play();
-            SoundManager.I.PlaySfx(SfxEnum.game_score);
+            SoundManager.I.PlaySfx(AudioEnum.game_score);
         }
         private void UpdateHiScore(int value)
         {

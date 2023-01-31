@@ -81,7 +81,7 @@ namespace minigame.g2048
 
         public void OnBtnWin()
         {
-            SoundManager.I.PlaySfx(SfxEnum.game_win);
+            SoundManager.I.PlaySfx(AudioEnum.game_win);
 
             var points = 0;
             if (currentScore >= 2048)
@@ -118,13 +118,13 @@ namespace minigame.g2048
 
         public void OnBtnLose()
         {
-            SoundManager.I.PlaySfx(SfxEnum.game_lose);
+            SoundManager.I.PlaySfx(AudioEnum.game_lose);
             StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Lose, Activity.PointsOnLoss, currentScore)));
         }
 
         public void OnSwipe(string direction)
         {
-            SoundManager.I.PlaySfx(SfxEnum.ui_click);
+            SoundManager.I.PlaySfx(AudioEnum.ui_click);
             var currentSwipe = direction switch
             {
                 "N" => SwipeDirection.N,

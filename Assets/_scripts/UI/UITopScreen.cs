@@ -42,7 +42,7 @@ namespace Ieedo
             SetupButtonDown(InstantTranslationButton, UseNativeLocale, UseHostLocale);
             SetupButton(HamburgerButton, () =>
             {
-                SoundManager.I.PlaySfx(SfxEnum.ui_click);
+                SoundManager.I.PlaySfx(AudioEnum.ui_click);
                 switch (Mode)
                 {
                     case TopBarMode.MainSection:
@@ -76,7 +76,7 @@ namespace Ieedo
 
         private void UseNativeLocale()
         {
-            SoundManager.I.PlaySfx(SfxEnum.ui_click);
+            SoundManager.I.PlaySfx(AudioEnum.ui_click);
             var locale = LocalizationSettings.AvailableLocales.Locales.FirstOrDefault(x => x.Identifier.Code == Statics.Data.Profile.Settings.NativeLocale);
             if (locale != null)
             {

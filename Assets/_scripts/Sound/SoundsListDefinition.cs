@@ -6,7 +6,7 @@ using NaughtyAttributes;
 
 namespace Ieedo
 {
-    public enum SfxEnum
+    public enum AudioEnum
     {
         ui_click = 1,
         points = 7,
@@ -18,7 +18,16 @@ namespace Ieedo
         changeScreen = 8,
         card_trash = 6,
         card_positive = 9,
-        card_negative = 10
+        card_negative = 10,
+        music_1 = 100
+    }
+
+    public enum AudioChannel
+    {
+        Sfx1,
+        Sfx2,
+        Sfx3,
+        Music
     }
 
     [CreateAssetMenu(menuName = "Ieedo/Sounds List")]
@@ -30,8 +39,9 @@ namespace Ieedo
     [Serializable]
     public class SoundItem
     {
-        public SfxEnum id;
+        public AudioEnum id;
         public AudioClip audioClip;
+        public AudioChannel Channel;
 
         [Range(0.0f, 1.0f)]
         public float Volume = 1.0f;

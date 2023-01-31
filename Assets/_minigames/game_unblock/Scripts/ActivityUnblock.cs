@@ -50,7 +50,7 @@ namespace minigame.unblock
         {
             // Debug.Log("Win");
             GameData.instance.isWin = true;
-            SoundManager.I.PlaySfx(SfxEnum.game_win);
+            //SoundManager.I.PlaySfx(SfxEnum.game_win);
             StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win, Activity.PointsOnWin, 0, currentLevel)));
         }
 

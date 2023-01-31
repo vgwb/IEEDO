@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Ieedo;
+using Ieedo.games;
 
 namespace minigame.unblock
 {
@@ -82,6 +84,7 @@ namespace minigame.unblock
                 {//hero block is on exit,//win;
                     canMove = false;
                     GameData.instance.isLock = true;
+                    SoundManager.I.PlaySfx(AudioEnum.game_win);
                     //transform.DOMoveX(transform.position.x + GameData.instance.tileWidth * 2+1, 2).OnComplete(() =>
                     ATween.MoveTo(gameObject, ATween.Hash("islocal", false, "x", transform.position.x + GameData.instance.tileWidth * 2 + 1, "delay", 0f, "easetype", ATween.EaseType.linear, "time", 2f, "OnComplete", (System.Action)(() =>
                     {
