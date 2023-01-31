@@ -102,7 +102,7 @@ namespace Ieedo
                     var res = new ActivityResult
                     {
                         Result = ActivityResultState.Win,
-                        Points = 10,
+                        Points = 60,
                         Timestamp = new Timestamp(DateTime.Today + TimeSpan.FromDays(-i)),
                         CustomData = $"Cheat added text for diary. Added with index {i}"
                     };

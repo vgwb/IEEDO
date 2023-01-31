@@ -58,6 +58,7 @@ namespace minigame.g2048
         public override IEnumerator PlayNextLevel(int _currentLevel)
         {
             Debug.Log("NEXT GAME!");
+            SetupActivity(_currentLevel);
             board.Reset();
             board.CreateBoard();
             board.StartGame();
@@ -112,13 +113,13 @@ namespace minigame.g2048
                 points = Activity.PointsOnWin / 64;
             }
 
-            StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win, points)));
+            StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win, points, currentScore)));
         }
 
         public void OnBtnLose()
         {
             SoundManager.I.PlaySfx(SfxEnum.lose);
-            StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Lose, Activity.PointsOnLoss)));
+            StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Lose, Activity.PointsOnLoss, currentScore)));
         }
 
         public void OnSwipe(string direction)
