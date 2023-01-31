@@ -20,18 +20,19 @@ namespace Ieedo
             Title.Text.Key = new LocalizedString("Activity", $"{gameName}");
             Description.Text.Key = new LocalizedString("Activity", $"{gameName}_description");
 
-            //            Debug.Log("SHOW INTRO " + Statics.ActivityFlow.CurrentActivity.ScoreType);
+            string scoreString = "";
             switch (Statics.ActivityFlow.CurrentActivity.ScoreType)
             {
                 case ScoreType.Highscore:
-                    ScoreInfo.Text.SetTextRaw("");
+                    scoreString = new LocalizedString("Activity", "activity_highscore").GetLocalizedString();
+                    ScoreInfo.Text.SetTextRaw(scoreString + " " + Statics.ActivityFlow.CurrentActivityData.HiScore);
                     break;
                 case ScoreType.LevelReached:
-                    var levelString = new LocalizedString("Activity", "activity_level").GetLocalizedString();
-                    ScoreInfo.Text.SetTextRaw(levelString + " " + Statics.ActivityFlow.CurrentActivityData.CurrentLevel);
+                    scoreString = new LocalizedString("Activity", "activity_level").GetLocalizedString();
+                    ScoreInfo.Text.SetTextRaw(scoreString + " " + Statics.ActivityFlow.CurrentActivityData.CurrentLevel);
                     break;
                 case ScoreType.NumberOfPlays:
-                    ScoreInfo.Text.SetTextRaw("");
+                    ScoreInfo.Text.SetTextRaw(scoreString);
                     break;
             }
 
