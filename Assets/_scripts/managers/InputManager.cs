@@ -6,6 +6,19 @@ namespace Ieedo
 {
     public class InputManager : MonoBehaviour
     {
+        private bool _isExecutingAction;
+        public bool IsExecutingAction
+        {
+            get
+            {
+                return _isExecutingAction;
+            }
+            set
+            {
+                _isExecutingAction = value;
+            }
+        }
+
         #region Click Utilities
 
         private List<Action> onUpActions = new List<Action>();

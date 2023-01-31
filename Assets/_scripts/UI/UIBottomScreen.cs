@@ -17,14 +17,17 @@ namespace Ieedo
         {
             SetupButton(btnActivities, () =>
             {
+                if (Statics.Input.IsExecutingAction) return;
                 Statics.Screens.GoTo(ScreenID.Activities);
             });
             SetupButton(btnPillars, () =>
             {
+                if (Statics.Input.IsExecutingAction) return;
                 Statics.Screens.GoTo(ScreenID.Pillars);
             });
             SetupButton(btnCards, () =>
             {
+                if (Statics.Input.IsExecutingAction) return;
                 OnCardsClicked?.Invoke();
                 Statics.Screens.GoToTodoList();
             });

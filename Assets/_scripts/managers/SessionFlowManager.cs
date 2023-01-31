@@ -29,12 +29,13 @@ namespace Ieedo
                 StartCoroutine(Statics.SessionFlow.SessionFlowCO());
             }
         }
+
+        private bool completedAssessment;
         public IEnumerator SessionFlowCO()
         {
             var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
             var uiCardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
 
-            // TODO: Close everything else first?
             Statics.Screens.GoTo(ScreenID.Pillars);
 
             // Assessment flow
@@ -45,6 +46,7 @@ namespace Ieedo
                 yield return Statics.Screens.ShowQuestionFlow("UI/session_question_assessment_title", "UI/session_question_assessment_content", new[] { "UI/yes", "UI/no" }, answer);
             }
 
+            completedAssessment = false;
             if (answer.Value == 0)
             {
                 IsInsideAssessment = true;
@@ -53,7 +55,8 @@ namespace Ieedo
                     yield return null;
                 assessmentCo = null;
             }
-            else
+
+            if (!completedAssessment)
             {
                 // Review flow
                 uiPillarsScreen.SwitchViewMode(PillarsViewMode.Review);
@@ -213,6 +216,7 @@ namespace Ieedo
 
             Statics.Screens.GoTo(ScreenID.Pillars);
             IsInsideAssessment = false;
+            completedAssessment = true;
 
             uiTopScreen.SwitchMode(TopBarMode.MainSection);
         }
