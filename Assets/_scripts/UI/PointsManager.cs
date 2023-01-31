@@ -31,6 +31,13 @@ namespace Ieedo
             PointsUI?.gameObject.SetActive(visible);
         }
 
+        public void Reset()
+        {
+            Statics.Data.Profile.CurrentPoints = 0;
+            PointsUI?.UpdatePoints(Statics.Data.Profile.CurrentPoints, 0);
+            Statics.Data.SaveProfile();
+        }
+
         public void AddPoints(int value)
         {
             Statics.Data.Profile.CurrentPoints += value;

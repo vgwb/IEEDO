@@ -25,7 +25,8 @@ namespace Ieedo
 
             int ActivitiySorting(ActivityDefinition x)
             {
-                if (!x.Available) return 100000;
+                if (!x.Available)
+                    return 100000;
                 return x.PointsToUnlock;
             }
 
@@ -90,7 +91,7 @@ namespace Ieedo
                     ActivityBlocks[i].LockedGO.SetActive(!data.Unlocked);
 
                     var pointsToUnlockLoc = new LocalizedString("Activity", "activity_to_unlock");
-                    pointsToUnlockLoc.Arguments = new List<object> { activityDefinition.PointsToUnlock };
+                    //                    pointsToUnlockLoc.Arguments = new List<object> { activityDefinition.PointsToUnlock };
                     string points = activityDefinition.PointsToUnlock + " " + Statics.App.ApplicationConfig.GetPointsSymbolString();
                     pointsToUnlockLoc.Add("points", new StringVariable { Value = points });
                     ActivityBlocks[i].LockedText.Key = pointsToUnlockLoc;

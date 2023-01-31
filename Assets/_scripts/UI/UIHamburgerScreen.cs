@@ -29,6 +29,7 @@ namespace Ieedo
         private UIButton btnSwitchSessionMode;
         private UIButton btnGenerateTestPillars;
         private UIButton btnGenerateTestCards;
+        private UIButton btnTestResetScore;
         private UIButton btnTestIncreaseScore;
         // private UIButton btnResetProfile;
         private UIButton btnTestAddDiary;
@@ -87,6 +88,11 @@ namespace Ieedo
             btnTestIncreaseScore = AddButton("action_test_increase_score", () =>
             {
                 Statics.Points.AddPoints(100);
+            });
+
+            btnTestResetScore = AddUnlocalizedButton("Reset Score", () =>
+            {
+                Statics.Points.Reset();
             });
 
             // btnResetProfile = AddButton("action_reset_profile", () =>
