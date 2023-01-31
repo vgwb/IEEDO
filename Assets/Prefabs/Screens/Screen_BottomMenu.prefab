@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 349657545777405785}
   - component: {fileID: 1628204564}
   m_Layer: 5
-  m_Name: Screen_Bot
+  m_Name: Screen_BottomMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -635,7 +635,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8746676026341688667, guid: bf941c163aa023840887bd2d59ca1453, type: 3}
       propertyPath: m_text
-      value: \uf248
+      value: \uf11b
       objectReference: {fileID: 0}
     - target: {fileID: 8746676026341688667, guid: bf941c163aa023840887bd2d59ca1453, type: 3}
       propertyPath: m_fontSize
