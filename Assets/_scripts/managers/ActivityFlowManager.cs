@@ -19,6 +19,7 @@ namespace Ieedo
     public class ActivityResult
     {
         public int PlayedLevel;
+        public int Score;
         public int Points;
         public ActivityResultState Result;
         public string CustomData;
@@ -28,10 +29,12 @@ namespace Ieedo
         {
         }
 
-        public ActivityResult(ActivityResultState result, int points)
+        public ActivityResult(ActivityResultState result, int points, int score = 0, int level = 0)
         {
             Result = result;
             Points = points;
+            Score = score;
+            PlayedLevel = level;
         }
     }
 
@@ -104,7 +107,7 @@ namespace Ieedo
 
         public void RegisterResult(ActivityResult result, ActivityID activityId = ActivityID.None)
         {
-            Debug.Log("RegisterResult " + result.Points);
+            Debug.Log("RegisterResult " + result.Score);
             if (activityId == ActivityID.None)
                 activityId = CurrentActivity.ID;
 
@@ -126,6 +129,7 @@ namespace Ieedo
                 existingResult.Result = result.Result;
                 existingResult.CustomData = result.CustomData;
                 existingResult.Points = result.Points;
+                existingResult.Score = result.Score;
                 existingResult.PlayedLevel = Statics.ActivityFlow.CurrentLevel;
             }
 
@@ -135,14 +139,14 @@ namespace Ieedo
                 if (result.Result == ActivityResultState.Win)
                 {
                     activityData.CurrentLevel += 1;
-                    Statics.Points.AddPoints(activityDef.PointsOnWin);
+                    Statics.Points.AddPoints(result.Points);
                 }
                 else
                 {
-                    Statics.Points.AddPoints(activityDef.PointsOnLoss);
+                    Statics.Points.AddPoints(result.Points);
                 }
 
-                activityData.HiScore = activityData.Results.Max(x => x.Points);
+                activityData.HiScore = activityData.Results.Max(x => x.Score);
             }
             Statics.Data.SaveProfile();
             Statics.Analytics.Activity(activityData.ID.ToString(), result.Result.ToString());

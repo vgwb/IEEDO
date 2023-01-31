@@ -72,8 +72,8 @@ MonoBehaviour:
   NextLevelButton: {fileID: 1328611501081304172}
   QuitButton: {fileID: 3177807061884192461}
   ScorePivot: {fileID: 1559700668014021713}
-  CurrentScore: {fileID: 5544195234520004109}
-  HighScore: {fileID: 3869553032511037408}
+  CurrentScore: {fileID: 3869553032511037408}
+  HighScore: {fileID: 5544195234520004109}
 --- !u!1 &1485521131393923673
 GameObject:
   m_ObjectHideFlags: 0

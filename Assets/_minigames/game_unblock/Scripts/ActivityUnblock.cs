@@ -51,7 +51,7 @@ namespace minigame.unblock
             // Debug.Log("Win");
             GameData.instance.isWin = true;
             SoundManager.I.PlaySfx(SfxEnum.win);
-            StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win, Activity.PointsOnWin)));
+            StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win, Activity.PointsOnWin, 0, currentLevel)));
         }
 
         public override IEnumerator PlayNextLevel(int _currentLevel)

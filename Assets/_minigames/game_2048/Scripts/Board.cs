@@ -35,15 +35,7 @@ namespace minigame.g2048
         public RectTransform emptyNodeRect;
         public RectTransform realNodeRect;
         private SwipeDirection currentSwipe;
-        private int m_score;
-        public int score
-        {
-            get => m_score;
-            set
-            {
-                m_score = value;
-            }
-        }
+        public int score { get; set; }
 
         public void StartGame()
         {
@@ -84,14 +76,14 @@ namespace minigame.g2048
             {
                 for (int j = 0; j < row; j++)
                 {
-                    var instantiatePrefab = GameObject.Instantiate(emptyNodePrefab, emptyNodeRect.transform, false);
+                    var instantiatePrefab = Instantiate(emptyNodePrefab, emptyNodeRect.transform, false);
                     var point = new Vector2Int(j, i);
                     //r-d-l-u
                     Vector2Int left = point - new Vector2Int(1, 0);
                     Vector2Int down = point - new Vector2Int(0, 1);
                     Vector2Int right = point + new Vector2Int(1, 0);
                     Vector2Int up = point + new Vector2Int(0, 1);
-                    Vector2Int?[] v = new Vector2Int?[4];
+                    var v = new Vector2Int?[4];
                     if (IsValid(right))
                         v[0] = right;
                     if (IsValid(down))
