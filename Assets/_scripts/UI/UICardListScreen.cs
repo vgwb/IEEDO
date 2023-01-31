@@ -163,11 +163,11 @@ namespace Ieedo
                 EditModeCardInteraction.transform.SetParent(transform);
             }
             EditCardButton.Text = canEdit ? "\uf14a" : "\uf044";
-
             CardsList.ScrollRect.enabled = !canEdit;
 
             if (CurrentFrontViewMode == FrontViewMode.Edit)
             {
+                CardsCounter.gameObject.SetActive(!canEdit);
                 if (canEdit)
                 {
                     CreateCardButton.Hide();
@@ -429,7 +429,6 @@ namespace Ieedo
         public void ForceFrontCard(UICard cardUI)
         {
             this.frontCardUI = cardUI;
-            //Debug.LogError("FRONT CARD IS NOW " + cardUI);
             CardsCounter.Text = $"{CardsList.HeldCards.IndexOf(cardUI) + 1}/{CardsList.HeldCards.Count}";
         }
 
@@ -536,6 +535,7 @@ namespace Ieedo
             ForceFrontCard(uiCard);
 
             SwitchToFrontViewMode(viewMode);
+            CardsCounter.gameObject.SetActive(frontCardUI != null && !isCreating);
         }
 
         public void RefreshFrontViewMode()
@@ -634,6 +634,7 @@ namespace Ieedo
 
         public void CloseFrontView()
         {
+            CardsCounter.gameObject.SetActive(false);
 
             if (canEdit)
                 SetEditing(false);
@@ -743,6 +744,7 @@ namespace Ieedo
             DescriptionInputField.text = "";
 
             SetEditing(false);
+            CardsCounter.gameObject.SetActive(false);
             CreateCardButton.Hide();
 
             // Create and show the card

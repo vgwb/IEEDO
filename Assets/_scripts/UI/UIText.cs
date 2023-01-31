@@ -13,7 +13,7 @@ namespace Ieedo
         public LocalizeStringEvent LocalizeStringEvent => GetComponent<LocalizeStringEvent>();
         public UnityEngine.Localization.LocalizedString Key
         {
-            get => LocalizeStringEvent.StringReference;
+            get => LocalizeStringEvent ? LocalizeStringEvent.StringReference : null;
             set => LocalizeStringEvent.StringReference = value;
         }
 
@@ -27,7 +27,7 @@ namespace Ieedo
         {
             get
             {
-                var locale = Key.LocaleOverride;
+                var locale = Key?.LocaleOverride;
                 if (locale == null)
                     locale = LocalizationSettings.Instance.GetSelectedLocale();
                 return locale.Identifier.Code == "ar"
