@@ -33,12 +33,12 @@ namespace Ieedo
             var nCards = CardCollection.HeldCards.Count;
             float highestScaleRatio = 0f;
             int highestScaleCardIndex = 0;
-            if (camera == null)
-                camera = GameObject.Find("CameraUI").GetComponent<Camera>();
+            if (uiCamera == null)
+                uiCamera = GameObject.Find("CameraUI").GetComponent<Camera>();
             for (var index = 0; index < CardCollection.HeldCards.Count; index++)
             {
                 var card = CardCollection.HeldCards[index];
-                var screenPos = camera.WorldToScreenPoint(card.transform.position);
+                var screenPos = uiCamera.WorldToScreenPoint(card.transform.position);
                 var normalizedScreenPos = screenPos.x / Screen.width;
 
                 var scaleRatio = 1 - Mathf.Abs(normalizedScreenPos - 0.5f) * 2f;
@@ -105,7 +105,7 @@ namespace Ieedo
             hasInFront = true; // Force this, otherwise it will trigger again later
         }
 
-        private Camera camera;
+        private Camera uiCamera;
         public bool CanScroll = true;
         public void Update()
         {
@@ -132,8 +132,8 @@ namespace Ieedo
 
             float highestScaleRatio = 0f;
             int highestScaleCardIndex = 0;
-            if (camera == null)
-                camera = GameObject.Find("CameraUI").GetComponent<Camera>();
+            if (uiCamera == null)
+                uiCamera = GameObject.Find("CameraUI").GetComponent<Camera>();
             highestScaleCardIndex = ResizeAndFindHighestScaleCardIndex();
 
             int ResizeAndFindHighestScaleCardIndex()
@@ -141,7 +141,7 @@ namespace Ieedo
                 for (var index = 0; index < CardCollection.HeldCards.Count; index++)
                 {
                     var card = CardCollection.HeldCards[index];
-                    var screenPos = camera.WorldToScreenPoint(card.transform.position);
+                    var screenPos = uiCamera.WorldToScreenPoint(card.transform.position);
                     var normalizedScreenPos = screenPos.x / Screen.width;
                     //card.Title.SetTextRaw(normalizedScreenPos.ToString("F"));
                     //if (index == centerCardIndex) card.Title.SetTextRaw("CENTER " + normalizedScreenPos);

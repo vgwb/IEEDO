@@ -60,9 +60,9 @@ namespace Ieedo
             Title.text = def.Title.Text;
             Category.gameObject.SetActive(def.CategoryDefinition != null);
             Subcategory.gameObject.SetActive(def.CategoryDefinition != null);
-            var color = def.CategoryDefinition ? def.CategoryDefinition.BaseColor : new Color(0.8f, 0.8f, 0.8f, 1f);
+            var baseColor = def.CategoryDefinition ? def.CategoryDefinition.BaseColor : new Color(0.8f, 0.8f, 0.8f, 1f);
             var lightColor = def.CategoryDefinition ? def.CategoryDefinition.LightColor : Color.white;
-            ColorBase.color = color;
+            ColorBase.color = baseColor;
             Difficulty.gameObject.SetActive(def.Difficulty > 0);
             Difficulty.SetValue(def.Difficulty);
 
@@ -75,7 +75,7 @@ namespace Ieedo
                 borderImage.color = lightColor;
             }
 
-            StampIcon.color = color;
+            StampIcon.color = baseColor;
             if (data.Status == CardStatus.Validated)
             {
                 DateBase.color = lightColor;
@@ -103,7 +103,7 @@ namespace Ieedo
             else if (hasExpirationDate && data.IsDueToday)
             {
                 DateBase.color = Color.white;
-                Date.color = color;
+                Date.color = baseColor;
                 StampGO.SetActive(true);
                 StampGO.GetComponent<Animation>().clip = pulseIconClip;
                 StampIcon.text = Regex.Unescape("\uf017");
@@ -111,7 +111,7 @@ namespace Ieedo
             else
             {
                 DateBase.color = Color.white;
-                Date.color = color;
+                Date.color = baseColor;
                 StampGO.SetActive(false);
             }
         }

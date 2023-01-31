@@ -53,7 +53,7 @@ namespace Ieedo
                 }
 
                 Options[i].ButtonIconsText.transform.parent.GetComponent<RectTransform>().sizeDelta = new Vector2(option.ShowIconSquare ? -100 : 0, 0);
-                Options[i].Button.Cap.GetComponent<RectTransform>().sizeDelta = new Vector2(option.ShowIconSquare ? -100 : 0, 0);
+                Options[i].Button.Cap.GetComponentInChildren<UIText>().rectTransform.sizeDelta = new Vector2(option.ShowIconSquare ? -135 : 0, 0);
 
                 if (option.UseLocString)
                 {

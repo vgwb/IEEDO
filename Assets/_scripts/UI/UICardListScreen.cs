@@ -61,6 +61,8 @@ namespace Ieedo
         public UIButton DeleteCardButton;
         public UIButton CloseFrontViewButton;
 
+        public UIText CardsCounter;
+
         public Action OnCreateClicked;
 
         [Header("Tutorial")]
@@ -428,6 +430,7 @@ namespace Ieedo
         {
             this.frontCardUI = cardUI;
             //Debug.LogError("FRONT CARD IS NOW " + cardUI);
+            CardsCounter.Text = $"{CardsList.HeldCards.IndexOf(cardUI) + 1}/{CardsList.HeldCards.Count}";
         }
 
         public static int SortByExpirationDate(CardData c1, CardData c2)
@@ -794,7 +797,7 @@ namespace Ieedo
                         yield return EditDifficultyCO();
                         break;
                     case 4:
-                        yield return EditDateCO();
+                        yield return EditDateCO(cardUi.Data.Definition);
                         break;
                     case 5:
                         yield return EditDescriptionCO();
@@ -901,7 +904,7 @@ namespace Ieedo
             //EditDifficultyButton.Shadow.enabled = false;
         }
 
-        private IEnumerator EditDateCO(bool autoReset = false)
+        private IEnumerator EditDateCO(CardDefinition cardDef, bool autoReset = false)
         {
             EditDateButton.Shadow.enabled = true;
             SetSubEditMode(true);
@@ -916,17 +919,18 @@ namespace Ieedo
             foreach (var possibleDay in possibleDays)
             {
                 var targetDate = DateTime.Now.AddDays(possibleDay);
-                var color = Color.white;
+                var color = cardDef.CategoryDefinition.LightColor;
                 if (targetDate.DayOfWeek == DayOfWeek.Saturday)
-                    color = Color.red;
+                    color = cardDef.CategoryDefinition.DarkColor;
                 if (targetDate.DayOfWeek == DayOfWeek.Sunday)
-                    color = Color.red;
+                    color = cardDef.CategoryDefinition.DarkColor;
 
                 options.Add(
                     new OptionData
                     {
                         UseLocString = false,
                         Text = new Timestamp(targetDate).ToString(),
+                        IconText = "\uf133",
                         Color = color,
                         ShowIconSquare = true
                     }
@@ -1083,7 +1087,7 @@ namespace Ieedo
             }
 
             SetupButton(EditDifficultyButton, () => StartCoroutine(EditDifficultyCO(autoReset: true)));
-            SetupButton(EditDateButton, () => StartCoroutine(EditDateCO(autoReset: true)));
+            SetupButton(EditDateButton, () => StartCoroutine(EditDateCO(frontCardUI.Data.Definition, autoReset: true)));
             SetupButton(EditSubCategoryButton, () => StartCoroutine(EditSubCategoryCO(frontCardUI.Data.Definition.CategoryDefinition, autoReset: true)));
             SetupButton(EditTitleButton, () => StartCoroutine(EditTitleCO(autoReset: true)));
             SetupButton(EditDescriptionButton, () => StartCoroutine(EditDescriptionCO(autoReset: true)));
