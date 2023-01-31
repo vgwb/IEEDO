@@ -78,7 +78,8 @@ MonoBehaviour:
   - m_Id: 115977791037448193
     m_Localized: "{points} \u1295\u121D\u12BD\u134B\u1275"
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 3196637817602572303
   - m_Id: 113092616990482432
     m_Localized: "\u12A3\u1265 \u1240\u1228\u1263 \u12A5\u12CB\u1295 \u12AD\u122D\u12A8\u1265
       \u12DD\u12A8\u12A3\u120D"
@@ -631,4 +632,4 @@ MonoBehaviour:
     - rid: 3196637817602572303
       type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
       data:
-        m_Entries: 00e02f1f9da1910109e0af812dbd900108e0af812dbd900107e0af812dbd9001
+        m_Entries: 00e02f1f9da1910109e0af812dbd900108e0af812dbd900107e0af812dbd900101209fbc2f099c01
