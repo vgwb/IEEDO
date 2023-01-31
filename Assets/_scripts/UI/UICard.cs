@@ -79,6 +79,7 @@ namespace Ieedo
             if (data.Status == CardStatus.Validated)
             {
                 DateBase.color = lightColor;
+                Date.color = Color.white;
                 StampGO.SetActive(true);
                 StampGO.GetComponent<Animation>().clip = null;
                 StampIcon.text = Regex.Unescape("\uf560");
@@ -86,13 +87,15 @@ namespace Ieedo
             else if (data.Status == CardStatus.Completed)
             {
                 DateBase.color = lightColor;
+                Date.color = Color.white;
                 StampGO.SetActive(true);
                 StampGO.GetComponent<Animation>().clip = null;
                 StampIcon.text = Regex.Unescape("\uf00c");
             }
             else if (hasExpirationDate && data.IsExpired)
             {
-                DateBase.color = Color.white;
+                DateBase.color = lightColor;
+                Date.color = Color.white;
                 StampGO.SetActive(true);
                 StampGO.GetComponent<Animation>().clip = pulseIconClip;
                 StampIcon.text = Regex.Unescape("\uf071");
@@ -100,6 +103,7 @@ namespace Ieedo
             else if (hasExpirationDate && data.IsDueToday)
             {
                 DateBase.color = Color.white;
+                Date.color = color;
                 StampGO.SetActive(true);
                 StampGO.GetComponent<Animation>().clip = pulseIconClip;
                 StampIcon.text = Regex.Unescape("\uf017");
@@ -107,6 +111,7 @@ namespace Ieedo
             else
             {
                 DateBase.color = Color.white;
+                Date.color = color;
                 StampGO.SetActive(false);
             }
         }
