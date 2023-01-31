@@ -23,9 +23,8 @@ namespace minigame.fast_reaction
 
         private StateMachine<States, StateDriverUnity> fsm;
 
-        private void Awake()
+        protected override void Init()
         {
-            base.Awake();
             fsm = new StateMachine<States, StateDriverUnity>(this);
         }
 

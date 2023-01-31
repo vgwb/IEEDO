@@ -29,12 +29,12 @@ namespace minigame.fast_reaction
         {
             if (playerWin)
             {
-                SoundManager.I.PlaySfx(SfxEnum.win);
+                SoundManager.I.PlaySfx(SfxEnum.game_win);
                 StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win, 10)));
             }
             else
             {
-                SoundManager.I.PlaySfx(SfxEnum.lose);
+                SoundManager.I.PlaySfx(SfxEnum.game_lose);
                 StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Lose, 10)));
             }
         }

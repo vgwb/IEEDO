@@ -9,13 +9,16 @@ namespace Ieedo
 
     public enum SfxEnum
     {
-        click = 1,
-        win = 2,
-        lose = 3,
+        ui_click = 1,
+        game_win = 2,
+        game_lose = 3,
         open = 4,
         close = 5,
         trash = 6,
-        score = 7
+        score = 7,
+        changeScreen = 8,
+        card_positive = 9,
+        card_negative = 10
     }
 
     [CreateAssetMenu(menuName = "Ieedo/Sounds List")]

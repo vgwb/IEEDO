@@ -74,7 +74,7 @@ namespace Ieedo
         public System.Action<int> OnSelectOption;
         private void SelectOption(int selectedOption)
         {
-            SoundManager.I.PlaySfx(SfxEnum.click);
+            SoundManager.I.PlaySfx(SfxEnum.ui_click);
             OnSelectOption?.Invoke(selectedOption);
             LatestSelectedOption = selectedOption;
             hasSelected = true;

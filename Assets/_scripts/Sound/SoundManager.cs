@@ -29,7 +29,7 @@ namespace Ieedo
             var sound = SoundsList.Sounds.Find(item => item.id == sfx);
             if (sound != null)
             {
-                if (sfx == SfxEnum.win)
+                if (sfx == SfxEnum.game_win)
                 {
                     audioSourceWin.Play();
                 }
