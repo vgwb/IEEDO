@@ -27,7 +27,7 @@ namespace Ieedo
             PointsText.text = totalpoints.ToString();
             // PunchAnimation.Rewind();
             // PunchAnimation.Play();
-            SoundManager.I.PlaySfx(SfxEnum.score);
+            SoundManager.I.PlaySfx(SfxEnum.points);
         }
 
     }

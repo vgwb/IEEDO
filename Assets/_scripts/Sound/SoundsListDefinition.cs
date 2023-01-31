@@ -6,17 +6,17 @@ using NaughtyAttributes;
 
 namespace Ieedo
 {
-
     public enum SfxEnum
     {
         ui_click = 1,
+        points = 7,
+        game_score = 11,
         game_win = 2,
         game_lose = 3,
-        open = 4,
-        close = 5,
-        trash = 6,
-        score = 7,
+        panel_open = 4,
+        panel_close = 5,
         changeScreen = 8,
+        card_trash = 6,
         card_positive = 9,
         card_negative = 10
     }

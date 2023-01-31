@@ -142,7 +142,7 @@ namespace Ieedo
         {
             if (focusOnPillar != null && focusOnPillar == currentFocusedPillar)
                 return;
-            SoundManager.I.PlaySfx(SfxEnum.open);
+            //SoundManager.I.PlaySfx(SfxEnum.panel_open);
             foreach (PillarView view in PillarViews)
             {
                 if (view != focusOnPillar)

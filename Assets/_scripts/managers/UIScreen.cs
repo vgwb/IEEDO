@@ -19,14 +19,14 @@ namespace Ieedo
 
         public void OpenImmediate()
         {
-            SoundManager.I.PlaySfx(SfxEnum.open);
+            SoundManager.I.PlaySfx(SfxEnum.changeScreen);
             gameObject.SetActive(true);
         }
 
         public void CloseImmediate(bool reset = false)
         {
             if (!reset)
-                SoundManager.I.PlaySfx(SfxEnum.close);
+                SoundManager.I.PlaySfx(SfxEnum.changeScreen);
             gameObject.SetActive(false);
         }
 
@@ -46,7 +46,7 @@ namespace Ieedo
         public IEnumerator OpenCO()
         {
             yield return OnPreOpen();
-            SoundManager.I.PlaySfx(SfxEnum.open);
+            SoundManager.I.PlaySfx(SfxEnum.changeScreen);
             if (BlockerBG != null)
             {
                 var col = BlockerBG.color;
@@ -76,7 +76,7 @@ namespace Ieedo
 
         public IEnumerator CloseCO()
         {
-            SoundManager.I.PlaySfx(SfxEnum.close);
+            SoundManager.I.PlaySfx(SfxEnum.changeScreen);
             if (BlockerBG != null)
             {
                 var col = BlockerBG.color;

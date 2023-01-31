@@ -80,12 +80,14 @@ namespace Ieedo
             SetupButton(UnCompleteCardButton_Review, () => StartCoroutine(UnCompleteCardCO(frontCardUI)));
             SetupButton(EditCardButton, () =>
             {
-                if (Statics.Input.IsExecutingAction) return;
+                if (Statics.Input.IsExecutingAction)
+                    return;
                 SetEditing(!canEdit);
             });
             SetupButton(CreateCardButton, () =>
             {
-                if (Statics.Input.IsExecutingAction) return;
+                if (Statics.Input.IsExecutingAction)
+                    return;
                 OnCreateClicked?.Invoke();
                 createCardFlowCo = StartCoroutine(CreateCardFlowCO());
             });
@@ -192,7 +194,8 @@ namespace Ieedo
 
         private IEnumerator DeleteCardCO(bool isNewCard, UICard uiCard, bool withConfirmation = true)
         {
-            if (Statics.Input.IsExecutingAction) yield break;
+            if (Statics.Input.IsExecutingAction)
+                yield break;
             if (withConfirmation)
             {
                 var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
@@ -238,7 +241,8 @@ namespace Ieedo
 
         private IEnumerator CompleteCardCO(UICard uiCard)
         {
-            if (Statics.Input.IsExecutingAction) yield break;
+            if (Statics.Input.IsExecutingAction)
+                yield break;
             /*
             var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
             Ref<int> selection = new Ref<int>();
@@ -276,7 +280,8 @@ namespace Ieedo
 
         private IEnumerator AnimateCardStatusChange(UICard uiCard, int points)
         {
-            if (uiCard == null) yield break;
+            if (uiCard == null)
+                yield break;
             uiCard.transform.localScaleTransition(new Vector3(1, 1, 1) * 1.2f, 0.25f, LeanEase.Elastic);
             uiCard.StampGO.GetComponent<Animation>().Play("stamp_exit");
             yield return new WaitForSeconds(0.25f);
@@ -297,7 +302,8 @@ namespace Ieedo
 
         private IEnumerator UnCompleteCardCO(UICard uiCard)
         {
-            if (Statics.Input.IsExecutingAction) yield break;
+            if (Statics.Input.IsExecutingAction)
+                yield break;
             var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
             Ref<int> selection = new Ref<int>();
             yield return questionScreen.ShowQuestionFlow(new LocalizedString("UI", "uncomplete_card_confirmation_title"),
@@ -341,7 +347,8 @@ namespace Ieedo
 
         private IEnumerator ValidateCardCO(UICard uiCard)
         {
-            if (Statics.Input.IsExecutingAction) yield break;
+            if (Statics.Input.IsExecutingAction)
+                yield break;
             Statics.Input.IsExecutingAction = true;
             var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
 
@@ -386,7 +393,8 @@ namespace Ieedo
 
         private IEnumerator UnValidateCardCO(UICard uiCard)
         {
-            if (Statics.Input.IsExecutingAction) yield break;
+            if (Statics.Input.IsExecutingAction)
+                yield break;
             var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
             Ref<int> selection = new Ref<int>();
             yield return questionScreen.ShowQuestionFlow(new LocalizedString("UI", "unvalidate_card_confirmation_title"),
@@ -590,7 +598,7 @@ namespace Ieedo
             if (isSameMode)
                 return;
 
-            SoundManager.I.PlaySfx(SfxEnum.open);
+            SoundManager.I.PlaySfx(SfxEnum.panel_open);
             CurrentFrontViewMode = viewMode;
             switch (viewMode)
             {
@@ -739,7 +747,8 @@ namespace Ieedo
 
         public IEnumerator CreationAbortCO()
         {
-            if (Statics.Input.IsExecutingAction && !isCreating) yield break;
+            if (Statics.Input.IsExecutingAction && !isCreating)
+                yield break;
 
             var answer = new Ref<int>();
             yield return Statics.Screens.ShowQuestionFlow("UI/abort_creation_title", "UI/abort_creation_question", new[] { "UI/yes", "UI/no" }, answer);
