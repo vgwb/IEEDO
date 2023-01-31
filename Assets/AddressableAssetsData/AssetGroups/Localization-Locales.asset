@@ -65,12 +65,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f2e042701a56dd64bbf6f31bd08b84f9
-    m_Address: Russian (ru)
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 31217495088b5a9458a282fa5263dba1
     m_Address: Tigrinya (ti)
     m_ReadOnly: 1
