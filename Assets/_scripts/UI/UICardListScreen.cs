@@ -78,9 +78,14 @@ namespace Ieedo
             SetupButton(UnValidateCardButton, () => StartCoroutine(UnValidateCardCO(frontCardUI)));
             SetupButton(UnCompleteCardButton_View, () => StartCoroutine(UnCompleteCardCO(frontCardUI)));
             SetupButton(UnCompleteCardButton_Review, () => StartCoroutine(UnCompleteCardCO(frontCardUI)));
-            SetupButton(EditCardButton, () => SetEditing(!canEdit));
+            SetupButton(EditCardButton, () =>
+            {
+                if (executingAction) return;
+                SetEditing(!canEdit);
+            });
             SetupButton(CreateCardButton, () =>
             {
+                if (executingAction) return;
                 OnCreateClicked?.Invoke();
                 createCardFlowCo = StartCoroutine(CreateCardFlowCO());
             });
@@ -187,6 +192,7 @@ namespace Ieedo
 
         private IEnumerator DeleteCardCO(bool isNewCard, UICard uiCard, bool withConfirmation = true)
         {
+            if (executingAction) yield break;
             if (withConfirmation)
             {
                 var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
@@ -201,6 +207,7 @@ namespace Ieedo
                     yield break;
             }
 
+            executingAction = true;
             StopEditing();
 
             yield return AnimateCardOut(uiCard, 0, -1);
@@ -216,6 +223,7 @@ namespace Ieedo
             Statics.Cards.DeleteCardDefinition(uiCard.Data.Definition);
 
             CheckEmptyHand();
+            executingAction = false;
         }
 
         private void CheckEmptyHand()
@@ -230,6 +238,8 @@ namespace Ieedo
 
         private IEnumerator CompleteCardCO(UICard uiCard)
         {
+            if (executingAction) yield break;
+            executingAction = true;
             /*
             var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
             Ref<int> selection = new Ref<int>();
@@ -261,6 +271,7 @@ namespace Ieedo
 
             Statics.Analytics.Card("complete", uiCard.Data);
             OnCompletedCard?.Invoke();
+            executingAction = false;
         }
 
         private IEnumerator AnimateCardStatusChange(UICard uiCard, int points)
@@ -285,6 +296,8 @@ namespace Ieedo
 
         private IEnumerator UnCompleteCardCO(UICard uiCard)
         {
+            if (executingAction) yield break;
+            executingAction = true;
             var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
             Ref<int> selection = new Ref<int>();
             yield return questionScreen.ShowQuestionFlow(new LocalizedString("UI", "uncomplete_card_confirmation_title"),
@@ -317,10 +330,13 @@ namespace Ieedo
 
             Statics.Analytics.Card("uncomplete", uiCard.Data);
             OnUncompleteCard?.Invoke();
+            executingAction = false;
         }
 
         private IEnumerator ValidateCardCO(UICard uiCard)
         {
+            if (executingAction) yield break;
+            executingAction = true;
             var uiPillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
 
             frontCardUI.Data.ValidationTimestamp = Timestamp.Now;
@@ -354,10 +370,13 @@ namespace Ieedo
 
             Statics.Analytics.Card("validate", uiCard.Data);
             OnValidateCard?.Invoke();
+            executingAction = false;
         }
 
         private IEnumerator UnValidateCardCO(UICard uiCard)
         {
+            if (executingAction) yield break;
+            executingAction = true;
             var questionScreen = Statics.Screens.Get(ScreenID.Question) as UIQuestionPopup;
             Ref<int> selection = new Ref<int>();
             yield return questionScreen.ShowQuestionFlow(new LocalizedString("UI", "unvalidate_card_confirmation_title"),
@@ -401,6 +420,7 @@ namespace Ieedo
             }
 
             Statics.Analytics.Card("unvalidate", uiCard.Data);
+            executingAction = false;
         }
 
         protected override IEnumerator OnOpen()
@@ -703,39 +723,48 @@ namespace Ieedo
 
         public IEnumerator CreationAbortCO()
         {
+            if (executingAction) yield break;
+
             var answer = new Ref<int>();
             yield return Statics.Screens.ShowQuestionFlow("UI/abort_creation_title", "UI/abort_creation_question", new[] { "UI/yes", "UI/no" }, answer);
-            if (answer.Value == 0)
+            if (answer.Value != 0)
             {
-                if (optionsListPopup.isActiveAndEnabled)
-                {
-                    optionsListPopup.CloseImmediate();
-                }
-
-                abortingCreation = true;
-                if (createCardFlowCo != null)
-                    StopCoroutine(createCardFlowCo);
-                createCardFlowCo = null;
-                SetEditButtonsEnabled(true);
-
-                yield return DeleteCardCO(true, frontCardUI, withConfirmation: false);
-                abortingCreation = false;
-                isCreating = false;
-
-                SetEditing(false);
-                CreateCardButton.Show();
-
-                var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
-                uiTopScreen.SwitchMode(TopBarMode.MainSection);
-
-                CheckEmptyHand();
+                yield break;
             }
+
+            executingAction = true;
+            if (optionsListPopup.isActiveAndEnabled)
+            {
+                optionsListPopup.CloseImmediate();
+            }
+
+            abortingCreation = true;
+            if (createCardFlowCo != null)
+                StopCoroutine(createCardFlowCo);
+            createCardFlowCo = null;
+            SetEditButtonsEnabled(true);
+
+            yield return DeleteCardCO(true, frontCardUI, withConfirmation: false);
+            abortingCreation = false;
+            isCreating = false;
+
+            SetEditing(false);
+            CreateCardButton.Show();
+
+            var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
+            uiTopScreen.SwitchMode(TopBarMode.MainSection);
+
+            CheckEmptyHand();
+            executingAction = false;
         }
 
+        private bool executingAction;
         private bool abortingCreation;
         private bool isCreating;
         public IEnumerator CreateCardFlowCO()
         {
+            executingAction = true;
+
             isCreating = true;
             var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
             uiTopScreen.SwitchMode(TopBarMode.Special_CardCreation);
@@ -822,6 +851,7 @@ namespace Ieedo
             CardsList.SortListAgain();
             yield return CardsList.ScrollRect.ForceGoToCard(frontCardUI);
             isCreating = false;
+            executingAction = false;
         }
 
         private IEnumerator EditCategoryCO(bool autoReset = false)

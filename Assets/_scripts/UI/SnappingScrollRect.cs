@@ -95,10 +95,11 @@ namespace Ieedo
 
         public IEnumerator ForceGoToCard(UICard card, bool immediate = false)
         {
-            //Debug.LogError("FORCE GO TO CARD! Immediate? " + immediate);
+            enabled = true; // @note: Must make sure this is enabled it won't scroll at all
             forceGoToCard = true;
             forceGoToCardImmediate = immediate;
             forcedCardIndex = CardCollection.HeldCards.IndexOf(card);
+            //Debug.LogError($"FORCE GO TO CARD! Immediate? {immediate} to card {card.name} at index {forcedCardIndex}");
             while (forceGoToCard)
                 yield return null;
             enabled = true; // Reset enabled now as we reached the correct card
@@ -141,6 +142,7 @@ namespace Ieedo
                 for (var index = 0; index < CardCollection.HeldCards.Count; index++)
                 {
                     var card = CardCollection.HeldCards[index];
+                    if (card == null) continue;
                     var screenPos = uiCamera.WorldToScreenPoint(card.transform.position);
                     var normalizedScreenPos = screenPos.x / Screen.width;
                     //card.Title.SetTextRaw(normalizedScreenPos.ToString("F"));
