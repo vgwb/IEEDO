@@ -40,6 +40,7 @@ namespace Ieedo
         public GameObject CompletedMode;
         public UIButton ValidateCardButton;
         public UIButton UnCompleteCardButton_Review;
+        public Action OnUncompleteCard;
         public Action OnValidateCard;
 
         [Header("Review: Card Validated")]
@@ -313,6 +314,7 @@ namespace Ieedo
             uiPillarsScreen.PillarsManager.CurrentFocusedPillar.RemoveSingleCard(uiCard.Data);
 
             Statics.Analytics.Card("uncomplete", uiCard.Data);
+            OnUncompleteCard?.Invoke();
         }
 
         private IEnumerator ValidateCardCO(UICard uiCard)

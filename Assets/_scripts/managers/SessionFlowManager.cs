@@ -72,13 +72,16 @@ namespace Ieedo
 
             // Creation flow
             bool suggestToDoList = false;
-            uiCardListScreen.OnValidateCard = () =>
+            void CheckSuggestion()
             {
                 if (!Statics.Data.Profile.Cards.HasCardsWithStatus(CardStatus.Completed))
                 {
                     suggestToDoList = true;
                 }
-            };
+            }
+
+            uiCardListScreen.OnUncompleteCard = CheckSuggestion;
+            uiCardListScreen.OnValidateCard = CheckSuggestion;
             while (true)
             {
                 if (suggestToDoList)
@@ -122,7 +125,6 @@ namespace Ieedo
             var overallValue = 0f;
             var assessmentPercentages = new Dictionary<int, float>();
             var categories = Statics.Data.GetAll<CategoryDefinition>();
-            // var completionPercentage = 0f;
             var allQuestions = Statics.Data.GetAll<AssessmentQuestionDefinition>();
             assessmentFillbar.FillBar.SetValue(0, allQuestions.Count);
             assessmentFillbar.FillBar.FillImage.color = Statics.Art.UIColor.Color;
