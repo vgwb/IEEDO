@@ -159,7 +159,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 311, y: 0}
-  m_SizeDelta: {x: 361, y: 100}
+  m_SizeDelta: {x: 174.56, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &63391872
 MonoBehaviour:
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10 jam 2020
+  m_text: 10 jan 2020
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a3ef21ff23c073f41b4df97fdba29bd0, type: 2}
   m_sharedMaterial: {fileID: -952907468028547842, guid: a3ef21ff23c073f41b4df97fdba29bd0, type: 2}
@@ -208,11 +208,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 59.85
+  m_fontSize: 29.95
   m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 50
+  m_fontSizeMin: 20
   m_fontSizeMax: 80
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
