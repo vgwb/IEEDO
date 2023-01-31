@@ -65,8 +65,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 55768998995763200
-    m_Localized: "Ieedo konzentriert sich auf 6 Kategorien. Lassen Sie uns sie nacheinander
-      \xFCberpr\xFCfen ..."
+    m_Localized: Ieedo konzentriert sich auf 6 Kategorien. Schauen wir sie nacheinander
+      nach.
     m_Metadata:
       m_Items: []
   - m_Id: 40549731508445184
@@ -112,10 +112,12 @@ MonoBehaviour:
   - m_Id: 65886906663854083
     m_Localized: "Projektpartner:\n- Ashley Community Housing (Vereinigtes K\xF6nigreich)\n-
       Folkuniversitetet (Schweden)\n- Metropolisnet (Deutschland)\n- Rinova Ltd (Vereinigtes
-      K\xF6nigreich)\n- Dimitra (Griechenland)\n- Videojuegos Sin Fronteras (Spanien)\n\nMit
-      finanziert vom Erasmus+ -Programm der Europ\xE4ischen Union.\nDiese Ver\xF6ffentlichung
-      spiegelt nur die Ansichten des Autors wider, und die Kommission ist nicht f\xFCr
-      die Verwendung der darin enthaltenen Informationen verantwortlich.\n\n"
+      K\xF6nigreich)\n- Dimitra (Griechenland)\n- Videojuegos Sin Fronteras (Spanien)\n\nVon
+      der Europ\xE4ischen Union finanziert. Die ge\xE4u\xDFerten Ansichten und Meinungen
+      entsprechen jedoch ausschlie\xDFlich denen des Autors bzw. der Autoren und
+      spiegeln nicht zwingend die der Europ\xE4ischen Union oder der Europ\xE4ischen
+      Exekutivagentur f\xFCr Bildung und Kultur (EACEA) wider. Weder die Europ\xE4ische
+      Union noch die EACEA k\xF6nnen daf\xFCr verantwortlich gemacht werden."
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925889

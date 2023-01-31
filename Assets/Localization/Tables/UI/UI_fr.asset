@@ -112,10 +112,12 @@ MonoBehaviour:
   - m_Id: 65886906663854083
     m_Localized: "Partners du projet:\n- Ashley Community Housing (Royaume-Uni)\n-
       FolkuniversiteTet (Su\xE8de)\n- Metropolisnet (Allemagne)\n- Rinova Ltd (Royaume-Uni)\n-
-      Dimitra (Gr\xE8ce)\n- VideoJuegos Sin Fronteras (Espagne)\n\nCofinanc\xE9 par
-      le programme Erasmus + de l'Union europ\xE9enne.\nCette publication refl\xE8te
-      les opinions uniquement de l'auteur, et la Commission n'est pas responsable
-      de toute utilisation qui peut \xEAtre faite des informations qui y sont contenues.\n\n"
+      Dimitra (Gr\xE8ce)\n- VideoJuegos Sin Fronteras (Espagne)\n\nFinanc\xE9 par
+      l\u2019Union europ\xE9enne. Les points de vue et avis exprim\xE9s n\u2019engagent
+      toutefois que leur(s) auteur(s) et ne refl\xE8tent pas n\xE9cessairement ceux
+      de l\u2019Union europ\xE9enne ou de l\u2019Agence ex\xE9cutive europ\xE9enne
+      pour l\u2019\xE9ducation et la culture (EACEA). Ni l\u2019Union europ\xE9enne
+      ni l\u2019EACEA ne sauraient en \xEAtre tenues pour responsables."
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925889
