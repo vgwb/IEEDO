@@ -82,6 +82,10 @@ namespace Ieedo
         // TODO: move to OnboardingManager / TutorialManager?
         public IEnumerator HandleTutorial()
         {
+            Statics.Screens.CloseImmediate(ScreenID.Activities);
+            Statics.Screens.CloseImmediate(ScreenID.CardList);
+            Statics.Screens.CloseImmediate(ScreenID.Pillars);
+
             Statics.Mode.SetSessionMode(SessionMode.Solo);
 
             Statics.SessionFlow.IsInsideTutorial = true;
@@ -90,6 +94,7 @@ namespace Ieedo
             var cardListScreen = Statics.Screens.Get(ScreenID.CardList) as UICardListScreen;
             var dialogPopup = Statics.Screens.Get(ScreenID.Dialog) as UIDialogPopup;
             var pillarsScreen = Statics.Screens.Get(ScreenID.Pillars) as UIPillarsScreen;
+            pillarsScreen.RemovePillars();
 
             Statics.Points.ShowPoints(false);
             topScreen.HamburgerButton.Hide();

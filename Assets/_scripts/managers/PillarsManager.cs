@@ -56,6 +56,13 @@ namespace Ieedo
             ShowData(TestData, true);
         }
 
+        public void RemoveData()
+        {
+            AssignData(null);
+            foreach (var pillarView in PillarViews)
+                pillarView.Hide();
+        }
+
         public List<PillarView> PillarViews = new List<PillarView>();
         private PillarsData currentData;
 

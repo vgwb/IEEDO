@@ -156,6 +156,11 @@ namespace Ieedo
             yield return base.OnClose();
         }
 
+        public void RemovePillars()
+        {
+            PillarsManager.RemoveData();
+        }
+
         #region Interaction
 
         private bool isFocused;
