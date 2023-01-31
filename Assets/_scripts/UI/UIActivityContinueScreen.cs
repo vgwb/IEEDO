@@ -83,6 +83,7 @@ namespace Ieedo
 
         private void Continue()
         {
+            DisableButton(NextLevelButton);
             Close();
             StartCoroutine(Statics.ActivityFlow.CurrentActivityManager.PlayNextLevel(Statics.ActivityFlow.CurrentLevel));
         }
