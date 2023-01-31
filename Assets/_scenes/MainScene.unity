@@ -1275,7 +1275,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -3671,7 +3670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7654054966678285691, guid: 175db1c298d84894eb31fc2a3c7f7b3d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -242.11511
+      value: -242.11505
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 175db1c298d84894eb31fc2a3c7f7b3d, type: 3}
@@ -7799,6 +7798,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1912778785}
     m_Modifications:
+    - target: {fileID: 1420955183562223757, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2470878790823047477, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5020757848213534418, guid: dd56c77bdd36f004eacd095a50cc892a, type: 2}
+    - target: {fileID: 2470878790823047477, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4975395860017819302, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
       propertyPath: FrontObscurer
       value: 
@@ -7807,6 +7818,18 @@ PrefabInstance:
       propertyPath: optionsListPopup
       value: 
       objectReference: {fileID: 652332533}
+    - target: {fileID: 5696230166415926446, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6335247893081573879, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5020757848213534418, guid: dd56c77bdd36f004eacd095a50cc892a, type: 2}
+    - target: {fileID: 6335247893081573879, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6598811677016601520, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
       propertyPath: m_Name
       value: Screen_CardsList
@@ -7902,6 +7925,10 @@ PrefabInstance:
     - target: {fileID: 8984423255412884824, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -642.0058
+      objectReference: {fileID: 0}
+    - target: {fileID: 9096951740242132167, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cc1e2ac7ac656741a119c67dbfc5def, type: 3}
