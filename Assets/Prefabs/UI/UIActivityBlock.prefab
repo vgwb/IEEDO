@@ -541,7 +541,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: to unlock
+  m_text: '{points} to unlock'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a3ef21ff23c073f41b4df97fdba29bd0, type: 2}
   m_sharedMaterial: {fileID: -952907468028547842, guid: a3ef21ff23c073f41b4df97fdba29bd0, type: 2}
@@ -625,9 +625,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: GUID:e48f391c1e96c7040b7091b267464dc8
+      m_TableCollectionName: 
     m_TableEntryReference:
-      m_KeyId: 115977791037448193
+      m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -1030,6 +1030,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3844396547976741329, guid: 0dcdbfa1ac24f6a4683be6f6b0f5971c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4351953316584464892, guid: 0dcdbfa1ac24f6a4683be6f6b0f5971c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1148,6 +1152,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5732651750685369250, guid: 0dcdbfa1ac24f6a4683be6f6b0f5971c, type: 3}
       propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6992756650960069730, guid: 0dcdbfa1ac24f6a4683be6f6b0f5971c, type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
