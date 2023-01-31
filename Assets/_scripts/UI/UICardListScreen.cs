@@ -723,7 +723,7 @@ namespace Ieedo
 
         public IEnumerator CreationAbortCO()
         {
-            if (executingAction) yield break;
+            if (executingAction && !isCreating) yield break;
 
             var answer = new Ref<int>();
             yield return Statics.Screens.ShowQuestionFlow("UI/abort_creation_title", "UI/abort_creation_question", new[] { "UI/yes", "UI/no" }, answer);
@@ -744,6 +744,7 @@ namespace Ieedo
             createCardFlowCo = null;
             SetEditButtonsEnabled(true);
 
+            executingAction = false;
             yield return DeleteCardCO(true, frontCardUI, withConfirmation: false);
             abortingCreation = false;
             isCreating = false;
@@ -755,7 +756,6 @@ namespace Ieedo
             uiTopScreen.SwitchMode(TopBarMode.MainSection);
 
             CheckEmptyHand();
-            executingAction = false;
         }
 
         private bool executingAction;
