@@ -39,6 +39,7 @@ namespace Ieedo
     {
         public GameObject[] ObjectsToHide;
         public ActivityDefinition CurrentActivity;
+        public ActivityData CurrentActivityData;
         public ActivityManager CurrentActivityManager;
 
         public bool IsInsideActivity => CurrentActivity != null;
@@ -62,8 +63,8 @@ namespace Ieedo
             }
 
             CurrentActivityManager = activityManager;
-            var activityData = Statics.Data.Profile.Activities.First(x => x.ID == CurrentActivity.ID);
-            activityManager.ExternSetupActivity(CurrentActivity, activityData.CurrentLevel);
+            CurrentActivityData = Statics.Data.Profile.Activities.First(x => x.ID == CurrentActivity.ID);
+            activityManager.ExternSetupActivity(CurrentActivity, CurrentActivityData.CurrentLevel);
             activityManager.OnActivityEnd = CloseActivity;
 
             var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
