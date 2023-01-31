@@ -63,7 +63,7 @@ namespace Ieedo
 
             CurrentActivityManager = activityManager;
             var activityData = Statics.Data.Profile.Activities.First(x => x.ID == CurrentActivity.ID);
-            activityManager.ExternSetupActivity(activityData.CurrentLevel);
+            activityManager.ExternSetupActivity(CurrentActivity, activityData.CurrentLevel);
             activityManager.OnActivityEnd = CloseActivity;
 
             var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;

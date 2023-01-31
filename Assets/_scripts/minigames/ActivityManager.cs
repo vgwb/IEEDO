@@ -36,8 +36,9 @@ namespace Ieedo.games
         {
         }
 
-        public void ExternSetupActivity(int currentLevel)
+        public void ExternSetupActivity(ActivityDefinition _activity, int currentLevel)
         {
+            Activity = _activity;
             SetupActivity(currentLevel);
         }
 
