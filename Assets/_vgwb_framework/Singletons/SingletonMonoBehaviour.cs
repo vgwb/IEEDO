@@ -12,15 +12,15 @@ namespace vgwb.framework
         {
             TypeName = typeof(T).FullName;
 
-            // checks if there is already another instance of this type.
-            if (I != null) {
-                if (I != this) {
+            if (I != null)
+            {
+                if (I != this)
+                {
                     Destroy(gameObject);
                 }
                 return;
             }
 
-            // Here we save our singleton instance
             I = this as T;
 
             Init();
@@ -28,7 +28,8 @@ namespace vgwb.framework
 
         void OnDestroy()
         {
-            if (I == this) {
+            if (I == this)
+            {
                 Finalise();
             }
         }
