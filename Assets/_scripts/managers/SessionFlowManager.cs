@@ -127,16 +127,16 @@ namespace Ieedo
             var categories = Statics.Data.GetAll<CategoryDefinition>();
             var allQuestions = Statics.Data.GetAll<AssessmentQuestionDefinition>();
             assessmentFillbar.FillBar.SetValue(0, allQuestions.Count);
-            assessmentFillbar.FillBar.FillImage.color = Statics.Art.UIColor.Color;
-            assessmentFillbar.FillBar.BGImage.color = Statics.Art.UIColor.Color.SetSaturation(0.5f);
+            assessmentFillbar.FillBar.FillImage.color = Statics.Art.UIColor.BaseColor;
+            assessmentFillbar.FillBar.BGImage.color = Statics.Art.UIColor.DarkColor;
             yield return assessmentFillbar.OpenCO();
 
             var nQuestionsTotal = 0;
             foreach (var category in categories)
             {
-                BlockerBG.colorTransition(category.Color.SetSaturation(0.5f), 0.25f);
-                assessmentFillbar.FillBar.FillImage.color = category.Color;
-                assessmentFillbar.FillBar.BGImage.color = category.Color.SetSaturation(0.5f);
+                BlockerBG.colorTransition(category.DarkColor, 0.25f);
+                assessmentFillbar.FillBar.FillImage.color = category.BaseColor;
+                assessmentFillbar.FillBar.BGImage.color = category.DarkColor;
                 yield return assessmentHeader.ShowCategory(category);
                 yield return categoryIntroScreen.ShowCategory(category);
                 while (categoryIntroScreen.isActiveAndEnabled)
@@ -160,8 +160,8 @@ namespace Ieedo
                     nQuestionsCategory++;
                     nQuestionsTotal++;
                     assessmentFillbar.FillBar.SetValue(nQuestionsTotal, allQuestions.Count);
-                    assessmentFillbar.FillBar.FillImage.color = category.Color;
-                    assessmentFillbar.FillBar.BGImage.color = category.Color.SetSaturation(0.5f);
+                    assessmentFillbar.FillBar.FillImage.color = category.BaseColor;
+                    assessmentFillbar.FillBar.BGImage.color = category.DarkColor;
                 }
                 if (nQuestionsCategory == 0)
                     nQuestionsCategory = 1; // To avoid NaN

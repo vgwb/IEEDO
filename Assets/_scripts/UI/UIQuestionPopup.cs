@@ -23,7 +23,7 @@ namespace Ieedo
         {
             var category = Statics.Data.Get<CategoryDefinition>((int)question.Category);
             var answers = question.Answers.Select(x => x.Answer.Key).ToArray();
-            yield return ShowQuestion(category.Title.Key, question.Question.Key, answers, category.Color);
+            yield return ShowQuestion(category.Title.Key, question.Question.Key, answers, category.BaseColor, category.DarkColor);
         }
 
         public IEnumerator ShowQuestionFlow(string title, string question, string[] answers, Ref<int> selectedAnswer)
@@ -50,17 +50,17 @@ namespace Ieedo
             yield return ShowQuestion(LocString.FromStr(title), LocString.FromStr(question), answerKeys);
         }
 
-        public IEnumerator ShowQuestion(LocalizedString title, LocalizedString question, LocalizedString[] answers, Color col = default)
+        public IEnumerator ShowQuestion(LocalizedString title, LocalizedString question, LocalizedString[] answers, Color titleColor = default, Color questionColor = default)
         {
-            if (col == default)
+            if (titleColor == default)
             {
-                TitleBG.color = Statics.Art.ToTitle(Statics.Art.UIColor.Color);
-                QuestionBG.color = Statics.Art.ToBG(Statics.Art.UIColor.Color).SetSaturation(0.5f);
+                TitleBG.color = Statics.Art.UIColor.BaseColor;
+                QuestionBG.color = Statics.Art.UIColor.DarkColor;
             }
             else
             {
-                TitleBG.color = Statics.Art.ToTitle(col);
-                QuestionBG.color = Statics.Art.ToBG(col).SetSaturation(0.5f);
+                TitleBG.color = titleColor;
+                QuestionBG.color = questionColor;
             }
 
 

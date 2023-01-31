@@ -11,7 +11,7 @@ namespace Ieedo
         public IEnumerator ShowCategory(CategoryDefinition category)
         {
             Title.Text.Key = category.Title.Key;
-            Title.BG.color = category.Color;
+            Title.BG.color = category.BaseColor;
 
             if (!IsOpen)
                 yield return OpenCO();

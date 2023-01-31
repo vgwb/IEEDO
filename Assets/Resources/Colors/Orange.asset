@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc90efd9772d47c0875e83accd091544, type: 3}
   m_Name: Orange
   m_EditorClassIdentifier: Assembly-CSharp:Ieedo:PaletteColor
-  Color: {r: 0.9647059, g: 0.5411765, b: 0.11764706, a: 1}
+  LightColor: {r: 1, g: 0.7359757, b: 0.47547168, a: 1}
+  BaseColor: {r: 0.9647059, g: 0.5411765, b: 0.11764706, a: 1}
+  DesaturatedColor: {r: 0.6603774, g: 0.42735592, b: 0.20185119, a: 1}

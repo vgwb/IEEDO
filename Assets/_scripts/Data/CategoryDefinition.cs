@@ -10,7 +10,9 @@ namespace Ieedo
         public LocString Title;
         public LocString Description;
         public PaletteColor PaletteColor;
-        public Color Color => PaletteColor.Color;
+        public Color LightColor => PaletteColor.LightColor;
+        public Color BaseColor => PaletteColor.BaseColor;
+        public Color DarkColor => PaletteColor.DarkColor;
 
         public SubCategoryDefinition[] SubCategories;
 

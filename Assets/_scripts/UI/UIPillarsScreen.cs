@@ -71,7 +71,7 @@ namespace Ieedo
 
                         var pillarData = new PillarData
                         {
-                            Color = Statics.Data.Definition(category.ID).Color,
+                            Color = Statics.Data.Definition(category.ID).BaseColor,
                             Height = category.AssessmentValue,
                             Cards = cards.ToList(),
                             LocalizedKey = Statics.Data.Definition(category.ID).Title.Key

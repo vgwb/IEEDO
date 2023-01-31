@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc90efd9772d47c0875e83accd091544, type: 3}
   m_Name: Purple
   m_EditorClassIdentifier: Assembly-CSharp:Ieedo:PaletteColor
-  Color: {r: 0.4509804, g: 0.16078432, b: 0.50980395, a: 1}
+  LightColor: {r: 0.69166714, g: 0.28754002, b: 0.7735849, a: 1}
+  BaseColor: {r: 0.4509804, g: 0.16078432, b: 0.50980395, a: 1}
+  DarkColor: {r: 0.32478926, g: 0.061943736, b: 0.3773585, a: 1}

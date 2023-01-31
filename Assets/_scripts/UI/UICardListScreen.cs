@@ -834,7 +834,7 @@ namespace Ieedo
                     {
                         UseLocString = true,
                         Key = categoryDef.Title.Key,
-                        Color = categoryDef.Color,
+                        Color = categoryDef.BaseColor,
                         ShowIconSquare = true
                     }
                 );
@@ -972,7 +972,7 @@ namespace Ieedo
                     {
                         UseLocString = true,
                         Key = subCategoryDef.Title.Key,
-                        Color = categoryDef.Color,
+                        Color = categoryDef.BaseColor,
                         IconText = subCategoryDef.Icon,
                         ShowIconSquare = true
                     }

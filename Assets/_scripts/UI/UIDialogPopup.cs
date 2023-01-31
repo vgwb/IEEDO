@@ -17,8 +17,8 @@ namespace Ieedo
             Content.Text.Key = content;
             Button.Key = answer;
 
-            BGImage.color = Statics.Art.ToBG(Statics.Art.UIColor.Color);
-            Content.BG.color = Statics.Art.ToTitle(Statics.Art.UIColor.Color);
+            BGImage.color = Statics.Art.UIColor.BaseColor;
+            Content.BG.color =Statics.Art.UIColor.DarkColor;
 
             SetupButton(Button, Close);
             yield return OpenCO();

@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc90efd9772d47c0875e83accd091544, type: 3}
   m_Name: Red
   m_EditorClassIdentifier: Assembly-CSharp:Ieedo:PaletteColor
-  Color: {r: 0.81960785, g: 0.13333334, b: 0.16078432, a: 1}
+  LightColor: {r: 0.8679245, g: 0.45361334, b: 0.4701858, a: 1}
+  BaseColor: {r: 0.81960785, g: 0.13333334, b: 0.16078432, a: 1}
+  DarkColor: {r: 0.5566038, g: 0.09136701, b: 0.10997646, a: 1}

@@ -136,7 +136,7 @@ namespace Ieedo
 
             var cardGo = cardGos[iCard].gameObject;
             var mr = cardGo.GetComponentInChildren<MeshRenderer>();
-            mr.material.color = cardData.Definition.CategoryDefinition.Color * (1.4f + Random.Range(-0.2f, 0.2f));
+            mr.material.color = cardData.Definition.CategoryDefinition.BaseColor * (1.4f + Random.Range(-0.2f, 0.2f));
             cardGos[iCard].SetActive(true);
             if (nCurrentCards <= iCard)
                 nCurrentCards++;

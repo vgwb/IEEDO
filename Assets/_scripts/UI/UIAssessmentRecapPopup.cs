@@ -26,9 +26,9 @@ namespace Ieedo
 
                 Categories[iCategory].Title.Key = category.Title.Key;
                 Categories[iCategory].Value.SetValue(Mathf.RoundToInt(assessmentPercentages[category.Id] * 100), 100);
-                Categories[iCategory].BG.color = category.Color;
-                Categories[iCategory].Value.FillImage.color = category.Color.SetValue(1f);
-                Categories[iCategory].Value.BGImage.color = category.Color.SetValue(0.3f);
+                Categories[iCategory].BG.color = category.BaseColor;
+                Categories[iCategory].Value.FillImage.color = category.BaseColor;
+                Categories[iCategory].Value.BGImage.color = category.DarkColor;
             }
 
             Overall.Title.Key = new LocalizedString("UI", "assessment_recap_overall");

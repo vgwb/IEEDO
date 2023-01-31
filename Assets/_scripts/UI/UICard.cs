@@ -60,8 +60,8 @@ namespace Ieedo
             Title.text = def.Title.Text;
             Category.gameObject.SetActive(def.CategoryDefinition != null);
             Subcategory.gameObject.SetActive(def.CategoryDefinition != null);
-            var color = def.CategoryDefinition ? def.CategoryDefinition.Color : new Color(0.8f, 0.8f, 0.8f, 1f);
-            var lightColor = color * 1.4f;
+            var color = def.CategoryDefinition ? def.CategoryDefinition.BaseColor : new Color(0.8f, 0.8f, 0.8f, 1f);
+            var lightColor = def.CategoryDefinition ? def.CategoryDefinition.LightColor : Color.white;
             ColorBase.color = color;
             Difficulty.gameObject.SetActive(def.Difficulty > 0);
             Difficulty.SetValue(def.Difficulty);
