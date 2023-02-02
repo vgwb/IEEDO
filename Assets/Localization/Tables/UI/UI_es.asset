@@ -29,7 +29,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093259
-    m_Localized: "Dejar la creaci\xF3n de tarjetas"
+    m_Localized: "Dejar la creaci\xF3n"
     m_Metadata:
       m_Items: []
   - m_Id: 40525580437577728
@@ -57,15 +57,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40525707831173120
-    m_Localized: Modo interruptor
+    m_Localized: "Cambia visualizaci\xF3n"
     m_Metadata:
       m_Items: []
   - m_Id: 48154400376250368
-    m_Localized: "Puntuaci\xF3n de aumento +100"
+    m_Localized: "Aumenta Puntuaci\xF3n +100"
     m_Metadata:
       m_Items: []
   - m_Id: 55768998995763200
-    m_Localized: "IEEDO se centra en 6 categor\xEDas, revisemos una por una ..."
+    m_Localized: "IEEDO se centra en 6 categor\xEDas, revisemoslas una por una ..."
     m_Metadata:
       m_Items: []
   - m_Id: 40549731508445184
@@ -77,7 +77,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450240
-    m_Localized: "atr\xE1s"
+    m_Localized: "Atr\xE1s"
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450244
@@ -85,27 +85,27 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40535113130074112
-    m_Localized: "Seleccione una categor\xEDa"
+    m_Localized: "Selecciona una categor\xEDa"
     m_Metadata:
       m_Items: []
   - m_Id: 40535419633033216
-    m_Localized: Establecer una fecha de destino
+    m_Localized: Marca una fecha objetivo
     m_Metadata:
       m_Items: []
   - m_Id: 40535270735241216
-    m_Localized: Establecer un nivel de dificultad
+    m_Localized: Selecciona un nivel de dificultad
     m_Metadata:
       m_Items: []
   - m_Id: 40535579280826368
-    m_Localized: Seleccione el tipo de tarea
+    m_Localized: Selecciona el tipo de tarea
     m_Metadata:
       m_Items: []
   - m_Id: 40537204766564352
-    m_Localized: "Ingrese la descripci\xF3n"
+    m_Localized: "Escribe la descripci\xF3n"
     m_Metadata:
       m_Items: []
   - m_Id: 40535952167034880
-    m_Localized: "Ingrese el t\xEDtulo"
+    m_Localized: "Escribe el t\xEDtulo"
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854083
@@ -123,7 +123,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925888
-    m_Localized: "Tarjeta de eliminaci\xF3n"
+    m_Localized: Eliminar tarjeta
     m_Metadata:
       m_Items: []
   - m_Id: 48447397204844544
@@ -147,18 +147,17 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762365927424
-    m_Localized: "\xA1Bienvenidos! El objetivo de Ieedo es ayudarlo a tener \xE9xito
-      en este pa\xEDs."
+    m_Localized: "\xA1Bienvenido! El objetivo de IEEDO es ayudarte a tener \xE9xito
+      en este pa\xEDs"
     m_Metadata:
       m_Items: []
   - m_Id: 136954244812791808
-    m_Localized: " Si no comprende algo en la pantalla, mantenga presionado el bot\xF3n
-      de traducci\xF3n para leerlo en su idioma madre"
+    m_Localized: "Si no comprende algo en la pantalla, manten presionado el bot\xF3n
+      de traducci\xF3n para leerlo en su idioma materno"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093248
-    m_Localized: "Deber\xEDas estar con tu entrenador, comencemos una sesi\xF3n de
-      entrenamiento"
+    m_Localized: "Deber\xEDas estar con tu mentor, comencemos una sesi\xF3n de mentorizaci\xF3n"
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450242
@@ -170,11 +169,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 134354837057822720
-    m_Localized: "\xA1Recuerde jugar y actualizar su lista de tareas todos los d\xEDas!"
+    m_Localized: "\xA1Recuerda jugar y actualizar su lista de tareas todos los d\xEDas!"
     m_Metadata:
       m_Items: []
   - m_Id: 37308361241255936
-    m_Localized: OK
+    m_Localized: Vale
     m_Metadata:
       m_Items: []
   - m_Id: 43003187146022912
@@ -198,15 +197,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450241
-    m_Localized: Rever
+    m_Localized: Intenta ora vez
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093258
-    m_Localized: "\xBFEst\xE1s seguro de que quieres dejar la sesi\xF3n de entrenamiento?"
+    m_Localized: "\xBFEst\xE1s seguro de que quieres dejar la sesi\xF3n de mentorizaci\xF3n?"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093257
-    m_Localized: "Sesi\xF3n de licencia"
+    m_Localized: "Abandonar sesi\xF3n"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093254
@@ -215,7 +214,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093252
-    m_Localized: Revisemos todas las tarjetas que ha completado
+    m_Localized: Revisemos todas las tarjetas que has completado
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093253
@@ -223,12 +222,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093251
-    m_Localized: "Tu entrenador est\xE1 aqu\xED para ayudarte. \xBFQuieres responder
+    m_Localized: "Tu mentor est\xE1 aqu\xED para ayudarte. \xBFQuieres responder
       algunas preguntas sobre tu situaci\xF3n actual?"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093250
-    m_Localized: "Sesi\xF3n de entrenamiento"
+    m_Localized: "Sesi\xF3n de mentorizaci\xF3n"
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854082
@@ -236,25 +235,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093249
-    m_Localized: "Sesi\xF3n de inicio"
+    m_Localized: "Empieza sesi\xF3n"
     m_Metadata:
       m_Items: []
   - m_Id: 48089044644470784
-    m_Localized: "\xBFEst\xE1s seguro de que quieres configurar la tarjeta como no
-      completada?"
+    m_Localized: "\xBFEst\xE1s seguro de que quieres marcar la tarjeta como no completada?"
     m_Metadata:
       m_Items: []
   - m_Id: 48089044619304960
-    m_Localized: Establecido como no completado
+    m_Localized: Marca como no completado
     m_Metadata:
       m_Items: []
   - m_Id: 48119887563792384
-    m_Localized: "\xBFEst\xE1s seguro de que quieres configurar la tarjeta como no
-      validada?"
+    m_Localized: "\xBFEst\xE1s seguro de que quieres marcar la tarjeta como no validada?"
     m_Metadata:
       m_Items: []
   - m_Id: 48119887559598080
-    m_Localized: Establecido como no validado
+    m_Localized: Marca como no validado
     m_Metadata:
       m_Items: []
   - m_Id: 24994957285646336
@@ -275,11 +272,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 141937967278874624
-    m_Localized: Lista de quehaceres
+    m_Localized: Lista de tareas
     m_Metadata:
       m_Items: []
   - m_Id: 141959887966904320
-    m_Localized: Casa
+    m_Localized: Inicio
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458752
@@ -315,7 +312,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 141959888004653057
-    m_Localized: Cambio Vista
+    m_Localized: "Cambia visualizaci\xF3n"
     m_Metadata:
       m_Items: []
   - m_Id: 144439249164066816
@@ -339,16 +336,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 156524221040631808
-    m_Localized: "An\xE1lisis en l\xEDnea"
+    m_Localized: "Datos de uso en l\xEDnea"
     m_Metadata:
       m_Items: []
   - m_Id: 156524221074186240
-    m_Localized: "\xBFLe gustar\xEDa recibir notificaciones de esta aplicaci\xF3n?"
+    m_Localized: "\xBFTe gustar\xEDa recibir notificaciones de esta aplicaci\xF3n?"
     m_Metadata:
       m_Items: []
   - m_Id: 156524221074186241
-    m_Localized: "\xBFLe gustar\xEDa ayudarnos a mejorar esta aplicaci\xF3n compartiendo
-      en l\xEDnea sus datos de juego an\xF3nimo?"
+    m_Localized: "\xBFTe gustar\xEDa ayudarnos a mejorar esta aplicaci\xF3n compartiendo
+      en l\xEDnea sus datos de uso de forma an\xF3nima?"
     m_Metadata:
       m_Items: []
   references:

@@ -20,7 +20,7 @@ MonoBehaviour:
     - rid: 3196637817602572295
   m_TableData:
   - m_Id: 104043542756712454
-    m_Localized: "Pedido de matem\xE1ticas"
+    m_Localized: "Matem\xE1tica en orden"
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712456
@@ -76,7 +76,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712467
-    m_Localized: "Mueva el elemento bloqueado a la salida eliminando todos los obst\xE1culos"
+    m_Localized: "Desliza el elemento bloqueado a la salida eliminando todos los
+      obst\xE1culos"
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649088
@@ -92,7 +93,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649094
-    m_Localized: "Sincronizaci\xF3n"
+    m_Localized: "Temporizaci\xF3n"
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649096
@@ -100,7 +101,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649098
-    m_Localized: Sentido de vida
+    m_Localized: Vida con sentido
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037696
@@ -176,12 +177,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760256
-    m_Localized: "Mueva los bloques en cualquier direcci\xF3n para fusionar n\xFAmeros
-      con el mismo valor y puntaje tanto como pueda. \xBFPuedes llegar al 2048?"
+    m_Localized: "Mueve los bloques en cualquier direcci\xF3n para fusionar n\xFAmeros
+      con el mismo valor y sumar tanto puntos como puedas. \xBFPuedes llegar a 2048?"
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760257
-    m_Localized: "N\xFAmeros de combinaci\xF3n"
+    m_Localized: "Combina los n\xFAmeros"
     m_Metadata:
       m_Items: []
   - m_Id: 111596475083677696
@@ -197,8 +198,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989696
-    m_Localized: "Escriba una nota diaria en su diario personal.\n\nEsto lo ayudar\xE1
-      a pensar en la direcci\xF3n de su vida y evaluar las progresiones y problemas,"
+    m_Localized: "Escribe una nota diaria en su diario personal.\n\nEsto te ayudar\xE1
+      a pensar en la direcci\xF3n de tu vida y evaluar los avances y los problemas"
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989697
@@ -211,20 +212,20 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989700
-    m_Localized: "Escribir una carta a un amigo.\n\nLa escritura de cartas puede
-      ser terap\xE9utica tanto para el escritor como para el destinatario, y puede
-      ser justo ayudarlo a cambiar la perspectiva."
+    m_Localized: "Escribe una carta a un amigo o una amiga.\n\nLa escritura de cartas
+      puede ser terap\xE9utica tanto para el escritor como para el destinatario,
+      y puede ser lo que necesites para cambiar tu perspectiva"
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989702
-    m_Localized: "Carta para m\xED"
+    m_Localized: "Carta para m\xED mismo"
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989703
-    m_Localized: "Escribir una carta a su yo futuro ofrece el beneficio de \"planificar
-      al rev\xE9s\" que nos alienta a ser m\xE1s intencionales con nuestro tiempo
-      y centrarnos en qu\xE9 progreso incremental podemos hacer en el presente hacia
-      nuestros objetivos a largo plazo para el futuro."
+    m_Localized: "Escribir una carta a tu yo futuro ofrece el beneficio de \"planificar
+      al rev\xE9s\" que nos alienta a ser m\xE1s proactivos con nuestro tiempo y
+      centrarnos en qu\xE9 progreso incremental podemos hacer en el presente hacia
+      nuestros objetivos a largo plazo para el futuro"
     m_Metadata:
       m_Items: []
   - m_Id: 112797993814450176
@@ -236,7 +237,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033089
-    m_Localized: Tocar
+    m_Localized: Jugar
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033090
@@ -268,7 +269,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 113092616990482432
-    m_Localized: Disponible pronto
+    m_Localized: Disponible a breve
     m_Metadata:
       m_Items: []
   - m_Id: 115977790945173504
@@ -276,11 +277,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 115977791033253888
-    m_Localized: Ha fallado
+    m_Localized: Fallido
     m_Metadata:
       m_Items: []
   - m_Id: 115977791033253889
-    m_Localized: "Mejor puntuaci\xF3n"
+    m_Localized: Marca personal
     m_Metadata:
       m_Items: []
   - m_Id: 115977791033253890
@@ -288,16 +289,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 115977791033253891
-    m_Localized: "Jugar unos minutos al d\xEDa ayudar\xE1 a que su cerebro se mantenga
+    m_Localized: "Jugar unos minutos al d\xEDa ayudar\xE1 a que tu cerebro se mantenga
       en forma"
     m_Metadata:
       m_Items: []
   - m_Id: 115977791033253892
-    m_Localized: Jugado
+    m_Localized: "P\xE1ginas"
     m_Metadata:
       m_Items: []
   - m_Id: 115977791037448192
-    m_Localized: Puntaje
+    m_Localized: "Puntuac\xEDon"
     m_Metadata:
       m_Items: []
   - m_Id: 115977791037448193
@@ -314,7 +315,193 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 115977791037448196
-    m_Localized: Salvar
+    m_Localized: Guardar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864720760834
+    m_Localized: Puedes hacerlo mejor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864720760833
+    m_Localized: "Lo est\xE1s haciendo bien"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864720760832
+    m_Localized: "\xA1Excelente!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864716566528
+    m_Localized: Seleccione un nivel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115989062555262976
+    m_Localized: Pausa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115989062559457280
+    m_Localized: Reanudar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115989062559457281
+    m_Localized: Empezar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989698
+    m_Localized: "Escribe tus pensamientos y sentimientos aqu\xED..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989701
+    m_Localized: "Escribe aqu\xED algunas l\xEDneas para tu amigo o amiga ..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989704
+    m_Localized: "Escribe aqu\xED un mensaje a tu futuro yo ..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864724955136
+    m_Localized: "Responde s\xED o no tan r\xE1pido como pueda."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712455
+    m_Localized: "Selecciona los n\xFAmeros en orden ascendente o descendente como
+      lo indica la flecha."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712457
+    m_Localized: "\xBFCu\xE1l de los dos n\xFAmeros es mayor? \xBFO son iguales?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712459
+    m_Localized: "\xBFPuedes recordar la imagen que viste?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712461
+    m_Localized: "\xBFPuedes repetir la secuencia?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111594514833760258
+    m_Localized: "3 n\xFAmeros adiacentes iguales se fusionar\xE1n y generar\xE1n
+      un n\xFAmero m\xE1s alto. Consigue la m\xE1xima puntuaci\xF3n posible."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712465
+    m_Localized: "El juego cl\xE1sico: \xBFpuedes colocar tres marcadores seguidos
+      en cualquier direcci\xF3n?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649089
+    m_Localized: "La atenci\xF3n dividida se refiere a la capacidad de responder
+      simult\xE1neamente a m\xFAltiples tareas o demandas de tareas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649091
+    m_Localized: "La capacidad de centrarse en la informaci\xF3n relevante mientras
+      ignora las distracciones irrelevantes"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649093
+    m_Localized: "El cambio de tareas es el proceso de adaptaci\xF3n a circunstancias
+      cambiantes, cambiando de un objetivo a otro."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649095
+    m_Localized: "La temporizaci\xF3n es la capacidad de sincronizar las actividades
+      y mantener con precisi\xF3n el tiempo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649097
+    m_Localized: "La sensaci\xF3n de ser aceptado como parte de una comunidad"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649099
+    m_Localized: "Se refiere al significado y a la buena direcci\xF3n de lo que estamos
+      haciendo"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037697
+    m_Localized: "El campo de visi\xF3n se refiere al \xE1rea sobre la que puede
+      absorber informaci\xF3n visual sin mover los ojos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037699
+    m_Localized: "El razonamiento l\xF3gico es la capacidad de combinar m\xFAltiples
+      procesos cognitivos para reconocer patrones, sacar conclusiones y tomar decisiones."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037701
+    m_Localized: "El c\xE1lculo num\xE9rico es la capacidad de realizar operaciones
+      aritm\xE9ticas simples que incluyen adici\xF3n, resta, multiplicaci\xF3n y
+      divisi\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037703
+    m_Localized: "La estimaci\xF3n num\xE9rica es la capacidad de aproximar las relaciones
+      num\xE9ricas r\xE1pidamente o con informaci\xF3n incompleta."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037705
+    m_Localized: "El razonamiento probabil\xEDstico es la capacidad de analizar y
+      evaluar la probabilidad de eventos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037707
+    m_Localized: "La memoria de trabajo se utiliza para almacenar y manipular temporalmente
+      la informaci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037708
+    m_Localized: "La planificaci\xF3n implica pensar en el futuro, evaluar las opciones
+      y elegir el mejor curso de acci\xF3n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037710
+    m_Localized: "La velocidad de procesamiento es la capacidad de identificar y
+      analizar r\xE1pidamente la informaci\xF3n sensorial entrante."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232001
+    m_Localized: El razonamiento proporcional es la capacidad de comparar y convertir
+      cantidades en diferentes proporciones y representaciones.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232003
+    m_Localized: "La comprensi\xF3n de lectura es la capacidad de leer, procesar
+      y comprender el lenguaje escrito."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232005
+    m_Localized: "La inhibici\xF3n de la respuesta es la capacidad de suprimir las
+      respuestas inapropiadas que interfieren con las acciones dirigidas por objetivos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232007
+    m_Localized: "La orientaci\xF3n espacial, tambi\xE9n conocida como sentido de
+      la orientaci\xF3n, implica ser consciente del entorno circundante."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232009
+    m_Localized: El razonamiento espacial es la capacidad de visualizar las relaciones
+      espaciales y analizarlas para sacar conclusiones.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232011
+    m_Localized: "El recuerdo espacial es una forma de memoria que consiste en seguir
+      la ubicaci\xF3n y la posici\xF3n dentro de un entorno."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232012
+    m_Localized: "La visualizaci\xF3n es la capacidad de manipular o imaginar la
+      interacci\xF3n de los objetos en tu mente."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232014
+    m_Localized: El dominio del vocabulario es la capacidad de comprender y usar
+      palabras.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232016
+    m_Localized: "La fluidez verbal es la capacidad de recuperar r\xE1pidamente palabras
+      de tu vocabulario mental."
     m_Metadata:
       m_Items: []
   references:

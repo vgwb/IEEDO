@@ -24,19 +24,20 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 10201788641468416
     m_Localized: "Todo lo relacionado con la vida c\xEDvica y la cultura local en
-      su pa\xEDs anfitri\xF3n"
+      tu pa\xEDs anfitri\xF3n"
     m_Metadata:
       m_Items: []
   - m_Id: 10257870520868864
-    m_Localized: "Participaci\xF3n de la comunidad"
+    m_Localized: Compromiso en la Comunidad
     m_Metadata:
       m_Items: []
   - m_Id: 10258501075755008
-    m_Localized: Todo sobre su archivo social y su compromiso en la comunidad local
+    m_Localized: Todo sobre su expediente social y su compromiso en la comunidad
+      local
     m_Metadata:
       m_Items: []
   - m_Id: 15338261569101824
-    m_Localized: "Educaci\xF3n y capacitaci\xF3n"
+    m_Localized: "Educaci\xF3n y formaci\xF3n"
     m_Metadata:
       m_Items: []
   - m_Id: 22534781286735872
@@ -50,11 +51,11 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 15338345862029312
     m_Localized: Todo lo relacionado con el trabajo, desde encontrar un trabajo hasta
-      progresar en su Carreer profesional
+      progresar en su carrera profesional
     m_Metadata:
       m_Items: []
   - m_Id: 15338384780976128
-    m_Localized: Administrador y moverse
+    m_Localized: "Administraci\xF3n y desplazamientos"
     m_Metadata:
       m_Items: []
   - m_Id: 15338385938604032
@@ -72,15 +73,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599439687680
-    m_Localized: (disfraz)
+    m_Localized: (costumbre)
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602240
-    m_Localized: Visitar un punto de referencia
+    m_Localized: "Visitar un lugar emblem\xE1tico"
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602241
-    m_Localized: "Las artes esc\xE9nicas"
+    m_Localized: "Artes esc\xE9nicas"
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602242
@@ -96,11 +97,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602243
-    m_Localized: "Reuni\xF3n social"
+    m_Localized: Encuentro social
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602244
-    m_Localized: Ayuda a otros
+    m_Localized: Ayudar a otros
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602245
@@ -108,7 +109,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 107338012276236288
-    m_Localized: "\xDAnase al grupo comunitario"
+    m_Localized: Unirse a un grupo comunitario
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602246
@@ -116,11 +117,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602247
-    m_Localized: "Suscr\xEDbete a un curso"
+    m_Localized: "Suscr\xEDbirse a un curso"
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602248
-    m_Localized: Sigue un curso
+    m_Localized: Seguir un curso
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602249
@@ -132,7 +133,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602251
-    m_Localized: Internado
+    m_Localized: "Pr\xE1ctica"
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602252
@@ -160,7 +161,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 28366007577812994
-    m_Localized: "Auto-advocaci\xF3n"
+    m_Localized: Autoayuda
     m_Metadata:
       m_Items: []
   - m_Id: 107049747551821824

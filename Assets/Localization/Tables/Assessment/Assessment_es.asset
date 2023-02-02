@@ -19,22 +19,22 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 12759883776
-    m_Localized: "\xBFAccede a los servicios locales? (gimnasio, parque, biblioteca,
-      lugar de adoraci\xF3n)"
+    m_Localized: "\xBFAccedes a los servicios locales? (gimnasio, parque, biblioteca,
+      lugar de culto)"
     m_Metadata:
       m_Items: []
   - m_Id: 7179342181294080
-    m_Localized: "\xBFPuede comprender las descripciones de eventos, escritas en
+    m_Localized: "\xBFPuedes comprender las descripciones de eventos, escritas en
       el idioma local?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539303149568
-    m_Localized: "\xBFHa visitado las principales atracciones tur\xEDsticas locales
+    m_Localized: "\xBFHas visitado las principales atracciones tur\xEDsticas locales
       (monumentos, parques, etc.)?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539328315392
-    m_Localized: "\xBFAsiste a eventos culturales (festival, concierto, etc.)?"
+    m_Localized: "\xBFAsistes a eventos culturales (festival, concierto, etc.)?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509696
@@ -55,7 +55,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509700
-    m_Localized: "\xBFTienes amigos de una mezcla de antecedentes y nacionalidades?"
+    m_Localized: "\xBFTienes amigos de diferentes or\xEDgenes y nacionalidades?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509701
@@ -63,12 +63,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509702
-    m_Localized: "\xBFPuedes entender los puntos principales de la comunicaci\xF3n
+    m_Localized: "\xBFPuedes comprender los puntos principales de la comunicaci\xF3n
       hablada en el trabajo, la escuela, etc.?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509703
-    m_Localized: "\xBFPuede escribir una carta de presentaci\xF3n o una carta de
+    m_Localized: "\xBFPuedes escribir una carta de presentaci\xF3n o una carta de
       queja?"
     m_Metadata:
       m_Items: []
@@ -79,7 +79,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 7618539332509705
     m_Localized: "\xBFPuedes usar paquetes b\xE1sicos de Microsoft Office? p.ej.
-      Palabra y Excel"
+      Word y Excel"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509706
@@ -91,27 +91,27 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509708
-    m_Localized: "\xBFPuede administrar correos electr\xF3nicos, mensajes y ventanas
-      emergentes sospechosas?"
+    m_Localized: "\xBFPuedes gestionar los correos electr\xF3nicos, mensajes y ventanas
+      emergentes sospechosos?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509709
-    m_Localized: "\xBFPuedes llevar a cabo c\xE1lculos simples? (Agregar, multiplicar,
+    m_Localized: "\xBFPuedes llevar a cabo c\xE1lculos simples? (Sumar, multiplicar,
       dividir, porcentajes)"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509710
-    m_Localized: "\xBFPuede buscar apoyo en l\xEDnea utilizando foros comunitarios,
-      webes web o blogs?"
+    m_Localized: "\xBFPuedes buscar ayuda en Internet a trav\xE9s de foros comunitarios,
+      webchats o blogs?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509711
-    m_Localized: "\xBFPuede encontrar sitios web e informaci\xF3n en la web utilizando
+    m_Localized: "\xBFPuedes encontrar sitios web e informaci\xF3n en l\xEDnea utilizando
       motores de b\xFAsqueda bien conocidos? (Google, Yahoo, Bing, etc ...)"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509712
-    m_Localized: "\xBFViaja fuera de su \xE1rea local?"
+    m_Localized: "\xBFTe desplazas fuera de su \xE1rea local?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509713
@@ -119,22 +119,22 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509714
-    m_Localized: "\xBFPuedes entender tus estados financieros? p.ej. Declaraci\xF3n
-      bancaria, facturas, etc."
+    m_Localized: "\xBFPuedes entender tus estados financieros? p.ej. Extracto de
+      la cuenta bancaria, facturas, etc."
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509715
-    m_Localized: "\xBFPuede leer y comprender la correspondencia y los documentos
-      oficiales en el Langauge local?"
+    m_Localized: "\xBFPuedes leer y comprender la correspondencia y los documentos
+      oficiales en el idioma local?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509716
-    m_Localized: "\xBFNecesita ayuda para completar formularios detallados en idioma
+    m_Localized: "\xBFNecesitas ayuda para completar formularios detallados en idioma
       local? p.ej. solicitudes de empleo, transferencias de dinero"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509717
-    m_Localized: "\xBFSus problemas de salud afectan su vida cotidiana?"
+    m_Localized: "\xBFTus problemas de salud afectan tu vida cotidiana?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509718

@@ -33,7 +33,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40525580437577728
-    m_Localized: Ausgang
+    m_Localized: Ausfahrt
     m_Metadata:
       m_Items: []
   - m_Id: 48125278888599552
@@ -65,8 +65,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 55768998995763200
-    m_Localized: Ieedo konzentriert sich auf 6 Kategorien. Schauen wir sie nacheinander
-      nach.
+    m_Localized: "Ieedo konzentriert sich auf 6 Kategorien. Lassen Sie uns sie nacheinander
+      \xFCberpr\xFCfen ..."
     m_Metadata:
       m_Items: []
   - m_Id: 40549731508445184
@@ -78,7 +78,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450240
-    m_Localized: "Der R\xFCcken"
+    m_Localized: "Zur\xFCck"
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450244
@@ -86,7 +86,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40535113130074112
-    m_Localized: "W\xE4hlen Sie eine Kategorie aus"
+    m_Localized: "W\xE4hlen Sie eine Kategorie"
     m_Metadata:
       m_Items: []
   - m_Id: 40535419633033216
@@ -129,11 +129,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48447397204844544
-    m_Localized: Getan
+    m_Localized: Erledigt
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450243
-    m_Localized: Ausgang
+    m_Localized: Ausfahrt
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854081
@@ -149,8 +149,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762365927424
-    m_Localized: Herzlich willkommen! Das Ziel von Ieedo ist es, Ihnen zu helfen,
-      in diesem Land erfolgreich zu sein.
+    m_Localized: Willkommen! Das Ziel von Ieedo ist es, Ihnen zu helfen, in diesem
+      Land erfolgreich zu sein.
     m_Metadata:
       m_Items: []
   - m_Id: 136954244812791808
@@ -169,7 +169,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24994957285646337
-    m_Localized: Nein
+    m_Localized: NEIN
     m_Metadata:
       m_Items: []
   - m_Id: 134354837057822720
@@ -265,7 +265,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 136953378097618944
-    m_Localized: Wo sind Sie?
+    m_Localized: Wo bist du?
     m_Metadata:
       m_Items: []
   - m_Id: 139790834418524160
@@ -297,7 +297,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458755
-    m_Localized: Getan
+    m_Localized: Erledigt
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458756
@@ -333,7 +333,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 153714070870024192
-    m_Localized: "\xDCber"
+    m_Localized: Um
     m_Metadata:
       m_Items: []
   - m_Id: 153714070870024193
