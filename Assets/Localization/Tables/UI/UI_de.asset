@@ -33,7 +33,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40525580437577728
-    m_Localized: Ausfahrt
+    m_Localized: Ausgang
     m_Metadata:
       m_Items: []
   - m_Id: 48125278888599552
@@ -78,7 +78,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450240
-    m_Localized: "Zur\xFCck"
+    m_Localized: "Der R\xFCcken"
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450244
@@ -129,11 +129,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48447397204844544
-    m_Localized: Erledigt
+    m_Localized: Getan
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450243
-    m_Localized: Ausfahrt
+    m_Localized: Ausgang
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854081
@@ -149,8 +149,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762365927424
-    m_Localized: Willkommen! Das Ziel von Ieedo ist es, Ihnen zu helfen, in diesem
-      Land erfolgreich zu sein.
+    m_Localized: Herzlich willkommen! Das Ziel von Ieedo ist es, Ihnen zu helfen,
+      in diesem Land erfolgreich zu sein.
     m_Metadata:
       m_Items: []
   - m_Id: 136954244812791808
@@ -169,7 +169,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 24994957285646337
-    m_Localized: NEIN
+    m_Localized: Nein
     m_Metadata:
       m_Items: []
   - m_Id: 134354837057822720
@@ -265,7 +265,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 136953378097618944
-    m_Localized: Wo bist du?
+    m_Localized: Wo sind Sie?
     m_Metadata:
       m_Items: []
   - m_Id: 139790834418524160
@@ -297,7 +297,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458755
-    m_Localized: Erledigt
+    m_Localized: Getan
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458756

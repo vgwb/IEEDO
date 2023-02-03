@@ -24,7 +24,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093260
-    m_Localized: "\xC4r du s\xE4ker p\xE5 att du vill avsluta skapandet av det h\xE4r
+    m_Localized: "\xC4r du s\xE4ker p\xE5 att du vill l\xE4mna skapandet av det h\xE4r
       kortet?"
     m_Metadata:
       m_Items: []
@@ -299,7 +299,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458756
-    m_Localized: Ej gjort
+    m_Localized: Inte gjort
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458757
