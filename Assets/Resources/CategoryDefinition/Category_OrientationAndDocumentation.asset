@@ -35,7 +35,7 @@ MonoBehaviour:
       m_WaitForCompletion: 0
       m_LocalVariables: []
     DefaultText: 
-  PaletteColor: {fileID: 11400000, guid: df8306e668da03d43a6288f1b6fd81bd, type: 2}
+  PaletteColor: {fileID: 11400000, guid: e190f26b97b648648baf9a64db6d26a6, type: 2}
   SubCategories:
   - ID: 200
     Title:
