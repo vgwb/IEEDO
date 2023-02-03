@@ -7,6 +7,7 @@ has_children: false
 # IEEDO app docs
 this documentation website is dedicated to Teachers, Designers and Developers who want to work with IEEDO app.
 
+- **Official IEEDO Website:** [https://euieedo.wordpress.com/](https://euieedo.wordpress.com/)
 - **IEEDO Docs:** [vgwb.github.io/IEEDO](http://vgwb.github.io/IEEDO)
 - **GitHub project:** [github.com/vgwb/IEEDO](https://github.com/vgwb/IEEDO)
 
