@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp:Ieedo:PaletteColor
   LightColor: {r: 1, g: 0.7359757, b: 0.47547168, a: 1}
   BaseColor: {r: 0.9647059, g: 0.5411765, b: 0.11764706, a: 1}
-  DesaturatedColor: {r: 0.6603774, g: 0.42735592, b: 0.20185119, a: 1}
+  DarkColor: {r: 0.602, g: 0.3377073, b: 0.07341464, a: 1}
