@@ -28,7 +28,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10257870520868864
-    m_Localized: Compromiso en la Comunidad
+    m_Localized: Compromiso en la comunidad
     m_Metadata:
       m_Items: []
   - m_Id: 10258501075755008
@@ -55,7 +55,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15338384780976128
-    m_Localized: "Administraci\xF3n y desplazamientos"
+    m_Localized: Gestiones y desplazamientos
     m_Metadata:
       m_Items: []
   - m_Id: 15338385938604032

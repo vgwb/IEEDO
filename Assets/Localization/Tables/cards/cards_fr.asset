@@ -73,7 +73,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599439687680
-    m_Localized: (coutume)
+    m_Localized: (Douane)
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602240
@@ -185,7 +185,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 107049747551821825
-    m_Localized: Nutrition
+    m_Localized: La nutrition
     m_Metadata:
       m_Items: []
   references:
