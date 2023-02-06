@@ -20,28 +20,27 @@ MonoBehaviour:
     - rid: 5137596889296273417
   m_TableData:
   - m_Id: 136884804909817856
-    m_Localized: Deutch
+    m_Localized: Deutsch
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093260
-    m_Localized: "Sind Sie sicher, dass Sie die Erstellung dieser Karte k\xFCndigen
-      m\xF6chten?"
+    m_Localized: Sind Sie sicher, dass Sie die Erstellung dieser Karte beenden wollen?
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093259
-    m_Localized: "Kartensch\xF6pfung beenden"
+    m_Localized: Beenden der Kartenerstellung
     m_Metadata:
       m_Items: []
   - m_Id: 40525580437577728
-    m_Localized: Ausgang
+    m_Localized: Beenden
     m_Metadata:
       m_Items: []
   - m_Id: 48125278888599552
-    m_Localized: Testkarten erstellen
+    m_Localized: Testkarten generieren
     m_Metadata:
       m_Items: []
   - m_Id: 48151452267077632
-    m_Localized: "Zuf\xE4llige S\xE4ulen erzeugen"
+    m_Localized: "S\xE4ulen zuf\xE4llig generieren"
     m_Metadata:
       m_Items: []
   - m_Id: 40526294958235648
@@ -49,7 +48,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 51375399755522048
-    m_Localized: Fragebogen beenden
+    m_Localized: Fragebogen verlassen
     m_Metadata:
       m_Items: []
   - m_Id: 40525760616488960
@@ -57,16 +56,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40525707831173120
-    m_Localized: Wechselmodus
+    m_Localized: Modus wechseln
     m_Metadata:
       m_Items: []
   - m_Id: 48154400376250368
-    m_Localized: "Erh\xF6hen Sie die Punktzahl +100"
+    m_Localized: "Punktzahl erh\xF6hen um +100"
     m_Metadata:
       m_Items: []
   - m_Id: 55768998995763200
-    m_Localized: "Ieedo konzentriert sich auf 6 Kategorien. Lassen Sie uns sie nacheinander
-      \xFCberpr\xFCfen ..."
+    m_Localized: IEEDO konzentriert sich auf 6 Kategorien, lass uns diese nacheinander
+      anschauen...
     m_Metadata:
       m_Items: []
   - m_Id: 40549731508445184
@@ -78,50 +77,50 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450240
-    m_Localized: "Der R\xFCcken"
+    m_Localized: "Zur\xFCck"
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450244
-    m_Localized: Weitermachen
+    m_Localized: Weiter
     m_Metadata:
       m_Items: []
   - m_Id: 40535113130074112
-    m_Localized: "W\xE4hlen Sie eine Kategorie"
+    m_Localized: "W\xE4hle eine Kategorie"
     m_Metadata:
       m_Items: []
   - m_Id: 40535419633033216
-    m_Localized: Legen Sie ein Zieldatum fest
+    m_Localized: "W\xE4hle ein Zeildatum"
     m_Metadata:
       m_Items: []
   - m_Id: 40535270735241216
-    m_Localized: Setzen Sie einen Schwierigkeitsgrad
+    m_Localized: "W\xE4hle einen Schwierigkeitsgrad"
     m_Metadata:
       m_Items: []
   - m_Id: 40535579280826368
-    m_Localized: "W\xE4hlen Sie die Art der Aufgabe aus"
+    m_Localized: Lege die Aufgabenart fest
     m_Metadata:
       m_Items: []
   - m_Id: 40537204766564352
-    m_Localized: Beschreibung eingeben
+    m_Localized: Beschreibung eintragen
     m_Metadata:
       m_Items: []
   - m_Id: 40535952167034880
-    m_Localized: Titel eingeben
+    m_Localized: Tiel eintragen
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854083
-    m_Localized: "Projektpartner:\n- Ashley Community Housing (Vereinigtes K\xF6nigreich)\n-
-      Folkuniversitetet (Schweden)\n- Metropolisnet (Deutschland)\n- Rinova Ltd (Vereinigtes
-      K\xF6nigreich)\n- Dimitra (Griechenland)\n- Videojuegos Sin Fronteras (Spanien)\n\nVon
-      der Europ\xE4ischen Union finanziert. Die ge\xE4u\xDFerten Ansichten und Meinungen
-      entsprechen jedoch ausschlie\xDFlich denen des Autors bzw. der Autoren und
-      spiegeln nicht zwingend die der Europ\xE4ischen Union oder der Europ\xE4ischen
-      Exekutivagentur f\xFCr Bildung und Kultur (EACEA) wider. Weder die Europ\xE4ische
-      Union noch die EACEA k\xF6nnen daf\xFCr verantwortlich gemacht werden."
+    m_Localized: "Projekt Partner:\n- Ashley Community Housing (Gro\xDFbritannien)\n-
+      Folkuniversitetet (Schweden)\n- MetropolisNet (Deutschland)\n- Rinova Ltd (Gro\xDFbritannien)\n-
+      Dimitra (Griechenland)\n- Videojuegos Sin Fronteras (Spanien)\n\nVon der Europ\xE4ischen
+      Union finanziert. Die ge\xE4u\xDFerten Ansichten und Meinungen entsprechen
+      jedoch ausschlie\xDFlich denen des Autors bzw. der Autoren und spiegeln nicht
+      zwingend die der Europ\xE4ischen Union oder der Europ\xE4ischen Exekutivagentur
+      f\xFCr Bildung und Kultur (EACEA) wider. Weder die Europ\xE4ische Union noch
+      die EACEA k\xF6nnen daf\xFCr verantwortlich gemacht werden."
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925889
-    m_Localized: "Sind Sie sicher, dass Sie die Karte l\xF6schen m\xF6chten?"
+    m_Localized: "Bist du sicher, dass du die Karte l\xF6schen m\xF6chtest?"
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925888
@@ -129,19 +128,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48447397204844544
-    m_Localized: Getan
+    m_Localized: Fertig
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450243
-    m_Localized: Ausgang
+    m_Localized: Verlassen
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854081
-    m_Localized: Cheats
+    m_Localized: Tricks
     m_Metadata:
       m_Items: []
   - m_Id: 65886906563190784
-    m_Localized: Credits
+    m_Localized: Punkte
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854080
@@ -149,23 +148,22 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762365927424
-    m_Localized: Herzlich willkommen! Das Ziel von Ieedo ist es, Ihnen zu helfen,
-      in diesem Land erfolgreich zu sein.
+    m_Localized: "Herzlich willkommen!  Das Ziel von IEEDO ist es, Dich dabei zu
+      unterst\xFCtzen, in diesem Land erfolgreich zu sein."
     m_Metadata:
       m_Items: []
   - m_Id: 136954244812791808
-    m_Localized: " Wenn Sie etwas auf dem Bildschirm nicht verstehen, halten Sie
-      die \xDCbersetzungsschaltfl\xE4che gedr\xFCckt, um es in Ihrer Muttersprache
-      zu lesen"
+    m_Localized: "Wenn Du etwas auf dem Bildschirm nicht verstehst, halte die \xDCbersetzungstaste
+      gedr\xFCckt, um es in Deiner Muttersprache zu lesen"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093248
-    m_Localized: Sie sollten mit Ihrem Trainer zusammen sein. Lassen Sie uns eine
-      Coaching -Sitzung beginnen
+    m_Localized: Du solltest deinen Coach dabei haben, lass uns eine Coaching-Sitzung
+      beginnen
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450242
-    m_Localized: "N\xE4chste"
+    m_Localized: Weiter
     m_Metadata:
       m_Items: []
   - m_Id: 24994957285646337
@@ -173,19 +171,20 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 134354837057822720
-    m_Localized: Denken Sie daran, jeden Tag Ihre To-Do-Liste zu spielen und zu aktualisieren!
+    m_Localized: "Vergiss nicht zu Spielen und deine Aufgabenliste t\xE4glich zu
+      aktualisieren!"
     m_Metadata:
       m_Items: []
   - m_Id: 37308361241255936
-    m_Localized: OK
+    m_Localized: Ok
     m_Metadata:
       m_Items: []
   - m_Id: 43003187146022912
-    m_Localized: Abgeschlossene Karten
+    m_Localized: Erledigte Karten
     m_Metadata:
       m_Items: []
   - m_Id: 43003190425968640
-    m_Localized: Validierte Karten
+    m_Localized: "Best\xE4tigte Karten"
     m_Metadata:
       m_Items: []
   - m_Id: 50788328801296384
@@ -193,7 +192,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 65895845057028096
-    m_Localized: "M\xF6chten Sie das Profil wirklich zur\xFCcksetzen?"
+    m_Localized: "M\xF6chtest du das Profil wirklich zur\xFCcksetzen?"
     m_Metadata:
       m_Items: []
   - m_Id: 65895845048639488
@@ -201,11 +200,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450241
-    m_Localized: Wiederholen
+    m_Localized: Erneut versuchen
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093258
-    m_Localized: "Sind Sie sicher, dass Sie die Coaching -Sitzung k\xFCndigen m\xF6chten?"
+    m_Localized: "Bist du sicher, dass du die Coaching-Sitzung beenden m\xF6chtest?"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093257
@@ -213,51 +212,51 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093254
-    m_Localized: Es ist jetzt Zeit, die Dinge, die Sie in den kommenden Tagen tun
-      werden, gemeinsam zu planen
+    m_Localized: "Jetzt ist es an der Zeit, die Aktivit\xE4ten f\xFCr die n\xE4chsten
+      Tage zu planen"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093252
-    m_Localized: Lassen Sie uns alle Karten, die Sie abgeschlossen haben
+    m_Localized: Lass uns alle Karten durchgehen, die du schon bearbeitet hast
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093253
-    m_Localized: "Sie haben keine Karten zu \xFCberpr\xFCfen"
+    m_Localized: "Du hast keine Karten zur \xDCberpr\xFCfung"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093251
-    m_Localized: "Ihr Trainer ist hier, um Ihnen zu helfen. M\xF6chten Sie ein paar
-      Fragen zu Ihrer aktuellen Situation beantworten?"
+    m_Localized: "Dein Coach ist hier, um dich zu unterst\xFCtzen. M\xF6chtest du
+      ein paar Fragen zu deiner aktuellen Situation beantworten?"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093250
-    m_Localized: Coaching-Sitzung
+    m_Localized: Coaching- Sitzung
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854082
-    m_Localized: Soundeffekte
+    m_Localized: Toneffekte
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093249
-    m_Localized: Starten Sie die Sitzung
+    m_Localized: Sitzung starten
     m_Metadata:
       m_Items: []
   - m_Id: 48089044644470784
-    m_Localized: "Sind Sie sicher, dass Sie die Karte als nicht abgeschlossen einstellen
-      m\xF6chten?"
+    m_Localized: Bist du sicher, dass du die Karte als "Nicht abgeschlossen" kennzeichnen
+      willst?
     m_Metadata:
       m_Items: []
   - m_Id: 48089044619304960
-    m_Localized: Festgelegt wie nicht abgeschlossen
+    m_Localized: Als nicht abgeschlossen markieren
     m_Metadata:
       m_Items: []
   - m_Id: 48119887563792384
-    m_Localized: "Sind Sie sicher, dass Sie die Karte als nicht validiert einstellen
-      m\xF6chten?"
+    m_Localized: "Bist du sicher, dass du die Karte als nicht gepr\xFCft kennzeichnen
+      willst?"
     m_Metadata:
       m_Items: []
   - m_Id: 48119887559598080
-    m_Localized: Festgelegt als nicht validiert
+    m_Localized: "Als nicht gepr\xFCft festlegen"
     m_Metadata:
       m_Items: []
   - m_Id: 24994957285646336
@@ -265,15 +264,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 136953378097618944
-    m_Localized: Wo sind Sie?
+    m_Localized: Wo bist du?
     m_Metadata:
       m_Items: []
   - m_Id: 139790834418524160
-    m_Localized: Hier sind Ihre Ergebnisse. Lassen Sie uns sie gemeinsam verbessern
+    m_Localized: Hier sind Deine Ergebnisse, lass und sie gemeinasm noch weiter verbessern
     m_Metadata:
       m_Items: []
   - m_Id: 139790834443689984
-    m_Localized: Dies ist Ihre To-Do-Liste. Sie haben keine Karte zu tun.
+    m_Localized: Dies ist Deine Aufgabenliste. Du hast keine zu erledigenden Karten.
     m_Metadata:
       m_Items: []
   - m_Id: 141937967278874624
@@ -281,7 +280,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 141959887966904320
-    m_Localized: Heim
+    m_Localized: Startseite
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458752
@@ -297,11 +296,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458755
-    m_Localized: Getan
+    m_Localized: Fertig
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458756
-    m_Localized: "Nicht durchgef\xFChrt"
+    m_Localized: Noch nicht erledigt
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458757
@@ -309,11 +308,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458758
-    m_Localized: "Best\xE4tigen"
+    m_Localized: "\xDCberpr\xFCfen"
     m_Metadata:
       m_Items: []
   - m_Id: 141959888004653056
-    m_Localized: Nicht validiert
+    m_Localized: "Nicht best\xE4tigt"
     m_Metadata:
       m_Items: []
   - m_Id: 141959888004653057
@@ -321,19 +320,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 144439249164066816
-    m_Localized: Beenden Sie den Fragebogen
+    m_Localized: Den Fragebogen verlassen
     m_Metadata:
       m_Items: []
   - m_Id: 144439249336033280
-    m_Localized: "Sind Sie sicher, dass Sie den Fragebogen verlassen m\xF6chten?"
+    m_Localized: Bist du sicher, dass du den Fragebogen verlassen willst?
     m_Metadata:
       m_Items: []
   - m_Id: 153714070861635584
-    m_Localized: "Help -Website \xF6ffnen"
+    m_Localized: "Hilfe Seite \xF6ffnen"
     m_Metadata:
       m_Items: []
   - m_Id: 153714070870024192
-    m_Localized: Um
+    m_Localized: "\xDCber..."
     m_Metadata:
       m_Items: []
   - m_Id: 153714070870024193
@@ -341,16 +340,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 156524221040631808
-    m_Localized: Online -Analyse
+    m_Localized: Online Analysen
     m_Metadata:
       m_Items: []
   - m_Id: 156524221074186240
-    m_Localized: "M\xF6chten Sie Benachrichtigungen von dieser App erhalten?"
+    m_Localized: "M\xF6chtest du Benachrichtigungen von der App erhalten?"
     m_Metadata:
       m_Items: []
   - m_Id: 156524221074186241
-    m_Localized: "M\xF6chten Sie uns helfen, diese App zu verbessern, indem Sie Ihre
-      anonymen Spieldaten online teilen?"
+    m_Localized: "M\xF6chtest du uns helfen, diese App zu verbessern, indem du deine
+      Spieldaten anonymisiert online teilst?"
     m_Metadata:
       m_Items: []
   references:

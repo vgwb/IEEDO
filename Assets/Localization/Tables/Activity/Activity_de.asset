@@ -20,11 +20,11 @@ MonoBehaviour:
     - rid: 3196637817602572293
   m_TableData:
   - m_Id: 104043542756712454
-    m_Localized: Mathematikauftrag
+    m_Localized: Mathematik - Ordnung
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712456
-    m_Localized: Mathematikgeschwindigkeit
+    m_Localized: Mathematik - Geschwindigkeit
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712458
@@ -32,19 +32,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712460
-    m_Localized: Sequenzen
+    m_Localized: Reihenfolgen
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712464
-    m_Localized: Tic Tac Toe
+    m_Localized: Tic tac toe (Drei gewinnt)
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712466
-    m_Localized: Entsperren
+    m_Localized: Freischalten
     m_Metadata:
       m_Items: []
   - m_Id: 111561110350454784
-    m_Localized: Aufmerksamkeit
+    m_Localized: Achtung
     m_Metadata:
       m_Items: []
   - m_Id: 111561110350454785
@@ -64,7 +64,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111561110350454789
-    m_Localized: "Probleme l\xF6sen"
+    m_Localized: "Probleml\xF6sung"
     m_Metadata:
       m_Items: []
   - m_Id: 111561110350454790
@@ -76,8 +76,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712467
-    m_Localized: Bewegen Sie das blockierte Element zum Ausgang, indem Sie alle Hindernisse
-      entfernen
+    m_Localized: Bewege das blockierte Element zum Ausgang, indem du alle Hindernisse
+      entfernst.
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649088
@@ -85,7 +85,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649090
-    m_Localized: Selektive Aufmerksamkeit
+    m_Localized: Selektive (gezielte) Aufmerksamkeit
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649092
@@ -93,11 +93,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649094
-    m_Localized: Zeitliche Koordinierung
+    m_Localized: Zeitplanung
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649096
-    m_Localized: "Inklusivit\xE4t"
+    m_Localized: "Inklusionsf\xE4higkeit"
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649098
@@ -105,23 +105,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037696
-    m_Localized: Sichtfeld
+    m_Localized: Blickfeld
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037698
-    m_Localized: Logische Argumentation
+    m_Localized: Logisches Denken
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037700
-    m_Localized: Numerische Berechnung
+    m_Localized: "Zahlenm\xE4\xDFige (numerische) Berechnung"
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037702
-    m_Localized: "Numerische Sch\xE4tzung"
+    m_Localized: "Numerisches Sch\xE4tzen"
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037704
-    m_Localized: Probabilistisches Denken
+    m_Localized: "Schlussfolgern/ Wahrscheinlichkeits\xFCberlegungen"
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037706
@@ -133,11 +133,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037709
-    m_Localized: Verarbeitungsgeschwindigkeit
+    m_Localized: Geschwindigkeit der Verarbeitung
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232000
-    m_Localized: Proportionales Denken
+    m_Localized: "Proportionales Argumentieren/ Verh\xE4ltnisse und Beziehungen erkennen"
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232002
@@ -145,7 +145,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232004
-    m_Localized: Reaktionshemmung
+    m_Localized: "Reaktionshemmung /Einschr\xE4nkung der Reaktion"
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232006
@@ -153,11 +153,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232008
-    m_Localized: "R\xE4umliche Argumentation"
+    m_Localized: "R\xE4umliches Vorstellungsverm\xF6gen"
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232010
-    m_Localized: "R\xE4umlicher R\xFCckruf"
+    m_Localized: "R\xE4umliches Erinnerungsverm\xF6gen"
     m_Metadata:
       m_Items: []
   - m_Id: 111552523372847126
@@ -165,11 +165,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232013
-    m_Localized: Wortschatzkenntnis
+    m_Localized: Wortschatz
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232015
-    m_Localized: "Verbale Flie\xDFf\xE4higkeit"
+    m_Localized: "Sprachliche Ausdrucksf\xE4higkeit"
     m_Metadata:
       m_Items: []
   - m_Id: 111594514829565957
@@ -177,13 +177,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760256
-    m_Localized: "Bewegen Sie die Bl\xF6cke in eine beliebige Richtung, um Zahlen
-      mit dem gleichen Wert zu verschmelzen und so viel wie m\xF6glich zu erzielen.
-      Kannst du zu 2048 kommen?"
+    m_Localized: "Verschiebe die Bl\xF6cke in eine beliebige Richtung, um Zahlen
+      mit demselben Wert zu verbinden und so viel Punkte wie m\xF6glich zu erzielen.
+      Schaffst du es bis 2048?"
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760257
-    m_Localized: Zahlen verschmelzen
+    m_Localized: "Zahlen zusammenf\xFChren"
     m_Metadata:
       m_Items: []
   - m_Id: 111596475083677696
@@ -191,49 +191,49 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111596475087872000
-    m_Localized: Ist das Bild das gleiche wie das vorherige?
+    m_Localized: Ist das Bild dasselbe wie das vorherige?
     m_Metadata:
       m_Items: []
   - m_Id: 111599790488051712
-    m_Localized: Tagebuch
+    m_Localized: Notizbuch
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989696
-    m_Localized: "Schreiben Sie eine t\xE4gliche Notiz in Ihr pers\xF6nliches Tagebuch.\n\nDies
-      wird Ihnen helfen, \xFCber die Richtung Ihres Lebens nachzudenken und Fortschritte
-      und Probleme zu bewerten."
+    m_Localized: "Schreib t\xE4glich eine Bemerkung in dein pers\xF6nliches Notizbuch.\n\nDas
+      wird dir helfen, \xFCber die Entwicklung deines Lebens zu reflektieren und
+      Fortschritte und Schwierigkeiten besser zu erkennen."
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989697
-    m_Localized: "Ein paar Zeilen dar\xFCber zu schreiben, wie Sie sich jeden Tag
-      f\xFChlen, ist eine gute Praxis f\xFCr Ihr Wohlbefinden"
+    m_Localized: "Jeden Tag ein paar Zeilen dar\xFCber zu schreiben, wie du dich
+      f\xFChlst, ist eine gute \xDCbung f\xFCr dein inneres Wohlbefinden."
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989699
-    m_Localized: Brief an einen Freund
+    m_Localized: Brief an eine befreundete Person
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989700
-    m_Localized: "Schreiben Sie einen Brief an einen Freund.\n\nDas Schreiben von
-      Briefen kann sowohl f\xFCr den Schriftsteller als auch f\xFCr den Empf\xE4nger
-      therapeutisch sein, und es kann genau das Richtige f\xFCr die Ver\xE4nderung
-      der Perspektive sein."
+    m_Localized: "Schreib einen Brief an eine befreundete Person.\n\nDas Schreiben
+      von Briefen kann sowohl f\xFCr den Verfasser als auch f\xFCr den Empf\xE4nger
+      therapeutisch sein, und vielleicht ist es genau das Richtige, um die Perspektive
+      zu wechseln."
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989702
-    m_Localized: Brief an mich
+    m_Localized: Brief an mich selbst
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989703
-    m_Localized: "Das Schreiben eines Briefes an Ihr zuk\xFCnftiges Selbst bietet
-      den Vorteil der \u201ER\xFCckw\xE4rtsplanung\u201C, in dem wir dazu ermutigt
-      werden, mit unserer Zeit beabsichtigt zu sein und uns darauf zu konzentrieren,
-      welche inkrementellen Fortschritte wir in der Gegenwart zu unseren langfristigen
-      Zielen f\xFCr die Zukunft machen k\xF6nnen."
+    m_Localized: "Einen Brief an dein zuk\xFCnftiges Ich zu schreiben hat den positiven
+      Effekt, dass man r\xFCckw\xE4rts planen kann. Das ermutigt uns, bewusster mit
+      unserer Zeit umzugehen und uns auf die Fortschritte zu konzentrieren, die wir
+      in der Gegenwart auf dem Weg zu unseren langfristigen Zielen f\xFCr die Zukunft
+      machen k\xF6nnen."
     m_Metadata:
       m_Items: []
   - m_Id: 112797993814450176
-    m_Localized: Sie sind sicher, dass Sie beenden wollen?
+    m_Localized: "Bist du sicher, dass du das hier verlassen m\xF6chtest?"
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033088
@@ -241,15 +241,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033089
-    m_Localized: Spiel
+    m_Localized: Spielen
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033090
-    m_Localized: Nochmal abspielen
+    m_Localized: Nochmal spielen
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033091
-    m_Localized: "Spielen Sie das n\xE4chste Level"
+    m_Localized: "N\xE4chstes Level spielen"
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033092
@@ -257,15 +257,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033093
-    m_Localized: Versuchen Sie es nochmal
+    m_Localized: Nochmal versuchen
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033094
-    m_Localized: Spiel ist aus
+    m_Localized: Game over
     m_Metadata:
       m_Items: []
   - m_Id: 112797993831227393
-    m_Localized: Ausgang
+    m_Localized: Verlassen
     m_Metadata:
       m_Items: []
   - m_Id: 112797993831227396
@@ -273,28 +273,27 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 113092616990482432
-    m_Localized: "In K\xFCrze erh\xE4ltlich"
+    m_Localized: "Bald verf\xFCgbar"
     m_Metadata:
       m_Items: []
   - m_Id: 115977790945173504
-    m_Localized: Vollendet
+    m_Localized: Abgeschlossen
     m_Metadata:
       m_Items: []
   - m_Id: 115977791033253888
-    m_Localized: Gescheitert
+    m_Localized: Fehlgeschlagen
     m_Metadata:
       m_Items: []
   - m_Id: 115977791033253889
-    m_Localized: Bestes Ergebnis
+    m_Localized: Beste Punktzahl
     m_Metadata:
       m_Items: []
   - m_Id: 115977791033253890
-    m_Localized: Eben
+    m_Localized: Level
     m_Metadata:
       m_Items: []
   - m_Id: 115977791033253891
-    m_Localized: Wenn Sie ein paar Minuten am Tag spielen, bleibt Ihrem Gehirn fit
-      fit
+    m_Localized: "Ein paar Minuten am Tag zu spielen, h\xE4lt dein Gehirn fit"
     m_Metadata:
       m_Items: []
   - m_Id: 115977791033253892
@@ -306,12 +305,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 115977791037448193
-    m_Localized: '{points} zum Freischalten'
+    m_Localized: Zum Freischlaten
     m_Metadata:
       m_Items:
       - rid: 3196637817602572293
   - m_Id: 115977791037448194
-    m_Localized: Vorteile
+    m_Localized: "Vorz\xFCge"
     m_Metadata:
       m_Items: []
   - m_Id: 115977791037448195
@@ -320,6 +319,194 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 115977791037448196
     m_Localized: Speichern
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864720760834
+    m_Localized: Das kannst du besser
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864720760833
+    m_Localized: Das macht du gut
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864720760832
+    m_Localized: "Gro\xDFartig!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864716566528
+    m_Localized: "W\xE4hle ein Level"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115989062555262976
+    m_Localized: Pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115989062559457280
+    m_Localized: Wieder aufnehmen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115989062559457281
+    m_Localized: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989698
+    m_Localized: "Trage deine Gedanken und Gef\xFChle hier ein..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989701
+    m_Localized: "Schreib hier ein paar Zeilen f\xFCr deinen Freund, deine Freundin..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989704
+    m_Localized: "Schreib hier eine Nachricht an dein zuk\xFCnftiges Ich"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864724955136
+    m_Localized: Antworte so schnell du kannst mit Ja oder Nein.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712455
+    m_Localized: "W\xE4hle die Zahlen in aufsteigender oder absteigender Reihenfolge,
+      wie durch den Pfeil angezeigt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712457
+    m_Localized: "Welche der beiden Zahlen ist gr\xF6\xDFer? Oder sind sie gleich?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712459
+    m_Localized: Kannst du dich an das Bild erinnern, das du gesehen hast?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712461
+    m_Localized: Kannst du diese Reihenfolge wiederholen?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111594514833760258
+    m_Localized: "3 gleiche nebeneinander liegende Zahlen werden zusammengelegt und
+      ergeben eine h\xF6here Zahl. Erreiche so viele Punkte wie m\xF6glich."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712465
+    m_Localized: 'Das klassische Spiel: Kannst du drei Steine in einer Reihe in eine
+      beliebige Richtung legen?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649089
+    m_Localized: "Geteilte Aufmerksamkeit bezieht sich auf die F\xE4higkeit, gleichzeitig
+      auf mehrere Aufgaben oder Arbeitsanforderungen zu reagieren."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649091
+    m_Localized: "Die F\xE4higkeit, sich auf relevante Informationen zu konzentrieren
+      und gleichzeitig unwichtige Ablenkungen zu ignorieren"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649093
+    m_Localized: "Aufgabenwechsel ist der Prozess der Anpassung an sich \xE4ndernde
+      Umst\xE4nde, der Wechsel von einem Ziel zum anderen, beispielsweise zwischen
+      zwei oder mehr Aufgaben hin- und herwechseln"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649095
+    m_Localized: "Zeitplanung ist die F\xE4higkeit, Aktivit\xE4ten zu koordinieren
+      und die Zeit genau einzuhalten."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649097
+    m_Localized: "Das Gef\xFChl, als Teil einer Gemeinschaft akzeptiert zu werden"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649099
+    m_Localized: Bezieht sich auf den Sinn und die Ausrichtung dessen, was wir tun
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037697
+    m_Localized: Das Blickfeld bezieht sich auf den Bereich, in dem du visuelle Informationen
+      aufnehmen kannst, ohne deine Augen zu bewegen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037699
+    m_Localized: "Logisches Denken ist die F\xE4higkeit, mehrere kognitive Prozesse
+      zu kombinieren, um Muster zu erkennen, Schlussfolgerungen zu ziehen und Entscheidungen
+      zu treffen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037701
+    m_Localized: "Numerisches Rechnen ist die F\xE4higkeit, einfache Rechenaufgaben
+      wie Addition, Subtraktion, Multiplikation und Division durchzuf\xFChren."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037703
+    m_Localized: "Numerische Sch\xE4tzung ist die F\xE4higkeit, Zahlenverh\xE4ltnisse
+      schnell oder mit unvollst\xE4ndigen Informationen n\xE4herungsweise zu bestimmen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037705
+    m_Localized: "Schlussfolgern/ Wahrscheinlichkeits\xFCberlegungen bedeuten die
+      F\xE4higkeit, die Wahrscheinlichkeit von Ereignissen zu analysieren und zu
+      bewerten."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037707
+    m_Localized: "Das Arbeitsged\xE4chtnis dient der tempor\xE4ren Speicherung und
+      Verarbeitung von Informationen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037708
+    m_Localized: "Planung bedeutet, vorausschauend zu denken, M\xF6glichkeiten abzuw\xE4gen
+      und die beste Vorgehensweise zu w\xE4hlen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037710
+    m_Localized: "Die Geschwindigkeit der Verarbeitung ist die F\xE4higkeit, eingehende
+      Sinneseindr\xFCcke schnell zu erkennen und zu verarbeiten."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232001
+    m_Localized: "Proportionales Argumentieren ist die F\xE4higkeit, Mengen in verschiedenen
+      Verh\xE4ltnissen und Darstellungen zu erkennen, vergleichen und umzurechnen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232003
+    m_Localized: "Das Leseverst\xE4ndnis ist die F\xE4higkeit, Geschriebenes zu lesen,
+      zu erfassen und zu verstehen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232005
+    m_Localized: "Reaktionshemmung ist die F\xE4higkeit, unangemessene Reaktionen
+      zu unterdr\xFCcken, die zielgerichtete Handlungen behindern."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232007
+    m_Localized: "Die r\xE4umliche Orientierung, auch als Orientierungssinn bezeichnet,
+      beinhaltet die Wahrnehmung und Ber\xFCcksichtigung der Umgebung."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232009
+    m_Localized: "R\xE4umliches Vorstellungsverm\xF6gen ist die F\xE4higkeit, r\xE4umliche
+      Beziehungen zu veranschaulichen und sie zu untersuchen, um Schlussfolgerungen
+      zu ziehen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232011
+    m_Localized: "Das r\xE4umliche Erinnerungsverm\xF6gen ist eine Form des Ged\xE4chtnisses,
+      bei dem es um die Ortung von Positionen innerhalb einer Umgebung geht."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232012
+    m_Localized: "Visualisierung ist die F\xE4higkeit, sich die Beziehung von verschiedenen
+      Okjekten im Kopf vorzustellen, auch wenn sich diese Beziehung \xE4ndert"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232014
+    m_Localized: "Wortschatz sind die F\xE4higkeit, W\xF6rter zu verstehen und zu
+      verwenden."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232016
+    m_Localized: "Sprachliche Ausdrucksf\xE4higkeit ist die F\xE4higkeit, W\xF6rter
+      aus dem geistigen Wortschatz schnell abzurufen."
     m_Metadata:
       m_Items: []
   references:

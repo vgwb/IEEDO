@@ -19,138 +19,138 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 12759883776
-    m_Localized: Greifen Sie auf lokale Dienste zu? (Fitnessstudio, Park, Bibliothek,
-      Anbetungsort)
+    m_Localized: Hast du Zugang zu lokalen Dienstleistungen? (Fitnessstudio, Park,
+      Bibliothek, Gotteshaus)
     m_Metadata:
       m_Items: []
   - m_Id: 7179342181294080
-    m_Localized: "K\xF6nnen Sie Beschreibungen von Ereignissen verstehen, die in
-      der Landessprache geschrieben wurden?"
+    m_Localized: Kannst du Beschreibungen von Ereignissen verstehen, die auf Deutsch
+      geschrieben sind?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539303149568
-    m_Localized: "Haben Sie die lokalen touristischen Attraktionen (Denkm\xE4ler,
-      Parks usw.) besucht?"
+    m_Localized: "Hast du die Hauptattraktionen vor Ort schon besucht (Denkm\xE4ler,
+      Parks, etc.)?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539328315392
-    m_Localized: Besuchen Sie kulturelle Veranstaltungen (Festival, Konzert usw.)?
+    m_Localized: Besuchst du kulturelle Veranstaltungen (Festivals, Konzerte, etc.)?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509696
-    m_Localized: Folgen Sie den lokalen Nachrichten?
+    m_Localized: Verfolgst du die Lokalnachrichten?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509697
-    m_Localized: "Wenden sich Freunde und/oder Nachbarn an Sie, um Unterst\xFCtzung
-      zu erhalten?"
+    m_Localized: "Wenden sich Freunde und/oder Nachbarn mit der Bitte um Unterst\xFCtzung
+      an dich?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509698
-    m_Localized: "F\xFChlen Sie sich zuversichtlich, neue Leute kennenzulernen und
-      Freunde zu finden?"
+    m_Localized: "F\xFChlst du dich selbstbewusst, wenn du neue Leute kennenlernst
+      und Freundschaften schlie\xDFt?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509699
-    m_Localized: "Nehmen Sie an sozialen Aktivit\xE4ten und Gruppen teil? (Freiwilligenarbeit,
-      Clubs, Gemeinschaftsgruppen)"
+    m_Localized: "Nimmst du an sozialen Aktivit\xE4ten und Gruppen teil? (Freiwilligenarbeit,
+      Vereine, Gemeindegruppen)"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509700
-    m_Localized: "Haben Sie Freunde aus einer Mischung aus Hintergr\xFCnden und Nationalit\xE4ten?"
+    m_Localized: "Hast du Freunde mit unterschiedlichen Hintergr\xFCnden und Nationalit\xE4ten?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509701
-    m_Localized: Verbringen Sie lieber Zeit alleine?
+    m_Localized: Bevorzugst du es, Zeit allein zu verbringen?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509702
-    m_Localized: "K\xF6nnen Sie die Hauptpunkte der gesprochenen Kommunikation bei
-      der Arbeit, in der Schule usw. verstehen?"
+    m_Localized: "Kannst du die Hauptaussagen der m\xFCndlichen Kommunikation am
+      Arbeitsplatz, in der Schule usw. verstehen?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509703
-    m_Localized: "K\xF6nnen Sie ein Anschreiben oder ein Beschwerdebrief schreiben?"
+    m_Localized: Kannst du ein Anschreiben oder ein Beschwerdeschreiben verfassen?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509704
-    m_Localized: "Arbeiten Sie gerne als Teil eines Teams? (Besch\xE4ftigung, Gemeinschaft,
-      Sport)"
+    m_Localized: Arbeitest du gerne in einem Team? (Beruf, Freizeit, Gemeinschaft,
+      Sport)
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509705
-    m_Localized: "K\xF6nnen Sie grundlegende Microsoft -Office -Pakete verwenden?
-      z.B. Wort und Excel"
+    m_Localized: Kannst du die Grundfunktionen von Microsoft Office Programmen anwenden,
+      z. B. Word und Excel?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509706
-    m_Localized: "K\xF6nnen Sie eine E -Mail in der Landessprache senden?"
+    m_Localized: Kannst du eine E-Mail auf Deutsch schreiben?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509707
-    m_Localized: "K\xF6nnen Sie ein pers\xF6nliches E -Mail -Konto erstellen?"
+    m_Localized: Kannst du ein eigenes E-Mail-Konto einrichten?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509708
-    m_Localized: "K\xF6nnen Sie verd\xE4chtige E-Mails, Nachrichten und Pop-ups verwalten?"
+    m_Localized: "Kannst du verd\xE4chtige und vermutlich gef\xE4hrliche oder gef\xE4lschte
+      E-Mails, Nachrichten und Pop-ups erkennen und damit umgehen?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509709
-    m_Localized: "K\xF6nnen Sie einfache Berechnungen durchf\xFChren? (Hinzuf\xFCgen,
-      Multiplizieren, Teilen, Prozents\xE4tze)"
+    m_Localized: "Kannst du einfache Rechenaufgaben l\xF6sen? (addieren, multiplizieren,
+      dividieren, Prozents\xE4tze)"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509710
-    m_Localized: "K\xF6nnen Sie mit Community -Foren, Webchats oder Blogs online
-      nach Unterst\xFCtzung suchen?"
+    m_Localized: Kannst du in Internetforen, Webchats oder Blogs nach Hilfe suchen?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509711
-    m_Localized: "K\xF6nnen Sie Websites und Informationen im Web mit bekannten Suchmaschinen
-      finden? (Google, Yahoo, Bing usw.)"
+    m_Localized: Kannst du mit bekannten Suchmaschinen (Google, Yahoo, Bing usw.)
+      nach Internetseiten und Informationen im Internet suchen?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509712
-    m_Localized: "Reisen Sie au\xDFerhalb Ihrer Region?"
+    m_Localized: "Verreist du auch au\xDFerhalb deines Wohnortes?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509713
-    m_Localized: "K\xF6nnen Sie Ihre Rechnungen online bezahlen?"
+    m_Localized: Kannst du deine Rechnungen online bezahlen?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509714
-    m_Localized: "K\xF6nnen Sie Ihre Jahresabschl\xFCsse verstehen? z.B. Bankaussage,
-      Rechnungen usw."
+    m_Localized: "Verstehst du deine Finanzunterlagen, z. B. Kontoausz\xFCge, Rechnungen
+      usw.?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509715
-    m_Localized: "K\xF6nnen Sie Korrespondenz und offizielle Dokumente in der \xF6rtlichen
-      Langauge lesen und verstehen?"
+    m_Localized: Kannst du offizielle Dokumente und Briefe in deutscher Sprache lesen
+      und verstehen?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509716
-    m_Localized: "Ben\xF6tigen Sie Hilfe beim Ausf\xFCllen detaillierter Formulare
-      in der Landessprache? z.B. Bewerbungen, Geldtransfers"
+    m_Localized: "Ben\xF6tigst du Hilfe beim Ausf\xFCllen umfangreicher Formulare
+      in deutscher Sprache, z. B. bei Bewerbungen oder \xDCberweisungen?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509717
-    m_Localized: "Beeinflussen Ihre Gesundheitsprobleme Ihr t\xE4gliches Leben?"
+    m_Localized: "Beeintr\xE4chtigen dich gesundheitliche Probleme im Alltag?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509718
-    m_Localized: "F\xFChlen Sie sich oft \xE4ngstlich?"
+    m_Localized: "F\xFChlst du dich oft \xE4ngstlich?"
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509719
-    m_Localized: Haben Sie einen allgemein gesunden Lebensstil?
+    m_Localized: Hast du generell einen gesunden Lebensstil?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509720
-    m_Localized: "F\xFChlen Sie sich positiv in Ihrer Zukunft?"
+    m_Localized: Siehst du deine Zukunft positiv?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509721
-    m_Localized: "Trainierst du regelm\xE4\xDFig?"
+    m_Localized: "Machst du regelm\xE4\xDFig Sport?"
     m_Metadata:
       m_Items: []
   references:

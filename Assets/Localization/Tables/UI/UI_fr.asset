@@ -33,7 +33,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40525580437577728
-    m_Localized: Sortir
+    m_Localized: Sortie
     m_Metadata:
       m_Items: []
   - m_Id: 48125278888599552
@@ -82,7 +82,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450244
-    m_Localized: Continuez
+    m_Localized: Continuer
     m_Metadata:
       m_Items: []
   - m_Id: 40535113130074112
@@ -133,7 +133,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450243
-    m_Localized: Sortir
+    m_Localized: Sortie
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854081
@@ -281,7 +281,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 141959887966904320
-    m_Localized: Domicile
+    m_Localized: Maison
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458752
@@ -333,7 +333,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 153714070870024192
-    m_Localized: "\xC0 propos de"
+    m_Localized: "\xC0 propos"
     m_Metadata:
       m_Items: []
   - m_Id: 153714070870024193
