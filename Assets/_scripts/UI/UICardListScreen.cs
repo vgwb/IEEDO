@@ -82,6 +82,7 @@ namespace Ieedo
             {
                 if (Statics.Input.IsExecutingAction)
                     return;
+                SoundManager.I.PlaySfx(AudioEnum.panel_open);
                 SetEditing(!canEdit);
             });
             SetupButton(CreateCardButton, () =>
@@ -213,6 +214,7 @@ namespace Ieedo
             Statics.Input.IsExecutingAction = true;
             StopEditing();
 
+            SoundManager.I.PlaySfx(AudioEnum.card_trash);
             yield return AnimateCardOut(uiCard, 0, -1);
             if (uiCard != null)
                 Destroy(uiCard.gameObject);
@@ -261,6 +263,7 @@ namespace Ieedo
             frontCardUI.Data.Status = CardStatus.Completed;
             Statics.Data.SaveProfile();
 
+            SoundManager.I.PlaySfx(AudioEnum.card_positive);
             yield return AnimateCardStatusChange(uiCard, Statics.App.ApplicationConfig.PointsCardCompleted);
 
             yield return AnimateCardOut(uiCard, +1);
@@ -320,8 +323,8 @@ namespace Ieedo
             frontCardUI.Data.Status = CardStatus.Todo;
             Statics.Data.SaveProfile();
 
+            SoundManager.I.PlaySfx(AudioEnum.card_negative);
             yield return AnimateCardStatusChange(uiCard, -Statics.App.ApplicationConfig.PointsCardCompleted);
-
             yield return AnimateCardOut(uiCard, -1);
 
             CardsList.RemoveCard(frontCardUI);
@@ -356,6 +359,7 @@ namespace Ieedo
             frontCardUI.Data.Status = CardStatus.Validated;
             Statics.Data.SaveProfile();
 
+            SoundManager.I.PlaySfx(AudioEnum.card_positive);
             yield return AnimateCardStatusChange(uiCard, Statics.App.ApplicationConfig.PointsCardValidated);
 
             if (uiPillarsScreen.ViewMode == PillarsViewMode.Review)
@@ -413,6 +417,7 @@ namespace Ieedo
             frontCardUI.Data.Status = CardStatus.Completed;
             Statics.Data.SaveProfile();
 
+            SoundManager.I.PlaySfx(AudioEnum.card_negative);
             yield return AnimateCardStatusChange(uiCard, -Statics.App.ApplicationConfig.PointsCardValidated);
 
             if (uiPillarsScreen.ViewMode == PillarsViewMode.Review)
@@ -788,6 +793,7 @@ namespace Ieedo
         private bool isCreating;
         public IEnumerator CreateCardFlowCO()
         {
+            SoundManager.I.PlaySfx(AudioEnum.panel_open);
             Statics.Input.IsExecutingAction = true;
 
             isCreating = true;
@@ -874,6 +880,7 @@ namespace Ieedo
             uiTopScreen.SwitchMode(TopBarMode.MainSection);
 
             CardsList.SortListAgain();
+            SoundManager.I.PlaySfx(AudioEnum.card_positive);
             yield return CardsList.ScrollRect.ForceGoToCard(frontCardUI);
             isCreating = false;
             Statics.Input.IsExecutingAction = false;

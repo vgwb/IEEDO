@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using DG.Tweening;
 using Lean.Common;
 using Lean.Touch;
 using Lean.Transition;
@@ -166,8 +167,15 @@ namespace Ieedo
                 cardGo.transform.localPositionTransition(cardGo.transform.localPosition, 0.0f); // Fake transition to make the delay work correctly
                 cardGo.transform.JoinDelayTransition((iCard - fromCardIndex) * 0.1f).localPositionTransition(finalPos, period, LeanEase.Accelerate);
                 cardGo.transform.localEulerAnglesTransform(Vector3.up * Random.Range(0, 360f), 1.25f, LeanEase.Decelerate);
+
+                Invoke(nameof(CardSnapSfx), period);
                 nAnimatedCards++;
             }
+        }
+
+        private void CardSnapSfx()
+        {
+            SoundManager.I.PlaySfx(AudioEnum.changeScreen);
         }
 
         public void CardsOut()
