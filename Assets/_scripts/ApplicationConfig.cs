@@ -43,8 +43,7 @@ namespace Ieedo
         public string PointsSymbol;
         public string GetPointsSymbolString()
         {
-            return System.Text.RegularExpressions.Regex.Unescape(PointsSymbol);
-            //return char.Parse(PointsSymbol).ToString();
+            return $"<color=#AD7C25>{System.Text.RegularExpressions.Regex.Unescape(PointsSymbol)}</color>";
         }
 
         [Header("Services")]
