@@ -58,19 +58,19 @@ namespace Ieedo
             });
 
             // Debug buttons
-            btnAbortSpecialSection = AddButton("action_abort_activity", () =>
+            btnAbortSpecialSection = AddUnlocalizedButton("Abort activity", () =>
             {
                 AppManager.I.StartCoroutine(AbortSpecialSectionCO());
                 CloseImmediate();
             });
 
-            btnSkipAssessment = AddButton("action_skip_assessment", () =>
+            btnSkipAssessment = AddUnlocalizedButton("Skip assessment", () =>
             {
                 Statics.SessionFlow.SkipAssessment(true);
                 CloseImmediate();
             });
 
-            btnGenerateTestPillars = AddButton("action_generate_test_pillars", () =>
+            btnGenerateTestPillars = AddUnlocalizedButton("Generate test pillars", () =>
             {
                 var profileData = Statics.Data.Profile;
                 foreach (var categoryData in profileData.Categories)
@@ -80,26 +80,25 @@ namespace Ieedo
                 Statics.Screens.GoTo(ScreenID.Pillars);
             });
 
-            btnGenerateTestCards = AddButton("action_generate_test_cards", () =>
+            btnGenerateTestCards = AddUnlocalizedButton("Generate 5 test cards", () =>
             {
                 Statics.Cards.GenerateTestCards(5);
             });
 
-            btnTestIncreaseScore = AddButton("action_test_increase_score", () =>
+            btnTestIncreaseScore = AddUnlocalizedButton("Add 100 points", () =>
             {
                 Statics.Points.AddPoints(100);
+            });
+
+            btnTestIncreaseScore = AddUnlocalizedButton("Remove 100 points", () =>
+            {
+                Statics.Points.AddPoints(-100);
             });
 
             btnTestResetScore = AddUnlocalizedButton("Reset Score", () =>
             {
                 Statics.Points.Reset();
             });
-
-            // btnResetProfile = AddButton("action_reset_profile", () =>
-            // {
-            //     AppManager.I.StartCoroutine(ResetProfileCO());
-            //     CloseImmediate();
-            // }, SettingsSection);
 
             btnTestAddDiary = AddUnlocalizedButton("Add Diary Pages", () =>
             {
@@ -117,7 +116,7 @@ namespace Ieedo
                 CloseImmediate();
             });
 
-            btnTestNotifications = AddButton("Test Notifications", () =>
+            btnTestNotifications = AddUnlocalizedButton("Test Notifications", () =>
             {
                 Statics.Notifications.TestLocalNotification();
             });
