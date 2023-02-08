@@ -29,6 +29,8 @@ namespace Ieedo
             isDragging = true;
             hasInFront = false;
             swipeStartPos = content.anchoredPosition.x;
+            maxReachedDeltaFromStart = 0f;
+            prevPos = swipeStartPos;
 
             var nCards = CardCollection.HeldCards.Count;
             float highestScaleRatio = 0f;
@@ -85,10 +87,19 @@ namespace Ieedo
         }
 
         public float SnappingSpeed = 1f;
+        public float SnapStartThreshold = 0.1f;
+        public float ReturnToMiddleThreshold = 0.5f;
+        public float MaxVelocity = 1000f;
+        public float SnapVelocityThreshold = 0.5f;
+        public bool checkVelocity;
 
+        private float prevVelocity;
+        private float prevPos;
+        private float dMovement;
+        private int dMovementSkipCounter;
+        private float maxReachedDeltaFromStart;
         private int prevCardIndex;
         private bool hasInFront;
-        private Vector2 prevVelocity;
         private int forcedCardIndex;
         private bool forceGoToCard;
         private bool forceGoToCardImmediate;
@@ -107,7 +118,6 @@ namespace Ieedo
         }
 
         private Camera uiCamera;
-        public bool CanScroll = true;
         public void Update()
         {
             if (CardListScreen == null)
@@ -177,6 +187,8 @@ namespace Ieedo
                 wantedCardIndex = forcedCardIndex;
             }
 
+            prevVelocity = velocity.x;
+
             var layout = GetComponentInChildren<HorizontalLayoutGroup>(true);
             var spacing = layout.spacing;
             var size = layout.GetComponent<RectTransform>().rect.width;
@@ -184,13 +196,90 @@ namespace Ieedo
             var slotSize = CardCollection.HeldSlots[0].GetComponent<RectTransform>().rect.width;
             var desiredPos = -(layout.padding.left + wantedCardIndex * slotSize + (0.5f * slotSize) + wantedCardIndex * spacing);
             var actualPos = content.anchoredPosition.x;
+            if (isDragging)
+            {
+                var newDeltaMovement = actualPos - prevPos;
+                if (newDeltaMovement == 0 && dMovementSkipCounter == 0) // Skip only once to detect stopping
+                {
+                    dMovementSkipCounter++;
+                    //Debug.LogError("Delta zero.. skip " + dMovementSkipCounter);
+                }
+                else
+                {
+                    dMovement = newDeltaMovement;
+                    prevPos = actualPos;
+                    dMovementSkipCounter = 0;
+                    //Debug.LogError("Delta set!");
+                }
+            }
 
-            if (hasTriggeredSwipe && swipeToCardIndex < 0 && Mathf.Abs(actualPos - swipeStartPos) > 0.1f)
+            if (Mathf.Abs(actualPos - swipeStartPos) > maxReachedDeltaFromStart)
+            {
+                maxReachedDeltaFromStart = Mathf.Abs(actualPos - swipeStartPos);
+            }
+
+            // Uncomment to see numbers
+            /*for (var index = 0; index < CardCollection.HeldCards.Count; index++)
+            {
+                var card = CardCollection.HeldCards[index];
+                if (card == null) continue;
+                var direction = -(int)Mathf.Sign(actualPos - swipeStartPos);
+                var diffFromStart = Mathf.Abs(actualPos - swipeStartPos);
+                var diffFromMax = maxReachedDeltaFromStart - diffFromStart;
+
+                if (diffFromStart < ReturnToMiddleThreshold && diffFromMax > 0f)
+                {
+                    direction = 0;
+                }
+
+                // Velocity gets the precedence if high enough
+                if (checkVelocity && MathF.Abs(dMovement) / Time.deltaTime > SnapVelocityThreshold)
+                {
+                    direction = (int)Mathf.Sign(dMovement);
+                }
+
+                // Must begin the snapping with a minimum movement
+                if (Mathf.Abs(maxReachedDeltaFromStart) < SnapStartThreshold)
+                {
+                    direction = 0;
+                }
+
+                if (isDragging)
+                {
+                    /*card.Title.SetTextRaw(
+                        "V " + dMovement.ToString("F") +
+                        (actualPos - swipeStartPos).ToString("F") + " act: " + actualPos +
+                        "\nDIR " + direction
+                        + " diffFromMax" + diffFromMax.ToString("F") + " max: " + maxReachedDeltaFromStart.ToString("F")
+
+                        + " diffFromStart " + diffFromStart + "\ndes: " + desiredPos.ToString("F") + " max: " + maxReachedDeltaFromStart.ToString("F")
+                    );*/
+             /*       card.Title.SetTextRaw("\nDIR " + direction);
+                }
+                else card.Title.SetTextRaw("...");
+            }*/
+
+            if (hasTriggeredSwipe && swipeToCardIndex < 0 && Mathf.Abs(maxReachedDeltaFromStart) > SnapStartThreshold)
             {
                 var direction = -(int)Mathf.Sign(actualPos - swipeStartPos);
                 //Debug.LogError("actualPos  " + actualPos + " swipeStartPos " + swipeStartPos);
                 //Debug.LogError("direction  " + direction);
                 //Debug.LogError("highestScaleCardIndex " + highestScaleCardIndex);
+                var diffFromStart = Mathf.Abs(actualPos - swipeStartPos);
+                var diffFromMax = maxReachedDeltaFromStart - diffFromStart;
+
+                if (diffFromStart < ReturnToMiddleThreshold && diffFromMax > 0f)
+                {
+                    //Debug.LogError("RETURN TO MIDDLE");
+                    direction = 0;
+                }
+
+                // Velocity gets the precedence if high enough
+                if (checkVelocity && MathF.Abs(dMovement) / Time.deltaTime > SnapVelocityThreshold)
+                {
+                    //Debug.LogError("SnapVelocityThreshold TRIGGERED WITH " + dMovement);
+                    direction = -(int)Mathf.Sign(dMovement);
+                }
 
                 // Make sure that the wanted card is always the next one in the direction of movement
                 wantedCardIndex = swipeFromCardIndex + direction;
@@ -232,14 +321,13 @@ namespace Ieedo
             //var accel = (velocity.x - prevVelocity.x) / Time.deltaTime;
             //Debug.Log($"ACC <color={(velocity.x > 0 ? "#00FF00" : "#FF0000")}>{velocity.x}</color> ACC <color={(accel > 0 ? "#00FF00" : "#FF0000")}>{accel}</color>");
 
-            prevVelocity = velocity;
-
             // We perform snapping from this point
             var ratioThreshold = 0.3f;
             if (!isDragging)    // @note: we snap only if the card has changed from the previous one
             {
                 v = new Vector2(Mathf.Sign(normalizedDiff) * Mathf.Abs(normalizedDiff) * Mathf.Abs(normalizedDiff) * SnappingSpeed * nCards * 100000, 0f);
-                //Debug.LogError("DESIRED VELOCITY " + v  + "(" + normalizedPosition.x + " to " + desiredNormalizedPos +")");
+                v.x = Mathf.Clamp(v.x, -MaxVelocity, MaxVelocity);    // Avoids flickering
+                //Debug.LogError($"DESIRED VELOCITY {v}({normalizedDiff})");
                 //if (forceGoToCard || swipeToCardIndex >= 0)
                 velocity = v;
 

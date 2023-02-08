@@ -2997,9 +2997,29 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7915357893556443430, guid: 9224fabccd8ff9e42bf67a2d85ba2ac6, type: 3}
+      propertyPath: MaxVelocity
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7915357893556443430, guid: 9224fabccd8ff9e42bf67a2d85ba2ac6, type: 3}
+      propertyPath: checkVelocity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7915357893556443430, guid: 9224fabccd8ff9e42bf67a2d85ba2ac6, type: 3}
       propertyPath: CardListScreen
       value: 
       objectReference: {fileID: 4975395860017819302}
+    - target: {fileID: 7915357893556443430, guid: 9224fabccd8ff9e42bf67a2d85ba2ac6, type: 3}
+      propertyPath: SnapStartThreshold
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7915357893556443430, guid: 9224fabccd8ff9e42bf67a2d85ba2ac6, type: 3}
+      propertyPath: SnapVelocityThreshold
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7915357893556443430, guid: 9224fabccd8ff9e42bf67a2d85ba2ac6, type: 3}
+      propertyPath: ReturnToMiddleThreshold
+      value: 200
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9224fabccd8ff9e42bf67a2d85ba2ac6, type: 3}
 --- !u!114 &7599521116929857607 stripped
