@@ -12,6 +12,7 @@ was the previous image the same as this one?
 a fast game about recognising shapes
 
 **Skills**
+
 - Speed
 - Short-Term Memory
 - Visual Short-Term Memory
@@ -25,14 +26,17 @@ automatic speed (always faster)
 high score
 
 **UI**  
+
 - timer
 - 12 simple images
 - two buttons
 
-**UX**  
+**UX** 
+ 
 - tap Yes or No
 
 **Gameplay:**
+
 - START popup
 - timer to 60 seconds
 - a random image is show

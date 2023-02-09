@@ -7,13 +7,29 @@ namespace minigame
 {
     public class ui_timer : MonoBehaviour
     {
-
         public TextMeshProUGUI TimeText;
         public float timeRemaining = 60;
         public bool timerIsRunning = false;
+
         private void Start()
         {
+            timerIsRunning = false;
+        }
+
+        public void Init(int seconds)
+        {
+            timeRemaining = seconds;
+        }
+
+        public void StartTimer()
+        {
             timerIsRunning = true;
+        }
+
+        public void StartTimer(int seconds)
+        {
+            Init(seconds);
+            StartTimer();
         }
 
         void Update()
@@ -28,7 +44,7 @@ namespace minigame
                 else
                 {
                     Debug.Log("Time has run out!");
-                    timeRemaining = 0;
+                    timeRemaining = -1;
                     timerIsRunning = false;
                 }
             }

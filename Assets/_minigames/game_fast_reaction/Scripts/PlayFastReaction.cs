@@ -12,15 +12,19 @@ namespace minigame.fast_reaction
             Init,
             Countdown,
             Play,
-            Win,
-            Lose
+            End
         }
 
-        public float health = 100;
-        public float damage = 20;
+        [Header("References")]
+        public ImageDisplay Display;
+        public ui_timer UI_Timer;
+        public ui_score UI_Score;
 
-        private float startHealth;
+        [Header("Game Settings")]
+        public int PercentSameSymbol;
 
+        private int score = 0;
+        private int currentImage = -1;
         private StateMachine<States, StateDriverUnity> fsm;
 
         protected override void Init()
@@ -33,39 +37,27 @@ namespace minigame.fast_reaction
             fsm.ChangeState(States.Init);
         }
 
-        void Update()
-        {
-            fsm.Driver.Update.Invoke();
-        }
-
-        void OnGUI()
-        {
-            GUILayout.BeginArea(new Rect(50, 250, 220, 340));
-
-            fsm.Driver.OnGUI.Invoke();
-
-            GUILayout.EndArea();
-        }
+        // void Update()
+        // {
+        //     fsm.Driver.Update.Invoke();
+        // }
 
         void Init_Enter()
         {
-            startHealth = health;
-
+            score = 0;
+            currentImage = 0;
+            Display.ShowImage(currentImage);
             Debug.Log("Waiting for start button to be pressed");
         }
 
-        void Init_OnGUI()
+        void OnPressStart()
         {
-            if (GUILayout.Button("Start"))
-            {
-                fsm.ChangeState(States.Countdown);
-            }
+            fsm.ChangeState(States.Countdown);
         }
 
         //We can return a coroutine, this is useful animations and the like
         IEnumerator Countdown_Enter()
         {
-            health = startHealth;
 
             Debug.Log("Starting in 3...");
             yield return new WaitForSeconds(0.5f);
@@ -89,22 +81,11 @@ namespace minigame.fast_reaction
 
         void Play_Update()
         {
-            health -= damage * Time.deltaTime;
 
-            if (health < 0)
+            if (UI_Timer.timeRemaining <= 0)
             {
-                fsm.ChangeState(States.Lose);
+                fsm.ChangeState(States.End);
             }
-        }
-
-        void Play_OnGUI()
-        {
-            if (GUILayout.Button("Make me win!"))
-            {
-                fsm.ChangeState(States.Win);
-            }
-
-            GUILayout.Label("Health: " + Mathf.Round(health).ToString());
         }
 
         void Play_Exit()
@@ -112,40 +93,43 @@ namespace minigame.fast_reaction
             Debug.Log("Game Over");
         }
 
-        void Lose_Enter()
+        void End_Enter()
         {
-            Debug.Log("Lost");
-        }
-
-        void Lose_OnGUI()
-        {
-            if (GUILayout.Button("Play Again"))
-            {
-                fsm.ChangeState(States.Countdown);
-            }
-        }
-
-        void Win_Enter()
-        {
-            Debug.Log("Won");
-        }
-
-        void Win_OnGUI()
-        {
-            if (GUILayout.Button("Play Again"))
-            {
-                fsm.ChangeState(States.Countdown);
-            }
+            Debug.Log("End Game");
         }
 
         public void OnBtnYes()
         {
-            Debug.Log("YES");
+            CheckAnswer(true);
         }
 
         public void OnBtnNo()
         {
-            Debug.Log("NO");
+            CheckAnswer(false);
+        }
+
+        void CheckAnswer(bool choice)
+        {
+            SelectNewImage();
+
+            if (choice)
+            {
+                score++;
+                UI_Score.AddScore(1, score);
+            }
+        }
+
+        void SelectNewImage()
+        {
+            if (Random.Range(1, 100) < PercentSameSymbol)
+            {
+                // same image
+            }
+            else
+            {
+                currentImage = Random.Range(0, Display.GetAlbumSize());
+            }
+            Display.ShowImage(currentImage);
         }
     }
 }
