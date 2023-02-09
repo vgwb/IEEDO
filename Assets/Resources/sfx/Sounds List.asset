@@ -22,7 +22,7 @@ MonoBehaviour:
     Channel: 1
     Volume: 0.487
   - id: 11
-    audioClip: {fileID: 8300000, guid: 7ee27596ba24249e09c384671ebbe96f, type: 3}
+    audioClip: {fileID: 8300000, guid: e048abd634eac408588b74e5d96a8f22, type: 3}
     Channel: 1
     Volume: 1
   - id: 2
@@ -33,6 +33,14 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: d85ca09ce6c6b3f4fa30447a5a067ba5, type: 3}
     Channel: 2
     Volume: 1
+  - id: 12
+    audioClip: {fileID: 8300000, guid: d85ca09ce6c6b3f4fa30447a5a067ba5, type: 3}
+    Channel: 1
+    Volume: 0.483
+  - id: 13
+    audioClip: {fileID: 8300000, guid: e048abd634eac408588b74e5d96a8f22, type: 3}
+    Channel: 0
+    Volume: 0.568
   - id: 8
     audioClip: {fileID: 8300000, guid: 7b07293d40c504762846ff33b47cb5c9, type: 3}
     Channel: 1

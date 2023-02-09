@@ -13,6 +13,8 @@ namespace Ieedo
         game_score = 11,
         game_win = 2,
         game_lose = 3,
+        game_error = 12,
+        game_bonus = 13,
         panel_open = 4,
         panel_close = 5,
         changeScreen = 8,

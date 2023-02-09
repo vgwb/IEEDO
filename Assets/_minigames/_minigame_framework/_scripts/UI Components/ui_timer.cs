@@ -19,6 +19,7 @@ namespace minigame
         public void Init(int seconds)
         {
             timeRemaining = seconds;
+            DisplayTime(timeRemaining);
         }
 
         public void StartTimer()

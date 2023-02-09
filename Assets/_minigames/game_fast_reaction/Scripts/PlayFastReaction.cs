@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using MonsterLove.StateMachine;
 using vgwb.framework;
+using Ieedo;
 
 namespace minigame.fast_reaction
 {
@@ -19,12 +20,18 @@ namespace minigame.fast_reaction
         public ImageDisplay Display;
         public ui_timer UI_Timer;
         public ui_score UI_Score;
+        public GameObject BtnStart;
+        public ui_countdown UI_Countdown;
 
         [Header("Game Settings")]
         public int PercentSameSymbol;
+        public int TimerDuration;
 
         private int score = 0;
+        private int combo_multiplier = 1;
+        private int combo_counter = 0;
         private int currentImage = -1;
+        private int previousImage = -1;
         private StateMachine<States, StateDriverUnity> fsm;
 
         protected override void Init()
@@ -45,38 +52,35 @@ namespace minigame.fast_reaction
         void Init_Enter()
         {
             score = 0;
-            currentImage = 0;
-            Display.ShowImage(currentImage);
-            Debug.Log("Waiting for start button to be pressed");
+            combo_counter = 0;
+            combo_multiplier = 1;
+            currentImage = previousImage = -1;
+            UI_Timer.Init(TimerDuration);
+            SelectFirstImage();
+            BtnStart.SetActive(true);
+            UI_Countdown.gameObject.SetActive(false);
         }
 
-        void OnPressStart()
-        {
-            fsm.ChangeState(States.Countdown);
-        }
-
-        //We can return a coroutine, this is useful animations and the like
         IEnumerator Countdown_Enter()
         {
+            BtnStart.SetActive(false);
+            UI_Countdown.gameObject.SetActive(true);
 
-            Debug.Log("Starting in 3...");
-            yield return new WaitForSeconds(0.5f);
-            Debug.Log("Starting in 2...");
-            yield return new WaitForSeconds(0.5f);
-            Debug.Log("Starting in 1...");
-            yield return new WaitForSeconds(0.5f);
+            UI_Countdown.Show(3);
+            yield return new WaitForSeconds(1f);
+            UI_Countdown.Show(2);
+            yield return new WaitForSeconds(1f);
+            UI_Countdown.Show(1);
+            yield return new WaitForSeconds(1f);
+            UI_Countdown.gameObject.SetActive(false);
 
             fsm.ChangeState(States.Play);
         }
 
-        void Countdown_OnGUI()
-        {
-            GUILayout.Label("Look at Console");
-        }
-
         void Play_Enter()
         {
-            Debug.Log("FIGHT!");
+            UI_Timer.StartTimer(TimerDuration);
+            SelectNewImage();
         }
 
         void Play_Update()
@@ -98,29 +102,33 @@ namespace minigame.fast_reaction
             Debug.Log("End Game");
         }
 
-        public void OnBtnYes()
-        {
-            CheckAnswer(true);
-        }
-
-        public void OnBtnNo()
-        {
-            CheckAnswer(false);
-        }
-
         void CheckAnswer(bool choice)
         {
-            SelectNewImage();
 
-            if (choice)
+            if ((choice && previousImage == currentImage) || (!choice && previousImage != currentImage))
             {
                 score++;
-                UI_Score.AddScore(1, score);
+                combo_counter++;
+                if (combo_counter > 5)
+                {
+                    combo_counter = 0;
+                    combo_multiplier++;
+                    SoundManager.I.PlaySfx(AudioEnum.game_win);
+                }
+                UI_Score.AddScore(1 * combo_multiplier, score);
             }
+            else
+            {
+                combo_multiplier = 1;
+                combo_counter = 0;
+                SoundManager.I.PlaySfx(AudioEnum.game_error);
+            }
+            SelectNewImage();
         }
 
         void SelectNewImage()
         {
+            previousImage = currentImage;
             if (Random.Range(1, 100) < PercentSameSymbol)
             {
                 // same image
@@ -131,5 +139,28 @@ namespace minigame.fast_reaction
             }
             Display.ShowImage(currentImage);
         }
+
+        void SelectFirstImage()
+        {
+            currentImage = Random.Range(0, Display.GetAlbumSize());
+            previousImage = currentImage;
+            Display.ShowImage(currentImage);
+        }
+
+        public void OnBtnStart()
+        {
+            fsm.ChangeState(States.Countdown);
+        }
+
+        public void OnBtnYes()
+        {
+            CheckAnswer(true);
+        }
+
+        public void OnBtnNo()
+        {
+            CheckAnswer(false);
+        }
+
     }
 }
