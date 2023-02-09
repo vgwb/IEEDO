@@ -24,10 +24,13 @@ namespace minigame.fast_reaction
         public ui_countdown UI_Countdown;
 
         [Header("Game Settings")]
-        public int PercentSameSymbol;
-        public int TimerDuration;
+        public int BaseScore = 50;
+        public int SameSymbolProbability = 60;
+        public int TimerDuration = 60;
 
+        private int level = 0;
         private int score = 0;
+        private int delta_score = 0;
         private int combo_multiplier = 1;
         private int combo_counter = 0;
         private int currentImage = -1;
@@ -51,6 +54,7 @@ namespace minigame.fast_reaction
 
         void Init_Enter()
         {
+            level = 0;
             score = 0;
             combo_counter = 0;
             combo_multiplier = 1;
@@ -107,7 +111,9 @@ namespace minigame.fast_reaction
 
             if ((choice && previousImage == currentImage) || (!choice && previousImage != currentImage))
             {
-                score++;
+                level++;
+                delta_score = BaseScore * combo_multiplier;
+                score += delta_score;
                 combo_counter++;
                 if (combo_counter > 5)
                 {
@@ -115,7 +121,7 @@ namespace minigame.fast_reaction
                     combo_multiplier++;
                     SoundManager.I.PlaySfx(AudioEnum.game_win);
                 }
-                UI_Score.AddScore(1 * combo_multiplier, score);
+                UI_Score.AddScore(delta_score, score);
             }
             else
             {
@@ -129,7 +135,7 @@ namespace minigame.fast_reaction
         void SelectNewImage()
         {
             previousImage = currentImage;
-            if (Random.Range(1, 100) < PercentSameSymbol)
+            if (Random.Range(1, 100) < SameSymbolProbability)
             {
                 // same image
             }
@@ -137,7 +143,7 @@ namespace minigame.fast_reaction
             {
                 currentImage = Random.Range(0, Display.GetAlbumSize());
             }
-            Display.ShowImage(currentImage);
+            Display.NewImage(currentImage);
         }
 
         void SelectFirstImage()
