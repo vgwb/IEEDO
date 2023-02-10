@@ -9,6 +9,12 @@ namespace minigame.fast_reaction
 {
     public class ActivityFastReaction : ActivityManager
     {
+        public static ActivityFastReaction I;
+
+        void Awake()
+        {
+            I = this;
+        }
 
         void Start()
         {
@@ -20,23 +26,40 @@ namespace minigame.fast_reaction
 
         protected override void SetupActivity(int currentLevel)
         {
-            Debug.Log($"Starting game at level {currentLevel}");
+            StartGame();
+        }
 
+        void StartGame()
+        {
             PlayFastReaction.I.InitGame();
         }
 
-        public void FinishGame(bool playerWin)
+        public void FinishGame(int score, int level)
         {
-            if (playerWin)
+            SoundManager.I.PlaySfx(AudioEnum.game_win);
+            int points = Activity.PointsOnWin * level;
+            StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win, points, score, level)));
+        }
+
+        public override IEnumerator PlayNextLevel(int _currentLevel)
+        {
+            StartGame();
+            yield break;
+        }
+
+        void Update()
+        {
+#if UNITY_EDITOR
+            // DEBUG
+            if (Input.GetKeyDown(KeyCode.A))
             {
-                SoundManager.I.PlaySfx(AudioEnum.game_win);
-                StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Win, 10)));
+                PlayFastReaction.I.OnBtnNo();
             }
-            else
+            if (Input.GetKeyDown(KeyCode.D))
             {
-                SoundManager.I.PlaySfx(AudioEnum.game_lose);
-                StartCoroutine(CompleteActivity(new ActivityResult(ActivityResultState.Lose, 10)));
+                PlayFastReaction.I.OnBtnYes();
             }
+#endif
         }
 
     }

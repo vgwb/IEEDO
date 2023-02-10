@@ -165,10 +165,6 @@ namespace minigame.g2048
             }
         }
 
-        /// <summary>
-        /// Move Blocks by User Input.
-        /// </summary>
-        /// <param name="dir"></param>
         public void MoveTo(Node.Direction dir)
         {
             if (dir == Node.Direction.RIGHT)

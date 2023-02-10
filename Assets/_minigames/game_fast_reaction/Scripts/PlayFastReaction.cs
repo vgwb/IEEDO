@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using MonsterLove.StateMachine;
 using vgwb.framework;
@@ -18,9 +19,11 @@ namespace minigame.fast_reaction
 
         [Header("References")]
         public ImageDisplay Display;
+        public UIButton ButtonYes;
+        public UIButton ButtonNo;
+        public UIButton ButtonStart;
         public ui_timer UI_Timer;
         public ui_score UI_Score;
-        public GameObject BtnStart;
         public ui_countdown UI_Countdown;
 
         [Header("Game Settings")]
@@ -47,10 +50,10 @@ namespace minigame.fast_reaction
             fsm.ChangeState(States.Init);
         }
 
-        // void Update()
-        // {
-        //     fsm.Driver.Update.Invoke();
-        // }
+        void Update()
+        {
+            fsm.Driver.Update.Invoke();
+        }
 
         void Init_Enter()
         {
@@ -59,16 +62,21 @@ namespace minigame.fast_reaction
             combo_counter = 0;
             combo_multiplier = 1;
             currentImage = previousImage = -1;
+            UI_Score.Init(0, 0);
             UI_Timer.Init(TimerDuration);
             SelectFirstImage();
-            BtnStart.SetActive(true);
+            ButtonStart.Show();
+            ButtonYes.Hide();
+            ButtonNo.Hide();
             UI_Countdown.gameObject.SetActive(false);
         }
 
         IEnumerator Countdown_Enter()
         {
-            BtnStart.SetActive(false);
+            ButtonStart.Hide();
             UI_Countdown.gameObject.SetActive(true);
+            ButtonYes.Show();
+            ButtonNo.Show();
 
             UI_Countdown.Show(3);
             yield return new WaitForSeconds(1f);
@@ -89,7 +97,6 @@ namespace minigame.fast_reaction
 
         void Play_Update()
         {
-
             if (UI_Timer.timeRemaining <= 0)
             {
                 fsm.ChangeState(States.End);
@@ -104,6 +111,7 @@ namespace minigame.fast_reaction
         void End_Enter()
         {
             Debug.Log("End Game");
+            ActivityFastReaction.I.FinishGame(score, level);
         }
 
         void CheckAnswer(bool choice)
@@ -160,12 +168,18 @@ namespace minigame.fast_reaction
 
         public void OnBtnYes()
         {
-            CheckAnswer(true);
+            if (fsm.State == States.Play)
+            {
+                CheckAnswer(true);
+            }
         }
 
         public void OnBtnNo()
         {
-            CheckAnswer(false);
+            if (fsm.State == States.Play)
+            {
+                CheckAnswer(false);
+            }
         }
 
     }

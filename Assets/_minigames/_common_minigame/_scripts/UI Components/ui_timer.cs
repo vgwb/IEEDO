@@ -45,7 +45,8 @@ namespace minigame
                 else
                 {
                     Debug.Log("Time has run out!");
-                    timeRemaining = -1;
+                    timeRemaining = 0;
+                    DisplayTime(timeRemaining);
                     timerIsRunning = false;
                 }
             }
