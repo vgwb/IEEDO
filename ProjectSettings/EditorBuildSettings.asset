@@ -15,24 +15,6 @@ EditorBuildSettings:
     path: Assets/_minigames/game_unblock/game_unblock.unity
     guid: 91f0178d139d54df282b1c52b1567bb3
   - enabled: 1
-    path: Assets/_minigames/game_tictac/game_tictac.unity
-    guid: 7e3e4fd162bb70248a65337e1fc92b04
-  - enabled: 1
-    path: Assets/_minigames/game_mergenumbers/game_mergenumbers.unity
-    guid: d4cc48773fa654851b7e037887b6affa
-  - enabled: 1
-    path: Assets/_minigames/game_memory_pattern/game_memory_pattern.unity
-    guid: 08530aad30f9bf8418b528fe5fb81564
-  - enabled: 1
-    path: Assets/_minigames/game_memory_sequence/game_memory_sequence.unity
-    guid: e6d899af1dcd24b5a82b89a33f0490d3
-  - enabled: 1
-    path: Assets/_minigames/game_math_order/game_math_order.unity
-    guid: dbe0dc4418b294d10a5e0babd516198f
-  - enabled: 1
-    path: Assets/_minigames/game_math_speed/game_math_speed.unity
-    guid: b640972c3d021424698cbad9456d03b1
-  - enabled: 1
     path: Assets/_minigames/game_fast_reaction/game_fast_reaction.unity
     guid: a63d243176bbf4eaab748412ced2332c
   - enabled: 1
