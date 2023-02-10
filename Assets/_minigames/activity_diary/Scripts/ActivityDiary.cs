@@ -4,7 +4,10 @@ using System.Globalization;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
+using UnityEngine.Localization.Components;
+
 using TMPro;
 
 namespace Ieedo.games.diary
@@ -17,6 +20,8 @@ namespace Ieedo.games.diary
 
     public class ActivityDiary : ActivityManager
     {
+        public UITextContent ActivityTitle;
+        public LocalizeStringEvent PlaceHolderTextEvent;
         public TMP_Text DateText;
         public TMP_Text PageText;
         public TMP_InputField InputText;
@@ -27,8 +32,25 @@ namespace Ieedo.games.diary
         private int currentPageNumber;
         private int totalPageNumber;
 
+        void Start()
+        {
+            if (DebugAutoplay)
+            {
+                Debug.Log("AUTOPLAY START");
+                var gameName = $"{Activity.LocName}";
+                ActivityTitle.Text.Key = new LocalizedString("Activity", $"{gameName}");
+                //                ActivityDescription.Text.Key = new LocalizedString("Activity", $"{gameName}_description");
+                PlaceHolderTextEvent.StringReference = new LocalizedString("Activity", $"{gameName}_description");
+            }
+        }
+
         protected override void SetupActivity(int currentLevel)
         {
+            var gameName = $"{Statics.ActivityFlow.CurrentActivity.LocName}";
+            ActivityTitle.Text.Key = new LocalizedString("Activity", $"{gameName}");
+            PlaceHolderTextEvent.StringReference = new LocalizedString("Activity", $"{gameName}_description");
+            //            ActivityDescription.Text.Key = new LocalizedString("Activity", $"{gameName}_description");
+
             //            Debug.Log($"Starting ActivityDiary");
             var activityData = Statics.Data.Profile.Activities.GetActivityData(Statics.ActivityFlow.CurrentActivity.ID);
 

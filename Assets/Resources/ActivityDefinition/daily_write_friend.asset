@@ -32,7 +32,7 @@ MonoBehaviour:
   Skills: 0
   Image: {fileID: 21300000, guid: 50758501e29a647029a83039b0a32acd, type: 3}
   SceneName: activity_diary
-  PointsToUnlock: 100
+  PointsToUnlock: 300
   PointsOnWin: 20
   PointsOnLoss: 0
   MaxLevel: 1
