@@ -48,11 +48,11 @@ namespace Ieedo
             if (ApplicationConfig.ResetProfileAtVersionMismatch)
             {
                 // Reset profile at the new version (for now)
-                if (Statics.Data.Profile.Version != ApplicationConfig.Version)
-                {
-                    Debug.LogWarning("Profile version mismatch! We reset to a new profile");
-                    Statics.Data.CreateDefaultNewProfile();
-                }
+                // if (Statics.Data.Profile.Version != ApplicationConfig.Version)
+                // {
+                //     Debug.LogWarning("Profile version mismatch! We reset to a new profile");
+                //     Statics.Data.CreateDefaultNewProfile();
+                // }
             }
 
             // Setup correct locale based on the player profile
