@@ -24,6 +24,7 @@ namespace minigame.fast_reaction
         public UIButton ButtonStart;
         public ui_timer UI_Timer;
         public ui_score UI_Score;
+        public ui_score UI_Combo;
         public ui_countdown UI_Countdown;
 
         [Header("Game Settings")]
@@ -31,7 +32,7 @@ namespace minigame.fast_reaction
         public int SameSymbolProbability = 60;
         public int TimerDuration = 60;
 
-        private int level = 0;
+        private int level = 1;
         private int score = 0;
         private int delta_score = 0;
         private int combo_multiplier = 1;
@@ -55,14 +56,16 @@ namespace minigame.fast_reaction
             fsm.Driver.Update.Invoke();
         }
 
+        #region FSM
         void Init_Enter()
         {
-            level = 0;
+            level = 1;
             score = 0;
             combo_counter = 0;
             combo_multiplier = 1;
             currentImage = previousImage = -1;
-            UI_Score.Init(0, 0);
+            UI_Score.Init(score);
+            UI_Combo.Init(level);
             UI_Timer.Init(TimerDuration, () => WhenTimerFinishes());
             SelectFirstImage();
             ButtonStart.Show();
@@ -92,11 +95,6 @@ namespace minigame.fast_reaction
             fsm.ChangeState(States.Play);
         }
 
-        public void WhenTimerFinishes()
-        {
-            fsm.ChangeState(States.End);
-        }
-
         void Play_Enter()
         {
             UI_Timer.StartTimer();
@@ -105,10 +103,6 @@ namespace minigame.fast_reaction
 
         void Play_Update()
         {
-            // if (UI_Timer.timeRemaining <= 0)
-            // {
-            //     //fsm.ChangeState(States.End);
-            // }
         }
 
         void Play_Exit()
@@ -120,6 +114,14 @@ namespace minigame.fast_reaction
         {
             Debug.Log("End Game");
             ActivityFastReaction.I.FinishGame(score, level);
+        }
+
+        #endregion
+
+        // callback from Timer
+        public void WhenTimerFinishes()
+        {
+            fsm.ChangeState(States.End);
         }
 
         void CheckAnswer(bool choice)
@@ -136,13 +138,15 @@ namespace minigame.fast_reaction
                     combo_counter = 0;
                     combo_multiplier++;
                     SoundManager.I.PlaySfx(AudioEnum.game_win);
+                    UI_Combo.AddScore(1, combo_multiplier);
                 }
                 UI_Score.AddScore(delta_score, score);
             }
             else
             {
-                combo_multiplier = 1;
                 combo_counter = 0;
+                UI_Combo.AddScore(1 - combo_multiplier, 1);
+                combo_multiplier = 1;
                 SoundManager.I.PlaySfx(AudioEnum.game_error);
             }
             SelectNewImage();

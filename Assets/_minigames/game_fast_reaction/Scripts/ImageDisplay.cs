@@ -38,7 +38,6 @@ namespace minigame.fast_reaction
             newImage = which;
             Image_1.transform.localPositionTransition(Image_Right.transform.localPosition, Speed, LeanEase.Accelerate);
             Image_1.transform.EventTransition(() => changeImage(), Speed + 0.05f);
-
         }
 
         private void changeImage()

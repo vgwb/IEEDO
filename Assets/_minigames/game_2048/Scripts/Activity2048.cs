@@ -20,6 +20,7 @@ namespace minigame.g2048
     {
         public Board board;
         public ui_score ScoreUI;
+        public ui_score HiScoreUI;
         public static Activity2048 I;
 
         private int currentScore;
@@ -51,7 +52,8 @@ namespace minigame.g2048
             }
             Debug.Log($"Starting game at level {currentLevel}");
 
-            ScoreUI.Init(0, maxScore);
+            ScoreUI.Init(0);
+            HiScoreUI.Init(maxScore);
             board.StartGame();
         }
 

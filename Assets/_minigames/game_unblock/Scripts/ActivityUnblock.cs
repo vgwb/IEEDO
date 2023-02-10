@@ -38,7 +38,7 @@ namespace minigame.unblock
         {
             GameManager.I().init();
             Debug.Log($"Starting game at level {currentLevel}");
-            ScoreUI.SetLevel(currentLevel);
+            ScoreUI.Init(currentLevel);
             GameData.I().isLock = false;
             Unblock tg = GameObject.Find("unblock").GetComponent<Unblock>();
             tg.clear();
