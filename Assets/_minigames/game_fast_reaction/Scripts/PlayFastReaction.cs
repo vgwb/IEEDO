@@ -130,8 +130,6 @@ namespace minigame.fast_reaction
             if ((choice && previousImage == currentImage) || (!choice && previousImage != currentImage))
             {
                 level++;
-                delta_score = BaseScore * combo_multiplier;
-                score += delta_score;
                 combo_counter++;
                 if (combo_counter > 5)
                 {
@@ -140,13 +138,15 @@ namespace minigame.fast_reaction
                     SoundManager.I.PlaySfx(AudioEnum.game_win);
                     UI_Combo.AddScore(1, combo_multiplier);
                 }
+                delta_score = BaseScore * combo_multiplier;
+                score += delta_score;
                 UI_Score.AddScore(delta_score, score);
             }
             else
             {
                 combo_counter = 0;
-                UI_Combo.AddScore(1 - combo_multiplier, 1);
                 combo_multiplier = 1;
+                UI_Combo.AddScore(-1, 1);
                 SoundManager.I.PlaySfx(AudioEnum.game_error);
             }
             SelectNewImage();

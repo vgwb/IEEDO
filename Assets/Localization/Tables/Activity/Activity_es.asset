@@ -297,10 +297,6 @@ MonoBehaviour:
     m_Localized: "P\xE1ginas"
     m_Metadata:
       m_Items: []
-  - m_Id: 115977791037448192
-    m_Localized: "Puntuac\xEDon"
-    m_Metadata:
-      m_Items: []
   - m_Id: 115977791037448193
     m_Localized: '{points} para desbloquear'
     m_Metadata:
@@ -506,6 +502,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 124969240149090304
     m_Localized: Tiempo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 125004304811548672
+    m_Localized: "Puntuac\xEDon"
     m_Metadata:
       m_Items: []
   references:

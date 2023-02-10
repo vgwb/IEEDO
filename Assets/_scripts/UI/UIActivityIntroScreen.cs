@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using minigame;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Localization;
 
@@ -7,10 +8,9 @@ namespace Ieedo
     public class UIActivityIntroScreen : UIScreen
     {
         public override ScreenID ID => ScreenID.ActivityIntro;
-
         public UITextContent Title;
         public UITextContent Description;
-        public UITextContent ScoreInfo;
+        public ui_score CurrentScore;
 
         public UIButton ContinueButton;
 
@@ -20,19 +20,16 @@ namespace Ieedo
             Title.Text.Key = new LocalizedString("Activity", $"{gameName}");
             Description.Text.Key = new LocalizedString("Activity", $"{gameName}_description");
 
-            string scoreString = "";
             switch (Statics.ActivityFlow.CurrentActivity.ScoreType)
             {
                 case ScoreType.Highscore:
-                    scoreString = new LocalizedString("Activity", "activity_highscore").GetLocalizedString();
-                    ScoreInfo.Text.SetTextRaw(scoreString + " " + Statics.ActivityFlow.CurrentActivityData.HiScore);
+                    CurrentScore.Init(Statics.ActivityFlow.CurrentActivityData.HiScore, ui_score.ScoreLabel.hiscore);
                     break;
                 case ScoreType.LevelReached:
-                    scoreString = new LocalizedString("Activity", "activity_level").GetLocalizedString();
-                    ScoreInfo.Text.SetTextRaw(scoreString + " " + Statics.ActivityFlow.CurrentActivityData.CurrentLevel);
+                    CurrentScore.Init(Statics.ActivityFlow.CurrentActivityData.CurrentLevel, ui_score.ScoreLabel.level);
                     break;
                 case ScoreType.NumberOfPlays:
-                    ScoreInfo.Text.SetTextRaw(scoreString);
+                    CurrentScore.Init(Statics.ActivityFlow.CurrentActivityData.CurrentLevel, ui_score.ScoreLabel.playcount);
                     break;
             }
 

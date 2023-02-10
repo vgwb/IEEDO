@@ -11,7 +11,6 @@ namespace Ieedo
     public class UIActivitiesScreen : UIScreen
     {
         public override ScreenID ID => ScreenID.Activities;
-
         public List<UIActivityBlock> ActivityBlocks;
 
         public void OnEnable()
@@ -82,16 +81,13 @@ namespace Ieedo
                 ActivityBlocks[i].ScoreText.Key = ScoreLabel;
                 ActivityBlocks[i].ScoreValue.SetTextRaw(ScoreText);
 
-
                 // Check unlock state
                 if (activityDefinition.Available)
                 {
-                    //Debug.Log("ciccio " + Statics.App.ApplicationConfig.GetPointsSymbolString());
                     data.Unlocked = Statics.Data.Profile.CurrentPoints >= activityDefinition.PointsToUnlock;
                     ActivityBlocks[i].LockedGO.SetActive(!data.Unlocked);
 
                     var pointsToUnlockLoc = new LocalizedString("Activity", "activity_to_unlock");
-                    //                    pointsToUnlockLoc.Arguments = new List<object> { activityDefinition.PointsToUnlock };
                     string points = activityDefinition.PointsToUnlock + " " + Statics.App.ApplicationConfig.GetPointsSymbolString();
                     pointsToUnlockLoc.Add("points", new StringVariable { Value = points });
                     ActivityBlocks[i].LockedText.Key = pointsToUnlockLoc;

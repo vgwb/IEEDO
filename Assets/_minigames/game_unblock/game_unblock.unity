@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: Activity
       value: 
       objectReference: {fileID: 11400000, guid: 895ed3613206648d8ac53802e2f66bc3, type: 2}
+    - target: {fileID: 1935878963565346100, guid: b21cec470abfeb34192c6303df26ccd0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -87.79999
+      objectReference: {fileID: 0}
     - target: {fileID: 6016258723710853812, guid: b21cec470abfeb34192c6303df26ccd0, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -452,6 +456,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 428325359}
     m_Modifications:
+    - target: {fileID: 6034130968788856977, guid: 7098c74f1a75942649294a30f906a5c0, type: 3}
+      propertyPath: m_text
+      value: level
+      objectReference: {fileID: 0}
     - target: {fileID: 7146359555028660929, guid: 7098c74f1a75942649294a30f906a5c0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -539,6 +547,10 @@ PrefabInstance:
     - target: {fileID: 8768582136045128920, guid: 7098c74f1a75942649294a30f906a5c0, type: 3}
       propertyPath: m_Name
       value: UI Score
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167637922720019202, guid: 7098c74f1a75942649294a30f906a5c0, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 115977791033253890
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7098c74f1a75942649294a30f906a5c0, type: 3}

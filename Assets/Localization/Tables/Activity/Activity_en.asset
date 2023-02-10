@@ -452,10 +452,6 @@ MonoBehaviour:
     m_Localized: Played
     m_Metadata:
       m_Items: []
-  - m_Id: 115977791037448192
-    m_Localized: Score
-    m_Metadata:
-      m_Items: []
   - m_Id: 115977791037448193
     m_Localized: '{points} to unlock'
     m_Metadata:
@@ -507,6 +503,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 124969240149090304
     m_Localized: Time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 125004304811548672
+    m_Localized: Score
     m_Metadata:
       m_Items: []
   references:

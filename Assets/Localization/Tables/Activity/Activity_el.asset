@@ -355,10 +355,6 @@ MonoBehaviour:
     m_Localized: "\u03A0\u03B1\u03AF\u03C7\u03C4\u03B7\u03BA\u03B5"
     m_Metadata:
       m_Items: []
-  - m_Id: 115977791037448192
-    m_Localized: "\u0392\u03B1\u03B8\u03BC\u03BF\u03BB\u03BF\u03B3\u03AF\u03B1"
-    m_Metadata:
-      m_Items: []
   - m_Id: 115977791037448193
     m_Localized: "{points} \u03B3\u03B9\u03B1 \u03BD\u03B1 \u03BE\u03B5\u03BA\u03BB\u03B5\u03B9\u03B4\u03CE\u03C3\u03B5\u03C4\u03B5"
     m_Metadata:
@@ -682,6 +678,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 124969240149090304
     m_Localized: "\u03C7\u03C1\u03CC\u03BD\u03BF\u03C2"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 125004304811548672
+    m_Localized: "\u0392\u03B1\u03B8\u03BC\u03BF\u03BB\u03BF\u03B3\u03AF\u03B1"
     m_Metadata:
       m_Items: []
   references:

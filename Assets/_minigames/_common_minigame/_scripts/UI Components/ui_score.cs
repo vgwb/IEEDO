@@ -4,11 +4,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using DG.Tweening;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Components;
 
 namespace minigame
 {
     public class ui_score : MonoBehaviour
     {
+        public enum ScoreLabel
+        {
+            DoNotChange = 0,
+            score,
+            hiscore,
+            level,
+            playcount
+        }
+
+        public ScoreLabel LabelType;
+
+        public LocalizeStringEvent ScoreLabelLocEvent;
         public GameObject ScoreGO;
         public TextMeshProUGUI ScoreText;
         public GameObject BonusPrefab;
@@ -18,16 +32,38 @@ namespace minigame
 
         void Start()
         {
-            ScoreText.text = "";
+            //            ScoreText.text = "";
 
             PunchAnimation = DOTween.Sequence()
-           .Insert(0, ScoreGO.transform.DOPunchScale(new Vector3(0.5f, 0.5f, 0.5f), 1, 3, 0f))
            .SetAutoKill(false).Pause();
         }
 
-        public void Init(int score)
+        public void Show(bool status)
+        {
+            gameObject.SetActive(status);
+        }
+
+        public void Init(int score, ScoreLabel label = ScoreLabel.DoNotChange)
         {
             ScoreText.text = score.ToString();
+
+            switch (label)
+            {
+                case ScoreLabel.score:
+                    ScoreLabelLocEvent.StringReference = new LocalizedString("Activity", "activity_score");
+                    break;
+                case ScoreLabel.hiscore:
+                    ScoreLabelLocEvent.StringReference = new LocalizedString("Activity", "activity_highscore");
+                    break;
+                case ScoreLabel.level:
+                    ScoreLabelLocEvent.StringReference = new LocalizedString("Activity", "activity_level");
+                    break;
+                case ScoreLabel.playcount:
+                    ScoreLabelLocEvent.StringReference = new LocalizedString("Activity", "activity_played");
+                    break;
+                case ScoreLabel.DoNotChange:
+                    break;
+            }
         }
 
         public void AddScore(int bonus, int totalScore)

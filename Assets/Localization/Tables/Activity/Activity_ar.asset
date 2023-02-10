@@ -118,10 +118,6 @@ MonoBehaviour:
     m_Localized: "\u0627\u0644\u0646\u062A\u064A\u062C\u0629 "
     m_Metadata:
       m_Items: []
-  - m_Id: 115977791037448192
-    m_Localized: "\u0627\u0644\u0646\u062A\u064A\u062C\u0629 "
-    m_Metadata:
-      m_Items: []
   - m_Id: 115977791037448193
     m_Localized: " \u0646\u0642\u0627\u0637 \u0644\u0641\u062A\u062D{points} "
     m_Metadata:
@@ -129,6 +125,10 @@ MonoBehaviour:
       - rid: 3196637817602572292
   - m_Id: 124969240149090304
     m_Localized: "\u0648\u0642\u062A"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 125004304811548672
+    m_Localized: "\u0627\u0644\u0646\u062A\u064A\u062C\u0629 "
     m_Metadata:
       m_Items: []
   references:

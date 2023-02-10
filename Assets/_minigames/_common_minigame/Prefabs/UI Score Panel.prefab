@@ -152,7 +152,7 @@ MonoBehaviour:
     m_TableReference:
       m_TableCollectionName: GUID:e48f391c1e96c7040b7091b267464dc8
     m_TableEntryReference:
-      m_KeyId: 115977791037448192
+      m_KeyId: 125004304811548672
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -402,6 +402,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ad9bbf0954db4a41be8a0042226afcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LabelType: 0
+  ScoreLabelLocEvent: {fileID: 9167637922720019202}
   ScoreGO: {fileID: 7755024704149078847}
   ScoreText: {fileID: 7755024704149078833}
   BonusPrefab: {fileID: 3774780889815644438, guid: 9668ea633f6124933abe4fd2ed7ff684, type: 3}

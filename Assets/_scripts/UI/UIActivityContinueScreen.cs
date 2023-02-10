@@ -1,9 +1,9 @@
-﻿using System;
+﻿using minigame;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Localization;
-using UnityEngine.Localization.SmartFormat.PersistentVariables;
 
 namespace Ieedo
 {
@@ -17,9 +17,9 @@ namespace Ieedo
         public UIButton NextLevelButton;
         public UIButton QuitButton;
 
-        public GameObject ScorePivot;
-        public UITextContent CurrentScore;
-        public UITextContent HighScore;
+        public GameObject ScoresContainer;
+        public ui_score CurrentScore;
+        public ui_score HighScore;
 
         public IEnumerator ShowResult(ActivityResult result)
         {
@@ -30,10 +30,9 @@ namespace Ieedo
             {
                 case ActivityType.Daily:
                     Title.Text.Key = new LocalizedString("Activity", $"activity_result_daily_complete");
-                    //Content.Text.Key = new LocalizedString("Activity", $"{activityDef.LocName}_end");
                     Content.Text.Key = new LocalizedString("Activity", $"daily_write_diary_end");
                     NextLevelButton.gameObject.SetActive(false);
-                    ScorePivot.SetActive(false);
+                    ScoresContainer.SetActive(false);
                     break;
                 case ActivityType.Game:
                     switch (activityDef.ScoreType)
@@ -43,26 +42,25 @@ namespace Ieedo
                             Content.Text.Key = new LocalizedString("Activity", "activity_play_everyday");
                             NextLevelButton.Key = new LocalizedString("Activity", "activity_play_again");
 
-                            var scoreLoc = new LocalizedString("Activity", $"activity_score").GetLocalizedString();
-                            CurrentScore.Text.SetTextRaw(scoreLoc + ": " + result.Score);
-                            var highscoreLoc = new LocalizedString("Activity", $"activity_highscore").GetLocalizedString();
-                            HighScore.Text.SetTextRaw(highscoreLoc + ": " + activityData.HiScore);
-                            ScorePivot.SetActive(true);
+                            CurrentScore.Init(result.Score, ui_score.ScoreLabel.score);
+                            HighScore.Init(activityData.HiScore, ui_score.ScoreLabel.hiscore);
+                            HighScore.Show(true);
+                            ScoresContainer.SetActive(true);
                             break;
                         case ScoreType.NumberOfPlays:
                             Title.Text.Key = new LocalizedString("Activity", $"activity_result_game_{result.Result.ToString().ToLower()}");
                             Content.Text.Key = new LocalizedString("Activity", "activity_play_everyday");
                             NextLevelButton.Key = new LocalizedString("Activity", "activity_play_again");
-                            ScorePivot.SetActive(false);
+                            ScoresContainer.SetActive(false);
                             break;
                         case ScoreType.LevelReached:
                             Title.Text.Key = new LocalizedString("Activity", $"activity_completed");
                             Content.Text.Key = new LocalizedString("Activity", "activity_play_everyday");
                             NextLevelButton.Key = new LocalizedString("Activity", "activity_play_next_level");
-                            var levelLoc = new LocalizedString("Activity", $"activity_level").GetLocalizedString();
-                            CurrentScore.Text.SetTextRaw(levelLoc + ": " + result.PlayedLevel);
-                            HighScore.Text.SetTextRaw("");
-                            ScorePivot.SetActive(true);
+
+                            CurrentScore.Init(result.PlayedLevel, ui_score.ScoreLabel.level);
+                            HighScore.Show(false);
+                            ScoresContainer.SetActive(true);
                             break;
                     }
                     NextLevelButton.gameObject.SetActive(true);

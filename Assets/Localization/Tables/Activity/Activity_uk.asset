@@ -344,10 +344,6 @@ MonoBehaviour:
     m_Localized: "\u0413\u0440\u0430\u0432"
     m_Metadata:
       m_Items: []
-  - m_Id: 115977791037448192
-    m_Localized: "\u0417\u0430\u0431\u0438\u0442\u0438"
-    m_Metadata:
-      m_Items: []
   - m_Id: 115977791037448193
     m_Localized: "{points} \u0440\u043E\u0437\u0431\u043B\u043E\u043A\u0443\u0432\u0430\u043D\u043D\u044F"
     m_Metadata:
@@ -647,6 +643,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 124969240149090304
     m_Localized: "\u0447\u0430\u0441"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 125004304811548672
+    m_Localized: "\u0417\u0430\u0431\u0438\u0442\u0438"
     m_Metadata:
       m_Items: []
   references:
