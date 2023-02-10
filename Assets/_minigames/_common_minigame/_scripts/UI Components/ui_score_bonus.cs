@@ -9,14 +9,23 @@ namespace minigame
     public class ui_score_bonus : MonoBehaviour
     {
         public TextMeshProUGUI ScoreText;
+        private float currentLocalY;
 
-        public void Init(int value)
+        public void Init(int bonusValue)
         {
-            ScoreText.text = (value >= 0 ? "+" : "-") + value;
-            //            var localY = GetComponent<RectTransform>().anchoredPosition.y;
-            //            GetComponent<RectTransform>().DOAnchorPosY(localY - 50, 1);
+            currentLocalY = transform.localPosition.y;
+            ScoreText.text = bonusValue.ToString();
             GetComponent<CanvasGroup>().DOFade(0, 1);
-            transform.DOLocalMoveY(80, 1);
+            if (bonusValue >= 0)
+            {
+                ScoreText.color = Color.yellow;
+                transform.DOLocalMoveY(currentLocalY + 50, 1);
+            }
+            else
+            {
+                ScoreText.color = Color.red;
+                transform.DOLocalMoveY(currentLocalY - 100, 1);
+            }
             Destroy(gameObject, 3);
         }
 
