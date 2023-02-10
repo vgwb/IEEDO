@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 using UnityEngine.Localization.Components;
@@ -28,6 +29,10 @@ namespace Ieedo.games.diary
         public GameObject BtnNext;
         public GameObject BtnPrev;
 
+        public Image Background;
+        public Sprite TextureDiary;
+        public Sprite TextureLetter;
+
         public List<Page> Pages = new List<Page>();
         private int currentPageNumber;
         private int totalPageNumber;
@@ -37,21 +42,29 @@ namespace Ieedo.games.diary
             if (DebugAutoplay)
             {
                 Debug.Log("AUTOPLAY START");
-                var gameName = $"{Activity.LocName}";
-                ActivityTitle.Text.Key = new LocalizedString("Activity", $"{gameName}");
-                //                ActivityDescription.Text.Key = new LocalizedString("Activity", $"{gameName}_description");
-                PlaceHolderTextEvent.StringReference = new LocalizedString("Activity", $"{gameName}_description");
+                preparePage(Activity);
+            }
+        }
+
+        void preparePage(ActivityDefinition Activity)
+        {
+            var gameName = $"{Activity.LocName}";
+            ActivityTitle.Text.Key = new LocalizedString("Activity", $"{gameName}");
+            PlaceHolderTextEvent.StringReference = new LocalizedString("Activity", $"{gameName}_description");
+
+            if (Activity.ID == ActivityID.Write_Diary)
+            {
+                Background.sprite = TextureDiary;
+            }
+            else
+            {
+                Background.sprite = TextureLetter;
             }
         }
 
         protected override void SetupActivity(int currentLevel)
         {
-            var gameName = $"{Statics.ActivityFlow.CurrentActivity.LocName}";
-            ActivityTitle.Text.Key = new LocalizedString("Activity", $"{gameName}");
-            PlaceHolderTextEvent.StringReference = new LocalizedString("Activity", $"{gameName}_description");
-            //            ActivityDescription.Text.Key = new LocalizedString("Activity", $"{gameName}_description");
-
-            //            Debug.Log($"Starting ActivityDiary");
+            preparePage(Statics.ActivityFlow.CurrentActivity);
             var activityData = Statics.Data.Profile.Activities.GetActivityData(Statics.ActivityFlow.CurrentActivity.ID);
 
             Pages.Clear();
@@ -91,7 +104,14 @@ namespace Ieedo.games.diary
 
             DateText.text = Pages[currentPageNumber - 1].Date.ToString("ddd dd MMM", LocalizationSettings.SelectedLocale.Formatter);
             InputText.text = Pages[currentPageNumber - 1].Text;
-            PageText.text = currentPageNumber + " / " + totalPageNumber;
+            if (totalPageNumber > 1)
+            {
+                PageText.text = currentPageNumber + "\n-\n" + totalPageNumber;
+            }
+            else
+            {
+                PageText.text = "";
+            }
 
             if (currentPageNumber == totalPageNumber)
             {
