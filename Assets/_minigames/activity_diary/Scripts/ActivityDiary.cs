@@ -50,7 +50,7 @@ namespace Ieedo.games.diary
         {
             var gameName = $"{Activity.LocName}";
             ActivityTitle.Text.Key = new LocalizedString("Activity", $"{gameName}");
-            PlaceHolderTextEvent.StringReference = new LocalizedString("Activity", $"{gameName}_description");
+            PlaceHolderTextEvent.StringReference = new LocalizedString("Activity", $"{gameName}_prompt");
 
             if (Activity.ID == ActivityID.Write_Diary)
             {
