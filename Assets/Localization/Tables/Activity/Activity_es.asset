@@ -190,7 +190,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111596475087872000
-    m_Localized: "\xBFLa imagen es la misma que la anterior?"
+    m_Localized: "Responde s\xED o no tan r\xE1pido como pueda."
     m_Metadata:
       m_Items: []
   - m_Id: 111599790488051712
@@ -358,10 +358,6 @@ MonoBehaviour:
     m_Localized: "Escribe aqu\xED un mensaje a tu futuro yo ..."
     m_Metadata:
       m_Items: []
-  - m_Id: 115987864724955136
-    m_Localized: "Responde s\xED o no tan r\xE1pido como pueda."
-    m_Metadata:
-      m_Items: []
   - m_Id: 104043542756712455
     m_Localized: "Selecciona los n\xFAmeros en orden ascendente o descendente como
       lo indica la flecha."
@@ -502,6 +498,10 @@ MonoBehaviour:
   - m_Id: 111561110367232016
     m_Localized: "La fluidez verbal es la capacidad de recuperar r\xE1pidamente palabras
       de tu vocabulario mental."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 124966118831939584
+    m_Localized: "\xBFLa imagen es la misma que la anterior?"
     m_Metadata:
       m_Items: []
   references:

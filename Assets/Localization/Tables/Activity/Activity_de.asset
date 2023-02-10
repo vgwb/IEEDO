@@ -191,7 +191,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111596475087872000
-    m_Localized: Ist das Bild dasselbe wie das vorherige?
+    m_Localized: Antworte so schnell du kannst mit Ja oder Nein.
     m_Metadata:
       m_Items: []
   - m_Id: 111599790488051712
@@ -361,10 +361,6 @@ MonoBehaviour:
     m_Localized: "Schreib hier eine Nachricht an dein zuk\xFCnftiges Ich"
     m_Metadata:
       m_Items: []
-  - m_Id: 115987864724955136
-    m_Localized: Antworte so schnell du kannst mit Ja oder Nein.
-    m_Metadata:
-      m_Items: []
   - m_Id: 104043542756712455
     m_Localized: "W\xE4hle die Zahlen in aufsteigender oder absteigender Reihenfolge,
       wie durch den Pfeil angezeigt."
@@ -507,6 +503,10 @@ MonoBehaviour:
   - m_Id: 111561110367232016
     m_Localized: "Sprachliche Ausdrucksf\xE4higkeit ist die F\xE4higkeit, W\xF6rter
       aus dem geistigen Wortschatz schnell abzurufen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 124966118831939584
+    m_Localized: Ist das Bild dasselbe wie das vorherige?
     m_Metadata:
       m_Items: []
   references:

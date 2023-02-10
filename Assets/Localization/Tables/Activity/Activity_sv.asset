@@ -190,7 +190,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111596475087872000
-    m_Localized: "\xC4r bilden densamma som den f\xF6reg\xE5ende?"
+    m_Localized: 
     m_Metadata:
       m_Items: []
   - m_Id: 111599790488051712
@@ -317,6 +317,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 115977791037448196
     m_Localized: Spara
+    m_Metadata:
+      m_Items: []
+  - m_Id: 124966118831939584
+    m_Localized: "\xC4r bilden densamma som den f\xF6reg\xE5ende?"
     m_Metadata:
       m_Items: []
   references:

@@ -207,12 +207,12 @@ MonoBehaviour:
     m_Key: game_fast_reaction
     m_Metadata:
       m_Items: []
-  - m_Id: 111596475087872000
-    m_Key: game_fast_reaction_description
+  - m_Id: 124966118831939584
+    m_Key: game_fast_reaction_hint_ingame
     m_Metadata:
       m_Items: []
-  - m_Id: 115987864724955136
-    m_Key: game_fast_reaction_description_2
+  - m_Id: 111596475087872000
+    m_Key: game_fast_reaction_description
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712454
