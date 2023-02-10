@@ -63,7 +63,7 @@ namespace minigame.fast_reaction
             combo_multiplier = 1;
             currentImage = previousImage = -1;
             UI_Score.Init(0, 0);
-            UI_Timer.Init(TimerDuration);
+            UI_Timer.Init(TimerDuration, () => WhenTimerFinishes());
             SelectFirstImage();
             ButtonStart.Show();
             ButtonYes.Hide();
@@ -89,18 +89,23 @@ namespace minigame.fast_reaction
             fsm.ChangeState(States.Play);
         }
 
+        public void WhenTimerFinishes()
+        {
+            fsm.ChangeState(States.End);
+        }
+
         void Play_Enter()
         {
-            UI_Timer.StartTimer(TimerDuration);
+            UI_Timer.StartTimer();
             SelectNewImage();
         }
 
         void Play_Update()
         {
-            if (UI_Timer.timeRemaining <= 0)
-            {
-                fsm.ChangeState(States.End);
-            }
+            // if (UI_Timer.timeRemaining <= 0)
+            // {
+            //     //fsm.ChangeState(States.End);
+            // }
         }
 
         void Play_Exit()

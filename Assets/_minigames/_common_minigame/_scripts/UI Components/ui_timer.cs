@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,46 +9,46 @@ namespace minigame
     public class ui_timer : MonoBehaviour
     {
         public TextMeshProUGUI TimeText;
-        public float timeRemaining = 60;
-        public bool timerIsRunning = false;
+        public float timeRemaining { get; private set; }
+        public bool timerIsRunning { get; private set; }
+        private Action OnTimerFinishCallback;
 
         private void Start()
         {
             timerIsRunning = false;
         }
 
-        public void Init(int seconds)
+        public void Init(int seconds, Action callback = null)
         {
             timeRemaining = seconds;
+            OnTimerFinishCallback = callback;
             DisplayTime(timeRemaining);
         }
 
         public void StartTimer()
         {
+            if (timeRemaining <= 0)
+            {
+                Debug.LogError("Maybe you didn't Init the timer");
+            }
             timerIsRunning = true;
-        }
-
-        public void StartTimer(int seconds)
-        {
-            Init(seconds);
-            StartTimer();
         }
 
         void Update()
         {
             if (timerIsRunning)
             {
+                timeRemaining -= Time.deltaTime;
                 if (timeRemaining > 0)
                 {
-                    timeRemaining -= Time.deltaTime;
                     DisplayTime(timeRemaining);
                 }
                 else
                 {
-                    Debug.Log("Time has run out!");
+                    timerIsRunning = false;
                     timeRemaining = 0;
                     DisplayTime(timeRemaining);
-                    timerIsRunning = false;
+                    OnTimerFinishCallback?.Invoke();
                 }
             }
         }
