@@ -9,7 +9,7 @@ namespace minigame.fast_reaction
 
     public class ImageDisplay : MonoBehaviour
     {
-        public GameObject Image_1, Image_Left, Image_Right;
+        public GameObject Image_main, Image_Left, Image_Right;
         public Sprite[] Album;
 
         public float Speed = 0.3f;
@@ -19,7 +19,7 @@ namespace minigame.fast_reaction
 
         void Start()
         {
-            startingPos = Image_1.transform.localPosition;
+            startingPos = Image_main.transform.localPosition;
         }
 
         public int GetAlbumSize()
@@ -30,21 +30,21 @@ namespace minigame.fast_reaction
         public void ShowImage(int which)
         {
             newImage = which;
-            Image_1.GetComponent<Image>().sprite = Album[newImage];
+            Image_main.GetComponent<Image>().sprite = Album[newImage];
         }
 
         public void NewImage(int which)
         {
             newImage = which;
-            Image_1.transform.localPositionTransition(Image_Right.transform.localPosition, Speed, LeanEase.Accelerate);
-            Image_1.transform.EventTransition(() => changeImage(), Speed + 0.05f);
+            Image_main.transform.localPositionTransition(Image_Right.transform.localPosition, Speed, LeanEase.Accelerate);
+            Image_main.transform.EventTransition(() => changeImage(), Speed + 0.05f);
         }
 
         private void changeImage()
         {
-            Image_1.GetComponent<Image>().sprite = Album[newImage];
-            Image_1.transform.localPosition = Image_Left.transform.localPosition;
-            Image_1.transform.localPositionTransition(startingPos, Speed, LeanEase.Decelerate);
+            Image_main.GetComponent<Image>().sprite = Album[newImage];
+            Image_main.transform.localPosition = Image_Left.transform.localPosition;
+            Image_main.transform.localPositionTransition(startingPos, Speed, LeanEase.Decelerate);
         }
 
     }
