@@ -30,9 +30,9 @@ MonoBehaviour:
   ScoreType: 3
   Category: 2
   Skills: 0
-  Image: {fileID: 21300000, guid: 50758501e29a647029a83039b0a32acd, type: 3}
+  Image: {fileID: 21300000, guid: 0003223eaa745714f8227a92bb80b915, type: 3}
   SceneName: activity_diary
-  PointsToUnlock: 600
+  PointsToUnlock: 300
   PointsOnWin: 20
   PointsOnLoss: 0
   MaxLevel: 1
