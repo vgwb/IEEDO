@@ -79,10 +79,13 @@ namespace minigame.fast_reaction
             ButtonNo.Show();
 
             UI_Countdown.Show(3);
+            SoundManager.I.PlaySfx(AudioEnum.game_timer);
             yield return new WaitForSeconds(1f);
             UI_Countdown.Show(2);
+            SoundManager.I.PlaySfx(AudioEnum.game_timer);
             yield return new WaitForSeconds(1f);
             UI_Countdown.Show(1);
+            SoundManager.I.PlaySfx(AudioEnum.game_timer);
             yield return new WaitForSeconds(1f);
             UI_Countdown.gameObject.SetActive(false);
 

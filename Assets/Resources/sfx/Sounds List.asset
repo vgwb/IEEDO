@@ -65,3 +65,7 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 5ab99592956774313a9cd248d1b47df1, type: 3}
     Channel: 1
     Volume: 1
+  - id: 14
+    audioClip: {fileID: 8300000, guid: f910c0b1557ac47b78b83ab366d13387, type: 3}
+    Channel: 0
+    Volume: 0.3

@@ -10,6 +10,7 @@ namespace Ieedo
     {
         ui_click = 1,
         points = 7,
+        game_timer = 14,
         game_score = 11,
         game_win = 2,
         game_lose = 3,
