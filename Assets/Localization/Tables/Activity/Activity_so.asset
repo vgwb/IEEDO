@@ -20,156 +20,156 @@ MonoBehaviour:
     - rid: 3196637817602572297
   m_TableData:
   - m_Id: 104043542756712454
-    m_Localized: Amarka Xisaabta
+    m_Localized: Kala horeynta xisaabta
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712456
-    m_Localized: Xawaaraha xisaabta
+    m_Localized: dakhsaha xisaabta
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712458
-    m_Localized: Naqshadaha
+    m_Localized: Qababka
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712460
-    m_Localized: Isku xigxid
+    m_Localized: isku xigxiga
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712464
-    m_Localized: Tic tac toe
+    m_Localized: Tic Tac Toe
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712466
-    m_Localized: Manshock
+    m_Localized: block ka saar
     m_Metadata:
       m_Items: []
   - m_Id: 111561110350454784
-    m_Localized: Digtooni
+    m_Localized: Fiiro gaar ah
     m_Metadata:
       m_Items: []
   - m_Id: 111561110350454785
-    m_Localized: Shucfo
+    m_Localized: Qiiro
     m_Metadata:
       m_Items: []
   - m_Id: 111561110350454786
-    m_Localized: Difaac
+    m_Localized: Dabacsanaan
     m_Metadata:
       m_Items: []
   - m_Id: 111561110350454787
-    m_Localized: Xagga maalintii
+    m_Localized: Xiisaab
     m_Metadata:
       m_Items: []
   - m_Id: 111561110350454788
-    m_Localized: Xusuus
+    m_Localized: Xasuus
     m_Metadata:
       m_Items: []
   - m_Id: 111561110350454789
-    m_Localized: Xalinta dhibaatada
+    m_Localized: Xalitaanka mushkiladaha
     m_Metadata:
       m_Items: []
   - m_Id: 111561110350454790
-    m_Localized: Xawaare
+    m_Localized: Dakhsaha
     m_Metadata:
       m_Items: []
   - m_Id: 111561110350454791
-    m_Localized: Erey
+    m_Localized: Kalimad
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712467
-    m_Localized: U dhaqaaq element-ka xannibay bixitaanka adoo ka saaraysa dhammaan
-      caqabadaha
+    m_Localized: Dhaqaji qaybta laa xaanibay siidad uuga sartiid caqabadaha oo dhaan
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649088
-    m_Localized: Kala qaybiyay
+    m_Localized: fiiro gaar ah oo la kala qaybiyay
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649090
-    m_Localized: Iibiyaha xulashada ah
+    m_Localized: fiiro gaar ah oo la dortay
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649092
-    m_Localized: Hawsha wareejinta
+    m_Localized: Iskubedelka hawlaha
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649094
-    m_Localized: Waqti
+    m_Localized: waqtii qabsi
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649096
-    m_Localized: Kala soo ka fool
+    m_Localized: ka mid ahaanta
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649098
-    m_Localized: Dareenka nolosha
+    m_Localized: dareenka nolosha
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037696
-    m_Localized: Goobta aragtida
+    m_Localized: goobta aragtiida
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037698
-    m_Localized: Sababo macquul ah
+    m_Localized: keenshaha sababo macquul ah
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037700
-    m_Localized: Xisaabinta Tirada
+    m_Localized: xisaabo tiiro ahaan
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037702
-    m_Localized: Qiyaasta nambarada
+    m_Localized: Gool
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037704
-    m_Localized: Sababaha suurtagalka ah
+    m_Localized: ixtimalka oo aad sabab oo la tiimadiid
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037706
-    m_Localized: Xusuusta Shaqada
+    m_Localized: Xasuusta shaqaynaysa
     m_Metadata:
       m_Items: []
   - m_Id: 111552523372847118
-    m_Localized: Qorid wax dhici kara
+    m_Localized: Qorshaynta
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037709
-    m_Localized: Xawaareynta xawaaraha
+    m_Localized: Digtooni
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232000
-    m_Localized: Sababta saamiyeed
+    m_Localized: Difaac
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232002
-    m_Localized: Fahamka aqrinta
+    m_Localized: Fahmiida akhriska
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232004
-    m_Localized: Xaraashka jawaabta
+    m_Localized: joojitanka falcelinta
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232006
-    m_Localized: Hanuuninta Xawaaladda
+    m_Localized: Xusuus qor
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232008
-    m_Localized: Sababaha Xakamaynta
+    m_Localized: Qorista dhowr khad oo ku saabsan sida aad dareemeyso maalin kasta
+      waa dhaqan wanaagsan oo loogu talagalay wanaaggaaga
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232010
-    m_Localized: Dib-u-soo-celin
+    m_Localized: Warqad saaxiib saaxiib
     m_Metadata:
       m_Items: []
   - m_Id: 111552523372847126
-    m_Localized: Qhiye
+    m_Localized: isticmalka Muqaalka
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232013
-    m_Localized: Aqoonta Erayada
+    m_Localized: Aqoonta ereyada
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232015
-    m_Localized: Evend Evend
+    m_Localized: Faseexnimada hadalka
     m_Metadata:
       m_Items: []
   - m_Id: 111594514829565957
@@ -177,45 +177,314 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760256
-    m_Localized: U dhaqaaji baloogyada si kasta oo ay ugu biirto nambarada la mid
-      ah isla qiimaha oo dhibco ugu badan inta aad karto. Ma heli kartaa 2048?
+    m_Localized: Daqaji blockskaa jiihada aad rabtiid sii aad uuso sartiid numbero
+      isku mid ah iyo intaad karaysiidna keen . Maad keeni karaysaa ilaa 2048?
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760257
-    m_Localized: Lambarrada isku darka
+    m_Localized: tiiroyiinka isku dar
     m_Metadata:
       m_Items: []
   - m_Id: 111596475083677696
-    m_Localized: Fal-fal celin degdeg ah
+    m_Localized: Falcelin degdeg ah
     m_Metadata:
       m_Items: []
   - m_Id: 111596475087872000
-    m_Localized: 
+    m_Localized: Kuu jawaab haa amba maya sii dagdag ah.
     m_Metadata:
       m_Items: []
   - m_Id: 111599790488051712
-    m_Localized: Xusuus qor
+    m_Localized: Xasuus qor
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989696
+    m_Localized: Maalin kasta kuu qor qoral xasuus qorkaga.                                                      
+      Sidaani waxay kuugu caawinaysa sii aad uuga fakirtiid halkay noloshadu kuu
+      socoto iyo aad dulamartiid horumarkaga iyo mushkiladahaga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989697
+    m_Localized: Dhawr qoraal aad qortiid oo ku saabsan dareenkaga malinkasta waa
+      dhaqan wanagsan fayoobidada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989699
+    m_Localized: warqad uu qor saxiibka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989700
+    m_Localized: Warqaad uu qor saxiibka.                                        
+      Qoritanka warqada wuxu uu fiicanyahay qofka qoraya iyo qofka loo diirayo ,waxanu
+      noqonkaraya waxa badali karaya sidad wax uu arkaysiid.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989702
+    m_Localized: Warqad uu qor naftaada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989703
+    m_Localized: Warqad aad uu qoraysiid naftada mustaqbalka waxay kuu siinaysaa
+      fa'iidada in aad qorshe la tiimadid oo kugu cawinaya in aad waqtigaga ilashatid
+      oo aad uu jeesatiid horumarkaga aynu sameyn karayno halka yoolkaga mustaqbaleed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993814450176
+    m_Localized: Maa huubta in aad ka baxaysiid?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033088
+    m_Localized: Iska ga tag hawsha
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033089
+    m_Localized: Ciyaar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033090
+    m_Localized: Ciyaar marlabad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033091
+    m_Localized: Heerka kale ciyaar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033092
+    m_Localized: Sii fican!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033093
+    m_Localized: Mar labaad kuu celi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993827033094
+    m_Localized: Ciyarti dhamatay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227393
+    m_Localized: Kabax
+    m_Metadata:
+      m_Items: []
+  - m_Id: 112797993831227396
+    m_Localized: Sii fican!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 113092616990482432
+    m_Localized: Mardhow la heli karo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977790945173504
+    m_Localized: Dhameysay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791033253888
+    m_Localized: Kuu mad guulaysan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791033253889
+    m_Localized: Dibcaha uugu fican
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791033253890
+    m_Localized: Heer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791033253891
+    m_Localized: Markad dhawr daqiiqo ciyaartid malintii maskaxdadu way ahanaysa
+      mid haboon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791033253892
+    m_Localized: Waa ciyartay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448192
+    m_Localized: Dibco
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448193
+    m_Localized: Furitaan
+    m_Metadata:
+      m_Items:
+      - rid: 3196637817602572297
+  - m_Id: 115977791037448194
+    m_Localized: Fa'iidooyin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448195
+    m_Localized: Qaybta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115977791037448196
+    m_Localized: Hayso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 124966118831939584
+    m_Localized: Sawiirkani muu uu eegyahay kii hore?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864720760834
+    m_Localized: Sii kawanagsan waad sameyn karaysaa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864720760833
+    m_Localized: Sii fican bad uu socota
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864720760832
+    m_Localized: Sii ficaan!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864716566528
+    m_Localized: Doro heerka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115989062555262976
+    m_Localized: Jooji
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115989062559457280
+    m_Localized: Sii wad
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115989062559457281
+    m_Localized: Bilaab
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989698
+    m_Localized: Halkan kuu qor waxad kuu fakiraysiid iyo aad dareemaysiid ....
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989701
+    m_Localized: Halkan ku qor dawr qoral aad saxibka siinaysiid...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989704
+    m_Localized: Halkan kuu qoral messege naftada mustaqbalka.....
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712455
+    m_Localized: dooro numberan oo kor uu kacaya ama hoos uu dagaya sidu ku tusayso
+      fallaadho
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712457
+    m_Localized: Labada number keeba weyn? misa way is leegyihin?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712459
+    m_Localized: Maad xasuusan karaysa sawiirka aad aragtay?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712461
+    m_Localized: Maad ku ceelin karta kuwa isku xig xiga?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111594514833760258
+    m_Localized: 3 number isku xiiga oo is leeg aya soo saraya number ka sareeya
+      . Intaad karaysiid keen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712465
+    m_Localized: ciyaartaa classic aah :maad dhigaykaraysaa saddex markers isku xiiga
+      jihada doontiid?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649089
+    m_Localized: Macnaha fiiro gaar ah oo la kala qaybiyay waxa weyaan in aad isku
+      mar aadsameysiid hawlo kala duuwan ama hawlo laga dalbaday
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649091
+    m_Localized: Waa kartiida in aad fikirkaga aad sartiid macluumadka ku khuseeya
+      adigu iska deenaya macluumadkaaan ku khuseen
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649093
+    m_Localized: Hawlo iskubedelka waa la qaabsiga duurufaha kala duuwan ,isku bedelka
+      hami ilaa hami kale
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649095
+    m_Localized: waqti qabsiigu waa kartiida in aad isku xidxidid hawlaha oo aad
+      waqtigaga ilashatiid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649097
+    m_Localized: waa dareenka aad dareemaysiid marka lugu aqbalsanyahay in aad ka
+      miid tahay bulshada
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649099
+    m_Localized: waxay sheegaysa macnaha iyo halka wanagsane waxaynu sameynayno uu
+      socoto
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037697
+    m_Localized: goobta aragtiida waa halkaa aad urursanaysiid macluumadka muuqaalka
+      adigo aan daqajinayn indhahaga
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037699
+    m_Localized: keenshaha sababo macquul ah waa adigo isku daraya garasho badan
+      si aad uu garatiid qababka, soo sartiid guunanad iyo latii madiid go'aan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037701
+    m_Localized: Xisaabo tiiro ahaan waa kartida in aad ku sameysiid xisaabadka fudud
+      sidaa isku geynta,kala jariida, isku dufashada iyo kala qaybiida
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037703
+    m_Localized: '{Dhibcaha} si loo furo'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037705
+    m_Localized: ixtimalka oo aad sabab la imanaysiid waa kartiida in aad taxliil
+      ku samaysiid iyo aad eegtiid ixtimalka ay dhacaykarayan dhacdooyinkaasi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037707
+    m_Localized: Xasuusta shaqaynaysa waxa lo isticmala in macluumadka la hayo iyo
+      la isticmaalo waqtii gaar ah
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037708
+    m_Localized: Qorshayntu waa in aad kasi hor fakiirtiid,furasadaha qiimaysiid
+      iyo doratiid qabka oo gu fiican aad ku daqmaysiid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037710
+    m_Localized: Shucfo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232001
+    m_Localized: Xagga maalintii
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232003
+    m_Localized: Fahmiida akhriska waa kartida in aad akhrisiid ,maskaxdada kuu habaysiid
+      iyo aad fahamtiid luqada qoran
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232005
+    m_Localized: Jojitanka falcelintu waa kartiida inaad caburisiid falcelin aan
+      habonayn oo hawlaha aad sameynaysiid ka joojinaya
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232007
     m_Localized: 'Ku qor qoraal maalinle ah xusuus-qoryadaada shaqsiyeed.
 
 
       Tani
       waxay kaa caawin doontaa inaad ka fikirto jihada noloshaada oo aad qiimeyso
-      miisaaniyada iyo dhibaatooyinka,'
+      horumarinta iyo dhibaatooyinka'
     m_Metadata:
       m_Items: []
-  - m_Id: 111599790680989697
-    m_Localized: Qorista dhowr khad oo ku saabsan sida aad dareemeyso maalin kasta
-      waa dhaqan wanaagsan oo loogu talagalay wanaaggaaga
+  - m_Id: 111561110367232009
+    m_Localized: Gali fikradahaaga iyo dareenkaaga halkan ...
     m_Metadata:
       m_Items: []
-  - m_Id: 111599790680989699
-    m_Localized: Warqad saaxiib saaxiib
-    m_Metadata:
-      m_Items: []
-  - m_Id: 111599790680989700
+  - m_Id: 111561110367232011
     m_Localized: 'U qor warqad saaxiib.
 
 
@@ -224,109 +493,22 @@ MonoBehaviour:
       kaa caawin kara inaad beddesho aragtida.'
     m_Metadata:
       m_Items: []
-  - m_Id: 111599790680989702
-    m_Localized: Warqad naftayda
+  - m_Id: 111561110367232012
+    m_Localized: Muqaalku waa kartiida isticmalka ama qiyaas isdhexgalka waxyaabo
+      adigo isticmala maskaxdada
     m_Metadata:
       m_Items: []
-  - m_Id: 111599790680989703
-    m_Localized: Qorista warqad mustaqbal gaar ah ayaa u soo bandhigaya "dib-u-qorsheynta"
-      oo nagu dhiirrigelisa inaan si ula kac ah ula qabsanno waqtigeenna oo aan aan
-      diiradda saareyno horumarka aan ku sameyn karno himilooyinkeena mustaqbalka
-      ee mustaqbalka.
+  - m_Id: 111561110367232014
+    m_Localized: Aqoonta ereyada waa kartiida in aad fahamtiid iyo isticmashiid ereyada
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993814450176
-    m_Localized: Ma hubtaa inaad rabto inaad ka baxdo?
+  - m_Id: 111561110367232016
+    m_Localized: Fasexnimada hadalka waa karttida in aad ka laa tiimadid maskaxdada
+      ereyo
     m_Metadata:
       m_Items: []
-  - m_Id: 112797993827033088
-    m_Localized: Firfircoonida ka tag
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993827033089
-    m_Localized: Cayaar
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993827033090
-    m_Localized: Mar kale ciyaar
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993827033091
-    m_Localized: Ciyaar heerka xiga
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993827033092
-    m_Localized: Waa hagaag!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993827033093
-    m_Localized: Mar kale isku day
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993827033094
-    m_Localized: Cayaar ka dhan
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993831227393
-    m_Localized: Bixitaan
-    m_Metadata:
-      m_Items: []
-  - m_Id: 112797993831227396
-    m_Localized: Waa hagaag!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 113092616990482432
-    m_Localized: Diyaar ayaa la heli karaa
-    m_Metadata:
-      m_Items: []
-  - m_Id: 115977790945173504
-    m_Localized: Dhameystiran
-    m_Metadata:
-      m_Items: []
-  - m_Id: 115977791033253888
-    m_Localized: Faallay
-    m_Metadata:
-      m_Items: []
-  - m_Id: 115977791033253889
-    m_Localized: Natiijada ugu fiican
-    m_Metadata:
-      m_Items: []
-  - m_Id: 115977791033253890
-    m_Localized: Siman
-    m_Metadata:
-      m_Items: []
-  - m_Id: 115977791033253891
-    m_Localized: Ciyaar yar dhawr daqiiqo maalintiiba waxay ka caawin doontaa maskaxdaada
-      inuu ku habboon yahay
-    m_Metadata:
-      m_Items: []
-  - m_Id: 115977791033253892
-    m_Localized: Ciyaaray
-    m_Metadata:
-      m_Items: []
-  - m_Id: 115977791037448192
-    m_Localized: Gool
-    m_Metadata:
-      m_Items: []
-  - m_Id: 115977791037448193
-    m_Localized: '{points} dhibco si loo furo'
-    m_Metadata:
-      m_Items:
-      - rid: 3196637817602572297
-  - m_Id: 115977791037448194
-    m_Localized: Faa'iidooyinka
-    m_Metadata:
-      m_Items: []
-  - m_Id: 115977791037448195
-    m_Localized: Dabaqad
-    m_Metadata:
-      m_Items: []
-  - m_Id: 115977791037448196
-    m_Localized: Badbaadin
-    m_Metadata:
-      m_Items: []
-  - m_Id: 124966118831939584
-    m_Localized: Muuqaalka ma la mid yahay kii hore?
+  - m_Id: 124969240149090304
+    m_Localized: waqti
     m_Metadata:
       m_Items: []
   references:

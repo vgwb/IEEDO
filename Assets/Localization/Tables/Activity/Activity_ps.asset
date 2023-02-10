@@ -642,6 +642,10 @@ MonoBehaviour:
       \u0647\u063A\u0647 \u0633\u0631\u0647 \u0648\u0631\u062A\u0647 \u062F\u06CC\u061F"
     m_Metadata:
       m_Items: []
+  - m_Id: 124969240149090304
+    m_Localized: "\u0648\u062E\u062A"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
