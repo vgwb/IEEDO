@@ -20,7 +20,7 @@ MonoBehaviour:
   PointsSymbol: \uf06d
   NotificationsEnabled: 1
   AnalyticsEnabled: 1
-  AnalyticsDevEnv: 1
+  AnalyticsDevEnv: 0
   DebugMode: 0
   DebugLogEnabled: 1
   DebugSaveProfileInJSON: 1
