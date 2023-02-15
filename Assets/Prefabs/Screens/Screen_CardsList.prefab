@@ -3327,7 +3327,7 @@ PrefabInstance:
       objectReference: {fileID: 4975395860017819302}
     - target: {fileID: 7915357893556443430, guid: 9224fabccd8ff9e42bf67a2d85ba2ac6, type: 3}
       propertyPath: SnapStartThreshold
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7915357893556443430, guid: 9224fabccd8ff9e42bf67a2d85ba2ac6, type: 3}
       propertyPath: SnapVelocityThreshold
