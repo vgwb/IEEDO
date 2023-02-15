@@ -24,182 +24,162 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093260
-    m_Localized: Ma hubtaa inaad rabto inaad ka tagto abuurista kaarkan?
+    m_Localized: Maa huubta in aad  joojinaysiid abuurista cardkaa?
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093259
-    m_Localized: Ka jooji kaarka
+    m_Localized: Jooji abuurista cardka
     m_Metadata:
       m_Items: []
   - m_Id: 40525580437577728
-    m_Localized: Bixitaan
+    m_Localized: Kabax
     m_Metadata:
       m_Items: []
   - m_Id: 48125278888599552
-    m_Localized: Soo saar kaararka imtixaanka
+    m_Localized: sameynta cardka tijabada
     m_Metadata:
       m_Items: []
   - m_Id: 48151452267077632
-    m_Localized: Soo saar tiirarka aan kala sooca lahayn
+    m_Localized: Sameynta tiirarka kala sooc la'aan
     m_Metadata:
       m_Items: []
   - m_Id: 40526294958235648
-    m_Localized: Dib-u-dejin Profile
+    m_Localized: dib u habayn profileka
     m_Metadata:
       m_Items: []
   - m_Id: 51375399755522048
-    m_Localized: Jooji su'aalaha
+    m_Localized: Jooji xogwaraysiga
     m_Metadata:
       m_Items: []
   - m_Id: 40525760616488960
-    m_Localized: Qiimaynta
+    m_Localized: Qimaynta
     m_Metadata:
       m_Items: []
   - m_Id: 40525707831173120
-    m_Localized: Qaabka wareejinta
+    m_Localized: bedello habka
     m_Metadata:
       m_Items: []
   - m_Id: 48154400376250368
-    m_Localized: Kordhinta dhibcaha +100
+    m_Localized: Kordhi Dhibco+100
     m_Metadata:
       m_Items: []
   - m_Id: 55768998995763200
-    m_Localized: IEESO waxay diiradda saareysaa 6 qaybood, aan ka eegno mid ka mid
-      ah mid ...
+    m_Localized: IEEDO waxay xog oo sarta 6 qaybod , mid mid aan uu eegno
     m_Metadata:
       m_Items: []
   - m_Id: 40549731508445184
-    m_Localized: Qeybaha
+    m_Localized: Qaybod
     m_Metadata:
       m_Items: []
   - m_Id: 40534266346233856
-    m_Localized: Natiijala
+    m_Localized: Natijada
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450240
-    m_Localized: Xagga gadaale
+    m_Localized: Dib oo noqo
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450244
-    m_Localized: Socon
+    m_Localized: Sii wad
     m_Metadata:
       m_Items: []
   - m_Id: 40535113130074112
-    m_Localized: Xulo qayb
+    m_Localized: Qayb dooro
     m_Metadata:
       m_Items: []
   - m_Id: 40535419633033216
-    m_Localized: Deji taariikhda bartilmaameedka
+    m_Localized: Dhigo waqti
     m_Metadata:
       m_Items: []
   - m_Id: 40535270735241216
-    m_Localized: U deji heer dhib
+    m_Localized: Dhigo heerka adayga
     m_Metadata:
       m_Items: []
   - m_Id: 40535579280826368
-    m_Localized: Xulo nooca hawsha
+    m_Localized: Dooro nooca hawsha
     m_Metadata:
       m_Items: []
   - m_Id: 40537204766564352
-    m_Localized: Gali sharraxaad
+    m_Localized: Gali Sharaxaad
     m_Metadata:
       m_Items: []
   - m_Id: 40535952167034880
-    m_Localized: Geli cinwaanka
+    m_Localized: Gali horyaalka
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854083
-    m_Localized: 'Wada-hawlgalayaasha mashruuca:
-
-      - Ashley Community Guriyeynta
-      (Boqortooyada Midowday)
-
-      - Folkuniversitet (Sweden)
-
-      - metropolist
-      (Jarmalka)
-
-      - Rinova Ltd (Boqortooyada Ingiriiska)
-
-      - Dimitra (Giriigga)
-
-      -
-      Videojuegos Sind Fronteas (Spain)
-
-
-      Funded by the European Union. Views
-      and opinions expressed are however those of the author(s) only and do not necessarily
-      reflect those of the European Union or the European Education and Culture Executive
-      Agency (EACEA). Neither the European Union nor EACEA can be held responsible
-      for them.'
+    m_Localized: "Wad-hawlgalayasha mashruuca: \n-Ashely community Housing (United
+      kingdom)\n-Folkuniversitetet (sweden) \n-MetropolisNet(Germany) \n-Rinova Ltd(united
+      kingdom) \n-Dimitra(greece) -\nVideojuegos Sin Fronteras(spain) \n\nWaxa maalgaliyay
+      Erasmus + programmka European Union. Qoralkan waxuu kaliya natusaya aragtiida
+      qofka qoray , komishankuna ka ma masu'alnayo macluumadka halkan ku jiira."
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925889
-    m_Localized: Ma hubtaa inaad rabto inaad tirtirto kaarka?
+    m_Localized: Maa huubta in aad rabtiid in aad ka saartiid cardka?
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925888
-    m_Localized: Tirtir kaarka
+    m_Localized: Kasar cardka
     m_Metadata:
       m_Items: []
   - m_Id: 48447397204844544
-    m_Localized: Sameeyey
+    m_Localized: Dhamatay
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450243
-    m_Localized: Bixitaan
+    m_Localized: Kabax
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854081
-    m_Localized: Khiyaamo
+    m_Localized: Khiyamo
     m_Metadata:
       m_Items: []
   - m_Id: 65886906563190784
-    m_Localized: Dhibcaha
+    m_Localized: Credits
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854080
-    m_Localized: Dejinta
+    m_Localized: Goobaha
     m_Metadata:
       m_Items: []
   - m_Id: 50660762365927424
-    m_Localized: Soo dhawow! Hadafka IEEDO waa inaan kaa caawiyo inaad ku guuleysato
-      dalkan.
+    m_Localized: So dhawow! IEEDO  ahameyadedu waa in aad ku guul gasho wadankan
     m_Metadata:
       m_Items: []
   - m_Id: 136954244812791808
-    m_Localized: ' Haddii aadan wax shaashad ku fahmin shaashadda, hayso badhanka
-      tarjumaadda si aad ugu aqriso luqaddaada hooyo'
+    m_Localized: Hadad fahmi waydo waxa shashada kuu yaala , taabo translation button
+      sii aad uugu akhrisid luqadada hooyo
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093248
-    m_Localized: Waa inaad la joogtaa tababarahaaga, aan bilowno kulan tababbarasho
+    m_Localized: Waa in aad macalinkaga la joogta , aynu bilabno fadhi tababarin
       ah
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450242
-    m_Localized: U dhow
+    m_Localized: Ku xiiga
     m_Metadata:
       m_Items: []
   - m_Id: 24994957285646337
-    m_Localized: Maya
+    m_Localized: May
     m_Metadata:
       m_Items: []
   - m_Id: 134354837057822720
-    m_Localized: Xusuusnow inaad ciyaarto oo aad cusboonaysiiso liis------liis------ka
-      maalin kasta!
+    m_Localized: Haa iilawin in aad ciyartiid oo aad cusbonaysiid liiska aad sameynaysiid
+      malinkasta!
     m_Metadata:
       m_Items: []
   - m_Id: 37308361241255936
-    m_Localized: Hagaag
+    m_Localized: Haye
     m_Metadata:
       m_Items: []
   - m_Id: 43003187146022912
-    m_Localized: Kaararka oo dhameystiran
+    m_Localized: Cardadka laa dhameyey
     m_Metadata:
       m_Items: []
   - m_Id: 43003190425968640
-    m_Localized: Kaararka la ansaxiyay
+    m_Localized: Ansaxinta cardkaa
     m_Metadata:
       m_Items: []
   - m_Id: 50788328801296384
@@ -207,69 +187,68 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 65895845057028096
-    m_Localized: Xaqiiqdii ma dooneysaa inaad dib u dejiso astaanta guud?
+    m_Localized: Mad raabta in aad dib uu habeysiid profileka?
     m_Metadata:
       m_Items: []
   - m_Id: 65895845048639488
-    m_Localized: Dib-u-dejin Profile
+    m_Localized: Dib uu habeyn profileka
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450241
-    m_Localized: Isku tiir
+    m_Localized: mar labaad kuu noqo
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093258
-    m_Localized: Ma hubtaa inaad rabto inaad ka tagto kulanka tababbarka?
+    m_Localized: maa huubta in aad joojinaysiid tababarida fadhiga?
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093257
-    m_Localized: Ka tag kulan
+    m_Localized: Kabax fadhiga?
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093254
-    m_Localized: Hadda waa waqtigii la qorsheynayaa si loo qorsheeyo waxyaabaha aad
-      sameyn doontid maalmaha soo socda
+    m_Localized: Waa waqtigi aynu sameynaynay qorshe aad sameynaysid malimahaso socda
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093252
-    m_Localized: Aan dib u eegno dhammaan kaararka aad dhammeysay
+    m_Localized: Aynu isla eegno cardadka aad damaysay
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093253
-    m_Localized: Ma lihid kaararka dib u eegista
+    m_Localized: Maa hay saatiid card aad marlabaad eegtid
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093251
-    m_Localized: Tababarahaagu halkan waa inuu ku caawiyaa. Ma rabtaa inaad ka jawaabto
-      dhowr su'aalood oo ku saabsan xaaladaada hadda jirta?
+    m_Localized: Macalinkaga uu joga si uu ku cawiyo . Maa raabta in aad ka jawabtiid
+      su'aalo kuu sabsan xalaadad ku suugan tahay imika?
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093250
-    m_Localized: Kalfadhiga tababarka
+    m_Localized: Tababariid fadhi
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854082
-    m_Localized: Saamaynta muuqata
+    m_Localized: saamaynta dawaaqa
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093249
-    m_Localized: Bilow fadhiga
+    m_Localized: Biilow fadhi
     m_Metadata:
       m_Items: []
   - m_Id: 48089044644470784
-    m_Localized: Ma hubtaa inaad rabto inaad kaadhka dhigatid oo aan la dhameystirin?
+    m_Localized: Maa hubta in aad ka dhigtid cardkaa mid aan dhameystirnayn?
     m_Metadata:
       m_Items: []
   - m_Id: 48089044619304960
-    m_Localized: U dhig sidii aan la dhameystirin
+    m_Localized: Ka dhig mid aan dhameystirnayn
     m_Metadata:
       m_Items: []
   - m_Id: 48119887563792384
-    m_Localized: Ma hubtaa inaad rabto inaad kaadhka dhisto sida aan loo xaqiijin?
+    m_Localized: Maa huubta in aad ka dhigtiid cardkaa mid aan la ansaxin?
     m_Metadata:
       m_Items: []
   - m_Id: 48119887559598080
-    m_Localized: U dhig sidii aan la xaqiijin
+    m_Localized: Ka dhig mid aan la ansaxin
     m_Metadata:
       m_Items: []
   - m_Id: 24994957285646336
@@ -277,19 +256,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 136953378097618944
-    m_Localized: Xagee joogtaa
+    m_Localized: Xagee ayaad joogta?
     m_Metadata:
       m_Items: []
   - m_Id: 139790834418524160
-    m_Localized: Halkan waxaa ah natiijooyinkaaga, aynu wanaajino
+    m_Localized: Waa kuu wan natijadadii , aynu isla hagajiino
     m_Metadata:
       m_Items: []
   - m_Id: 139790834443689984
-    m_Localized: Kani waa liis---qorihiin. Ma lihid wax kaar ah oo aad sameyso.
+    m_Localized: Wakan liiska aad sameyneysiid . Maa haysatiid card aad sameysiid
     m_Metadata:
       m_Items: []
   - m_Id: 141937967278874624
-    m_Localized: In la sameeyo liiska
+    m_Localized: Liiska la sameeynayo
     m_Metadata:
       m_Items: []
   - m_Id: 141959887966904320
@@ -297,72 +276,72 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458752
-    m_Localized: Hawlaha
+    m_Localized: Hawlo
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458753
-    m_Localized: Abuurid
+    m_Localized: Sameyn
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458754
-    m_Localized: Tirtirid
+    m_Localized: Kasar
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458755
-    m_Localized: Sameeyey
+    m_Localized: Dhamatay
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458756
-    m_Localized: Lama qaban
+    m_Localized: May dhaman
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458757
-    m_Localized: Soo diyaarin
+    m_Localized: Badal
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458758
-    m_Localized: Ansax
+    m_Localized: Ansaxin
     m_Metadata:
       m_Items: []
   - m_Id: 141959888004653056
-    m_Localized: Lama ansixin
+    m_Localized: lama ansaxin
     m_Metadata:
       m_Items: []
   - m_Id: 141959888004653057
-    m_Localized: Isbeddel aragtida
+    m_Localized: Bedel aragtiida
     m_Metadata:
       m_Items: []
   - m_Id: 144439249164066816
-    m_Localized: Jooji foomka su'aalaha
+    m_Localized: Jooji xogwaraysiiga
     m_Metadata:
       m_Items: []
   - m_Id: 144439249336033280
-    m_Localized: Ma hubtaa inaad rabto inaad ka baxdo foomka su'aalaha?
+    m_Localized: Maa huubta in aad ka baxaysiid xogwaraysiga ?
     m_Metadata:
       m_Items: []
   - m_Id: 153714070861635584
-    m_Localized: Websaydhka Caawinta Furan
+    m_Localized: Fur websiteka cawimadka
     m_Metadata:
       m_Items: []
   - m_Id: 153714070870024192
-    m_Localized: Ku saabsan
+    m_Localized: kuu sabsan
     m_Metadata:
       m_Items: []
   - m_Id: 153714070870024193
-    m_Localized: Ogeysiisyada
+    m_Localized: Ogaysiis
     m_Metadata:
       m_Items: []
   - m_Id: 156524221040631808
-    m_Localized: Falanqaynta khadka tooska ah
+    m_Localized: falaqaynta online
     m_Metadata:
       m_Items: []
   - m_Id: 156524221074186240
-    m_Localized: Ma jeceshahay inaad ka hesho ogeysiisyo barnaamijkan?
+    m_Localized: Maa rabta in aad ogaysiis kaa heshiid appka?
     m_Metadata:
       m_Items: []
   - m_Id: 156524221074186241
-    m_Localized: Ma jeceshahay inaad naga caawiso sidii aan u wanaajin lahaa appkaan
-      adiga oo wadaagaya khadka tooska ah ee macluumaadkaaga qarsoon?
+    m_Localized: Ma jeclaan lahayd inaad naga caawiso horumarinta app-kan adiga oo
+      khadka ku wadaagaya xogtaada bilaa magac
     m_Metadata:
       m_Items: []
   references:

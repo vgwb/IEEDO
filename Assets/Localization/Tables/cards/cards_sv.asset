@@ -23,7 +23,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10201788641468416
-    m_Localized: "Allt relaterat till medborgarliv och lokal kultur i ditt v\xE4rdland"
+    m_Localized: "Allt som h\xF6r till medborgarliv och lokal kultur i ditt v\xE4rdland"
     m_Metadata:
       m_Items: []
   - m_Id: 10257870520868864
@@ -31,16 +31,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10258501075755008
-    m_Localized: "Allt om din sociala fil och ditt engagemang i lokalsamh\xE4llet"
+    m_Localized: "Allt om dina sociala handlingar och ditt engagemang i lokalsamh\xE4llet"
     m_Metadata:
       m_Items: []
   - m_Id: 15338261569101824
-    m_Localized: Utbildning och utbildning
+    m_Localized: Utbildning
     m_Metadata:
       m_Items: []
   - m_Id: 22534781286735872
-    m_Localized: "Alla m\xF6jliga aktiviteter f\xF6r l\xE4rande, i antingen formella
-      och informella milj\xF6er"
+    m_Localized: "Alla typer av inl\xE4rningsaktiviteter, i s\xE5v\xE4l formella
+      som informella milj\xF6er"
     m_Metadata:
       m_Items: []
   - m_Id: 15338341822914560
@@ -48,17 +48,17 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15338345862029312
-    m_Localized: "Allt relaterat till arbete, fr\xE5n att hitta ett jobb till att
-      utvecklas i din professionella karri\xE4r"
+    m_Localized: "Allt som h\xF6r till arbete, fr\xE5n att hitta ett jobb till att
+      utvecklas i din yrkeskarri\xE4r"
     m_Metadata:
       m_Items: []
   - m_Id: 15338384780976128
-    m_Localized: "Administrat\xF6r och komma runt"
+    m_Localized: Administration och att ta sig fram
     m_Metadata:
       m_Items: []
   - m_Id: 15338385938604032
     m_Localized: "Allt om att hitta och f\xE5 tillg\xE5ng till grundl\xE4ggande tj\xE4nster
-      i lokalsamh\xE4llet, inklusive allt n\xF6dv\xE4ndigt pappersarbete"
+      i det lokala samh\xE4llet, inklusive allt pappersarbete som kr\xE4vs"
     m_Metadata:
       m_Items: []
   - m_Id: 15338416317947904
@@ -66,12 +66,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15338417286832128
-    m_Localized: "Allt relaterat till fysisk och emotionell h\xE4lsa, inklusive n\xE4ring
-      och vanor f\xF6r en h\xE4lsosam livsstil."
+    m_Localized: "Allt som h\xF6r till fysisk och psykisk h\xE4lsa, d\xE4ribland
+      n\xE4ring och vanor f\xF6r en h\xE4lsosam livsstil."
     m_Metadata:
       m_Items: []
   - m_Id: 22742599439687680
-    m_Localized: "(best\xE4llnings)"
+    m_Localized: (anpassat)
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602240
@@ -83,7 +83,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602242
-    m_Localized: "G\xE5 till en utst\xE4llning"
+    m_Localized: "Bes\xF6ka en utst\xE4llning"
     m_Metadata:
       m_Items: []
   - m_Id: 28366007577812992
@@ -107,11 +107,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 107338012276236288
-    m_Localized: "G\xE5 med i samh\xE4llsgruppen"
+    m_Localized: "G\xE5 med i en lokal intressegrupp"
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602246
-    m_Localized: "Sj\xE4lvl\xE4rande"
+    m_Localized: "Sj\xE4lvstudier (egenstyrd inl\xE4rning)"
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602247
@@ -119,19 +119,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602248
-    m_Localized: "F\xF6lj en kurs"
+    m_Localized: "F\xF6lja en kurs"
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602249
-    m_Localized: "G\xF6ra ett prov"
+    m_Localized: Skriva ett prov
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602250
-    m_Localized: Personlig projekt
+    m_Localized: Personligt projekt
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602251
-    m_Localized: Praktik
+    m_Localized: "Praktiktj\xE4nst"
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602252
@@ -159,11 +159,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 28366007577812994
-    m_Localized: "Sj\xE4lvf\xF6rm\xE5ga"
+    m_Localized: "Sj\xE4lvf\xF6respr\xE5kande"
     m_Metadata:
       m_Items: []
   - m_Id: 107049747551821824
-    m_Localized: "Anv\xE4nd onlinetj\xE4nster"
+    m_Localized: "Anv\xE4nda digitala tj\xE4nster"
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602257
@@ -171,15 +171,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602258
-    m_Localized: "Medicinsk v\xE5rd"
+    m_Localized: "L\xE4karv\xE5rd"
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602259
-    m_Localized: Psykologisk behandling
+    m_Localized: Psykologisk behandling (t.ex. psykoterapi)
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602260
-    m_Localized: "V\xE4lbefinnande"
+    m_Localized: "Aktivitet f\xF6r att fr\xE4mja v\xE4lbefinnande"
     m_Metadata:
       m_Items: []
   - m_Id: 107049747551821825

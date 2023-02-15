@@ -28,11 +28,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 10257870520868864
-    m_Localized: Engagement communautaire
+    m_Localized: "Engagement dans la communaut\xE9"
     m_Metadata:
       m_Items: []
   - m_Id: 10258501075755008
-    m_Localized: "Tout sur votre dossier social et votre engagement dans la communaut\xE9
+    m_Localized: "Tout sur votre vie sociale et votre engagement dans la communaut\xE9
       locale"
     m_Metadata:
       m_Items: []
@@ -41,8 +41,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22534781286735872
-    m_Localized: "Toutes sortes d'activit\xE9s pour l'apprentissage, dans l'un ou
-      l'autre param\xE8tre formel et informel"
+    m_Localized: "Toutes sortes d'activit\xE9s pour apprendree, dans un cadre formel
+      ou informel."
     m_Metadata:
       m_Items: []
   - m_Id: 15338341822914560
@@ -51,16 +51,17 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 15338345862029312
     m_Localized: "Tout ce qui concerne le travail, de la recherche d'un emploi \xE0
-      la progression de votre Carreer professionnel"
+      l'\xE9volution de votre carri\xE8re professionnelle"
     m_Metadata:
       m_Items: []
   - m_Id: 15338384780976128
-    m_Localized: "Administrateur et se d\xE9placer"
+    m_Localized: "Admin et d\xE9placements"
     m_Metadata:
       m_Items: []
   - m_Id: 15338385938604032
-    m_Localized: "Tout sur la recherche et l'acc\xE8s aux services de base dans la
-      communaut\xE9 locale, y compris tous les documents requis"
+    m_Localized: "Tout ce qui concerne la recherche et l'acc\xE8s aux services de
+      base dans la communaut\xE9 locale, y compris toutes les formalit\xE9s administratives
+      requises."
     m_Metadata:
       m_Items: []
   - m_Id: 15338416317947904
@@ -69,19 +70,19 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 15338417286832128
     m_Localized: "Tout ce qui concerne la sant\xE9 physique et \xE9motionnelle, y
-      compris la nutrition et les habitudes pour un mode de vie sain."
+      compris l'alimentation et des habitudes de mode de vie sain."
     m_Metadata:
       m_Items: []
   - m_Id: 22742599439687680
-    m_Localized: (coutume)
+    m_Localized: "(personnalis\xE9)"
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602240
-    m_Localized: Visiter un monument
+    m_Localized: "Visite un point de rep\xE8re"
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602241
-    m_Localized: Arts performants
+    m_Localized: Arts du spectacle
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602242
@@ -97,11 +98,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602243
-    m_Localized: Rassemblement social
+    m_Localized: Rencontres sociales
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602244
-    m_Localized: Aider les autres
+    m_Localized: Aidez les autres
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602245
@@ -109,7 +110,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 107338012276236288
-    m_Localized: Rejoignez le groupe communautaire
+    m_Localized: Joindre un groupe local
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602246
@@ -117,7 +118,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602247
-    m_Localized: "Abonnez-vous \xE0 un cours"
+    m_Localized: "S'inscrire \xE0 un cours"
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602248
@@ -125,7 +126,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602249
-    m_Localized: Prendre un examen
+    m_Localized: Passer un examen
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602250
@@ -137,7 +138,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602252
-    m_Localized: Processus de demande
+    m_Localized: "Proc\xE9dure de candidature"
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602253
@@ -145,7 +146,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22763239081189376
-    m_Localized: Avancement professionnel
+    m_Localized: "Progression de carri\xE8re"
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602254
@@ -153,15 +154,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602255
-    m_Localized: Les transports
+    m_Localized: Transports
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602256
-    m_Localized: "Formalit\xE9s administratives"
+    m_Localized: Paperasse
     m_Metadata:
       m_Items: []
   - m_Id: 28366007577812994
-    m_Localized: "Auto-\xE9vocat"
+    m_Localized: "D\xE9fendre ses int\xE9r\xEAts"
     m_Metadata:
       m_Items: []
   - m_Id: 107049747551821824
@@ -177,15 +178,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602259
-    m_Localized: "Th\xE9rapie psychologique"
+    m_Localized: "Psychoth\xE9rapie"
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602260
-    m_Localized: "Bien-\xEAtre"
+    m_Localized: "Activit\xE9 de bien-\xEAtre"
     m_Metadata:
       m_Items: []
   - m_Id: 107049747551821825
-    m_Localized: Nutrition
+    m_Localized: Alimentation
     m_Metadata:
       m_Items: []
   references:

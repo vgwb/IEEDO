@@ -298,7 +298,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 115977791037448193
-    m_Localized: Furitaan
+    m_Localized: '{points} Furitaan'
     m_Metadata:
       m_Items:
       - rid: 3196637817602572297

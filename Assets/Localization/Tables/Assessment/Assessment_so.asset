@@ -19,138 +19,137 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 12759883776
-    m_Localized: Ma marineysaa adeegyada maxalliga ah? (Gym, beerta, maktabada, goobta
-      cibaadada)
+    m_Localized: Maad isticmasha adeegyada deegaanka?(gymka,park,librariiga,Masjidka?)
     m_Metadata:
       m_Items: []
   - m_Id: 7179342181294080
-    m_Localized: Ma fahmi kartaa sharraxaadaha dhacdooyinka, oo ku qoran luuqadda
-      maxalliga ah?
+    m_Localized: Maad fahmaysa warfahinta dhacdooyinka , ku qoran luuqada magalada
+      aad dageentahay?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539303149568
-    m_Localized: Ma booqatay soo jiidashada ugu weyn ee dalxiisayaasha maxalliga
-      ah (taallo, xaashiyo, iwm ...)?
+    m_Localized: Waliga maad tagtay meelaha dalkad deegantahay dalxiis lo iimado?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539328315392
-    m_Localized: Ma ka qeybgashaa dhacdooyinka dhaqanka (Bandhiga, Riwaayadda, iwm
-      ...)?
+    m_Localized: Maad tagta dhacdooyinka daqanka (dabaldaag , xaflad ,ama waxyabo
+      kale....)?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509696
-    m_Localized: Ma raaceysaa wararka maxalliga ah?
+    m_Localized: Maad raacda/amba dawata wararka magalada aad kuu suugan tahy?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509697
-    m_Localized: Asxaabta iyo / ama deriskaaga ma kuu soo jeedaan si aad u taageerto?
+    m_Localized: Asxaabta amba/iyo jaarkga may kula iimadan cawiimaad?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509698
-    m_Localized: Ma dareentaa kalsooni isku-dhafan oo dadka cusub iyo saaxiibo samaynaya?
+    m_Localized: Maad dareemaysa kalsooni markad dad cusub arakto ama asxaab cusub
+      sameesato?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509699
-    m_Localized: Miyaad ka qeybqaadataa nashaadaadka bulshada iyo kooxaha? (Tabarucid,
-      naadiyo, kooxaha bulshada)
+    m_Localized: Maad ka qaybqadata hawlaha bulshada iyo kooxiyada?(is ka wax qabitanka
+      ,clubska iyo kooxiyada bulshada)
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509700
-    m_Localized: Ma leedahay saaxiibo ka soo jeeda asal ahaan iyo jinsiyado?
+    m_Localized: Maad lee dahay asxaab kaa ii maaday asalo kale iyo jiinsiyado kale
+      duuwaan?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509701
-    m_Localized: Ma jeceshahay inaad kaligaa qaadatid kaligaa?
+    m_Localized: Maad jeceshahay in aad waqti kaliga isla joogtiid?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509702
-    m_Localized: Ma fahmi kartaa qodobbada ugu muhiimsan ee wada xiriirka lagu hadlo
-      shaqada, dugsiga, iwm?
+    m_Localized: Maad fahmaysaa qaababka uugu muhiimsan isgarsiinta halka shaqada
+      ,schoolka , ama waxyabo kale?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509703
-    m_Localized: Ma qori kartaa warqad dabool ama warqad cabasho ah?
+    m_Localized: Mad qorikaraysa  warqad cover ah ama warqad cabasho ah?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509704
-    m_Localized: Ma jeceshahay inaad ka shaqeyso qayb ka mid ah koox? (Shaqo, Bulsho,
-      Ciyaaraha)
+    m_Localized: Maad jeeceshahay in aad koox la shaqaysiid?shaqaalaynta,bulshada,ciyaaraha)
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509705
-    m_Localized: Ma u adeegsan kartaa xirmooyinka aasaasiga ah ee Microsoft? E.g.
-      Ereyga iyo Excel
+    m_Localized: Maad isticmalaykaraysa qalabyada lasocda Microsoft Office? sida
+      Word and Excel
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509706
-    m_Localized: Ma u soo diri kartaa emayl ku qoran luqadda maxalliga ah?
+    m_Localized: Email maad ku diri karta luqada magalada aad dagantahay?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509707
-    m_Localized: Ma abuuri kartaa koonto e-mayl shaqsiyeed?
+    m_Localized: Maad sameysan karaysaa email naftada uu gar aah?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509708
-    m_Localized: Ma maarayn kartaa emaylka laga shakiyo, farriimaha iyo soo-dhejinta?
+    m_Localized: Maad mamulaykaraysa emailyo aan laa huubin ,risaladyo iyo massegyo
+      so booda markad internetka wax ka badaysiid?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509709
-    m_Localized: Ma qaadi kartaa xisaabinta fudud? (ku dar, tarma, u qaybi, boqolleyda)
+    m_Localized: Mad sameyn karaysa xisaabaha fudud?(iskugayn, iskudhufo,kala qaybi,boqolkiba)
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509710
-    m_Localized: Miyaad ka raadin kartaa taageerada khadka tooska ah adoo adeegsanaya
-      kulamada bulshada, websaalooyinka ama baloogyada?
+    m_Localized: Maad ka heelikaraysa caawimaad bulshada safxadoda , webchats ga
+      iyo blogyada?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509711
-    m_Localized: Ma ka heli kartaa websaydh iyo macluumaad ku saabsan websaydhka
-      adoo adeegsanaya makiinadaha raadinta si fiican loo yaqaan? (Google, Yahoo,
-      Bing, iwm ...)
+    m_Localized: Maad so heli karaysaa websiteyo iyo macluumadka halka onlinkaa adiigo
+      isticmlaya qalabyada baadka ?(sidaa Google,Yahoo,Bing , ama qar kale.
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509712
-    m_Localized: Ma u safreysaa meel ka baxsan aaggaaga maxalliga ah?
+    m_Localized: Maad ka dhofta halka aad dhegan tahy hada?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509713
-    m_Localized: Ma ku bixin kartaa biilashaada khadka tooska ah?
+    m_Localized: Maad iska bixin karta billkaga?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509714
-    m_Localized: Ma fahmi kartaa bayaankaaga maaliyadeed? E.g. Bayaanka Bangiga,
-      biilasha iwm.
+    m_Localized: Maad fahmi karta  warbixinnada maaliyadeed? sida warbaxinta bangiga,billka
+      iyo wax yaabo kale
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509715
-    m_Localized: Ma akhrisan kartaa oo fahmi kartaa is-weydaarsiga iyo dukumiintiyada
-      rasmiga ah ee kuyaal Langauge maxalliga ah?
+    m_Localized: Maad akhrikaraysa iyo fahmikaraysa waraq rasmiga ah luqada magalada
+      aad dagantahay?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509716
-    m_Localized: Ma u baahan tahay caawimaad dhammaystirka foomamka faahfaahsan ee
-      luqadda maxalliga ah? E.g. Codsiyada shaqada, xawaaladaha lacagta
+    m_Localized: Maad uu bahan tahay cawiimaad sii aad uu dhameysiid formskaa qoraal
+      badan leh oo kuu qoran luqada magalada aad dhagan tahy?codsi shaqada ,iyo xawaaladaha
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509717
-    m_Localized: Dhibaatooyinkaaga caafimaad ma saameeyaan maalintaada nolol maalmeedka?
+    m_Localized: Caafimadkaga muu waxyeelikaraya sidad noloshada uula socotiid malin
+      kasta?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509718
-    m_Localized: Badanaa miyaad dareentaa walwal?
+    m_Localized: Badanka maad warwartaa?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509719
-    m_Localized: Ma leedahay qaab nololeed caafimaad oo guud ahaanba caafimaadka
-      leh?
+    m_Localized: Maad haysataa nolol caafimaad ah?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509720
-    m_Localized: Ma dareentaa wax wanaagsan oo ku saabsan mustaqbalkaaga?
+    m_Localized: Wax wanaagsan maad ka daareemikaraysa noloshada soo socota?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509721
-    m_Localized: Si joogto ah ma u jimicsataa?
+    m_Localized: Dhawr jeer maad sameysaa jimicsi?
     m_Metadata:
       m_Items: []
   references:

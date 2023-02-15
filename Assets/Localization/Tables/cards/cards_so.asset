@@ -19,39 +19,39 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 10201661340147712
-    m_Localized: Kaqeybgalka Deegaanka & Dhaqanka
+    m_Localized: Ka qayb qadashada dalkad deegantahay iyo daqqankooda?
     m_Metadata:
       m_Items: []
   - m_Id: 10201788641468416
-    m_Localized: Wax kasta oo laxiriira nolosha madaniga ah iyo dhaqanka maxalliga
-      ah ee dalkaaga martida loo yahay
+    m_Localized: waxa kasta kuu sabsaan nolosha dadka dagan magaalada aad dagan tahay
+      iyo dhaqankooda deeganka aad dagantahay
     m_Metadata:
       m_Items: []
   - m_Id: 10257870520868864
-    m_Localized: Kaqeybgalka bulshada
+    m_Localized: Ka qeybqadashada bulshadoda
     m_Metadata:
       m_Items: []
   - m_Id: 10258501075755008
-    m_Localized: Dhamaan waxyaabaha ku saabsan faylkaaga bulshada iyo ka qeyb qaadashadaada
-      bulshada deegaanka
+    m_Localized: Wax kasta ku sabsaan noloshada iyo ka qeybqadashada bulshada ad
+      la dagantahay
     m_Metadata:
       m_Items: []
   - m_Id: 15338261569101824
-    m_Localized: Waxbarashada & Tababarka
+    m_Localized: '  Waxbarasho iyo Tababar'
     m_Metadata:
       m_Items: []
   - m_Id: 22534781286735872
-    m_Localized: Dhammaan noocyada nashaadaadka ee barashada, ee qaab rasmi ah oo
-      rasmi ah iyo mid aan rasmi ahayn
+    m_Localized: 'Hawlo kasta oo kuu sabsan waxabarashada , si rasmi ah iyo sii aan
+      rasmi ahayn '
     m_Metadata:
       m_Items: []
   - m_Id: 15338341822914560
-    m_Localized: Shaqo
+    m_Localized: Shaqalaaynta
     m_Metadata:
       m_Items: []
   - m_Id: 15338345862029312
-    m_Localized: Wax kasta oo laxiriira shaqada, laga bilaabo raadinta shaqo lagu
-      horumarinayo Karrer-kaaga xirfadeed
+    m_Localized: ' Wax kasta kuu sabsan shaqada , markad shaqo heleysiid ila aad
+      ku horumaraysiid shaqadada xirfadeed '
     m_Metadata:
       m_Items: []
   - m_Id: 15338384780976128
@@ -59,38 +59,37 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15338385938604032
-    m_Localized: Oo dhan oo ku saabsan helitaanka iyo helitaanka adeegyada aasaasiga
-      ah ee bulshada maxalliga ah, oo ay ku jiraan dhammaan waraaqaha loo baahan
-      yahay
+    m_Localized: 'Wax kasta kuu sabsaan heelitanka ama isticmalka adeegyada magalada
+      aad dagan tahay iyo shaqada warqadaha '
     m_Metadata:
       m_Items: []
   - m_Id: 15338416317947904
-    m_Localized: Boggidin
+    m_Localized: Fayoobid
     m_Metadata:
       m_Items: []
   - m_Id: 15338417286832128
-    m_Localized: Wax kasta oo laxiriira caafimaadka jirka iyo shucuurta, oo ay ku
-      jiraan nafaqada iyo caadooyinka qaab nololeed caafimaad leh.
+    m_Localized: ' Wax kasta kuu sabasan cafimadka jireed iyo cafimadka qiiro,oo
+      ay ku jiiraan nafaqada iyo caadooyinka ku xiiran nolol caafimaad ah . '
     m_Metadata:
       m_Items: []
   - m_Id: 22742599439687680
-    m_Localized: (caado)
+    m_Localized: Caado
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602240
-    m_Localized: Booqo astaan
+    m_Localized: Booqo meelo calaami ah
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602241
-    m_Localized: FARSAMADA FARSAMADA
+    m_Localized: Sameynta fanka
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602242
-    m_Localized: Tag bandhig
+    m_Localized: Bandhig uu tag
     m_Metadata:
       m_Items: []
   - m_Id: 28366007577812992
-    m_Localized: Taageer olole
+    m_Localized: Olole tageer
     m_Metadata:
       m_Items: []
   - m_Id: 28366007577812993
@@ -98,67 +97,67 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602243
-    m_Localized: Soo-ururinta Bulshada
+    m_Localized: Bulsho iskutimi
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602244
-    m_Localized: Caawi dadka kale
+    m_Localized: Kuwa kale cawii
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602245
-    m_Localized: Hawlaha kooxda
+    m_Localized: Hawlo koox
     m_Metadata:
       m_Items: []
   - m_Id: 107338012276236288
-    m_Localized: Ku soo biir Kooxda Bulshada
+    m_Localized: Gal kox communitygu leedahay
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602246
-    m_Localized: Is-barasho
+    m_Localized: 'Barasho-kali ah '
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602247
-    m_Localized: Ku dhaji koorso
+    m_Localized: Subscribe dheh koorasyada
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602248
-    m_Localized: Raac koorso
+    m_Localized: Kooras rac
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602249
-    m_Localized: Imtixaan qaado
+    m_Localized: Imtixan qaado
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602250
-    m_Localized: Mashruuca Shakhsiyeed
+    m_Localized: Mashruca shakhsi ah
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602251
-    m_Localized: Shaqo barasho
+    m_Localized: Internship
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602252
-    m_Localized: Habka Codsiga
+    m_Localized: Habka codsiga
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602253
-    m_Localized: Wareysiyo Shaqo
+    m_Localized: Waraysiiga shaqada
     m_Metadata:
       m_Items: []
   - m_Id: 22763239081189376
-    m_Localized: Horumarinta Shaqada
+    m_Localized: Horumarka xirfada
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602254
-    m_Localized: Adeegyada maxalliga ah
+    m_Localized: Adeegyada deeganka
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602255
-    m_Localized: Gaadiidka
+    m_Localized: Gadiidka
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602256
-    m_Localized: Shirkad tuubbo
+    m_Localized: Shaqada waraqaha
     m_Metadata:
       m_Items: []
   - m_Id: 28366007577812994
@@ -166,15 +165,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 107049747551821824
-    m_Localized: Adeegso adeegyada khadka tooska ah
+    m_Localized: Isticmaalka adeegyada internetka
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602257
-    m_Localized: Nashaadaadka jirka
+    m_Localized: Hawl jiideed
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602258
-    m_Localized: Daaweynta Caafimaadka
+    m_Localized: Daaweynta
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602259
@@ -182,7 +181,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602260
-    m_Localized: Waxqabadka samaqabka
+    m_Localized: Hawlaha fayoobid
     m_Metadata:
       m_Items: []
   - m_Id: 107049747551821825

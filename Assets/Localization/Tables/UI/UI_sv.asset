@@ -24,16 +24,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093260
-    m_Localized: "\xC4r du s\xE4ker p\xE5 att du vill avsluta skapandet av det h\xE4r
+    m_Localized: "\xC4r du s\xE4ker p\xE5 att du vill avbryta skapandet av det h\xE4r
       kortet?"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093259
-    m_Localized: Avsluta kortskapande
+    m_Localized: Avbryt kortskapande
     m_Metadata:
       m_Items: []
   - m_Id: 40525580437577728
-    m_Localized: "Utg\xE5ng"
+    m_Localized: Avsluta
     m_Metadata:
       m_Items: []
   - m_Id: 48125278888599552
@@ -49,15 +49,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 51375399755522048
-    m_Localized: "Avsluta fr\xE5geformul\xE4ret"
+    m_Localized: "L\xE4mna fr\xE5geformul\xE4ret"
     m_Metadata:
       m_Items: []
   - m_Id: 40525760616488960
-    m_Localized: "bed\xF6mning"
+    m_Localized: "Bed\xF6mning"
     m_Metadata:
       m_Items: []
   - m_Id: 40525707831173120
-    m_Localized: "Switchl\xE4ge"
+    m_Localized: "\xC4ndra l\xE4ge"
     m_Metadata:
       m_Items: []
   - m_Id: 48154400376250368
@@ -65,8 +65,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 55768998995763200
-    m_Localized: "Ieedo fokuserar p\xE5 6 kategorier, l\xE5t oss kontrollera dem
-      en efter en ..."
+    m_Localized: "IEEDO fokuserar p\xE5 6 kategorier, l\xE5t oss titta p\xE5 dem
+      en och en\u2026"
     m_Metadata:
       m_Items: []
   - m_Id: 40549731508445184
@@ -82,7 +82,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450244
-    m_Localized: "Forts\xE4tta"
+    m_Localized: "Forts\xE4tt"
     m_Metadata:
       m_Items: []
   - m_Id: 40535113130074112
@@ -90,11 +90,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40535419633033216
-    m_Localized: "St\xE4ll in ett m\xE5ldatum"
+    m_Localized: "V\xE4lj ett m\xE5ldatum"
     m_Metadata:
       m_Items: []
   - m_Id: 40535270735241216
-    m_Localized: "St\xE4ll in en sv\xE5righetsniv\xE5"
+    m_Localized: "V\xE4lj en sv\xE5righetsgrad"
     m_Metadata:
       m_Items: []
   - m_Id: 40535579280826368
@@ -106,14 +106,14 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40535952167034880
-    m_Localized: Ange titeln
+    m_Localized: Ange titel
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854083
-    m_Localized: "Projektpartners:\n- Ashley Community Housing (Storbritannien)\n-
-      FolkUniversItetet (Sverige)\n- Metropolisnet (Tyskland)\n- Rinova Ltd (Storbritannien)\n-
-      Dimitra (Grekland)\n- Videojuegos Sin Fronteras (Spanien)\n\nFinansieras av
-      Europeiska unionen. De synpunkter och \xE5sikter som uttrycks \xE4r endast
+    m_Localized: "Projektpartners:  \n- Ashley Community Housing (Storbritannien)
+      \n- Folkuniversitetet (Sverige) - MetropolisNet (Tyskland) \n- Rinova Ltd (Storbritannien)
+      \n- Dimitra (Grekland) \n- Video Games Without Borders (Spanien)   \n\nFinansieras
+      av Europeiska unionen. De synpunkter och \xE5sikter som uttrycks \xE4r endast
       upphovsmannens [upphovsm\xE4nnens] och utg\xF6r inte Europeiska unionens eller
       Europeiska genomf\xF6randeorganet f\xF6r utbildning och kulturs (EACEA) officiella
       st\xE5ndpunkt. Varken Europeiska unionen eller EACEA tar n\xE5got ansvar f\xF6r
@@ -121,7 +121,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925889
-    m_Localized: "\xC4r du s\xE4ker p\xE5 att du vill ta bort kortet?"
+    m_Localized: "\xC4r du s\xE4ker p\xE5 att du vill radera kortet?"
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925888
@@ -129,11 +129,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48447397204844544
-    m_Localized: Gjort
+    m_Localized: Klar
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450243
-    m_Localized: "Utg\xE5ng"
+    m_Localized: Avsluta
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854081
@@ -141,7 +141,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 65886906563190784
-    m_Localized: Krediter
+    m_Localized: Medverkande
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854080
@@ -149,17 +149,18 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762365927424
-    m_Localized: "V\xE4lkommen! Ieedo -m\xE5let \xE4r att hj\xE4lpa dig att lyckas
-      i detta land."
+    m_Localized: "V\xE4lkommen! IEEDO-projektets m\xE5l \xE4r att hj\xE4lpa dig att
+      bli framg\xE5ngsrik i det h\xE4r landet."
     m_Metadata:
       m_Items: []
   - m_Id: 136954244812791808
-    m_Localized: " Om du inte f\xF6rst\xE5r n\xE5got p\xE5 sk\xE4rmen, h\xE5ll \xF6vers\xE4ttningsknappen
-      f\xF6r att l\xE4sa den p\xE5 ditt moderspr\xE5k"
+    m_Localized: "Om det \xE4r n\xE5got p\xE5 sk\xE4rmen som du inte f\xF6rst\xE5r
+      kan du trycka p\xE5 knappen \u201D\xD6vers\xE4tt\u201D f\xF6r att l\xE4sa det
+      p\xE5 ditt modersm\xE5l"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093248
-    m_Localized: "Du borde vara med din tr\xE4nare, l\xE5t oss starta en coachningssession"
+    m_Localized: "Du borde vara med din handledare, s\xE5 l\xE5t oss inleda ett handledningsm\xF6te"
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450242
@@ -171,7 +172,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 134354837057822720
-    m_Localized: "Kom ih\xE5g att spela och uppdatera din to-do-lista varje dag!"
+    m_Localized: "Kom ih\xE5g att spela och uppdatera din att g\xF6ra-lista varje
+      dag!"
     m_Metadata:
       m_Items: []
   - m_Id: 37308361241255936
@@ -179,15 +181,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 43003187146022912
-    m_Localized: Avslutade kort
+    m_Localized: Avklarade kort
     m_Metadata:
       m_Items: []
   - m_Id: 43003190425968640
-    m_Localized: Validerade kort
+    m_Localized: Verifierade kort
     m_Metadata:
       m_Items: []
   - m_Id: 50788328801296384
-    m_Localized: Tidigare
+    m_Localized: "F\xF6reg\xE5ende"
     m_Metadata:
       m_Items: []
   - m_Id: 65895845057028096
@@ -203,20 +205,20 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093258
-    m_Localized: "\xC4r du s\xE4ker p\xE5 att du vill sluta coachningssessionen?"
+    m_Localized: "\xC4r du s\xE4ker p\xE5 att du vill avsluta handledningsm\xF6tet?"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093257
-    m_Localized: Ledighet
+    m_Localized: "L\xE4mna handledningen"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093254
-    m_Localized: "Det \xE4r nu dags att planera tillsammans de saker du kommer att
-      g\xF6ra de kommande dagarna"
+    m_Localized: "Nu \xE4r det dags att tillsammans planera de saker som du ska g\xF6ra
+      de kommande dagarna"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093252
-    m_Localized: "L\xE5t oss granska alla kort du har slutf\xF6rt"
+    m_Localized: "L\xE5t oss tillsammans granska alla kort som du har slutf\xF6rt"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093253
@@ -224,12 +226,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093251
-    m_Localized: "Din tr\xE4nare \xE4r h\xE4r f\xF6r att hj\xE4lpa dig. Vill du svara
+    m_Localized: "Din handledare \xE4r h\xE4r f\xF6r att hj\xE4lpa dig. Vill du svara
       p\xE5 n\xE5gra fr\xE5gor om din nuvarande situation?"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093250
-    m_Localized: Coaching session
+    m_Localized: "Handledningsm\xF6te"
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854082
@@ -237,25 +239,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093249
-    m_Localized: Startsession
+    m_Localized: "Inled handledningsm\xF6te"
     m_Metadata:
       m_Items: []
   - m_Id: 48089044644470784
-    m_Localized: "\xC4r du s\xE4ker p\xE5 att du vill st\xE4lla in kortet som inte
-      slutf\xF6rt?"
+    m_Localized: "\xC4r du s\xE4ker p\xE5 att du vill markera kortet som Inte Slutf\xF6rt?"
     m_Metadata:
       m_Items: []
   - m_Id: 48089044619304960
-    m_Localized: "St\xE4ll in som inte slutf\xF6rd"
+    m_Localized: "Markera som Inte Slutf\xF6rt"
     m_Metadata:
       m_Items: []
   - m_Id: 48119887563792384
-    m_Localized: "\xC4r du s\xE4ker p\xE5 att du vill st\xE4lla in kortet som inte
-      validerat?"
+    m_Localized: "\xC4r du s\xE4ker p\xE5 att du vill markera kortet som Inte verifierat?"
     m_Metadata:
       m_Items: []
   - m_Id: 48119887559598080
-    m_Localized: "St\xE4ll in som inte validerad"
+    m_Localized: Markera som Inte verifierat
     m_Metadata:
       m_Items: []
   - m_Id: 24994957285646336
@@ -271,11 +271,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 139790834443689984
-    m_Localized: "Det h\xE4r \xE4r din to-do-lista. Du har inget kort att g\xF6ra."
+    m_Localized: "Det h\xE4r \xE4r din att g\xF6ra-lista. Du har inget kort att genomf\xF6ra."
     m_Metadata:
       m_Items: []
   - m_Id: 141937967278874624
-    m_Localized: "Att g\xF6ra lista"
+    m_Localized: "Att g\xF6ra-lista"
     m_Metadata:
       m_Items: []
   - m_Id: 141959887966904320
@@ -295,11 +295,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458755
-    m_Localized: Gjort
+    m_Localized: Klar
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458756
-    m_Localized: Ej gjort
+    m_Localized: Inte klart
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458757
@@ -307,11 +307,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458758
-    m_Localized: "Bekr\xE4fta"
+    m_Localized: Verifiera
     m_Metadata:
       m_Items: []
   - m_Id: 141959888004653056
-    m_Localized: Inte validerad
+    m_Localized: Inte verifierat
     m_Metadata:
       m_Items: []
   - m_Id: 141959888004653057
@@ -327,28 +327,28 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 153714070861635584
-    m_Localized: "\xD6ppen hj\xE4lpwebbplats"
+    m_Localized: "\xD6ppna Hj\xE4lpsida"
     m_Metadata:
       m_Items: []
   - m_Id: 153714070870024192
-    m_Localized: Handla om
+    m_Localized: Om
     m_Metadata:
       m_Items: []
   - m_Id: 153714070870024193
-    m_Localized: Meddelanden
+    m_Localized: Aviseringar
     m_Metadata:
       m_Items: []
   - m_Id: 156524221040631808
-    m_Localized: Onlineanalys
+    m_Localized: Digital analys
     m_Metadata:
       m_Items: []
   - m_Id: 156524221074186240
-    m_Localized: "Vill du f\xE5 aviseringar fr\xE5n den h\xE4r appen?"
+    m_Localized: "Vill du f\xE5 aviseringar fr\xE5n den h\xE4r applikationen?"
     m_Metadata:
       m_Items: []
   - m_Id: 156524221074186241
-    m_Localized: "Vill du hj\xE4lpa oss att f\xF6rb\xE4ttra den h\xE4r appen genom
-      att dela online dina anonyma speldata?"
+    m_Localized: "Vill du hj\xE4lpa oss att f\xF6rb\xE4ttra den h\xE4r applikationen
+      genom att dela dina ANONYMA speluppgifter p\xE5 internet?"
     m_Metadata:
       m_Items: []
   references:

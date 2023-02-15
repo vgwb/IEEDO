@@ -24,16 +24,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093260
-    m_Localized: "\xCAtes-vous s\xFBr de vouloir quitter la cr\xE9ation de cette
-      carte?"
+    m_Localized: "\xCAtes-vous s\xFBr de vouloir abandonner la cr\xE9ation de cette
+      carte ?"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093259
-    m_Localized: "Quitter la cr\xE9ation de la carte"
+    m_Localized: "Quitter Cr\xE9ation de carte"
     m_Metadata:
       m_Items: []
   - m_Id: 40525580437577728
-    m_Localized: Sortie
+    m_Localized: Quitter
     m_Metadata:
       m_Items: []
   - m_Id: 48125278888599552
@@ -41,7 +41,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48151452267077632
-    m_Localized: "G\xE9n\xE9rer des piliers al\xE9atoires"
+    m_Localized: "G\xE9n\xE9rer des Piliers al\xE9atoires"
     m_Metadata:
       m_Items: []
   - m_Id: 40526294958235648
@@ -53,20 +53,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40525760616488960
-    m_Localized: "\xC9valuation"
+    m_Localized: Evaluation
     m_Metadata:
       m_Items: []
   - m_Id: 40525707831173120
-    m_Localized: Mode commutateur
+    m_Localized: Changer de mode
     m_Metadata:
       m_Items: []
   - m_Id: 48154400376250368
-    m_Localized: Augmenter le score +100
+    m_Localized: Augmentation du score +100
     m_Metadata:
       m_Items: []
   - m_Id: 55768998995763200
-    m_Localized: "Ieedo se concentre sur 6 cat\xE9gories, v\xE9rifions-les un par
-      un ..."
+    m_Localized: "IEEDO se concentre sur 6 cat\xE9gories, regardons-les une par une..."
     m_Metadata:
       m_Items: []
   - m_Id: 40549731508445184
@@ -78,7 +77,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450240
-    m_Localized: Dos
+    m_Localized: Retour
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450244
@@ -86,33 +85,33 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40535113130074112
-    m_Localized: "Choisir une cat\xE9gorie"
+    m_Localized: "S\xE9lectionner une cat\xE9gorie"
     m_Metadata:
       m_Items: []
   - m_Id: 40535419633033216
-    m_Localized: "D\xE9finir une date cible"
+    m_Localized: Fixer une date limite
     m_Metadata:
       m_Items: []
   - m_Id: 40535270735241216
-    m_Localized: "D\xE9finir un niveau de difficult\xE9"
+    m_Localized: "D\xE9finisser un niveau de difficult\xE9"
     m_Metadata:
       m_Items: []
   - m_Id: 40535579280826368
-    m_Localized: "S\xE9lectionnez le type de t\xE2che"
+    m_Localized: "S\xE9lectionner le type de t\xE2che"
     m_Metadata:
       m_Items: []
   - m_Id: 40537204766564352
-    m_Localized: Entrez description
+    m_Localized: Saisisser la description
     m_Metadata:
       m_Items: []
   - m_Id: 40535952167034880
-    m_Localized: Entrer le titre
+    m_Localized: Saisisser le titre
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854083
-    m_Localized: "Partners du projet:\n- Ashley Community Housing (Royaume-Uni)\n-
-      FolkuniversiteTet (Su\xE8de)\n- Metropolisnet (Allemagne)\n- Rinova Ltd (Royaume-Uni)\n-
-      Dimitra (Gr\xE8ce)\n- VideoJuegos Sin Fronteras (Espagne)\n\nFinanc\xE9 par
+    m_Localized: " Partenaires du projet :\n- Ashley Community Housing (Royaume-Uni)\n-
+      Folkuniversitetet (Su\xE8de)\n- MetropolisNet (Allemagne)\n- Rinova Ltd (Royaume-Uni)\n-
+      Dimitra (Gr\xE8ce)\n- Videojuegos Sin Fronteras (Espagne)\n\nFinanc\xE9 par
       l\u2019Union europ\xE9enne. Les points de vue et avis exprim\xE9s n\u2019engagent
       toutefois que leur(s) auteur(s) et ne refl\xE8tent pas n\xE9cessairement ceux
       de l\u2019Union europ\xE9enne ou de l\u2019Agence ex\xE9cutive europ\xE9enne
@@ -121,7 +120,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925889
-    m_Localized: "\xCAtes-vous s\xFBr de vouloir supprimer la carte?"
+    m_Localized: "Vous \xEAtes s\xFBr de vouloir supprimer la carte ?"
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925888
@@ -129,15 +128,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48447397204844544
-    m_Localized: Fait
+    m_Localized: "Termin\xE9"
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450243
-    m_Localized: Sortie
+    m_Localized: Quitter
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854081
-    m_Localized: Triche
+    m_Localized: Tricheurs
     m_Metadata:
       m_Items: []
   - m_Id: 65886906563190784
@@ -149,18 +148,18 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762365927424
-    m_Localized: "Accueillir! L'objectif Ieedo est de vous aider \xE0 r\xE9ussir
+    m_Localized: "Bienvenue ! L'objectif d'IEEDO est de vous aider \xE0 r\xE9ussir
       dans ce pays."
     m_Metadata:
       m_Items: []
   - m_Id: 136954244812791808
-    m_Localized: " Si vous ne comprenez pas quelque chose \xE0 l'\xE9cran, maintenez
-      le bouton de traduction pour le lire dans votre langue maternelle"
+    m_Localized: "Si vous ne comprenez pas quelque chose \xE0 l'\xE9cran, appuyez
+      sur le bouton Traduction pour le lire dans votre langue maternelle."
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093248
-    m_Localized: "Vous devriez \xEAtre avec votre entra\xEEneur, commen\xE7ons une
-      session de coaching"
+    m_Localized: "Vous devriez \xEAtre avec votre coach, commen\xE7ons une session
+      de coaching."
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450242
@@ -172,16 +171,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 134354837057822720
-    m_Localized: "N'oubliez pas de jouer et de mettre \xE0 jour votre liste de t\xE2ches
-      tous les jours!"
+    m_Localized: "N'oubliez pas de jouer et de mettre \xE0 jour votre liste de choses
+      \xE0 faire tous les jours !"
     m_Metadata:
       m_Items: []
   - m_Id: 37308361241255936
-    m_Localized: D'ACCORD
+    m_Localized: Ok
     m_Metadata:
       m_Items: []
   - m_Id: 43003187146022912
-    m_Localized: "Cartes termin\xE9es"
+    m_Localized: "Cartes compl\xE9t\xE9es"
     m_Metadata:
       m_Items: []
   - m_Id: 43003190425968640
@@ -193,7 +192,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 65895845057028096
-    m_Localized: "Voulez-vous vraiment r\xE9initialiser le profil?"
+    m_Localized: "Voulez-vous vraiment r\xE9initialiser le profil ?"
     m_Metadata:
       m_Items: []
   - m_Id: 65895845048639488
@@ -201,37 +200,37 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 37308361245450241
-    m_Localized: Recommencez
+    m_Localized: "R\xE9essayer"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093258
-    m_Localized: "\xCAtes-vous s\xFBr de vouloir quitter la session de coaching?"
+    m_Localized: "\xCAtes-vous s\xFBr de vouloir quitter la session de coaching ?"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093257
-    m_Localized: "Session de d\xE9part"
+    m_Localized: Quitter la session
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093254
     m_Localized: Il est maintenant temps de planifier ensemble les choses que vous
-      ferez dans les prochains jours
+      allez faire dans les prochains jours
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093252
-    m_Localized: "Revordons ensemble toutes les cartes que vous avez termin\xE9es"
+    m_Localized: "Revoyons ensemble toutes les cartes que vous avez compl\xE9t\xE9es"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093253
-    m_Localized: "Vous n'avez pas de cartes \xE0 examiner"
+    m_Localized: "Vous n'avez aucune carte \xE0 revoir"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093251
-    m_Localized: "Votre coach est l\xE0 pour vous aider. Voulez-vous r\xE9pondre
-      \xE0 quelques questions sur votre situation actuelle?"
+    m_Localized: "Votre coach est l\xE0 pour vous aider.   Voulez-vous r\xE9pondre
+      \xE0 quelques questions sur votre situation actuelle ?"
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093250
-    m_Localized: "S\xE9ance de coaching"
+    m_Localized: Session de coaching
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854082
@@ -239,24 +238,25 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093249
-    m_Localized: "D\xE9marrer la session"
+    m_Localized: "D\xE9but de la session"
     m_Metadata:
       m_Items: []
   - m_Id: 48089044644470784
-    m_Localized: "\xCAtes-vous s\xFBr que vous souhaitez d\xE9finir la carte comme
-      non termin\xE9e?"
+    m_Localized: "Etes-vous s\xFBr de vouloir d\xE9finir la carte comme non compl\xE9t\xE9e
+      ?"
     m_Metadata:
       m_Items: []
   - m_Id: 48089044619304960
-    m_Localized: "D\xE9finir comme non termin\xE9"
+    m_Localized: "D\xE9finir comme non compl\xE9t\xE9"
     m_Metadata:
       m_Items: []
   - m_Id: 48119887563792384
-    m_Localized: "\xCAtes-vous s\xFBr de vouloir d\xE9finir la carte comme non valid\xE9?"
+    m_Localized: "Etes-vous s\xFBr de vouloir d\xE9finir la carte comme non valid\xE9e
+      ?"
     m_Metadata:
       m_Items: []
   - m_Id: 48119887559598080
-    m_Localized: "D\xE9finir comme non valid\xE9"
+    m_Localized: "D\xE9fini comme non valid\xE9"
     m_Metadata:
       m_Items: []
   - m_Id: 24994957285646336
@@ -264,7 +264,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 136953378097618944
-    m_Localized: "O\xF9 es-tu?"
+    m_Localized: "O\xF9 \xEAtes-vous ?"
     m_Metadata:
       m_Items: []
   - m_Id: 139790834418524160
@@ -272,16 +272,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 139790834443689984
-    m_Localized: "Ceci est votre liste de t\xE2ches. Vous n'avez pas de carte \xE0
-      faire."
+    m_Localized: "C'est votre liste de t\xE2ches \xE0 accomplir. Vous n'avez pas
+      de carte \xE0 faire."
     m_Metadata:
       m_Items: []
   - m_Id: 141937967278874624
-    m_Localized: "Liste de choses \xE0 faire"
+    m_Localized: "Liste des t\xE2ches \xE0 accomplir"
     m_Metadata:
       m_Items: []
   - m_Id: 141959887966904320
-    m_Localized: Maison
+    m_Localized: Accueil
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458752
@@ -297,27 +297,27 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458755
-    m_Localized: Fait
+    m_Localized: "Termin\xE9"
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458756
-    m_Localized: Pas fini
+    m_Localized: Non fait
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458757
-    m_Localized: Modifier
+    m_Localized: Editer
     m_Metadata:
       m_Items: []
   - m_Id: 141959888000458758
-    m_Localized: Valider
+    m_Localized: Validez
     m_Metadata:
       m_Items: []
   - m_Id: 141959888004653056
-    m_Localized: "Pas valid\xE9"
+    m_Localized: "Non valid\xE9"
     m_Metadata:
       m_Items: []
   - m_Id: 141959888004653057
-    m_Localized: Change de vue
+    m_Localized: Changer de vue
     m_Metadata:
       m_Items: []
   - m_Id: 144439249164066816
@@ -325,11 +325,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 144439249336033280
-    m_Localized: "\xCAtes-vous s\xFBr de vouloir quitter le questionnaire?"
+    m_Localized: "Vous \xEAtes s\xFBr de vouloir quitter le questionnaire ?"
     m_Metadata:
       m_Items: []
   - m_Id: 153714070861635584
-    m_Localized: Site Web d'aide ouverte
+    m_Localized: Ouvrir le site internet d'aide
     m_Metadata:
       m_Items: []
   - m_Id: 153714070870024192
@@ -341,16 +341,17 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 156524221040631808
-    m_Localized: Analyse en ligne
+    m_Localized: Analytiques en ligne
     m_Metadata:
       m_Items: []
   - m_Id: 156524221074186240
-    m_Localized: Souhaitez-vous recevoir des notifications de cette application?
+    m_Localized: Voulez-vous recevoir des notifications de la part de cette application
+      ?
     m_Metadata:
       m_Items: []
   - m_Id: 156524221074186241
-    m_Localized: "Souhaitez-vous nous aider \xE0 am\xE9liorer cette application en
-      partageant en ligne vos donn\xE9es de lecture anonymes?"
+    m_Localized: Would you like to help us improve this app by sharing online your
+      ANONYMOUS play data?
     m_Metadata:
       m_Items: []
   references:

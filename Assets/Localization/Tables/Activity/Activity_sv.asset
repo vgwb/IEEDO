@@ -20,11 +20,11 @@ MonoBehaviour:
     - rid: 3196637817602572296
   m_TableData:
   - m_Id: 104043542756712454
-    m_Localized: Matematikordning
+    m_Localized: Matematisk ordning
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712456
-    m_Localized: Matematikhastighet
+    m_Localized: Matematisk hastighet
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712458
@@ -40,7 +40,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712466
-    m_Localized: Avblockera
+    m_Localized: Unblock (blockpussel)
     m_Metadata:
       m_Items: []
   - m_Id: 111561110350454784
@@ -76,12 +76,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 104043542756712467
-    m_Localized: "Flytta det blockerade elementet till utg\xE5ngen genom att ta bort
+    m_Localized: "Flytta det blockerade objektet till utg\xE5ngen genom att ta bort
       alla hinder"
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649088
-    m_Localized: "Uppdelad uppm\xE4rksamhet"
+    m_Localized: "Delad uppm\xE4rksamhet (simultankapacitet)"
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649090
@@ -89,15 +89,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649092
-    m_Localized: Uppgiftsomkoppling
+    m_Localized: Uppgiftsbyte
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649094
-    m_Localized: Tidpunkt
+    m_Localized: Tidpassning
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649096
-    m_Localized: Lemissighet
+    m_Localized: Inkludering
     m_Metadata:
       m_Items: []
   - m_Id: 111561110354649098
@@ -121,15 +121,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037704
-    m_Localized: Probabilistisk resonemang
+    m_Localized: Probabilistiskt resonemang
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037706
-    m_Localized: Fungerande minne
+    m_Localized: Arbetsminne
     m_Metadata:
       m_Items: []
   - m_Id: 111552523372847118
-    m_Localized: Planera
+    m_Localized: Planering
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037709
@@ -137,7 +137,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232000
-    m_Localized: Proportionell resonemang
+    m_Localized: Proportionellt resonemang
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232002
@@ -145,19 +145,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232004
-    m_Localized: Svarinhibering
+    m_Localized: "Responsh\xE4mning"
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232006
-    m_Localized: Rumsliga orientering
+    m_Localized: Rumsorientering
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232008
-    m_Localized: Rumsliga resonemang
+    m_Localized: Rumsligt resonemang
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232010
-    m_Localized: "Rumsligt \xE5terkallelse"
+    m_Localized: Rumsminne
     m_Metadata:
       m_Items: []
   - m_Id: 111552523372847126
@@ -165,11 +165,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232013
-    m_Localized: "Ordf\xF6rr\xE5dskompetens"
+    m_Localized: "Ordf\xF6rst\xE5else"
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232015
-    m_Localized: Verbal flytande
+    m_Localized: Verbalt flyt
     m_Metadata:
       m_Items: []
   - m_Id: 111594514829565957
@@ -177,12 +177,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760256
-    m_Localized: "Flytta blocken i valfri riktning f\xF6r att sl\xE5 samman siffror
-      med samma v\xE4rde och g\xF6ra s\xE5 mycket du kan. Kan du komma till 2048?"
+    m_Localized: "Flytta blocken i valfri riktning f\xF6r att sl\xE5 samman tal med
+      samma v\xE4rde och f\xE5 s\xE5 h\xF6g po\xE4ngsumma som m\xF6jligt. Kan du
+      n\xE5 2048?"
     m_Metadata:
       m_Items: []
   - m_Id: 111594514833760257
-    m_Localized: "Sl\xE5 samman nummer"
+    m_Localized: Addera siffror
     m_Metadata:
       m_Items: []
   - m_Id: 111596475083677696
@@ -190,7 +191,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111596475087872000
-    m_Localized: 
+    m_Localized: "Svara Ja eller Nej s\xE5 snabbt du kan."
     m_Metadata:
       m_Items: []
   - m_Id: 111599790488051712
@@ -198,14 +199,14 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989696
-    m_Localized: "Skriv en daglig anteckning i din personliga dagbok.\n\nDetta hj\xE4lper
-      dig att t\xE4nka p\xE5 riktningen i ditt liv och utv\xE4rdera framsteg och
-      problem,"
+    m_Localized: "Skriv en daglig anteckning i din personliga dagbok   Det h\xE4r
+      hj\xE4lper dig att reflektera \xF6ver vilken riktning ditt liv tar och utv\xE4rdera
+      framsteg och problem."
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989697
-    m_Localized: "Att skriva n\xE5gra rader om hur du k\xE4nner dig varje dag \xE4r
-      en bra praxis f\xF6r ditt v\xE4lbefinnande"
+    m_Localized: "Att skriva n\xE5gra rader om hur du m\xE5r varje dag \xE4r en bra
+      \xF6vning f\xF6r ditt v\xE4lbefinnande"
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989699
@@ -213,9 +214,9 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989700
-    m_Localized: "Skriv ett brev till en v\xE4n.\n\nBrevskrivning kan vara terapeutiskt
-      f\xF6r f\xF6rfattaren s\xE5v\xE4l som mottagaren, och det kan vara bara saken
-      som hj\xE4lper dig att \xE4ndra perspektiv."
+    m_Localized: "Skriv ett brev till en v\xE4n.   Brevskrivande kan vara terapeutiskt
+      b\xE5de f\xF6r skribenten och mottagaren, och det kan vara just det som hj\xE4lper
+      dig att byta perspektiv."
     m_Metadata:
       m_Items: []
   - m_Id: 111599790680989702
@@ -224,8 +225,8 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 111599790680989703
     m_Localized: "Att skriva ett brev till ditt framtida jag erbjuder f\xF6rdelen
-      med att \"planera bak\xE5t\" som uppmuntrar oss att vara mer avsiktliga med
-      v\xE5r tid och fokusera p\xE5 vilken \xF6kande framsteg vi kan g\xF6ra i nuet
+      med att \"planera bak\xE5t\", vilket uppmuntrar oss att ta b\xE4ttre vara p\xE5
+      v\xE5r tid och fokusera p\xE5 vilka gradvisa framsteg vi kan g\xF6ra i nuet
       mot v\xE5ra l\xE5ngsiktiga m\xE5l f\xF6r framtiden."
     m_Metadata:
       m_Items: []
@@ -234,7 +235,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033088
-    m_Localized: Ledighet
+    m_Localized: "L\xE4mna aktivitet"
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033089
@@ -258,11 +259,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033094
-    m_Localized: "Spela \xF6ver"
+    m_Localized: "Spelet \xE4r slut"
     m_Metadata:
       m_Items: []
   - m_Id: 112797993831227393
-    m_Localized: "Utg\xE5ng"
+    m_Localized: Avsluta
     m_Metadata:
       m_Items: []
   - m_Id: 112797993831227396
@@ -274,7 +275,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 115977790945173504
-    m_Localized: Avslutad
+    m_Localized: "Slutf\xF6rd"
     m_Metadata:
       m_Items: []
   - m_Id: 115977791033253888
@@ -282,7 +283,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 115977791033253889
-    m_Localized: "B\xE4sta po\xE4ng"
+    m_Localized: "H\xF6gsta po\xE4ng"
     m_Metadata:
       m_Items: []
   - m_Id: 115977791033253890
@@ -291,7 +292,7 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 115977791033253891
     m_Localized: "Att spela n\xE5gra minuter om dagen hj\xE4lper din hj\xE4rna att
-      h\xE5lla sig i form"
+      h\xE5lla sig i trim"
     m_Metadata:
       m_Items: []
   - m_Id: 115977791033253892
@@ -299,12 +300,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 115977791037448193
-    m_Localized: "{points} Po\xE4ng f\xF6r att l\xE5sa upp"
+    m_Localized: "{points} f\xF6r att l\xE5sa upp"
     m_Metadata:
       m_Items:
       - rid: 3196637817602572296
   - m_Id: 115977791037448194
-    m_Localized: Gynna
+    m_Localized: "F\xF6rdelar"
     m_Metadata:
       m_Items: []
   - m_Id: 115977791037448195
@@ -316,7 +317,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 124966118831939584
-    m_Localized: "\xC4r bilden densamma som den f\xF6reg\xE5ende?"
+    m_Localized: "\xC4r bilden densamma som den f\xF6rra?"
     m_Metadata:
       m_Items: []
   - m_Id: 124969240149090304
@@ -324,7 +325,194 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 125004304811548672
-    m_Localized: "G\xF6ra"
+    m_Localized: "Po\xE4ng"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864720760834
+    m_Localized: "Du kan b\xE4ttre"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864720760833
+    m_Localized: "Du g\xF6r bra ifr\xE5n dig"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864720760832
+    m_Localized: "J\xE4ttebra!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115987864716566528
+    m_Localized: "V\xE4lj en niv\xE5"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115989062555262976
+    m_Localized: Pausa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115989062559457280
+    m_Localized: "\xC5teruppta"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 115989062559457281
+    m_Localized: "B\xF6rja"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989698
+    m_Localized: "Skriv ner dina tankar och k\xE4nslor h\xE4r..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989701
+    m_Localized: "Skriv n\xE5gra rader till din v\xE4n h\xE4r..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111599790680989704
+    m_Localized: "Skriv ett meddelande till ditt framtida jag h\xE4r..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712455
+    m_Localized: "V\xE4lj siffrorna i stigande eller fallande ordning i enlighet
+      med vad pilen visar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712457
+    m_Localized: "Vilket av de tv\xE5 talen \xE4r st\xF6rst? Eller \xE4r de lika
+      stora?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712459
+    m_Localized: "Kommer du ih\xE5g bilden som du s\xE5g?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712461
+    m_Localized: Kan du upprepa sekvensen?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111594514833760258
+    m_Localized: "3 p\xE5 varandra f\xF6ljande tal kommer att sl\xE5s samman och
+      generera ett h\xF6gre tal. F\xE5 s\xE5 h\xF6g po\xE4ngsumma som m\xF6jligt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 104043542756712465
+    m_Localized: "Det klassiska tre-i-rad-spelet: Kan du placera tre tecken i rad
+      i n\xE5gon riktning?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649089
+    m_Localized: "Delad uppm\xE4rksamhet h\xE4nvisar till f\xF6rm\xE5gan att genomf\xF6ra
+      flera uppgifter eller uppfylla flera uppgiftskrav samtidigt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649091
+    m_Localized: "F\xF6rm\xE5gan att fokusera p\xE5 relevant information och samtidigt
+      sortera bort och ignorera irrelevanta distraktioner"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649093
+    m_Localized: "Uppgiftsbyte \xE4r processen att anpassa sig till f\xF6r\xE4ndrade
+      omst\xE4ndigheter, och f\xF6rm\xE5gan att flytta uppm\xE4rksamheten fr\xE5n
+      ett m\xE5l till ett annat."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649095
+    m_Localized: "Tidpassning \xE4r f\xF6rm\xE5gan att synkronisera aktiviteter och
+      h\xE5lla tiden exakt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649097
+    m_Localized: "K\xE4nslan av att bli accepterad som en del av en gemenskap"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110354649099
+    m_Localized: "H\xE4nvisar till f\xF6rm\xE5gan att vara fullst\xE4ndigt n\xE4rvarande
+      och medveten om var du \xE4r och vad du g\xF6r"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037697
+    m_Localized: "Synf\xE4lt h\xE4nvisar till det omr\xE5de \xF6ver vilket du kan
+      observera och absorbera visuell information utan att r\xF6ra \xF6gonen."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037699
+    m_Localized: "Logiskt resonemang \xE4r f\xF6rm\xE5gan att kombinera flera kognitiva
+      processer f\xF6r att k\xE4nna igen m\xF6nster, dra slutsatser och fatta beslut."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037701
+    m_Localized: "Numerisk ber\xE4kning \xE4r f\xF6rm\xE5gan att utf\xF6ra enkla
+      aritmetiska operationer, d\xE4ribland addition, subtraktion, multiplikation
+      och division."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037703
+    m_Localized: "Numerisk uppskattning \xE4r f\xF6rm\xE5gan att uppskatta numeriska
+      samband snabbt eller med ofullst\xE4ndig information."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037705
+    m_Localized: "Probabilistiskt resonemang (sannolikhetsresonemang) \xE4r f\xF6rm\xE5gan
+      att analysera och utv\xE4rdera sannolikheten f\xF6r olika h\xE4ndelser."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037707
+    m_Localized: "Arbetsminne anv\xE4nds f\xF6r att tillf\xE4lligt lagra och manipulera
+      information."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037708
+    m_Localized: "Planering innefattar att t\xE4nka fram\xE5t, utv\xE4rdera olika
+      alternativ och v\xE4lja det b\xE4sta tillv\xE4gag\xE5ngss\xE4ttet."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110363037710
+    m_Localized: "Bearbetningshastighet \xE4r f\xF6rm\xE5gan att snabbt identifiera
+      och analysera inkommande sinnesintryck."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232001
+    m_Localized: "Proportionellt resonemang \xE4r f\xF6rm\xE5gan att j\xE4mf\xF6ra
+      och konvertera (omvandla) kvantiteter mellan olika proportioner, f\xF6rh\xE5llanden
+      och representationer."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232003
+    m_Localized: "L\xE4sf\xF6rst\xE5else \xE4r f\xF6rm\xE5gan att l\xE4sa, bearbeta
+      och f\xF6rst\xE5 skriftspr\xE5k."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232005
+    m_Localized: "Responsh\xE4mning \xE4r f\xF6rm\xE5gan att undertrycka ol\xE4mpliga
+      impulser som st\xF6r m\xE5linriktade handlingar."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232007
+    m_Localized: "Rumsorientering, \xE4ven k\xE4nt som orienteringsf\xF6rm\xE5ga
+      eller lokalsinne, h\xE4nvisar till f\xF6rm\xE5gan att vara medveten om den
+      omgivande milj\xF6n."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232009
+    m_Localized: "Rumsligt resonemang (\xE4ven k\xE4nt som rumslig orientering) \xE4r
+      f\xF6rm\xE5gan att visualisera rumsliga f\xF6rh\xE5llanden och analysera dem
+      f\xF6r att dra slutsatser."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232011
+    m_Localized: "Rumsminne \xE4r en form av minne som anv\xE4nds f\xF6r att hitta
+      till platser, positioner och objekt i en viss omgivning eller milj\xF6."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232012
+    m_Localized: "Visualisering \xE4r f\xF6rm\xE5gan att manipulera eller f\xF6rest\xE4lla
+      sig interaktionen mellan olika objekt i sitt sinne."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232014
+    m_Localized: "Ordf\xF6rst\xE5else relaterar till f\xF6rm\xE5gan att f\xF6rst\xE5
+      och anv\xE4nda ord."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 111561110367232016
+    m_Localized: "Verbalt flyt \xE4r f\xF6rm\xE5gan att snabbt plocka fram ord som
+      finns lagrade i ditt mentala lexikon i hj\xE4rnan."
     m_Metadata:
       m_Items: []
   references:
