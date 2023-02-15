@@ -3225,6 +3225,10 @@ PrefabInstance:
       propertyPath: CardScale
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6437316955223693130, guid: 9224fabccd8ff9e42bf67a2d85ba2ac6, type: 3}
+      propertyPath: InteractionArea
+      value: 
+      objectReference: {fileID: 2598445362677028085}
     - target: {fileID: 7102778298511453035, guid: 9224fabccd8ff9e42bf67a2d85ba2ac6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3310,8 +3314,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7380397472601391755, guid: 9224fabccd8ff9e42bf67a2d85ba2ac6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e429c1812dd89884bb925ab0ad3da220, type: 3}
+    - target: {fileID: 7380397472601391755, guid: 9224fabccd8ff9e42bf67a2d85ba2ac6, type: 3}
       propertyPath: m_RaycastTarget
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7915357893556443430, guid: 9224fabccd8ff9e42bf67a2d85ba2ac6, type: 3}
       propertyPath: MaxVelocity
@@ -3339,6 +3347,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9224fabccd8ff9e42bf67a2d85ba2ac6, type: 3}
+--- !u!224 &2598445362677028085 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1453701505717246968, guid: 9224fabccd8ff9e42bf67a2d85ba2ac6, type: 3}
+  m_PrefabInstance: {fileID: 3468648689748807437}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7599521116929857607 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6437316955223693130, guid: 9224fabccd8ff9e42bf67a2d85ba2ac6, type: 3}
