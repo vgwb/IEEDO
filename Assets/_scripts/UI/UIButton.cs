@@ -57,8 +57,13 @@ namespace Ieedo
 
         public void AnimateAppear()
         {
-            transform.localScale = Vector3.zero;
+            //transform.localScale = Vector3.zero;
             transform.localScaleTransition(Vector3.one, 0.25f);
+        }
+
+        public void AnimateDisappear()
+        {
+            transform.localScaleTransition(Vector3.zero, 0.25f);
         }
 
         public void Hide()
