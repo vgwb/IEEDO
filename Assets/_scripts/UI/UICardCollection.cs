@@ -8,6 +8,7 @@ namespace Ieedo
 {
     public class UICardCollection : MonoBehaviour
     {
+        public RectTransform InteractionArea;
         public RectTransform SlotPrefab;
         public SnappingScrollRect ScrollRect;
         public float CardScale = 3;
@@ -53,6 +54,9 @@ namespace Ieedo
             SetupInListInteraction(uiCard);
             HeldSlots.Add(newSlotRT.gameObject);
             HeldCards.Add(uiCard);
+
+            InteractionArea.SetAsLastSibling();
+
             return uiCard;
         }
 

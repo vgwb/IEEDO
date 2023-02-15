@@ -178,17 +178,19 @@ namespace Ieedo
                 CardsCounter.gameObject.SetActive(!canEdit);
                 if (canEdit)
                 {
-                    CreateCardButton.Hide();
-                    CompleteCardButton.Hide();
-                    DeleteCardButton.Hide();
+                    CreateCardButton.AnimateDisappear();
+                    CompleteCardButton.AnimateDisappear();
+                    DeleteCardButton.AnimateDisappear();
                 }
                 else
                 {
-                    CreateCardButton.Show();
-                    CompleteCardButton.Show();
-                    DeleteCardButton.Show();
+                    CreateCardButton.AnimateAppear();
+                    CompleteCardButton.AnimateAppear();
+                    DeleteCardButton.AnimateAppear();
                 }
             }
+
+            CardsList.InteractionArea.gameObject.SetActive(!canEdit);
         }
 
         #endregion
@@ -673,7 +675,12 @@ namespace Ieedo
 
         private void SetButtonsVisible(bool choice)
         {
-            FrontInteractionPivot.gameObject.SetActive(choice);
+            var buttons = FrontInteractionPivot.GetComponentsInChildren<UIButton>();
+            foreach (UIButton uiButton in buttons)
+            {
+                if (choice) uiButton.AnimateAppear();
+                else uiButton.AnimateDisappear();
+            }
         }
 
         private void AnimateShowButton(UIButton btn)

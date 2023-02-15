@@ -72,7 +72,7 @@ namespace Ieedo
                         break;
                     case ScoreType.NumberOfPlays:
                         ScoreLabel = new LocalizedString("Activity", "activity_played");
-                        ScoreText = data.Results.Count.ToString();
+                        ScoreText = data.Results.Count(x => x.CustomData != string.Empty).ToString();
                         break;
                     case ScoreType.None:
                     default:
