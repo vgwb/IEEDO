@@ -83,7 +83,14 @@ namespace Ieedo
         {
             DisableButton(NextLevelButton);
             Close();
-            StartCoroutine(Statics.ActivityFlow.CurrentActivityManager.PlayNextLevel(Statics.ActivityFlow.CurrentLevel));
+            var nextLevel = Statics.ActivityFlow.CurrentLevel;
+            if (Statics.ActivityFlow.CurrentActivityManager.DebugPlay)
+            {
+                Statics.ActivityFlow.CurrentActivityManager.DebugStartLevel++;
+                nextLevel = Statics.ActivityFlow.CurrentActivityManager.DebugStartLevel;
+            }
+
+            StartCoroutine(Statics.ActivityFlow.CurrentActivityManager.PlayNextLevel(nextLevel));
         }
     }
 }

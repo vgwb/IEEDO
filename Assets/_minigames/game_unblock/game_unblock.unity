@@ -138,6 +138,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -87.79999
       objectReference: {fileID: 0}
+    - target: {fileID: 3268749338322987827, guid: b21cec470abfeb34192c6303df26ccd0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -33.90619
+      objectReference: {fileID: 0}
     - target: {fileID: 6016258723710853812, guid: b21cec470abfeb34192c6303df26ccd0, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -431,8 +435,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Activity: {fileID: 11400000, guid: 895ed3613206648d8ac53802e2f66bc3, type: 2}
-  DebugAutoplay: 0
-  DebugStartLevel: 43
+  DebugAutoplay: 1
+  DebugStartLevel: 3
   ScoreUI: {fileID: 1334321006}
 --- !u!4 &1326222726
 Transform:

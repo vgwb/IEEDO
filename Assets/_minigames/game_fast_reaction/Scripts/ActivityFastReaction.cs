@@ -16,14 +16,6 @@ namespace minigame.fast_reaction
             I = this;
         }
 
-        void Start()
-        {
-            if (DebugAutoplay)
-            {
-                SetupActivity(DebugStartLevel);
-            }
-        }
-
         protected override void SetupActivity(int currentLevel)
         {
             StartGame();

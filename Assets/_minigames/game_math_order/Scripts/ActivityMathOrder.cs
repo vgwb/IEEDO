@@ -10,13 +10,6 @@ namespace minigame.math_order
 {
     public class ActivityMathOrder : ActivityManager
     {
-        void Start()
-        {
-            if (DebugAutoplay)
-            {
-                SetupActivity(DebugStartLevel);
-            }
-        }
 
         protected override void SetupActivity(int currentLevel)
         {

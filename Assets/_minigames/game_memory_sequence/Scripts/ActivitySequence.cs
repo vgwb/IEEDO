@@ -10,13 +10,6 @@ namespace minigame.sequence
 {
     public class ActivitySequence : ActivityManager
     {
-        void Start()
-        {
-            if (DebugAutoplay)
-            {
-                SetupActivity(DebugStartLevel);
-            }
-        }
 
         protected override void SetupActivity(int currentLevel)
         {

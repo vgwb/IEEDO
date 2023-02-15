@@ -10,14 +10,6 @@ namespace minigame.mergenumbers
 {
     public class ActivityMergenumbers : ActivityManager
     {
-        void Start()
-        {
-            if (DebugAutoplay)
-            {
-                SetupActivity(DebugStartLevel);
-            }
-        }
-
         protected override void SetupActivity(int currentLevel)
         {
             Debug.Log($"Starting game at level {currentLevel}");

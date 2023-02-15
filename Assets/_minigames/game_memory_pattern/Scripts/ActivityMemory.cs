@@ -10,13 +10,6 @@ namespace minigame.memory
 {
     public class ActivityMemory : ActivityManager
     {
-        void Start()
-        {
-            if (DebugAutoplay)
-            {
-                SetupActivity(DebugStartLevel);
-            }
-        }
 
         protected override void SetupActivity(int currentLevel)
         {

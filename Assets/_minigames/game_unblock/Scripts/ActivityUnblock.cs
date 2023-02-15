@@ -1,7 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Localization;
 using Ieedo;
 using Ieedo.games;
 
@@ -19,17 +17,8 @@ namespace minigame.unblock
             I = this;
         }
 
-        void Start()
-        {
-            if (DebugAutoplay)
-            {
-                SetupActivity(DebugStartLevel);
-            }
-        }
-
         protected override void SetupActivity(int _currentLevel)
         {
-            Inited = true;
             currentLevel = _currentLevel;
             StartGame();
         }

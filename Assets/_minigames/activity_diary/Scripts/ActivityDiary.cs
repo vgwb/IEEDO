@@ -37,14 +37,6 @@ namespace Ieedo.games.diary
         private int currentPageNumber;
         private int totalPageNumber;
 
-        void Start()
-        {
-            if (DebugAutoplay)
-            {
-                Debug.Log("AUTOPLAY START");
-                preparePage(Activity);
-            }
-        }
 
         void preparePage(ActivityDefinition Activity)
         {
@@ -65,7 +57,10 @@ namespace Ieedo.games.diary
         protected override void SetupActivity(int currentLevel)
         {
             preparePage(Statics.ActivityFlow.CurrentActivity);
-            var activityData = Statics.Data.Profile.Activities.GetActivityData(Statics.ActivityFlow.CurrentActivity.ID);
+
+            ActivityData activityData = null;
+            if (DebugPlay) activityData = new ActivityData();
+            else Statics.Data.Profile.Activities.GetActivityData(Statics.ActivityFlow.CurrentActivity.ID);
 
             Pages.Clear();
             if (activityData.Results.Count > 0)

@@ -31,13 +31,6 @@ namespace minigame.g2048
             board.CreateBoard();
         }
 
-        void Start()
-        {
-            if (DebugAutoplay)
-            {
-                SetupActivity(DebugStartLevel);
-            }
-        }
         protected override void SetupActivity(int currentLevel)
         {
             int maxScore = 0;

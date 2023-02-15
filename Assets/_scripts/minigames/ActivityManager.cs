@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.Localization;
 using System.Collections;
 using NaughtyAttributes;
+using UnityEngine.Serialization;
 
 namespace Ieedo.games
 {
@@ -12,11 +13,19 @@ namespace Ieedo.games
         public System.Action OnActivityEnd;
 
         [BoxGroup("Local Debug")]
-        public bool DebugAutoplay;
+        public bool DebugPlay;
         [BoxGroup("Local Debug")]
         public int DebugStartLevel;
 
-        protected bool Inited = false;
+        void Start()
+        {
+            if (DebugPlay)
+            {
+                Statics.ActivityFlow.CurrentActivity = Activity;
+                Statics.ActivityFlow.CurrentActivityManager = this;
+                SetupActivity(DebugStartLevel);
+            }
+        }
 
         public void CloseActivity()
         {
