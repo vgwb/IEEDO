@@ -65,6 +65,7 @@ namespace Ieedo
             isDragging = false;
 
             hasTriggeredSwipe = true;
+            Debug.LogError("END DRAG");
             //swipeStartPos = content.anchoredPosition.x;
             swipeToCardIndex = -1;
 
@@ -246,15 +247,15 @@ namespace Ieedo
 
                 if (isDragging)
                 {
-                    /*card.Title.SetTextRaw(
+                    card.Title.SetTextRaw(
                         "V " + dMovement.ToString("F") +
                         (actualPos - swipeStartPos).ToString("F") + " act: " + actualPos +
                         "\nDIR " + direction
                         + " diffFromMax" + diffFromMax.ToString("F") + " max: " + maxReachedDeltaFromStart.ToString("F")
 
                         + " diffFromStart " + diffFromStart + "\ndes: " + desiredPos.ToString("F") + " max: " + maxReachedDeltaFromStart.ToString("F")
-                    );*/
-             /*       card.Title.SetTextRaw("\nDIR " + direction);
+                    );
+                    card.Title.SetTextRaw("\nDIR " + direction);
                 }
                 else card.Title.SetTextRaw("...");
             }*/
@@ -270,15 +271,16 @@ namespace Ieedo
 
                 if (diffFromStart < ReturnToMiddleThreshold && diffFromMax > 0f)
                 {
-                    //Debug.LogError("RETURN TO MIDDLE");
+                    Debug.LogError("RETURN TO MIDDLE");
                     direction = 0;
                 }
 
                 // Velocity gets the precedence if high enough
                 if (checkVelocity && MathF.Abs(dMovement) / Time.deltaTime > SnapVelocityThreshold)
                 {
-                    //Debug.LogError("SnapVelocityThreshold TRIGGERED WITH " + dMovement);
+                    Debug.LogError("SnapVelocityThreshold TRIGGERED WITH " + dMovement);
                     direction = -(int)Mathf.Sign(dMovement);
+                    dMovement = 0f; // We must zero the dMovement or it gets used for the next tick too sometimes
                 }
 
                 // Make sure that the wanted card is always the next one in the direction of movement
@@ -290,7 +292,15 @@ namespace Ieedo
 
                 swipeToCardIndex = wantedCardIndex;
                 hasTriggeredSwipe = false;
-                //Debug.LogError("SWIPING TOWARDS  " + wantedCardIndex + " from card " + swipeFromCardIndex + " center is " + centerCardIndex);
+                /*Debug.LogError("SWIPING TOWARDS  " + wantedCardIndex + " from card " + swipeFromCardIndex + " center is " + centerCardIndex + " direction " + direction + " maxReachedDelta   " + maxReachedDeltaFromStart
+                + " diffFromStart signed " + (actualPos - swipeStartPos) + " diffFromMax " + diffFromMax + " actualPos "  + actualPos + " swipeStartPos " + swipeStartPos
+                );*/
+            }
+
+            if (hasTriggeredSwipe)
+            {
+                //Debug.LogError("Consuming swipe");
+                hasTriggeredSwipe = false;
             }
 
             //Debug.LogError("Pos of wanted: " + desiredPos);
