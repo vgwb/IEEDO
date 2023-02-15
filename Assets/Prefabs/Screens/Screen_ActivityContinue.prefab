@@ -195,6 +195,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 779864215143856498}
     m_Modifications:
+    - target: {fileID: 6034130968788856977, guid: 7098c74f1a75942649294a30f906a5c0, type: 3}
+      propertyPath: m_text
+      value: Best Score
+      objectReference: {fileID: 0}
     - target: {fileID: 7146359555028660929, guid: 7098c74f1a75942649294a30f906a5c0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -566,8 +570,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 352598685259931699, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 226.0413
+      objectReference: {fileID: 0}
+    - target: {fileID: 352598685259931699, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 352598685259931699, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -33.906185
       objectReference: {fileID: 0}
     - target: {fileID: 2371623362688251523, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_text
@@ -575,7 +587,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2371623362688251523, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_fontSize
-      value: 57.95
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 2371623362688251523, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_sharedMaterial
@@ -644,7 +656,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7189363564033629939, guid: 62b0585baa2de2147b49b9e04133163a, type: 3}
       propertyPath: m_text
-      value: Play Next Level
+      value: No translation found for '' in UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7189363564033629939, guid: 62b0585baa2de2147b49b9e04133163a, type: 3}
+      propertyPath: m_fontSize
+      value: 69.4
       objectReference: {fileID: 0}
     - target: {fileID: 7189363564033629939, guid: 62b0585baa2de2147b49b9e04133163a, type: 3}
       propertyPath: m_fontColor.b
@@ -799,6 +815,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 779864215143856498}
     m_Modifications:
+    - target: {fileID: 6034130968788856977, guid: 7098c74f1a75942649294a30f906a5c0, type: 3}
+      propertyPath: m_text
+      value: Score
+      objectReference: {fileID: 0}
     - target: {fileID: 7146359555028660929, guid: 7098c74f1a75942649294a30f906a5c0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -999,6 +1019,14 @@ PrefabInstance:
     - target: {fileID: 29123062583139789, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 352598685259931699, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 338.4336
+      objectReference: {fileID: 0}
+    - target: {fileID: 352598685259931699, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 206.8211
       objectReference: {fileID: 0}
     - target: {fileID: 2371623362688251523, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_text

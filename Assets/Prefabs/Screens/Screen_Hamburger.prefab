@@ -509,7 +509,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sound FX
+  m_text: Sound Effects
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a3ef21ff23c073f41b4df97fdba29bd0, type: 2}
   m_sharedMaterial: {fileID: -952907468028547842, guid: a3ef21ff23c073f41b4df97fdba29bd0, type: 2}
@@ -543,7 +543,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 50
   m_fontStyle: 0
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -927,8 +927,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 86.288086}
+  m_SizeDelta: {x: 0, y: 172.5759}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7078748509533835407
 CanvasRenderer:
@@ -1236,7 +1236,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 50
   m_fontStyle: 0
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2613,7 +2613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2371623362688251523, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_text
-      value: CREDITS
+      value: Credits
       objectReference: {fileID: 0}
     - target: {fileID: 2371623362688251523, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_fontSize
@@ -2907,7 +2907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8746676026341688667, guid: bf941c163aa023840887bd2d59ca1453, type: 3}
       propertyPath: m_text
-      value: Reset Profile
+      value: Reset profile
       objectReference: {fileID: 0}
     - target: {fileID: 8746676026341688667, guid: bf941c163aa023840887bd2d59ca1453, type: 3}
       propertyPath: m_fontSize
@@ -3197,13 +3197,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2371623362688251523, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_text
-      value: 'Credits credits Credits credits Credits credits Credits credits Credits
-        credits Credits credits Credits credits Credits credits Credits credits Credits
-        credits Credits credits Credits credits '
+      value: 'Project Partners:
+
+        - Ashley Community Housing (United Kingdom)
+
+        -
+        Folkuniversitetet (Sweden)
+
+        - MetropolisNet (Germany)
+
+        -
+        Rinova Ltd (United Kingdom)
+
+        - Dimitra (Greece)
+
+        - Videojuegos
+        Sin Fronteras (Spain)
+
+
+        Funded by the European Union. Views and opinions
+        expressed are however those of the author(s) only and do not necessarily
+        reflect those of the European Union or the European Education and Culture
+        Executive Agency (EACEA). Neither the European Union nor EACEA can be held
+        responsible for them.'
       objectReference: {fileID: 0}
     - target: {fileID: 2371623362688251523, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_fontSize
-      value: 50
+      value: 38.6
       objectReference: {fileID: 0}
     - target: {fileID: 2371623362688251523, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_margin.w
@@ -3601,7 +3621,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2371623362688251523, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_text
-      value: HELP
+      value: About
       objectReference: {fileID: 0}
     - target: {fileID: 2371623362688251523, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_fontSize
@@ -4022,7 +4042,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8746676026341688667, guid: bf941c163aa023840887bd2d59ca1453, type: 3}
       propertyPath: m_text
-      value: Open Help Website
+      value: Open Help website
       objectReference: {fileID: 0}
     - target: {fileID: 8746676026341688667, guid: bf941c163aa023840887bd2d59ca1453, type: 3}
       propertyPath: m_fontSize
@@ -4312,7 +4332,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2371623362688251523, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_text
-      value: SETTINGS
+      value: Settings
       objectReference: {fileID: 0}
     - target: {fileID: 2371623362688251523, guid: fceadb55b0157a845a18d51b613747ef, type: 3}
       propertyPath: m_fontSize
