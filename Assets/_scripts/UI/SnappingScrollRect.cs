@@ -65,7 +65,7 @@ namespace Ieedo
             isDragging = false;
 
             hasTriggeredSwipe = true;
-            Debug.LogError("END DRAG");
+            //Debug.LogError("END DRAG");
             //swipeStartPos = content.anchoredPosition.x;
             swipeToCardIndex = -1;
 
@@ -271,14 +271,14 @@ namespace Ieedo
 
                 if (diffFromStart < ReturnToMiddleThreshold && diffFromMax > 0f)
                 {
-                    Debug.LogError("RETURN TO MIDDLE");
+                    //Debug.LogError("RETURN TO MIDDLE");
                     direction = 0;
                 }
 
                 // Velocity gets the precedence if high enough
                 if (checkVelocity && MathF.Abs(dMovement) / Time.deltaTime > SnapVelocityThreshold)
                 {
-                    Debug.LogError("SnapVelocityThreshold TRIGGERED WITH " + dMovement);
+                    //Debug.LogError("SnapVelocityThreshold TRIGGERED WITH " + dMovement);
                     direction = -(int)Mathf.Sign(dMovement);
                     dMovement = 0f; // We must zero the dMovement or it gets used for the next tick too sometimes
                 }
