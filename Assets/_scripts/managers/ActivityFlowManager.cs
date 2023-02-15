@@ -52,6 +52,8 @@ namespace Ieedo
             Debug.Log("LaunchActivity " + activity);
             CurrentActivity = Statics.Data.Get<ActivityDefinition>((int)activity);
 
+            CurrentActivityData = Statics.Data.Profile.Activities.First(x => x.ID == CurrentActivity.ID);
+
             var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
             uiTopScreen.SwitchMode(TopBarMode.Special_Activity);
 
@@ -71,9 +73,8 @@ namespace Ieedo
                 Debug.LogError("No ActivityLogic script could be found. Did you add it to the game scene?");
                 yield break;
             }
-
             CurrentActivityManager = activityManager;
-            CurrentActivityData = Statics.Data.Profile.Activities.First(x => x.ID == CurrentActivity.ID);
+
             activityManager.ExternSetupActivity(CurrentActivity, CurrentActivityData.CurrentLevel);
             activityManager.OnActivityEnd = CloseActivity;
 

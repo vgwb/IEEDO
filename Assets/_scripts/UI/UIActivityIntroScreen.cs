@@ -29,7 +29,7 @@ namespace Ieedo
                     CurrentScore.Init(Statics.ActivityFlow.CurrentActivityData.CurrentLevel, ui_score.ScoreLabel.level);
                     break;
                 case ScoreType.NumberOfPlays:
-                    CurrentScore.Init(Statics.ActivityFlow.CurrentActivityData.CurrentLevel, ui_score.ScoreLabel.playcount);
+                    CurrentScore.Init(Statics.ActivityFlow.CurrentActivityData.Results.Count, ui_score.ScoreLabel.playcount);
                     break;
             }
 

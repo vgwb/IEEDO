@@ -111,9 +111,11 @@ namespace Ieedo
             var assessmentHeader = Statics.Screens.Get(ScreenID.AssessmentHeader) as UIAssessmentHeader;
             var assessmentFillbar = Statics.Screens.Get(ScreenID.AssessmentFillbar) as UIAssessmentFillbar;
 
+            var categories = Statics.Data.GetAll<CategoryDefinition>();
+
             if (BlockerBG != null)
             {
-                var col = BlockerBG.color;
+                var col = categories[0].BaseColor;
                 col.a = 1f;
                 BlockerBG.colorTransition(col, 0.25f);
             }
@@ -127,7 +129,6 @@ namespace Ieedo
 
             var overallValue = 0f;
             var assessmentPercentages = new Dictionary<int, float>();
-            var categories = Statics.Data.GetAll<CategoryDefinition>();
             var allQuestions = Statics.Data.GetAll<AssessmentQuestionDefinition>();
             assessmentFillbar.FillBar.SetValue(0, allQuestions.Count);
             assessmentFillbar.FillBar.FillImage.color = Statics.Art.UIColor.BaseColor;
@@ -137,7 +138,7 @@ namespace Ieedo
             var nQuestionsTotal = 0;
             foreach (var category in categories)
             {
-                BlockerBG.colorTransition(category.DarkColor, 0.25f);
+                BlockerBG.colorTransition(category.BaseColor, 0.25f);
                 assessmentFillbar.FillBar.FillImage.color = category.BaseColor;
                 assessmentFillbar.FillBar.BGImage.color = category.DarkColor;
                 yield return assessmentHeader.ShowCategory(category);

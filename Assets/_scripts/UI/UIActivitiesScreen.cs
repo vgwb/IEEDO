@@ -68,7 +68,7 @@ namespace Ieedo
                         break;
                     case ScoreType.LevelReached:
                         ScoreLabel = new LocalizedString("Activity", "activity_level");
-                        ScoreText = data.CurrentLevel + " / " + activityDefinition.MaxLevel;
+                        ScoreText = $"{data.CurrentLevel} / {activityDefinition.MaxLevel}";
                         break;
                     case ScoreType.NumberOfPlays:
                         ScoreLabel = new LocalizedString("Activity", "activity_played");

@@ -8179,10 +8179,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 609.283
       objectReference: {fileID: 0}
-    - target: {fileID: 3511767214205455485, guid: 175a5fddf51a10b4ea0e4ab7b8db3241, type: 3}
-      propertyPath: BlockerBG
-      value: 
-      objectReference: {fileID: 849257279}
     - target: {fileID: 6164956827748105964, guid: 175a5fddf51a10b4ea0e4ab7b8db3241, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -9386,6 +9382,10 @@ PrefabInstance:
     - target: {fileID: 1485521131393923672, guid: a2925aff197a7624690151ca6d5f2540, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 92.2251
+      objectReference: {fileID: 0}
+    - target: {fileID: 6862419750706115646, guid: a2925aff197a7624690151ca6d5f2540, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -33.90619
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2925aff197a7624690151ca6d5f2540, type: 3}
