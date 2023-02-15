@@ -14,7 +14,7 @@ namespace Ieedo
 
         public UIButton ContinueButton;
 
-        public IEnumerator ShowIntro()
+        public IEnumerator ShowIntroCO()
         {
             var gameName = $"{Statics.ActivityFlow.CurrentActivity.LocName}";
             Title.Text.Key = new LocalizedString("Activity", $"{gameName}");
@@ -35,9 +35,6 @@ namespace Ieedo
 
             SetupButton(ContinueButton, Continue);
             yield return OpenCO();
-
-            while (IsOpen)
-                yield return null;
         }
 
         private void Continue()

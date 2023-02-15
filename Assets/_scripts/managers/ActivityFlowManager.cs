@@ -47,10 +47,17 @@ namespace Ieedo
 
         public bool IsInsideActivity => CurrentActivity != null;
 
-        public IEnumerator LaunchActivity(ActivityID activity)
+        public IEnumerator LaunchActivityCO(ActivityID activity)
         {
             Debug.Log("LaunchActivity " + activity);
             CurrentActivity = Statics.Data.Get<ActivityDefinition>((int)activity);
+
+            var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
+            uiTopScreen.SwitchMode(TopBarMode.Special_Activity);
+
+            var introScreen = Statics.Screens.Get(ScreenID.ActivityIntro) as UIActivityIntroScreen;
+            introScreen.gameObject.SetActive(true);
+            yield return introScreen.ShowIntroCO();
 
             var async = SceneManager.LoadSceneAsync(CurrentActivity.SceneName, LoadSceneMode.Additive);
             while (!async.isDone)
@@ -70,12 +77,11 @@ namespace Ieedo
             activityManager.ExternSetupActivity(CurrentActivity, CurrentActivityData.CurrentLevel);
             activityManager.OnActivityEnd = CloseActivity;
 
-            var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
-            uiTopScreen.SwitchMode(TopBarMode.Special_Activity);
 
-            var introScreen = Statics.Screens.Get(ScreenID.ActivityIntro) as UIActivityIntroScreen;
-            introScreen.gameObject.SetActive(true);
-            StartCoroutine(introScreen.ShowIntro());
+            while (introScreen.IsOpen)
+                yield return null;
+
+
         }
 
         private void CloseActivity()

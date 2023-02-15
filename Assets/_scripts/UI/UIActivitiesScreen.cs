@@ -107,7 +107,7 @@ namespace Ieedo
 
         private void LaunchActivity(ActivityID activity)
         {
-            StartCoroutine(Statics.ActivityFlow.LaunchActivity(activity));
+            StartCoroutine(Statics.ActivityFlow.LaunchActivityCO(activity));
         }
     }
 }
