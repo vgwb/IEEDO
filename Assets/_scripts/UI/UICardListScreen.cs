@@ -800,7 +800,9 @@ namespace Ieedo
             var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
             uiTopScreen.SwitchMode(TopBarMode.Special_CardCreation);
 
+            TitleInputField.textComponent = null;
             TitleInputField.text = "";
+            DescriptionInputField.textComponent = null;
             DescriptionInputField.text = "";
 
             SetEditing(false);
@@ -1114,13 +1116,6 @@ namespace Ieedo
             do
             {
                 // Wait for closing...
-                /* TODO: MOVE HERE
-                 while (CurrentFrontViewMode != FrontViewMode.None)
-                 {
-                     frontCardUI.Data.Definition.Title.DefaultText = TitleInputField.text;
-                     frontCardUI.Data.Definition.Description.DefaultText = DescriptionInputField.text;
-                     yield return null; // Wait for completion
-                 }*/
 
                 inputField.ActivateInputField();
                 yield return null; // Must wait one frame
@@ -1160,19 +1155,6 @@ namespace Ieedo
             // Make sure it is active before we can start the edit mode
             if (!gameObject.activeSelf)
                 gameObject.SetActive(true);
-            StartCoroutine(EditModeCO());
-        }
-
-        private IEnumerator EditModeCO()
-        {
-            // Wait for closing...
-            while (CurrentFrontViewMode != FrontViewMode.None)
-            {
-                frontCardUI.Data.Definition.Title.DefaultText = TitleInputField.text;
-                frontCardUI.Data.Definition.Description.DefaultText = DescriptionInputField.text;
-
-                yield return null; // Wait for completion
-            }
         }
 
         public void StopEditing()

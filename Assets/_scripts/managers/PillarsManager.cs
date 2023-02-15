@@ -73,7 +73,7 @@ namespace Ieedo
 
         public void RefreshPositionsAndRotations(bool animated = false)
         {
-            animated = false; // TODO: fix this
+            animated = false; // TODO: fix this, forced to false to never animate pillars rising as it was buggy
             if (currentData == null)
                 return;
             var data = currentData;
