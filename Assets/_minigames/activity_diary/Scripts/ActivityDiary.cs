@@ -63,7 +63,7 @@ namespace Ieedo.games.diary
             else Statics.Data.Profile.Activities.GetActivityData(Statics.ActivityFlow.CurrentActivity.ID);
 
             Pages.Clear();
-            if (activityData.Results.Count > 0)
+            if (activityData != null && activityData.Results.Count > 0)
             {
                 foreach (ActivityResult activityResult in activityData.Results)
                 {
@@ -143,6 +143,12 @@ namespace Ieedo.games.diary
 
         public void CompleteActivity()
         {
+            var todayResult = ExtractResult();
+            StartCoroutine(CompleteActivity(todayResult));
+        }
+
+        private ActivityResult ExtractResult()
+        {
             var todayText = InputText.text;
             //            Debug.LogError("Updating page of " + Timestamp.Today.Date + " with text " + todayText);
             var activityData = Statics.Data.Profile.Activities.GetActivityData(Statics.ActivityFlow.CurrentActivity.ID);
@@ -153,13 +159,14 @@ namespace Ieedo.games.diary
                 todayResult.Timestamp = Timestamp.Today;
             }
             todayResult.CustomData = todayText;
-            StartCoroutine(CompleteActivity(todayResult));
+            return todayResult;
         }
 
         protected override void CustomCloseActivity()
         {
-            // Debug.Log("CustomCloseActivity");
-            CompleteActivity();
+            // @note: uncomment this if we want to save when we abort, too
+            //var todayResult = ExtractResult();
+            //Statics.ActivityFlow.RegisterResult(todayResult);
         }
 
     }
