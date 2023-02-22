@@ -142,7 +142,6 @@ namespace Ieedo
 
             if (isNewResult)
             {
-                var activityDef = Statics.Data.Get<ActivityDefinition>((int)activityId);
                 if (result.Result == ActivityResultState.Win)
                 {
                     activityData.CurrentLevel += 1;
