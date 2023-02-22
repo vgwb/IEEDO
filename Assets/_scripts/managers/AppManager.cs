@@ -184,6 +184,11 @@ namespace Ieedo
         private IEnumerator ProfileCreationFlow()
         {
             Statics.Data.CreateDefaultNewProfile();
+            yield return LanguageChangeFlow();
+        }
+
+        public IEnumerator LanguageChangeFlow()
+        {
             var languageScreen = Statics.Screens.Get(ScreenID.LanguageSelection) as UILanguageSelectionScreen;
             var countryScreen = Statics.Screens.Get(ScreenID.CountrySelection) as UICountrySelectionScreen;
 
@@ -194,7 +199,6 @@ namespace Ieedo
             yield return Statics.Screens.CloseOpenCO(ScreenID.LanguageSelection, ScreenID.CountrySelection);
             yield return countryScreen.PerformSelection(Statics.Data.Profile);
             yield return Statics.Screens.CloseCO(ScreenID.CountrySelection);
-
         }
     }
 }

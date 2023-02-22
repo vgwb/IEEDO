@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Localization;
-using UnityEngine.Localization.Tables;
 using Lean.Gui;
 
 namespace Ieedo
@@ -31,9 +30,10 @@ namespace Ieedo
         private UIButton btnGenerateTestCards;
         private UIButton btnTestResetScore;
         private UIButton btnTestIncreaseScore;
-        // private UIButton btnResetProfile;
+        private UIButton btnTestDecreaseScore;
         private UIButton btnTestAddDiary;
         private UIButton btnTestNotifications;
+        private UIButton btnChangeLanguage;
 
 
         private bool initialised = false;
@@ -90,7 +90,7 @@ namespace Ieedo
                 Statics.Points.AddPoints(100);
             });
 
-            btnTestIncreaseScore = AddUnlocalizedButton("Remove 100 points", () =>
+            btnTestDecreaseScore = AddUnlocalizedButton("Remove 100 points", () =>
             {
                 Statics.Points.AddPoints(-100);
             });
@@ -121,6 +121,12 @@ namespace Ieedo
                 Statics.Notifications.TestLocalNotification();
             });
 
+            btnChangeLanguage = AddUnlocalizedButton("Change language", () =>
+            {
+                AppManager.I.StartCoroutine(ChangeLanguageCO());
+                CloseImmediate();
+            });
+
             ButtonPrefab.gameObject.SetActive(false);
         }
 
@@ -132,7 +138,6 @@ namespace Ieedo
             btnGenerateTestCards.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
             btnGenerateTestPillars.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
             btnTestIncreaseScore.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
-            //            btnResetProfile.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
             btnTestAddDiary.gameObject.SetActive(!Statics.ActivityFlow.IsInsideActivity);
             yield break;
         }
@@ -147,6 +152,12 @@ namespace Ieedo
                 yield return AppManager.I.HandleTutorial();
             }
         }
+
+        private IEnumerator ChangeLanguageCO()
+        {
+            yield return AppManager.I.LanguageChangeFlow();
+        }
+
 
         public IEnumerator AbortSpecialSectionCO()
         {

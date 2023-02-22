@@ -502,7 +502,7 @@ namespace Ieedo
             switch (CurrentListViewMode)
             {
                 case ListViewMode.ToDo:
-                    CreateCardButton.gameObject.SetActive(true);
+                    CreateCardButton.Show();
                     DefaultOutEnterPosition = new Vector3(0, -2500, 0);
                     DefaultOutExitPosition = new Vector3(0, -2500, 0);
                     //rt.anchorMin = new Vector2(0, 0);
@@ -512,7 +512,7 @@ namespace Ieedo
                     //layout.padding.bottom = 300;
                     break;
                 case ListViewMode.Pillars:
-                    CreateCardButton.gameObject.SetActive(false);
+                    CreateCardButton.Hide();
                     DefaultOutEnterPosition = new Vector3(0, 2500, 0);
                     DefaultOutExitPosition = new Vector3(0, 2500, 0);
                     //rt.anchorMin = new Vector2(0, 0);
@@ -617,10 +617,10 @@ namespace Ieedo
                     ValidatedMode.SetActive(false);
                     StartEditing(false);
 
-                    AnimateShowButton(CreateCardButton);
-                    AnimateShowButton(DeleteCardButton);
-                    CompleteCardButton.gameObject.SetActive(true);
-                    AnimateShowButton(CompleteCardButton);
+                    CreateCardButton.AnimateAppear();
+                    DeleteCardButton.AnimateAppear();
+                    CompleteCardButton.Show();
+                    CompleteCardButton.AnimateAppear();
                     break;
                 case FrontViewMode.Create:
                     //EditModeCardInteraction.SetActive(true);
@@ -630,8 +630,8 @@ namespace Ieedo
                     ValidatedMode.SetActive(false);
                     StartEditing(true);
 
-                    CreateCardButton.transform.localScale = Vector3.zero;
-                    CompleteCardButton.gameObject.SetActive(false);
+                    CreateCardButton.AnimateDisappear();
+                    CompleteCardButton.Hide();
                     break;
                 case FrontViewMode.View:
                     //EditModeCardInteraction.SetActive(false);
@@ -880,6 +880,8 @@ namespace Ieedo
             frontCardUI.AnimateToParent();
 
             SetEditButtonsEnabled(true);
+            CreateCardButton.Show();
+            CreateCardButton.AnimateAppear();
             SetEditing(false);  // @note: We go back to the basic view here
 
             Statics.Cards.AddCard(cardData);
