@@ -41,11 +41,20 @@
         },
         "DrawableResources": [
             {
-                "Id": "icon_ieedo",
+                "Id": "icon_0",
+                "Type": 0,
+                "Asset": {
+                    "fileID": 2800000,
+                    "guid": "76582116b83874edb9abae4847e249b9",
+                    "type": 3
+                }
+            },
+            {
+                "Id": "icon_1",
                 "Type": 1,
                 "Asset": {
                     "fileID": 2800000,
-                    "guid": "75d2093eb32134694a9439c84e09dc70",
+                    "guid": "f1a999e92acbd445690e6524b6897869",
                     "type": 3
                 }
             }
