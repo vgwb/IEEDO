@@ -102,6 +102,7 @@ namespace Ieedo
             /*CardsList.ScrollRect.OnCardNotInFront = () => SetButtonsVisible(false);*/
             CardsList.ScrollRect.OnCardInFront = () =>
             {
+                if (isSortingPostDate) return;
                 SetButtonsVisible(true);
                 RefreshFrontViewMode();
             };
@@ -1030,10 +1031,15 @@ namespace Ieedo
             // Sort again if we are only editing
             if (!isCreating)
             {
+                isSortingPostDate = true;
                 CardsList.SortListAgain();
                 yield return CardsList.ScrollRect.ForceGoToCard(frontCardUI);
+                isSortingPostDate = false;
+                CardsList.ScrollRect.enabled = false;
             }
         }
+
+        private bool isSortingPostDate = false;
 
         private IEnumerator EditSubCategoryCO(CategoryDefinition categoryDef, bool autoReset = false)
         {
