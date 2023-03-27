@@ -75,11 +75,7 @@ namespace Ieedo.games.diary
                 }
             }
 
-            if (Pages.Count() > 0 && Pages[Pages.Count() - 1].Date == DateTime.Today)
-            {
-
-            }
-            else
+            if (Pages.Count() <= 0 || Pages[Pages.Count() - 1].Date != DateTime.Today)
             {
                 Pages.Add(new Page
                 {
@@ -87,9 +83,24 @@ namespace Ieedo.games.diary
                     Date = DateTime.Today,
                 });
             }
+
             currentPageNumber = Pages.Count();
             totalPageNumber = Pages.Count();
             updateUI();
+
+            var topScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
+            topScreen.OnTargetLocaleSwitched -= HandleLocaleSwitch;
+            topScreen.OnTargetLocaleSwitched += HandleLocaleSwitch;
+        }
+
+        private void HandleLocaleSwitch()
+        {
+            RefreshDateText();
+        }
+
+        private void RefreshDateText()
+        {
+            DateText.text = Pages[currentPageNumber - 1].Date.ToString("ddd dd MMM", LocalizationSettings.SelectedLocale.Formatter);
         }
 
         private void updateUI()
@@ -97,7 +108,7 @@ namespace Ieedo.games.diary
             BtnNext.SetActive(Pages.Count > 1 && currentPageNumber < Pages.Count);
             BtnPrev.SetActive(Pages.Count > 1 && currentPageNumber > 1);
 
-            DateText.text = Pages[currentPageNumber - 1].Date.ToString("ddd dd MMM", LocalizationSettings.SelectedLocale.Formatter);
+            RefreshDateText();
             InputText.text = Pages[currentPageNumber - 1].Text;
             if (totalPageNumber > 1)
             {
@@ -167,6 +178,18 @@ namespace Ieedo.games.diary
             // @note: uncomment this if we want to save when we abort, too
             //var todayResult = ExtractResult();
             //Statics.ActivityFlow.RegisterResult(todayResult);
+        }
+
+
+        public void OnApplicationFocus(bool hasFocus)
+        {
+            Debug.Log("OnApplicationFocus " + hasFocus);
+        }
+
+        public void OnApplicationPause(bool pauseStatus)
+        {
+            Debug.Log("OnApplicationPause " + pauseStatus);
+            InputText.onTouchScreenKeyboardStatusChanged.AddListener(arg0 =>  Debug.LogError("Changed keyboard status: " + arg0) );
         }
 
     }
