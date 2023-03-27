@@ -60,7 +60,7 @@ namespace Ieedo.games.diary
 
             ActivityData activityData = null;
             if (DebugPlay) activityData = new ActivityData();
-            else Statics.Data.Profile.Activities.GetActivityData(Statics.ActivityFlow.CurrentActivity.ID);
+            else activityData = Statics.Data.Profile.Activities.GetActivityData(Statics.ActivityFlow.CurrentActivity.ID);
 
             Pages.Clear();
             if (activityData != null && activityData.Results.Count > 0)
