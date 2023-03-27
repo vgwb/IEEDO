@@ -151,8 +151,14 @@ namespace Ieedo
                 CloseFrontView();
                 cardUI.RefreshUI();
             });
+        }
 
-
+        private void HandleLocaleSwitch()
+        {
+            foreach (UICard card in CardsList.HeldCards)
+            {
+                card.Date.text = card.Data.ExpirationTimestamp.ToString();
+            }
         }
 
         #region Card Editing
@@ -457,6 +463,10 @@ namespace Ieedo
 
         protected override IEnumerator OnOpen()
         {
+            var topScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
+            topScreen.OnTargetLocaleSwitched -= HandleLocaleSwitch;
+            topScreen.OnTargetLocaleSwitched += HandleLocaleSwitch;
+
             var cardScroll = CardsList.GetComponentInChildren<SnappingScrollRect>();
             //if (CurrentListViewMode == ListViewMode.ToDo) cardScroll.ForceToPos(0f);
             yield return base.OnOpen();

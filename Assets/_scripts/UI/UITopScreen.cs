@@ -95,6 +95,8 @@ namespace Ieedo
                 LocalizationSettings.SelectedLocale = locale;
             }
             Statics.Input.UnregisterUpAction(UseHostLocale);
+
+            OnTargetLocaleSwitched?.Invoke();
         }
 
         public TopBarMode Mode;

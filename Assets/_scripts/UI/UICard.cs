@@ -67,6 +67,7 @@ namespace Ieedo
             Difficulty.SetValue(def.Difficulty);
 
             bool hasExpirationDate = data.ExpirationTimestamp.binaryTimestamp != Timestamp.None.binaryTimestamp;
+
             Date.gameObject.SetActive(hasExpirationDate);
             Date.text = data.ExpirationTimestamp.ToString();
 
