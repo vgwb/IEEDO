@@ -37,12 +37,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15338261569101824
-    m_Localized: '  Waxbarasho iyo Tababar'
+    m_Localized: Waxbarasho iyo Tababar
     m_Metadata:
       m_Items: []
   - m_Id: 22534781286735872
-    m_Localized: 'Hawlo kasta oo kuu sabsan waxabarashada , si rasmi ah iyo sii aan
-      rasmi ahayn '
+    m_Localized: Hawlo kasta oo kuu sabsan waxabarashada , si rasmi ah iyo sii aan
+      rasmi ahayn
     m_Metadata:
       m_Items: []
   - m_Id: 15338341822914560
@@ -50,17 +50,17 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15338345862029312
-    m_Localized: ' Wax kasta kuu sabsan shaqada , markad shaqo heleysiid ila aad
-      ku horumaraysiid shaqadada xirfadeed '
+    m_Localized: Wax kasta kuu sabsan shaqada , markad shaqo heleysiid ila aad ku
+      horumaraysiid shaqadada xirfadeed
     m_Metadata:
       m_Items: []
   - m_Id: 15338384780976128
-    m_Localized: Maamulka maamulka
+    m_Localized: Maamulka & La tacaalida
     m_Metadata:
       m_Items: []
   - m_Id: 15338385938604032
-    m_Localized: 'Wax kasta kuu sabsaan heelitanka ama isticmalka adeegyada magalada
-      aad dagan tahay iyo shaqada warqadaha '
+    m_Localized: Wax kasta kuu sabsaan heelitanka ama isticmalka adeegyada magalada
+      aad dagan tahay iyo shaqada warqadaha
     m_Metadata:
       m_Items: []
   - m_Id: 15338416317947904
@@ -68,12 +68,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 15338417286832128
-    m_Localized: ' Wax kasta kuu sabasan cafimadka jireed iyo cafimadka qiiro,oo
-      ay ku jiiraan nafaqada iyo caadooyinka ku xiiran nolol caafimaad ah . '
+    m_Localized: Wax kasta kuu sabasan cafimadka jireed iyo cafimadka qiiro,oo ay
+      ku jiiraan nafaqada iyo caadooyinka ku xiiran nolol caafimaad ah .
     m_Metadata:
       m_Items: []
   - m_Id: 22742599439687680
-    m_Localized: Caado
+    m_Localized: (caado)
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602240
@@ -85,11 +85,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602242
-    m_Localized: Bandhig uu tag
+    m_Localized: Aad Bandhig
     m_Metadata:
       m_Items: []
   - m_Id: 28366007577812992
-    m_Localized: Olole tageer
+    m_Localized: Taageer olole
     m_Metadata:
       m_Items: []
   - m_Id: 28366007577812993
@@ -113,7 +113,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602246
-    m_Localized: 'Barasho-kali ah '
+    m_Localized: Barasho-kali ah
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602247
@@ -137,11 +137,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602252
-    m_Localized: Habka codsiga
+    m_Localized: Geedi socodka codsiga
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602253
-    m_Localized: Waraysiiga shaqada
+    m_Localized: Waraysiyada shaqada
     m_Metadata:
       m_Items: []
   - m_Id: 22763239081189376
@@ -161,7 +161,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 28366007577812994
-    m_Localized: Is-doodashada
+    m_Localized: Isu qareemida
     m_Metadata:
       m_Items: []
   - m_Id: 107049747551821824
@@ -173,11 +173,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602258
-    m_Localized: Daaweynta
+    m_Localized: Daaweynta caafimaad
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602259
-    m_Localized: Daaweynta maskaxda
+    m_Localized: Naaweynta nafsiga
     m_Metadata:
       m_Items: []
   - m_Id: 22742599502602260

@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 12759883776
-    m_Localized: Maad isticmasha adeegyada deegaanka?(gymka,park,librariiga,Masjidka?)
+    m_Localized: Maad isticmasha adeegyada deegaanka?(jiimka,baarkinka,maktabada,Masjidka?)
     m_Metadata:
       m_Items: []
   - m_Id: 7179342181294080
@@ -64,12 +64,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509702
-    m_Localized: Maad fahmaysaa qaababka uugu muhiimsan isgarsiinta halka shaqada
+    m_Localized: Maad fahmaysaa qaababka uugu muhiimsan isgarsiinta hadalka shaqada
       ,schoolka , ama waxyabo kale?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509703
-    m_Localized: Mad qorikaraysa  warqad cover ah ama warqad cabasho ah?
+    m_Localized: Mad qorikaraysa  warqad dhiirigelin ama warqad cabasho ah?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509704
@@ -82,16 +82,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509706
-    m_Localized: Email maad ku diri karta luqada magalada aad dagantahay?
+    m_Localized: Iimayl maad ku diri karta luqada lagaga heldo magalada aad dagantahay?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509707
-    m_Localized: Maad sameysan karaysaa email naftada uu gar aah?
+    m_Localized: Maad sameysan karaysaa iimayl akoon naftada uu gar aah?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509708
-    m_Localized: Maad mamulaykaraysa emailyo aan laa huubin ,risaladyo iyo massegyo
-      so booda markad internetka wax ka badaysiid?
+    m_Localized: Maad mamuli karaysa iimaylo aan laa huubin, fariimo iyo qoraalo
+      soo qorma markad internetka ku jirtid?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509709
@@ -109,16 +109,16 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509712
-    m_Localized: Maad ka dhofta halka aad dhegan tahy hada?
+    m_Localized: Ma u safartaa meel ka baxsan deegaankaaga?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509713
-    m_Localized: Maad iska bixin karta billkaga?
+    m_Localized: Maad ku bixin kartaa biilashaada onlayn?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509714
-    m_Localized: Maad fahmi karta  warbixinnada maaliyadeed? sida warbaxinta bangiga,billka
-      iyo wax yaabo kale
+    m_Localized: Maad fahmi karta  warbixinnadaada maaliyadeed? sida warbaxinta qulqulka
+      lacagaha bangiga, biilasha IWM.
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509715
@@ -128,7 +128,8 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 7618539332509716
     m_Localized: Maad uu bahan tahay cawiimaad sii aad uu dhameysiid formskaa qoraal
-      badan leh oo kuu qoran luqada magalada aad dhagan tahy?codsi shaqada ,iyo xawaaladaha
+      badan leh oo kuu qoran luqada magalada aad dhagan tahay?codsi shaqada ,iyo
+      xawaaladaha
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509717
@@ -137,7 +138,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509718
-    m_Localized: Badanka maad warwartaa?
+    m_Localized: Inta badan miyaad warwartaa?
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509719
@@ -149,7 +150,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 7618539332509721
-    m_Localized: Dhawr jeer maad sameysaa jimicsi?
+    m_Localized: Si joogto ah miyaad u sameysaa jimicsi?
     m_Metadata:
       m_Items: []
   references:

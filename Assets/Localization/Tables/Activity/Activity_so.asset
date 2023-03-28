@@ -116,7 +116,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037702
-    m_Localized: Gool
+    m_Localized: Qiyaasta Tirooyinka
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037704
@@ -132,11 +132,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037709
-    m_Localized: Digtooni
+    m_Localized: Xawaaraha fahamka
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232000
-    m_Localized: Difaac
+    m_Localized: Sababaynta Saamiga
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232002
@@ -148,16 +148,15 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232006
-    m_Localized: Xusuus qor
+    m_Localized: Dareemida Jihada
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232008
-    m_Localized: Qorista dhowr khad oo ku saabsan sida aad dareemeyso maalin kasta
-      waa dhaqan wanaagsan oo loogu talagalay wanaaggaaga
+    m_Localized: Fahamka walxaha lagu arko nawaaxiga
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232010
-    m_Localized: Warqad saaxiib saaxiib
+    m_Localized: Xasuusashada Goobaha
     m_Metadata:
       m_Items: []
   - m_Id: 111552523372847126
@@ -233,7 +232,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033088
-    m_Localized: Iska ga tag hawsha
+    m_Localized: Ka tag hawsha
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033089
@@ -245,11 +244,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033091
-    m_Localized: Heerka kale ciyaar
+    m_Localized: Heerka Xiga Ciyaar
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033092
-    m_Localized: Sii fican!
+    m_Localized: Si fiican ayaa loo sameeyay!
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033093
@@ -257,7 +256,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 112797993827033094
-    m_Localized: Ciyarti dhamatay
+    m_Localized: Ciyarti way Dhamaatay
     m_Metadata:
       m_Items: []
   - m_Id: 112797993831227393
@@ -265,7 +264,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 112797993831227396
-    m_Localized: Sii fican!
+    m_Localized: Si fiican ayaa loo sameeyay!
     m_Metadata:
       m_Items: []
   - m_Id: 113092616990482432
@@ -277,7 +276,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 115977791033253888
-    m_Localized: Kuu mad guulaysan
+    m_Localized: Kumaadan guulaysan
     m_Metadata:
       m_Items: []
   - m_Id: 115977791033253889
@@ -298,7 +297,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 115977791037448193
-    m_Localized: '{points} Furitaan'
+    m_Localized: Furitaan
     m_Metadata:
       m_Items:
       - rid: 3196637817602572297
@@ -431,7 +430,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037703
-    m_Localized: '{Dhibcaha} si loo furo'
+    m_Localized: Qiyaasta tirooyinka waa awooda sida dhakhsaha abadan loogu qiyaasayo
+      xidhiidhada tirada ama macluumaad aan dhamaystirnayn.
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037705
@@ -450,11 +450,13 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111561110363037710
-    m_Localized: Shucfo
+    m_Localized: Xawaaraha fahamku waa awooda lagu garto isla markaana lagu lafaguro
+      jawaabta dareemaheena soo socda.
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232001
-    m_Localized: Xagga maalintii
+    m_Localized: Sababaynta saamiga waa awoodda isbar-bardhigga iyo beddelka tirada
+      saamiyo iyo matalaado kala duwan.
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232003
@@ -468,25 +470,18 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232007
-    m_Localized: 'Ku qor qoraal maalinle ah xusuus-qoryadaada shaqsiyeed.
-
-
-      Tani
-      waxay kaa caawin doontaa inaad ka fikirto jihada noloshaada oo aad qiimeyso
-      horumarinta iyo dhibaatooyinka'
+    m_Localized: Dareemida jihada, oo sidoo kale loo yaqaan dareemida jihada, waxay
+      ku lug leedahay ka warqabka deegaanka kugu xeeran.
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232009
-    m_Localized: Gali fikradahaaga iyo dareenkaaga halkan ...
+    m_Localized: Fahamka waxa lagu arko nawaaxiga waa awoodda lagu fahmayo xidhiidhada
+      dhulka laguna falanqeeyo si loo soo gunaanado.
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232011
-    m_Localized: 'U qor warqad saaxiib.
-
-
-      Qoraalka warqaddu waxay noqon kartaa
-      daweynta qoraaga iyo sidoo kale qaataha, oo waxay noqon kartaa kaliya waxa
-      kaa caawin kara inaad beddesho aragtida.'
+    m_Localized: Xasuusashada goobaha waa nooc ka mid ah xusuusta ku lug leh la socodka
+      goob iyo boos gudaha deegaanka.
     m_Metadata:
       m_Items: []
   - m_Id: 111561110367232012

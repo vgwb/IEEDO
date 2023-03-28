@@ -20,15 +20,15 @@ MonoBehaviour:
     - rid: 5137596889296273429
   m_TableData:
   - m_Id: 136884804909817856
-    m_Localized: Soomaaliga
+    m_Localized: Soomaali
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093260
-    m_Localized: Maa huubta in aad  joojinaysiid abuurista cardkaa?
+    m_Localized: Maa huubta in aad  joojinaysiid abuurista kaarkan?
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093259
-    m_Localized: Jooji abuurista cardka
+    m_Localized: Jooji Abuurista Kaarka
     m_Metadata:
       m_Items: []
   - m_Id: 40525580437577728
@@ -36,7 +36,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48125278888599552
-    m_Localized: sameynta cardka tijabada
+    m_Localized: Sameynta Kaararka Tijaabada
     m_Metadata:
       m_Items: []
   - m_Id: 48151452267077632
@@ -44,11 +44,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40526294958235648
-    m_Localized: dib u habayn profileka
+    m_Localized: Dib u toosinta Akoonka
     m_Metadata:
       m_Items: []
   - m_Id: 51375399755522048
-    m_Localized: Jooji xogwaraysiga
+    m_Localized: Jooji Xogwaraysiga
     m_Metadata:
       m_Items: []
   - m_Id: 40525760616488960
@@ -56,19 +56,19 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40525707831173120
-    m_Localized: bedello habka
+    m_Localized: Bedello habka
     m_Metadata:
       m_Items: []
   - m_Id: 48154400376250368
-    m_Localized: Kordhi Dhibco+100
+    m_Localized: Kordhi Dhibco +100
     m_Metadata:
       m_Items: []
   - m_Id: 55768998995763200
-    m_Localized: IEEDO waxay xog oo sarta 6 qaybod , mid mid aan uu eegno
+    m_Localized: IEEDO waxay xooga sarta 6 qaybod , mid mid aan uu eegno
     m_Metadata:
       m_Items: []
   - m_Id: 40549731508445184
-    m_Localized: Qaybod
+    m_Localized: Qaybaha
     m_Metadata:
       m_Items: []
   - m_Id: 40534266346233856
@@ -104,23 +104,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 40535952167034880
-    m_Localized: Gali horyaalka
+    m_Localized: Gali ciwaanka
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854083
-    m_Localized: "Wad-hawlgalayasha mashruuca: \n-Ashely community Housing (United
-      kingdom)\n-Folkuniversitetet (sweden) \n-MetropolisNet(Germany) \n-Rinova Ltd(united
-      kingdom) \n-Dimitra(greece) -\nVideojuegos Sin Fronteras(spain) \n\nWaxa maalgaliyay
+    m_Localized: 'Wad-hawlgalayasha mashruuca:  -Ashely community Housing (United
+      kingdom) -Folkuniversitetet (sweden)  -MetropolisNet(Germany)  -Rinova Ltd(united
+      kingdom)  -Dimitra(greece) - Videojuegos Sin Fronteras(spain)   Waxa maalgaliyay
       Erasmus + programmka European Union. Qoralkan waxuu kaliya natusaya aragtiida
-      qofka qoray , komishankuna ka ma masu'alnayo macluumadka halkan ku jiira."
+      qofka qoray , komishankuna ka ma masu''alnayo macluumadka halkan ku jiira.'
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925889
-    m_Localized: Maa huubta in aad rabtiid in aad ka saartiid cardka?
+    m_Localized: Maa huubta in aad rabtiid in aad ka saartiid kaarka?
     m_Metadata:
       m_Items: []
   - m_Id: 48133898325925888
-    m_Localized: Kasar cardka
+    m_Localized: Tirtir kaarka
     m_Metadata:
       m_Items: []
   - m_Id: 48447397204844544
@@ -136,7 +136,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 65886906563190784
-    m_Localized: Credits
+    m_Localized: Kiridhityada
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854080
@@ -179,7 +179,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 43003190425968640
-    m_Localized: Ansaxinta cardkaa
+    m_Localized: Ansaxinta kaararka
     m_Metadata:
       m_Items: []
   - m_Id: 50788328801296384
@@ -224,7 +224,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 50660762391093250
-    m_Localized: Tababariid fadhi
+    m_Localized: Fadhi tababarid
     m_Metadata:
       m_Items: []
   - m_Id: 65886906663854082
@@ -236,7 +236,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48089044644470784
-    m_Localized: Maa hubta in aad ka dhigtid cardkaa mid aan dhameystirnayn?
+    m_Localized: Maa hubta in aad ka dhigtid kaarka mid aan Dhameystirnayn?
     m_Metadata:
       m_Items: []
   - m_Id: 48089044619304960
@@ -244,11 +244,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 48119887563792384
-    m_Localized: Maa huubta in aad ka dhigtiid cardkaa mid aan la ansaxin?
+    m_Localized: Maa huubta in aad ka dhigtiid kaarka mid aan La ansixinin?
     m_Metadata:
       m_Items: []
   - m_Id: 48119887559598080
-    m_Localized: Ka dhig mid aan la ansaxin
+    m_Localized: Ka dhig mid aanLa ansixinin
     m_Metadata:
       m_Items: []
   - m_Id: 24994957285646336
@@ -264,7 +264,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 139790834443689984
-    m_Localized: Wakan liiska aad sameyneysiid . Maa haysatiid card aad sameysiid
+    m_Localized: Wakan liiska waxyaabaha aad sameyneysiid . Maa haysatiid kaar ah
+      si aad sameysiid
     m_Metadata:
       m_Items: []
   - m_Id: 141937967278874624
@@ -320,7 +321,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 153714070861635584
-    m_Localized: Fur websiteka cawimadka
+    m_Localized: Fur websaydka Cawimaada
     m_Metadata:
       m_Items: []
   - m_Id: 153714070870024192
@@ -328,20 +329,20 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 153714070870024193
-    m_Localized: Ogaysiis
+    m_Localized: Ogaysiisyo
     m_Metadata:
       m_Items: []
   - m_Id: 156524221040631808
-    m_Localized: falaqaynta online
+    m_Localized: Falaqayn onlayn
     m_Metadata:
       m_Items: []
   - m_Id: 156524221074186240
-    m_Localized: Maa rabta in aad ogaysiis kaa heshiid appka?
+    m_Localized: Maa rabta in aad ogaysiis kaa heshiid ablikeeshinkan?
     m_Metadata:
       m_Items: []
   - m_Id: 156524221074186241
-    m_Localized: Ma jeclaan lahayd inaad naga caawiso horumarinta app-kan adiga oo
-      khadka ku wadaagaya xogtaada bilaa magac
+    m_Localized: Ma jeclaan lahayd inaad naga caawiso horumarinta ablikeeshinkan
+      adiga kula wadaagaya onlaynka xogtaada ciyaarta QARSOODIGA AH?
     m_Metadata:
       m_Items: []
   references:
