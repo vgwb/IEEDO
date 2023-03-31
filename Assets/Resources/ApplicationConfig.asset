@@ -18,8 +18,8 @@ MonoBehaviour:
   PointsCardCompleted: 40
   PointsCardValidated: 60
   PointsSymbol: \uf06d
-  NotificationsEnabled: 1
-  AnalyticsEnabled: 1
+  NotificationsEnabled: 0
+  AnalyticsEnabled: 0
   AnalyticsDevEnv: 0
   DebugMode: 0
   DebugLogEnabled: 1
