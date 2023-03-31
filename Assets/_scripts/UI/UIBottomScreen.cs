@@ -1,5 +1,6 @@
 ﻿using System;
 using Lean.Gui;
+using UnityEngine;
 
 namespace Ieedo
 {
@@ -13,21 +14,38 @@ namespace Ieedo
 
         public Action OnCardsClicked;
 
+        private float cooldown = 0f;
+        private bool onCooldown => cooldown > 0f;
+        private void StartCooldown()
+        {
+            cooldown = 0.35f;
+        }
+        private void Update()
+        {
+            if (cooldown > 0f) cooldown -= Time.deltaTime;
+        }
+
         void Start()
         {
             SetupButton(btnActivities, () =>
             {
                 if (Statics.Input.IsExecutingAction) return;
+                if (onCooldown) return;
+                StartCooldown();
                 Statics.Screens.GoTo(ScreenID.Activities);
             });
             SetupButton(btnPillars, () =>
             {
                 if (Statics.Input.IsExecutingAction) return;
+                if (onCooldown) return;
+                StartCooldown();
                 Statics.Screens.GoTo(ScreenID.Pillars);
             });
             SetupButton(btnCards, () =>
             {
                 if (Statics.Input.IsExecutingAction) return;
+                if (onCooldown) return;
+                StartCooldown();
                 OnCardsClicked?.Invoke();
                 Statics.Screens.GoToTodoList();
             });

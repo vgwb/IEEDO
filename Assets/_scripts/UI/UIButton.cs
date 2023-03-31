@@ -57,7 +57,6 @@ namespace Ieedo
 
         public void AnimateAppear()
         {
-            //transform.localScale = Vector3.zero;
             transform.localScaleTransition(Vector3.one, 0.25f);
         }
 

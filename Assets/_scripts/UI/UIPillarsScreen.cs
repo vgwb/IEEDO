@@ -114,7 +114,14 @@ namespace Ieedo
 
         public void RefreshData()
         {
-            SwitchViewButton.transform.localScaleTransition(Statics.Mode.SessionMode == SessionMode.Session ? Vector3.one : Vector3.zero, 0.5f);
+            if (Statics.Mode.SessionMode == SessionMode.Session)
+            {
+                SwitchViewButton.AnimateAppear();
+            }
+            else
+            {
+                SwitchViewButton.AnimateDisappear();
+            }
 
             PillarsManager.SetFocus();
             AnimateToUnfocused();
