@@ -218,7 +218,14 @@ namespace Ieedo
         public void OnBtnResetProfile()
         {
             AppManager.I.StartCoroutine(ResetProfileCO());
+            CloseHamburgerMenu();
+        }
+
+        private void CloseHamburgerMenu()
+        {
             CloseImmediate();
+            var uiTopScreen = Statics.Screens.Get(ScreenID.Top) as UITopScreen;
+            uiTopScreen.SetHamburgerIcon();
         }
 
         public void OnOpenHelpWebsite()
