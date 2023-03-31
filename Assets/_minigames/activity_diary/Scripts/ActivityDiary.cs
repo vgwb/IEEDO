@@ -56,6 +56,12 @@ namespace Ieedo.games.diary
 
         protected override void SetupActivity(int currentLevel)
         {
+            InputText.onValueChanged.RemoveListener(HandleValueUpdate);
+            InputText.onValueChanged.AddListener(HandleValueUpdate);
+
+            InputText.onTouchScreenKeyboardStatusChanged.RemoveListener(HandleTouchscreenStatusChange);
+            InputText.onTouchScreenKeyboardStatusChanged.AddListener(HandleTouchscreenStatusChange);
+
             preparePage(Statics.ActivityFlow.CurrentActivity);
 
             ActivityData activityData = null;
@@ -92,6 +98,7 @@ namespace Ieedo.games.diary
             topScreen.OnTargetLocaleSwitched -= HandleLocaleSwitch;
             topScreen.OnTargetLocaleSwitched += HandleLocaleSwitch;
         }
+
 
         private void HandleLocaleSwitch()
         {
@@ -180,17 +187,53 @@ namespace Ieedo.games.diary
             //Statics.ActivityFlow.RegisterResult(todayResult);
         }
 
+        #region Fixing Android Sleeping Bug
 
         public void OnApplicationFocus(bool hasFocus)
         {
-            Debug.Log("OnApplicationFocus " + hasFocus);
+            InputText.text = tmpText;
         }
 
+        private string tmpText = "";
         public void OnApplicationPause(bool pauseStatus)
         {
-            Debug.Log("OnApplicationPause " + pauseStatus);
-            InputText.onTouchScreenKeyboardStatusChanged.AddListener(arg0 =>  Debug.LogError("Changed keyboard status: " + arg0) );
+            InputText.text = tmpText;
+
+            if (!pauseStatus)
+            {
+                skipNext = true; // Needed to avoid the system cancelling wrongly on android
+            }
+        }
+        private bool skipNext;
+
+        private string textToSkip;
+
+        private void HandleValueUpdate(string arg0)
+        {
+            if (skipNext)
+            {
+                skipNext = false;
+                textToSkip = arg0;
+                InputText.text = tmpText;
+                return;
+            }
+
+            if (string.Equals(textToSkip, arg0, StringComparison.OrdinalIgnoreCase))
+            {
+                // Override with the last data, so that empty is never allowed
+                InputText.text = tmpText;
+            }
+            else
+            {
+                tmpText = arg0;
+            }
         }
 
+        private void HandleTouchscreenStatusChange(TouchScreenKeyboard.Status arg0)
+        {
+            InputText.text = tmpText;
+        }
+
+        #endregion
     }
 }
