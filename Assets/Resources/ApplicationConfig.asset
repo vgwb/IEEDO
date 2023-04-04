@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: decad2ba933a747bcaf04fbfa920dc64, type: 3}
   m_Name: ApplicationConfig
   m_EditorClassIdentifier: 
-  Version: 5
+  Version: 7
   ResetProfileAtVersionMismatch: 0
   UrlSupportWebsite: https://vgwb.github.io/IEEDO/
   PointsCardCompleted: 40
   PointsCardValidated: 60
   PointsSymbol: \uf06d
-  NotificationsEnabled: 0
-  AnalyticsEnabled: 0
+  NotificationsEnabled: 1
+  AnalyticsEnabled: 1
   AnalyticsDevEnv: 0
   DebugMode: 0
   DebugLogEnabled: 1
