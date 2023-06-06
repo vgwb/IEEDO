@@ -21,13 +21,13 @@ namespace Ieedo
         }
 
         [JsonIgnore]
-        public static Timestamp Now => new() {binaryTimestamp = DateTime.Now.ToBinary()};
+        public static Timestamp Now => new() { binaryTimestamp = DateTime.Now.ToBinary() };
 
         [JsonIgnore]
-        public static Timestamp None => new() {binaryTimestamp = 0};
+        public static Timestamp None => new() { binaryTimestamp = 0 };
 
         [JsonIgnore]
-        public static Timestamp Today => new() {binaryTimestamp = DateTime.Today.ToBinary()};
+        public static Timestamp Today => new() { binaryTimestamp = DateTime.Today.ToBinary() };
 
         [JsonIgnore]
         public DateTime Date => DateTime.FromBinary(binaryTimestamp);

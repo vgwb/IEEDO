@@ -18,7 +18,7 @@ namespace Ieedo
         {
             Debug.LogWarning(txt);
         }
-        
+
         public static void Err(string txt)
         {
             Debug.LogError(txt);

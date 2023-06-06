@@ -11,7 +11,7 @@ namespace Ieedo
 
         public LocString(string table, string locKey, string defaultText = "") : this()
         {
-            Key = new LocalizedString( table,locKey);
+            Key = new LocalizedString(table, locKey);
             DefaultText = defaultText;
         }
 
@@ -19,7 +19,8 @@ namespace Ieedo
         {
             get
             {
-                if (Key != null && !Key.IsEmpty) return Key.GetLocalizedString();
+                if (Key != null && !Key.IsEmpty)
+                    return Key.GetLocalizedString();
                 return DefaultText;
             }
         }

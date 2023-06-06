@@ -42,10 +42,13 @@ namespace Ieedo
 
         private void ScheduleRemindNotification()
         {
+            // var remindMessage = LocString.FromStr("UI/notifications_remind_24h").GetLocalizedString();
+            var remindMessage = "Remember to play and to update your to-do-list everyday!";
+
             ScheduleNotification(
                 GetDateTimeTomorrow(),
                 "IEEDO App",
-                LocString.FromStr("UI/notifications_remind_24h").GetLocalizedString()
+                remindMessage
             );
             //            Debug.Log("Next Remind Notification prepared");
         }

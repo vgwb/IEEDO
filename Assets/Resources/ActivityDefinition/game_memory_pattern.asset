@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7631c653b8f4c97a4340609bfb6c8fa, type: 3}
   m_Name: game_memory_pattern
   m_EditorClassIdentifier: 
-  Enabled: 1
+  Enabled: 0
+  Available: 0
   ID: 22
   Title:
     Key:

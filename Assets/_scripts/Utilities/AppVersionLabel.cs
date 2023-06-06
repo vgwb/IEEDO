@@ -14,7 +14,7 @@ namespace Ieedo
             if (Statics.App.ApplicationConfig.DebugMode)
             {
 
-                Label.text = "v 0." + Statics.App.ApplicationConfig.Version.ToString();
+                Label.text = "v " + (Statics.App.ApplicationConfig.Version / 100).ToString("N2");
             }
             else
             {

@@ -45,7 +45,7 @@ namespace Ieedo
 
             SfxToggle.On = !Statics.Data.Profile.Settings.SfxDisabled;
             NotificationsToggle.On = !Statics.Data.Profile.Settings.NotificationsDisabled;
-            AppVersionText.SetTextRaw("Version v0." + Statics.App.ApplicationConfig.Version.ToString());
+            AppVersionText.SetTextRaw("Version v" + (Statics.App.ApplicationConfig.Version / 100).ToString("N2"));
 
             CheatSection.gameObject.SetActive(false);
             SetupButton(btnHiddenCheats, () =>
